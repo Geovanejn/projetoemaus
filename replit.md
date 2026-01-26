@@ -1,4 +1,4 @@
-# Site UMP Emaús
+# Sistema UMP Emaús
 
 ## Overview
 This project is a comprehensive web system for the União de Mocidade Presbiteriana (UMP) of the Emaús Presbyterian Church. It aims to enhance community engagement, streamline event management, and provide spiritual resources through a public website, a members-only area, and an administrative panel. Key capabilities include daily devotionals, event scheduling, member management, social media integration, an interactive gamified study system (DeoGlory), and a Treasury Module for financial management, member fee tracking, and e-commerce with payment integration. The system focuses on community, spiritual growth, and efficient administration.
