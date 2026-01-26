@@ -1,0 +1,18 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Scripts de teste sensiveis - NAO devem ir para producao
+scripts/seed-test-data.ts
+scripts/create-test-election.ts
+scripts/reset-db.ts
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.production
+client/src/pages/study/event-lesson.tsx
+server/ai.ts

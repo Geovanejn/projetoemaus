@@ -1,0 +1,397 @@
+2026-01-09T07:30:00.006813645Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-09T07:30:00.503614192Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-09T07:47:45.079721376Z 7:47:45 AM [express] GET /api/site-content/quem-somos 304 in 542ms :: {}
+2026-01-09T07:47:45.774281532Z 7:47:45 AM [express] GET /api/site/highlights 304 in 1549ms :: {"devotional":null,"events":[],"insta…
+2026-01-09T07:47:58.05045922Z 7:47:58 AM [express] POST /api/auth/login-password 200 in 637ms :: {"user":{"id":1,"fullName":"Admin…
+2026-01-09T07:48:05.748700692Z 7:48:05 AM [express] GET /api/shop/cart 304 in 48ms :: []
+2026-01-09T07:48:05.752876818Z 7:48:05 AM [express] GET /api/shop/featured 304 in 19ms :: [{"id":5,"name":"Kit UMP Emaús 2025","des…
+2026-01-09T07:48:05.754358448Z 7:48:05 AM [express] GET /api/shop/items 304 in 55ms :: [{"id":8,"name":"Camisa UMP 2025","descripti…
+2026-01-09T07:48:05.931869417Z 7:48:05 AM [express] GET /api/shop/categories 304 in 239ms :: [{"id":10,"name":"Acessórios","imageDa…
+2026-01-09T07:48:10.23082619Z 7:48:10 AM [express] GET /api/shop/images/banner/7 200 in 4240ms
+2026-01-09T07:48:10.231636427Z 7:48:10 AM [express] GET /api/shop/images/item/21 200 in 4131ms
+2026-01-09T07:48:10.232602306Z 7:48:10 AM [express] GET /api/shop/images/banner/8 200 in 4250ms
+2026-01-09T07:48:10.935328771Z 7:48:10 AM [express] GET /api/shop/images/item/23 200 in 4604ms
+2026-01-09T07:48:10.935353841Z 7:48:10 AM [express] GET /api/shop/images/item/14 200 in 2905ms
+2026-01-09T07:48:10.935358171Z 7:48:10 AM [express] GET /api/shop/images/item/20 200 in 3699ms
+2026-01-09T07:48:11.833095504Z 7:48:11 AM [express] GET /api/shop/images/category/10 200 in 3703ms
+2026-01-09T07:48:11.935270584Z 7:48:11 AM [express] GET /api/shop/images/category/12 200 in 2504ms
+2026-01-09T07:48:12.136708664Z 7:48:12 AM [express] GET /api/shop/images/banner/5 200 in 6145ms
+2026-01-09T07:48:23.416459696Z 7:48:23 AM [express] GET /api/shop/featured 304 in 6ms :: [{"id":5,"name":"Kit UMP Emaús 2025","desc…
+2026-01-09T07:48:23.416984977Z 7:48:23 AM [express] GET /api/shop/cart 304 in 5ms :: []
+2026-01-09T07:48:23.422660014Z 7:48:23 AM [express] GET /api/shop/items 304 in 7ms :: [{"id":8,"name":"Camisa UMP 2025","descriptio…
+2026-01-09T07:48:23.530637583Z 7:48:23 AM [express] GET /api/shop/categories 304 in 116ms :: [{"id":10,"name":"Acessórios","imageDa…
+2026-01-09T07:49:30.202880994Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-01-09T07:49:30.266836532Z ==> Deploying...
+2026-01-09T07:49:47.829703897Z 7:49:47 AM [express] GET /api/study/admin/events-stats 304 in 228ms :: {"totalEvents":0,"activeEvent…
+2026-01-09T07:49:47.831058795Z 7:49:47 AM [express] GET /api/study/admin/monthly-progress 304 in 303ms :: []
+2026-01-09T07:49:47.831888422Z 7:49:47 AM [express] GET /api/study/admin/weekly-activity 304 in 297ms :: [{"day":"Sab","date":"2026…
+2026-01-09T07:49:47.833037836Z 7:49:47 AM [express] GET /api/study/admin/weekly-top-members 304 in 300ms :: [{"id":2,"fullName":"Ge…
+2026-01-09T07:49:47.833637898Z 7:49:47 AM [express] GET /api/study/admin/stats 304 in 303ms :: {"totalUsers":9,"activeUsers":1,"tot…
+2026-01-09T07:49:54.702846183Z 7:49:54 AM [express] GET /api/study/encouragement-messages 200 in 2ms :: {"messages":[{"key":"lesson…
+2026-01-09T07:49:54.732996423Z 7:49:54 AM [express] GET /api/study/admin/users 200 in 34ms :: [{"id":2,"name":"Geovane Nascimento",…
+2026-01-09T07:50:14.735663495Z [Push] Sending "Mensagem da UMP Emaus" to 10 members (including inactive)
+2026-01-09T07:50:14.74366685Z [Push] User 1 has no push subscriptions registered
+2026-01-09T07:50:14.746861015Z [Push] User 5 has no push subscriptions registered
+2026-01-09T07:50:14.75001497Z [Push] User 11 has no push subscriptions registered
+2026-01-09T07:50:14.932658584Z [Push] Successfully sent notification to member user 2
+2026-01-09T07:50:14.964585771Z [Push] WebPush delivery error for member user 2: Received unexpected response code
+2026-01-09T07:50:14.964611112Z [Push] Error sending notification (status 410): Received unexpected response code
+2026-01-09T07:50:14.964618702Z [Push] Subscription expired/invalid (410), removing: https://fcm.googleapis.com/fcm/send/ffg9ckFBXMQ:AP...
+2026-01-09T07:50:14.968710096Z [Push] Sent "Mensagem da UMP Emaus" to user 2 (1/2 success)
+2026-01-09T07:50:14.971810259Z [Push] User 9 has no push subscriptions registered
+2026-01-09T07:50:14.974661628Z [Push] User 6 has no push subscriptions registered
+2026-01-09T07:50:14.97765524Z [Push] User 7 has no push subscriptions registered
+2026-01-09T07:50:14.980499018Z [Push] User 3 has no push subscriptions registered
+2026-01-09T07:50:14.983364297Z [Push] User 4 has no push subscriptions registered
+2026-01-09T07:50:14.986299057Z [Push] User 8 has no push subscriptions registered
+2026-01-09T07:50:14.986342758Z [Admin] Encouragement push: 1 sent, 9 failed
+2026-01-09T07:50:14.987140564Z 7:50:14 AM [express] POST /api/admin/study/encourage-all 200 in 392ms :: {"success":true,"sentCount"…
+2026-01-09T07:50:16.997398052Z ==> Running 'node ./dist/index.js'
+2026-01-09T07:50:35.752336489Z 7:50:35 AM [express] GET /api/study/admin/seasons 304 in 15ms :: [{"id":2,"title":"Não Jogue Sua Vid…
+2026-01-09T07:50:36.696869258Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2026-01-09T07:50:36.697289442Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2026-01-09T07:50:36.69811865Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-09T07:50:36.698252157Z [MercadoPago] Client initialized successfully
+2026-01-09T07:50:36.698602287Z [Push] Web Push configured successfully
+2026-01-09T07:50:36.993135803Z [WebSocket] Server initialized
+2026-01-09T07:50:37.102497927Z 7:50:36 AM [express] serving on port 10000
+2026-01-09T07:50:37.102682308Z Initializing PostgreSQL database connection...
+2026-01-09T07:50:38.30616057Z PostgreSQL connection successful: 2026-01-09T07:50:38.301Z
+2026-01-09T07:50:38.404871046Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2026-01-09T07:50:38.404893147Z Database initialized successfully!
+2026-01-09T07:50:38.696959392Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2026-01-09T07:50:38.697888195Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2026-01-09T07:50:38.70112686Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-09T07:50:38.703853276Z [Daily Verse Scheduler] Initialized - will run daily at 07:00 (America/Sao_Paulo)
+2026-01-09T07:50:38.791944115Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-09T07:50:38.794038485Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2026-01-09T07:50:38.794095838Z [Instagram Scheduler] Running sync...
+2026-01-09T07:50:38.794330741Z [Instagram] Starting sync...
+2026-01-09T07:50:38.802494728Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-09T07:50:38.893604929Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2026-01-09T07:50:38.896445302Z [Event Scheduler] Lesson release initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-09T07:50:38.899349368Z [Event Scheduler] Card distribution initialized - will run daily at 23:59 (America/Sao_Paulo)
+2026-01-09T07:50:38.901917314Z [Event Deadline Scheduler] Initialized - will run every hour at :00 (America/Sao_Paulo) with database persistence
+2026-01-09T07:50:38.904503612Z [Marketing Reminder Scheduler] Initialized - will run every hour at :30 (America/Sao_Paulo) with database persistence
+2026-01-09T07:50:38.99291956Z [Treasury Scheduler] Day 5 reminder initialized - will run on day 5 of each month at 08:00 (America/Sao_Paulo)
+2026-01-09T07:50:38.995082473Z [Treasury Scheduler] 5th business day reminder initialized - will run on weekdays at 08:00 (America/Sao_Paulo)
+2026-01-09T07:50:38.997012413Z [Shop Scheduler] Abandoned cart reminder initialized - will run every hour (America/Sao_Paulo) with auto-cancel after 48h
+2026-01-09T07:50:39.00010339Z [Treasury Scheduler] Loan installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T07:50:39.001959356Z [Shop Scheduler] Shop installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T07:50:39.00377502Z [Event Fee Scheduler] Event fee reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T07:50:39.093397877Z [Treasury Scheduler] Year rollover initialized - will run on Jan 1st at 00:05 (America/Sao_Paulo)
+2026-01-09T07:50:39.096276101Z [Treasury Scheduler] Monthly summary initialized - will run on day 1 of each month at 08:00 (America/Sao_Paulo)
+2026-01-09T07:50:39.096492893Z 7:50:39 AM [express] Database and schedulers initialized successfully
+2026-01-09T07:50:39.491892278Z [Instagram] API error: 400 {
+2026-01-09T07:50:39.49191554Z   error: {
+2026-01-09T07:50:39.49192072Z     message: 'Error validating access token: Session has expired on Monday, 29-Dec-25 10:00:00 PST. The current time is Thursday, 08-Jan-26 23:50:39 PST.',
+2026-01-09T07:50:39.49192644Z     type: 'OAuthException',
+2026-01-09T07:50:39.49192879Z     code: 190,
+2026-01-09T07:50:39.49193175Z     error_subcode: 463,
+2026-01-09T07:50:39.491975023Z [Instagram] No new posts fetched - keeping existing data
+2026-01-09T07:50:39.492003945Z     fbtrace_id: 'AYqcxe4MaPOsCnkrCIFqTVf'
+2026-01-09T07:50:39.492007405Z   }
+2026-01-09T07:50:39.492009775Z }
+2026-01-09T07:50:39.492016235Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-09T07:50:41.270810373Z ==> Your service is live 🎉
+2026-01-09T07:50:41.401959215Z ==> 
+2026-01-09T07:50:41.490763743Z ==> ///////////////////////////////////////////////////////////
+2026-01-09T07:50:41.575390322Z ==> 
+2026-01-09T07:50:41.665788359Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-09T07:50:41.749936208Z ==> 
+2026-01-09T07:50:41.900110864Z ==> ///////////////////////////////////////////////////////////
+2026-01-09T07:50:43.703913271Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-09T07:50:43.704029257Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-09T07:50:44.139532112Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2026-01-09T07:50:44.139556854Z [Daily Verse Scheduler] Using AI-generated verse
+2026-01-09T07:50:44.147457905Z [Push] Sending "Versículo do Dia" to 9 active members
+2026-01-09T07:50:44.150126237Z [Push] User 1 has no push subscriptions registered
+2026-01-09T07:50:44.152536885Z [Push] User 6 has no push subscriptions registered
+2026-01-09T07:50:44.155026647Z [Push] User 5 has no push subscriptions registered
+2026-01-09T07:50:44.157448095Z [Push] User 9 has no push subscriptions registered
+2026-01-09T07:50:44.160048694Z [Push] User 4 has no push subscriptions registered
+2026-01-09T07:50:44.162642502Z [Push] User 7 has no push subscriptions registered
+2026-01-09T07:50:44.166256238Z [Push] User 3 has no push subscriptions registered
+2026-01-09T07:50:44.193838653Z [Push] User 11 has no push subscriptions registered
+2026-01-09T07:50:44.304995659Z [Push] Successfully sent notification to member user 2
+2026-01-09T07:50:44.309094273Z [Push] Sent "Versículo do Dia" to user 2 (1/1 success)
+2026-01-09T07:50:44.316471684Z [Notifications] Daily verse notification: 1 members sent, 0 anonymous visitors sent
+2026-01-09T07:50:44.316481765Z [Daily Verse Scheduler] Sent: Salmos 139:14 (ARA)
+2026-01-09T07:50:45.793789631Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-09T07:50:45.793815983Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-09T07:50:46.346049562Z 7:50:46 AM [express] GET /api/study/admin/seasons/2 304 in 10ms :: {"id":2,"title":"Não Jogue Sua Vi…
+2026-01-09T07:50:46.358634071Z 7:50:46 AM [express] GET /api/study/admin/seasons/2/lessons 304 in 12ms :: []
+2026-01-09T07:50:48.803280236Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-09T07:50:48.80352601Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-09T07:50:48.806975627Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-09T07:50:48.807082133Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2026-01-09T07:50:48.807088653Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2026-01-09T07:50:48.807092133Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-09T07:50:48.807095174Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-09T07:50:48.815547196Z [Daily Missions Scheduler] Content already generated for today (2026-01-09)
+2026-01-09T07:50:48.903373211Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-09T07:50:48.903392252Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-09T07:50:48.903408293Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-09T07:50:48.903411483Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-09T07:50:48.903414413Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-09T07:50:48.903430144Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-09T07:50:48.903433374Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:16 (ARA)
+2026-01-09T07:50:48.903447225Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-09T07:50:48.903450525Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-09T07:50:48.903460816Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-09T07:50:48.903463636Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-09T07:50:48.903491257Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-09T07:50:48.903507369Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-09T07:50:48.903510609Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2026-01-09T07:50:48.903523029Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2026-01-09T07:50:48.906714561Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-09T07:50:48.906729472Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2026-01-09T07:50:48.906732733Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-09T07:50:48.906753144Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-09T07:50:48.906763694Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-09T07:50:48.906769445Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-09T07:50:48.906772635Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-09T07:50:48.909889173Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-09T07:50:48.909897513Z [Recovery Verses Scheduler] Added 3 new recovery verses for recovery-2026-01-09
+2026-01-09T07:50:55.951356182Z 7:50:55 AM [express] DELETE /api/study/admin/seasons/2 200 in 29ms :: {"message":"Temporada removida…
+2026-01-09T07:50:56.135431672Z 7:50:56 AM [express] GET /api/study/admin/seasons 200 in 6ms :: []
+2026-01-09T07:52:27.904475996Z [Upload] Image converted to Base64: 91.6KB -> 473.5KB (-417% reduction)
+2026-01-09T07:52:28.598319201Z 7:52:28 AM [express] POST /api/upload 200 in 7441ms :: {"url":"data:image/webp;base64,UklGRsZlBwBXRU…
+2026-01-09T07:52:29.796166252Z 7:52:29 AM [express] POST /api/study/admin/seasons 201 in 165ms :: {"id":4,"title":"Não Jogue Sua Vi…
+2026-01-09T07:52:30.092821009Z 7:52:30 AM [express] GET /api/study/admin/seasons 200 in 57ms :: [{"id":4,"title":"Não Jogue Sua Vid…
+2026-01-09T07:52:32.493964913Z 7:52:32 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 271ms :: []
+2026-01-09T07:52:33.103730997Z 7:52:33 AM [express] GET /api/study/admin/seasons/4 200 in 874ms :: {"id":4,"title":"Não Jogue Sua V…
+2026-01-09T07:53:28.395578433Z [PDF Parser] Starting PDF extraction, buffer size: 498602
+2026-01-09T07:53:37.006160676Z [PDF Parser] Extraction result - pages: undefined text length: 127074
+2026-01-09T07:53:37.091364941Z [PDF Parser] Text extraction successful. First 500 chars: 1
+2026-01-09T07:53:37.091387732Z UMA PAIXÃO ÚNICA PELA QUAL VIVER
+2026-01-09T07:53:37.091393013Z Salmos 73.25-26
+2026-01-09T07:53:37.091397933Z LEITURA DIÁRIA
+2026-01-09T07:53:37.091402293Z D Sl 73 – Vida quase desperdiçada
+2026-01-09T07:53:37.091406594Z S Rm 8.31-39 – Com Jesus, temos tudo
+2026-01-09T07:53:37.091424184Z T Lc 12.13-21 – Vida louca
+2026-01-09T07:53:37.091426084Z Q Ec 1 – A vida sem Deus
+2026-01-09T07:53:37.091427735Z Q Sl 27.10 – Acolhido pelo Senhor
+2026-01-09T07:53:37.091429485Z S Lc 16.19-31 – Vivendo para o ventre
+2026-01-09T07:53:37.091431145Z S Jo 4 – Jesus transforma a vida
+2026-01-09T07:53:37.091432885Z INTRODUÇÃO
+2026-01-09T07:53:37.091435285Z Nessa correria sem Deus em que vivemos, muitas pessoas, sem perceber, estão jogando sua vida
+2026-01-09T07:53:37.091439435Z fora. Neste trimestre, nossas lições abordarão esse tema, mostrando como ter uma vida plena de
+2026-01-09T07:53:37.091441205Z signifi
+2026-01-09T07:53:37.094119168Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T07:53:51.292600646Z 7:53:51 AM [express] GET /api/notifications 304 in 83ms :: {"notifications":[],"unreadCount":0,"hasM…
+2026-01-09T07:53:51.393022859Z 7:53:51 AM [express] GET /api/site-content/quem-somos 304 in 99ms :: {}
+2026-01-09T07:53:51.706532739Z 7:53:51 AM [express] GET /api/notifications/unread-count 304 in 482ms :: {"count":0}
+2026-01-09T07:53:51.712032473Z 7:53:51 AM [express] GET /api/site/highlights 304 in 496ms :: {"devotional":null,"events":[],"instag…
+2026-01-09T07:53:57.102444931Z 7:53:57 AM [express] GET /api/study/admin/weekly-activity 304 in 11ms :: [{"day":"Sab","date":"2026-…
+2026-01-09T07:53:57.294170588Z 7:53:57 AM [express] GET /api/study/admin/weekly-top-members 304 in 194ms :: [{"id":2,"fullName":"Ge…
+2026-01-09T07:53:57.297283006Z 7:53:57 AM [express] GET /api/study/admin/monthly-progress 304 in 194ms :: []
+2026-01-09T07:53:57.300967026Z 7:53:57 AM [express] GET /api/study/admin/stats 200 in 6ms :: {"totalUsers":9,"activeUsers":1,"total…
+2026-01-09T07:53:57.304057412Z 7:53:57 AM [express] GET /api/study/admin/events-stats 304 in 6ms :: {"totalEvents":0,"activeEvents"…
+2026-01-09T07:54:01.079506093Z 7:54:01 AM [express] GET /api/study/admin/weeks 304 in 4ms :: []
+2026-01-09T07:54:32.340427001Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T07:54:32.791441582Z 7:54:32 AM [express] POST /api/study/admin/seasons/4/import-pdf-exact 200 in 64985ms :: {"message":"…
+2026-01-09T07:54:32.996474439Z 7:54:32 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 19ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T07:54:33.794356514Z 7:54:33 AM [express] GET /api/study/admin/seasons/4/lessons 304 in 641ms :: [{"id":46,"studyWeekId":…
+2026-01-09T07:54:34.094435017Z 7:54:34 AM [express] GET /api/study/admin/seasons/4 200 in 1001ms :: {"id":4,"title":"Não Jogue Sua …
+2026-01-09T07:55:30.226377873Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T07:55:39.230994119Z ==> Detected service running on port 10000
+2026-01-09T07:55:39.414857989Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-09T07:56:14.593462226Z [PDF Parser] Starting PDF extraction, buffer size: 221445
+2026-01-09T07:56:17.293737431Z [PDF Parser] Extraction result - pages: undefined text length: 7954
+2026-01-09T07:56:17.293764572Z [PDF Parser] Text extraction successful. First 500 chars: 2
+2026-01-09T07:56:17.293769523Z NÃO DESPERDICE SUA VIDA
+2026-01-09T07:56:17.293773973Z Atos 20.24; 2Timóteo 4.6-8
+2026-01-09T07:56:17.293778093Z LEITURA DIÁRIA
+2026-01-09T07:56:17.293782273Z D At 20.17-38 – Últimas palavras
+2026-01-09T07:56:17.293786084Z S Jo 3.14-16 – Deus nos amou
+2026-01-09T07:56:17.293789854Z T 1Cr 29.10-19 – Tudo pertence a Deus
+2026-01-09T07:56:17.293793624Z Q 2Tm 4.6-8 – Um belo fim
+2026-01-09T07:56:17.293797534Z Q Sl 115 – Toda glória a Deus
+2026-01-09T07:56:17.293801335Z S 1Co 10.23-33 – Solli Deo gloria
+2026-01-09T07:56:17.293805115Z S Jo 17.3 – A vida eterna
+2026-01-09T07:56:17.293809205Z INTRODUÇÃO
+2026-01-09T07:56:17.293813585Z “Combati o bom combate, completei a carreira, guardei a fé” (2Tm 4.7). O que levaria um
+2026-01-09T07:56:17.293832276Z homem a dizer essas palavras no fim de sua vida? Milhões de seguidores nas redes sociais? Mesa farta?
+2026-01-09T07:56:17.293834816Z Conta bancária 
+2026-01-09T07:56:17.294077761Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T07:57:08.731800163Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T07:57:09.247002939Z [Week Creation] Generating practice questions for week 7...
+2026-01-09T07:57:09.299417912Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T07:57:16.597177257Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T07:57:16.817958323Z 7:57:16 AM [express] POST /api/study/admin/seasons/4/import-pdf-exact 200 in 62442ms :: {"message":"…
+2026-01-09T07:57:17.501558464Z 7:57:17 AM [express] GET /api/study/admin/seasons/4 200 in 112ms :: {"id":4,"title":"Não Jogue Sua V…
+2026-01-09T07:57:17.600401858Z 7:57:17 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 213ms :: [{"id":46,"studyWeekId":…
+2026-01-09T07:57:17.79747309Z 7:57:17 AM [express] GET /api/study/admin/seasons/4/lessons 304 in 14ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T07:57:32.371093653Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T07:57:32.418344721Z [Week Creation] Practice questions generated successfully for week 7
+2026-01-09T07:57:32.419157697Z 7:57:32 AM [express] POST /api/ai/create-week-with-content 200 in 122216ms :: {"message":"Semana cri…
+2026-01-09T07:57:33.11048807Z 7:57:33 AM [express] GET /api/study/admin/weeks 200 in 5ms :: [{"id":7,"weekNumber":1,"year":2026,"t…
+2026-01-09T07:57:55.583541564Z 7:57:55 AM [express] PUT /api/study/admin/weeks/7 200 in 7ms :: {"id":7,"weekNumber":1,"year":2026,"…
+2026-01-09T07:57:55.741048457Z 7:57:55 AM [express] GET /api/study/admin/weeks 200 in 5ms :: [{"id":7,"weekNumber":1,"year":2026,"t…
+2026-01-09T07:58:11.453873687Z 7:58:11 AM [express] POST /api/ai/create-week-with-content 409 in 5ms :: {"message":"Ja existe conte…
+2026-01-09T07:58:17.519593431Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T07:58:56.693528469Z [PDF Parser] Starting PDF extraction, buffer size: 205447
+2026-01-09T07:58:58.098501079Z [PDF Parser] Extraction result - pages: undefined text length: 10095
+2026-01-09T07:58:58.098528341Z [PDF Parser] Text extraction successful. First 500 chars: 3
+2026-01-09T07:58:58.098557982Z GLÓRIA SOMENTE NA CRUZ
+2026-01-09T07:58:58.098564353Z 1Coríntios 2.1-5
+2026-01-09T07:58:58.098569033Z LEITURA DIÁRIA
+2026-01-09T07:58:58.098574593Z D Fp 3.7-8 – Perda lucrativa
+2026-01-09T07:58:58.098579304Z S Rm 5.1-5 – Alegria da glória
+2026-01-09T07:58:58.098583404Z T 2Co 12.9 – Glória nas fraquezas
+2026-01-09T07:58:58.098587954Z Q Gl 2.20 – Cristo vive em mim
+2026-01-09T07:58:58.098591854Z Q Rm 3.21-26 – A justiça de Deus
+2026-01-09T07:58:58.098594634Z S Cl 2.13-15 – Vivos para Deus
+2026-01-09T07:58:58.098597485Z S Ap 5.9-10 – O Cordeiro digno
+2026-01-09T07:58:58.098600275Z INTRODUÇÃO
+2026-01-09T07:58:58.098606235Z Já vimos que a única forma de não se jogar a sua vida fora é viver para a glória de Deus. Mas o
+2026-01-09T07:58:58.098609245Z que significa “viver para a glória de Deus”? Viver para a glória de Deus é fazer todas as coisas
+2026-01-09T07:58:58.098612046Z desejando que Deus 
+2026-01-09T07:58:58.098963746Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:00:00.015054385Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-09T08:00:00.017747929Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-09T08:00:00.201779217Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-09T08:00:00.222699011Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-09T08:00:02.63925968Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:00:02.722019856Z 8:00:02 AM [express] POST /api/study/admin/seasons/4/import-pdf-exact 200 in 66430ms :: {"message":"…
+2026-01-09T08:00:02.917178648Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:00:03.492041372Z [Week Creation] Generating practice questions for week 8...
+2026-01-09T08:00:03.601460529Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:00:03.696694267Z 8:00:03 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 94ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:00:04.491747802Z 8:00:04 AM [express] GET /api/study/admin/seasons/4 200 in 204ms :: {"id":4,"title":"Não Jogue Sua V…
+2026-01-09T08:00:05.231333351Z 8:00:05 AM [express] GET /api/study/admin/seasons/4/lessons 304 in 26ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:00:34.948698694Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:00:34.987175171Z [Week Creation] Practice questions generated successfully for week 8
+2026-01-09T08:00:34.987782215Z 8:00:34 AM [express] POST /api/ai/create-week-with-content 200 in 137472ms :: {"message":"Semana cri…
+2026-01-09T08:00:35.254139114Z 8:00:35 AM [express] GET /api/study/admin/weeks 200 in 4ms :: [{"id":8,"weekNumber":2,"year":2026,"t…
+2026-01-09T08:01:03.446094074Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:01:36.805003219Z [PDF Parser] Starting PDF extraction, buffer size: 177017
+2026-01-09T08:01:38.49825913Z [PDF Parser] Extraction result - pages: undefined text length: 9507
+2026-01-09T08:01:38.498306453Z [PDF Parser] Text extraction successful. First 500 chars: 4
+2026-01-09T08:01:38.498319684Z GLORIFICANDO A CRISTO POR MEIO DE DOR E MORTE
+2026-01-09T08:01:38.498324394Z (1) Filipenses 1.20-21
+2026-01-09T08:01:38.498327454Z LEITURA DIÁRIA
+2026-01-09T08:01:38.498330744Z D At 20.24 – Em nada preciosa
+2026-01-09T08:01:38.498333834Z S Mc 8.34 – Cruz e discipulado
+2026-01-09T08:01:38.498336955Z T At 9.15-16 – Chamado para sofrer
+2026-01-09T08:01:38.498339785Z Q Gn 3.6-19 – O mundo caído
+2026-01-09T08:01:38.498342545Z Q Sl 15 – Integridade
+2026-01-09T08:01:38.498345425Z S Lc 14.25-33 – O custo do discipulado
+2026-01-09T08:01:38.498348275Z S Fp 3.7-8 – Amor por Cristo
+2026-01-09T08:01:38.498351055Z INTRODUÇÃO
+2026-01-09T08:01:38.498354146Z “Viver para magnificar Cristo custa caro”1 (Lc 14.28,33). Durante o seu ministério terreno,
+2026-01-09T08:01:38.498357036Z Jesus sofreu muito, foi perseguido, padeceu intenso sofrimento. E ele nos convoca a segui-lo
+2026-01-09T08:01:38.498359816Z toma
+2026-01-09T08:01:38.498702806Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:02:34.30353099Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:02:34.52017544Z 8:02:34 AM [express] POST /api/study/admin/seasons/4/import-pdf-exact 200 in 57985ms :: {"message":"…
+2026-01-09T08:02:34.793142656Z 8:02:34 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 45ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:02:34.999432764Z 8:02:34 AM [express] GET /api/study/admin/seasons/4 200 in 237ms :: {"id":4,"title":"Não Jogue Sua V…
+2026-01-09T08:02:35.096560201Z 8:02:35 AM [express] GET /api/study/admin/seasons/4/lessons 304 in 105ms :: [{"id":46,"studyWeekId":…
+2026-01-09T08:02:39.124049852Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:02:39.124403242Z [AI] First JSON parse failed, attempting repair...
+2026-01-09T08:02:39.671692101Z [Week Creation] Generating practice questions for week 9...
+2026-01-09T08:02:39.699613075Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:03:04.697674716Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:03:04.759266473Z [Week Creation] Practice questions generated successfully for week 9
+2026-01-09T08:03:04.759973383Z 8:03:04 AM [express] POST /api/ai/create-week-with-content 200 in 121317ms :: {"message":"Semana cri…
+2026-01-09T08:03:42.740538467Z [PDF Parser] Starting PDF extraction, buffer size: 176261
+2026-01-09T08:03:44.097416642Z [PDF Parser] Extraction result - pages: undefined text length: 9145
+2026-01-09T08:03:44.097440533Z [PDF Parser] Text extraction successful. First 500 chars: 5
+2026-01-09T08:03:44.097446334Z GLORIFICANDO A CRISTO POR MEIO DE DOR E MORTE
+2026-01-09T08:03:44.097451054Z (2) Filipenses 1.19-26
+2026-01-09T08:03:44.097455724Z LEITURA DIÁRIA
+2026-01-09T08:03:44.097461145Z D Lc 9.23 – A cruz diária
+2026-01-09T08:03:44.097465195Z S Sl 63 – Anseio por Deus
+2026-01-09T08:03:44.097469385Z T 2Co 4.16-17 – Renovação interior
+2026-01-09T08:03:44.097473525Z Q 2Tm 3.12 – Piedade e perseguição
+2026-01-09T08:03:44.097477866Z Q At 20.24 – O valor correto
+2026-01-09T08:03:44.097482486Z S 2Co 6.10 – Sempre alegres
+2026-01-09T08:03:44.097486766Z S At 5.17-42 – Perseguidos, mas obedientes
+2026-01-09T08:03:44.097490966Z INTRODUÇÃO
+2026-01-09T08:03:44.097516818Z Você já ouviu falar de um jovem bispo cristão do século 2º, chamado Eleutério,1 que aos vinte
+2026-01-09T08:03:44.097523258Z anos de idade foi ordenado bispo de Aquileia, atual Veneza? Ele foi preso sob a acusaçã
+2026-01-09T08:03:44.097901239Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:03:46.026665289Z 8:03:46 AM [express] GET /api/study/admin/weeks 200 in 6ms :: [{"id":9,"weekNumber":3,"year":2026,"t…
+2026-01-09T08:04:09.68183917Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:04:39.695455583Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:04:39.892850214Z 8:04:39 AM [express] POST /api/study/admin/seasons/4/import-pdf-exact 200 in 57546ms :: {"message":"…
+2026-01-09T08:04:40.992143122Z 8:04:40 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 800ms :: [{"id":46,"studyWeekId":…
+2026-01-09T08:04:41.096818368Z 8:04:41 AM [express] GET /api/study/admin/seasons/4 200 in 940ms :: {"id":4,"title":"Não Jogue Sua V…
+2026-01-09T08:04:41.213644049Z 8:04:41 AM [express] GET /api/study/admin/seasons/4/lessons 304 in 20ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:05:28.803273103Z [Notifications] notifySeasonPublished STARTED for season 4: "Não Jogue Sua Vida Fora"
+2026-01-09T08:05:28.891029544Z [Push] Sending "Nova Revista DeoGlory!" to 9 active members
+2026-01-09T08:05:29.292514988Z [Push] User 1 has no push subscriptions registered
+2026-01-09T08:05:29.593320094Z [Push] User 6 has no push subscriptions registered
+2026-01-09T08:05:29.691540642Z [Push] User 5 has no push subscriptions registered
+2026-01-09T08:05:29.69395956Z [Push] User 9 has no push subscriptions registered
+2026-01-09T08:05:29.695762373Z [Push] User 4 has no push subscriptions registered
+2026-01-09T08:05:29.701865382Z 8:05:29 AM [express] POST /api/study/admin/seasons/4/publish 200 in 927ms :: {"id":4,"title":"Não Jo…
+2026-01-09T08:05:29.702827847Z [Push] User 7 has no push subscriptions registered
+2026-01-09T08:05:29.791305759Z [Push] User 3 has no push subscriptions registered
+2026-01-09T08:05:29.793640292Z [Push] User 11 has no push subscriptions registered
+2026-01-09T08:05:30.00148435Z 8:05:30 AM [express] GET /api/study/admin/seasons/4 200 in 403ms :: {"id":4,"title":"Não Jogue Sua V…
+2026-01-09T08:05:30.005135808Z 8:05:30 AM [express] GET /api/study/admin/seasons/4/lessons 304 in 312ms :: [{"id":46,"studyWeekId":…
+2026-01-09T08:05:30.09291351Z [Push] Successfully sent notification to member user 2
+2026-01-09T08:05:30.096658524Z [Push] Sent "Nova Revista DeoGlory!" to user 2 (1/1 success)
+2026-01-09T08:05:30.096668775Z [Notifications] Season push: 1 sent, 8 failed
+2026-01-09T08:05:33.199060327Z 8:05:33 AM [express] GET /api/study/admin/seasons/4 304 in 202ms :: {"id":4,"title":"Não Jogue Sua V…
+2026-01-09T08:05:33.297784814Z 8:05:33 AM [express] GET /api/study/admin/seasons/4/lessons 304 in 303ms :: [{"id":46,"studyWeekId":…
+2026-01-09T08:05:33.930731265Z [Notifications] Season email sent to 10/10 members
+2026-01-09T08:05:33.930753986Z [Notifications] Season published notification complete
+2026-01-09T08:05:34.80176218Z 8:05:34 AM [express] PATCH /api/study/admin/lessons/46 200 in 5ms :: {"id":46,"studyWeekId":null,"se…
+2026-01-09T08:05:34.992151311Z 8:05:34 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 22ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:05:36.023952135Z 8:05:36 AM [express] PATCH /api/study/admin/lessons/52 200 in 4ms :: {"id":52,"studyWeekId":null,"se…
+2026-01-09T08:05:36.206626456Z 8:05:36 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 19ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:05:37.588282947Z 8:05:37 AM [express] PATCH /api/study/admin/lessons/53 200 in 5ms :: {"id":53,"studyWeekId":null,"se…
+2026-01-09T08:05:37.801610357Z 8:05:37 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 21ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:05:39.547256412Z 8:05:39 AM [express] PATCH /api/study/admin/lessons/59 200 in 5ms :: {"id":59,"studyWeekId":null,"se…
+2026-01-09T08:05:39.754003677Z 8:05:39 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 19ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:05:41.187072484Z 8:05:41 AM [express] PATCH /api/study/admin/lessons/65 200 in 4ms :: {"id":65,"studyWeekId":null,"se…
+2026-01-09T08:05:41.384878839Z 8:05:41 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 20ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:05:44.973053829Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:05:45.414300714Z [Week Creation] Generating practice questions for week 10...
+2026-01-09T08:05:45.426553713Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:05:58.559293098Z 8:05:58 AM [express] PATCH /api/study/admin/lessons/59 200 in 6ms :: {"id":59,"studyWeekId":null,"se…
+2026-01-09T08:05:58.793082737Z 8:05:58 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 42ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:06:09.374665805Z 8:06:09 AM [express] PATCH /api/study/admin/lessons/65 200 in 6ms :: {"id":65,"studyWeekId":null,"se…
+2026-01-09T08:06:09.638375853Z 8:06:09 AM [express] GET /api/study/admin/seasons/4/lessons 200 in 19ms :: [{"id":46,"studyWeekId":n…
+2026-01-09T08:06:22.543149782Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:06:22.591225387Z [Week Creation] Practice questions generated successfully for week 10
+2026-01-09T08:06:22.591915357Z 8:06:22 AM [express] POST /api/ai/create-week-with-content 200 in 132914ms :: {"message":"Semana cri…
+2026-01-09T08:06:23.495318Z 8:06:23 AM [express] GET /api/study/admin/seasons 200 in 407ms :: [{"id":4,"title":"Não Jogue Sua Vi…
+2026-01-09T08:06:26.618874012Z 8:06:26 AM [express] GET /api/study/admin/seasons/2 404 in 6ms :: {"message":"Temporada não encontra…
+2026-01-09T08:06:26.65123537Z 8:06:26 AM [express] GET /api/study/admin/seasons/2/lessons 404 in 35ms :: {"message":"Temporada não…
+2026-01-09T08:06:27.794262836Z 8:06:27 AM [express] GET /api/study/admin/seasons/2 404 in 5ms :: {"message":"Temporada não encontra…
+2026-01-09T08:06:27.824184944Z 8:06:27 AM [express] GET /api/study/admin/seasons/2/lessons 404 in 4ms :: {"message":"Temporada não …
+2026-01-09T08:06:30.074538627Z 8:06:30 AM [express] GET /api/study/admin/seasons/2 404 in 6ms :: {"message":"Temporada não encontra…
+2026-01-09T08:06:30.075248028Z 8:06:30 AM [express] GET /api/study/admin/seasons/2/lessons 404 in 8ms :: {"message":"Temporada não …
+2026-01-09T08:06:31.498574558Z 8:06:31 AM [express] GET /api/study/encouragement-messages 304 in 1ms :: {"messages":[{"key":"lesson…
+2026-01-09T08:06:31.592590457Z 8:06:31 AM [express] GET /api/study/admin/users 304 in 105ms :: [{"id":2,"name":"Geovane Nascimento"…
+2026-01-09T08:06:31.596136849Z 8:06:31 AM [express] GET /api/study/admin/events-stats 304 in 101ms :: {"totalEvents":0,"activeEvent…
+2026-01-09T08:06:34.53403404Z 8:06:34 AM [express] GET /api/study/admin/monthly-progress 304 in 4ms :: []
+2026-01-09T08:06:34.539156472Z 8:06:34 AM [express] GET /api/study/admin/stats 200 in 4ms :: {"totalUsers":9,"activeUsers":1,"total…
+2026-01-09T08:06:34.540636927Z 8:06:34 AM [express] GET /api/study/admin/weekly-activity 304 in 5ms :: [{"day":"Sab","date":"2026-0…
+2026-01-09T08:06:34.547186101Z 8:06:34 AM [express] GET /api/study/admin/weekly-top-members 304 in 6ms :: [{"id":2,"fullName":"Geov…
+2026-01-09T08:06:37.73899617Z 8:06:37 AM [express] GET /api/study/leaderboard 304 in 12ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-09T08:06:37.991662817Z 8:06:37 AM [express] GET /api/study/profile 200 in 45ms :: {"id":2,"userId":1,"totalXp":0,"currentLe…
+2026-01-09T08:06:38.101913622Z 8:06:38 AM [express] GET /api/missions/daily 200 in 114ms :: {"missions":[{"id":6,"userId":1,"missio…
+2026-01-09T08:06:38.173019723Z 8:06:38 AM [express] GET /api/study/weeks 304 in 4ms :: []
+2026-01-09T08:06:38.438060446Z 8:06:38 AM [express] GET /api/notifications 200 in 8ms :: {"notifications":[{"id":1,"userId":1,"type…
+2026-01-09T08:06:38.441898205Z 8:06:38 AM [express] GET /api/notifications/unread-count 200 in 3ms :: {"count":1}
+2026-01-09T08:06:38.463144268Z 8:06:38 AM [express] GET /api/study/weekly-goal 200 in 27ms :: {"weekKey":"2026-W02","goals":{"lesso…
+2026-01-09T08:06:40.458891164Z 8:06:40 AM [express] GET /api/study/current-lesson 200 in 23ms :: {"lesson":{"id":46,"lessonNumber":…
+2026-01-09T08:06:40.991885987Z 8:06:40 AM [express] GET /api/study/seasons 200 in 58ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-09T08:06:41.700470717Z 8:06:41 AM [express] GET /api/study/seasons/4 200 in 497ms :: {"id":4,"title":"Não Jogue Sua Vida Fo…
+2026-01-09T08:07:01.565346404Z 8:07:01 AM [express] GET /api/study/lessons/46 200 in 8ms :: {"id":46,"studyWeekId":null,"seasonId":…
+2026-01-09T08:07:01.80853886Z 8:07:01 AM [express] POST /api/study/lessons/46/start 200 in 38ms :: {"id":1,"userId":1,"lessonId":4…
+2026-01-09T08:07:02.100907874Z 8:07:02 AM [express] GET /api/study/profile 304 in 115ms :: {"id":2,"userId":1,"totalXp":0,"currentL…
+2026-01-09T08:07:32.265894853Z 8:07:32 AM [express] GET /api/study/admin/weeks 200 in 36ms :: [{"id":10,"weekNumber":4,"year":2026,…
+2026-01-09T08:08:05.464908806Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:09:50.154083866Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:09:50.498161253Z [Week Creation] Generating practice questions for week 11...
+2026-01-09T08:09:50.513791765Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-09T08:10:18.660706173Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-09T08:10:18.701418968Z [Week Creation] Practice questions generated successfully for week 11
+2026-01-09T08:10:18.702282478Z 8:10:18 AM [express] POST /api/ai/create-week-with-content 200 in 133268ms :: {"message":"Semana cri…

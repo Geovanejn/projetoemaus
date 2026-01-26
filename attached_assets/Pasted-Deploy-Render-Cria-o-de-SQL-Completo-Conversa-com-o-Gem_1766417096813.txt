@@ -1,0 +1,6753 @@
+Deploy Render: Criação de SQL Completo
+Conversa com o Gemini
+Preciso fazer deploy no render e preciso criar o aquivo sql pra gerar todas as tabelas, colunas e relacionamentos que constam no arquivo schema. Irei enviar todo o arquivo schema, quando falar ACABEI SCHEMA, você guarda o arquivo, depois irei enviar um arquivo sql com já algumas tabelas, gere TODAS as tabelas e colunas, o arquivo completo de sql
+
+Entendido. Estou pronto para te ajudar a montar o banco de dados para o deploy no Render.
+
+Seguirei exatamente o fluxo que você definiu:
+
+Você envia o código do schema (pode ser em partes).
+
+Eu aguardo até você digitar ACABEI SCHEMA.
+
+Você envia o seu SQL parcial.
+
+Eu analiso tudo e gero o código SQL completo, contendo todas as tabelas, colunas, chaves estrangeiras e relacionamentos necessários.
+
+Pode começar a enviar a primeira parte do seu arquivo schema.
+
+import { sql } from "drizzle-orm";
+
+import { pgTable, serial, integer, text, boolean, unique, timestamp } from "drizzle-orm/pg-core";
+
+import { createInsertSchema } from "drizzle-zod";
+
+import { z } from "zod";
+
+import crypto from "crypto";
+
+
+
+// Utility function to generate Gravatar URL from email
+
+export function getGravatarUrl(email: string): string {
+
+  const hash = crypto
+
+    .createHash("md5")
+
+    .update(email.toLowerCase().trim())
+
+    .digest("hex");
+
+  return `https://www.gravatar.com/avatar/${hash}?d=mp&s=200`;
+
+}
+
+
+
+// Utility function to generate verification hash for PDF
+
+export function generatePdfVerificationHash(electionId: number, electionName: string, timestamp: string): string {
+
+  const data = `${electionId}-${electionName}-${timestamp}-${Math.random()}`;
+
+  return crypto.createHash("sha256").update(data).digest("hex");
+
+}
+
+
+
+// Secretaria types - APENAS espiritualidade e marketing estão ativas
+
+export type Secretaria = "none" | "espiritualidade" | "marketing" | null;
+
+
+
+// Users table
+
+export const users = pgTable("users", {
+
+  id: serial("id").primaryKey(),
+
+  fullName: text("full_name").notNull(),
+
+  email: text("email").notNull().unique(),
+
+  password: text("password").notNull(),
+
+  hasPassword: boolean("has_password").notNull().default(false),
+
+  photoUrl: text("photo_url"),
+
+  birthdate: text("birthdate"),
+
+  isAdmin: boolean("is_admin").notNull().default(false),
+
+  isMember: boolean("is_member").notNull().default(true),
+
+  activeMember: boolean("active_member").notNull().default(true),
+
+  secretaria: text("secretaria"),
+
+});
+
+
+
+export const insertUserSchema = createInsertSchema(users).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertUser = z.infer<typeof insertUserSchema>;
+
+export type User = typeof users.$inferSelect;
+
+
+
+// Positions table (fixed positions)
+
+export const positions = pgTable("positions", {
+
+  id: serial("id").primaryKey(),
+
+  name: text("name").notNull().unique(),
+
+});
+
+
+
+export const insertPositionSchema = createInsertSchema(positions).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertPosition = z.infer<typeof insertPositionSchema>;
+
+export type Position = typeof positions.$inferSelect;
+
+
+
+// Elections table
+
+export const elections = pgTable("elections", {
+
+  id: serial("id").primaryKey(),
+
+  name: text("name").notNull(),
+
+  isActive: boolean("is_active").notNull().default(true),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  closedAt: timestamp("closed_at"),
+
+});
+
+
+
+// Election Winners table - tracks which candidate won each position (for tie resolution in 3rd scrutiny)
+
+export const electionWinners = pgTable("election_winners", {
+
+  id: serial("id").primaryKey(),
+
+  electionId: integer("election_id").notNull().references(() => elections.id),
+
+  positionId: integer("position_id").notNull().references(() => positions.id),
+
+  candidateId: integer("candidate_id").notNull().references(() => candidates.id),
+
+  wonAtScrutiny: integer("won_at_scrutiny").notNull(),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertElectionSchema = createInsertSchema(elections).omit({
+
+  id: true,
+
+  isActive: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertElection = z.infer<typeof insertElectionSchema>;
+
+export type Election = typeof elections.$inferSelect;
+
+
+
+export const insertElectionWinnerSchema = createInsertSchema(electionWinners).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertElectionWinner = z.infer<typeof insertElectionWinnerSchema>;
+
+export type ElectionWinner = typeof electionWinners.$inferSelect;
+
+
+
+// Election Positions table - tracks each position within an election sequentially
+
+export const electionPositions = pgTable("election_positions", {
+
+  id: serial("id").primaryKey(),
+
+  electionId: integer("election_id").notNull().references(() => elections.id),
+
+  positionId: integer("position_id").notNull().references(() => positions.id),
+
+  orderIndex: integer("order_index").notNull(),
+
+  status: text("status").notNull().default("pending"),
+
+  currentScrutiny: integer("current_scrutiny").notNull().default(1),
+
+  openedAt: timestamp("opened_at"),
+
+  closedAt: timestamp("closed_at"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertElectionPositionSchema = createInsertSchema(electionPositions).omit({
+
+  id: true,
+
+  status: true,
+
+  currentScrutiny: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertElectionPosition = z.infer<typeof insertElectionPositionSchema>;
+
+export type ElectionPosition = typeof electionPositions.$inferSelect;
+
+
+
+// Election Attendance table - tracks which members are present for voting per position
+
+export const electionAttendance = pgTable("election_attendance", {
+
+  id: serial("id").primaryKey(),
+
+  electionId: integer("election_id").notNull().references(() => elections.id),
+
+  electionPositionId: integer("election_position_id").references(() => electionPositions.id),
+
+  memberId: integer("member_id").notNull().references(() => users.id),
+
+  isPresent: boolean("is_present").notNull().default(false),
+
+  markedAt: timestamp("marked_at"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertElectionAttendanceSchema = createInsertSchema(electionAttendance).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertElectionAttendance = z.infer<typeof insertElectionAttendanceSchema>;
+
+export type ElectionAttendance = typeof electionAttendance.$inferSelect;
+
+
+
+// Candidates table
+
+export const candidates = pgTable("candidates", {
+
+  id: serial("id").primaryKey(),
+
+  name: text("name").notNull(),
+
+  email: text("email").notNull(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  positionId: integer("position_id").notNull().references(() => positions.id),
+
+  electionId: integer("election_id").notNull().references(() => elections.id),
+
+}, (table) => ({
+
+  uniqueCandidate: unique().on(table.userId, table.positionId, table.electionId),
+
+}));
+
+
+
+export const insertCandidateSchema = createInsertSchema(candidates).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertCandidate = z.infer<typeof insertCandidateSchema>;
+
+export type Candidate = typeof candidates.$inferSelect;
+
+
+
+// Votes table
+
+export const votes = pgTable("votes", {
+
+  id: serial("id").primaryKey(),
+
+  voterId: integer("voter_id").notNull().references(() => users.id),
+
+  candidateId: integer("candidate_id").notNull().references(() => candidates.id),
+
+  positionId: integer("position_id").notNull().references(() => positions.id),
+
+  electionId: integer("election_id").notNull().references(() => elections.id),
+
+  scrutinyRound: integer("scrutiny_round").notNull().default(1),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertVoteSchema = createInsertSchema(votes).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertVote = z.infer<typeof insertVoteSchema>;
+
+export type Vote = typeof votes.$inferSelect;
+
+
+
+// Verification Codes table
+
+export const verificationCodes = pgTable("verification_codes", {
+
+  id: serial("id").primaryKey(),
+
+  email: text("email").notNull(),
+
+  code: text("code").notNull(),
+
+  expiresAt: timestamp("expires_at").notNull(),
+
+  isPasswordReset: boolean("is_password_reset").notNull().default(false),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertVerificationCodeSchema = createInsertSchema(verificationCodes).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertVerificationCode = z.infer<typeof insertVerificationCodeSchema>;
+
+export type VerificationCode = typeof verificationCodes.$inferSelect;
+
+
+
+// PDF Verification table
+
+export const pdfVerifications = pgTable("pdf_verifications", {
+
+  id: serial("id").primaryKey(),
+
+  electionId: integer("election_id").notNull().references(() => elections.id),
+
+  verificationHash: text("verification_hash").notNull().unique(),
+
+  presidentName: text("president_name"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertPdfVerificationSchema = createInsertSchema(pdfVerifications).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertPdfVerification = z.infer<typeof insertPdfVerificationSchema>;
+
+export type PdfVerification = typeof pdfVerifications.$inferSelect;
+
+
+
+// Auth schemas
+
+export const requestCodeSchema = z.object({
+
+  email: z.string().email("Email inválido"),
+
+  isPasswordReset: z.boolean().optional(),
+
+});
+
+
+
+export type RequestCodeData = z.infer<typeof requestCodeSchema>;
+
+
+
+export const verifyCodeSchema = z.object({
+
+  email: z.string().email("Email inválido"),
+
+  code: z.string().length(6, "Código deve ter 6 dígitos"),
+
+});
+
+
+
+export type VerifyCodeData = z.infer<typeof verifyCodeSchema>;
+
+
+
+export const loginSchema = z.object({
+
+  email: z.string().email("Email inválido"),
+
+  password: z.string().min(6, "Senha deve ter no mínimo 6 caracteres"),
+
+});
+
+
+
+export type LoginData = z.infer<typeof loginSchema>;
+
+
+
+export const registerSchema = loginSchema.extend({
+
+  fullName: z.string().min(2, "Nome completo é obrigatório"),
+
+});
+
+
+
+export type RegisterData = z.infer<typeof registerSchema>;
+
+
+
+export const addMemberSchema = z.object({
+
+  fullName: z.string().min(2, "Nome completo é obrigatório"),
+
+  email: z.string().email("Email inválido"),
+
+  photoUrl: z.string().optional(),
+
+  birthdate: z.string().optional(),
+
+  activeMember: z.boolean().default(true),
+
+  secretaria: z.string().optional(),
+
+});
+
+
+
+export type AddMemberData = z.infer<typeof addMemberSchema>;
+
+
+
+export const updateMemberSchema = z.object({
+
+  fullName: z.string().min(2, "Nome completo é obrigatório").optional(),
+
+  email: z.string().email("Email inválido").optional(),
+
+  photoUrl: z.string().optional(),
+
+  birthdate: z.string().optional(),
+
+  activeMember: z.boolean().optional(),
+
+  secretaria: z.string().optional(),
+
+});
+
+
+
+export type UpdateMemberData = z.infer<typeof updateMemberSchema>;
+
+
+
+export const setPasswordSchema = z.object({
+
+  password: z.string().min(6, "Senha deve ter no mínimo 6 caracteres"),
+
+  confirmPassword: z.string().min(6, "Senha deve ter no mínimo 6 caracteres"),
+
+}).refine((data) => data.password === data.confirmPassword, {
+
+  message: "As senhas não coincidem",
+
+  path: ["confirmPassword"],
+
+});
+
+
+
+export type SetPasswordData = z.infer<typeof setPasswordSchema>;
+
+
+
+export const loginPasswordSchema = z.object({
+
+  email: z.string().email("Email inválido"),
+
+  password: z.string().min(6, "Senha deve ter no mínimo 6 caracteres"),
+
+});
+
+
+
+export type LoginPasswordData = z.infer<typeof loginPasswordSchema>;
+
+
+
+// Response types
+
+export type AuthResponse = {
+
+  user: Omit<User, "password">;
+
+  token: string;
+
+};
+
+
+
+export type CandidateWithDetails = Candidate & {
+
+  positionName: string;
+
+  electionName: string;
+
+  voteCount?: number;
+
+  photoUrl?: string;
+
+};
+
+
+
+export type PositionWithCandidates = Position & {
+
+  candidates: Candidate[];
+
+};
+
+
+
+export type ElectionResults = {
+
+  electionId: number;
+
+  electionName: string;
+
+  isActive: boolean;
+
+  currentScrutiny: number;
+
+  presentCount: number;
+
+  createdAt: string;
+
+  closedAt: string | null;
+
+  positions: Array<{
+
+    positionId: number;
+
+    positionName: string;
+
+    status: string;
+
+    currentScrutiny: number;
+
+    orderIndex: number;
+
+    totalVoters: number;
+
+    majorityThreshold: number;
+
+    needsNextScrutiny: boolean;
+
+    winnerId?: number;
+
+    winnerScrutiny?: number;
+
+    candidates: Array<{
+
+      candidateId: number;
+
+      candidateName: string;
+
+      candidateEmail: string;
+
+      photoUrl: string;
+
+      voteCount: number;
+
+      isElected: boolean;
+
+      electedInScrutiny?: number;
+
+      wonAtScrutiny?: number;
+
+    }>;
+
+  }>;
+
+};
+
+
+
+export type VoterActivity = {
+
+  voterId: number;
+
+  voterName: string;
+
+  voterEmail: string;
+
+  positionName: string;
+
+  candidateName: string;
+
+  scrutinyRound: number;
+
+  votedAt: string;
+
+};
+
+
+
+export type VoterAttendance = {
+
+  voterId: number;
+
+  voterName: string;
+
+  voterEmail: string;
+
+  firstVoteAt: string;
+
+  totalVotes: number;
+
+};
+
+
+
+export type ElectionAuditData = {
+
+  results: ElectionResults;
+
+  electionMetadata: {
+
+    createdAt: string;
+
+    closedAt?: string;
+
+    totalPositions: number;
+
+    completedPositions: number;
+
+    totalMembers: number;
+
+  };
+
+  voterAttendance: VoterAttendance[];
+
+  voteTimeline: VoterActivity[];
+
+  scrutinyHistory?: Array<{
+
+    positionId: number;
+
+    positionName: string;
+
+    scrutinies: Array<{
+
+      round: number;
+
+      candidates: Array<{
+
+        candidateId: number;
+
+        candidateName: string;
+
+        candidateEmail: string;
+
+        voteCount: number;
+
+        advancedToNext: boolean;
+
+        isElected: boolean;
+
+      }>;
+
+    }>;
+
+  }>;
+
+};
+
+
+
+// ==================== DEVOCIONAIS ====================
+
+
+
+export const devotionals = pgTable("devotionals", {
+
+  id: serial("id").primaryKey(),
+
+  title: text("title").notNull(),
+
+  verse: text("verse").notNull(),
+
+  verseReference: text("verse_reference").notNull(),
+
+  content: text("content").notNull(),
+
+  contentHtml: text("content_html"),
+
+  summary: text("summary"),
+
+  prayer: text("prayer"),
+
+  imageUrl: text("image_url"),
+
+  author: text("author"),
+
+  publishedAt: timestamp("published_at").notNull().defaultNow(),
+
+  scheduledAt: timestamp("scheduled_at"),
+
+  isPublished: boolean("is_published").notNull().default(true),
+
+  isFeatured: boolean("is_featured").notNull().default(false),
+
+  createdBy: integer("created_by").references(() => users.id),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertDevotionalSchema = createInsertSchema(devotionals).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertDevotional = z.infer<typeof insertDevotionalSchema>;
+
+export type Devotional = typeof devotionals.$inferSelect;
+
+
+
+// ==================== EVENTOS ====================
+
+
+
+export type EventCategory = "geral" | "culto" | "retiro" | "estudo" | "social" | "confraternizacao";
+
+
+
+export const siteEvents = pgTable("site_events", {
+
+  id: serial("id").primaryKey(),
+
+  title: text("title").notNull(),
+
+  description: text("description"),
+
+  shortDescription: text("short_description"),
+
+  imageUrl: text("image_url"),
+
+  startDate: text("start_date").notNull(),
+
+  endDate: text("end_date"),
+
+  time: text("time"),
+
+  location: text("location"),
+
+  locationUrl: text("location_url"),
+
+  price: text("price"),
+
+  registrationUrl: text("registration_url"),
+
+  category: text("category").notNull().default("geral"),
+
+  isPublished: boolean("is_published").notNull().default(true),
+
+  isFeatured: boolean("is_featured").notNull().default(false),
+
+  isAllDay: boolean("is_all_day").notNull().default(false),
+
+  createdBy: integer("created_by").references(() => users.id),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertSiteEventSchema = createInsertSchema(siteEvents).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertSiteEvent = z.infer<typeof insertSiteEventSchema>;
+
+export type SiteEvent = typeof siteEvents.$inferSelect;
+
+
+
+// ==================== POSTS INSTAGRAM ====================
+
+
+
+export const instagramPosts = pgTable("instagram_posts", {
+
+  id: serial("id").primaryKey(),
+
+  instagramId: text("instagram_id"),
+
+  caption: text("caption"),
+
+  imageUrl: text("image_url").notNull(),
+
+  videoUrl: text("video_url"),
+
+  mediaType: text("media_type").default("IMAGE"),
+
+  permalink: text("permalink"),
+
+  likesCount: integer("likes_count").default(0),
+
+  commentsCount: integer("comments_count").default(0),
+
+  postedAt: timestamp("posted_at").notNull().defaultNow(),
+
+  isActive: boolean("is_active").notNull().default(true),
+
+  isFeaturedBanner: boolean("is_featured_banner").notNull().default(false),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertInstagramPostSchema = createInsertSchema(instagramPosts).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertInstagramPost = z.infer<typeof insertInstagramPostSchema>;
+
+export type InstagramPost = typeof instagramPosts.$inferSelect;
+
+
+
+// ==================== PEDIDOS DE ORACAO ====================
+
+
+
+export type PrayerCategory = "saude" | "familia" | "trabalho" | "espiritual" | "relacionamento" | "outros";
+
+export type PrayerStatus = "pending" | "approved" | "rejected" | "praying" | "answered" | "archived";
+
+
+
+export const prayerRequests = pgTable("prayer_requests", {
+
+  id: serial("id").primaryKey(),
+
+  name: text("name").notNull(),
+
+  whatsapp: text("whatsapp"),
+
+  category: text("category").notNull().default("outros"),
+
+  request: text("request").notNull(),
+
+  status: text("status").notNull().default("pending"),
+
+  notes: text("notes"),
+
+  prayedBy: integer("prayed_by").references(() => users.id),
+
+  prayedAt: timestamp("prayed_at"),
+
+  isModerated: boolean("is_moderated").notNull().default(false),
+
+  moderatedBy: integer("moderated_by").references(() => users.id),
+
+  moderatedAt: timestamp("moderated_at"),
+
+  isApproved: boolean("is_approved").notNull().default(false),
+
+  approvedAt: timestamp("approved_at"),
+
+  approvedBy: integer("approved_by").references(() => users.id),
+
+  inPrayerCount: integer("in_prayer_count").notNull().default(0),
+
+  hasProfanity: boolean("has_profanity").default(false),
+
+  hasHateSpeech: boolean("has_hate_speech").default(false),
+
+  hasSexualContent: boolean("has_sexual_content").default(false),
+
+  moderationDetails: text("moderation_details"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertPrayerRequestSchema = createInsertSchema(prayerRequests).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+  isModerated: true,
+
+  moderatedBy: true,
+
+  moderatedAt: true,
+
+  isApproved: true,
+
+  approvedAt: true,
+
+  approvedBy: true,
+
+  inPrayerCount: true,
+
+  hasProfanity: true,
+
+  hasHateSpeech: true,
+
+  hasSexualContent: true,
+
+  moderationDetails: true,
+
+});
+
+
+
+export type InsertPrayerRequest = z.infer<typeof insertPrayerRequestSchema>;
+
+export type PrayerRequest = typeof prayerRequests.$inferSelect;
+
+
+
+// ==================== REACOES DE ORACAO (ESTOU EM ORACAO) ====================
+
+
+
+export const prayerReactions = pgTable("prayer_reactions", {
+
+  id: serial("id").primaryKey(),
+
+  prayerRequestId: integer("prayer_request_id").notNull().references(() => prayerRequests.id, { onDelete: "cascade" }),
+
+  sessionId: text("session_id").notNull(),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueReaction: unique().on(table.prayerRequestId, table.sessionId),
+
+}));
+
+
+
+export const insertPrayerReactionSchema = createInsertSchema(prayerReactions).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertPrayerReaction = z.infer<typeof insertPrayerReactionSchema>;
+
+export type PrayerReaction = typeof prayerReactions.$inferSelect;
+
+
+
+// ==================== COMENTARIOS DE DEVOCIONAIS ====================
+
+
+
+export const devotionalComments = pgTable("devotional_comments", {
+
+  id: serial("id").primaryKey(),
+
+  devotionalId: integer("devotional_id").notNull().references(() => devotionals.id, { onDelete: "cascade" }),
+
+  userId: integer("user_id").references(() => users.id),
+
+  name: text("name").notNull(),
+
+  content: text("content").notNull(),
+
+  isApproved: boolean("is_approved").notNull().default(false),
+
+  approvedBy: integer("approved_by").references(() => users.id),
+
+  approvedAt: timestamp("approved_at"),
+
+  isHighlighted: boolean("is_highlighted").notNull().default(false),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertDevotionalCommentSchema = createInsertSchema(devotionalComments).omit({
+
+  id: true,
+
+  isApproved: true,
+
+  approvedBy: true,
+
+  approvedAt: true,
+
+  isHighlighted: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertDevotionalComment = z.infer<typeof insertDevotionalCommentSchema>;
+
+export type DevotionalComment = typeof devotionalComments.$inferSelect;
+
+
+
+// ==================== BANNERS DO CARROSSEL ====================
+
+
+
+export const banners = pgTable("banners", {
+
+  id: serial("id").primaryKey(),
+
+  title: text("title").notNull(),
+
+  subtitle: text("subtitle"),
+
+  imageUrl: text("image_url"),
+
+  backgroundColor: text("background_color"),
+
+  linkUrl: text("link_url"),
+
+  linkText: text("link_text"),
+
+  orderIndex: integer("order_index").notNull().default(0),
+
+  isActive: boolean("is_active").notNull().default(true),
+
+  startsAt: timestamp("starts_at"),
+
+  endsAt: timestamp("ends_at"),
+
+  createdBy: integer("created_by").references(() => users.id),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertBannerSchema = createInsertSchema(banners).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertBanner = z.infer<typeof insertBannerSchema>;
+
+export type Banner = typeof banners.$inferSelect;
+
+
+
+// ==================== MEMBROS DA DIRETORIA ====================
+
+
+
+export type BoardPosition = "presidente" | "vice_presidente" | "primeiro_secretario" | "segundo_secretario" | "tesoureiro" | "conselheiro";
+
+
+
+export const boardMembers = pgTable("board_members", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").references(() => users.id),
+
+  name: text("name").notNull(),
+
+  position: text("position").notNull(),
+
+  photoUrl: text("photo_url"),
+
+  instagram: text("instagram"),
+
+  whatsapp: text("whatsapp"),
+
+  bio: text("bio"),
+
+  termStart: text("term_start").notNull(),
+
+  termEnd: text("term_end").notNull(),
+
+  orderIndex: integer("order_index").notNull().default(0),
+
+  isCurrent: boolean("is_current").notNull().default(true),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertBoardMemberSchema = createInsertSchema(boardMembers).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertBoardMember = z.infer<typeof insertBoardMemberSchema>;
+
+export type BoardMember = typeof boardMembers.$inferSelect;
+
+
+
+// ==================== CONTEUDO DO SITE ====================
+
+
+
+export const siteContent = pgTable("site_content", {
+
+  id: serial("id").primaryKey(),
+
+  page: text("page").notNull(),
+
+  section: text("section").notNull(),
+
+  title: text("title"),
+
+  content: text("content"),
+
+  imageUrl: text("image_url"),
+
+  metadata: text("metadata"),
+
+  updatedBy: integer("updated_by").references(() => users.id),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniquePageSection: unique().on(table.page, table.section),
+
+}));
+
+
+
+export const insertSiteContentSchema = createInsertSchema(siteContent).omit({
+
+  id: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertSiteContent = z.infer<typeof insertSiteContentSchema>;
+
+export type SiteContent = typeof siteContent.$inferSelect;
+
+
+
+// ==================== SISTEMA DE ESTUDOS (DUOLINGO-STYLE) ====================
+
+
+
+export const studyProfiles = pgTable("study_profiles", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  totalXp: integer("total_xp").notNull().default(0),
+
+  currentLevel: integer("current_level").notNull().default(1),
+
+  currentStreak: integer("current_streak").notNull().default(0),
+
+  longestStreak: integer("longest_streak").notNull().default(0),
+
+  hearts: integer("hearts").notNull().default(5),
+
+  heartsMax: integer("hearts_max").notNull().default(5),
+
+  heartsRefillAt: timestamp("hearts_refill_at"),
+
+  lastActivityDate: text("last_activity_date"),
+
+  dailyGoalMinutes: integer("daily_goal_minutes").notNull().default(10),
+
+  timezone: text("timezone").notNull().default("America/Sao_Paulo"),
+
+  weeklyLessonsGoal: integer("weekly_lessons_goal").notNull().default(1),
+
+  weeklyVersesGoal: integer("weekly_verses_goal").notNull().default(7),
+
+  weeklyMissionsGoal: integer("weekly_missions_goal").notNull().default(3),
+
+  weeklyDevotionalsGoal: integer("weekly_devotionals_goal").notNull().default(1),
+
+  versesReadForRecovery: integer("verses_read_for_recovery").notNull().default(0),
+
+  crystals: integer("crystals").notNull().default(0),
+
+  streakFreezesAvailable: integer("streak_freezes_available").notNull().default(0),
+
+  lastLessonCompletedAt: timestamp("last_lesson_completed_at"),
+
+  streakWarningDay: integer("streak_warning_day").notNull().default(0),
+
+  totalStreakFreezeUsed: integer("total_streak_freeze_used").notNull().default(0),
+
+  consecutivePerfectLessons: integer("consecutive_perfect_lessons").notNull().default(0),
+
+  consecutiveLessons: integer("consecutive_lessons").notNull().default(0),
+
+  totalLessonsCompletedToday: integer("total_lessons_completed_today").notNull().default(0),
+
+  lastLessonDate: text("last_lesson_date"),
+
+  weeklyLessonsStreak: integer("weekly_lessons_streak").notNull().default(0),
+
+  dailyVerseReadDate: text("daily_verse_read_date"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUser: unique().on(table.userId),
+
+}));
+
+
+
+export const insertStudyProfileSchema = createInsertSchema(studyProfiles).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertStudyProfile = z.infer<typeof insertStudyProfileSchema>;
+
+export type StudyProfile = typeof studyProfiles.$inferSelect;
+
+
+
+// ==================== TRANSACOES DE CRISTAIS ====================
+
+
+
+export type CrystalTransactionType = 
+
+  | "perfect_lesson"
+
+  | "perfect_streak_2"
+
+  | "perfect_streak_3"
+
+  | "perfect_streak_5"
+
+  | "lesson_streak_3"
+
+  | "lesson_streak_5"
+
+  | "lesson_streak_7"
+
+  | "first_lesson_of_day"
+
+  | "weekly_lessons_streak"
+
+  | "streak_milestone"
+
+  | "weekly_goal"
+
+  | "freeze_purchase"
+
+  | "freeze_use"
+
+  | "streak_repair"
+
+  | "achievement"
+
+  | "daily_bonus"
+
+  | "admin_grant";
+
+
+
+export const crystalTransactions = pgTable("crystal_transactions", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  amount: integer("amount").notNull(),
+
+  type: text("type").notNull(),
+
+  description: text("description"),
+
+  balanceAfter: integer("balance_after").notNull(),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertCrystalTransactionSchema = createInsertSchema(crystalTransactions).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertCrystalTransaction = z.infer<typeof insertCrystalTransactionSchema>;
+
+export type CrystalTransaction = typeof crystalTransactions.$inferSelect;
+
+
+
+// ==================== HISTORICO DE CONGELAMENTO DE OFENSIVA ====================
+
+
+
+export const streakFreezeHistory = pgTable("streak_freeze_history", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  usedAt: timestamp("used_at").notNull().defaultNow(),
+
+  streakSaved: integer("streak_saved").notNull(),
+
+  crystalsCost: integer("crystals_cost").notNull().default(0),
+
+  wasAutomatic: boolean("was_automatic").notNull().default(false),
+
+});
+
+Recebi a primeira parte do seu arquivo schema (schema.ts). Já identifiquei as tabelas de usuários, eleições, devocionais, eventos, pedidos de oração, gamificação (estudos), entre outras.
+
+Pode enviar a próxima parte do código. Estou aguardando o seu comando ACABEI SCHEMA para prosseguirmos.
+
+export const insertStreakFreezeHistorySchema = createInsertSchema(streakFreezeHistory).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertStreakFreezeHistory = z.infer<typeof insertStreakFreezeHistorySchema>;
+
+export type StreakFreezeHistory = typeof streakFreezeHistory.$inferSelect;
+
+
+
+// ==================== MARCOS DE OFENSIVA (STREAK MILESTONES) ====================
+
+
+
+export const streakMilestones = pgTable("streak_milestones", {
+
+  id: serial("id").primaryKey(),
+
+  days: integer("days").notNull().unique(),
+
+  crystalReward: integer("crystal_reward").notNull(),
+
+  xpReward: integer("xp_reward").notNull().default(0),
+
+  title: text("title").notNull(),
+
+  description: text("description"),
+
+  badgeIcon: text("badge_icon"),
+
+});
+
+
+
+export const insertStreakMilestoneSchema = createInsertSchema(streakMilestones).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertStreakMilestone = z.infer<typeof insertStreakMilestoneSchema>;
+
+export type StreakMilestone = typeof streakMilestones.$inferSelect;
+
+
+
+// ==================== MARCOS ALCANCADOS PELO USUARIO ====================
+
+
+
+export const userStreakMilestones = pgTable("user_streak_milestones", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  milestoneId: integer("milestone_id").notNull().references(() => streakMilestones.id),
+
+  achievedAt: timestamp("achieved_at").notNull().defaultNow(),
+
+  crystalsAwarded: integer("crystals_awarded").notNull(),
+
+  xpAwarded: integer("xp_awarded").notNull().default(0),
+
+}, (table) => ({
+
+  uniqueUserMilestone: unique().on(table.userId, table.milestoneId),
+
+}));
+
+
+
+export const insertUserStreakMilestoneSchema = createInsertSchema(userStreakMilestones).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertUserStreakMilestone = z.infer<typeof insertUserStreakMilestoneSchema>;
+
+export type UserStreakMilestone = typeof userStreakMilestones.$inferSelect;
+
+
+
+// ==================== TEMPORADAS (SEASONS) ====================
+
+
+
+export type SeasonStatus = "draft" | "processing" | "published" | "archived";
+
+
+
+export const seasons = pgTable("seasons", {
+
+  id: serial("id").primaryKey(),
+
+  title: text("title").notNull(),
+
+  subtitle: text("subtitle"),
+
+  description: text("description"),
+
+  coverImageUrl: text("cover_image_url"),
+
+  pdfUrl: text("pdf_url"),
+
+  aiExtractedTitle: text("ai_extracted_title"),
+
+  status: text("status").notNull().default("draft"),
+
+  totalLessons: integer("total_lessons").notNull().default(0),
+
+  publishedAt: timestamp("published_at"),
+
+  startsAt: timestamp("starts_at"),
+
+  endsAt: timestamp("ends_at"),
+
+  createdBy: integer("created_by").references(() => users.id),
+
+  aiMetadata: text("ai_metadata"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertSeasonSchema = createInsertSchema(seasons).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertSeason = z.infer<typeof insertSeasonSchema>;
+
+export type Season = typeof seasons.$inferSelect;
+
+
+
+// ==================== DESAFIO FINAL DA TEMPORADA ====================
+
+
+
+export const seasonFinalChallenges = pgTable("season_final_challenges", {
+
+  id: serial("id").primaryKey(),
+
+  seasonId: integer("season_id").notNull().references(() => seasons.id),
+
+  title: text("title").notNull().default("Desafio Final"),
+
+  description: text("description"),
+
+  questions: text("questions").notNull(),
+
+  questionCount: integer("question_count").notNull().default(15),
+
+  timeLimitSeconds: integer("time_limit_seconds").notNull().default(150),
+
+  xpReward: integer("xp_reward").notNull().default(100),
+
+  perfectXpBonus: integer("perfect_xp_bonus").notNull().default(50),
+
+  isActive: boolean("is_active").notNull().default(true),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertSeasonFinalChallengeSchema = createInsertSchema(seasonFinalChallenges).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertSeasonFinalChallenge = z.infer<typeof insertSeasonFinalChallengeSchema>;
+
+export type SeasonFinalChallenge = typeof seasonFinalChallenges.$inferSelect;
+
+
+
+// ==================== PROGRESSO DO USUARIO NO DESAFIO FINAL ====================
+
+
+
+export const userFinalChallengeProgress = pgTable("user_final_challenge_progress", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  challengeId: integer("challenge_id").notNull().references(() => seasonFinalChallenges.id),
+
+  startedAt: timestamp("started_at").notNull().defaultNow(),
+
+  completedAt: timestamp("completed_at"),
+
+  timeSpentSeconds: integer("time_spent_seconds"),
+
+  correctAnswers: integer("correct_answers").notNull().default(0),
+
+  totalQuestions: integer("total_questions").notNull().default(15),
+
+  xpEarned: integer("xp_earned").notNull().default(0),
+
+  isPerfect: boolean("is_perfect").notNull().default(false),
+
+  isCompleted: boolean("is_completed").notNull().default(false),
+
+  answersGiven: text("answers_given"),
+
+  challengeToken: text("challenge_token"),
+
+}, (table) => ({
+
+  uniqueUserChallenge: unique().on(table.userId, table.challengeId),
+
+}));
+
+
+
+export const insertUserFinalChallengeProgressSchema = createInsertSchema(userFinalChallengeProgress).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertUserFinalChallengeProgress = z.infer<typeof insertUserFinalChallengeProgressSchema>;
+
+export type UserFinalChallengeProgress = typeof userFinalChallengeProgress.$inferSelect;
+
+
+
+// ==================== PROGRESSO DO USUARIO NA TEMPORADA ====================
+
+
+
+export const userSeasonProgress = pgTable("user_season_progress", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  seasonId: integer("season_id").notNull().references(() => seasons.id),
+
+  lessonsCompleted: integer("lessons_completed").notNull().default(0),
+
+  totalLessons: integer("total_lessons").notNull().default(0),
+
+  bonusLessonsCompleted: integer("bonus_lessons_completed").notNull().default(0),
+
+  xpEarned: integer("xp_earned").notNull().default(0),
+
+  correctAnswers: integer("correct_answers").notNull().default(0),
+
+  totalAnswers: integer("total_answers").notNull().default(0),
+
+  heartsLost: integer("hearts_lost").notNull().default(0),
+
+  finalChallengeCompleted: boolean("final_challenge_completed").notNull().default(false),
+
+  finalChallengePerfect: boolean("final_challenge_perfect").notNull().default(false),
+
+  isMastered: boolean("is_mastered").notNull().default(false),
+
+  startedAt: timestamp("started_at"),
+
+  completedAt: timestamp("completed_at"),
+
+  lastActivityAt: timestamp("last_activity_at"),
+
+}, (table) => ({
+
+  uniqueUserSeason: unique().on(table.userId, table.seasonId),
+
+}));
+
+
+
+export const insertUserSeasonProgressSchema = createInsertSchema(userSeasonProgress).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertUserSeasonProgress = z.infer<typeof insertUserSeasonProgressSchema>;
+
+export type UserSeasonProgress = typeof userSeasonProgress.$inferSelect;
+
+
+
+// ==================== RANKING POR TEMPORADA ====================
+
+
+
+export const seasonRankings = pgTable("season_rankings", {
+
+  id: serial("id").primaryKey(),
+
+  seasonId: integer("season_id").notNull().references(() => seasons.id),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  xpEarned: integer("xp_earned").notNull().default(0),
+
+  lessonsCompleted: integer("lessons_completed").notNull().default(0),
+
+  correctPercentage: integer("correct_percentage").notNull().default(0),
+
+  finalChallengeScore: integer("final_challenge_score"),
+
+  isMastered: boolean("is_mastered").notNull().default(false),
+
+  rankPosition: integer("rank_position"),
+
+  isWinner: boolean("is_winner").notNull().default(false),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueSeasonUser: unique().on(table.seasonId, table.userId),
+
+}));
+
+
+
+export const insertSeasonRankingSchema = createInsertSchema(seasonRankings).omit({
+
+  id: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertSeasonRanking = z.infer<typeof insertSeasonRankingSchema>;
+
+export type SeasonRanking = typeof seasonRankings.$inferSelect;
+
+
+
+// ==================== PROGRESSO DA META SEMANAL ====================
+
+
+
+export const weeklyGoalProgress = pgTable("weekly_goal_progress", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  weekKey: text("week_key").notNull(),
+
+  lessonsCompleted: integer("lessons_completed").notNull().default(0),
+
+  versesRead: integer("verses_read").notNull().default(0),
+
+  missionsCompleted: integer("missions_completed").notNull().default(0),
+
+  devotionalsRead: integer("devotionals_read").notNull().default(0),
+
+  isGoalMet: boolean("is_goal_met").notNull().default(false),
+
+  xpBonus: integer("xp_bonus").notNull().default(0),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUserWeek: unique().on(table.userId, table.weekKey),
+
+}));
+
+
+
+export const insertWeeklyGoalProgressSchema = createInsertSchema(weeklyGoalProgress).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertWeeklyGoalProgress = z.infer<typeof insertWeeklyGoalProgressSchema>;
+
+export type WeeklyGoalProgress = typeof weeklyGoalProgress.$inferSelect;
+
+
+
+// ==================== BONUS PRATICO SEMANAL (IMUTAVEL - SINGLE SOURCE OF TRUTH) ====================
+
+// This table stores IMMUTABLE weekly bonuses (50 XP per week when goal is met)
+
+// Used for all leaderboard calculations - never recalculated or modified
+
+export const weeklyPracticeBonus = pgTable("weekly_practice_bonus", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  weekKey: text("week_key").notNull(),
+
+  bonusXp: integer("bonus_xp").notNull().default(50),
+
+  earnedAt: timestamp("earned_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUserWeekBonus: unique().on(table.userId, table.weekKey),
+
+}));
+
+
+
+export const insertWeeklyPracticeBonusSchema = createInsertSchema(weeklyPracticeBonus).omit({
+
+  id: true,
+
+  earnedAt: true,
+
+});
+
+
+
+export type InsertWeeklyPracticeBonus = z.infer<typeof insertWeeklyPracticeBonusSchema>;
+
+export type WeeklyPracticeBonus = typeof weeklyPracticeBonus.$inferSelect;
+
+
+
+// ==================== XP DE CONQUISTAS (IMUTAVEL - SINGLE SOURCE OF TRUTH) ====================
+
+// This table stores IMMUTABLE achievement XP rewards
+
+// Used for global and annual leaderboard calculations - never recalculated or modified
+
+export const achievementXp = pgTable("achievement_xp", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  achievementId: integer("achievement_id").notNull().references(() => achievements.id),
+
+  xpReward: integer("xp_reward").notNull(),
+
+  earnedAt: timestamp("earned_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUserAchievement: unique().on(table.userId, table.achievementId),
+
+}));
+
+
+
+export const insertAchievementXpSchema = createInsertSchema(achievementXp).omit({
+
+  id: true,
+
+  earnedAt: true,
+
+});
+
+
+
+export type InsertAchievementXp = z.infer<typeof insertAchievementXpSchema>;
+
+export type AchievementXp = typeof achievementXp.$inferSelect;
+
+
+
+// ==================== XP DE MISSÕES DIÁRIAS (IMUTAVEL - SINGLE SOURCE OF TRUTH) ====================
+
+// This table stores IMMUTABLE daily mission XP rewards (10 XP per mission + 25 XP bonus for all 5)
+
+// Used for global and annual leaderboard calculations - never recalculated or modified
+
+export const dailyMissionXp = pgTable("daily_mission_xp", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  missionDate: text("mission_date").notNull(),
+
+  missionXp: integer("mission_xp").notNull(),
+
+  bonusXp: integer("bonus_xp").notNull().default(0),
+
+  earnedAt: timestamp("earned_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUserMissionDate: unique().on(table.userId, table.missionDate),
+
+}));
+
+
+
+export const insertDailyMissionXpSchema = createInsertSchema(dailyMissionXp).omit({
+
+  id: true,
+
+  earnedAt: true,
+
+});
+
+
+
+export type InsertDailyMissionXp = z.infer<typeof insertDailyMissionXpSchema>;
+
+export type DailyMissionXp = typeof dailyMissionXp.$inferSelect;
+
+
+
+// ==================== LEITURA DE DEVOCIONAIS (CONFIRMACAO) ====================
+
+
+
+export const devotionalReadings = pgTable("devotional_readings", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  devotionalId: integer("devotional_id").notNull().references(() => devotionals.id),
+
+  readAt: timestamp("read_at").notNull().defaultNow(),
+
+  weekKey: text("week_key"),
+
+}, (table) => ({
+
+  uniqueUserDevotional: unique().on(table.userId, table.devotionalId),
+
+}));
+
+
+
+export const insertDevotionalReadingSchema = createInsertSchema(devotionalReadings).omit({
+
+  id: true,
+
+  readAt: true,
+
+});
+
+
+
+export type InsertDevotionalReading = z.infer<typeof insertDevotionalReadingSchema>;
+
+export type DevotionalReading = typeof devotionalReadings.$inferSelect;
+
+
+
+// ==================== SEMANAS DE ESTUDO (LEGADO - mantido para compatibilidade) ====================
+
+
+
+export const studyWeeks = pgTable("study_weeks", {
+
+  id: serial("id").primaryKey(),
+
+  weekNumber: integer("week_number").notNull(),
+
+  year: integer("year").notNull(),
+
+  title: text("title").notNull(),
+
+  description: text("description"),
+
+  pdfUrl: text("pdf_url"),
+
+  status: text("status").notNull().default("draft"),
+
+  publishedAt: timestamp("published_at"),
+
+  createdBy: integer("created_by").references(() => users.id),
+
+  aiMetadata: text("ai_metadata"),
+
+  seasonId: integer("season_id").references(() => seasons.id),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueWeek: unique().on(table.weekNumber, table.year),
+
+}));
+
+
+
+export const insertStudyWeekSchema = createInsertSchema(studyWeeks).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertStudyWeek = z.infer<typeof insertStudyWeekSchema>;
+
+export type StudyWeek = typeof studyWeeks.$inferSelect;
+
+
+
+// ==================== LICOES DE ESTUDO ====================
+
+
+
+export const studyLessons = pgTable("study_lessons", {
+
+  id: serial("id").primaryKey(),
+
+  studyWeekId: integer("study_week_id").references(() => studyWeeks.id),
+
+  seasonId: integer("season_id").references(() => seasons.id),
+
+  orderIndex: integer("order_index").notNull(),
+
+  lessonNumber: integer("lesson_number"),
+
+  title: text("title").notNull(),
+
+  type: text("type").notNull().default("study"),
+
+  description: text("description"),
+
+  xpReward: integer("xp_reward").notNull().default(10),
+
+  estimatedMinutes: integer("estimated_minutes").notNull().default(5),
+
+  icon: text("icon"),
+
+  isBonus: boolean("is_bonus").notNull().default(false),
+
+  hasBonusQuiz: boolean("has_bonus_quiz").notNull().default(false),
+
+  bonusQuizQuestions: text("bonus_quiz_questions"),
+
+  isLocked: boolean("is_locked").notNull().default(true),
+
+  isReleased: boolean("is_released").notNull().default(false),
+
+  releaseDate: timestamp("release_date"),
+
+  unlockDate: timestamp("unlock_date"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertStudyLessonSchema = createInsertSchema(studyLessons).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertStudyLesson = z.infer<typeof insertStudyLessonSchema>;
+
+export type StudyLesson = typeof studyLessons.$inferSelect;
+
+
+
+export const studyUnits = pgTable("study_units", {
+
+  id: serial("id").primaryKey(),
+
+  lessonId: integer("lesson_id").notNull().references(() => studyLessons.id),
+
+  orderIndex: integer("order_index").notNull(),
+
+  type: text("type").notNull(),
+
+  content: text("content").notNull(),
+
+  xpValue: integer("xp_value").notNull().default(2),
+
+  stage: text("stage").notNull().default("estude"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertStudyUnitSchema = createInsertSchema(studyUnits).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertStudyUnit = z.infer<typeof insertStudyUnitSchema>;
+
+export type StudyUnit = typeof studyUnits.$inferSelect;
+
+
+
+export const bibleVerses = pgTable("bible_verses", {
+
+  id: serial("id").primaryKey(),
+
+  reference: text("reference").notNull(),
+
+  text: text("text").notNull(),
+
+  reflection: text("reflection"),
+
+  category: text("category"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertBibleVerseSchema = createInsertSchema(bibleVerses).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertBibleVerse = z.infer<typeof insertBibleVerseSchema>;
+
+export type BibleVerse = typeof bibleVerses.$inferSelect;
+
+
+
+export const userLessonProgress = pgTable("user_lesson_progress", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  lessonId: integer("lesson_id").notNull().references(() => studyLessons.id),
+
+  status: text("status").notNull().default("locked"),
+
+  startedAt: timestamp("started_at"),
+
+  completedAt: timestamp("completed_at"),
+
+  xpEarned: integer("xp_earned").notNull().default(0),
+
+  mistakesCount: integer("mistakes_count").notNull().default(0),
+
+  perfectScore: boolean("perfect_score").notNull().default(false),
+
+  timeSpentSeconds: integer("time_spent_seconds").notNull().default(0),
+
+}, (table) => ({
+
+  uniqueUserLesson: unique().on(table.userId, table.lessonId),
+
+}));
+
+
+
+export const insertUserLessonProgressSchema = createInsertSchema(userLessonProgress).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertUserLessonProgress = z.infer<typeof insertUserLessonProgressSchema>;
+
+export type UserLessonProgress = typeof userLessonProgress.$inferSelect;
+
+
+
+export const userUnitProgress = pgTable("user_unit_progress", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  unitId: integer("unit_id").notNull().references(() => studyUnits.id),
+
+  isCompleted: boolean("is_completed").notNull().default(false),
+
+  answerGiven: text("answer_given"),
+
+  isCorrect: boolean("is_correct"),
+
+  attempts: integer("attempts").notNull().default(0),
+
+  completedAt: timestamp("completed_at"),
+
+}, (table) => ({
+
+  uniqueUserUnit: unique().on(table.userId, table.unitId),
+
+}));
+
+
+
+export const insertUserUnitProgressSchema = createInsertSchema(userUnitProgress).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertUserUnitProgress = z.infer<typeof insertUserUnitProgressSchema>;
+
+export type UserUnitProgress = typeof userUnitProgress.$inferSelect;
+
+
+
+export const verseReadings = pgTable("verse_readings", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  verseId: integer("verse_id").notNull().references(() => bibleVerses.id),
+
+  readAt: timestamp("read_at").notNull().defaultNow(),
+
+  heartsRecovered: integer("hearts_recovered").notNull().default(1),
+
+});
+
+
+
+export const insertVerseReadingSchema = createInsertSchema(verseReadings).omit({
+
+  id: true,
+
+  readAt: true,
+
+});
+
+
+
+export type InsertVerseReading = z.infer<typeof insertVerseReadingSchema>;
+
+export type VerseReading = typeof verseReadings.$inferSelect;
+
+
+
+export const xpTransactions = pgTable("xp_transactions", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  amount: integer("amount").notNull(),
+
+  source: text("source").notNull(),
+
+  sourceId: integer("source_id"),
+
+  description: text("description"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertXpTransactionSchema = createInsertSchema(xpTransactions).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertXpTransaction = z.infer<typeof insertXpTransactionSchema>;
+
+export type XpTransaction = typeof xpTransactions.$inferSelect;
+
+
+
+export const dailyActivity = pgTable("daily_activity", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  activityDate: text("activity_date").notNull(),
+
+  minutesStudied: integer("minutes_studied").notNull().default(0),
+
+  lessonsCompleted: integer("lessons_completed").notNull().default(0),
+
+  xpEarned: integer("xp_earned").notNull().default(0),
+
+  streakMaintained: boolean("streak_maintained").notNull().default(false),
+
+}, (table) => ({
+
+  uniqueUserDate: unique().on(table.userId, table.activityDate),
+
+}));
+
+
+
+export const insertDailyActivitySchema = createInsertSchema(dailyActivity).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertDailyActivity = z.infer<typeof insertDailyActivitySchema>;
+
+export type DailyActivity = typeof dailyActivity.$inferSelect;
+
+
+
+export const achievements = pgTable("achievements", {
+
+  id: serial("id").primaryKey(),
+
+  code: text("code").notNull().unique(),
+
+  name: text("name").notNull(),
+
+  description: text("description"),
+
+  icon: text("icon"),
+
+  customIconUrl: text("custom_icon_url"),
+
+  xpReward: integer("xp_reward").notNull().default(0),
+
+  category: text("category").notNull(),
+
+  requirement: text("requirement"),
+
+  isSecret: boolean("is_secret").notNull().default(false),
+
+  seasonId: integer("season_id").references(() => seasons.id),
+
+});
+
+
+
+export const insertAchievementSchema = createInsertSchema(achievements).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertAchievement = z.infer<typeof insertAchievementSchema>;
+
+export type Achievement = typeof achievements.$inferSelect;
+
+
+
+export const userAchievements = pgTable("user_achievements", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  achievementId: integer("achievement_id").notNull().references(() => achievements.id),
+
+  unlockedAt: timestamp("unlocked_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUserAchievement: unique().on(table.userId, table.achievementId),
+
+}));
+
+
+
+export const insertUserAchievementSchema = createInsertSchema(userAchievements).omit({
+
+  id: true,
+
+  unlockedAt: true,
+
+});
+
+
+
+export type InsertUserAchievement = z.infer<typeof insertUserAchievementSchema>;
+
+export type UserAchievement = typeof userAchievements.$inferSelect;
+
+
+
+export const leaderboardEntries = pgTable("leaderboard_entries", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  periodType: text("period_type").notNull(),
+
+  periodKey: text("period_key").notNull(),
+
+  xpEarned: integer("xp_earned").notNull().default(0),
+
+  rankPosition: integer("rank_position"),
+
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUserPeriod: unique().on(table.userId, table.periodType, table.periodKey),
+
+}));
+
+
+
+export const insertLeaderboardEntrySchema = createInsertSchema(leaderboardEntries).omit({
+
+  id: true,
+
+  updatedAt: true,
+
+});
+
+
+
+export type InsertLeaderboardEntry = z.infer<typeof insertLeaderboardEntrySchema>;
+
+export type LeaderboardEntry = typeof leaderboardEntries.$inferSelect;
+
+
+
+// ==================== SISTEMA DE MISSÕES DIÁRIAS ====================
+
+
+
+export const missionTypes = [
+
+  "complete_lesson",
+
+  "read_daily_verse",
+
+  "timed_challenge",
+
+  "quick_quiz",
+
+  "bible_character",
+
+  "perfect_answers",
+
+  "memorize_theme",
+
+  "simple_prayer",
+
+  "bible_fact",
+
+  "maintain_streak",
+
+] as const;
+
+
+
+export type MissionType = typeof missionTypes[number];
+
+
+
+export const dailyMissions = pgTable("daily_missions", {
+
+  id: serial("id").primaryKey(),
+
+  type: text("type").notNull(),
+
+  title: text("title").notNull(),
+
+  description: text("description").notNull(),
+
+  icon: text("icon").notNull(),
+
+  xpReward: integer("xp_reward").notNull().default(10),
+
+  requirement: text("requirement"),
+
+  isActive: boolean("is_active").notNull().default(true),
+
+});
+
+
+
+export const insertDailyMissionSchema = createInsertSchema(dailyMissions).omit({
+
+  id: true,
+
+});
+
+
+
+export type InsertDailyMission = z.infer<typeof insertDailyMissionSchema>;
+
+export type DailyMission = typeof dailyMissions.$inferSelect;
+
+
+
+export const userDailyMissions = pgTable("user_daily_missions", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  missionId: integer("mission_id").notNull().references(() => dailyMissions.id),
+
+  assignedDate: text("assigned_date").notNull(),
+
+  completed: boolean("completed").notNull().default(false),
+
+  completedAt: timestamp("completed_at"),
+
+  xpAwarded: integer("xp_awarded").notNull().default(0),
+
+}, (table) => ({
+
+  uniqueUserMissionDate: unique().on(table.userId, table.missionId, table.assignedDate),
+
+}));
+
+Recebi a segunda parte do schema.
+
+Já mapeei as estruturas de:
+
+Gamificação avançada: Marcos de ofensiva, XP, cristais e conquistas.
+
+Sistema de Temporadas (Seasons): Desafios finais, progresso e rankings.
+
+Conteúdo de Estudos: Lições, unidades, versículos e missões diárias.
+
+Se tiver mais código, pode enviar. Caso contrário, digite ACABEI SCHEMA para prosseguirmos com a geração do SQL.
+
+export const insertUserDailyMissionSchema = createInsertSchema(userDailyMissions).omit({
+
+  id: true,
+
+  completed: true,
+
+  completedAt: true,
+
+  xpAwarded: true,
+
+});
+
+
+
+export type InsertUserDailyMission = z.infer<typeof insertUserDailyMissionSchema>;
+
+export type UserDailyMission = typeof userDailyMissions.$inferSelect;
+
+
+
+export const dailyMissionContent = pgTable("daily_mission_content", {
+
+  id: serial("id").primaryKey(),
+
+  contentDate: text("content_date").notNull().unique(),
+
+  dailyVerse: text("daily_verse"),
+
+  bibleFact: text("bible_fact"),
+
+  bibleCharacter: text("bible_character"),
+
+  dailyTheme: text("daily_theme"),
+
+  timedQuizQuestions: text("timed_quiz_questions"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertDailyMissionContentSchema = createInsertSchema(dailyMissionContent).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertDailyMissionContent = z.infer<typeof insertDailyMissionContentSchema>;
+
+export type DailyMissionContent = typeof dailyMissionContent.$inferSelect;
+
+
+
+// ==================== TIPOS COMPOSTOS DO SISTEMA DE ESTUDOS ====================
+
+
+
+export type StudyProfileWithUser = StudyProfile & {
+
+  userName: string;
+
+  userEmail: string;
+
+  userPhotoUrl?: string;
+
+};
+
+
+
+export type StudyLessonWithProgress = StudyLesson & {
+
+  status: "locked" | "available" | "in_progress" | "completed";
+
+  xpEarned?: number;
+
+  perfectScore?: boolean;
+
+};
+
+
+
+export type StudyWeekWithLessons = StudyWeek & {
+
+  lessons: StudyLessonWithProgress[];
+
+  totalXp: number;
+
+  completedLessons: number;
+
+};
+
+
+
+export type LeaderboardRanking = {
+
+  userId: number;
+
+  userName: string;
+
+  userPhotoUrl?: string;
+
+  totalXp: number;
+
+  level: number;
+
+  streak: number;
+
+  rank: number;
+
+};
+
+
+
+export type AchievementWithStatus = Achievement & {
+
+  unlocked: boolean;
+
+  unlockedAt?: string;
+
+};
+
+
+
+export type UserDailyMissionWithDetails = UserDailyMission & {
+
+  mission: DailyMission;
+
+};
+
+
+
+export type DailyMissionsStatus = {
+
+  missions: UserDailyMissionWithDetails[];
+
+  completedCount: number;
+
+  totalCount: number;
+
+  allCompleted: boolean;
+
+  bonusXpAvailable: number;
+
+  content?: DailyMissionContent;
+
+};
+
+
+
+// ==================== PUSH NOTIFICATIONS ====================
+
+
+
+export const pushSubscriptions = pgTable("push_subscriptions", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  endpoint: text("endpoint").notNull(),
+
+  p256dh: text("p256dh").notNull(),
+
+  auth: text("auth").notNull(),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  lastUsed: timestamp("last_used"),
+
+}, (table) => ({
+
+  uniqueUserEndpoint: unique().on(table.userId, table.endpoint),
+
+}));
+
+
+
+export const insertPushSubscriptionSchema = createInsertSchema(pushSubscriptions).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  lastUsed: true,
+
+});
+
+
+
+export type InsertPushSubscription = z.infer<typeof insertPushSubscriptionSchema>;
+
+export type PushSubscription = typeof pushSubscriptions.$inferSelect;
+
+
+
+export const anonymousPushSubscriptions = pgTable("anonymous_push_subscriptions", {
+
+  id: serial("id").primaryKey(),
+
+  endpoint: text("endpoint").notNull().unique(),
+
+  p256dh: text("p256dh").notNull(),
+
+  auth: text("auth").notNull(),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+  lastUsed: timestamp("last_used"),
+
+});
+
+
+
+export const insertAnonymousPushSubscriptionSchema = createInsertSchema(anonymousPushSubscriptions).omit({
+
+  id: true,
+
+  createdAt: true,
+
+  lastUsed: true,
+
+});
+
+
+
+export type InsertAnonymousPushSubscription = z.infer<typeof insertAnonymousPushSubscriptionSchema>;
+
+export type AnonymousPushSubscription = typeof anonymousPushSubscriptions.$inferSelect;
+
+
+
+export const notifications = pgTable("notifications", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  type: text("type").notNull(),
+
+  title: text("title").notNull(),
+
+  body: text("body").notNull(),
+
+  data: text("data"),
+
+  read: boolean("read").notNull().default(false),
+
+  readAt: timestamp("read_at"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertNotificationSchema = createInsertSchema(notifications).omit({
+
+  id: true,
+
+  read: true,
+
+  readAt: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertNotification = z.infer<typeof insertNotificationSchema>;
+
+export type Notification = typeof notifications.$inferSelect;
+
+
+
+export type NotificationType = 
+
+  | "streak_reminder" 
+
+  | "lesson_available" 
+
+  | "achievement" 
+
+  | "election" 
+
+  | "birthday"
+
+  | "system";
+
+
+
+// ==================== TIPOS COMPOSTOS PARA TEMPORADAS ====================
+
+
+
+export type SeasonWithLessons = Season & {
+
+  lessons: StudyLesson[];
+
+  progress?: UserSeasonProgress;
+
+  finalChallenge?: SeasonFinalChallenge;
+
+};
+
+
+
+export type SeasonRankingEntry = SeasonRanking & {
+
+  user: Pick<User, 'id' | 'fullName' | 'photoUrl'>;
+
+};
+
+
+
+export type SeasonLeaderboard = {
+
+  seasonId: number;
+
+  seasonTitle: string;
+
+  rankings: SeasonRankingEntry[];
+
+  totalParticipants: number;
+
+  isFinished: boolean;
+
+};
+
+
+
+export type FinalChallengeQuestion = {
+
+  id: number;
+
+  question: string;
+
+  options: string[];
+
+  correctAnswer: number;
+
+  explanation?: string;
+
+};
+
+
+
+export type FinalChallengeResult = {
+
+  challengeId: number;
+
+  userId: number;
+
+  correctAnswers: number;
+
+  totalQuestions: number;
+
+  timeSpentSeconds: number;
+
+  xpEarned: number;
+
+  isPerfect: boolean;
+
+  isMastered: boolean;
+
+};
+
+
+
+export type WeeklyGoalStatus = {
+
+  weekKey: string;
+
+  goals: {
+
+    lessons: { current: number; target: number; completed: boolean };
+
+    verses: { current: number; target: number; completed: boolean };
+
+    missions: { current: number; target: number; completed: boolean };
+
+    devotionals: { current: number; target: number; completed: boolean };
+
+  };
+
+  isGoalMet: boolean;
+
+  xpBonus: number;
+
+  overallProgress: number;
+
+};
+
+
+
+export type LessonStage = "estude" | "medite" | "responda";
+
+
+
+export type LessonWithProgress = StudyLesson & {
+
+  progress?: UserLessonProgress;
+
+  units?: StudyUnit[];
+
+  currentStage?: LessonStage;
+
+  stageProgress?: {
+
+    estude: { completed: number; total: number };
+
+    medite: { completed: number; total: number };
+
+    responda: { completed: number; total: number };
+
+  };
+
+};
+
+
+
+export type ShareableImage = {
+
+  type: "ranking" | "achievement" | "season_mastery";
+
+  entityId: number;
+
+  imageDataUrl?: string;
+
+  title: string;
+
+  subtitle?: string;
+
+};
+
+
+
+// ==================== AUDIT LOGS ====================
+
+
+
+export const auditLogs = pgTable("audit_logs", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").references(() => users.id),
+
+  action: text("action").notNull(),
+
+  resource: text("resource").notNull(),
+
+  resourceId: integer("resource_id"),
+
+  details: text("details"),
+
+  ipAddress: text("ip_address"),
+
+  userAgent: text("user_agent"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertAuditLogSchema = createInsertSchema(auditLogs).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertAuditLog = z.infer<typeof insertAuditLogSchema>;
+
+export type AuditLog = typeof auditLogs.$inferSelect;
+
+
+
+export type AuditAction = 
+
+  | "create"
+
+  | "update" 
+
+  | "delete"
+
+  | "login"
+
+  | "logout"
+
+  | "password_reset"
+
+  | "approve"
+
+  | "reject";
+
+
+
+// ==================== WEEKLY PRACTICE (PRATIQUE) ====================
+
+
+
+export const weeklyPractice = pgTable("weekly_practice", {
+
+  id: serial("id").primaryKey(),
+
+  userId: integer("user_id").notNull().references(() => users.id),
+
+  weekId: integer("week_id").notNull().references(() => studyWeeks.id),
+
+  starsEarned: integer("stars_earned").notNull().default(0),
+
+  correctAnswers: integer("correct_answers").notNull().default(0),
+
+  totalQuestions: integer("total_questions").notNull().default(10),
+
+  timeSpentSeconds: integer("time_spent_seconds").notNull().default(0),
+
+  completedWithinTime: boolean("completed_within_time").notNull().default(false),
+
+  isMastered: boolean("is_mastered").notNull().default(false),
+
+  completedAt: timestamp("completed_at"),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+}, (table) => ({
+
+  uniqueUserWeek: unique().on(table.userId, table.weekId),
+
+}));
+
+
+
+export const insertWeeklyPracticeSchema = createInsertSchema(weeklyPractice).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertWeeklyPractice = z.infer<typeof insertWeeklyPracticeSchema>;
+
+export type WeeklyPractice = typeof weeklyPractice.$inferSelect;
+
+
+
+export const practiceQuestions = pgTable("practice_questions", {
+
+  id: serial("id").primaryKey(),
+
+  weekId: integer("week_id").notNull().references(() => studyWeeks.id),
+
+  type: text("type").notNull(),
+
+  content: text("content").notNull(),
+
+  orderIndex: integer("order_index").notNull().default(0),
+
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+
+});
+
+
+
+export const insertPracticeQuestionSchema = createInsertSchema(practiceQuestions).omit({
+
+  id: true,
+
+  createdAt: true,
+
+});
+
+
+
+export type InsertPracticeQuestion = z.infer<typeof insertPracticeQuestionSchema>;
+
+export type PracticeQuestion = typeof practiceQuestions.$inferSelect;
+
+
+
+export type WeeklyPracticeStatus = {
+
+  weekId: number;
+
+  isUnlocked: boolean;
+
+  starsEarned: number;
+
+  isMastered: boolean;
+
+  lessonsCompleted: number;
+
+  totalLessons: number;
+
+};
+
+
+
+ACABEI SCHEMA
+
+Perfeito. Recebi todo o seu arquivo de schema. Tenho agora a estrutura completa, incluindo as tabelas de:
+
+Core: users, positions.
+
+Eleições: elections, election_winners, election_positions, election_attendance, candidates, votes, pdf_verifications.
+
+Conteúdo e Social: devotionals, site_events, instagram_posts, prayer_requests, prayer_reactions, devotional_comments, banners, board_members, site_content.
+
+Gamificação e Estudos (Duolingo-style): study_profiles, crystal_transactions, streak_freeze_history, streak_milestones, user_streak_milestones, seasons, season_final_challenges, user_final_challenge_progress, user_season_progress, season_rankings, weekly_goal_progress, weekly_practice_bonus, achievement_xp, daily_mission_xp, devotional_readings, study_weeks, study_lessons, study_units, bible_verses, user_lesson_progress, user_unit_progress, verse_readings, xp_transactions, daily_activity, achievements, user_achievements, leaderboard_entries, daily_missions, user_daily_missions, daily_mission_content.
+
+Sistema e Infra: push_subscriptions, anonymous_push_subscriptions, notifications, audit_logs, weekly_practice, practice_questions.
+
+Pode enviar agora o seu arquivo SQL parcial. Assim que você enviar, eu farei a mesclagem e gerarei o script SQL completo com todas as definições de tabelas, colunas, chaves primárias e relacionamentos (Foreign Keys).
+
+Estou aguardando o SQL!
+
+CREATE TABLE "achievements" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"code" text NOT NULL,
+
+"name" text NOT NULL,
+
+"description" text,
+
+"icon" text,
+
+"custom_icon_url" text,
+
+"xp_reward" integer DEFAULT 0 NOT NULL,
+
+"category" text NOT NULL,
+
+"requirement" text,
+
+"is_secret" boolean DEFAULT false NOT NULL,
+
+"season_id" integer,
+
+CONSTRAINT "achievements_code_unique" UNIQUE("code")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "banners" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"title" text NOT NULL,
+
+"subtitle" text,
+
+"image_url" text,
+
+"background_color" text,
+
+"link_url" text,
+
+"link_text" text,
+
+"order_index" integer DEFAULT 0 NOT NULL,
+
+"is_active" boolean DEFAULT true NOT NULL,
+
+"starts_at" timestamp,
+
+"ends_at" timestamp,
+
+"created_by" integer,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "bible_verses" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"reference" text NOT NULL,
+
+"text" text NOT NULL,
+
+"reflection" text,
+
+"category" text,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "board_members" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer,
+
+"name" text NOT NULL,
+
+"position" text NOT NULL,
+
+"photo_url" text,
+
+"instagram" text,
+
+"whatsapp" text,
+
+"bio" text,
+
+"term_start" text NOT NULL,
+
+"term_end" text NOT NULL,
+
+"order_index" integer DEFAULT 0 NOT NULL,
+
+"is_current" boolean DEFAULT true NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "candidates" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"name" text NOT NULL,
+
+"email" text NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"position_id" integer NOT NULL,
+
+"election_id" integer NOT NULL,
+
+CONSTRAINT "candidates_user_id_position_id_election_id_unique" UNIQUE("user_id","position_id","election_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "daily_activity" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"activity_date" text NOT NULL,
+
+"minutes_studied" integer DEFAULT 0 NOT NULL,
+
+"lessons_completed" integer DEFAULT 0 NOT NULL,
+
+"xp_earned" integer DEFAULT 0 NOT NULL,
+
+"streak_maintained" boolean DEFAULT false NOT NULL,
+
+CONSTRAINT "daily_activity_user_id_activity_date_unique" UNIQUE("user_id","activity_date")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "daily_mission_content" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"content_date" text NOT NULL,
+
+"daily_verse" text,
+
+"bible_fact" text,
+
+"bible_character" text,
+
+"daily_theme" text,
+
+"timed_quiz_questions" text,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "daily_mission_content_content_date_unique" UNIQUE("content_date")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "daily_missions" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"type" text NOT NULL,
+
+"title" text NOT NULL,
+
+"description" text NOT NULL,
+
+"icon" text NOT NULL,
+
+"xp_reward" integer DEFAULT 10 NOT NULL,
+
+"requirement" text,
+
+"is_active" boolean DEFAULT true NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "devotional_readings" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"devotional_id" integer NOT NULL,
+
+"read_at" timestamp DEFAULT now() NOT NULL,
+
+"week_key" text,
+
+CONSTRAINT "devotional_readings_user_id_devotional_id_unique" UNIQUE("user_id","devotional_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "devotionals" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"title" text NOT NULL,
+
+"verse" text NOT NULL,
+
+"verse_reference" text NOT NULL,
+
+"content" text NOT NULL,
+
+"summary" text,
+
+"prayer" text,
+
+"image_url" text,
+
+"author" text,
+
+"published_at" timestamp DEFAULT now() NOT NULL,
+
+"is_published" boolean DEFAULT true NOT NULL,
+
+"is_featured" boolean DEFAULT false NOT NULL,
+
+"created_by" integer,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "election_attendance" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"election_id" integer NOT NULL,
+
+"election_position_id" integer,
+
+"member_id" integer NOT NULL,
+
+"is_present" boolean DEFAULT false NOT NULL,
+
+"marked_at" timestamp,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "election_positions" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"election_id" integer NOT NULL,
+
+"position_id" integer NOT NULL,
+
+"order_index" integer NOT NULL,
+
+"status" text DEFAULT 'pending' NOT NULL,
+
+"current_scrutiny" integer DEFAULT 1 NOT NULL,
+
+"opened_at" timestamp,
+
+"closed_at" timestamp,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "election_winners" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"election_id" integer NOT NULL,
+
+"position_id" integer NOT NULL,
+
+"candidate_id" integer NOT NULL,
+
+"won_at_scrutiny" integer NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "elections" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"name" text NOT NULL,
+
+"is_active" boolean DEFAULT true NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"closed_at" timestamp
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "instagram_posts" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"caption" text,
+
+"image_url" text NOT NULL,
+
+"permalink" text,
+
+"posted_at" timestamp DEFAULT now() NOT NULL,
+
+"is_active" boolean DEFAULT true NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "leaderboard_entries" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"period_type" text NOT NULL,
+
+"period_key" text NOT NULL,
+
+"xp_earned" integer DEFAULT 0 NOT NULL,
+
+"rank_position" integer,
+
+"updated_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "leaderboard_entries_user_id_period_type_period_key_unique" UNIQUE("user_id","period_type","period_key")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "notifications" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"type" text NOT NULL,
+
+"title" text NOT NULL,
+
+"body" text NOT NULL,
+
+"data" text,
+
+"read" boolean DEFAULT false NOT NULL,
+
+"read_at" timestamp,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "pdf_verifications" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"election_id" integer NOT NULL,
+
+"verification_hash" text NOT NULL,
+
+"president_name" text,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "pdf_verifications_verification_hash_unique" UNIQUE("verification_hash")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "positions" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"name" text NOT NULL,
+
+CONSTRAINT "positions_name_unique" UNIQUE("name")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "prayer_requests" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"name" text,
+
+"whatsapp" text,
+
+"category" text DEFAULT 'outros' NOT NULL,
+
+"request" text NOT NULL,
+
+"is_anonymous" boolean DEFAULT false NOT NULL,
+
+"status" text DEFAULT 'pending' NOT NULL,
+
+"notes" text,
+
+"prayed_by" integer,
+
+"prayed_at" timestamp,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "push_subscriptions" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"endpoint" text NOT NULL,
+
+"p256dh" text NOT NULL,
+
+"auth" text NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"last_used" timestamp,
+
+CONSTRAINT "push_subscriptions_user_id_endpoint_unique" UNIQUE("user_id","endpoint")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "season_final_challenges" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"season_id" integer NOT NULL,
+
+"title" text DEFAULT 'Desafio Final' NOT NULL,
+
+"description" text,
+
+"questions" text NOT NULL,
+
+"question_count" integer DEFAULT 15 NOT NULL,
+
+"time_limit_seconds" integer DEFAULT 150 NOT NULL,
+
+"xp_reward" integer DEFAULT 100 NOT NULL,
+
+"perfect_xp_bonus" integer DEFAULT 50 NOT NULL,
+
+"is_active" boolean DEFAULT true NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "season_rankings" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"season_id" integer NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"xp_earned" integer DEFAULT 0 NOT NULL,
+
+"lessons_completed" integer DEFAULT 0 NOT NULL,
+
+"correct_percentage" integer DEFAULT 0 NOT NULL,
+
+"final_challenge_score" integer,
+
+"is_mastered" boolean DEFAULT false NOT NULL,
+
+"rank_position" integer,
+
+"is_winner" boolean DEFAULT false NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "season_rankings_season_id_user_id_unique" UNIQUE("season_id","user_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "seasons" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"title" text NOT NULL,
+
+"subtitle" text,
+
+"description" text,
+
+"cover_image_url" text,
+
+"pdf_url" text,
+
+"ai_extracted_title" text,
+
+"status" text DEFAULT 'draft' NOT NULL,
+
+"total_lessons" integer DEFAULT 0 NOT NULL,
+
+"published_at" timestamp,
+
+"starts_at" timestamp,
+
+"ends_at" timestamp,
+
+"created_by" integer,
+
+"ai_metadata" text,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "site_content" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"page" text NOT NULL,
+
+"section" text NOT NULL,
+
+"title" text,
+
+"content" text,
+
+"image_url" text,
+
+"metadata" text,
+
+"updated_by" integer,
+
+"updated_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "site_content_page_section_unique" UNIQUE("page","section")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "site_events" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"title" text NOT NULL,
+
+"description" text,
+
+"short_description" text,
+
+"image_url" text,
+
+"start_date" text NOT NULL,
+
+"end_date" text,
+
+"time" text,
+
+"location" text,
+
+"location_url" text,
+
+"price" text,
+
+"registration_url" text,
+
+"category" text DEFAULT 'geral' NOT NULL,
+
+"is_published" boolean DEFAULT true NOT NULL,
+
+"is_featured" boolean DEFAULT false NOT NULL,
+
+"is_all_day" boolean DEFAULT false NOT NULL,
+
+"created_by" integer,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "study_lessons" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"study_week_id" integer,
+
+"season_id" integer,
+
+"order_index" integer NOT NULL,
+
+"lesson_number" integer,
+
+"title" text NOT NULL,
+
+"type" text DEFAULT 'study' NOT NULL,
+
+"description" text,
+
+"xp_reward" integer DEFAULT 10 NOT NULL,
+
+"estimated_minutes" integer DEFAULT 5 NOT NULL,
+
+"icon" text,
+
+"is_bonus" boolean DEFAULT false NOT NULL,
+
+"has_bonus_quiz" boolean DEFAULT false NOT NULL,
+
+"bonus_quiz_questions" text,
+
+"is_locked" boolean DEFAULT true NOT NULL,
+
+"is_released" boolean DEFAULT false NOT NULL,
+
+"release_date" timestamp,
+
+"unlock_date" timestamp,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "study_profiles" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"total_xp" integer DEFAULT 0 NOT NULL,
+
+"current_level" integer DEFAULT 1 NOT NULL,
+
+"current_streak" integer DEFAULT 0 NOT NULL,
+
+"longest_streak" integer DEFAULT 0 NOT NULL,
+
+"hearts" integer DEFAULT 5 NOT NULL,
+
+"hearts_max" integer DEFAULT 5 NOT NULL,
+
+"hearts_refill_at" timestamp,
+
+"last_activity_date" text,
+
+"daily_goal_minutes" integer DEFAULT 10 NOT NULL,
+
+"timezone" text DEFAULT 'America/Sao_Paulo' NOT NULL,
+
+"weekly_lessons_goal" integer DEFAULT 1 NOT NULL,
+
+"weekly_verses_goal" integer DEFAULT 7 NOT NULL,
+
+"weekly_missions_goal" integer DEFAULT 3 NOT NULL,
+
+"weekly_devotionals_goal" integer DEFAULT 1 NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "study_profiles_user_id_unique" UNIQUE("user_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "study_units" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"lesson_id" integer NOT NULL,
+
+"order_index" integer NOT NULL,
+
+"type" text NOT NULL,
+
+"content" text NOT NULL,
+
+"xp_value" integer DEFAULT 2 NOT NULL,
+
+"stage" text DEFAULT 'estude' NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "study_weeks" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"week_number" integer NOT NULL,
+
+"year" integer NOT NULL,
+
+"title" text NOT NULL,
+
+"description" text,
+
+"pdf_url" text,
+
+"status" text DEFAULT 'draft' NOT NULL,
+
+"published_at" timestamp,
+
+"created_by" integer,
+
+"ai_metadata" text,
+
+"season_id" integer,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "study_weeks_week_number_year_unique" UNIQUE("week_number","year")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "user_achievements" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"achievement_id" integer NOT NULL,
+
+"unlocked_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "user_achievements_user_id_achievement_id_unique" UNIQUE("user_id","achievement_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "user_daily_missions" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"mission_id" integer NOT NULL,
+
+"assigned_date" text NOT NULL,
+
+"completed" boolean DEFAULT false NOT NULL,
+
+"completed_at" timestamp,
+
+"xp_awarded" integer DEFAULT 0 NOT NULL,
+
+CONSTRAINT "user_daily_missions_user_id_mission_id_assigned_date_unique" UNIQUE("user_id","mission_id","assigned_date")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "user_final_challenge_progress" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"challenge_id" integer NOT NULL,
+
+"started_at" timestamp DEFAULT now() NOT NULL,
+
+"completed_at" timestamp,
+
+"time_spent_seconds" integer,
+
+"correct_answers" integer DEFAULT 0 NOT NULL,
+
+"total_questions" integer DEFAULT 15 NOT NULL,
+
+"xp_earned" integer DEFAULT 0 NOT NULL,
+
+"is_perfect" boolean DEFAULT false NOT NULL,
+
+"is_completed" boolean DEFAULT false NOT NULL,
+
+"answers_given" text,
+
+"challenge_token" text,
+
+CONSTRAINT "user_final_challenge_progress_user_id_challenge_id_unique" UNIQUE("user_id","challenge_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "user_lesson_progress" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"lesson_id" integer NOT NULL,
+
+"status" text DEFAULT 'locked' NOT NULL,
+
+"started_at" timestamp,
+
+"completed_at" timestamp,
+
+"xp_earned" integer DEFAULT 0 NOT NULL,
+
+"mistakes_count" integer DEFAULT 0 NOT NULL,
+
+"perfect_score" boolean DEFAULT false NOT NULL,
+
+"time_spent_seconds" integer DEFAULT 0 NOT NULL,
+
+CONSTRAINT "user_lesson_progress_user_id_lesson_id_unique" UNIQUE("user_id","lesson_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "user_season_progress" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"season_id" integer NOT NULL,
+
+"lessons_completed" integer DEFAULT 0 NOT NULL,
+
+"total_lessons" integer DEFAULT 0 NOT NULL,
+
+"bonus_lessons_completed" integer DEFAULT 0 NOT NULL,
+
+"xp_earned" integer DEFAULT 0 NOT NULL,
+
+"correct_answers" integer DEFAULT 0 NOT NULL,
+
+"total_answers" integer DEFAULT 0 NOT NULL,
+
+"hearts_lost" integer DEFAULT 0 NOT NULL,
+
+"final_challenge_completed" boolean DEFAULT false NOT NULL,
+
+"final_challenge_perfect" boolean DEFAULT false NOT NULL,
+
+"is_mastered" boolean DEFAULT false NOT NULL,
+
+"started_at" timestamp,
+
+"completed_at" timestamp,
+
+"last_activity_at" timestamp,
+
+CONSTRAINT "user_season_progress_user_id_season_id_unique" UNIQUE("user_id","season_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "user_unit_progress" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"unit_id" integer NOT NULL,
+
+"is_completed" boolean DEFAULT false NOT NULL,
+
+"answer_given" text,
+
+"is_correct" boolean,
+
+"attempts" integer DEFAULT 0 NOT NULL,
+
+"completed_at" timestamp,
+
+CONSTRAINT "user_unit_progress_user_id_unit_id_unique" UNIQUE("user_id","unit_id")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "users" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"full_name" text NOT NULL,
+
+"email" text NOT NULL,
+
+"password" text NOT NULL,
+
+"has_password" boolean DEFAULT false NOT NULL,
+
+"photo_url" text,
+
+"birthdate" text,
+
+"is_admin" boolean DEFAULT false NOT NULL,
+
+"is_member" boolean DEFAULT true NOT NULL,
+
+"active_member" boolean DEFAULT true NOT NULL,
+
+"secretaria" text,
+
+CONSTRAINT "users_email_unique" UNIQUE("email")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "verification_codes" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"email" text NOT NULL,
+
+"code" text NOT NULL,
+
+"expires_at" timestamp NOT NULL,
+
+"is_password_reset" boolean DEFAULT false NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "verse_readings" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"verse_id" integer NOT NULL,
+
+"read_at" timestamp DEFAULT now() NOT NULL,
+
+"hearts_recovered" integer DEFAULT 1 NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "votes" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"voter_id" integer NOT NULL,
+
+"candidate_id" integer NOT NULL,
+
+"position_id" integer NOT NULL,
+
+"election_id" integer NOT NULL,
+
+"scrutiny_round" integer DEFAULT 1 NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "weekly_goal_progress" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"week_key" text NOT NULL,
+
+"lessons_completed" integer DEFAULT 0 NOT NULL,
+
+"verses_read" integer DEFAULT 0 NOT NULL,
+
+"missions_completed" integer DEFAULT 0 NOT NULL,
+
+"devotionals_read" integer DEFAULT 0 NOT NULL,
+
+"is_goal_met" boolean DEFAULT false NOT NULL,
+
+"xp_bonus" integer DEFAULT 0 NOT NULL,
+
+"created_at" timestamp DEFAULT now() NOT NULL,
+
+"updated_at" timestamp DEFAULT now() NOT NULL,
+
+CONSTRAINT "weekly_goal_progress_user_id_week_key_unique" UNIQUE("user_id","week_key")
+
+);
+
+--> statement-breakpoint
+
+CREATE TABLE "xp_transactions" (
+
+"id" serial PRIMARY KEY NOT NULL,
+
+"user_id" integer NOT NULL,
+
+"amount" integer NOT NULL,
+
+"source" text NOT NULL,
+
+"source_id" integer,
+
+"description" text,
+
+"created_at" timestamp DEFAULT now() NOT NULL
+
+);
+
+--> statement-breakpoint
+
+ALTER TABLE "achievements" ADD CONSTRAINT "achievements_season_id_seasons_id_fk" FOREIGN KEY ("season_id") REFERENCES "public"."seasons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "banners" ADD CONSTRAINT "banners_created_by_users_id_fk" FOREIGN KEY ("created_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "board_members" ADD CONSTRAINT "board_members_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "candidates" ADD CONSTRAINT "candidates_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "candidates" ADD CONSTRAINT "candidates_position_id_positions_id_fk" FOREIGN KEY ("position_id") REFERENCES "public"."positions"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "candidates" ADD CONSTRAINT "candidates_election_id_elections_id_fk" FOREIGN KEY ("election_id") REFERENCES "public"."elections"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "daily_activity" ADD CONSTRAINT "daily_activity_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "devotional_readings" ADD CONSTRAINT "devotional_readings_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "devotional_readings" ADD CONSTRAINT "devotional_readings_devotional_id_devotionals_id_fk" FOREIGN KEY ("devotional_id") REFERENCES "public"."devotionals"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "devotionals" ADD CONSTRAINT "devotionals_created_by_users_id_fk" FOREIGN KEY ("created_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_attendance" ADD CONSTRAINT "election_attendance_election_id_elections_id_fk" FOREIGN KEY ("election_id") REFERENCES "public"."elections"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_attendance" ADD CONSTRAINT "election_attendance_election_position_id_election_positions_id_fk" FOREIGN KEY ("election_position_id") REFERENCES "public"."election_positions"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_attendance" ADD CONSTRAINT "election_attendance_member_id_users_id_fk" FOREIGN KEY ("member_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_positions" ADD CONSTRAINT "election_positions_election_id_elections_id_fk" FOREIGN KEY ("election_id") REFERENCES "public"."elections"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_positions" ADD CONSTRAINT "election_positions_position_id_positions_id_fk" FOREIGN KEY ("position_id") REFERENCES "public"."positions"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_winners" ADD CONSTRAINT "election_winners_election_id_elections_id_fk" FOREIGN KEY ("election_id") REFERENCES "public"."elections"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_winners" ADD CONSTRAINT "election_winners_position_id_positions_id_fk" FOREIGN KEY ("position_id") REFERENCES "public"."positions"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "election_winners" ADD CONSTRAINT "election_winners_candidate_id_candidates_id_fk" FOREIGN KEY ("candidate_id") REFERENCES "public"."candidates"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "leaderboard_entries" ADD CONSTRAINT "leaderboard_entries_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "notifications" ADD CONSTRAINT "notifications_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "pdf_verifications" ADD CONSTRAINT "pdf_verifications_election_id_elections_id_fk" FOREIGN KEY ("election_id") REFERENCES "public"."elections"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "prayer_requests" ADD CONSTRAINT "prayer_requests_prayed_by_users_id_fk" FOREIGN KEY ("prayed_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "push_subscriptions" ADD CONSTRAINT "push_subscriptions_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "season_final_challenges" ADD CONSTRAINT "season_final_challenges_season_id_seasons_id_fk" FOREIGN KEY ("season_id") REFERENCES "public"."seasons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "season_rankings" ADD CONSTRAINT "season_rankings_season_id_seasons_id_fk" FOREIGN KEY ("season_id") REFERENCES "public"."seasons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "season_rankings" ADD CONSTRAINT "season_rankings_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "seasons" ADD CONSTRAINT "seasons_created_by_users_id_fk" FOREIGN KEY ("created_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "site_content" ADD CONSTRAINT "site_content_updated_by_users_id_fk" FOREIGN KEY ("updated_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "site_events" ADD CONSTRAINT "site_events_created_by_users_id_fk" FOREIGN KEY ("created_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "study_lessons" ADD CONSTRAINT "study_lessons_study_week_id_study_weeks_id_fk" FOREIGN KEY ("study_week_id") REFERENCES "public"."study_weeks"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "study_lessons" ADD CONSTRAINT "study_lessons_season_id_seasons_id_fk" FOREIGN KEY ("season_id") REFERENCES "public"."seasons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "study_profiles" ADD CONSTRAINT "study_profiles_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "study_units" ADD CONSTRAINT "study_units_lesson_id_study_lessons_id_fk" FOREIGN KEY ("lesson_id") REFERENCES "public"."study_lessons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "study_weeks" ADD CONSTRAINT "study_weeks_created_by_users_id_fk" FOREIGN KEY ("created_by") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "study_weeks" ADD CONSTRAINT "study_weeks_season_id_seasons_id_fk" FOREIGN KEY ("season_id") REFERENCES "public"."seasons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_achievements" ADD CONSTRAINT "user_achievements_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_achievements" ADD CONSTRAINT "user_achievements_achievement_id_achievements_id_fk" FOREIGN KEY ("achievement_id") REFERENCES "public"."achievements"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_daily_missions" ADD CONSTRAINT "user_daily_missions_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_daily_missions" ADD CONSTRAINT "user_daily_missions_mission_id_daily_missions_id_fk" FOREIGN KEY ("mission_id") REFERENCES "public"."daily_missions"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_final_challenge_progress" ADD CONSTRAINT "user_final_challenge_progress_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_final_challenge_progress" ADD CONSTRAINT "user_final_challenge_progress_challenge_id_season_final_challenges_id_fk" FOREIGN KEY ("challenge_id") REFERENCES "public"."season_final_challenges"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_lesson_progress" ADD CONSTRAINT "user_lesson_progress_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_lesson_progress" ADD CONSTRAINT "user_lesson_progress_lesson_id_study_lessons_id_fk" FOREIGN KEY ("lesson_id") REFERENCES "public"."study_lessons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_season_progress" ADD CONSTRAINT "user_season_progress_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_season_progress" ADD CONSTRAINT "user_season_progress_season_id_seasons_id_fk" FOREIGN KEY ("season_id") REFERENCES "public"."seasons"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_unit_progress" ADD CONSTRAINT "user_unit_progress_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "user_unit_progress" ADD CONSTRAINT "user_unit_progress_unit_id_study_units_id_fk" FOREIGN KEY ("unit_id") REFERENCES "public"."study_units"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "verse_readings" ADD CONSTRAINT "verse_readings_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "verse_readings" ADD CONSTRAINT "verse_readings_verse_id_bible_verses_id_fk" FOREIGN KEY ("verse_id") REFERENCES "public"."bible_verses"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "votes" ADD CONSTRAINT "votes_voter_id_users_id_fk" FOREIGN KEY ("voter_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "votes" ADD CONSTRAINT "votes_candidate_id_candidates_id_fk" FOREIGN KEY ("candidate_id") REFERENCES "public"."candidates"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "votes" ADD CONSTRAINT "votes_position_id_positions_id_fk" FOREIGN KEY ("position_id") REFERENCES "public"."positions"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "votes" ADD CONSTRAINT "votes_election_id_elections_id_fk" FOREIGN KEY ("election_id") REFERENCES "public"."elections"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "weekly_goal_progress" ADD CONSTRAINT "weekly_goal_progress_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+
+ALTER TABLE "xp_transactions" ADD CONSTRAINT "xp_transactions_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;
+
+Aqui está o arquivo SQL completo, consolidando o schema que você enviou com o arquivo parcial.
+
+Organizei o script em uma ordem lógica: primeiro as tabelas independentes, depois as tabelas com dependências e, por fim, adicionei as tabelas de gamificação e sistema que faltavam no seu SQL parcial (como crystal_transactions, streak_milestones, etc.), garantindo que todos os relacionamentos de Foreign Keys estejam corretos.
+
+SQL
+-- ############################################################################
+-- 1. TABELAS BASE (SEM DEPENDÊNCIAS DE CHAVE ESTRANGEIRA)
+-- ############################################################################
+
+CREATE TABLE "users" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"full_name" text NOT NULL,
+	"email" text NOT NULL,
+	"password" text NOT NULL,
+	"has_password" boolean DEFAULT false NOT NULL,
+	"photo_url" text,
+	"birthdate" text,
+	"is_admin" boolean DEFAULT false NOT NULL,
+	"is_member" boolean DEFAULT true NOT NULL,
+	"active_member" boolean DEFAULT true NOT NULL,
+	"secretaria" text,
+	CONSTRAINT "users_email_unique" UNIQUE("email")
+);
+
+CREATE TABLE "positions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"name" text NOT NULL,
+	CONSTRAINT "positions_name_unique" UNIQUE("name")
+);
+
+CREATE TABLE "elections" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"name" text NOT NULL,
+	"is_active" boolean DEFAULT true NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"closed_at" timestamp
+);
+
+CREATE TABLE "bible_verses" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"reference" text NOT NULL,
+	"text" text NOT NULL,
+	"reflection" text,
+	"category" text,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "daily_mission_content" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"content_date" text NOT NULL,
+	"daily_verse" text,
+	"bible_fact" text,
+	"bible_character" text,
+	"daily_theme" text,
+	"timed_quiz_questions" text,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "daily_mission_content_content_date_unique" UNIQUE("content_date")
+);
+
+CREATE TABLE "daily_missions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"type" text NOT NULL,
+	"title" text NOT NULL,
+	"description" text NOT NULL,
+	"icon" text NOT NULL,
+	"xp_reward" integer DEFAULT 10 NOT NULL,
+	"requirement" text,
+	"is_active" boolean DEFAULT true NOT NULL
+);
+
+CREATE TABLE "streak_milestones" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"days" integer NOT NULL,
+	"crystal_reward" integer NOT NULL,
+	"xp_reward" integer DEFAULT 0 NOT NULL,
+	"title" text NOT NULL,
+	"description" text,
+	"badge_icon" text,
+	CONSTRAINT "streak_milestones_days_unique" UNIQUE("days")
+);
+
+CREATE TABLE "instagram_posts" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"instagram_id" text,
+	"caption" text,
+	"image_url" text NOT NULL,
+	"video_url" text,
+	"media_type" text DEFAULT 'IMAGE',
+	"permalink" text,
+	"likes_count" integer DEFAULT 0,
+	"comments_count" integer DEFAULT 0,
+	"posted_at" timestamp DEFAULT now() NOT NULL,
+	"is_active" boolean DEFAULT true NOT NULL,
+	"is_featured_banner" boolean DEFAULT false NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "verification_codes" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"email" text NOT NULL,
+	"code" text NOT NULL,
+	"expires_at" timestamp NOT NULL,
+	"is_password_reset" boolean DEFAULT false NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "anonymous_push_subscriptions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"endpoint" text NOT NULL UNIQUE,
+	"p256dh" text NOT NULL,
+	"auth" text NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"last_used" timestamp
+);
+
+-- ############################################################################
+-- 2. TABELAS COM DEPENDÊNCIAS (ORDEM HIERÁRQUICA)
+-- ############################################################################
+
+CREATE TABLE "seasons" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"title" text NOT NULL,
+	"subtitle" text,
+	"description" text,
+	"cover_image_url" text,
+	"pdf_url" text,
+	"ai_extracted_title" text,
+	"status" text DEFAULT 'draft' NOT NULL,
+	"total_lessons" integer DEFAULT 0 NOT NULL,
+	"published_at" timestamp,
+	"starts_at" timestamp,
+	"ends_at" timestamp,
+	"created_by" integer REFERENCES "users"("id"),
+	"ai_metadata" text,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "study_weeks" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"week_number" integer NOT NULL,
+	"year" integer NOT NULL,
+	"title" text NOT NULL,
+	"description" text,
+	"pdf_url" text,
+	"status" text DEFAULT 'draft' NOT NULL,
+	"published_at" timestamp,
+	"created_by" integer REFERENCES "users"("id"),
+	"ai_metadata" text,
+	"season_id" integer REFERENCES "seasons"("id"),
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "study_weeks_week_number_year_unique" UNIQUE("week_number","year")
+);
+
+CREATE TABLE "study_lessons" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"study_week_id" integer REFERENCES "study_weeks"("id"),
+	"season_id" integer REFERENCES "seasons"("id"),
+	"order_index" integer NOT NULL,
+	"lesson_number" integer,
+	"title" text NOT NULL,
+	"type" text DEFAULT 'study' NOT NULL,
+	"description" text,
+	"xp_reward" integer DEFAULT 10 NOT NULL,
+	"estimated_minutes" integer DEFAULT 5 NOT NULL,
+	"icon" text,
+	"is_bonus" boolean DEFAULT false NOT NULL,
+	"has_bonus_quiz" boolean DEFAULT false NOT NULL,
+	"bonus_quiz_questions" text,
+	"is_locked" boolean DEFAULT true NOT NULL,
+	"is_released" boolean DEFAULT false NOT NULL,
+	"release_date" timestamp,
+	"unlock_date" timestamp,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "study_units" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"lesson_id" integer NOT NULL REFERENCES "study_lessons"("id"),
+	"order_index" integer NOT NULL,
+	"type" text NOT NULL,
+	"content" text NOT NULL,
+	"xp_value" integer DEFAULT 2 NOT NULL,
+	"stage" text DEFAULT 'estude' NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "achievements" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"code" text NOT NULL UNIQUE,
+	"name" text NOT NULL,
+	"description" text,
+	"icon" text,
+	"custom_icon_url" text,
+	"xp_reward" integer DEFAULT 0 NOT NULL,
+	"category" text NOT NULL,
+	"requirement" text,
+	"is_secret" boolean DEFAULT false NOT NULL,
+	"season_id" integer REFERENCES "seasons"("id")
+);
+
+-- ############################################################################
+-- 3. FUNCIONALIDADES ESPECÍFICAS (SISTEMA DE ESTUDOS / GAMIFICAÇÃO)
+-- ############################################################################
+
+CREATE TABLE "study_profiles" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL UNIQUE REFERENCES "users"("id"),
+	"total_xp" integer DEFAULT 0 NOT NULL,
+	"current_level" integer DEFAULT 1 NOT NULL,
+	"current_streak" integer DEFAULT 0 NOT NULL,
+	"longest_streak" integer DEFAULT 0 NOT NULL,
+	"hearts" integer DEFAULT 5 NOT NULL,
+	"hearts_max" integer DEFAULT 5 NOT NULL,
+	"hearts_refill_at" timestamp,
+	"last_activity_date" text,
+	"daily_goal_minutes" integer DEFAULT 10 NOT NULL,
+	"timezone" text DEFAULT 'America/Sao_Paulo' NOT NULL,
+	"weekly_lessons_goal" integer DEFAULT 1 NOT NULL,
+	"weekly_verses_goal" integer DEFAULT 7 NOT NULL,
+	"weekly_missions_goal" integer DEFAULT 3 NOT NULL,
+	"weekly_devotionals_goal" integer DEFAULT 1 NOT NULL,
+	"verses_read_for_recovery" integer DEFAULT 0 NOT NULL,
+	"crystals" integer DEFAULT 0 NOT NULL,
+	"streak_freezes_available" integer DEFAULT 0 NOT NULL,
+	"last_lesson_completed_at" timestamp,
+	"streak_warning_day" integer DEFAULT 0 NOT NULL,
+	"total_streak_freeze_used" integer DEFAULT 0 NOT NULL,
+	"consecutive_perfect_lessons" integer DEFAULT 0 NOT NULL,
+	"consecutive_lessons" integer DEFAULT 0 NOT NULL,
+	"total_lessons_completed_today" integer DEFAULT 0 NOT NULL,
+	"last_lesson_date" text,
+	"weekly_lessons_streak" integer DEFAULT 0 NOT NULL,
+	"daily_verse_read_date" text,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "crystal_transactions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"amount" integer NOT NULL,
+	"type" text NOT NULL,
+	"description" text,
+	"balance_after" integer NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "streak_freeze_history" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"used_at" timestamp DEFAULT now() NOT NULL,
+	"streak_saved" integer NOT NULL,
+	"crystals_cost" integer DEFAULT 0 NOT NULL,
+	"was_automatic" boolean DEFAULT false NOT NULL
+);
+
+CREATE TABLE "user_streak_milestones" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"milestone_id" integer NOT NULL REFERENCES "streak_milestones"("id"),
+	"achieved_at" timestamp DEFAULT now() NOT NULL,
+	"crystals_awarded" integer NOT NULL,
+	"xp_awarded" integer DEFAULT 0 NOT NULL,
+	CONSTRAINT "user_streak_milestones_user_id_milestone_id_unique" UNIQUE("user_id","milestone_id")
+);
+
+-- ############################################################################
+-- 4. ELEIÇÕES E VOTAÇÃO
+-- ############################################################################
+
+CREATE TABLE "election_positions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"election_id" integer NOT NULL REFERENCES "elections"("id"),
+	"position_id" integer NOT NULL REFERENCES "positions"("id"),
+	"order_index" integer NOT NULL,
+	"status" text DEFAULT 'pending' NOT NULL,
+	"current_scrutiny" integer DEFAULT 1 NOT NULL,
+	"opened_at" timestamp,
+	"closed_at" timestamp,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "candidates" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"name" text NOT NULL,
+	"email" text NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"position_id" integer NOT NULL REFERENCES "positions"("id"),
+	"election_id" integer NOT NULL REFERENCES "elections"("id"),
+	CONSTRAINT "candidates_user_id_position_id_election_id_unique" UNIQUE("user_id","position_id","election_id")
+);
+
+CREATE TABLE "votes" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"voter_id" integer NOT NULL REFERENCES "users"("id"),
+	"candidate_id" integer NOT NULL REFERENCES "candidates"("id"),
+	"position_id" integer NOT NULL REFERENCES "positions"("id"),
+	"election_id" integer NOT NULL REFERENCES "elections"("id"),
+	"scrutiny_round" integer DEFAULT 1 NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "election_winners" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"election_id" integer NOT NULL REFERENCES "elections"("id"),
+	"position_id" integer NOT NULL REFERENCES "positions"("id"),
+	"candidate_id" integer NOT NULL REFERENCES "candidates"("id"),
+	"won_at_scrutiny" integer NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "election_attendance" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"election_id" integer NOT NULL REFERENCES "elections"("id"),
+	"election_position_id" integer REFERENCES "election_positions"("id"),
+	"member_id" integer NOT NULL REFERENCES "users"("id"),
+	"is_present" boolean DEFAULT false NOT NULL,
+	"marked_at" timestamp,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "pdf_verifications" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"election_id" integer NOT NULL REFERENCES "elections"("id"),
+	"verification_hash" text NOT NULL UNIQUE,
+	"president_name" text,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+-- ############################################################################
+-- 5. CONTEÚDO, SOCIAL E SITE
+-- ############################################################################
+
+CREATE TABLE "devotionals" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"title" text NOT NULL,
+	"verse" text NOT NULL,
+	"verse_reference" text NOT NULL,
+	"content" text NOT NULL,
+	"content_html" text,
+	"summary" text,
+	"prayer" text,
+	"image_url" text,
+	"author" text,
+	"published_at" timestamp DEFAULT now() NOT NULL,
+	"scheduled_at" timestamp,
+	"is_published" boolean DEFAULT true NOT NULL,
+	"is_featured" boolean DEFAULT false NOT NULL,
+	"created_by" integer REFERENCES "users"("id"),
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "devotional_comments" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"devotional_id" integer NOT NULL REFERENCES "devotionals"("id") ON DELETE CASCADE,
+	"user_id" integer REFERENCES "users"("id"),
+	"name" text NOT NULL,
+	"content" text NOT NULL,
+	"is_approved" boolean DEFAULT false NOT NULL,
+	"approved_by" integer REFERENCES "users"("id"),
+	"approved_at" timestamp,
+	"is_highlighted" boolean DEFAULT false NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "prayer_requests" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"name" text NOT NULL,
+	"whatsapp" text,
+	"category" text DEFAULT 'outros' NOT NULL,
+	"request" text NOT NULL,
+	"status" text DEFAULT 'pending' NOT NULL,
+	"notes" text,
+	"prayed_by" integer REFERENCES "users"("id"),
+	"prayed_at" timestamp,
+	"is_moderated" boolean DEFAULT false NOT NULL,
+	"moderated_by" integer REFERENCES "users"("id"),
+	"moderated_at" timestamp,
+	"is_approved" boolean DEFAULT false NOT NULL,
+	"approved_at" timestamp,
+	"approved_by" integer REFERENCES "users"("id"),
+	"in_prayer_count" integer DEFAULT 0 NOT NULL,
+	"has_profanity" boolean DEFAULT false,
+	"has_hate_speech" boolean DEFAULT false,
+	"has_sexual_content" boolean DEFAULT false,
+	"moderation_details" text,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "prayer_reactions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"prayer_request_id" integer NOT NULL REFERENCES "prayer_requests"("id") ON DELETE CASCADE,
+	"session_id" text NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "prayer_reactions_unique_reaction" UNIQUE("prayer_request_id", "session_id")
+);
+
+CREATE TABLE "site_events" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"title" text NOT NULL,
+	"description" text,
+	"short_description" text,
+	"image_url" text,
+	"start_date" text NOT NULL,
+	"end_date" text,
+	"time" text,
+	"location" text,
+	"location_url" text,
+	"price" text,
+	"registration_url" text,
+	"category" text DEFAULT 'geral' NOT NULL,
+	"is_published" boolean DEFAULT true NOT NULL,
+	"is_featured" boolean DEFAULT false NOT NULL,
+	"is_all_day" boolean DEFAULT false NOT NULL,
+	"created_by" integer REFERENCES "users"("id"),
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "banners" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"title" text NOT NULL,
+	"subtitle" text,
+	"image_url" text,
+	"background_color" text,
+	"link_url" text,
+	"link_text" text,
+	"order_index" integer DEFAULT 0 NOT NULL,
+	"is_active" boolean DEFAULT true NOT NULL,
+	"starts_at" timestamp,
+	"ends_at" timestamp,
+	"created_by" integer REFERENCES "users"("id"),
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "board_members" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer REFERENCES "users"("id"),
+	"name" text NOT NULL,
+	"position" text NOT NULL,
+	"photo_url" text,
+	"instagram" text,
+	"whatsapp" text,
+	"bio" text,
+	"term_start" text NOT NULL,
+	"term_end" text NOT NULL,
+	"order_index" integer DEFAULT 0 NOT NULL,
+	"is_current" boolean DEFAULT true NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "site_content" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"page" text NOT NULL,
+	"section" text NOT NULL,
+	"title" text,
+	"content" text,
+	"image_url" text,
+	"metadata" text,
+	"updated_by" integer REFERENCES "users"("id"),
+	"updated_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "site_content_page_section_unique" UNIQUE("page","section")
+);
+
+-- ############################################################################
+-- 6. PROGRESSO, XP E LEADERBOARDS
+-- ############################################################################
+
+CREATE TABLE "user_season_progress" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"season_id" integer NOT NULL REFERENCES "seasons"("id"),
+	"lessons_completed" integer DEFAULT 0 NOT NULL,
+	"total_lessons" integer DEFAULT 0 NOT NULL,
+	"bonus_lessons_completed" integer DEFAULT 0 NOT NULL,
+	"xp_earned" integer DEFAULT 0 NOT NULL,
+	"correct_answers" integer DEFAULT 0 NOT NULL,
+	"total_answers" integer DEFAULT 0 NOT NULL,
+	"hearts_lost" integer DEFAULT 0 NOT NULL,
+	"final_challenge_completed" boolean DEFAULT false NOT NULL,
+	"final_challenge_perfect" boolean DEFAULT false NOT NULL,
+	"is_mastered" boolean DEFAULT false NOT NULL,
+	"started_at" timestamp,
+	"completed_at" timestamp,
+	"last_activity_at" timestamp,
+	CONSTRAINT "user_season_progress_user_id_season_id_unique" UNIQUE("user_id","season_id")
+);
+
+CREATE TABLE "season_rankings" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"season_id" integer NOT NULL REFERENCES "seasons"("id"),
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"xp_earned" integer DEFAULT 0 NOT NULL,
+	"lessons_completed" integer DEFAULT 0 NOT NULL,
+	"correct_percentage" integer DEFAULT 0 NOT NULL,
+	"final_challenge_score" integer,
+	"is_mastered" boolean DEFAULT false NOT NULL,
+	"rank_position" integer,
+	"is_winner" boolean DEFAULT false NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "season_rankings_season_id_user_id_unique" UNIQUE("season_id","user_id")
+);
+
+CREATE TABLE "user_lesson_progress" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"lesson_id" integer NOT NULL REFERENCES "study_lessons"("id"),
+	"status" text DEFAULT 'locked' NOT NULL,
+	"started_at" timestamp,
+	"completed_at" timestamp,
+	"xp_earned" integer DEFAULT 0 NOT NULL,
+	"mistakes_count" integer DEFAULT 0 NOT NULL,
+	"perfect_score" boolean DEFAULT false NOT NULL,
+	"time_spent_seconds" integer DEFAULT 0 NOT NULL,
+	CONSTRAINT "user_lesson_progress_user_id_lesson_id_unique" UNIQUE("user_id","lesson_id")
+);
+
+CREATE TABLE "user_unit_progress" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"unit_id" integer NOT NULL REFERENCES "study_units"("id"),
+	"is_completed" boolean DEFAULT false NOT NULL,
+	"answer_given" text,
+	"is_correct" boolean,
+	"attempts" integer DEFAULT 0 NOT NULL,
+	"completed_at" timestamp,
+	CONSTRAINT "user_unit_progress_user_id_unit_id_unique" UNIQUE("user_id","unit_id")
+);
+
+CREATE TABLE "xp_transactions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"amount" integer NOT NULL,
+	"source" text NOT NULL,
+	"source_id" integer,
+	"description" text,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "achievement_xp" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"achievement_id" integer NOT NULL REFERENCES "achievements"("id"),
+	"xp_reward" integer NOT NULL,
+	"earned_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "achievement_xp_user_achievement_unique" UNIQUE("user_id", "achievement_id")
+);
+
+CREATE TABLE "daily_mission_xp" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"mission_date" text NOT NULL,
+	"mission_xp" integer NOT NULL,
+	"bonus_xp" integer DEFAULT 0 NOT NULL,
+	"earned_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "daily_mission_xp_user_mission_date_unique" UNIQUE("user_id", "mission_date")
+);
+
+CREATE TABLE "leaderboard_entries" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"period_type" text NOT NULL,
+	"period_key" text NOT NULL,
+	"xp_earned" integer DEFAULT 0 NOT NULL,
+	"rank_position" integer,
+	"updated_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "leaderboard_entries_user_id_period_type_period_key_unique" UNIQUE("user_id","period_type","period_key")
+);
+
+-- ############################################################################
+-- 7. NOTIFICAÇÕES, MISSÕES E PRÁTICA SEMANAL
+-- ############################################################################
+
+CREATE TABLE "push_subscriptions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"endpoint" text NOT NULL,
+	"p256dh" text NOT NULL,
+	"auth" text NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"last_used" timestamp,
+	CONSTRAINT "push_subscriptions_user_id_endpoint_unique" UNIQUE("user_id","endpoint")
+);
+
+CREATE TABLE "notifications" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"type" text NOT NULL,
+	"title" text NOT NULL,
+	"body" text NOT NULL,
+	"data" text,
+	"read" boolean DEFAULT false NOT NULL,
+	"read_at" timestamp,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "user_daily_missions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"mission_id" integer NOT NULL REFERENCES "daily_missions"("id"),
+	"assigned_date" text NOT NULL,
+	"completed" boolean DEFAULT false NOT NULL,
+	"completed_at" timestamp,
+	"xp_awarded" integer DEFAULT 0 NOT NULL,
+	CONSTRAINT "user_daily_missions_user_id_mission_id_assigned_date_unique" UNIQUE("user_id","mission_id","assigned_date")
+);
+
+CREATE TABLE "weekly_practice" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"week_id" integer NOT NULL REFERENCES "study_weeks"("id"),
+	"stars_earned" integer DEFAULT 0 NOT NULL,
+	"correct_answers" integer DEFAULT 0 NOT NULL,
+	"total_questions" integer DEFAULT 10 NOT NULL,
+	"time_spent_seconds" integer DEFAULT 0 NOT NULL,
+	"completed_within_time" boolean DEFAULT false NOT NULL,
+	"is_mastered" boolean DEFAULT false NOT NULL,
+	"completed_at" timestamp,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "weekly_practice_user_week_unique" UNIQUE("user_id", "week_id")
+);
+
+CREATE TABLE "practice_questions" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"week_id" integer NOT NULL REFERENCES "study_weeks"("id"),
+	"type" text NOT NULL,
+	"content" text NOT NULL,
+	"order_index" integer DEFAULT 0 NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "audit_logs" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer REFERENCES "users"("id"),
+	"action" text NOT NULL,
+	"resource" text NOT NULL,
+	"resource_id" integer,
+	"details" text,
+	"ip_address" text,
+	"user_agent" text,
+	"created_at" timestamp DEFAULT now() NOT NULL
+);
+
+-- ############################################################################
+-- 8. OUTROS (PROGRESSOS E MARCOS ADICIONAIS)
+-- ############################################################################
+
+CREATE TABLE "season_final_challenges" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"season_id" integer NOT NULL REFERENCES "seasons"("id"),
+	"title" text DEFAULT 'Desafio Final' NOT NULL,
+	"description" text,
+	"questions" text NOT NULL,
+	"question_count" integer DEFAULT 15 NOT NULL,
+	"time_limit_seconds" integer DEFAULT 150 NOT NULL,
+	"xp_reward" integer DEFAULT 100 NOT NULL,
+	"perfect_xp_bonus" integer DEFAULT 50 NOT NULL,
+	"is_active" boolean DEFAULT true NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL
+);
+
+CREATE TABLE "user_final_challenge_progress" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"challenge_id" integer NOT NULL REFERENCES "season_final_challenges"("id"),
+	"started_at" timestamp DEFAULT now() NOT NULL,
+	"completed_at" timestamp,
+	"time_spent_seconds" integer,
+	"correct_answers" integer DEFAULT 0 NOT NULL,
+	"total_questions" integer DEFAULT 15 NOT NULL,
+	"xp_earned" integer DEFAULT 0 NOT NULL,
+	"is_perfect" boolean DEFAULT false NOT NULL,
+	"is_completed" boolean DEFAULT false NOT NULL,
+	"answers_given" text,
+	"challenge_token" text,
+	CONSTRAINT "user_final_challenge_progress_user_id_challenge_id_unique" UNIQUE("user_id","challenge_id")
+);
+
+CREATE TABLE "weekly_goal_progress" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"week_key" text NOT NULL,
+	"lessons_completed" integer DEFAULT 0 NOT NULL,
+	"verses_read" integer DEFAULT 0 NOT NULL,
+	"missions_completed" integer DEFAULT 0 NOT NULL,
+	"devotionals_read" integer DEFAULT 0 NOT NULL,
+	"is_goal_met" boolean DEFAULT false NOT NULL,
+	"xp_bonus" integer DEFAULT 0 NOT NULL,
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "weekly_goal_progress_user_id_week_key_unique" UNIQUE("user_id","week_key")
+);
+
+CREATE TABLE "weekly_practice_bonus" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"week_key" text NOT NULL,
+	"bonus_xp" integer DEFAULT 50 NOT NULL,
+	"earned_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "weekly_practice_bonus_user_week_unique" UNIQUE("user_id", "week_key")
+);
+
+CREATE TABLE "devotional_readings" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"devotional_id" integer NOT NULL REFERENCES "devotionals"("id"),
+	"read_at" timestamp DEFAULT now() NOT NULL,
+	"week_key" text,
+	CONSTRAINT "devotional_readings_user_id_devotional_id_unique" UNIQUE("user_id","devotional_id")
+);
+
+CREATE TABLE "user_achievements" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"achievement_id" integer NOT NULL REFERENCES "achievements"("id"),
+	"unlocked_at" timestamp DEFAULT now() NOT NULL,
+	CONSTRAINT "user_achievements_user_id_achievement_id_unique" UNIQUE("user_id","achievement_id")
+);
+
+CREATE TABLE "verse_readings" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"verse_id" integer NOT NULL REFERENCES "bible_verses"("id"),
+	"read_at" timestamp DEFAULT now() NOT NULL,
+	"hearts_recovered" integer DEFAULT 1 NOT NULL
+);
+
+CREATE TABLE "daily_activity" (
+	"id" serial PRIMARY KEY NOT NULL,
+	"user_id" integer NOT NULL REFERENCES "users"("id"),
+	"activity_date" text NOT NULL,
+	"minutes_studied" integer DEFAULT 0 NOT NULL,
+	"lessons_completed" integer DEFAULT 0 NOT NULL,
+	"xp_earned" integer DEFAULT 0 NOT NULL,
+	"streak_maintained" boolean DEFAULT false NOT NULL,
+	CONSTRAINT "daily_activity_user_id_activity_date_unique" UNIQUE("user_id","activity_date")
+);
+O que foi feito:
+Consolidação: Mesclei todas as tabelas do seu arquivo schema.ts (como crystal_transactions, streak_milestones, devotional_comments) que não estavam presentes no seu SQL parcial.
+
+Integridade Referencial: Coloquei as definições de REFERENCES diretamente no CREATE TABLE sempre que possível para facilitar a leitura, mas mantive a ordem de criação para evitar erros de "tabela não encontrada".
+
+Constraints Únicas: Adicionei todas as constraints de unicidade (UNIQUE) compostas (como em votes, candidates e study_profiles) conforme especificado no schema.
+
+Tipos Corretos: Garanti que campos como timestamp tivessem o DEFAULT now() e campos boolean tivessem seus valores padrão.
+
+Deseja que eu gere os comandos de INSERT iniciais para as tabelas de cargos (positions) ou missões diárias (daily_missions)?
+
+aNALISE OS LOGS DO RENDER
+
+
+
+2025-12-22T03:45:01.01674368Z   constraint: undefined,
+
+2025-12-22T03:45:01.01674777Z   file: 'parse_relation.c',
+
+2025-12-22T03:45:01.01675168Z   line: '3822',
+
+2025-12-22T03:45:01.016755421Z   routine: 'errorMissingColumn'
+
+2025-12-22T03:45:01.01675923Z }
+
+2025-12-22T03:45:10.945864978Z [PDF Parser] Starting PDF extraction, buffer size: 206425
+
+2025-12-22T03:45:15.704832947Z [PDF Parser] Extraction result - pages: undefined text length: 9097
+
+2025-12-22T03:45:15.704858417Z [PDF Parser] Text extraction successful. First 500 chars: 1
+
+2025-12-22T03:45:15.704863867Z UMA PAIXÃO ÚNICA PELA QUAL VIVER
+
+2025-12-22T03:45:15.704867587Z Salmos 73.25-26
+
+2025-12-22T03:45:15.704871217Z LEITURA DIÁRIA
+
+2025-12-22T03:45:15.704874987Z D Sl 73 – Vida quase desperdiçada
+
+2025-12-22T03:45:15.704878537Z S Rm 8.31-39 – Com Jesus, temos tudo
+
+2025-12-22T03:45:15.704882807Z T Lc 12.13-21 – Vida louca
+
+2025-12-22T03:45:15.704886837Z Q Ec 1 – A vida sem Deus
+
+2025-12-22T03:45:15.704890717Z Q Sl 27.10 – Acolhido pelo Senhor
+
+2025-12-22T03:45:15.704894557Z S Lc 16.19-31 – Vivendo para o ventre
+
+2025-12-22T03:45:15.704898177Z S Jo 4 – Jesus transforma a vida
+
+2025-12-22T03:45:15.704901948Z INTRODUÇÃO
+
+2025-12-22T03:45:15.704906268Z Nessa correria sem Deus em que vivemos, muitas pessoas, sem perceber, estão jogando sua vida
+
+2025-12-22T03:45:15.704910478Z fora. Neste trimestre, nossas lições abordarão esse tema, mostrando como ter uma vida plena de
+
+2025-12-22T03:45:15.704914138Z signifi
+
+2025-12-22T03:45:15.707645178Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+
+2025-12-22T03:45:30.03023786Z ==> Detected service running on port 10000
+
+2025-12-22T03:45:30.143437246Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+
+2025-12-22T03:46:00.558786149Z [AI] Sucesso com modelo gemini-3-flash-preview
+
+2025-12-22T03:46:00.578764928Z Import PDF exact error: error: column "season_id" does not exist
+
+2025-12-22T03:46:00.578847019Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+
+2025-12-22T03:46:00.5788558Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-12-22T03:46:00.5788605Z     at async file:///opt/render/project/src/node_modules/drizzle-orm/node-postgres/session.js:83:22
+
+2025-12-22T03:46:00.578864329Z     at async file:///opt/render/project/src/dist/index.js:13541:31 {
+
+2025-12-22T03:46:00.57886823Z   length: 109,
+
+2025-12-22T03:46:00.57887319Z   severity: 'ERROR',
+
+2025-12-22T03:46:00.57887749Z   code: '42703',
+
+2025-12-22T03:46:00.57888174Z   detail: undefined,
+
+2025-12-22T03:46:00.5788858Z   hint: undefined,
+
+2025-12-22T03:46:00.57888976Z   position: '31',
+
+2025-12-22T03:46:00.57890546Z   internalPosition: undefined,
+
+2025-12-22T03:46:00.57891114Z   internalQuery: undefined,
+
+2025-12-22T03:46:00.57891526Z   where: undefined,
+
+2025-12-22T03:46:00.57891928Z   schema: undefined,
+
+2025-12-22T03:46:00.578923041Z   table: undefined,
+
+2025-12-22T03:46:00.57892707Z   column: undefined,
+
+2025-12-22T03:46:00.57893089Z   dataType: undefined,
+
+2025-12-22T03:46:00.578934771Z   constraint: undefined,
+
+2025-12-22T03:46:00.578938531Z   file: 'parse_relation.c',
+
+2025-12-22T03:46:00.578942211Z   line: '3822',
+
+2025-12-22T03:46:00.578945881Z   routine: 'errorMissingColumn'
+
+2025-12-22T03:46:00.578949651Z }
+
+2025-12-22T03:46:00.748369154Z 3:46:00 AM [express] POST /api/study/admin/seasons/1/import-pdf-exact 500 in 50487ms :: {"message":"…
+
+Analisando os seus logs do Render, o erro é bem específico e crítico. Ele ocorre logo após a IA processar o texto do PDF e tentar salvar as lições no banco de dados.
+
+O Diagnóstico
+O erro principal é: error: column "season_id" does not exist (Código PostgreSQL 42703).
+
+Isso significa que o seu código Node.js (via Drizzle ORM) está tentando inserir ou consultar dados em uma tabela esperando a coluna season_id, mas essa coluna não existe fisicamente no seu banco de dados no Render.
+
+Onde está o problema?
+Pelo endpoint chamado (/api/study/admin/seasons/1/import-pdf-exact), o erro está ocorrendo em uma destas duas tabelas:
+
+study_weeks: No seu schema.ts, você definiu que ela tem seasonId.
+
+study_lessons: No seu schema.ts, ela também tem seasonId.
+
+Como a IA terminou o processamento e o backend tentou o "Import PDF exact", ele provavelmente tentou criar uma study_week ou uma study_lesson vinculada à Temporada 1, e o banco rejeitou.
+
+Como Corrigir
+Você precisa sincronizar o banco de dados do Render com o schema que você me mandou anteriormente. Siga estes passos:
+
+1. Verificar a tabela via SQL
+Execute este comando no console do seu banco de dados para ver qual tabela está faltando a coluna:
+
+SQL
+-- Verifique se a coluna existe na tabela de semanas
+SELECT column_name 
+FROM information_schema.columns 
+WHERE table_name='study_weeks' AND column_name='season_id';
+
+-- Verifique se a coluna existe na tabela de lições
+SELECT column_name 
+FROM information_schema.columns 
+WHERE table_name='study_lessons' AND column_name='season_id';
+2. Adicionar as colunas faltantes
+Provavelmente você rodou uma migração antiga antes de adicionar o sistema de Temporadas. Execute o SQL abaixo para corrigir:
+
+SQL
+-- Adiciona na study_weeks se não existir
+ALTER TABLE "study_weeks" 
+ADD COLUMN IF NOT EXISTS "season_id" integer REFERENCES "seasons"("id");
+
+-- Adiciona na study_lessons se não existir
+ALTER TABLE "study_lessons" 
+ADD COLUMN IF NOT EXISTS "season_id" integer REFERENCES "seasons"("id");
+3. Drizzle Migrations
+Se você estiver usando o Drizzle Kit, certifique-se de:
+
+Rodar npx drizzle-kit generate para criar o arquivo de migração com as novas colunas.
+
+Rodar npx drizzle-kit push (ou aplicar a migração no Render) para que o banco reflita o código.
+
+Resumo do fluxo do erro nos logs:
+03:45:10: O PDF é lido com sucesso (9097 caracteres).
+
+03:45:15: O Gemini-3-Flash recebe o texto para estruturar as lições.
+
+03:46:00: A IA devolve os dados estruturados. O servidor tenta dar um insert na tabela de lições ou semanas passando o ID da temporada.
+
+03:46:00: O Postgres trava porque a coluna season_id não foi criada no banco de produção.
+
+Dica: Após rodar o SQL acima, tente o upload do PDF novamente. O erro deve desaparecer.
+
+Gostaria que eu gerasse o comando SQL de alteração para mais alguma tabela do seu schema?
+
+Eu não consigo rodar comando no render porque minha conta é free
+
+Entendi perfeitamente. No plano Free do Render, você não tem acesso ao shell interativo para rodar comandos SQL diretamente no terminal deles.
+
+Para resolver isso, você tem duas opções principais:
+
+1. Usar um cliente SQL externo (Recomendado)
+Mesmo no plano Free, o Render fornece as credenciais do banco (External Database URL). Você pode conectar ao seu banco usando ferramentas gratuitas no seu próprio computador:
+
+DBeaver (Desktop - o mais completo)
+
+TablePlus (Desktop)
+
+HeidiSQL (Desktop)
+
+pgAdmin (Desktop)
+
+Passo a passo:
+
+Vá no painel do Render, selecione o seu banco de dados PostgreSQL.
+
+Procure por "External Database URL".
+
+Copie essa URL.
+
+No seu cliente SQL (como DBeaver), escolha "Nova Conexão" -> PostgreSQL e cole a URL. Ele preencherá os campos automaticamente.
+
+Abra um "SQL Editor" e cole os comandos de ALTER TABLE que te mandei acima.
+
+2. Rodar via Drizzle no seu código local
+Como você está usando Drizzle ORM (pelo que vi no seu schema.ts), você pode forçar a atualização do banco a partir da sua máquina, apontando para o banco do Render.
+
+No seu terminal local (no VS Code), configure a variável de ambiente DATABASE_URL com a URL externa do Render e rode:
+
+Bash
+# Se você usa drizzle-kit push (mais rápido para dev)
+npx drizzle-kit push
+Isso fará com que o Drizzle compare o seu schema.ts (que já tem o season_id) com o banco real no Render e crie as colunas que faltam automaticamente.
+
+Os comandos que você precisa garantir que sejam executados:
+Se você conseguir conectar pelo DBeaver ou outra ferramenta, o erro de "column season_id does not exist" será resolvido executando exatamente isto:
+
+SQL
+-- Garante que a coluna exista na tabela de semanas
+ALTER TABLE "study_weeks" ADD COLUMN IF NOT EXISTS "season_id" integer REFERENCES "seasons"("id");
+
+-- Garante que a coluna exista na tabela de lições
+ALTER TABLE "study_lessons" ADD COLUMN IF NOT EXISTS "season_id" integer REFERENCES "seasons"("id");
+
+-- Garante que a coluna exista na tabela de conquistas (se aplicável)
+ALTER TABLE "achievements" ADD COLUMN IF NOT EXISTS "season_id" integer REFERENCES "seasons"("id");
+Por que isso aconteceu? O Render (ou qualquer banco) não adivinha que você mudou o código TypeScript. Se você adicionou seasonId no schema.ts, mas o banco foi criado antes dessa mudança, a estrutura antiga continua lá. O Drizzle precisa de um "push" ou uma migration para atualizar o banco físico.
+
+Qual dessas opções (DBeaver ou comando push) parece mais fácil para você tentar agora?
+
+~/workspace$ # Se você usa drizzle-kit push (mais rápido para dev)
+
+npx drizzle-kit push
+
+No config path provided, using default 'drizzle.config.ts'
+
+Reading config file '/home/runner/workspace/drizzle.config.ts'
+
+Using 'pg' driver for database querying
+
+[⣷] Pulling schema from database...
+
+error: SSL/TLS required
+
+    at /home/runner/workspace/node_modules/pg-pool/index.js:45:11
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+    at async Object.query (/home/runner/workspace/node_modules/drizzle-kit/bin.cjs:80601:26)
+
+    at async fromDatabase2 (/home/runner/workspace/node_modules/drizzle-kit/bin.cjs:19253:25) {
+
+  length: 37,
+
+  severity: 'FATAL',
+
+  code: '28000',
+
+  detail: undefined,
+
+  hint: undefined,
+
+  position: undefined,
+
+  internalPosition: undefined,
+
+  internalQuery: undefined,
+
+  where: undefined,
+
+  schema: undefined,
+
+  table: undefined,
+
+  column: undefined,
+
+  dataType: undefined,
+
+  constraint: undefined,
+
+  file: undefined,
+
+  line: undefined,
+
+  routine: undefined
+
+}
+
+Esse erro acontece porque o PostgreSQL do Render exige conexões seguras (SSL/TLS), e o Drizzle Kit, por padrão, tenta conectar sem SSL.
+
+Para resolver isso, você precisa ajustar o seu arquivo drizzle.config.ts ou a sua string de conexão para forçar o uso de SSL.
+
+1. Ajuste no drizzle.config.ts
+Abra o arquivo drizzle.config.ts na raiz do seu projeto e adicione a configuração de SSL dentro de dbCredentials. Ele deve ficar parecido com isso:
+
+TypeScript
+import { defineConfig } from 'drizzle-kit';
+
+export default defineConfig({
+  schema: './db/schema.ts', // ajuste para o seu caminho
+  out: './drizzle',
+  dialect: 'postgresql',
+  dbCredentials: {
+    url: process.env.DATABASE_URL!,
+    ssl: true, // <--- ADICIONE ESTA LINHA
+  },
+});
+Se você estiver usando uma versão do Drizzle que utiliza as propriedades separadas (host, user, etc), use:
+
+TypeScript
+    ssl: { rejectUnauthorized: false },
+2. Ajuste na String de Conexão (Variável de Ambiente)
+Se você estiver passando a URL diretamente via terminal ou .env, adicione o parâmetro sslmode=require no final da URL:
+
+Bash
+DATABASE_URL=postgresql://user:password@hostname/dbname?sslmode=require
+3. Tente o comando novamente
+Após salvar o arquivo com ssl: true, rode novamente:
+
+Bash
+npx drizzle-kit push
+O que o Drizzle vai fazer agora:
+
+Ele vai conseguir "pular o muro" do SSL do Render.
+
+Ele vai ler seu schema.ts.
+
+Ele vai notar que no banco do Render não existe a coluna season_id.
+
+Ele vai te perguntar: "Do you want to apply these changes?" (Você deseja aplicar estas mudanças?).
+
+Digite Yes.
+
+Isso vai criar as colunas faltantes e o seu erro de "Import PDF" no Render deve sumir imediatamente.
+
+Dica extra: Se o comando push ainda der erro de SSL mesmo com o config alterado, tente rodar assim para garantir que ele pegue o .env correto: npx dotenv -e .env -- drizzle-kit push (caso tenha o pacote dotenv-cli instalado).
+
+Conseguiu alterar o drizzle.config.ts? Se precisar, me mande o conteúdo dele que eu ajusto para você.
+
+ESTÁ ESTÁ O ARQUIVO
+
+
+
+import { defineConfig } from "drizzle-kit";
+
+
+
+if (!process.env.DATABASE_URL) {
+
+  throw new Error("DATABASE_URL, ensure the database is provisioned");
+
+}
+
+
+
+export default defineConfig({
+
+  out: "./migrations",
+
+  schema: "./shared/schema.ts",
+
+  dialect: "postgresql",
+
+  dbCredentials: {
+
+    url: process.env.DATABASE_URL,
+
+  },
+
+});
+
+Para resolver o erro de SSL, você precisa atualizar o objeto dbCredentials. No plano Free do Render, o certificado é auto-assinado, por isso precisamos usar a configuração rejectUnauthorized: false.
+
+Substitua o conteúdo do seu arquivo por este:
+
+TypeScript
+import { defineConfig } from "drizzle-kit";
+
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL, ensure the database is provisioned");
+}
+
+export default defineConfig({
+  out: "./migrations",
+  schema: "./shared/schema.ts",
+  dialect: "postgresql",
+  dbCredentials: {
+    url: process.env.DATABASE_URL,
+    // O Render exige SSL. rejectUnauthorized: false permite a conexão
+    // mesmo com certificados auto-assinados comuns em nuvem.
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
+});
+Próximos Passos:
+Salve o arquivo com a alteração acima.
+
+No terminal, certifique-se de que a variável DATABASE_URL está carregada (ou use a string direta se estiver em ambiente seguro).
+
+Execute novamente o comando:
+
+Bash
+npx drizzle-kit push
+O Drizzle agora vai mostrar uma lista de mudanças (como "Add column season_id to table study_weeks").
+
+Confirme com Yes.
+
+O que observar:
+Como você está no plano Free, se o comando demorar para responder, pode ser que a conexão tenha "dormido". Se isso acontecer, basta rodar o comando uma segunda vez.
+
+Após o Drizzle confirmar que o schema está sincronizado ("Statements executed"), volte ao seu painel do Render e tente importar o PDF novamente. O erro deve ter desaparecido.
+
+Deseja que eu verifique se falta mais alguma coluna no seu schema que possa causar erro no futuro?
+
+Analise quantas tabelas e colunas tem no schema e gere um create table e um arquivo de migration com todas as tabelas
+
+Com base na análise do arquivo schema.ts fornecido, aqui está o resumo da estrutura do banco de dados e o script SQL completo para criação das tabelas (Migration).
+
+📊 Análise da Estrutura
+Total de Tabelas: 55 tabelas.
+
+Complexidade: Alta. O sistema cobre autenticação, votação eletrônica, conteúdo (devocionais, eventos), gamificação (estilo Duolingo com XP, corações, ofensiva), e gestão administrativa.
+
+Relacionamentos: Uso extensivo de Chaves Estrangeiras (Foreign Keys) ligando quase tudo à tabela users e seasons.
+
+Restrições: Várias restrições de unicidade (UNIQUE) compostas para garantir integridade (ex: um voto por pessoa por cargo na eleição).
+
+📝 Arquivo de Migration (SQL)
+Aqui está o script SQL compatível com PostgreSQL para gerar toda a estrutura. A ordem de criação foi ajustada para respeitar as dependências (Foreign Keys).
+
+SQL
+-- 1. Tabela de Usuários (Base para quase tudo)
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    full_name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    has_password BOOLEAN NOT NULL DEFAULT false,
+    photo_url TEXT,
+    birthdate TEXT,
+    is_admin BOOLEAN NOT NULL DEFAULT false,
+    is_member BOOLEAN NOT NULL DEFAULT true,
+    active_member BOOLEAN NOT NULL DEFAULT true,
+    secretaria TEXT
+);
+
+-- 2. Tabelas Auxiliares de Sistema/Autenticação
+CREATE TABLE IF NOT EXISTS verification_codes (
+    id SERIAL PRIMARY KEY,
+    email TEXT NOT NULL,
+    code TEXT NOT NULL,
+    expires_at TIMESTAMP NOT NULL,
+    is_password_reset BOOLEAN NOT NULL DEFAULT false,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS push_subscriptions (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    endpoint TEXT NOT NULL,
+    p256dh TEXT NOT NULL,
+    auth TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    last_used TIMESTAMP,
+    UNIQUE(user_id, endpoint)
+);
+
+CREATE TABLE IF NOT EXISTS anonymous_push_subscriptions (
+    id SERIAL PRIMARY KEY,
+    endpoint TEXT NOT NULL UNIQUE,
+    p256dh TEXT NOT NULL,
+    auth TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    last_used TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS notifications (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    type TEXT NOT NULL,
+    title TEXT NOT NULL,
+    body TEXT NOT NULL,
+    data TEXT,
+    read BOOLEAN NOT NULL DEFAULT false,
+    read_at TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS audit_logs (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    action TEXT NOT NULL,
+    resource TEXT NOT NULL,
+    resource_id INTEGER,
+    details TEXT,
+    ip_address TEXT,
+    user_agent TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+-- 3. Módulo de Eleições
+CREATE TABLE IF NOT EXISTS positions (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS elections (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    is_active BOOLEAN NOT NULL DEFAULT true,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    closed_at TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS candidates (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    position_id INTEGER NOT NULL REFERENCES positions(id),
+    election_id INTEGER NOT NULL REFERENCES elections(id),
+    UNIQUE(user_id, position_id, election_id)
+);
+
+CREATE TABLE IF NOT EXISTS election_winners (
+    id SERIAL PRIMARY KEY,
+    election_id INTEGER NOT NULL REFERENCES elections(id),
+    position_id INTEGER NOT NULL REFERENCES positions(id),
+    candidate_id INTEGER NOT NULL REFERENCES candidates(id),
+    won_at_scrutiny INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS election_positions (
+    id SERIAL PRIMARY KEY,
+    election_id INTEGER NOT NULL REFERENCES elections(id),
+    position_id INTEGER NOT NULL REFERENCES positions(id),
+    order_index INTEGER NOT NULL,
+    status TEXT NOT NULL DEFAULT 'pending',
+    current_scrutiny INTEGER NOT NULL DEFAULT 1,
+    opened_at TIMESTAMP,
+    closed_at TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS election_attendance (
+    id SERIAL PRIMARY KEY,
+    election_id INTEGER NOT NULL REFERENCES elections(id),
+    election_position_id INTEGER REFERENCES election_positions(id),
+    member_id INTEGER NOT NULL REFERENCES users(id),
+    is_present BOOLEAN NOT NULL DEFAULT false,
+    marked_at TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS votes (
+    id SERIAL PRIMARY KEY,
+    voter_id INTEGER NOT NULL REFERENCES users(id),
+    candidate_id INTEGER NOT NULL REFERENCES candidates(id),
+    position_id INTEGER NOT NULL REFERENCES positions(id),
+    election_id INTEGER NOT NULL REFERENCES elections(id),
+    scrutiny_round INTEGER NOT NULL DEFAULT 1,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS pdf_verifications (
+    id SERIAL PRIMARY KEY,
+    election_id INTEGER NOT NULL REFERENCES elections(id),
+    verification_hash TEXT NOT NULL UNIQUE,
+    president_name TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+-- 4. Módulo de Conteúdo e Social
+CREATE TABLE IF NOT EXISTS devotionals (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    verse TEXT NOT NULL,
+    verse_reference TEXT NOT NULL,
+    content TEXT NOT NULL,
+    content_html TEXT,
+    summary TEXT,
+    prayer TEXT,
+    image_url TEXT,
+    author TEXT,
+    published_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    scheduled_at TIMESTAMP,
+    is_published BOOLEAN NOT NULL DEFAULT true,
+    is_featured BOOLEAN NOT NULL DEFAULT false,
+    created_by INTEGER REFERENCES users(id),
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS site_events (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    description TEXT,
+    short_description TEXT,
+    image_url TEXT,
+    start_date TEXT NOT NULL,
+    end_date TEXT,
+    time TEXT,
+    location TEXT,
+    location_url TEXT,
+    price TEXT,
+    registration_url TEXT,
+    category TEXT NOT NULL DEFAULT 'geral',
+    is_published BOOLEAN NOT NULL DEFAULT true,
+    is_featured BOOLEAN NOT NULL DEFAULT false,
+    is_all_day BOOLEAN NOT NULL DEFAULT false,
+    created_by INTEGER REFERENCES users(id),
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS instagram_posts (
+    id SERIAL PRIMARY KEY,
+    instagram_id TEXT,
+    caption TEXT,
+    image_url TEXT NOT NULL,
+    video_url TEXT,
+    media_type TEXT DEFAULT 'IMAGE',
+    permalink TEXT,
+    likes_count INTEGER DEFAULT 0,
+    comments_count INTEGER DEFAULT 0,
+    posted_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    is_active BOOLEAN NOT NULL DEFAULT true,
+    is_featured_banner BOOLEAN NOT NULL DEFAULT false,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS prayer_requests (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    whatsapp TEXT,
+    category TEXT NOT NULL DEFAULT 'outros',
+    request TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'pending',
+    notes TEXT,
+    prayed_by INTEGER REFERENCES users(id),
+    prayed_at TIMESTAMP,
+    is_moderated BOOLEAN NOT NULL DEFAULT false,
+    moderated_by INTEGER REFERENCES users(id),
+    moderated_at TIMESTAMP,
+    is_approved BOOLEAN NOT NULL DEFAULT false,
+    approved_at TIMESTAMP,
+    approved_by INTEGER REFERENCES users(id),
+    in_prayer_count INTEGER NOT NULL DEFAULT 0,
+    has_profanity BOOLEAN DEFAULT false,
+    has_hate_speech BOOLEAN DEFAULT false,
+    has_sexual_content BOOLEAN DEFAULT false,
+    moderation_details TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS prayer_reactions (
+    id SERIAL PRIMARY KEY,
+    prayer_request_id INTEGER NOT NULL REFERENCES prayer_requests(id) ON DELETE CASCADE,
+    session_id TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(prayer_request_id, session_id)
+);
+
+CREATE TABLE IF NOT EXISTS devotional_comments (
+    id SERIAL PRIMARY KEY,
+    devotional_id INTEGER NOT NULL REFERENCES devotionals(id) ON DELETE CASCADE,
+    user_id INTEGER REFERENCES users(id),
+    name TEXT NOT NULL,
+    content TEXT NOT NULL,
+    is_approved BOOLEAN NOT NULL DEFAULT false,
+    approved_by INTEGER REFERENCES users(id),
+    approved_at TIMESTAMP,
+    is_highlighted BOOLEAN NOT NULL DEFAULT false,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS banners (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    subtitle TEXT,
+    image_url TEXT,
+    background_color TEXT,
+    link_url TEXT,
+    link_text TEXT,
+    order_index INTEGER NOT NULL DEFAULT 0,
+    is_active BOOLEAN NOT NULL DEFAULT true,
+    starts_at TIMESTAMP,
+    ends_at TIMESTAMP,
+    created_by INTEGER REFERENCES users(id),
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS board_members (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    name TEXT NOT NULL,
+    position TEXT NOT NULL,
+    photo_url TEXT,
+    instagram TEXT,
+    whatsapp TEXT,
+    bio TEXT,
+    term_start TEXT NOT NULL,
+    term_end TEXT NOT NULL,
+    order_index INTEGER NOT NULL DEFAULT 0,
+    is_current BOOLEAN NOT NULL DEFAULT true,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS site_content (
+    id SERIAL PRIMARY KEY,
+    page TEXT NOT NULL,
+    section TEXT NOT NULL,
+    title TEXT,
+    content TEXT,
+    image_url TEXT,
+    metadata TEXT,
+    updated_by INTEGER REFERENCES users(id),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(page, section)
+);
+
+-- 5. Módulo de Estudos e Gamificação
+CREATE TABLE IF NOT EXISTS study_profiles (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    total_xp INTEGER NOT NULL DEFAULT 0,
+    current_level INTEGER NOT NULL DEFAULT 1,
+    current_streak INTEGER NOT NULL DEFAULT 0,
+    longest_streak INTEGER NOT NULL DEFAULT 0,
+    hearts INTEGER NOT NULL DEFAULT 5,
+    hearts_max INTEGER NOT NULL DEFAULT 5,
+    hearts_refill_at TIMESTAMP,
+    last_activity_date TEXT,
+    daily_goal_minutes INTEGER NOT NULL DEFAULT 10,
+    timezone TEXT NOT NULL DEFAULT 'America/Sao_Paulo',
+    weekly_lessons_goal INTEGER NOT NULL DEFAULT 1,
+    weekly_verses_goal INTEGER NOT NULL DEFAULT 7,
+    weekly_missions_goal INTEGER NOT NULL DEFAULT 3,
+    weekly_devotionals_goal INTEGER NOT NULL DEFAULT 1,
+    verses_read_for_recovery INTEGER NOT NULL DEFAULT 0,
+    crystals INTEGER NOT NULL DEFAULT 0,
+    streak_freezes_available INTEGER NOT NULL DEFAULT 0,
+    last_lesson_completed_at TIMESTAMP,
+    streak_warning_day INTEGER NOT NULL DEFAULT 0,
+    total_streak_freeze_used INTEGER NOT NULL DEFAULT 0,
+    consecutive_perfect_lessons INTEGER NOT NULL DEFAULT 0,
+    consecutive_lessons INTEGER NOT NULL DEFAULT 0,
+    total_lessons_completed_today INTEGER NOT NULL DEFAULT 0,
+    last_lesson_date TEXT,
+    weekly_lessons_streak INTEGER NOT NULL DEFAULT 0,
+    daily_verse_read_date TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id)
+);
+
+CREATE TABLE IF NOT EXISTS crystal_transactions (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    amount INTEGER NOT NULL,
+    type TEXT NOT NULL,
+    description TEXT,
+    balance_after INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS streak_freeze_history (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    used_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    streak_saved INTEGER NOT NULL,
+    crystals_cost INTEGER NOT NULL DEFAULT 0,
+    was_automatic BOOLEAN NOT NULL DEFAULT false
+);
+
+CREATE TABLE IF NOT EXISTS streak_milestones (
+    id SERIAL PRIMARY KEY,
+    days INTEGER NOT NULL UNIQUE,
+    crystal_reward INTEGER NOT NULL,
+    xp_reward INTEGER NOT NULL DEFAULT 0,
+    title TEXT NOT NULL,
+    description TEXT,
+    badge_icon TEXT
+);
+
+CREATE TABLE IF NOT EXISTS user_streak_milestones (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    milestone_id INTEGER NOT NULL REFERENCES streak_milestones(id),
+    achieved_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    crystals_awarded INTEGER NOT NULL,
+    xp_awarded INTEGER NOT NULL DEFAULT 0,
+    UNIQUE(user_id, milestone_id)
+);
+
+CREATE TABLE IF NOT EXISTS seasons (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    subtitle TEXT,
+    description TEXT,
+    cover_image_url TEXT,
+    pdf_url TEXT,
+    ai_extracted_title TEXT,
+    status TEXT NOT NULL DEFAULT 'draft',
+    total_lessons INTEGER NOT NULL DEFAULT 0,
+    published_at TIMESTAMP,
+    starts_at TIMESTAMP,
+    ends_at TIMESTAMP,
+    created_by INTEGER REFERENCES users(id),
+    ai_metadata TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS season_final_challenges (
+    id SERIAL PRIMARY KEY,
+    season_id INTEGER NOT NULL REFERENCES seasons(id),
+    title TEXT NOT NULL DEFAULT 'Desafio Final',
+    description TEXT,
+    questions TEXT NOT NULL,
+    question_count INTEGER NOT NULL DEFAULT 15,
+    time_limit_seconds INTEGER NOT NULL DEFAULT 150,
+    xp_reward INTEGER NOT NULL DEFAULT 100,
+    perfect_xp_bonus INTEGER NOT NULL DEFAULT 50,
+    is_active BOOLEAN NOT NULL DEFAULT true,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS user_final_challenge_progress (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    challenge_id INTEGER NOT NULL REFERENCES season_final_challenges(id),
+    started_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    completed_at TIMESTAMP,
+    time_spent_seconds INTEGER,
+    correct_answers INTEGER NOT NULL DEFAULT 0,
+    total_questions INTEGER NOT NULL DEFAULT 15,
+    xp_earned INTEGER NOT NULL DEFAULT 0,
+    is_perfect BOOLEAN NOT NULL DEFAULT false,
+    is_completed BOOLEAN NOT NULL DEFAULT false,
+    answers_given TEXT,
+    challenge_token TEXT,
+    UNIQUE(user_id, challenge_id)
+);
+
+CREATE TABLE IF NOT EXISTS user_season_progress (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    season_id INTEGER NOT NULL REFERENCES seasons(id),
+    lessons_completed INTEGER NOT NULL DEFAULT 0,
+    total_lessons INTEGER NOT NULL DEFAULT 0,
+    bonus_lessons_completed INTEGER NOT NULL DEFAULT 0,
+    xp_earned INTEGER NOT NULL DEFAULT 0,
+    correct_answers INTEGER NOT NULL DEFAULT 0,
+    total_answers INTEGER NOT NULL DEFAULT 0,
+    hearts_lost INTEGER NOT NULL DEFAULT 0,
+    final_challenge_completed BOOLEAN NOT NULL DEFAULT false,
+    final_challenge_perfect BOOLEAN NOT NULL DEFAULT false,
+    is_mastered BOOLEAN NOT NULL DEFAULT false,
+    started_at TIMESTAMP,
+    completed_at TIMESTAMP,
+    last_activity_at TIMESTAMP,
+    UNIQUE(user_id, season_id)
+);
+
+CREATE TABLE IF NOT EXISTS season_rankings (
+    id SERIAL PRIMARY KEY,
+    season_id INTEGER NOT NULL REFERENCES seasons(id),
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    xp_earned INTEGER NOT NULL DEFAULT 0,
+    lessons_completed INTEGER NOT NULL DEFAULT 0,
+    correct_percentage INTEGER NOT NULL DEFAULT 0,
+    final_challenge_score INTEGER,
+    is_mastered BOOLEAN NOT NULL DEFAULT false,
+    rank_position INTEGER,
+    is_winner BOOLEAN NOT NULL DEFAULT false,
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(season_id, user_id)
+);
+
+CREATE TABLE IF NOT EXISTS weekly_goal_progress (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    week_key TEXT NOT NULL,
+    lessons_completed INTEGER NOT NULL DEFAULT 0,
+    verses_read INTEGER NOT NULL DEFAULT 0,
+    missions_completed INTEGER NOT NULL DEFAULT 0,
+    devotionals_read INTEGER NOT NULL DEFAULT 0,
+    is_goal_met BOOLEAN NOT NULL DEFAULT false,
+    xp_bonus INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id, week_key)
+);
+
+CREATE TABLE IF NOT EXISTS weekly_practice_bonus (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    week_key TEXT NOT NULL,
+    bonus_xp INTEGER NOT NULL DEFAULT 50,
+    earned_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id, week_key)
+);
+
+CREATE TABLE IF NOT EXISTS achievements (
+    id SERIAL PRIMARY KEY,
+    code TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    description TEXT,
+    icon TEXT,
+    custom_icon_url TEXT,
+    xp_reward INTEGER NOT NULL DEFAULT 0,
+    category TEXT NOT NULL,
+    requirement TEXT,
+    is_secret BOOLEAN NOT NULL DEFAULT false,
+    season_id INTEGER REFERENCES seasons(id)
+);
+
+CREATE TABLE IF NOT EXISTS achievement_xp (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    achievement_id INTEGER NOT NULL REFERENCES achievements(id),
+    xp_reward INTEGER NOT NULL,
+    earned_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id, achievement_id)
+);
+
+CREATE TABLE IF NOT EXISTS daily_mission_xp (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    mission_date TEXT NOT NULL,
+    mission_xp INTEGER NOT NULL,
+    bonus_xp INTEGER NOT NULL DEFAULT 0,
+    earned_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id, mission_date)
+);
+
+CREATE TABLE IF NOT EXISTS devotional_readings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    devotional_id INTEGER NOT NULL REFERENCES devotionals(id),
+    read_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    week_key TEXT,
+    UNIQUE(user_id, devotional_id)
+);
+
+CREATE TABLE IF NOT EXISTS study_weeks (
+    id SERIAL PRIMARY KEY,
+    week_number INTEGER NOT NULL,
+    year INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    description TEXT,
+    pdf_url TEXT,
+    status TEXT NOT NULL DEFAULT 'draft',
+    published_at TIMESTAMP,
+    created_by INTEGER REFERENCES users(id),
+    ai_metadata TEXT,
+    season_id INTEGER REFERENCES seasons(id),
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(week_number, year)
+);
+
+CREATE TABLE IF NOT EXISTS study_lessons (
+    id SERIAL PRIMARY KEY,
+    study_week_id INTEGER REFERENCES study_weeks(id),
+    season_id INTEGER REFERENCES seasons(id),
+    order_index INTEGER NOT NULL,
+    lesson_number INTEGER,
+    title TEXT NOT NULL,
+    type TEXT NOT NULL DEFAULT 'study',
+    description TEXT,
+    xp_reward INTEGER NOT NULL DEFAULT 10,
+    estimated_minutes INTEGER NOT NULL DEFAULT 5,
+    icon TEXT,
+    is_bonus BOOLEAN NOT NULL DEFAULT false,
+    has_bonus_quiz BOOLEAN NOT NULL DEFAULT false,
+    bonus_quiz_questions TEXT,
+    is_locked BOOLEAN NOT NULL DEFAULT true,
+    is_released BOOLEAN NOT NULL DEFAULT false,
+    release_date TIMESTAMP,
+    unlock_date TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS study_units (
+    id SERIAL PRIMARY KEY,
+    lesson_id INTEGER NOT NULL REFERENCES study_lessons(id),
+    order_index INTEGER NOT NULL,
+    type TEXT NOT NULL,
+    content TEXT NOT NULL,
+    xp_value INTEGER NOT NULL DEFAULT 2,
+    stage TEXT NOT NULL DEFAULT 'estude',
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS bible_verses (
+    id SERIAL PRIMARY KEY,
+    reference TEXT NOT NULL,
+    text TEXT NOT NULL,
+    reflection TEXT,
+    category TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS user_lesson_progress (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    lesson_id INTEGER NOT NULL REFERENCES study_lessons(id),
+    status TEXT NOT NULL DEFAULT 'locked',
+    started_at TIMESTAMP,
+    completed_at TIMESTAMP,
+    xp_earned INTEGER NOT NULL DEFAULT 0,
+    mistakes_count INTEGER NOT NULL DEFAULT 0,
+    perfect_score BOOLEAN NOT NULL DEFAULT false,
+    time_spent_seconds INTEGER NOT NULL DEFAULT 0,
+    UNIQUE(user_id, lesson_id)
+);
+
+CREATE TABLE IF NOT EXISTS user_unit_progress (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    unit_id INTEGER NOT NULL REFERENCES study_units(id),
+    is_completed BOOLEAN NOT NULL DEFAULT false,
+    answer_given TEXT,
+    is_correct BOOLEAN,
+    attempts INTEGER NOT NULL DEFAULT 0,
+    completed_at TIMESTAMP,
+    UNIQUE(user_id, unit_id)
+);
+
+CREATE TABLE IF NOT EXISTS verse_readings (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    verse_id INTEGER NOT NULL REFERENCES bible_verses(id),
+    read_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    hearts_recovered INTEGER NOT NULL DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS xp_transactions (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    amount INTEGER NOT NULL,
+    source TEXT NOT NULL,
+    source_id INTEGER,
+    description TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS daily_activity (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    activity_date TEXT NOT NULL,
+    minutes_studied INTEGER NOT NULL DEFAULT 0,
+    lessons_completed INTEGER NOT NULL DEFAULT 0,
+    xp_earned INTEGER NOT NULL DEFAULT 0,
+    streak_maintained BOOLEAN NOT NULL DEFAULT false,
+    UNIQUE(user_id, activity_date)
+);
+
+CREATE TABLE IF NOT EXISTS user_achievements (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    achievement_id INTEGER NOT NULL REFERENCES achievements(id),
+    unlocked_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id, achievement_id)
+);
+
+CREATE TABLE IF NOT EXISTS leaderboard_entries (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    period_type TEXT NOT NULL,
+    period_key TEXT NOT NULL,
+    xp_earned INTEGER NOT NULL DEFAULT 0,
+    rank_position INTEGER,
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id, period_type, period_key)
+);
+
+CREATE TABLE IF NOT EXISTS daily_missions (
+    id SERIAL PRIMARY KEY,
+    type TEXT NOT NULL,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL,
+    icon TEXT NOT NULL,
+    xp_reward INTEGER NOT NULL DEFAULT 10,
+    requirement TEXT,
+    is_active BOOLEAN NOT NULL DEFAULT true
+);
+
+CREATE TABLE IF NOT EXISTS user_daily_missions (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    mission_id INTEGER NOT NULL REFERENCES daily_missions(id),
+    assigned_date TEXT NOT NULL,
+    completed BOOLEAN NOT NULL DEFAULT false,
+    completed_at TIMESTAMP,
+    xp_awarded INTEGER NOT NULL DEFAULT 0,
+    UNIQUE(user_id, mission_id, assigned_date)
+);
+
+CREATE TABLE IF NOT EXISTS daily_mission_content (
+    id SERIAL PRIMARY KEY,
+    content_date TEXT NOT NULL UNIQUE,
+    daily_verse TEXT,
+    bible_fact TEXT,
+    bible_character TEXT,
+    daily_theme TEXT,
+    timed_quiz_questions TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS weekly_practice (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    week_id INTEGER NOT NULL REFERENCES study_weeks(id),
+    stars_earned INTEGER NOT NULL DEFAULT 0,
+    correct_answers INTEGER NOT NULL DEFAULT 0,
+    total_questions INTEGER NOT NULL DEFAULT 10,
+    time_spent_seconds INTEGER NOT NULL DEFAULT 0,
+    completed_within_time BOOLEAN NOT NULL DEFAULT false,
+    is_mastered BOOLEAN NOT NULL DEFAULT false,
+    completed_at TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    UNIQUE(user_id, week_id)
+);
+
+CREATE TABLE IF NOT EXISTS practice_questions (
+    id SERIAL PRIMARY KEY,
+    week_id INTEGER NOT NULL REFERENCES study_weeks(id),
+    type TEXT NOT NULL,
+    content TEXT NOT NULL,
+    order_index INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+Analise esse log. Porque está dando erro no deploy no render? Estou usando render + neon bd
+
+
+
+2025-12-22T15:02:53.887959814Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+
+2025-12-22T15:02:53.887964234Z     at Function._load (node:internal/modules/cjs/loader:1211:37)
+
+2025-12-22T15:02:53.887967914Z     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+
+2025-12-22T15:02:53.887971094Z     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+
+2025-12-22T15:02:53.887973914Z     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+2025-12-22T15:02:53.887978654Z     at node:internal/main/run_main_module:36:49 {
+
+2025-12-22T15:02:53.887981464Z   code: 'MODULE_NOT_FOUND',
+
+2025-12-22T15:02:53.887984794Z   requireStack: []
+
+2025-12-22T15:02:53.887987054Z }
+
+2025-12-22T15:02:53.887989164Z 
+
+2025-12-22T15:02:53.887991374Z Node.js v22.16.0
+
+2025-12-22T15:03:03.763588773Z ==> Exited with status 1
+
+2025-12-22T15:03:03.780794021Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+
+2025-12-22T15:03:09.613301971Z ==> Running 'node ./dist/index.cjs'
+
+2025-12-22T15:03:09.906006498Z node:internal/modules/cjs/loader:1404
+
+2025-12-22T15:03:09.906028028Z   throw err;
+
+2025-12-22T15:03:09.906030738Z   ^
+
+2025-12-22T15:03:09.906032948Z 
+
+2025-12-22T15:03:09.906035748Z Error: Cannot find module '/opt/render/project/src/dist/index.cjs'
+
+2025-12-22T15:03:09.906038578Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+
+2025-12-22T15:03:09.906040698Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+
+2025-12-22T15:03:09.906042908Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+
+2025-12-22T15:03:09.906045698Z     at Function._load (node:internal/modules/cjs/loader:1211:37)
+
+2025-12-22T15:03:09.906047948Z     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+
+2025-12-22T15:03:09.906050108Z     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+
+2025-12-22T15:03:09.906053348Z     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+
+2025-12-22T15:03:09.906056648Z     at node:internal/main/run_main_module:36:49 {
+
+2025-12-22T15:03:09.906059598Z   code: 'MODULE_NOT_FOUND',
+
+2025-12-22T15:03:09.906062459Z   requireStack: []
+
+2025-12-22T15:03:09.906064648Z }
+
+2025-12-22T15:03:09.906066699Z 
+
+2025-12-22T15:03:09.906068819Z Node.js v22.16.0
+
+2025-12-22T15:07:25.493353606Z Deploy cancelled
+
+2025-12-22T15:10:13.673874392Z ==> Deploying...
+
+2025-12-22T15:11:19.21786526Z ==> Running 'node ./dist/index.js'
+
+2025-12-22T15:11:39.529333608Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+
+2025-12-22T15:11:39.529799565Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+
+2025-12-22T15:11:39.53063259Z [Push] Web Push configured successfully
+
+2025-12-22T15:11:39.622837678Z Initializing PostgreSQL database connection...
+
+2025-12-22T15:11:39.731419944Z Database initialization error: Error: getaddrinfo ENOTFOUND base
+
+2025-12-22T15:11:39.731443204Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+
+2025-12-22T15:11:39.731447334Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-12-22T15:11:39.731450234Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+
+2025-12-22T15:11:39.731453084Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+
+2025-12-22T15:11:39.731455954Z   errno: -3008,
+
+2025-12-22T15:11:39.731459424Z   code: 'ENOTFOUND',
+
+2025-12-22T15:11:39.731463284Z   syscall: 'getaddrinfo',
+
+2025-12-22T15:11:39.731466074Z   hostname: 'base'
+
+2025-12-22T15:11:39.731468864Z }
+
+2025-12-22T15:11:39.732070355Z node:internal/process/promises:394
+
+2025-12-22T15:11:39.732090445Z     triggerUncaughtException(err, true /* fromPromise */);
+
+2025-12-22T15:11:39.732111895Z     ^
+
+2025-12-22T15:11:39.732117415Z 
+
+2025-12-22T15:11:39.732122605Z Error: getaddrinfo ENOTFOUND base
+
+2025-12-22T15:11:39.732128416Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+
+2025-12-22T15:11:39.732134456Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-12-22T15:11:39.732139306Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+
+2025-12-22T15:11:39.732144516Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+
+2025-12-22T15:11:39.732150536Z   errno: -3008,
+
+2025-12-22T15:11:39.732156666Z   code: 'ENOTFOUND',
+
+2025-12-22T15:11:39.732162596Z   syscall: 'getaddrinfo',
+
+2025-12-22T15:11:39.732167946Z   hostname: 'base'
+
+2025-12-22T15:11:39.732172956Z }
+
+2025-12-22T15:11:39.732177906Z 
+
+2025-12-22T15:11:39.732182946Z Node.js v22.16.0
+
+2025-12-22T15:11:40.325457914Z ==> No open ports detected, continuing to scan...
+
+2025-12-22T15:11:40.426113278Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+
+2025-12-22T15:11:41.726814914Z ==> Exited with status 1
+
+2025-12-22T15:11:41.743903313Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+
+2025-12-22T15:11:47.020980873Z ==> Running 'node ./dist/index.js'
+
+2025-12-22T15:12:06.322074121Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+
+2025-12-22T15:12:06.322689392Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+
+2025-12-22T15:12:06.323723349Z [Push] Web Push configured successfully
+
+2025-12-22T15:12:06.417728238Z Initializing PostgreSQL database connection...
+
+2025-12-22T15:12:06.431715844Z Database initialization error: Error: getaddrinfo ENOTFOUND base
+
+2025-12-22T15:12:06.431748144Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+
+2025-12-22T15:12:06.431751864Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-12-22T15:12:06.431754524Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+
+2025-12-22T15:12:06.431756944Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+
+2025-12-22T15:12:06.431759564Z   errno: -3008,
+
+2025-12-22T15:12:06.431762264Z   code: 'ENOTFOUND',
+
+2025-12-22T15:12:06.431765315Z   syscall: 'getaddrinfo',
+
+2025-12-22T15:12:06.431767805Z   hostname: 'base'
+
+2025-12-22T15:12:06.431770235Z }
+
+2025-12-22T15:12:06.5178909Z node:internal/process/promises:394
+
+2025-12-22T15:12:06.517921621Z     triggerUncaughtException(err, true /* fromPromise */);
+
+2025-12-22T15:12:06.517926331Z     ^
+
+2025-12-22T15:12:06.517929241Z 
+
+2025-12-22T15:12:06.517932521Z Error: getaddrinfo ENOTFOUND base
+
+2025-12-22T15:12:06.517936421Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+
+2025-12-22T15:12:06.517940011Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+2025-12-22T15:12:06.517948211Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+
+2025-12-22T15:12:06.517951471Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+
+2025-12-22T15:12:06.517954521Z   errno: -3008,
+
+2025-12-22T15:12:06.517958621Z   code: 'ENOTFOUND',
+
+2025-12-22T15:12:06.517962632Z   syscall: 'getaddrinfo',
+
+2025-12-22T15:12:06.517965962Z   hostname: 'base'
+
+2025-12-22T15:12:06.517969642Z }
+
+2025-12-22T15:12:06.517972382Z 
+
+2025-12-22T15:12:06.517974442Z Node.js v22.16.0
+
+O erro principal que está impedindo o seu deploy de funcionar é este aqui:
+
+Plaintext
+Error: getaddrinfo ENOTFOUND base
+Isso indica um erro de configuração na conexão com o Banco de Dados.
+
+Aqui está a análise detalhada do problema e como corrigir:
+
+1. O Diagnóstico: hostname: 'base'
+O erro ENOTFOUND acontece quando o Node.js tenta encontrar o endereço IP de um servidor e falha (erro de DNS). No seu log, ele diz explicitamente: hostname: 'base'.
+
+Isso significa que o seu código está tentando conectar a um banco de dados cujo endereço (host) é literalmente a palavra "base". Como você está usando o Neon, o endereço deveria ser algo parecido com: ep-cool-frog-123456.us-east-2.aws.neon.tech.
+
+2. Causas Prováveis
+Existem duas razões principais para o host estar aparecendo como "base":
+
+Variável de Ambiente Incorreta no Render: Você pode ter configurado a variável DATABASE_URL no painel do Render com um valor errado, ou copiou um template que tinha a palavra "base" como exemplo.
+
+Fallback no Código: O seu código pode estar tentando ler a variável de ambiente, não encontrando (ou falhando ao ler), e caindo em um valor padrão (default) que foi deixado como "base".
+
+Exemplo de código problemático: const host = process.env.DB_HOST || 'base';
+
+3. Como Resolver
+Siga estes passos no painel do Render:
+
+Vá até o seu projeto no Dashboard do Render.
+
+Clique na aba Environment (Variáveis de Ambiente).
+
+Verifique a variável DATABASE_URL (ou DB_HOST, dependendo de como seu código foi feito).
+
+O problema: Ela deve estar vazia, inexistente, ou escrita incorretamente.
+
+Vá até o painel do Neon, copie a "Connection String" (do tipo postgres://...).
+
+Cole a string correta no Render.
+
+Ela deve se parecer com: postgres://usuario:senha@ep-xyz.neon.tech/neondb?sslmode=require
+
+Salve as alterações. O Render fará um novo deploy automaticamente.
+
+Nota sobre SSL: Como você está usando Neon + Render, certifique-se de que sua string de conexão termina com ?sslmode=require, pois o Neon exige conexão segura.
+
+Observação sobre o erro anterior (MODULE_NOT_FOUND)
+No início do log, houve um erro Cannot find module '/opt/render/project/src/dist/index.cjs'. Isso aconteceu porque o comando de inicialização estava tentando rodar um arquivo .cjs, mas parece que seu build gerou um .js. No segundo log (15:11), o comando mudou para node ./dist/index.js e o erro de módulo sumiu, dando lugar ao erro de banco de dados. Portanto, o Start Command atual parece estar correto, foque apenas na correção da variável de ambiente do banco de dados.
+
+Eu já verifique o DATABASE_URL está correto no render psql 'postgresql://neondb_owner:npg_9zmiSjAlyZD7@ep-calm-pine-a48r3ksy-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
+
+Entendi. A sua DATABASE_URL parece correta (é uma URL válida do Neon com pooler), mas o erro ENOTFOUND base prova que o seu código NÃO está usando essa URL no momento da conexão.
+
+O erro é explícito: o Node.js está tentando conectar em um host chamado literalmente "base".
+
+Isso acontece, com 99% de certeza, porque em algum lugar do seu código de conexão com o banco (provavelmente onde você inicializa o Drizzle ou o Postgres), existe um valor padrão (fallback) incorreto.
+
+Siga estes passos para corrigir:
+
+1. Procure a palavra "base" no seu código
+Abra o seu VS Code e faça uma busca global (Ctrl + Shift + F) pela string 'base' (com as aspas).
+
+Você deve encontrar algo parecido com isto:
+
+TypeScript
+// Exemplo de código problemático
+const host = process.env.DB_HOST || 'base'; 
+// OU
+const connectionString = process.env.DATABASE_URL ?? 'base';
+Se encontrar, remova esse 'base'. O código deve lançar um erro se a variável não existir, e não tentar conectar em um lugar inexistente.
+
+2. Verifique a função initializeDatabase
+O log de erro aponta exatamente onde o problema ocorre: at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+
+Vá no seu arquivo fonte original (provavelmente src/index.ts ou src/db.ts) e procure a função initializeDatabase.
+
+Ela deve estar parecida com isso (corrigida):
+
+TypeScript
+// COMO DEVE ESTAR (usando a URL completa)
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL, // <--- Tem que usar a variável inteira
+  ssl: true,
+});
+
+// COMO PROVAVELMENTE ESTÁ (o erro)
+const pool = new Pool({
+  host: process.env.DB_HOST || 'base', // <--- AQUI ESTÁ O ERRO
+  user: process.env.DB_USER,
+  // ...
+});
+Se você estiver usando a montagem manual da conexão (host, user, password separados), mude para usar o connectionString direto, pois o Neon fornece a URL completa.
+
+3. Debug Rápido (Adicione Logs)
+Para ter certeza absoluta do que está acontecendo no Render, adicione estes console.log logo antes de inicializar o banco de dados no seu código:
+
+TypeScript
+console.log("--- DEBUG CONEXÃO ---");
+console.log("DATABASE_URL existe?", !!process.env.DATABASE_URL);
+// Não logue a URL inteira por segurança, mas logue os primeiros caracteres para ver se não é 'base'
+console.log("Início da URL:", process.env.DATABASE_URL?.substring(0, 15));
+console.log("---------------------");
+Faça o commit e push. Se no log aparecer Início da URL: undefined ou algo diferente de postgresql://, saberemos que a variável não foi lida corretamente.
+
+4. Dica sobre o Neon + Drizzle
+Como você está usando a URL do Pooler do Neon (-pooler no endereço), certifique-se de que seu código Drizzle está configurado para isso.
+
+Se estiver usando drizzle-orm/node-postgres:
+
+TypeScript
+import { drizzle } from "drizzle-orm/node-postgres";
+import pg from "pg";
+
+const pool = new pg.Pool({
+  connectionString: process.env.DATABASE_URL,
+  // O ssl: true é necessário, mas a string do Neon já tem ?sslmode=require
+  // Se der erro de SSL, descomente a linha abaixo:
+  // ssl: { rejectUnauthorized: false } 
+});
+
+export const db = drizzle(pool);
+Resumo: O erro não é no Render nem no Neon, é no seu código TypeScript que tem a palavra 'base' escrita como fallback de conexão. Encontre e remova.

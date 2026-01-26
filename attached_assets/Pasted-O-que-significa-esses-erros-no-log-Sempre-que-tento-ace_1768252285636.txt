@@ -1,0 +1,102 @@
+O que significa esses erros no log? Sempre que tento acessar o perfil de outro membro dá "Perfil não encontrado"
+
+2026-01-12T20:26:55.943974738Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:26:55.94475371Z 8:26:55 PM [express] GET /api/study/member/11 500 in 40ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:26:57.191269132Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:26:57.191325954Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:26:57.191330864Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:26:57.191335374Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:26:57.191339005Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:26:57.191342545Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:26:57.191346625Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:26:57.191350085Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:26:57.191354055Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:26:57.191954683Z 8:26:57 PM [express] GET /api/study/member/11 500 in 37ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:26:59.085493271Z [WebSocket] Authenticated connection: h1MSGguc274HWTJrAAA0, userId: 1
+2026-01-12T20:26:59.086328395Z [WebSocket] Client connected: h1MSGguc274HWTJrAAA0, authenticated: true
+2026-01-12T20:26:59.281514424Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:26:59.281666559Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:26:59.576628557Z [WebSocket] Client disconnected: h1MSGguc274HWTJrAAA0, reason: client namespace disconnect
+2026-01-12T20:26:59.580456439Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:26:59.580469349Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:26:59.62220723Z 8:26:59 PM [express] GET /api/study/member/2/cards 304 in 4ms :: []
+2026-01-12T20:26:59.69535648Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:26:59.69537439Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:26:59.69537847Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:26:59.695381911Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:26:59.695384871Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:26:59.695387651Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:26:59.695390801Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:26:59.695393851Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:26:59.695397351Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:26:59.696030049Z 8:26:59 PM [express] GET /api/study/member/2 500 in 85ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:00.937871215Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:00.937917506Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:00.937921346Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:00.937924336Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:00.937926786Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:00.937929296Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:00.937932516Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:00.937934906Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:00.937937766Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:00.93873917Z 8:27:00 PM [express] GET /api/study/member/2 500 in 38ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:02.585486679Z [WebSocket] Authenticated connection: 214uyngBRJcTpQNGAAA2, userId: 1
+2026-01-12T20:27:02.585675574Z [WebSocket] Client connected: 214uyngBRJcTpQNGAAA2, authenticated: true
+2026-01-12T20:27:02.799023505Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:27:02.799157839Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:27:02.876406139Z [WebSocket] Client disconnected: 214uyngBRJcTpQNGAAA2, reason: client namespace disconnect
+2026-01-12T20:27:02.879915801Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:27:02.880020214Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:27:02.939332229Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:02.93935189Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:02.93935524Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:02.93935853Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:02.93936068Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:02.93936301Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:02.93936582Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:02.93936798Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:02.93937077Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:02.94005715Z 8:27:02 PM [express] GET /api/study/member/2 500 in 36ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:04.194681819Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:04.19470413Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:04.19470759Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:04.19471012Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:04.19472323Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:04.194725101Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:04.194727551Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:04.194729281Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:04.194731951Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:04.195468382Z 8:27:04 PM [express] GET /api/study/member/2 500 in 39ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:12.38808454Z [WebSocket] Authenticated connection: S2pZhC4dlpsQnzN1AAA4, userId: 1
+2026-01-12T20:27:12.388325087Z [WebSocket] Client connected: S2pZhC4dlpsQnzN1AAA4, authenticated: true
+2026-01-12T20:27:12.574163936Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:27:12.574589168Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:27:16.877329506Z 8:27:16 PM [express] GET /api/study/leaderboard 304 in 19ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:27:17.240592828Z [WebSocket] Client disconnected: S2pZhC4dlpsQnzN1AAA4, reason: client namespace disconnect
+2026-01-12T20:27:17.244446901Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:27:17.244535393Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:27:17.31103952Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:17.31106027Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:17.311065471Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:17.311070911Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:17.311075151Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:17.311079241Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:17.311084281Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:17.311088961Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:17.311093861Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:17.3117187Z 8:27:17 PM [express] GET /api/study/member/2 500 in 36ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:18.577009171Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:18.577029541Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:18.577034811Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:18.577040142Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:18.577044332Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:18.577049112Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:18.577060902Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:18.577063602Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:18.577067263Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:18.577640309Z 8:27:18 PM [express] GET /api/study/member/2 500 in 38ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:22.67584013Z [WebSocket] Authenticated connection: DVJaSyIHkHI4GborAAA6, userId: 1
+2026-01-12T20:27:22.676194271Z [WebSocket] Client connected: DVJaSyIHkHI4GborAAA6, authenticated: true
+2026-01-12T20:27:22.880519321Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:27:22.880685686Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:27:27.246357564Z 8:27:27 PM [express] GET /api/study/leaderboard 304 in 14ms :: {"periodType":"weekly","periodKey":"2…

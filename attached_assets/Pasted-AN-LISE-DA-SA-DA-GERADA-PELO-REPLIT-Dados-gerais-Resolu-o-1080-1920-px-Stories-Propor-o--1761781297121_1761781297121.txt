@@ -1,0 +1,100 @@
+ANÁLISE DA SAÍDA GERADA PELO REPLIT
+⚙️ Dados gerais
+
+Resolução: 1080 × 1920 px (Stories)
+
+Proporção correta: ✅ 9:16
+
+Alinhamento vertical do título e blocos: ❌ deslocado para baixo
+
+Escala de título: muito grande — sobrepõe os cards.
+
+Margens gerais: topo e base insuficientes.
+
+Cards: proporção correta, mas o y offset está incorreto (começando cedo demais).
+
+Logo e versículo: alinhamento correto, porém o espaçamento entre eles e o corpo está reduzido.
+
+🔍 COMPARATIVO ENTRE MODELO ORIGINAL × RESULTADO DO REPLIT
+Elemento	Modelo Correto	Replit Gerado	Ajuste Necessário
+Título “ELEIÇÃO 2025”	Centralizado a 260 px do topo, altura total ≈ 150 px	Muito grande, sobreposto aos cards	Reduzir tamanho da fonte de 150 → 110 px e mover para y: 230
+Fonte “2025” (Outline)	Peso leve, espaçado	Espessura excessiva	Usar stroke leve (2 px) e espaçamento 20 px
+Cards	Começam a y: 530	Começam a y: 410	Aumentar margem superior total em +120 px
+Espaço entre linhas (cards)	220 px verticais	160 px	Aumentar y_step → 260 px
+Foto circular	110 px	130 px (grande e central)	Reduzir diâmetro → 110 px, mover 20 px mais à direita e 10 px para baixo
+Topo do 1º card (Presidente)	y: 530	y: 410	Corrigir y inicial → 530
+Texto interno (nomes/votos)	Centralizado verticalmente dentro do card	Muito próximo da borda superior	Adicionar padding-top: 20 px
+Versículo	y ≈ 1650, espaçamento antes do logo ≈ 80 px	Muito próximo da base	Mover para y: 1620, logo para y: 1750
+Logo	Largura 270 px	~180 px	Ampliar largura → 270 px, centralizar horizontalmente (x: 540)
+🎨 AJUSTES DE DESIGN PARA O REPLIT (valores em px)
+🧱 Layout geral
+{
+  "canvas": { "w": 1080, "h": 1920, "bg": "#F9F9F9" },
+  "title": {
+    "text": "ELEIÇÃO 2025",
+    "x": 540,
+    "y": 230,
+    "font": "Montserrat-ExtraBold",
+    "size": 110,
+    "color": "#000000",
+    "align": "center",
+    "letterSpacing": 20
+  },
+  "cards": [
+    { "cargo": "PRESIDENTE", "x": 150, "y": 530 },
+    { "cargo": "VICE-PRESIDENTE", "x": 590, "y": 530 },
+    { "cargo": "1º SECRETÁRIO", "x": 150, "y": 790 },
+    { "cargo": "2º SECRETÁRIO", "x": 590, "y": 790 },
+    { "cargo": "TESOUREIRO", "x": 370, "y": 1070 }
+  ],
+  "card_style": {
+    "w": 440,
+    "h": 160,
+    "radius": 20,
+    "bg": "#FFFFFF",
+    "header_h": 50,
+    "header_bg": "#FFD84B",
+    "shadow": "0 3 6 rgba(0,0,0,0.1)"
+  },
+  "photo": {
+    "d": 110,
+    "offset_x": 310,
+    "offset_y": 100,
+    "border": 4,
+    "border_color": "#FFFFFF",
+    "shadow": "0 3 6 rgba(0,0,0,0.25)"
+  },
+  "text_style": {
+    "cargo": { "font": "Poppins-SemiBold", "size": 26, "color": "#1C1C1C" },
+    "nome": { "font": "Poppins-Bold", "size": 22, "color": "#1C1C1C" },
+    "votos": { "font": "Poppins-Regular", "size": 18, "color": "#4A4A4A" }
+  },
+  "verse": {
+    "text": "Porque de Deus somos cooperadores; lavoura de Deus, edifício de Deus sois vós. - 1 Coríntios 3:9",
+    "x": 540,
+    "y": 1620,
+    "font": "Lato-Italic",
+    "size": 22,
+    "color": "#3A3A3A",
+    "align": "center"
+  },
+  "logo": {
+    "x": 540,
+    "y": 1750,
+    "w": 270,
+    "h": 90,
+    "align": "center"
+  }
+}
+
+💡 Sugestões de aperfeiçoamento visual
+
+Espaço “invisível” no topo: adicione 80 px antes do título (melhora o equilíbrio).
+
+2025 Outline: use contorno fino (stroke: 3px #000) e fill: transparent — não negrito.
+
+Foto dos eleitos: ligeiro deslocamento à direita e 5 px de sombra para dar realismo.
+
+Cards: manter altura 160 px, mas aumentar o espaçamento vertical total (entre linhas) para 260 px.
+
+Logo: ampliar proporção e garantir centralização absoluta.

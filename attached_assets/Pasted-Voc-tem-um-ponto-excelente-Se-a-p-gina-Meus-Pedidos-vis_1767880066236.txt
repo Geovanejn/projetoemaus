@@ -1,0 +1,34 @@
+Você tem um ponto excelente. Se a página "Meus Pedidos" visualmente não mostra fotos, não faz sentido ela demorar 1.5s.
+Isso levanta duas hipóteses técnicas muito fortes que vão além das imagens:
+ * O "Peso Invisível" (Over-fetching Oculto): Mesmo que o Frontend não mostre a imagem, o Backend pode estar buscando SELECT * FROM shop_items ao listar os pedidos. Se a tabela de itens tem o Base64, o banco de dados está lendo megabytes de texto inutilmente para a memória do servidor, causando a lentidão, mesmo que esse dado seja descartado depois.
+ * O Problema N+1 (Muitas Consultas): O código pode estar fazendo algo errado como: "Busca os pedidos (1 query). Para cada pedido, busca os itens (10 queries). Para cada item, busca detalhes...". Isso mata a performance.
+Aqui está o prompt ajustado e técnico para investigar e corrigir a raiz do problema em ambas as frentes.
+Prompt de Otimização de Performance (Shop & Orders Analysis)
+Diagnóstico Atual:
+ * Loja (/items, /featured): Latência crítica de 7s+. Causa confirmada: Payload excessivo com imagens em Base64 (banner_image_data).
+ * Meus Pedidos (/my-orders): Latência alta de 1.5s. O Frontend desta página não exibe imagens, apenas texto (lista de itens, status, valores). Portanto, a lentidão indica um problema de query mal otimizada ou tráfego de dados "invisível".
+Plano de Ação Técnica:
+PARTE 1: Correção da Loja (Lazy Loading)
+Otimize a listagem principal para não trafegar Base64.
+ * Crie a Rota de Proxy: GET /api/shop/images/:itemId/:type que retorna o Buffer da imagem com cache headers.
+ * Refatore /api/shop/items:
+   * Use projeção (.select()) para trazer apenas metadados textuais (id, name, price, category).
+   * Remova estritamente banner_image_data.
+   * Retorne a URL do proxy (/api/shop/images/...) para que o frontend carregue a imagem via Lazy Loading.
+PARTE 2: Correção de "Meus Pedidos" (Análise Profunda)
+A rota /api/shop/my-orders está lenta (1.5s) injustificadamente. Investigue e corrija:
+ * Elimine o "Over-fetching" Oculto:
+   * Verifique a query (Drizzle/Prisma). Ao fazer o join de shop_orders -> shop_order_items -> shop_items, você provavelmente está trazendo o objeto shop_item completo.
+   * Ação: Altere a query para selecionar exclusivamente shop_items.name e shop_items.price.
+   * Garanta que o campo banner_image_data (que é pesado) NÃO esteja sendo trafegado do banco para a memória do servidor, mesmo que não seja usado no JSON final.
+ * Verifique Problema N+1:
+   * Analise se estamos iterando sobre os pedidos e fazendo chamadas ao banco dentro de um loop (await dentro de map ou for).
+   * Ação: Se houver loops, substitua por uma única query com JOIN ou with: { items: { with: { shopItem: ... } } } otimizado.
+ * Cálculo de Status (Pix/Pagamento):
+   * Verifique se a rota está consultando APIs externas (ex: Status do Pix) em tempo real para cada pedido da lista.
+   * Ação: Se estiver, remova essa verificação da listagem. O status deve ser atualizado via Webhook ou apenas quando o usuário clica no detalhe do pedido, nunca na lista geral.
+Objetivo Final:
+ * Loja: Carregamento instantâneo + Imagens Lazy.
+ * Meus Pedidos: Carregamento em < 100ms (apenas texto leve).
+O que esperar:
+Esse prompt obriga o Replit a olhar para o que está acontecendo "por baixo do capô". Se ele estiver trazendo a foto "escondida" na query do banco, ele vai parar. Se ele estiver fazendo 50 perguntas pro banco em vez de 1, ele vai corrigir.

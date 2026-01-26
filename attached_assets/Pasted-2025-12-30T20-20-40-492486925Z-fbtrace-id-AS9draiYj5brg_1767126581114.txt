@@ -1,0 +1,100 @@
+2025-12-30T20:20:40.492486925Z     fbtrace_id: 'AS9draiYj5brgPYI1VBLV3F'
+2025-12-30T20:20:40.492491085Z   }
+2025-12-30T20:20:40.492491735Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2025-12-30T20:20:40.492508045Z }
+2025-12-30T20:20:44.991764181Z [Daily Verse Scheduler] Running initial check at startup...
+2025-12-30T20:20:44.991888484Z [Daily Verse Scheduler] Sending daily verse notification...
+2025-12-30T20:20:45.691473295Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2025-12-30T20:20:45.691504176Z [Daily Verse Scheduler] Using AI-generated verse
+2025-12-30T20:20:45.952999689Z [Push] Sending "Versiculo do Dia" to 8 active members
+2025-12-30T20:20:46.995866847Z [Recovery Verses Scheduler] Running initial check at startup...
+2025-12-30T20:20:46.99603939Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2025-12-30T20:20:47.327506787Z ==> Your service is live 🎉
+2025-12-30T20:20:47.390493685Z ==> 
+2025-12-30T20:20:47.420333023Z ==> ///////////////////////////////////////////////////////////
+2025-12-30T20:20:47.451176552Z ==> 
+2025-12-30T20:20:47.482282351Z ==> Available at your primary URL https://umpemaus.com.br + 2 more domains
+2025-12-30T20:20:47.506316053Z [Notifications] Daily verse notification: 0 members sent, 2 anonymous visitors sent
+2025-12-30T20:20:47.506607579Z [Daily Verse Scheduler] Sent: Gálatas 6:9 (ARA)
+2025-12-30T20:20:47.512877779Z ==> 
+2025-12-30T20:20:47.542271598Z ==> ///////////////////////////////////////////////////////////
+2025-12-30T20:20:50.097314617Z [Daily Missions Scheduler] Running initial check at startup...
+2025-12-30T20:20:50.097622814Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2025-12-30T20:20:50.168495721Z [Daily Missions Scheduler] Content already generated for today (2025-12-30)
+2025-12-30T20:20:50.413598255Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2025-12-30T20:20:50.413710207Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2025-12-30T20:20:50.413715967Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2025-12-30T20:20:50.413721837Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2025-12-30T20:20:50.413779439Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2025-12-30T20:20:50.413788289Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2025-12-30T20:20:50.413790549Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2025-12-30T20:20:50.413795109Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2025-12-30T20:20:50.4138634Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2025-12-30T20:20:50.4138667Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2025-12-30T20:20:50.41386889Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2025-12-30T20:20:50.41387104Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2025-12-30T20:20:50.413891511Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2025-12-30T20:20:50.413905661Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2025-12-30T20:20:50.413909491Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2025-12-30T20:20:50.413913341Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2025-12-30T20:20:50.413938752Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2025-12-30T20:20:50.414002253Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2025-12-30T20:20:50.414007833Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2025-12-30T20:20:50.414016113Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2025-12-30T20:20:50.414020093Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2025-12-30T20:20:50.414027124Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2025-12-30T20:20:50.414030674Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:16 (ARA)
+2025-12-30T20:20:50.414045004Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2025-12-30T20:20:50.414091675Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2025-12-30T20:20:50.414096365Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:39 (ARA)
+2025-12-30T20:20:50.414104275Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2025-12-30T20:20:50.414107855Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2025-12-30T20:20:50.414111645Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2025-12-30T20:20:50.414115635Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2025-12-30T20:20:50.414120606Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2025-12-30T20:20:50.414122855Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2025-12-30
+2025-12-30T20:23:57.160633215Z 8:23:57 PM [express] GET /api/espiritualidade/devotionals/2 304 in 620ms :: {"id":2,"title":"Vivendo…
+2025-12-30T20:23:59.048903005Z 8:23:59 PM [express] GET /api/espiritualidade/devotionals/2 304 in 195ms :: {"id":2,"title":"Vivendo…
+2025-12-30T20:24:25.953706978Z [Upload Audio] Accepted file: HINO DA UCP, mimetype: application/octet-stream
+2025-12-30T20:24:27.090677385Z [Upload] Audio converted to Base64: 3680.7KB
+2025-12-30T20:24:27.999791195Z 8:24:27 PM [express] POST /api/upload/audio 200 in 1845ms :: {"url":"data:application/octet-stream;b…
+2025-12-30T20:25:03.99150603Z 8:25:03 PM [express] PUT /api/espiritualidade/devotionals/2 200 in 4199ms :: {"id":2,"title":"Vivend…
+2025-12-30T20:25:05.102392757Z 8:25:05 PM [express] GET /api/espiritualidade/devotionals/2 200 in 811ms :: {"id":2,"title":"Vivendo…
+2025-12-30T20:25:06.999239176Z 8:25:06 PM [express] GET /api/espiritualidade/devotionals 200 in 2701ms :: [{"id":3,"title":"Natal -…
+2025-12-30T20:25:13.474560507Z 8:25:13 PM [express] GET /api/notifications/unread-count 304 in 92ms :: {"count":0}
+2025-12-30T20:25:13.558979605Z 8:25:13 PM [express] GET /api/site-content/quem-somos 304 in 548ms :: {"timeline":{"title":"","conte…
+2025-12-30T20:25:13.625054793Z 8:25:13 PM [express] GET /api/notifications 304 in 536ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T20:25:15.692880041Z 8:25:15 PM [express] GET /api/site/highlights 200 in 2391ms :: {"devotional":{"id":3,"title":"Natal …
+2025-12-30T20:25:32.665114631Z 8:25:32 PM [express] GET /api/study/devotional-status/2 200 in 74ms :: {"isRead":true}
+2025-12-30T20:25:35.490666886Z 8:25:35 PM [express] GET /api/site/devotionals/2 200 in 2602ms :: {"id":2,"title":"Vivendo para a Gl…
+2025-12-30T20:25:35.69468687Z 8:25:35 PM [express] GET /api/site/devotionals 200 in 2902ms :: [{"id":3,"title":"Natal - Qual seu s…
+2025-12-30T20:25:35.696267352Z 8:25:35 PM [express] GET /api/site/devotionals/2/comments 200 in 203ms :: [{"id":3,"devotionalId":2,…
+2025-12-30T20:25:46.935065981Z ==> Detected service running on port 10000
+2025-12-30T20:25:47.03693999Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-12-30T20:25:59.293968527Z 8:25:59 PM [express] GET /api/espiritualidade/stats 304 in 758ms :: {"devotionals":{"total":3,"publi…
+2025-12-30T20:26:03.094929836Z 8:26:03 PM [express] GET /api/espiritualidade/devotionals 304 in 1693ms :: [{"id":3,"title":"Natal -…
+2025-12-30T20:26:06.802148804Z 8:26:06 PM [express] GET /api/espiritualidade/devotionals/2 304 in 803ms :: {"id":2,"title":"Vivendo…
+2025-12-30T20:26:24.789358102Z 8:26:24 PM [express] PUT /api/espiritualidade/devotionals/2 200 in 2303ms :: {"id":2,"title":"Vivend…
+2025-12-30T20:26:25.991627952Z 8:26:25 PM [express] GET /api/espiritualidade/devotionals/2 200 in 640ms :: {"id":2,"title":"Vivendo…
+2025-12-30T20:26:27.095070846Z 8:26:27 PM [express] GET /api/espiritualidade/devotionals 200 in 2030ms :: [{"id":3,"title":"Natal -…
+2025-12-30T20:26:31.626737072Z 8:26:31 PM [express] GET /api/notifications/unread-count 304 in 533ms :: {"count":0}
+2025-12-30T20:26:31.631209005Z 8:26:31 PM [express] GET /api/site-content/quem-somos 304 in 562ms :: {"timeline":{"title":"","conte…
+2025-12-30T20:26:31.695339853Z 8:26:31 PM [express] GET /api/notifications 304 in 599ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T20:26:33.292165881Z 8:26:33 PM [express] GET /api/site/highlights 200 in 1941ms :: {"devotional":{"id":3,"title":"Natal …
+2025-12-30T20:26:53.499114026Z 8:26:53 PM [express] GET /api/espiritualidade/stats 304 in 1134ms :: {"devotionals":{"total":3,"publ…
+2025-12-30T20:26:57.09400554Z 8:26:57 PM [express] GET /api/espiritualidade/devotionals 304 in 1783ms :: [{"id":3,"title":"Natal -…
+2025-12-30T20:27:05.102343113Z 8:27:05 PM [express] GET /api/espiritualidade/devotionals/2 304 in 839ms :: {"id":2,"title":"Vivendo…
+2025-12-30T20:27:20.590876658Z 8:27:20 PM [express] PUT /api/espiritualidade/devotionals/2 200 in 1906ms :: {"id":2,"title":"Vivend…
+2025-12-30T20:27:22.002491943Z 8:27:22 PM [express] GET /api/espiritualidade/devotionals/2 200 in 1156ms :: {"id":2,"title":"Vivend…
+2025-12-30T20:27:23.504348535Z 8:27:23 PM [express] GET /api/espiritualidade/devotionals 200 in 2632ms :: [{"id":3,"title":"Natal -…
+2025-12-30T20:27:26.810100343Z 8:27:26 PM [express] GET /api/notifications/unread-count 304 in 69ms :: {"count":0}
+2025-12-30T20:27:26.938634615Z 8:27:26 PM [express] GET /api/notifications 304 in 194ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T20:27:27.262835016Z 8:27:27 PM [express] GET /api/site-content/quem-somos 304 in 509ms :: {"timeline":{"title":"","conte…
+2025-12-30T20:27:28.995765323Z 8:27:28 PM [express] GET /api/site/highlights 200 in 2048ms :: {"devotional":{"id":3,"title":"Natal …
+2025-12-30T20:27:46.616936992Z 8:27:46 PM [express] GET /api/study/devotional-status/1 304 in 68ms :: {"isRead":false}
+2025-12-30T20:27:46.746148237Z 8:27:46 PM [express] GET /api/site/devotionals/1 304 in 199ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T20:27:48.09010118Z 8:27:48 PM [express] GET /api/site/devotionals/1/comments 304 in 700ms :: [{"id":2,"devotionalId":1,…
+2025-12-30T20:27:48.897465565Z 8:27:48 PM [express] GET /api/site/devotionals 200 in 1542ms :: [{"id":3,"title":"Natal - Qual seu s…
+2025-12-30T20:27:57.741978473Z 8:27:57 PM [express] GET /api/study/devotional-status/2 304 in 71ms :: {"isRead":true}
+2025-12-30T20:27:59.493397852Z 8:27:59 PM [express] GET /api/site/devotionals/2 200 in 1022ms :: {"id":2,"title":"Vivendo para a Gl…
+2025-12-30T20:28:00.087544193Z 8:28:00 PM [express] GET /api/site/devotionals/2/comments 304 in 69ms :: [{"id":3,"devotionalId":2,"…

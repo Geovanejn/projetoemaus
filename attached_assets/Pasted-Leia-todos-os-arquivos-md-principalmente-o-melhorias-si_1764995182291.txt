@@ -1,0 +1,355 @@
+Leia todos os arquivos md, principalmente o melhorias_sistema.md, vamos implementar melhorias. 1 - Nos paineis de marketing e espiritualidade, deve ter a opção de fazer upload de foto, tanto em cadastro de evento, cadastro de membro da diretoria (nesse caso deve puxar a foto que o membro já tem cadastrado automaticamente ao seleciona-lo), nas devocionais, não deve pedir url, e sim abrir pra fazer upload de imagem, veja como funciona o upload de imagem do sistema de cadastro de membro, claro que a imagem pra evento tem um formato diferente do cadastro de membro, bem como tambem para devocional que é outro formato, mas analise o cadastro de membro para entender minha solicitação. 2 - Na criação de evento, colocar integração com google maps, bem como no evento publicado na pagina publica tambem e não pedir url. 3 - Ao cadastrar evento está acontecendo um erro, coloquei um evento teste dia 06/12/2025, ele deu como evento passado ao cadastrar, sendo que hoje é 05/12/2025. Ao clicar em sincronizar Google Agenda ele dá erro na url. 4 - No mural de oração, ao clicar em "Estou orando" ele deve mudar de cor e ficar fixo, pra sinalizar que o usuario já clicou (como acontece nas redes sociais). 5 - Sistema de comentario e pedido de oração, deve ter moderaçao automatica, se passar pelo filtro de moderação (palavras chulas, de baixo calão, xingamentos, palavrão, sexuais) ele é publicado automaticamente. 6 - Os membros da espiritualidade continua com o gerenciamento de poder excluir os comentarios e/ou pedido de oração. 7 - Quem fez o pedido de oração tambem pode exclui-lo. 8 - Ao receber novo comentario ou pedido de oração os membros da espiritualidade recebem email e notificação. 9 - Criar todo um sistema de notificação, todos os membros cadastrados recebem notificação e email quando houver nova publicação de devocional, evento, pedido de oração. Não membros que não são cadastrados no sistema aparecer opção do proprio navegador de enviar notificações. 10 - Sistema de notificações proprias para o DeoGlory, usuarios cadastrados recebem notificação e email quando uma nova temporada for criada, quando uma lição for liberada, evento bonus (ex, mês da reforma, mês de missões, natal, páscoa), quando uma temporada acabar (enviar um relatorio do seu desempenho), lembrar da lição do dia (aqui somente notificação via navegador), notificação se tiver 2 dias, 3 dias, 5 dias, 7 dias, 10 dias, 15 dias sem acessar o DeoGlory (somente notificação via navegador), notificações estilo DuoLingo, Notificação via navegador do versiculo do dia (todos os dias às 07:00). Documente tudo isso de forma detalhada em um novo arquivo chamado melhorias_sistema.md antes de realizar qualquer tarefa, chame o arquiteto.
+
+33 minutes ago
+
+Documented system improvements
+Vou ler todos os arquivos MD para entender o contexto do sistema e depois documentar as melhorias solicitadas.
+
+
+Show 10 more
+
+Opened docs/ROADMAP_COMPLETO_UMP_EMAUS.md
+
+Undertook system understanding and documentation
+Let me read more documentation files and understand the current upload system better.
+
+
+Show 2 more
+
+Searched for "How does the photo upload system work for member registration? Find the upload components and API routes for profile photo/image upload"
+
+Documented upload system improvements
+Let me search for more details about the existing upload and event creation systems.
+
+
+Executed rg -n 'upload|multer' server | head -n 50
+
+Searched for "How does event creation work? Find the event form, siteEvents table schema, and event API routes for creating and updating events"
+
+Planned system improvements documentation
+Agora tenho informações suficientes para criar a documentação detalhada. Vou criar o arquivo melhorias_sistema.md com todas as melhorias solicitadas.
+
+
+Show 5 more
+
+Opened docs/melhorias_sistema.md
+
+Decided on documentation review
+I have all the context I need. Based on my persisted information, the next step is to have the architect review the improvement documentation before implementation.
+
+
+Evaluated system improvement documentation and roadmap
+
+Planned implementation phases
+The architect reviewed the documentation and provided valuable feedback. The overall architecture is sound, with some recommendations:
+
+Move auto-moderation before "Estou Orando" to protect engagement surfaces
+Run Google Maps integration alongside image uploads (both touch Marketing forms)
+Tighten backend validation (file upload limits, mime types, rate limiting)
+Hash visitorId for privacy
+Use idempotent operations for prayer toggling
+Let me create a task list for implementing these improvements in the recommended order:
+
+
+Analyzed event date bug
+I've created a task list with all 10 improvements. Let me start working on the first critical task - fixing the event date bug.
+
+
+Show 5 more
+
+Opened client/src/pages/site/agenda.tsx
+
+Decided on timezone handling fix (6 seconds)
+I found the bug! In server/storage.ts line 1368, the code uses new Date().toISOString().split('T')[0] which returns the date in UTC. When it's late evening in Brazil (UTC-3), the UTC date is already the next day, causing the comparison to be off by one day.
+
+Let me fix this by creating a utility function that properly handles the Brazil timezone:
+
+
+Show 2 more
+
+Executed rg -n 'toISOString.*split.*T.*0|timezone|Sao_Paulo' server
+
+Decided on date utility function
+I can see the issue is in multiple files. Let me create a utility function and fix all occurrences:
+
+
+Show 2 more
+
+Created server/utils/date.ts
+
+Updated storage utility usage
+Now let me update the storage.ts to use this utility function:
+
+
+Show 2 more
+
+Edited server/storage.ts
+
+Decided on date fixing strategy
+Now let me fix the two occurrences in storage.ts:
+
+
+Show 3 more
+
+Edited server/storage.ts
+
+Decided on storage and routes fixes
+Now let me fix the occurrences in routes.ts:
+
+
+Show 2 more
+
+Edited server/routes.ts
+
+Analyzed date comparison errors
+Now let me find and fix all the date comparison issues in routes.ts:
+
+
+Show 5 more
+
+Edited server/routes.ts
+
+Checked google-calendar for issues
+All fixes in routes.ts are done. Let me also check and fix google-calendar.ts if needed:
+
+
+Opened server/utils/google-calendar.ts
+
+Decided on date bug resolution (4 seconds)
+The google-calendar.ts uses toISOString().split('T')[0] but only for calculating end dates from event dates (not for comparing with "today"), so that's fine.
+
+Let me restart the workflow and verify the changes:
+
+
+Show 2 more
+Checked console and system logs
+
+Decided on task completion
+The application is running successfully. The date bug fix is complete. Let me call the architect to review the changes:
+
+
+Fixed event date timezone bug
+
+Decided on task progression
+The architect approved the fix. Let me mark the first task as complete and move to the next one:
+
+
+Fix date timezone issue for events
+
+Show 5 more
+
+Opened client/src/components/ImageCropDialog.tsx
+
+Planned image upload system continuation
+I'm continuing work on Task 2: Image Upload System. Based on my persisted notes, I need to:
+
+Update ImageCropDialog.tsx to support variable aspect ratios
+Create the reusable ImageUpload component
+Let me start by reading the current ImageCropDialog and then create the updated version along with the new ImageUpload component.
+
+
+Opened client/src/components/ImageCropDialog.tsx
+
+Decided on component updates (4 seconds)
+Now I'll update the ImageCropDialog to support variable aspect ratios and create the new ImageUpload component. Let me first check the upload route in the server:
+
+
+Show 6 more
+
+Executed rg -i -n 'image|photo|avatar' server/routes.ts | head -n 50
+
+Found user photo upload endpoint
+Let me search for the photo/image upload endpoint:
+
+
+Show 8 more
+
+Executed rg -B 3 -A 25 -n handleCropComplete client/src/pages/admin.tsx
+
+Checked for existing image upload infrastructure
+Now I understand the current setup - images are currently stored as base64 data URLs directly. According to the spec, I need to create an /api/upload endpoint that saves to a folder and returns a URL. Let me check if there's already such an endpoint or if I need to create one:
+
+
+Executed rg -i -n 'app\.post.*upload' server/routes.ts
+
+Decided on data storage approach (4 seconds)
+Based on my research, the current system stores images as base64 data URLs directly. I'll create the components to work with this approach since it's simpler and already working. Let me now implement:
+
+Updated ImageCropDialog.tsx - Support variable aspect ratios
+New ImageUpload component - Reusable upload with preview and crop
+
+Edited client/src/components/ImageCropDialog.tsx
+
+Created ImageUpload component
+Now let me create the reusable ImageUpload component:
+
+
+Created client/src/components/ui/image-upload.tsx
+
+Decided on image upload component
+Let me restart the workflow and check for any errors:
+
+
+Show 2 more
+Checked system logs
+
+Planned task completion and next steps
+The application is running successfully. Let me update the task list and continue with Task 3 (Apply Image Upload to Marketing Panel):
+
+
+Searched for marketing panel files
+Now let me find and update the Marketing panel files. Let me search for the event and board member editor components:
+
+
+Show 3 more
+
+Opened client/src/pages/admin/MarketingDiretoriaEditor.tsx
+
+Decided on image upload components
+Now I need to update both editor files to use the ImageUpload component. Let me update the event editor first:
+
+
+Edited client/src/pages/admin/MarketingEventoEditor.tsx
+
+Decided on URL validation logic
+Now let me update the validation schema to accept both URLs and base64 data, and replace the imageUrl input field:
+
+
+Edited client/src/pages/admin/MarketingEventoEditor.tsx
+
+Decided on ImageUpload component replacement
+Now let me replace the imageUrl input with the ImageUpload component:
+
+
+Edited client/src/pages/admin/MarketingEventoEditor.tsx
+
+Decided on ImageUpload integration
+Now let me update the MarketingDiretoriaEditor to use ImageUpload for board member photos:
+
+
+Edited client/src/pages/admin/MarketingDiretoriaEditor.tsx
+
+Reimagined data validation logic
+Now let me update the validation schema and replace the photoUrl field:
+
+
+Edited client/src/pages/admin/MarketingDiretoriaEditor.tsx
+
+Replaced photoUrl with ImageUpload
+Now let me replace the photoUrl input field with ImageUpload:
+
+
+Edited client/src/pages/admin/MarketingDiretoriaEditor.tsx
+
+Decided on workflow restart logic
+Now let me restart the workflow to check for any errors:
+
+
+Show 2 more
+Checked system logs
+
+Decided on next task progression
+The application is running without errors. Let me update the task list and continue with Task 4 (Apply Image Upload to Espiritualidade Panel - Devotionals):
+
+
+Show 6 more
+
+Opened client/src/pages/admin/EspiritualidadeDevocionalEditor.tsx
+
+Planned image upload integration
+Now let me update the devotional editor to use the ImageUpload component:
+
+
+Edited client/src/pages/admin/EspiritualidadeDevocionalEditor.tsx
+
+Decided on state persistence approach
+I need to persist my progress and continue in a new context. Let me save my current state:
+
+
+Show 4 more
+
+Opened client/src/components/ui/image-upload.tsx
+
+Decided on ImageUpload component usage
+I have context from the previous session. I'm working on Task 4 - replacing the imageUrl input in the Espiritualidade Devotional Editor with the ImageUpload component. The import is already in place. I just need to replace the field.
+
+
+Edited client/src/pages/admin/EspiritualidadeDevocionalEditor.tsx
+
+Restarted workflow for review
+Task 4 is now complete. Let me restart the workflow and check for any errors, then call the architect to review tasks 2, 3, and 4 together.
+
+
+Show 2 more
+Checked system logs
+
+Decided on next steps
+The application is running without errors. Let me update the task list and call the architect to review tasks 2, 3, and 4 together.
+
+
+Reviewed image upload system implementation
+
+Integrated image upload component
+
+Decided on image size constraints
+The architect raised an important concern about base64 payload sizes. I need to add compression and size limits to prevent request failures. Let me update the ImageCropDialog to limit image dimensions and quality.
+
+
+Opened client/src/components/ImageCropDialog.tsx
+
+Planned image compression adjustments
+The ImageCropDialog already has some compression, but I should improve it to ensure smaller payloads. Let me update it with more aggressive compression and add a size check.
+
+
+Edited client/src/components/ImageCropDialog.tsx
+
+Decided on image optimization strategy
+Now let me restart the workflow to verify the changes work correctly.
+
+
+Restarted Start application
+
+Decided on task completion status
+
+Create flexible image uploading tool
+
+Add image upload to marketing panel
+
+Add image upload to devotionals
+
+Show 6 more
+
+Opened client/src/pages/admin/MarketingEventoEditor.tsx
+
+Analyzed task list and context
+I'm continuing from a previous context. Let me read the persisted information and understand where I left off.
+
+
+Read task list to understand context
+
+Decided on Maps integration approach
+I'm working on Task 5 - Google Maps Integration. Let me gather the information I need to implement the location picker with autocomplete for events.
+
+
+Opened docs/melhorias_sistema.md
+
+Opened client/src/pages/admin/MarketingEventoEditor.tsx
+
+Decided on Google Maps integration steps
+I can see the current state. The GOOGLE_MAPS_API_KEY is not set up yet. I need to:
+
+Request the Google Maps API key from the user
+Create backend routes for geocoding/autocomplete
+Create a LocationPicker component
+Integrate it into the event editor
+Let me first check if there are any existing maps routes and then request the API key.
+
+
+Executed rg -l 'maps|geocode|autocomplete' server
+
+Executed find . -name 'client/src/components/ui/location*.tsx' -type f -exec stat -c '%Y %n' '{}' ';' | sort -nr | cut -d' ' -f2-
+
+Requested Google Maps API key
+The Google Maps integration hasn't been started yet. I need to request the Google Maps API key from you to enable address autocomplete functionality for events.
+
+Para habilitar a busca de enderecos com autocomplete nos eventos, preciso da chave de API do Google Maps. Voce pode obte-la no Google Cloud Console em APIs e Servicos > Credenciais. Certifique-se de habilitar as APIs: Places API, Geocoding API e Maps JavaScript API.

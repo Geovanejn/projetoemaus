@@ -1,0 +1,48 @@
+Gere um layout moderno, institucional e cristão com o título principal “Eleição 2025/2026”, representando os resultados oficiais da Igreja Presbiteriana Emaús.
+
+O layout deve ser limpo, harmonioso e profissional, adequado para publicação em redes sociais.  
+Crie duas variações automáticas: uma em formato 9:16 (stories/reels) e outra em formato 4:5 (feed do Instagram).
+
+🎨 ESTILO VISUAL:
+- Fundo branco (#FFFFFF) ou cinza muito claro (#F9F9F9)
+- Detalhes e destaques em laranja (#FFA500) e amarelo suave (#FFD166)
+- Textos em cinza-escuro (#333333)
+- Tipografia moderna, sem serifa (como Poppins, Lato ou Montserrat)
+- Design minimalista, com leve sombra nas caixas e bordas arredondadas
+
+📏 FORMATO 9:16 (vertical):
+- Título no topo: “Eleição 2025/2026” em destaque, centralizado
+- Abaixo, 5 cartões verticais, um para cada cargo:
+  1. Presidente  
+  2. Vice-Presidente  
+  3. 1º Secretário  
+  4. 2º Secretário  
+  5. Tesoureiro  
+- Cada cartão deve conter:
+  - Um círculo à esquerda para foto do eleito (imagem substituível)
+  - À direita, textos:
+    - Cargo (laranja/amarelo)
+    - Nome (negrito, preto)
+    - Linha menor abaixo: “[X votos] • Eleito no 1º Escrutínio”
+- Rodapé com o versículo:
+  “Porque de Deus somos cooperadores; lavoura de Deus, edifício de Deus sois vós.”  
+  (1 Coríntios 3:9)
+- Abaixo do versículo, o logotipo da Igreja Presbiteriana Emaús centralizado.
+
+📏 FORMATO 4:5 (retangular para feed):
+- Mesmo conteúdo, porém distribuído horizontalmente:
+  - Cinco blocos horizontais (um por cargo)
+  - Foto circular à esquerda, textos à direita
+  - Fundo cinza-claro dentro de cada bloco
+  - Mesmo versículo e logotipo no rodapé
+
+📄 CAMPOS SUBSTITUÍVEIS (para personalização via código):
+- [cargo]
+- [nome]
+- [votos]
+- [foto_url]
+- [versiculo] → padrão: "Porque de Deus somos cooperadores; lavoura de Deus, edifício de Deus sois vós. (1 Coríntios 3:9)"
+
+💡 DESCRIÇÃO GERAL:
+O design deve transmitir seriedade, espiritualidade e unidade.
+Ideal para gerar automaticamente imagens oficiais de eleição da Igreja Presbiteriana Emaús, em formato de publicação institucional para redes sociais.

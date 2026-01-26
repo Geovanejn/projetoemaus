@@ -1,0 +1,209 @@
+Ajustes Prioritários no Sistema Emaús Vota
+
+
+---
+
+🔹 1. Presença obrigatória antes da votação (prioridade máxima)
+
+Os votos válidos devem considerar somente os membros com presença confirmada.
+
+O sistema deve seguir esta sequência obrigatória:
+
+1. Registrar presença dos membros.
+
+
+2. Apenas após isso, liberar a criação e abertura de votações.
+
+
+3. Na lista de candidatos disponíveis, exibir apenas os membros presentes.
+
+
+4. Somente esses membros podem votar e ser votados.
+
+
+
+Se o administrador tentar abrir uma votação antes de registrar presenças, o sistema deve exibir:
+
+> “Registre primeiro a presença dos membros antes de abrir a votação.”
+
+
+
+
+
+---
+
+🔹 2. Bloquear cargos ainda não abertos
+
+O sistema deve impedir adicionar candidatos a cargos cuja votação ainda não esteja aberta.
+
+Mensagem de alerta:
+
+> “A votação para este cargo ainda não foi aberta.”
+
+
+
+
+
+---
+
+🔹 3. Limpeza automática de dados e restrição de candidatos
+
+Ao encerrar uma votação, o sistema deve:
+
+Limpar todos os registros de candidatos e votos.
+
+Preparar o sistema para a próxima votação.
+
+
+Ao iniciar uma nova votação de cargo:
+
+Limpar também os dados anteriores.
+
+Somente membros presentes podem ser adicionados como candidatos.
+
+O membro eleito no cargo anterior não pode ser incluído novamente.
+
+Caso o administrador tente adicioná-lo:
+
+> “Este membro já foi eleito para um cargo e não pode participar desta votação.”
+
+
+
+
+
+
+---
+
+🔹 4. Encerramento automático por maioria absoluta
+
+A votação deve ser encerrada automaticamente quando um candidato atingir metade dos votos válidos + 1.
+
+Exemplo:
+
+3 votantes → maioria = 2 votos.
+
+Assim que um candidato alcançar esse número, a eleição é concluída automaticamente.
+
+
+Exibição no resultado:
+
+> “Eleito: [nome do candidato] com [número de votos] votos.”
+
+
+
+
+
+---
+
+🔹 5. Lógica de escrutínios (até 3 rodadas por cargo)
+
+🥇 Primeiro Escrutínio
+
+Todos os membros presentes podem votar.
+
+Se um candidato alcançar metade + 1 dos votos válidos, é declarado eleito.
+
+Caso contrário, aparece o botão:
+
+> “Iniciar Segundo Escrutínio.”
+
+
+
+
+🥈 Segundo Escrutínio
+
+O administrador seleciona novamente os candidatos (entre os membros presentes).
+
+Se houver maioria absoluta (metade + 1), declara vencedor.
+
+Caso não haja, aparece:
+
+> “Iniciar Terceiro Escrutínio.”
+
+
+
+
+🥉 Terceiro Escrutínio
+
+Exibir apenas os dois candidatos mais votados do segundo escrutínio.
+
+O candidato que obtiver maioria simples vence.
+
+Após o resultado final:
+
+O sistema registra o vencedor,
+
+Limpa os dados da votação,
+
+E libera o próximo cargo.
+
+
+
+
+---
+
+🔹 6. Prevenir duplicidade de candidatos
+
+O mesmo candidato não pode ser adicionado duas vezes ao mesmo cargo.
+
+Se o administrador tentar repetir:
+
+> “Este candidato já foi adicionado para este cargo.”
+
+
+
+A checagem deve ocorrer antes do salvamento no banco de dados.
+
+
+
+---
+
+🔹 7. Melhorias na visualização mobile
+
+Ajustar o layout mobile para exibir todas as funções sem cortes:
+
+Ativar rolagem vertical (scroll) completa.
+
+Garantir visibilidade total das abas “Administração”, “Vote” e “Resultados”.
+
+Evitar botões sobrepostos ou ocultos.
+
+
+
+
+---
+
+🔹 8. Alterar o ícone da página de login
+
+Substituir o ícone atual pela imagem em anexo.
+
+Centralizar o novo ícone, ajustando o tamanho proporcionalmente à tela, mantendo boa visibilidade tanto no modo claro quanto escuro.
+
+
+
+---
+
+💡 Resumo da prioridade de implementação:
+
+1. Presença obrigatória antes da votação
+
+
+2. Bloqueio de cargos não abertos
+
+
+3. Limpeza automática e restrição de candidatos
+
+
+4. Encerramento automático por maioria absoluta
+
+
+5. Sistema de escrutínios (1º, 2º, 3º)
+
+
+6. Prevenção de duplicidade de candidatos
+
+
+7. Otimização do layout mobile
+
+
+8. Atualização do ícone da página de login

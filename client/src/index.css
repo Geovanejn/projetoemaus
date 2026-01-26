@@ -1,0 +1,1578 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Kingsman';
+  src: url('/fonts/Kingsman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ensure full viewport height and scrolling on mobile */
+html, body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  height: 100%;
+}
+
+/* Fix mobile viewport height issues */
+#root {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LIGHT MODE */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+
+  /* Automatic computation of border around primary / danger buttons */
+  --opaque-button-border-intensity: -8; /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+
+  --background: 0 0% 100%;
+
+  --foreground: 0 0% 9%;
+
+  --border: 0 0% 89%;
+
+  --card: 0 0% 98%;
+
+  --card-foreground: 0 0% 9%;
+
+  --card-border: 0 0% 92%;
+
+  --sidebar: 0 0% 96%;
+
+  --sidebar-foreground: 0 0% 9%;
+
+  --sidebar-border: 0 0% 89%;
+
+  --sidebar-primary: 38 92% 52%;
+
+  --sidebar-primary-foreground: 0 0% 100%;
+
+  --sidebar-accent: 0 0% 93%;
+
+  --sidebar-accent-foreground: 0 0% 9%;
+
+  --sidebar-ring: 38 92% 52%;
+
+  --popover: 0 0% 95%;
+
+  --popover-foreground: 0 0% 9%;
+
+  --popover-border: 0 0% 87%;
+
+  --primary: 38 92% 52%;
+
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 0 0% 92%;
+
+  --secondary-foreground: 0 0% 9%;
+
+  --muted: 0 3% 94%;
+
+  --muted-foreground: 0 0% 40%;
+
+  --accent: 38 8% 93%;
+
+  --accent-foreground: 0 0% 9%;
+
+  --destructive: 0 84% 60%;
+
+  --destructive-foreground: 0 0% 100%;
+
+  --input: 0 0% 82%;
+  --ring: 38 92% 52%;
+  --chart-1: 38 92% 52%;
+  --chart-2: 38 92% 52%;
+  --chart-3: 217 91% 60%;
+  --chart-4: 142 76% 36%;
+  --chart-5: 0 84% 60%;
+
+  --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: .5rem; /* 8px */
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.10);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.05), 0px 1px 3px 0px hsl(0 0% 0% / 0.10);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.10), 0px 2px 4px -2px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.10), 0px 4px 6px -4px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.10), 0px 8px 10px -6px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
+
+  /* Fallback for older browsers */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+
+  --opaque-button-border-intensity: 9;  /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  --background: 0 0% 9%;
+
+  --foreground: 0 0% 98%;
+
+  --border: 0 0% 18%;
+
+  --card: 0 0% 11%;
+
+  --card-foreground: 0 0% 98%;
+
+  --card-border: 0 0% 16%;
+
+  --sidebar: 0 0% 13%;
+
+  --sidebar-foreground: 0 0% 98%;
+
+  --sidebar-border: 0 0% 20%;
+
+  --sidebar-primary: 38 92% 52%;
+
+  --sidebar-primary-foreground: 0 0% 100%;
+
+  --sidebar-accent: 0 0% 16%;
+
+  --sidebar-accent-foreground: 0 0% 98%;
+
+  --sidebar-ring: 38 92% 52%;
+
+  --popover: 0 0% 14%;
+
+  --popover-foreground: 0 0% 98%;
+
+  --popover-border: 0 0% 20%;
+
+  --primary: 38 92% 52%;
+
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 0 0% 18%;
+
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 0 3% 17%;
+
+  --muted-foreground: 0 0% 63%;
+
+  --accent: 38 8% 19%;
+
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 84% 60%;
+
+  --destructive-foreground: 0 0% 100%;
+
+  --input: 0 0% 28%;
+  --ring: 38 92% 52%;
+  --chart-1: 38 92% 52%;
+  --chart-2: 38 92% 52%;
+  --chart-3: 217 91% 75%;
+  --chart-4: 142 76% 55%;
+  --chart-5: 0 84% 70%;
+
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.30);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.40);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.30), 0px 1px 3px 0px hsl(0 0% 0% / 0.40);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.40), 0px 1px 2px -1px hsl(0 0% 0% / 0.40);
+  --shadow-md: 0px 4px 6px -1px hsl(0 0% 0% / 0.40), 0px 2px 4px -2px hsl(0 0% 0% / 0.40);
+  --shadow-lg: 0px 10px 15px -3px hsl(0 0% 0% / 0.40), 0px 4px 6px -4px hsl(0 0% 0% / 0.40);
+  --shadow-xl: 0px 20px 25px -5px hsl(0 0% 0% / 0.40), 0px 8px 10px -6px hsl(0 0% 0% / 0.40);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0 0% 0% / 0.50);
+
+  /* Fallback for older browsers */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* Fallback for older browsers */
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/**
+ * Using the elevate system.
+ * Automatic contrast adjustment.
+ *
+ * <element className="hover-elevate" />
+ * <element className="active-elevate-2" />
+ *
+ * // Using the tailwind utility when a data attribute is "on"
+ * <element className="toggle-elevate data-[state=on]:toggle-elevated" />
+ * // Or manually controlling the toggle state
+ * <element className="toggle-elevate toggle-elevated" />
+ *
+ * Elevation systems have to handle many states.
+ * - not-hovered, vs. hovered vs. active  (three mutually exclusive states)
+ * - toggled or not
+ * - focused or not (this is not handled with these utilities)
+ *
+ * Even without handling focused or not, this is six possible combinations that
+ * need to be distinguished from eachother visually.
+ */
+@layer utilities {
+
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  /* .no-default-hover-elevate/no-default-active-elevate is an escape hatch so consumers of
+   * buttons/badges can remove the automatic brightness adjustment on interactions
+   * and program their own. */
+  .no-default-hover-elevate {}
+
+  .no-default-active-elevate {}
+
+
+  /**
+   * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
+   * This way they can stack/compound. Both will overlap the parent's borders!
+   * So borders will be automatically adjusted both on toggle, and hover/active,
+   * and they will be compounded.
+   */
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  /* If there's a 1px border, adjust the inset so that it covers that parent's border */
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  /* Does not work on elements with overflow:hidden! */
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  /* If there's a 1px border, adjust the inset so that it covers that parent's border */
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+}
+
+/* ==================== COLLECTIBLE CARD SYSTEM ==================== */
+
+/* Light sweep animation for all cards - covers full width */
+@keyframes card-light-sweep {
+  0% {
+    transform: translateX(-150%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(400%) rotate(25deg);
+  }
+}
+
+/* Secondary light sweep for legendary - different angle and speed */
+@keyframes card-light-sweep-secondary {
+  0% {
+    transform: translateX(-150%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(400%) rotate(-15deg);
+  }
+}
+
+/* Holographic shimmer effect */
+@keyframes holo-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Diamond sparkle animation for legendary */
+@keyframes diamond-sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Pulse glow for legendary */
+@keyframes legendary-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 15px rgba(251, 191, 36, 0.4),
+      0 0 30px rgba(251, 191, 36, 0.2),
+      inset 0 0 20px rgba(251, 191, 36, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 25px rgba(251, 191, 36, 0.6),
+      0 0 50px rgba(251, 191, 36, 0.3),
+      inset 0 0 30px rgba(251, 191, 36, 0.15);
+  }
+}
+
+/* Epic glow animation */
+@keyframes epic-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 12px rgba(139, 92, 246, 0.4),
+      0 0 25px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 20px rgba(139, 92, 246, 0.5),
+      0 0 40px rgba(139, 92, 246, 0.3);
+  }
+}
+
+/* Rare pulse animation */
+@keyframes rare-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* Holographic animation for legendary */
+@keyframes holographic {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Base collectible card styles */
+.collectible-card {
+  position: relative;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.collectible-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* COMMON (Silver/Gray Steel Texture) - NO effects at all */
+.collectible-card-common {
+  background: url(/CARD_COMUM_1766929049960.png) center/cover no-repeat;
+  border: 2px solid #A0A8B8;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.4), inset 0 -1px 3px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: none !important;
+}
+
+.collectible-card-common::after,
+.collectible-card-common::before {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+/* RARE (Blue Steel Texture) - SVG snake border effect + shimmer glow */
+.collectible-card-rare {
+  background: url(/CARD_RARO_1766929049996.png) center/cover no-repeat;
+  border: 2px solid #4A90C0;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.3), inset 0 -1px 3px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* EPIC (Purple Steel Texture) - SVG snake border effect + flash */
+.collectible-card-epic {
+  background: url(/CARD_ÉPICO_1766929050040.png) center/cover no-repeat;
+  border: 2px solid #8B6BA8;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.25), inset 0 -1px 3px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+/* LEGENDARY (Gold Steel Texture) - Ultimate effects */
+.collectible-card-legendary {
+  background: url(/CARD_LENDÁRIO_1766929050060.png) center/cover no-repeat;
+  border: 3px solid #D4A050;
+  box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.35), inset 0 -1px 4px rgba(0, 0, 0, 0.6), 0 6px 16px rgba(251, 191, 36, 0.25);
+  position: relative;
+  transform-style: preserve-3d;
+  isolation: isolate;
+}
+
+/* ==================== LEGENDARY PORTAL + AURORA EFFECTS ==================== */
+
+/* Portal Dimensional Vortex - Spinning energy ring */
+.collectible-card-legendary::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 22px;
+  background: conic-gradient(
+    from var(--legendary-portal-angle, 0deg),
+    rgba(251, 191, 36, 0) 0%,
+    rgba(253, 224, 71, 0.8) 8%,
+    rgba(255, 255, 255, 1) 12%,
+    rgba(253, 224, 71, 0.8) 16%,
+    rgba(251, 191, 36, 0) 24%,
+    rgba(217, 119, 6, 0) 50%,
+    rgba(253, 224, 71, 0.6) 58%,
+    rgba(255, 255, 255, 0.9) 62%,
+    rgba(253, 224, 71, 0.6) 66%,
+    rgba(217, 119, 6, 0) 74%,
+    rgba(251, 191, 36, 0) 100%
+  );
+  z-index: -1;
+  transform: translateZ(-1px);
+  filter: blur(6px);
+  opacity: 0.9;
+  animation: legendary-portal-spin 3s linear infinite;
+}
+
+/* Mystical Aurora Mist - Flowing ethereal fog */
+.collectible-card-legendary::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 28px;
+  background: 
+    radial-gradient(ellipse 120% 80% at 20% 30%, rgba(253, 224, 71, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 60% at 80% 70%, rgba(251, 191, 36, 0.3) 0%, transparent 45%),
+    radial-gradient(ellipse 80% 100% at 50% 50%, rgba(217, 119, 6, 0.2) 0%, transparent 60%);
+  z-index: -2;
+  transform: translateZ(-2px);
+  filter: blur(20px);
+  opacity: 0.8;
+  animation: legendary-aurora-drift 6s ease-in-out infinite alternate, legendary-aurora-pulse 2s ease-in-out infinite alternate;
+}
+
+@property --legendary-portal-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes legendary-portal-spin {
+  from { --legendary-portal-angle: 0deg; }
+  to { --legendary-portal-angle: 360deg; }
+}
+
+@keyframes legendary-aurora-drift {
+  0% {
+    transform: translateX(-5px) translateY(-3px) scale(1);
+    background: 
+      radial-gradient(ellipse 120% 80% at 20% 30%, rgba(253, 224, 71, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse 100% 60% at 80% 70%, rgba(251, 191, 36, 0.3) 0%, transparent 45%),
+      radial-gradient(ellipse 80% 100% at 50% 50%, rgba(217, 119, 6, 0.2) 0%, transparent 60%);
+  }
+  50% {
+    background: 
+      radial-gradient(ellipse 100% 90% at 70% 40%, rgba(253, 224, 71, 0.5) 0%, transparent 55%),
+      radial-gradient(ellipse 90% 70% at 30% 60%, rgba(251, 191, 36, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse 110% 80% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  }
+  100% {
+    transform: translateX(5px) translateY(3px) scale(1.05);
+    background: 
+      radial-gradient(ellipse 90% 100% at 80% 20%, rgba(253, 224, 71, 0.45) 0%, transparent 50%),
+      radial-gradient(ellipse 110% 50% at 20% 80%, rgba(251, 191, 36, 0.35) 0%, transparent 45%),
+      radial-gradient(ellipse 70% 120% at 50% 50%, rgba(217, 119, 6, 0.25) 0%, transparent 55%);
+  }
+}
+
+@keyframes legendary-aurora-pulse {
+  0% {
+    opacity: 0.6;
+    filter: blur(18px);
+  }
+  100% {
+    opacity: 0.9;
+    filter: blur(24px);
+  }
+}
+
+
+/* Light sweep effect overlay - contained within card */
+.collectible-card-effects {
+  position: absolute;
+  inset: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Light sweep for RARE, EPIC, and LEGENDARY (season, event, and magazine cards) */
+.collectible-card-rare .collectible-card-effects::after,
+.collectible-card-epic .collectible-card-effects::after,
+.collectible-card-legendary .collectible-card-effects::after,
+.event-card-rare .collectible-card-effects::after,
+.event-card-epic .collectible-card-effects::after,
+.event-card-legendary .collectible-card-effects::after,
+.magazine-card-rare .collectible-card-effects::after,
+.magazine-card-epic .collectible-card-effects::after,
+.magazine-card-legendary .collectible-card-effects::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 60%,
+    transparent 100%
+  );
+  animation: card-light-sweep 4s ease-in-out infinite;
+}
+
+.collectible-card-rare .collectible-card-effects::after,
+.event-card-rare .collectible-card-effects::after,
+.magazine-card-rare .collectible-card-effects::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 40%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0.12) 60%,
+    transparent 100%
+  );
+  animation-duration: 3.5s;
+}
+
+.collectible-card-legendary .collectible-card-effects::after,
+.event-card-legendary .collectible-card-effects::after,
+.magazine-card-legendary .collectible-card-effects::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 35%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.2) 65%,
+    transparent 100%
+  );
+  animation-duration: 2s;
+}
+
+/* Secondary flash for LEGENDARY - different angle and timing */
+.collectible-card-effects-secondary {
+  position: absolute;
+  inset: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.collectible-card-legendary .collectible-card-effects-secondary::after,
+.event-card-legendary .collectible-card-effects-secondary::after,
+.magazine-card-legendary .collectible-card-effects-secondary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 215, 0, 0.15) 35%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 215, 0, 0.15) 65%,
+    transparent 100%
+  );
+  animation: card-light-sweep-secondary 3.2s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+/* Holographic overlay for EPIC and LEGENDARY */
+.collectible-card-holo-overlay {
+  position: absolute;
+  inset: 4px;
+  border-radius: 14px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.collectible-card-epic .collectible-card-holo-overlay,
+.event-card-epic .collectible-card-holo-overlay,
+.magazine-card-epic .collectible-card-holo-overlay {
+  opacity: 0.4;
+  background: linear-gradient(
+    135deg,
+    #8b5cf6 0%,        /* Roxo */
+    #a78bfa 14%,       /* Lilás */
+    #ec4899 28%,       /* Rosa */
+    #3b82f6 42%,       /* Azul */
+    #06b6d4 56%,       /* Ciano */
+    #ffffff 70%,       /* Branco */
+    #8b5cf6 84%,       /* Roxo */
+    #a78bfa 100%       /* Lilás */
+  );
+  background-size: 400% 400%;
+  animation: holo-shimmer 4s ease-in-out infinite;
+  mix-blend-mode: overlay;
+}
+
+.collectible-card-legendary .collectible-card-holo-overlay,
+.event-card-legendary .collectible-card-holo-overlay,
+.magazine-card-legendary .collectible-card-holo-overlay {
+  opacity: 0.25;
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.5) 0%,
+    rgba(245, 158, 11, 0.4) 20%,
+    rgba(255, 255, 255, 0.4) 40%,
+    rgba(251, 191, 36, 0.5) 60%,
+    rgba(245, 158, 11, 0.4) 80%,
+    rgba(251, 191, 36, 0.5) 100%
+  );
+  background-size: 200% 200%;
+  animation: holo-shimmer 4s ease-in-out infinite, legendary-holo-breathe 3s ease-in-out infinite alternate;
+}
+
+@keyframes legendary-holo-breathe {
+  0% {
+    opacity: 0.2;
+    filter: brightness(1) saturate(1);
+  }
+  100% {
+    opacity: 0.35;
+    filter: brightness(1.2) saturate(1.3);
+  }
+}
+
+/* Diamond sparkle effects - only for LEGENDARY */
+.card-diamond-effect {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  opacity: 0;
+  animation: diamond-sparkle 2s ease-in-out infinite;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.collectible-card-legendary .card-diamond-effect {
+  width: 8px;
+  height: 8px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+  animation-duration: 1.5s;
+}
+
+.card-diamond-effect:nth-child(1) {
+  top: 15%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.card-diamond-effect:nth-child(2) {
+  top: 35%;
+  left: 8%;
+  animation-delay: 0.5s;
+}
+
+.card-diamond-effect:nth-child(3) {
+  bottom: 25%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.card-diamond-effect:nth-child(4) {
+  top: 50%;
+  left: 12%;
+  animation-delay: 1.3s;
+}
+
+.card-diamond-effect:nth-child(5) {
+  bottom: 15%;
+  right: 20%;
+  animation-delay: 1.6s;
+}
+
+/* Card inner content area */
+.collectible-card-inner {
+  position: relative;
+  z-index: 5;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 6px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* Magazine variant - no title, equal spacing around medallion */
+.collectible-card-inner-magazine {
+  padding: 12px;
+  gap: 12px;
+}
+
+/* ==================== EVENT CARDS - LAYERED DESIGN ==================== */
+
+/* Event cards use layered structure: portal -> image -> PNG -> effects */
+/* CRITICAL: Override ALL base styles - NO borders, NO backgrounds except PNG */
+.event-card-common,
+.event-card-rare,
+.event-card-epic,
+.event-card-legendary {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 12px !important;
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+  box-shadow: none !important;
+}
+
+/* Only subtle drop shadow for depth - no borders */
+.event-card-common { filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); }
+.event-card-rare { filter: drop-shadow(0 4px 10px rgba(59, 130, 246, 0.25)); }
+.event-card-epic { filter: drop-shadow(0 4px 10px rgba(139, 92, 246, 0.25)); }
+.event-card-legendary { filter: drop-shadow(0 6px 12px rgba(251, 191, 36, 0.3)); }
+
+/* Layer 0: Portal effect (BEHIND everything) - only for legendary - contained within card edges */
+.event-card-portal-layer {
+  position: absolute;
+  inset: 2px;
+  border-radius: 10px;
+  z-index: 0;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--legendary-portal-angle, 0deg),
+    rgba(251, 191, 36, 0) 0%,
+    rgba(253, 224, 71, 0.8) 8%,
+    rgba(255, 255, 255, 1) 12%,
+    rgba(253, 224, 71, 0.8) 16%,
+    rgba(251, 191, 36, 0) 24%,
+    rgba(217, 119, 6, 0) 50%,
+    rgba(253, 224, 71, 0.6) 58%,
+    rgba(255, 255, 255, 0.9) 62%,
+    rgba(253, 224, 71, 0.6) 66%,
+    rgba(217, 119, 6, 0) 74%,
+    rgba(251, 191, 36, 0) 100%
+  );
+  filter: blur(3px);
+  opacity: 0.85;
+  animation: legendary-portal-spin 3s linear infinite;
+}
+
+/* Aurora mist behind legendary event card - contained within card edges */
+.event-card-legendary::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 10px;
+  background: 
+    radial-gradient(ellipse 120% 80% at 20% 30%, rgba(253, 224, 71, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 60% at 80% 70%, rgba(251, 191, 36, 0.3) 0%, transparent 45%),
+    radial-gradient(ellipse 80% 100% at 50% 50%, rgba(217, 119, 6, 0.2) 0%, transparent 60%);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.7;
+  animation: legendary-aurora-drift 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Layer 1: User image (BEHIND the PNG frame) - precisely aligned to frame cutout */
+.event-card-image-layer {
+  position: absolute;
+  bottom: 8%;
+  left: 7.5%;
+  right: 7.5%;
+  top: 51%;
+  z-index: 1;
+  border-radius: 6px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.event-card-image-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Layer 2: PNG card frame (ON TOP of image) */
+.event-card-png-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.event-card-png-common { background-image: url(/EVENT_CARD_COMUM.png); }
+.event-card-png-rare { background-image: url(/EVENT_CARD_RARO.png); }
+.event-card-png-epic { background-image: url(/EVENT_CARD_EPICO.png); }
+.event-card-png-legendary { background-image: url(/EVENT_CARD_LENDARIO.png); }
+
+/* ==================== MAGAZINE CARDS - SAME LAYERED DESIGN AS EVENT ==================== */
+
+/* Magazine cards use same layered structure as event cards */
+.magazine-card-common,
+.magazine-card-rare,
+.magazine-card-epic,
+.magazine-card-legendary {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 12px !important;
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
+  box-shadow: none !important;
+}
+
+/* Subtle drop shadows for magazine cards */
+.magazine-card-common { filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); }
+.magazine-card-rare { filter: drop-shadow(0 4px 10px rgba(59, 130, 246, 0.25)); }
+.magazine-card-epic { filter: drop-shadow(0 4px 10px rgba(139, 92, 246, 0.25)); }
+.magazine-card-legendary { filter: drop-shadow(0 6px 12px rgba(251, 191, 36, 0.3)); }
+
+/* Magazine portal effect for legendary - same as event */
+.magazine-card-portal-layer {
+  position: absolute;
+  inset: 2px;
+  border-radius: 10px;
+  z-index: 0;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--legendary-portal-angle, 0deg),
+    rgba(251, 191, 36, 0) 0%,
+    rgba(253, 224, 71, 0.8) 8%,
+    rgba(255, 255, 255, 1) 12%,
+    rgba(253, 224, 71, 0.8) 16%,
+    rgba(251, 191, 36, 0) 24%,
+    rgba(217, 119, 6, 0) 50%,
+    rgba(253, 224, 71, 0.6) 58%,
+    rgba(255, 255, 255, 0.9) 62%,
+    rgba(253, 224, 71, 0.6) 66%,
+    rgba(217, 119, 6, 0) 74%,
+    rgba(251, 191, 36, 0) 100%
+  );
+  filter: blur(3px);
+  opacity: 0.85;
+  animation: legendary-portal-spin 3s linear infinite;
+}
+
+/* Aurora mist for magazine legendary */
+.magazine-card-legendary::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 10px;
+  background: 
+    radial-gradient(ellipse 120% 80% at 20% 30%, rgba(253, 224, 71, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 60% at 80% 70%, rgba(251, 191, 36, 0.3) 0%, transparent 45%),
+    radial-gradient(ellipse 80% 100% at 50% 50%, rgba(217, 119, 6, 0.2) 0%, transparent 60%);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.7;
+  animation: legendary-aurora-drift 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Magazine image layer - cover image behind PNG frame */
+.magazine-card-image-layer {
+  position: absolute;
+  bottom: 6%;
+  left: 9%;
+  right: 9%;
+  top: 26%;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.magazine-card-image-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Magazine PNG layer */
+.magazine-card-png-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.magazine-card-png-common { background-image: url(/MAGAZINE_CARD_COMUM.png); }
+.magazine-card-png-rare { background-image: url(/MAGAZINE_CARD_RARO.png); }
+.magazine-card-png-epic { background-image: url(/MAGAZINE_CARD_EPICO.png); }
+.magazine-card-png-legendary { background-image: url(/MAGAZINE_CARD_LENDARIO.png); }
+
+/* Magazine card inner layout */
+.magazine-card-inner {
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+  overflow: visible;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Flash effects for magazine cards - same selectors as event */
+.magazine-card-rare .collectible-card-effects,
+.magazine-card-epic .collectible-card-effects,
+.magazine-card-legendary .collectible-card-effects {
+  position: absolute;
+  inset: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.magazine-card-rare .collectible-card-effects::before,
+.magazine-card-epic .collectible-card-effects::before,
+.magazine-card-legendary .collectible-card-effects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.4) 45%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 55%,
+    rgba(255, 255, 255, 0) 80%,
+    transparent 100%
+  );
+  animation: light-sweep 4s ease-in-out infinite;
+}
+
+/* Event card inner layout - NO backgrounds, NO borders */
+.event-card-inner {
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+  overflow: visible;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Event card name area - centered between top banner and image frame */
+.event-card-name-area {
+  position: absolute;
+  top: 33%;
+  bottom: 47%;
+  left: 10%;
+  right: 10%;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Event card title - engraved/embossed style */
+.event-card-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 0.626rem;
+  max-width: 95%;
+  word-wrap: break-word;
+}
+
+/* Common: exact color from inside "COMUM" text on PNG - silver/white */
+.event-card-title-common {
+  color: #cac8c7;
+  text-shadow: 
+    0 -1px 0 rgba(0, 0, 0, 0.8),
+    0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Rare: exact color from inside "RARO" text on PNG - cyan/aqua */
+.event-card-title-rare {
+  color: #00c5ff;
+  text-shadow: 
+    0 -1px 0 rgba(0, 0, 0, 0.8),
+    0 1px 0 rgba(0, 197, 255, 0.3),
+    0 0 6px rgba(0, 197, 255, 0.5);
+}
+
+/* Epic: exact color from inside "ÉPICO" text on PNG - bright magenta/pink */
+.event-card-title-epic {
+  color: #ff92ff;
+  text-shadow: 
+    0 -1px 0 rgba(0, 0, 0, 0.8),
+    0 1px 0 rgba(255, 146, 255, 0.3),
+    0 0 6px rgba(255, 146, 255, 0.5);
+}
+
+/* Legendary: exact color from inside "LENDÁRIO" text on PNG - bright gold/orange */
+.event-card-title-legendary {
+  color: #ffb800;
+  text-shadow: 
+    0 -1px 0 rgba(0, 0, 0, 0.8),
+    0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 8px rgba(255, 184, 0, 0.6),
+    0 0 16px rgba(255, 184, 0, 0.3);
+}
+
+
+/* ==================== EVENT CARD EFFECTS ==================== */
+
+/* Flash sweep for event rare, epic and legendary */
+.event-card-rare .collectible-card-effects,
+.event-card-epic .collectible-card-effects,
+.event-card-legendary .collectible-card-effects {
+  position: absolute;
+  inset: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.event-card-rare .collectible-card-effects::before,
+.event-card-epic .collectible-card-effects::before,
+.event-card-legendary .collectible-card-effects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.4) 45%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 55%,
+    rgba(255, 255, 255, 0) 80%,
+    transparent 100%
+  );
+  animation: light-sweep 4s ease-in-out infinite;
+}
+
+/* Event cards use the same flash/prismatic effects as season cards */
+/* The collectible-card-effects and collectible-card-holo-overlay classes apply automatically */
+
+
+
+/* Compact variant - minicard with only centered icon */
+.collectible-card-inner-compact {
+  padding: 8px;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card image container - Deep Inset/Engraved frame effect (negative relief) */
+.collectible-card-image {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  /* Strong inset shadows for deep engraved effect */
+  box-shadow: 
+    inset 0 3px 6px rgba(0, 0, 0, 0.7),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),
+    inset 3px 0 5px rgba(0, 0, 0, 0.5),
+    inset -3px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Deep inset frame overlay */
+.collectible-card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 2;
+  /* Strong beveled edges for carved recess look */
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 8px),
+    linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, transparent 6px),
+    linear-gradient(to top, rgba(255, 255, 255, 0.12) 0%, transparent 4px),
+    linear-gradient(to left, rgba(255, 255, 255, 0.12) 0%, transparent 4px);
+}
+
+.collectible-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Shine beam animation for cards - contained within card boundaries */
+.card-shine-beam {
+  animation: shine-sweep-contained 3s ease-in-out infinite;
+  overflow: hidden;
+  clip-path: inset(0 round 16px);
+}
+
+@keyframes shine-sweep-contained {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+/* Card badge/icon area */
+.collectible-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+}
+
+/* Forged icon effect inside badge - crisp shadows only */
+.collectible-card-badge svg {
+  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5)) drop-shadow(-1px -1px 0px rgba(255, 255, 255, 0.25));
+  opacity: 0.55;
+}
+
+.collectible-card-badge-common {
+  background: linear-gradient(145deg, #E5E7EB, #9CA3AF);
+  /* Forged effect - Inner shadow + outer glow */
+  box-shadow: 
+    inset 2px 2px 3px rgba(0, 0, 0, 0.3),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.4),
+    0 0 4px rgba(255, 255, 255, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.collectible-card-badge-rare {
+  background: linear-gradient(145deg, #93C5FD, #3B82F6);
+  box-shadow: 
+    inset 2px 2px 3px rgba(0, 0, 0, 0.3),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.3),
+    0 0 4px rgba(255, 255, 255, 0.15),
+    0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.collectible-card-badge-epic {
+  background: linear-gradient(145deg, #C4B5FD, #8B5CF6);
+  box-shadow: 
+    inset 2px 2px 3px rgba(0, 0, 0, 0.3),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.3),
+    0 0 4px rgba(255, 255, 255, 0.15),
+    0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.collectible-card-badge-legendary {
+  background: linear-gradient(145deg, #FDE68A, #F59E0B);
+  box-shadow: 
+    inset 2px 2px 3px rgba(0, 0, 0, 0.3),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.4),
+    0 0 6px rgba(255, 255, 255, 0.20),
+    0 2px 10px rgba(245, 158, 11, 0.4);
+}
+
+/* Centered rarity medallion - Forged metal effect (larger) */
+.collectible-card-medallion {
+  position: relative;
+  align-self: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.30);
+  /* Forged metal effect - stronger for larger size */
+  box-shadow: 
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.12),
+    0 0 4px rgba(255, 255, 255, 0.18);
+}
+
+/* Medallion rarity variants */
+.collectible-card-medallion-common {
+  background: linear-gradient(145deg, rgba(160, 168, 184, 0.4), rgba(128, 136, 152, 0.3));
+}
+
+.collectible-card-medallion-rare {
+  background: linear-gradient(145deg, rgba(74, 144, 192, 0.4), rgba(59, 130, 180, 0.3));
+}
+
+.collectible-card-medallion-epic {
+  background: linear-gradient(145deg, rgba(139, 107, 168, 0.4), rgba(120, 92, 150, 0.3));
+}
+
+.collectible-card-medallion-legendary {
+  background: linear-gradient(145deg, rgba(212, 160, 80, 0.5), rgba(180, 140, 60, 0.4));
+}
+
+/* Forged icon effect inside medallion */
+.collectible-card-medallion svg {
+  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.5)) drop-shadow(-1px -1px 0px rgba(255, 255, 255, 0.20));
+  opacity: 0.70;
+}
+
+
+/* Text styling - With glow and hard shadow */
+.collectible-card-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  line-height: 1.2;
+  /* Lighter text color */
+  color: rgba(230, 230, 230, 0.92);
+  /* Glow + hard shadow (no blur) */
+  text-shadow: 
+    0 0 3px rgba(255, 255, 255, 0.15),
+    1px 1px 0px rgba(0, 0, 0, 0.45);
+}
+
+/* Tighter padding in text plate */
+.collectible-card-text-plate {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 4px 10px;
+  /* Inset shadows - same pattern as rarity icon */
+  box-shadow: 
+    inset 1px 1px 1px rgba(0, 0, 0, 0.55),
+    inset -1px -1px 1px rgba(255, 255, 255, 0.14),
+    0 0 2px rgba(255, 255, 255, 0.12);
+}
+
+/* Portrait orientation (for magazines/seasons) */
+.collectible-card-portrait {
+  width: 200px;
+  height: 280px;
+}
+
+.collectible-card-portrait .collectible-card-image {
+  height: 140px;
+  margin-top: 56px;
+}
+
+/* Landscape orientation (for events) */
+.collectible-card-landscape {
+  width: 280px;
+  height: 200px;
+}
+
+.collectible-card-landscape .collectible-card-image {
+  height: 100px;
+  margin-top: 56px;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .collectible-card-portrait {
+    width: 160px;
+    height: 224px;
+  }
+  
+  .collectible-card-portrait .collectible-card-image {
+    height: 112px;
+    margin-top: 48px;
+  }
+  
+  .collectible-card-landscape {
+    width: 224px;
+    height: 160px;
+  }
+  
+  .collectible-card-landscape .collectible-card-image {
+    height: 80px;
+    margin-top: 48px;
+  }
+  
+  .collectible-card-badge {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+  }
+  
+  .collectible-card-title {
+    font-size: 0.875rem;
+  }
+  
+  .collectible-card-subtitle {
+    font-size: 0.625rem;
+  }
+}
+
+/* Legacy card classes for backward compatibility */
+.card-legendary {
+  position: relative;
+  animation: legendary-pulse 2s ease-in-out infinite;
+}
+
+.card-epic {
+  position: relative;
+  animation: epic-glow 2.5s ease-in-out infinite;
+}
+
+.card-rare {
+  position: relative;
+  animation: rare-pulse 3s ease-in-out infinite;
+}
+
+/* Metallic Textures with Embossing Effects */
+.metallic-silver {
+  background: linear-gradient(135deg, #f5f5f5 0%, #d9d9d9 20%, #f0f0f0 40%, #c0c0c0 60%, #e0e0e0 80%, #c0c0c0 100%);
+  position: relative;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255,255,255,0.8),
+    inset -2px -2px 4px rgba(0,0,0,0.3),
+    0 4px 8px rgba(0,0,0,0.2);
+}
+
+.metallic-blue {
+  background: linear-gradient(135deg, #4a9eff 0%, #2a6dcc 20%, #5faeff 40%, #1a4db3 60%, #3a7dd9 80%, #1a4db3 100%);
+  position: relative;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255,255,255,0.5),
+    inset -2px -2px 4px rgba(0,0,0,0.4),
+    0 4px 8px rgba(0,0,0,0.3);
+}
+
+.metallic-purple {
+  background: linear-gradient(135deg, #c97dd9 0%, #9d3fa3 20%, #d99ee5 40%, #7a2d7a 60%, #b366cc 80%, #7a2d7a 100%);
+  position: relative;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255,255,255,0.4),
+    inset -2px -2px 4px rgba(0,0,0,0.5),
+    0 4px 8px rgba(0,0,0,0.3);
+}
+
+.metallic-gold {
+  background: linear-gradient(135deg, #ffd700 0%, #d4a500 20%, #ffed4e 40%, #b8860b 60%, #daa520 80%, #b8860b 100%);
+  position: relative;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255,255,255,0.6),
+    inset -2px -2px 4px rgba(0,0,0,0.4),
+    0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Embossed text effect for visibility on metallic backgrounds */
+.embossed-text {
+  text-shadow:
+    1px 1px 2px rgba(255,255,255,0.8),
+    -1px -1px 2px rgba(0,0,0,0.5),
+    2px 2px 4px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+
+/* Embossed icon effect */
+.embossed-icon {
+  filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8)) drop-shadow(-1px -1px 2px rgba(0,0,0,0.5)) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Event card metal effect container */
+.event-card-metal {
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card-metal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.1) 2px,
+      rgba(255,255,255,0.1) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.1) 2px,
+      rgba(0,0,0,0.1) 4px
+    );
+  pointer-events: none;
+}

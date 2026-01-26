@@ -1,0 +1,58 @@
+Aqui está a análise minuciosa, linha por linha e agrupada por eventos, dos seus logs mais recentes.
+🕵️‍♂️ Análise Detalhada dos Logs (Linha por Linha)
+1. Inicialização e Agendadores (00:54:37 - 00:54:38)
+ * O sistema inicia perfeitamente. Todos os "Schedulers" (Versículos, Missões, Metas, Eventos, Tesouraria) ligam sem erro.
+ * Status: ✅ Verde. O backend está saudável na partida.
+2. O Erro do Instagram (00:54:38)
+ * [Instagram] API error: 400 ... Session has expired
+ * Análise: Como previsto, o token venceu em 29/Dez. O sistema tratou o erro corretamente (keeping existing data) e não derrubou o site.
+ * Ação: Requer intervenção manual sua (gerar novo token no Facebook Developers).
+3. Notificações Push (00:54:43)
+ * [Push] User X has no push subscriptions registered
+ * Análise: O sistema tentou enviar o versículo do dia, mas nenhum usuário (1, 6, 5, 9, etc.) ativou as notificações no navegador ainda.
+ * Status: ⚠️ Alerta Operacional (Não é erro de código, mas indica que os usuários precisam se inscrever).
+4. O BUG da Sincronização de Push (01:12:55 - 01:12:56)
+ * [Push Storage] Deleting anonymous subscription 14 after linking...
+ * [Push] Anonymous sub 14 not found in database
+ * Análise Técnica: Existe uma Race Condition (Condição de Corrida). O sistema apaga a inscrição anônima (ID 14) assim que o usuário loga, mas milissegundos depois tenta sincronizar novamente e não a encontra, gerando erro no log.
+ * Status: 🟠 Bug Lógico (Não afeta o usuário, mas suja o log).
+5. Performance da Loja Pública (01:13:02)
+ * GET /api/shop/items -> 11ms 🚀
+ * GET /api/shop/featured -> 21ms 🚀
+ * GET /api/shop/images/item/23 -> 14ms
+ * GET /api/shop/images/banner/5 -> 646ms (Um pouco lento para imagem)
+ * Análise: A otimização anterior funcionou perfeitamente. O JSON carrega instantaneamente. As imagens demoram um pouco na primeira vez (conversão Base64 -> Buffer), mas depois ficam rápidas.
+ * Status: ✅ Resolvido.
+6. O PROBLEMA CRÍTICO: Painel Admin (01:15:00 - 01:15:54) 🚨
+ * Aqui está o motivo da sua dor de cabeça restante. Veja os tempos:
+   * GET /api/admin/shop/items -> 5692ms (5.7 segundos)
+   * GET /api/admin/shop/items -> 2556ms (2.5 segundos)
+   * GET /api/admin/shop/items -> 3236ms (3.2 segundos)
+ * Análise: Nós consertamos a loja para o Cliente, mas esquecemos de aplicar a mesma lógica no Painel Administrativo. O Admin ainda está baixando todas as fotos gigantes em Base64 toda vez que você abre a lista de produtos para editar.
+ * Nota Adicional: GET /api/admin/shop/members está levando 3700ms. A lista de membros também está pesada (provavelmente trazendo dados desnecessários).
+📝 O Veredito
+ * Loja do Usuário: Está voando (11ms). Ótimo trabalho.
+ * Painel Admin: Está "imóvel" (5s+). Precisa da mesma "dieta" que fizemos na loja.
+ * Logs de Push: Têm um erro de lógica na sincronização que precisa de ajuste.
+💻 Prompt de Melhoria para o Replit
+Copie e envie este prompt exato para corrigir o Painel Admin e o bug do Push.
+Correção de Performance (Admin) e Lógica (Push)
+Análise dos Logs de Produção:
+Os logs mostram que a otimização da loja funcionou para o público (/api/shop/items = 11ms), mas o Painel Administrativo continua crítico:
+ * GET /api/admin/shop/items: Latência de 3s a 5.7s. Motivo: O controller administrativo ainda está retornando o campo banner_image_data (Base64) na listagem.
+ * GET /api/admin/shop/members: Latência de 3.7s. Provavelmente retornando dados excessivos ou fazendo joins pesados desnecessários na listagem.
+ * Erro de Lógica no Push: Anonymous sub 14 not found ocorre logo após Deleting anonymous subscription 14. O sistema tenta sincronizar um ID que acabou de deletar.
+Plano de Ação (Código):
+1. Otimizar getAdminShopItems (Controller):
+ * Aplique a mesma Data Projection usada na loja pública.
+ * Selecione apenas: id, name, price, stock, category.
+ * Remova explicitamente banner_image_data, images e outros campos pesados da listagem.
+ * A imagem deve ser carregada via URL (/api/shop/images/...) apenas se necessária na tabela, ou nem ser carregada na lista (apenas no "Editar").
+2. Otimizar getShopMembers (Controller):
+ * Revise a query. Certifique-se de retornar apenas id, fullName, email e dados essenciais.
+ * Evite trazer relacionamentos profundos (como todo o histórico de pagamentos) na listagem simples de membros.
+3. Corrigir Race Condition no Push (NotificationService):
+ * Na função de login/sincronização (linkAnonymousSubscriptionToUser ou similar):
+ * Após deletar a inscrição anônima antiga do banco, pare de tentar usá-la.
+ * Adicione uma verificação: Se a inscrição foi migrada/deletada com sucesso, retorne imediatamente e não tente fazer "sync" de um ID que não existe mais.
+Objetivo: Quero que o Painel Admin carregue tão rápido quanto a loja pública (< 200ms).

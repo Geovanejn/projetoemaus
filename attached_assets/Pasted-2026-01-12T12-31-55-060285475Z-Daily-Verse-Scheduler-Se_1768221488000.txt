@@ -1,0 +1,100 @@
+2026-01-12T12:31:55.060285475Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-12T12:31:55.072604654Z [Daily Verse Scheduler] Already sent today (2026-01-12), skipping
+2026-01-12T12:31:57.062565247Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-12T12:31:57.062735346Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-12T12:31:58.387467135Z ==> Your service is live 🎉
+2026-01-12T12:31:58.879499024Z ==> 
+2026-01-12T12:31:58.9668677Z ==> ///////////////////////////////////////////////////////////
+2026-01-12T12:31:59.056568735Z ==> 
+2026-01-12T12:31:59.142062262Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-12T12:31:59.231015518Z ==> 
+2026-01-12T12:31:59.314449955Z ==> ///////////////////////////////////////////////////////////
+2026-01-12T12:32:00.159000696Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-12T12:32:00.159253961Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-12T12:32:00.171458203Z [Daily Missions Scheduler] Content already generated for today (2026-01-12)
+2026-01-12T12:32:00.466977827Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-12T12:32:00.467107055Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-12T12:32:00.467115285Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-12T12:32:00.467119995Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-12T12:32:00.467128486Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-12T12:32:00.467133246Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2026-01-12T12:32:00.467137347Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:16 (ARA)
+2026-01-12T12:32:00.467144517Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-12T12:32:00.467148987Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-12T12:32:00.467219561Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2026-01-12T12:32:00.467228312Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-12T12:32:00.467233192Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-12T12:32:00.467237602Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-12T12:32:00.467241962Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-12T12:32:00.467249303Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-12T12:32:00.467253973Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-12T12:32:00.467295496Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-12T12:32:00.467304106Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2026-01-12T12:32:00.467308706Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-12T12:32:00.467312846Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2026-01-12T12:32:00.467317107Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-12T12:32:00.467321057Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-12T12:32:00.467334378Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:39 (ARA)
+2026-01-12T12:32:00.46736326Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-12T12:32:00.46737002Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2026-01-12T12:32:00.46737321Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-12T12:32:00.467376Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-12T12:32:00.467406472Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-12T12:32:00.467409642Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-12T12:32:00.467412392Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-12T12:32:00.467418343Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-12T12:32:00.467442434Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-12
+2026-01-12T12:32:06.053647626Z [WebSocket] Authenticated connection: ZT3GgpwIAXQTaAMFAAAB, userId: 1
+2026-01-12T12:32:06.254474781Z [WebSocket] Client connected: ZT3GgpwIAXQTaAMFAAAB, authenticated: true
+2026-01-12T12:32:06.460833215Z 12:32:06 PM [express] GET /api/study/leaderboard 200 in 1004ms :: {"periodType":"weekly","periodKey":…
+2026-01-12T12:32:06.469855274Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T12:32:06.471056643Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T12:32:06.757082092Z 12:32:06 PM [express] GET /api/study/seasons 200 in 1208ms :: [{"id":4,"title":"Não Jogue Sua Vida Fo…
+2026-01-12T12:32:06.999519611Z 12:32:06 PM [express] GET /api/study/achievements 200 in 15ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T12:32:11.136971751Z [WebSocket] Client disconnected: ZT3GgpwIAXQTaAMFAAAB, reason: transport close
+2026-01-12T12:32:11.140190646Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T12:32:11.140377407Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T12:32:12.455479779Z 12:32:12 PM [express] GET /api/study/leaderboard 304 in 104ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T12:32:12.465565049Z 12:32:12 PM [express] GET /api/study/seasons 304 in 203ms :: [{"id":4,"title":"Não Jogue Sua Vida For…
+2026-01-12T12:32:12.466937468Z [WebSocket] Authenticated connection: hH4O2BsE9eyrCkgWAAAD, userId: 1
+2026-01-12T12:32:12.467211194Z [WebSocket] Client connected: hH4O2BsE9eyrCkgWAAAD, authenticated: true
+2026-01-12T12:32:12.653783999Z 12:32:12 PM [express] GET /api/study/achievements 304 in 8ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T12:32:12.681225118Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T12:32:12.681548147Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T12:32:14.448841717Z [WebSocket] Client disconnected: hH4O2BsE9eyrCkgWAAAD, reason: client namespace disconnect
+2026-01-12T12:32:14.452264764Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T12:32:14.452448714Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T12:32:14.561591955Z 12:32:14 PM [express] GET /api/study/profile/activities 200 in 96ms :: [{"type":"lesson_completed","t…
+2026-01-12T12:32:14.563286132Z 12:32:14 PM [express] GET /api/study/profile 304 in 99ms :: {"id":2,"userId":1,"totalXp":2040,"curren…
+2026-01-12T12:32:14.677817252Z 12:32:14 PM [express] GET /api/study/cards 304 in 209ms :: []
+2026-01-12T12:32:14.767352464Z 12:32:14 PM [express] GET /api/study/achievements 200 in 292ms :: [{"id":1,"code":"first_lesson","nam…
+2026-01-12T12:32:14.808456779Z 12:32:14 PM [express] GET /api/study/profile/stats 200 in 337ms :: {"lessonsCompleted":8,"unitsComple…
+2026-01-12T12:32:19.966558848Z 12:32:19 PM [express] GET /api/study/weeks 304 in 12ms :: [{"id":11,"weekNumber":5,"year":2026,"title…
+2026-01-12T12:32:20.154807489Z 12:32:20 PM [express] GET /api/missions/daily 304 in 140ms :: {"missions":[{"id":61,"userId":1,"missi…
+2026-01-12T12:32:21.054075933Z 12:32:20 PM [express] GET /api/study/weeks/bulk 304 in 710ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T12:32:21.05870706Z 12:32:21 PM [express] GET /api/study/practice/11/status 304 in 703ms :: {"weekId":11,"isUnlocked":fal…
+2026-01-12T12:32:21.256050665Z 12:32:21 PM [express] GET /api/notifications/unread-count 304 in 46ms :: {"count":0}
+2026-01-12T12:32:21.258416651Z 12:32:21 PM [express] GET /api/notifications 304 in 47ms :: {"notifications":[{"id":148,"userId":1,"t…
+2026-01-12T12:32:21.264092038Z 12:32:21 PM [express] GET /api/study/streak/status 304 in 51ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T12:32:21.271922728Z 12:32:21 PM [express] GET /api/study/weekly-goal 304 in 64ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T12:32:57.691947164Z 12:32:57 PM [express] GET /api/study/weekly-goal 304 in 63ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T12:33:02.653578267Z 12:33:02 PM [express] GET /api/study/weekly-goal 304 in 25ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T12:33:02.76206842Z 12:33:02 PM [express] GET /api/study/weeks/bulk 304 in 175ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T12:33:18.757374923Z 12:33:18 PM [express] GET /api/site-content/quem-somos 304 in 336ms :: {"email":{"title":"","content"…
+2026-01-12T12:33:18.953868379Z 12:33:18 PM [express] GET /api/site/highlights 304 in 447ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T12:33:45.259620057Z 12:33:45 PM [express] GET /api/elections/active 304 in 106ms
+2026-01-12T12:33:45.95777622Z 12:33:45 PM [express] GET /api/members 304 in 601ms :: [{"id":1,"fullName":"Administrador","email":"m…
+2026-01-12T12:33:45.95901238Z 12:33:45 PM [express] GET /api/positions 304 in 699ms :: [{"id":1,"name":"Presidente"},{"id":2,"name"…
+2026-01-12T12:33:45.963415264Z 12:33:45 PM [express] GET /api/elections/history 304 in 4ms :: []
+2026-01-12T12:34:00.503825292Z 12:34:00 PM [express] GET /api/elections/active 304 in 5ms
+2026-01-12T12:34:16.32766199Z 12:34:16 PM [express] GET /api/elections/active 304 in 3ms
+2026-01-12T12:34:32.473671095Z 12:34:32 PM [express] GET /api/elections/active 304 in 3ms
+2026-01-12T12:34:50.160136518Z 12:34:50 PM [express] GET /api/site-content/quem-somos 304 in 5ms :: {"email":{"title":"","content":"…
+2026-01-12T12:34:50.253717483Z 12:34:50 PM [express] GET /api/notifications/unread-count 304 in 4ms :: {"count":0}
+2026-01-12T12:34:50.560328745Z 12:34:50 PM [express] GET /api/notifications 304 in 403ms :: {"notifications":[{"id":148,"userId":1,"…
+2026-01-12T12:34:50.858717255Z 12:34:50 PM [express] GET /api/site/highlights 304 in 511ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T12:34:56.156310469Z 12:34:56 PM [express] GET /api/elections/active 304 in 4ms
+2026-01-12T12:34:56.161923342Z 12:34:56 PM [express] GET /api/positions 304 in 4ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":"…
+2026-01-12T12:34:56.163348824Z 12:34:56 PM [express] GET /api/elections/history 304 in 4ms :: []
+2026-01-12T12:34:56.258355251Z 12:34:56 PM [express] GET /api/members 304 in 87ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T12:35:11.581044242Z 12:35:11 PM [express] GET /api/elections/active 304 in 4ms

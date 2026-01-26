@@ -1,0 +1,206 @@
+Create a full-stack web application called **Emaús Vota**, designed to manage elections in a church youth group (UMP Emaús).  
+Use **Node.js + Express + SQLite** for the backend and **React + Tailwind CSS** for the frontend.  
+
+The app must have secure login, admin/member roles, election management, and voting functionality.  
+All data should persist in an SQLite database.
+
+---
+
+# 🧱 DATABASE STRUCTURE
+
+Use SQLite with the following tables and relationships:
+
+## Table: users
+- id (integer, primary key, auto-increment)
+- full_name (text)
+- email (text, unique)
+- password (hashed, text)
+- is_admin (boolean)
+- is_member (boolean)
+
+## Table: positions
+- id (integer, primary key)
+- name (text, unique)  
+  Fixed positions (preloaded on first run):
+  1. President
+  2. Vice-President
+  3. 1st Secretary
+  4. 2nd Secretary
+  5. Treasurer
+
+## Table: elections
+- id (integer, primary key)
+- name (text)
+- is_active (boolean)
+
+## Table: candidates
+- id (integer, primary key)
+- name (text)
+- position_id (foreign key → positions.id)
+- election_id (foreign key → elections.id)
+
+## Table: votes
+- id (integer, primary key)
+- voter_id (foreign key → users.id)
+- candidate_id (foreign key → candidates.id)
+- position_id (foreign key → positions.id)
+- election_id (foreign key → elections.id)
+- created_at (datetime)
+
+**Constraints:**
+- A user can vote **only once per position per election**.
+- Each election can have multiple candidates.
+- Each position can appear in multiple elections.
+- Each vote belongs to one user, one candidate, one position, and one election.
+
+---
+
+# ⚙️ BACKEND (Node.js + Express)
+
+### 1. Authentication routes
+**POST /auth/register**
+- Create a new user.
+- Hash password with bcrypt.
+- Default: is_member = true, is_admin = false (unless manually toggled in DB).
+
+**POST /auth/login**
+- Validate email and password.
+- Return JWT token with user role (admin or member).
+
+**Middleware:** `authMiddleware.js`
+- Verify JWT and set req.user.
+- Separate route protection for admin/member.
+
+---
+
+### 2. Admin routes (protected by is_admin)
+**POST /elections**
+- Create a new election (default is_active = true).
+
+**PATCH /elections/:id/close**
+- Set is_active = false (end the election).
+
+**POST /candidates**
+- Add new candidate (requires election_id and position_id).
+
+**GET /results/:electionId**
+- Return candidates grouped by position, with vote counts sorted descending.
+
+---
+
+### 3. Member routes (protected by is_member)
+**GET /elections/active**
+- Return the current active election.
+
+**GET /positions**
+- Return list of positions.
+
+**GET /candidates/:positionId**
+- Return list of candidates for that position (only for active election).
+
+**POST /vote**
+- Record a vote.
+- Check if user already voted for that position in this election.
+- If yes, reject with status 403 and message “Você já votou para esse cargo.”
+- If not, create vote and return success message “Voto registrado com sucesso!”
+
+---
+
+### 4. General routes
+**GET /results/public/:electionId**
+- Return final results (same as admin version, but public).
+
+---
+
+# 🎨 FRONTEND (React + Tailwind)
+
+### 🏠 Login / Register Page
+- Fields: Email, Password, Full Name
+- Buttons:
+  - “Entrar”
+  - “Registrar-se”
+- After login:
+  - If user.is_admin → redirect to `/admin`
+  - If user.is_member → redirect to `/vote`
+- Show banner:  
+  **“Emaús Vota — sistema de votação da UMP Emaús”**
+
+---
+
+### ⚙️ Admin Dashboard (/admin)
+**Visibility:** Only for admins
+
+#### Components:
+1. Header: “Administração”
+2. Buttons:
+   - 🟢 “Abrir Nova Eleição” → POST /elections
+   - 🔴 “Encerrar Eleição” → PATCH /elections/:id/close
+   - 🧑‍💼 “Gerenciar Candidatos”
+3. Section: Manage Candidates
+   - Table: Candidate name, Position, Election
+   - Button ➕ “Adicionar Candidato” (modal form)
+     - Name (text)
+     - Position (dropdown)
+     - Election (auto-filled active)
+4. 📊 Button: “Ver Resultados”
+   - Navigates to /results (admin view)
+
+---
+
+### 🗳️ Vote Page (/vote)
+**Visibility:** Only for members
+
+#### Layout:
+- Title: “Votação”
+- Subtitle: “Escolha seu candidato para cada cargo”
+- List all positions from `/positions`
+
+When selecting a position:
+- Show candidates (GET /candidates/:positionId)
+  - Display candidate name and “Votar” button.
+
+Button “Votar” → POST /vote  
+- Show toast: “Voto registrado com sucesso!”  
+- Disable vote button after voting.
+
+---
+
+### 📊 Results Page (/results)
+- Title: “Resultados da Eleição”
+- For each position:
+  - List candidates with vote counts
+  - Highlight winner (most votes) with gold background
+  - Show message:
+    > “Resultados finais. Eleição encerrada.”
+
+---
+
+# 🔒 SECURITY RULES
+
+- JWT authentication for all routes
+- Admin routes protected with `is_admin`
+- Members can vote only once per position per active election
+- No raw password stored (use bcrypt)
+- Votes table restricted from duplicate (UNIQUE voter_id + position_id + election_id)
+
+---
+
+# 💾 EXTRA FEATURES
+- Auto-create the 5 fixed positions on server startup if table is empty.
+- Show active election status on admin dashboard.
+- Add timestamps to all tables (created_at, updated_at).
+
+---
+
+# 🎨 DESIGN GUIDELINES
+- Tailwind colors inspired by UMP Emaús:
+  - Orange → `#FFA500`
+  - Gray → `#E5E5E5`
+  - White → `#FFFFFF`
+- Use card-style layouts for candidate lists.
+- Use icons for buttons (Heroicons or Lucide).
+
+---
+
+# 🧩 FILE STRUCTURE (suggested)
+

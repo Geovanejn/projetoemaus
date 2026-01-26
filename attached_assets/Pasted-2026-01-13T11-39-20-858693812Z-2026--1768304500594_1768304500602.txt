@@ -1,0 +1,50 @@
+2026-01-13T11:39:20.858693812Z ==> ///////////////////////////////////////////////////////////
+2026-01-13T11:39:20.946651546Z ==> 
+2026-01-13T11:39:21.033365552Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-13T11:39:21.120384077Z ==> 
+2026-01-13T11:39:21.205233094Z ==> ///////////////////////////////////////////////////////////
+2026-01-13T11:39:22.666328637Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-13T11:39:22.666595033Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-13T11:39:22.672971939Z [Daily Verse Scheduler] Already sent today (2026-01-13), skipping
+2026-01-13T11:39:24.669175431Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-13T11:39:24.669345465Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-13T11:39:27.767755778Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-13T11:39:27.768040264Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-13T11:39:27.774693916Z [Daily Missions Scheduler] Content already generated for today (2026-01-13)
+2026-01-13T11:39:28.067525749Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-13T11:39:28.067643921Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-13T11:39:28.067649772Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-13T11:39:28.067653101Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-13T11:39:28.067685202Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-13T11:39:28.067689072Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-13T11:39:28.067726293Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-13T11:39:28.067731093Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2026-01-13T11:39:28.067734383Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-13T11:39:28.067742744Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-13T11:39:28.067825045Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-13T11:39:28.067835736Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-13T11:39:28.067843486Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-13T11:39:28.067846536Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-13T11:39:28.067849636Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-13T11:39:28.067907217Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2026-01-13T11:39:28.067912118Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-13T11:39:28.067914927Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2026-01-13T11:39:28.067918258Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-13T11:39:28.067942758Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-13T11:39:28.067959099Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-13T11:39:28.067962939Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-13T11:39:28.06802221Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-13T11:39:28.06802812Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-13T11:39:28.06803168Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-13T11:39:28.068049611Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-13T11:39:28.068057751Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-13T11:39:28.068111052Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2026-01-13T11:39:28.068115432Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2026-01-13T11:39:28.068117372Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-13T11:39:28.068119032Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-13T11:39:28.068120822Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-13
+2026-01-13T11:40:21.665358041Z 11:40:21 AM [express] GET /api/site-content/quem-somos 304 in 140ms :: {"email":{"title":"","content"…
+2026-01-13T11:40:21.667550381Z 11:40:21 AM [express] GET /api/notifications/unread-count 304 in 141ms :: {"count":0}
+2026-01-13T11:40:21.671409319Z 11:40:21 AM [express] GET /api/notifications 304 in 113ms :: {"notifications":[{"id":176,"userId":1,"…
+2026-01-13T11:40:21.758650713Z 11:40:21 AM [express] GET /api/site/daily-verse 304 in 221ms :: {"id":7,"verse":"Reconhece-o em todos…
+2026-01-13T11:40:21.8053513Z 11:40:21 AM [express] GET /api/site/daily-verses 304 in 6ms :: [{"id":7,"verse":"Reconhece-o em todos…

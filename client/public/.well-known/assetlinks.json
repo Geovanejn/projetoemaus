@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "br.com.umpemaus.twa",
+    "sha256_cert_fingerprints": ["DE:43:AA:13:FB:C0:0B:1F:D9:5D:66:EA:41:C1:3C:71:30:9E:92:F0:E2:02:10:1C:3A:FC:20:13:B3:59:ED:C4"]
+  }
+}]

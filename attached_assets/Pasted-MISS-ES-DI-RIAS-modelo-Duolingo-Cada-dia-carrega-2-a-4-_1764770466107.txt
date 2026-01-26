@@ -1,0 +1,154 @@
+MISSÕES DIÁRIAS (modelo Duolingo)
+
+Cada dia carrega 2 a 4 desafios simples, sempre renovados.
+Abaixo estão modelos prontos, que podem ser rotacionados diariamente.
+
+
+---
+
+🔥 1. Concluir a lição da trilha
+
+Aparece somente se o usuário tiver lição pendente.
+
+✔ Exemplo de descrição:
+
+Conclua 1 lição na sua trilha
+
+Prossiga para a próxima etapa do seu estudo
+
+Complete o capítulo atual do estudo
+
+
+Por que funciona?
+
+Evita forçar o usuário se ele já concluiu todas as trilhas.
+
+Incentiva progresso real no aprendizado.
+
+
+
+---
+
+📖 2. Ler o Versículo do Dia
+
+Simples, rápido, faz o usuário entrar no app.
+
+✔ Formas diferentes para variar:
+
+Leia o versículo do dia
+
+Medite na Palavra diária
+
+Compartilhe o versículo do dia com alguém (opcional)
+
+
+
+---
+
+⏱️ 3. Desafio Cronometrado – Quiz Bíblico Rápido
+
+Sessão de 30 segundos / 1 minuto com perguntas rápidas.
+
+Tipos de perguntas sugeridas:
+
+Quantos livros tem a Bíblia?
+
+Quantos livros tem o Antigo Testamento?
+
+Quantos livros tem o Novo Testamento?
+
+Como são divididos os livros da Bíblia?
+
+Quem escreveu Provérbios?
+
+Salomão foi um faraó?
+
+Quem libertou o povo do Egito?
+
+Quem foi lançado na cova dos leões?
+
+Qual profeta enfrentou os profetas de Baal?
+
+Em que livro fica João 3:16?
+
+Quem foi o primeiro rei de Israel?
+
+Quem construiu a arca?
+
+
+Missões diárias possíveis:
+
+Acerte 3 perguntas no desafio rápido
+
+Complete um desafio cronometrado
+
+Acerte 1 pergunta em menos de 5 segundos
+
+
+
+---
+
+🧠 4. Mini-missões rápidas de conhecimento bíblico
+
+Para deixar a lista variada:
+
+Descubra o personagem bíblico do dia (AI mostra dicas)
+
+Faça uma oração curta na tela (“Obrigado, Deus, por...”)
+
+Memorize 1 palavra-chave do estudo
+
+Responda uma pergunta de Verdadeiro ou Falso
+
+Encontre a referência correta (ex: “Onde fica o Salmo do Bom Pastor?”)
+
+
+
+---
+
+💎 MISSÕES DIÁRIAS – LISTA FINAL (para usar direto no app)
+
+Você pode usar 3 missões por dia, rotacionando entre as abaixo:
+
+1. Conclua uma lição da sua trilha
+
+(Aparece só se houver lição disponível)
+
+2. Leia o Versículo do Dia
+
+3. Complete 1 Desafio Cronometrado
+
+4. Acerte 3 perguntas bíblicas no modo rápido
+
+5. Leia a explicação de um personagem bíblico (AI cria resumo curto)
+
+6. Faça 2 respostas perfeitas seguidas (sem errar)
+
+7. Memorize o tema do dia
+
+AI seleciona um conceito da lição.
+
+8. Faça uma oração simples (toca no botão e escreve 1 frase)
+
+9. Assista ao “Dado Bíblico do Dia”
+
+AI gera um fato bíblico interessante.
+
+10. Complete sua sequência (streak) hoje
+
+Missão bônus.
+
+
+---
+
+🏆 RECOMPENSA AO COMPLETAR TODAS AS MISSÕES DIÁRIAS
+
+Quando o usuário finalizar todas as missões do dia:
+
++ 50 XP
+ou
++ 100 XP (em dias especiais)
+
+E ainda pode destravar uma Caixa de Recompensa:
+
+Ícone especial

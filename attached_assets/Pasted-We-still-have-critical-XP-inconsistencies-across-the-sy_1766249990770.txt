@@ -1,0 +1,68 @@
+We still have critical XP inconsistencies across the system. I need a full corrective refactor, backend-first, with frontend verification.
+
+CONTEXT:
+The XP system must have a SINGLE SOURCE OF TRUTH.
+XP deductions (-5 hint, -10 wrong answer) MUST be respected everywhere.
+
+CURRENT WRONG BEHAVIOR:
+- Global ranking shows 370 XP (should be 355)
+- Year ranking shows 50 XP (should be 355)
+- Season (magazine) ranking shows 50 XP (should be 235 = 185 lesson + 50 bonus)
+
+ROOT CAUSE:
+XP is being calculated from multiple inconsistent sources:
+- studyProfiles.totalXp (inflated, ignores deductions)
+- xpTransactions (audit log only)
+- userSeasonProgress.xpEarned (derived and incomplete)
+
+CORRECT SINGLE SOURCE OF TRUTH:
+user_lesson_progress.xpEarned
+- Immutable once lesson is completed
+- Already includes deductions and bonuses
+- Must be used for ALL rankings
+
+BACKEND REQUIREMENTS:
+
+1) DO NOT use studyProfiles.totalXp in ANY leaderboard
+2) DO NOT use xpTransactions for ranking calculations
+3) DO NOT use userSeasonProgress.xpEarned
+
+4) Implement leaderboards as follows:
+
+GLOBAL LEADERBOARD:
+SUM(user_lesson_progress.xpEarned)
+WHERE status = 'completed'
+
+YEAR LEADERBOARD:
+SUM(user_lesson_progress.xpEarned)
+JOIN study_lessons -> study_weeks
+FILTER by study_weeks.year
+
+SEASON (MAGAZINE) LEADERBOARD:
+SUM(user_lesson_progress.xpEarned)
+JOIN study_lessons
+FILTER by study_lessons.season_id
+
+5) Weekly practice bonus (50 XP) must be:
+- Stored in an IMMUTABLE table (NOT totalXp)
+- Included in global, year, and season rankings
+- Never recalculated
+
+FRONTEND REQUIREMENTS:
+
+- Frontend must NEVER calculate XP
+- Frontend must NEVER read studyProfiles.totalXp for rankings
+- Rankings must display EXACT values returned by backend APIs
+- Verify ALL leaderboard-related components after backend changes
+
+DELIVERABLES:
+- Show exact backend code changes
+- Show corrected SQL / Drizzle queries
+- Identify and remove legacy XP paths
+- Verify frontend leaderboard rendering
+- Ensure final values are:
+  - Global: 355 XP
+  - Year: 355 XP
+  - Season: 235 XP
+
+This refactor must be final, consistent, and production-safe.

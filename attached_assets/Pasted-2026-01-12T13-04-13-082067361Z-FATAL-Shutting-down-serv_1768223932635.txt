@@ -1,0 +1,100 @@
+2026-01-12T13:04:13.082067361Z [FATAL] Shutting down server
+2026-01-12T13:04:46.786510277Z ==> Running 'node ./dist/index.js'
+2026-01-12T13:05:08.680266363Z ✓ Logo configured with public URL: https://umpemaus.com.br/logo-email.png
+2026-01-12T13:05:08.681804743Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T13:05:08.681924466Z [MercadoPago] Client initialized successfully
+2026-01-12T13:05:08.682364117Z [Push] Web Push configured successfully
+2026-01-12T13:05:08.974868992Z [WebSocket] Server initialized
+2026-01-12T13:05:09.078508153Z 1:05:08 PM [express] serving on port 10000
+2026-01-12T13:05:09.078676688Z Initializing PostgreSQL database connection...
+2026-01-12T13:05:09.504984824Z [DB] Database initialization error: error: Your project has exceeded the data transfer quota. Upgrade your plan to increase limits.
+2026-01-12T13:05:09.505008334Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2026-01-12T13:05:09.505013314Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T13:05:09.505020794Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:2026:20)
+2026-01-12T13:05:09.505026855Z     at async Server.<anonymous> (file:///opt/render/project/src/dist/index.js:25999:7) {
+2026-01-12T13:05:09.505032265Z   length: 109,
+2026-01-12T13:05:09.505038505Z   severity: 'ERROR',
+2026-01-12T13:05:09.505043775Z   code: 'XX000',
+2026-01-12T13:05:09.505048995Z   detail: undefined,
+2026-01-12T13:05:09.505054635Z   hint: undefined,
+2026-01-12T13:05:09.505060495Z   position: undefined,
+2026-01-12T13:05:09.505066606Z   internalPosition: undefined,
+2026-01-12T13:05:09.505072146Z   internalQuery: undefined,
+2026-01-12T13:05:09.505077196Z   where: undefined,
+2026-01-12T13:05:09.505082336Z   schema: undefined,
+2026-01-12T13:05:09.505088256Z   table: undefined,
+2026-01-12T13:05:09.505093496Z   column: undefined,
+2026-01-12T13:05:09.505098667Z   dataType: undefined,
+2026-01-12T13:05:09.505103817Z   constraint: undefined,
+2026-01-12T13:05:09.505108967Z   file: undefined,
+2026-01-12T13:05:09.505114457Z   line: undefined,
+2026-01-12T13:05:09.505119707Z   routine: undefined
+2026-01-12T13:05:09.505125117Z }
+2026-01-12T13:05:09.505144858Z [FATAL] Failed to initialize: Your project has exceeded the data transfer quota. Upgrade your plan to increase limits.
+2026-01-12T13:05:09.505166068Z [FATAL] Shutting down server
+2026-01-12T13:05:56.477685623Z ==> Running 'node ./dist/index.js'
+2026-01-12T13:06:16.264965091Z ✓ Logo configured with public URL: https://umpemaus.com.br/logo-email.png
+2026-01-12T13:06:16.266556472Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T13:06:16.266703576Z [MercadoPago] Client initialized successfully
+2026-01-12T13:06:16.267162918Z [Push] Web Push configured successfully
+2026-01-12T13:06:16.680775361Z [WebSocket] Server initialized
+2026-01-12T13:06:16.866582273Z 1:06:16 PM [express] serving on port 10000
+2026-01-12T13:06:16.866788028Z Initializing PostgreSQL database connection...
+2026-01-12T13:06:19.188930171Z [DB] Database initialization error: error: Your project has exceeded the data transfer quota. Upgrade your plan to increase limits.
+2026-01-12T13:06:19.188967942Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2026-01-12T13:06:19.188974572Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T13:06:19.188979302Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:2026:20)
+2026-01-12T13:06:19.188984262Z     at async Server.<anonymous> (file:///opt/render/project/src/dist/index.js:25999:7) {
+2026-01-12T13:06:19.188992512Z   length: 109,
+2026-01-12T13:06:19.188997342Z   severity: 'ERROR',
+2026-01-12T13:06:19.189001902Z   code: 'XX000',
+2026-01-12T13:06:19.189006423Z   detail: undefined,
+2026-01-12T13:06:19.189010703Z   hint: undefined,
+2026-01-12T13:06:19.189014823Z   position: undefined,
+2026-01-12T13:06:19.189019963Z   internalPosition: undefined,
+2026-01-12T13:06:19.189024203Z   internalQuery: undefined,
+2026-01-12T13:06:19.189028323Z   where: undefined,
+2026-01-12T13:06:19.189032573Z   schema: undefined,
+2026-01-12T13:06:19.189037243Z   table: undefined,
+2026-01-12T13:06:19.189041974Z   column: undefined,
+2026-01-12T13:06:19.189045884Z   dataType: undefined,
+2026-01-12T13:06:19.189049784Z   constraint: undefined,
+2026-01-12T13:06:19.189053964Z   file: undefined,
+2026-01-12T13:06:19.189058374Z   line: undefined,
+2026-01-12T13:06:19.189062794Z   routine: undefined
+2026-01-12T13:06:19.189067624Z }
+2026-01-12T13:06:19.189097275Z [FATAL] Failed to initialize: Your project has exceeded the data transfer quota. Upgrade your plan to increase limits.
+2026-01-12T13:06:19.189133266Z [FATAL] Shutting down server
+2026-01-12T13:07:55.390615788Z ==> Running 'node ./dist/index.js'
+2026-01-12T13:08:17.084946446Z ✓ Logo configured with public URL: https://umpemaus.com.br/logo-email.png
+2026-01-12T13:08:17.086314772Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T13:08:17.086444135Z [MercadoPago] Client initialized successfully
+2026-01-12T13:08:17.086902797Z [Push] Web Push configured successfully
+2026-01-12T13:08:17.288328747Z [WebSocket] Server initialized
+2026-01-12T13:08:17.3946907Z 1:08:17 PM [express] serving on port 10000
+2026-01-12T13:08:17.394843764Z Initializing PostgreSQL database connection...
+2026-01-12T13:08:17.80133053Z [DB] Database initialization error: error: Your project has exceeded the data transfer quota. Upgrade your plan to increase limits.
+2026-01-12T13:08:17.80135564Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2026-01-12T13:08:17.80136149Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T13:08:17.80136591Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:2026:20)
+2026-01-12T13:08:17.801371591Z     at async Server.<anonymous> (file:///opt/render/project/src/dist/index.js:25999:7) {
+2026-01-12T13:08:17.801377141Z   length: 109,
+2026-01-12T13:08:17.801383831Z   severity: 'ERROR',
+2026-01-12T13:08:17.801389131Z   code: 'XX000',
+2026-01-12T13:08:17.801394541Z   detail: undefined,
+2026-01-12T13:08:17.801400482Z   hint: undefined,
+2026-01-12T13:08:17.801406432Z   position: undefined,
+2026-01-12T13:08:17.801412632Z   internalPosition: undefined,
+2026-01-12T13:08:17.801418092Z   internalQuery: undefined,
+2026-01-12T13:08:17.801423452Z   where: undefined,
+2026-01-12T13:08:17.801428562Z   schema: undefined,
+2026-01-12T13:08:17.801433872Z   table: undefined,
+2026-01-12T13:08:17.801439063Z   column: undefined,
+2026-01-12T13:08:17.801443883Z   dataType: undefined,
+2026-01-12T13:08:17.801447333Z   constraint: undefined,
+2026-01-12T13:08:17.801450733Z   file: undefined,
+2026-01-12T13:08:17.801454163Z   line: undefined,
+2026-01-12T13:08:17.801457663Z   routine: undefined
+2026-01-12T13:08:17.801461523Z }
+2026-01-12T13:08:17.801478713Z [FATAL] Failed to initialize: Your project has exceeded the data transfer quota. Upgrade your plan to increase limits.
+2026-01-12T13:08:17.801489754Z [FATAL] Shutting down server

@@ -1,0 +1,100 @@
+2025-12-22T15:00:52.194448207Z ../dist/public/assets/NewUnitCard-C5w42M-4.js                                        6.08 kB │ gzip:   1.96 kB
+2025-12-22T15:00:52.194475608Z ../dist/public/assets/DeoGloryAdminLayout-DcBjEmGc.js                                6.63 kB │ gzip:   2.06 kB
+2025-12-22T15:00:52.19451181Z ../dist/public/assets/season-detail-CiE5ZIFu.js                                      6.85 kB │ gzip:   2.31 kB
+2025-12-22T15:00:52.194538781Z ../dist/public/assets/EspiritualidadeComentarios-PTNwzh-t.js                         7.09 kB │ gzip:   1.91 kB
+2025-12-22T15:00:52.194556982Z ../dist/public/assets/explore-DXuSvrxO.js                                            7.13 kB │ gzip:   2.34 kB
+2025-12-22T15:00:52.194571762Z ../dist/public/assets/missions-DJL1R-oG.js                                           7.54 kB │ gzip:   2.56 kB
+2025-12-22T15:00:52.194609494Z ../dist/public/assets/vote-QSnIMjIO.js                                               7.88 kB │ gzip:   2.22 kB
+2025-12-22T15:00:52.194616394Z ../dist/public/assets/slider-D2aNmAF3.js                                             8.15 kB │ gzip:   3.30 kB
+2025-12-22T15:00:52.194661456Z ../dist/public/assets/DeoGloryRevistas-DMqRvFBV.js                                   8.57 kB │ gzip:   2.83 kB
+2025-12-22T15:00:52.194675387Z ../dist/public/assets/EspiritualidadeOracoes-BLQKEYJs.js                             8.90 kB │ gzip:   2.23 kB
+2025-12-22T15:00:52.194708388Z ../dist/public/assets/MarketingEventoEditor-CJTzcl-D.js                              9.31 kB │ gzip:   2.68 kB
+2025-12-22T15:00:52.194715818Z ../dist/public/assets/MarketingDiretoriaEditor-DPxIRdrg.js                           9.46 kB │ gzip:   2.96 kB
+2025-12-22T15:00:52.19475772Z ../dist/public/assets/LessonComplete-CT7UMVMQ.js                                     9.58 kB │ gzip:   3.51 kB
+2025-12-22T15:00:52.194763911Z ../dist/public/assets/DeoGloryDashboard-CMDjoa2v.js                                 10.21 kB │ gzip:   2.35 kB
+2025-12-22T15:00:52.194813593Z ../dist/public/assets/DeoGloryLicaoDetail-BN2TU9fK.js                               10.33 kB │ gzip:   3.57 kB
+2025-12-22T15:00:52.194818573Z ../dist/public/assets/DeoGloryUsuarios-VKq2_qs8.js                                  10.34 kB │ gzip:   2.99 kB
+2025-12-22T15:00:52.194854835Z ../dist/public/assets/results-CZ6fpYLC.js                                           10.45 kB │ gzip:   3.43 kB
+2025-12-22T15:00:52.194858775Z ../dist/public/assets/confetti.module-ONDKWxYZ.js                                   10.66 kB │ gzip:   4.28 kB
+2025-12-22T15:00:52.194903227Z ../dist/public/assets/MarketingDashboard-Dfpx0zvJ.js                                10.75 kB │ gzip:   2.83 kB
+2025-12-22T15:00:52.194913717Z ../dist/public/assets/season-ranking-v2orUQMb.js                                    11.23 kB │ gzip:   3.25 kB
+2025-12-22T15:00:52.194945048Z ../dist/public/assets/seasons-C6R3pM1I.js                                           11.25 kB │ gzip:   3.54 kB
+2025-12-22T15:00:52.194952359Z ../dist/public/assets/ranking-Blmvw6EX.js                                           11.73 kB │ gzip:   3.40 kB
+2025-12-22T15:00:52.19498727Z ../dist/public/assets/MarketingQuemSomos-DqGvRpn4.js                                12.68 kB │ gzip:   3.57 kB
+2025-12-22T15:00:52.195015002Z ../dist/public/assets/format-CwBWPe7n.js                                            13.01 kB │ gzip:   3.45 kB
+2025-12-22T15:00:52.195040363Z ../dist/public/assets/DeoGloryConfiguracoes-Bqyxnve9.js                             13.17 kB │ gzip:   2.80 kB
+2025-12-22T15:00:52.195046793Z ../dist/public/assets/final-challenge-BXlOIqxc.js                                   13.53 kB │ gzip:   4.36 kB
+2025-12-22T15:00:52.195080404Z ../dist/public/assets/profile-Cc20Zs84.js                                           13.81 kB │ gzip:   3.84 kB
+2025-12-22T15:00:52.195104115Z ../dist/public/assets/achievements-KIC8pQ92.js                                      13.98 kB │ gzip:   4.92 kB
+2025-12-22T15:00:52.195136917Z ../dist/public/assets/DeoGloryEstudos-C5jnnEBE.js                                   15.41 kB │ gzip:   4.60 kB
+2025-12-22T15:00:52.195143667Z ../dist/public/assets/DeoGloryLicoes-CTfQOJNs.js                                    16.38 kB │ gzip:   4.42 kB
+2025-12-22T15:00:52.195171848Z ../dist/public/assets/DeoGloryRevistaDetail-zz-Yr-GJ.js                             17.29 kB │ gzip:   4.68 kB
+2025-12-22T15:00:52.195200059Z ../dist/public/assets/practice-B3cb6StG.js                                          18.20 kB │ gzip:   4.87 kB
+2025-12-22T15:00:52.19521885Z ../dist/public/assets/index-CMczMNgT.js                                             19.12 kB │ gzip:   6.04 kB
+2025-12-22T15:00:52.195252372Z ../dist/public/assets/purify.es-sOfw8HaZ.js                                         22.67 kB │ gzip:   8.79 kB
+2025-12-22T15:00:52.195272853Z ../dist/public/assets/preview-v0C-LtyS.js                                           23.80 kB │ gzip:   7.09 kB
+2025-12-22T15:00:52.195299964Z ../dist/public/assets/admin-site-thO1Xu44.js                                        24.31 kB │ gzip:   5.63 kB
+2025-12-22T15:00:52.195332495Z ../dist/public/assets/ImageCropDialog-4s4Jh4dw.js                                   26.08 kB │ gzip:   8.15 kB
+2025-12-22T15:00:52.195335205Z ../dist/public/assets/mission-activity-BZ_nikeR.js                                  30.19 kB │ gzip:   8.45 kB
+2025-12-22T15:00:52.195368037Z ../dist/public/assets/index-g8B9XyEP.js                                             49.36 kB │ gzip:  10.06 kB
+2025-12-22T15:00:52.195393808Z ../dist/public/assets/lesson-D-HbyNtw.js                                            81.59 kB │ gzip:  21.88 kB
+2025-12-22T15:00:52.195417249Z ../dist/public/assets/ExerciseCard-WlmvtOXW.js                                     130.22 kB │ gzip:  39.83 kB
+2025-12-22T15:00:52.195452281Z ../dist/public/assets/index.es-DkfUzcZV.js                                         150.82 kB │ gzip:  51.65 kB
+2025-12-22T15:00:52.195501993Z ../dist/public/assets/EspiritualidadeDevocionalEditor-CMaH5qdh.js                  375.98 kB │ gzip: 118.92 kB
+2025-12-22T15:00:52.195507793Z ../dist/public/assets/DeoGloryRelatorios-CVyoHRiO.js                               404.09 kB │ gzip: 108.41 kB
+2025-12-22T15:00:52.195576716Z ../dist/public/assets/admin-CNntT5Ko.js                                            529.29 kB │ gzip: 167.61 kB
+2025-12-22T15:00:52.195584446Z ../dist/public/assets/index-BV1pS6I9.js                                          1,054.10 kB │ gzip: 299.67 kB
+2025-12-22T15:00:52.195608507Z 
+2025-12-22T15:00:52.195615168Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2025-12-22T15:00:52.195617688Z - Using dynamic import() to code-split the application
+2025-12-22T15:00:52.195620168Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-12-22T15:00:52.195622788Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-12-22T15:00:52.196212783Z ✓ built in 17.61s
+2025-12-22T15:00:52.374395804Z 
+2025-12-22T15:00:52.374437645Z   dist/index.js  645.6kb
+2025-12-22T15:00:52.374443546Z 
+2025-12-22T15:00:52.374446436Z ⚡ Done in 38ms
+2025-12-22T15:01:09.047738901Z ==> Uploading build...
+2025-12-22T15:01:35.057868802Z ==> Uploaded in 17.5s. Compression took 8.5s
+2025-12-22T15:01:35.233036162Z ==> Build successful 🎉
+2025-12-22T15:02:03.181286225Z ==> Deploying...
+2025-12-22T15:02:53.259394605Z ==> Running 'node ./dist/index.cjs'
+2025-12-22T15:02:53.887907353Z node:internal/modules/cjs/loader:1404
+2025-12-22T15:02:53.887936313Z   throw err;
+2025-12-22T15:02:53.887941183Z   ^
+2025-12-22T15:02:53.887944663Z 
+2025-12-22T15:02:53.887948804Z Error: Cannot find module '/opt/render/project/src/dist/index.cjs'
+2025-12-22T15:02:53.887952904Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+2025-12-22T15:02:53.887956393Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+2025-12-22T15:02:53.887959814Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+2025-12-22T15:02:53.887964234Z     at Function._load (node:internal/modules/cjs/loader:1211:37)
+2025-12-22T15:02:53.887967914Z     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-12-22T15:02:53.887971094Z     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-12-22T15:02:53.887973914Z     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+2025-12-22T15:02:53.887978654Z     at node:internal/main/run_main_module:36:49 {
+2025-12-22T15:02:53.887981464Z   code: 'MODULE_NOT_FOUND',
+2025-12-22T15:02:53.887984794Z   requireStack: []
+2025-12-22T15:02:53.887987054Z }
+2025-12-22T15:02:53.887989164Z 
+2025-12-22T15:02:53.887991374Z Node.js v22.16.0
+2025-12-22T15:03:03.763588773Z ==> Exited with status 1
+2025-12-22T15:03:03.780794021Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-12-22T15:03:09.613301971Z ==> Running 'node ./dist/index.cjs'
+2025-12-22T15:03:09.906006498Z node:internal/modules/cjs/loader:1404
+2025-12-22T15:03:09.906028028Z   throw err;
+2025-12-22T15:03:09.906030738Z   ^
+2025-12-22T15:03:09.906032948Z 
+2025-12-22T15:03:09.906035748Z Error: Cannot find module '/opt/render/project/src/dist/index.cjs'
+2025-12-22T15:03:09.906038578Z     at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+2025-12-22T15:03:09.906040698Z     at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+2025-12-22T15:03:09.906042908Z     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+2025-12-22T15:03:09.906045698Z     at Function._load (node:internal/modules/cjs/loader:1211:37)
+2025-12-22T15:03:09.906047948Z     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-12-22T15:03:09.906050108Z     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-12-22T15:03:09.906053348Z     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+2025-12-22T15:03:09.906056648Z     at node:internal/main/run_main_module:36:49 {
+2025-12-22T15:03:09.906059598Z   code: 'MODULE_NOT_FOUND',
+2025-12-22T15:03:09.906062459Z   requireStack: []
+2025-12-22T15:03:09.906064648Z }
+2025-12-22T15:03:09.906066699Z 
+2025-12-22T15:03:09.906068819Z Node.js v22.16.0

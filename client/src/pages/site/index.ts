@@ -1,0 +1,9 @@
+export { default as SiteHomePage } from "./home";
+export { default as DevocionaisPage } from "./devocionais";
+export { default as DevocionalDetailPage } from "./devocional-detail";
+export { default as AgendaPage } from "./agenda";
+export { default as QuemSomosPage } from "./quem-somos";
+export { default as DiretoriaPage } from "./diretoria";
+export { default as OracaoPage } from "./oracao";
+export { default as MembroPage } from "./membro";
+export { default as VersiculoDoDiaPage } from "./versiculo-do-dia";

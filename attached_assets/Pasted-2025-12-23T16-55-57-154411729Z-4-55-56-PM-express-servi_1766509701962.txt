@@ -1,0 +1,100 @@
+2025-12-23T16:55:57.154411729Z 4:55:56 PM [express] serving on port 10000
+2025-12-23T16:55:57.154617322Z Initializing PostgreSQL database connection...
+2025-12-23T16:55:57.271241647Z ==> No open ports detected, continuing to scan...
+2025-12-23T16:55:57.376085728Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-12-23T16:55:57.84003991Z PostgreSQL connection successful: 2025-12-23T16:55:57.802Z
+2025-12-23T16:55:57.963982074Z ==> Your service is live 🎉
+2025-12-23T16:55:58.252219534Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2025-12-23T16:55:58.252356346Z Database initialized successfully!
+2025-12-23T16:55:58.359945863Z ==> 
+2025-12-23T16:55:58.394788172Z ==> ///////////////////////////////////////////////////////////
+2025-12-23T16:55:58.42743872Z ==> 
+2025-12-23T16:55:58.457445028Z ==> Available at your primary URL https://umpemaus.onrender.com
+2025-12-23T16:55:58.488434917Z ==> 
+2025-12-23T16:55:58.519216945Z ==> ///////////////////////////////////////////////////////////
+2025-12-23T16:55:58.610818255Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2025-12-23T16:55:58.614713271Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2025-12-23T16:55:58.618342493Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-23T16:55:58.652112247Z [Daily Verse Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-23T16:55:58.655134396Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-23T16:55:58.65840268Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2025-12-23T16:55:58.658421481Z [Instagram Scheduler] Running sync...
+2025-12-23T16:55:58.659007122Z [Instagram] Starting sync...
+2025-12-23T16:55:58.756871606Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2025-12-23T16:55:58.849667101Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2025-12-23T16:55:58.849820424Z 4:55:58 PM [express] Database and schedulers initialized successfully
+2025-12-23T16:55:59.651055688Z [Instagram] Fetched 12 posts from API
+2025-12-23T16:56:01.424707353Z [Instagram] Sync completed: 12 saved, 0 errors
+2025-12-23T16:56:01.424983188Z [Instagram Scheduler] Sync completed: 12 posts synced, 0 errors
+2025-12-23T16:56:03.653054668Z [Daily Verse Scheduler] Running initial check at startup...
+2025-12-23T16:56:03.65316106Z [Daily Verse Scheduler] Sending daily verse notification...
+2025-12-23T16:56:04.444621592Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2025-12-23T16:56:04.444708044Z [Daily Verse Scheduler] Using AI-generated verse
+2025-12-23T16:56:05.244655213Z [Notifications] Daily verse notification: 0 members sent, 0 anonymous visitors sent
+2025-12-23T16:56:05.244694484Z [Daily Verse Scheduler] Sent: Romanos 12:12 (ARA)
+2025-12-23T16:56:05.751400577Z [Recovery Verses Scheduler] Running initial check at startup...
+2025-12-23T16:56:05.751420057Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2025-12-23T16:56:06.076092692Z [Recovery Verses Scheduler] Verses already generated for today (recovery-2025-12-23)
+2025-12-23T16:56:08.756779602Z [Daily Missions Scheduler] Running initial check at startup...
+2025-12-23T16:56:08.756798923Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2025-12-23T16:56:08.837936788Z [Daily Missions Scheduler] Content already generated for today (2025-12-23)
+2025-12-23T16:56:16.447313715Z 4:56:16 PM [express] GET /api/notifications/unread-count 304 in 105ms :: {"count":0}
+2025-12-23T16:56:16.52075727Z 4:56:16 PM [express] GET /api/site-content/quem-somos 304 in 70ms :: {}
+2025-12-23T16:56:16.951215294Z 4:56:16 PM [express] GET /api/notifications 200 in 595ms :: {"notifications":[{"id":29,"userId":1,"t…
+2025-12-23T16:56:17.254522778Z 4:56:17 PM [express] GET /api/site/highlights 200 in 886ms :: {"devotional":{"id":2,"title":"Vivendo…
+2025-12-23T16:56:27.379027301Z 4:56:27 PM [express] GET /api/study/admin/monthly-progress 304 in 82ms :: [{"month":"Dez","lessonsCo…
+2025-12-23T16:56:27.467797277Z 4:56:27 PM [express] GET /api/study/admin/weekly-top-members 304 in 143ms :: [{"id":2,"fullName":"Ge…
+2025-12-23T16:56:27.824769917Z 4:56:27 PM [express] GET /api/study/admin/weekly-activity 304 in 72ms :: [{"day":"Qua","date":"2025-…
+2025-12-23T16:56:28.086017494Z 4:56:28 PM [express] GET /api/study/admin/stats 304 in 406ms :: {"totalUsers":3,"activeUsers":1,"tot…
+2025-12-23T16:56:30.157174303Z 4:56:30 PM [express] GET /api/study/admin/users 304 in 335ms :: [{"id":3,"name":"João Pedro Gomes","…
+2025-12-23T16:56:31.666833301Z [Level Sync] Starting level recalculation...
+2025-12-23T16:56:31.733306798Z [Level Sync] Found 3 profiles to check
+2025-12-23T16:56:31.733430391Z [Level Sync] User 5: XP=0, current=1, correct=1
+2025-12-23T16:56:31.733439341Z [Level Sync] User 1: XP=0, current=1, correct=1
+2025-12-23T16:56:31.733450701Z [Level Sync] User 2: XP=8065, current=17, correct=12
+2025-12-23T16:56:31.801784305Z [Level Sync] UPDATED User 2: level 17 -> 12 (XP: 8065)
+2025-12-23T16:56:31.817737959Z [Level Sync] Completed: 1/3 profiles updated
+2025-12-23T16:56:31.817763259Z 4:56:31 PM [express] POST /api/study/admin/recalculate-levels 200 in 138ms :: {"message":"Níveis rec…
+2025-12-23T16:56:32.397248855Z 4:56:32 PM [express] GET /api/study/admin/users 200 in 330ms :: [{"id":3,"name":"João Pedro Gomes","…
+2025-12-23T16:58:15.613236719Z 4:58:15 PM [express] GET /api/notifications/unread-count 304 in 505ms :: {"count":0}
+2025-12-23T16:58:15.681818253Z 4:58:15 PM [express] GET /api/notifications 304 in 572ms :: {"notifications":[{"id":29,"userId":1,"t…
+2025-12-23T16:58:15.878325079Z 4:58:15 PM [express] GET /api/site/highlights 304 in 763ms :: {"devotional":{"id":2,"title":"Vivendo…
+2025-12-23T16:58:16.012780712Z 4:58:16 PM [express] GET /api/site-content/quem-somos 304 in 464ms :: {}
+2025-12-23T16:58:27.342003613Z 4:58:27 PM [express] GET /api/study/profile 200 in 74ms :: {"id":2,"userId":1,"totalXp":0,"currentLe…
+2025-12-23T16:58:27.48508278Z 4:58:27 PM [express] GET /api/missions/daily 200 in 213ms :: {"missions":[{"id":7,"userId":1,"missio…
+2025-12-23T16:58:27.790489273Z 4:58:27 PM [express] GET /api/study/weeks 304 in 137ms :: [{"id":5,"weekNumber":5,"year":2025,"title…
+2025-12-23T16:58:27.873961808Z 4:58:27 PM [express] GET /api/study/leaderboard 200 in 609ms :: {"periodType":"weekly","periodKey":"…
+2025-12-23T16:58:28.563139806Z 4:58:28 PM [express] GET /api/study/weeks/2 200 in 442ms :: {"id":2,"weekNumber":2,"year":2025,"titl…
+2025-12-23T16:58:28.618184347Z 4:58:28 PM [express] GET /api/study/weeks/5 304 in 498ms :: {"id":5,"weekNumber":5,"year":2025,"titl…
+2025-12-23T16:58:28.669964081Z 4:58:28 PM [express] GET /api/study/weeks/3 200 in 540ms :: {"id":3,"weekNumber":3,"year":2025,"titl…
+2025-12-23T16:58:28.683124867Z 4:58:28 PM [express] GET /api/study/weeks/1 200 in 571ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-23T16:58:28.691031066Z 4:58:28 PM [express] GET /api/study/weeks/4 304 in 564ms :: {"id":4,"weekNumber":4,"year":2025,"titl…
+2025-12-23T16:58:28.973202311Z 4:58:28 PM [express] GET /api/study/practice/5/status 304 in 826ms :: {"weekId":5,"isUnlocked":false…
+2025-12-23T16:58:29.175976033Z 4:58:29 PM [express] GET /api/study/weekly-goal 200 in 144ms :: {"weekKey":"2025-W52","goals":{"less…
+2025-12-23T16:58:32.248517398Z 4:58:32 PM [express] GET /api/study/profile/activities 200 in 157ms :: []
+2025-12-23T16:58:32.292923824Z 4:58:32 PM [express] GET /api/study/achievements 200 in 199ms :: [{"id":1,"code":"first_lesson","nam…
+2025-12-23T16:58:32.50775978Z 4:58:32 PM [express] GET /api/study/profile/stats 200 in 405ms :: {"lessonsCompleted":0,"unitsComple…
+2025-12-23T16:59:23.695786763Z 4:59:23 PM [express] GET /api/study/weekly-goal 304 in 550ms :: {"weekKey":"2025-W52","goals":{"less…
+2025-12-23T16:59:34.059082617Z 4:59:34 PM [express] POST /api/auth/login-password 200 in 940ms :: {"user":{"id":2,"fullName":"Geova…
+2025-12-23T16:59:36.782233325Z 4:59:36 PM [express] GET /api/study/weekly-goal 200 in 137ms :: {"weekKey":"2025-W52","goals":{"less…
+2025-12-23T16:59:52.248638062Z 4:59:52 PM [express] GET /api/study/achievements 200 in 702ms :: [{"id":1,"code":"first_lesson","nam…
+2025-12-23T16:59:52.413176732Z 4:59:52 PM [express] GET /api/study/profile/stats 200 in 865ms :: {"lessonsCompleted":13,"unitsCompl…
+2025-12-23T16:59:52.51713948Z 4:59:52 PM [express] GET /api/study/profile 200 in 499ms :: {"id":3,"userId":2,"totalXp":8065,"curre…
+2025-12-23T16:59:52.584643692Z 4:59:52 PM [express] GET /api/study/profile/activities 200 in 658ms :: [{"type":"achievement_unlocke…
+2025-12-23T16:59:52.682930235Z 4:59:52 PM [express] GET /api/study/leaderboard 304 in 1158ms :: {"periodType":"weekly","periodKey":…
+2025-12-23T16:59:56.600001031Z 4:59:56 PM [express] GET /api/study/weeks 304 in 70ms :: [{"id":5,"weekNumber":5,"year":2025,"title"…
+2025-12-23T16:59:56.75655481Z 4:59:56 PM [express] GET /api/missions/daily 200 in 206ms :: {"missions":[{"id":12,"userId":2,"missi…
+2025-12-23T16:59:57.345461532Z 4:59:57 PM [express] GET /api/study/weeks/1 200 in 477ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-23T16:59:57.349021334Z 4:59:57 PM [express] GET /api/study/weeks/4 304 in 462ms :: {"id":4,"weekNumber":4,"year":2025,"titl…
+2025-12-23T16:59:57.406617686Z 4:59:57 PM [express] GET /api/study/weeks/3 200 in 516ms :: {"id":3,"weekNumber":3,"year":2025,"titl…
+2025-12-23T16:59:57.421998597Z 4:59:57 PM [express] GET /api/study/weeks/5 304 in 466ms :: {"id":5,"weekNumber":5,"year":2025,"titl…
+2025-12-23T16:59:57.471295371Z 4:59:57 PM [express] GET /api/study/weeks/2 200 in 520ms :: {"id":2,"weekNumber":2,"year":2025,"titl…
+2025-12-23T16:59:57.667247735Z 4:59:57 PM [express] GET /api/study/practice/5/status 304 in 769ms :: {"weekId":5,"isUnlocked":false…
+2025-12-23T16:59:57.902355869Z 4:59:57 PM [express] GET /api/study/weekly-goal 304 in 132ms :: {"weekKey":"2025-W52","goals":{"less…
+2025-12-23T17:00:16.446342761Z 5:00:16 PM [express] GET /api/study/profile 304 in 200ms :: {"id":3,"userId":2,"totalXp":8065,"curre…
+2025-12-23T17:00:16.645792425Z 5:00:16 PM [express] GET /api/study/profile/activities 304 in 398ms :: [{"type":"achievement_unlocke…
+2025-12-23T17:00:17.053912769Z 5:00:17 PM [express] GET /api/study/achievements 304 in 199ms :: [{"id":1,"code":"first_lesson","nam…
+2025-12-23T17:00:17.05393108Z 5:00:17 PM [express] GET /api/study/profile/stats 304 in 800ms :: {"lessonsCompleted":13,"unitsCompl…
+2025-12-23T17:00:17.189430344Z 5:00:17 PM [express] GET /api/study/leaderboard 304 in 938ms :: {"periodType":"weekly","periodKey":"…
+2025-12-23T17:01:06.313121914Z ==> Detected service running on port 10000
+2025-12-23T17:01:06.504775712Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding

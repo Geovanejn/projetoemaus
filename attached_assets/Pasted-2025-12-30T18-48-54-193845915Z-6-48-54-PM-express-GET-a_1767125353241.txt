@@ -1,0 +1,335 @@
+2025-12-30T18:48:54.193845915Z 6:48:54 PM [express] GET /api/study/admin/users 304 in 330ms :: [{"id":2,"name":"Geovane Nascimento"…
+2025-12-30T18:49:00.21769805Z 6:49:00 PM [express] GET /api/study/encouragement-messages 304 in 1ms :: {"messages":[{"key":"lesson…
+2025-12-30T18:49:00.354661455Z 6:49:00 PM [express] GET /api/study/admin/events-stats 304 in 132ms :: {"totalEvents":0,"activeEvent…
+2025-12-30T18:49:00.533746366Z 6:49:00 PM [express] GET /api/study/admin/users 304 in 330ms :: [{"id":2,"name":"Geovane Nascimento"…
+2025-12-30T18:49:09.354737411Z [Push] Sending "Mensagem da UMP Emaus" to 10 members (including inactive)
+2025-12-30T18:49:10.021919191Z [Admin] Encouragement push: 0 sent, 10 failed
+2025-12-30T18:49:10.022810039Z 6:49:10 PM [express] POST /api/admin/study/encourage-all 200 in 1738ms :: {"success":true,"sentCount…
+2025-12-30T18:49:57.973197356Z 6:49:57 PM [express] GET /api/study/admin/weekly-activity 304 in 471ms :: [{"day":"Qua","date":"2025…
+2025-12-30T18:49:57.984239261Z 6:49:57 PM [express] GET /api/study/admin/monthly-progress 304 in 479ms :: [{"month":"Dez","lessonsC…
+2025-12-30T18:49:57.988011364Z 6:49:57 PM [express] GET /api/study/admin/stats 304 in 484ms :: {"totalUsers":9,"activeUsers":2,"tot…
+2025-12-30T18:49:58.159000787Z 6:49:58 PM [express] GET /api/study/admin/weekly-top-members 304 in 653ms :: [{"id":2,"fullName":"Ge…
+2025-12-30T18:50:16.583749313Z 6:50:16 PM [express] GET /api/site-content/quem-somos 304 in 468ms :: {"timeline":{"title":"","conte…
+2025-12-30T18:50:16.843108359Z 6:50:16 PM [express] GET /api/site/highlights 304 in 730ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T18:50:23.461823276Z 6:50:23 PM [express] POST /api/auth/login-password 200 in 577ms :: {"user":{"id":2,"fullName":"Geova…
+2025-12-30T18:50:26.735327308Z 6:50:26 PM [express] GET /api/study/profile 200 in 448ms :: {"id":3,"userId":2,"totalXp":9655,"curre…
+2025-12-30T18:50:26.864500331Z 6:50:26 PM [express] GET /api/missions/daily 200 in 588ms :: {"missions":[{"id":98,"userId":2,"missi…
+2025-12-30T18:50:27.206705762Z 6:50:27 PM [express] GET /api/study/weeks 304 in 134ms :: [{"id":5,"weekNumber":5,"year":2025,"title…
+2025-12-30T18:50:27.349386307Z 6:50:27 PM [express] GET /api/study/leaderboard 304 in 1064ms :: {"periodType":"weekly","periodKey":…
+2025-12-30T18:50:27.96520752Z 6:50:27 PM [express] GET /api/study/weeks/1 200 in 465ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-30T18:50:27.979765112Z 6:50:27 PM [express] GET /api/study/weeks/2 200 in 473ms :: {"id":2,"weekNumber":2,"year":2025,"titl…
+2025-12-30T18:50:28.02042473Z 6:50:28 PM [express] GET /api/study/weeks/3 200 in 507ms :: {"id":3,"weekNumber":3,"year":2025,"titl…
+2025-12-30T18:50:28.031744559Z 6:50:28 PM [express] GET /api/study/weeks/5 200 in 517ms :: {"id":5,"weekNumber":5,"year":2025,"titl…
+2025-12-30T18:50:28.046094917Z 6:50:28 PM [express] GET /api/study/weeks/4 200 in 527ms :: {"id":4,"weekNumber":4,"year":2025,"titl…
+2025-12-30T18:50:28.28001828Z 6:50:28 PM [express] GET /api/study/practice/5/status 200 in 787ms :: {"weekId":5,"isUnlocked":false…
+2025-12-30T18:50:28.447097307Z 6:50:28 PM [express] GET /api/notifications/unread-count 200 in 68ms :: {"count":24}
+2025-12-30T18:50:28.571322945Z 6:50:28 PM [express] GET /api/notifications 200 in 195ms :: {"notifications":[{"id":131,"userId":2,"…
+2025-12-30T18:50:28.85078163Z 6:50:28 PM [express] GET /api/study/weekly-goal 200 in 470ms :: {"weekKey":"2025-W53","goals":{"less…
+2025-12-30T18:50:36.523826413Z 6:50:36 PM [express] POST /api/notifications/mark-all-read 200 in 71ms :: {"message":"Todas as notif…
+2025-12-30T18:50:36.893864174Z 6:50:36 PM [express] GET /api/notifications/unread-count 200 in 69ms :: {"count":0}
+2025-12-30T18:50:37.029140065Z 6:50:37 PM [express] GET /api/notifications 200 in 194ms :: {"notifications":[{"id":131,"userId":2,"…
+2025-12-30T18:50:37.493481732Z 6:50:37 PM [express] GET /api/notifications 304 in 196ms :: {"notifications":[{"id":131,"userId":2,"…
+2025-12-30T18:50:47.886769052Z 6:50:47 PM [express] GET /api/marketing/stats 304 in 71ms :: {"events":{"total":0,"upcoming":0,"past…
+2025-12-30T18:50:47.9511871Z 6:50:47 PM [express] GET /api/admin/instagram 304 in 130ms :: {"configured":true,"posts":[{"id":133,…
+2025-12-30T18:51:00.859473255Z 6:51:00 PM [express] PATCH /api/admin/instagram/137/feature 200 in 277ms :: {"message":"Post definid…
+2025-12-30T18:51:01.276945614Z 6:51:01 PM [express] GET /api/admin/instagram 200 in 132ms :: {"configured":true,"posts":[{"id":133,…
+2025-12-30T18:51:09.780707631Z 6:51:09 PM [express] GET /api/notifications/unread-count 304 in 67ms :: {"count":0}
+2025-12-30T18:51:09.936736804Z 6:51:09 PM [express] GET /api/notifications 304 in 201ms :: {"notifications":[{"id":131,"userId":2,"…
+2025-12-30T18:51:10.228024758Z 6:51:10 PM [express] GET /api/site-content/quem-somos 304 in 484ms :: {"timeline":{"title":"","conte…
+2025-12-30T18:51:10.489469134Z 6:51:10 PM [express] GET /api/site/highlights 200 in 746ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T18:51:19.029346837Z 6:51:19 PM [express] GET /api/study/devotional-status/3 200 in 74ms :: {"isRead":true}
+2025-12-30T18:51:19.125819466Z 6:51:19 PM [express] GET /api/site/devotionals/3 200 in 200ms :: {"id":3,"title":"Natal - Qual seu s…
+2025-12-30T18:51:19.22309054Z 6:51:19 PM [express] GET /api/site/devotionals 200 in 265ms :: [{"id":3,"title":"Natal - Qual seu si…
+2025-12-30T18:51:19.540540221Z 6:51:19 PM [express] GET /api/site/devotionals/3/comments 200 in 71ms :: [{"id":4,"devotionalId":3,"…
+2025-12-30T18:51:49.082254915Z 6:51:49 PM [express] GET /api/notifications/unread-count 304 in 67ms :: {"count":0}
+2025-12-30T18:51:49.212948417Z 6:51:49 PM [express] GET /api/notifications 304 in 201ms :: {"notifications":[{"id":131,"userId":2,"…
+2025-12-30T18:52:19.936885447Z 6:52:19 PM [express] GET /api/notifications/unread-count 304 in 482ms :: {"count":0}
+2025-12-30T18:52:20.45267628Z 6:52:20 PM [express] GET /api/notifications 304 in 594ms :: {"notifications":[{"id":131,"userId":2,"…
+2025-12-30T18:53:16.948984351Z 6:53:16 PM [express] GET /api/study/devotional-status/1 200 in 481ms :: {"isRead":true}
+2025-12-30T18:53:17.081522664Z 6:53:17 PM [express] GET /api/site/devotionals/1 200 in 612ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T18:53:17.523880406Z 6:53:17 PM [express] GET /api/site/devotionals/1/comments 200 in 69ms :: [{"id":2,"devotionalId":1,"…
+2025-12-30T18:54:40.76658895Z 6:54:40 PM [express] POST /api/auth/login-password 200 in 952ms :: {"user":{"id":1,"fullName":"Admin…
+2025-12-30T18:54:47.9527358Z 6:54:47 PM [express] GET /api/espiritualidade/stats 200 in 469ms :: {"devotionals":{"total":3,"publi…
+2025-12-30T18:55:10.330748301Z 6:55:10 PM [express] GET /api/espiritualidade/devotionals 200 in 257ms :: [{"id":3,"title":"Natal - …
+2025-12-30T18:55:15.205512167Z 6:55:15 PM [express] GET /api/espiritualidade/devotionals/2 200 in 192ms :: {"id":2,"title":"Vivendo…
+2025-12-30T18:55:45.037170662Z 6:55:45 PM [express] POST /api/upload/audio 500 in 4ms :: {"message":"Apenas arquivos MP3, WAV ou OG…
+2025-12-30T18:55:45.037799424Z Error: Apenas arquivos MP3, WAV ou OGG são permitidos
+2025-12-30T18:55:45.037808084Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11891:10)
+2025-12-30T18:55:45.037810835Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T18:55:45.037812735Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T18:55:45.037815315Z     at Multipart.emit (node:events:518:28)
+2025-12-30T18:55:45.037817095Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T18:55:45.037818955Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T18:55:45.037820695Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T18:55:45.037822485Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T18:55:45.037824185Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T18:55:45.037828055Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T18:56:46.642393971Z 6:56:46 PM [express] GET /api/site-content/quem-somos 304 in 475ms :: {"timeline":{"title":"","conte…
+2025-12-30T18:56:47.313720465Z 6:56:47 PM [express] GET /api/site/highlights 304 in 724ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T18:57:10.062284132Z 6:57:10 PM [express] POST /api/auth/login-password 200 in 578ms :: {"user":{"id":2,"fullName":"Geova…
+2025-12-30T18:57:13.496384206Z 6:57:13 PM [express] GET /api/missions/daily 304 in 525ms :: {"missions":[{"id":98,"userId":2,"missi…
+2025-12-30T18:57:13.803545562Z 6:57:13 PM [express] GET /api/study/profile 304 in 389ms :: {"id":3,"userId":2,"totalXp":9655,"curre…
+2025-12-30T18:57:14.161912827Z 6:57:14 PM [express] GET /api/study/weeks 304 in 66ms :: [{"id":5,"weekNumber":5,"year":2025,"title"…
+2025-12-30T18:57:14.236359066Z 6:57:14 PM [express] GET /api/study/leaderboard 304 in 1067ms :: {"periodType":"weekly","periodKey":…
+2025-12-30T18:57:14.879181739Z 6:57:14 PM [express] GET /api/study/weeks/2 304 in 417ms :: {"id":2,"weekNumber":2,"year":2025,"titl…
+2025-12-30T18:57:14.924996794Z 6:57:14 PM [express] GET /api/study/weeks/5 304 in 453ms :: {"id":5,"weekNumber":5,"year":2025,"titl…
+2025-12-30T18:57:14.984509574Z 6:57:14 PM [express] GET /api/study/weeks/4 304 in 507ms :: {"id":4,"weekNumber":4,"year":2025,"titl…
+2025-12-30T18:57:14.98529865Z 6:57:14 PM [express] GET /api/study/weeks/3 304 in 511ms :: {"id":3,"weekNumber":3,"year":2025,"titl…
+2025-12-30T18:57:14.99461545Z 6:57:14 PM [express] GET /api/study/weeks/1 304 in 518ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-30T18:57:15.243286165Z 6:57:15 PM [express] GET /api/study/practice/5/status 304 in 760ms :: {"weekId":5,"isUnlocked":false…
+2025-12-30T18:57:15.797832402Z 6:57:15 PM [express] GET /api/study/weekly-goal 304 in 465ms :: {"weekKey":"2025-W53","goals":{"less…
+2025-12-30T18:57:42.121114205Z 6:57:42 PM [express] GET /api/study/achievements 200 in 208ms :: [{"id":1,"code":"first_lesson","nam…
+2025-12-30T18:57:42.231189482Z 6:57:42 PM [express] GET /api/study/seasons 200 in 267ms :: [{"id":2,"title":"Não Jogue Sua Vida For…
+2025-12-30T18:57:42.728209496Z [WebSocket] Authenticated connection: HN_0x5BwxUS3VCeUAAAF, userId: 2
+2025-12-30T18:57:42.728605454Z [WebSocket] Client connected: HN_0x5BwxUS3VCeUAAAF, authenticated: true
+2025-12-30T18:57:43.160125793Z [WebSocket] Updated DB: User 2 is now online
+2025-12-30T18:57:43.160798046Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2025-12-30T18:57:44.815829877Z [WebSocket] Client disconnected: HN_0x5BwxUS3VCeUAAAF, reason: client namespace disconnect
+2025-12-30T18:57:44.883525616Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2025-12-30T18:57:44.884889852Z [WebSocket] User 2 disconnected from presence. Online: 0
+2025-12-30T18:57:44.9220338Z 6:57:44 PM [express] GET /api/study/cards 304 in 66ms :: []
+2025-12-30T18:57:45.050850599Z 6:57:45 PM [express] GET /api/study/profile/activities 200 in 195ms :: [{"type":"achievement_unlocke…
+2025-12-30T18:57:45.502279782Z 6:57:45 PM [express] GET /api/study/achievements 200 in 195ms :: [{"id":1,"code":"first_lesson","nam…
+2025-12-30T18:57:45.989992697Z 6:57:45 PM [express] GET /api/study/profile/stats 200 in 715ms :: {"lessonsCompleted":28,"unitsCompl…
+2025-12-30T19:00:00.011953804Z [Event Deadline Scheduler] Checking for events approaching deadline...
+2025-12-30T19:00:00.490975588Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2025-12-30T19:07:07.849271389Z 7:07:07 PM [express] GET /api/site-content/quem-somos 200 in 856ms :: {"timeline":{"title":"","conte…
+2025-12-30T19:07:09.130653927Z 7:07:09 PM [express] GET /api/site/highlights 200 in 2133ms :: {"devotional":{"id":3,"title":"Natal …
+2025-12-30T19:08:51.390157302Z 7:08:51 PM [express] GET /api/site-content/quem-somos 200 in 574ms :: {"timeline":{"title":"","conte…
+2025-12-30T19:08:51.659713696Z 7:08:51 PM [express] GET /api/site/highlights 200 in 888ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T19:21:42.307548472Z 7:21:42 PM [express] GET /api/study/achievements 304 in 629ms :: [{"id":1,"code":"first_lesson","nam…
+2025-12-30T19:22:41.229238706Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2025-12-30T19:22:41.245187756Z ==> Deploying...
+2025-12-30T19:23:24.406252Z ==> Running 'node ./dist/index.js'
+2025-12-30T19:23:44.396390343Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-30T19:23:44.396797063Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-30T19:23:44.397851619Z [Push] Web Push configured successfully
+2025-12-30T19:23:44.512455606Z [WebSocket] Server initialized
+2025-12-30T19:23:44.694412025Z 7:23:44 PM [express] serving on port 10000
+2025-12-30T19:23:44.694553499Z Initializing PostgreSQL database connection...
+2025-12-30T19:23:45.348863491Z PostgreSQL connection successful: 2025-12-30T19:23:45.312Z
+2025-12-30T19:23:45.768228007Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2025-12-30T19:23:45.7683394Z Database initialized successfully!
+2025-12-30T19:23:46.120948238Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2025-12-30T19:23:46.124143668Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2025-12-30T19:23:46.128889416Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-30T19:23:46.194320891Z [Daily Verse Scheduler] Initialized - will run daily at 07:00 (America/Sao_Paulo)
+2025-12-30T19:23:46.197684614Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-30T19:23:46.200302699Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2025-12-30T19:23:46.200474034Z [Instagram Scheduler] Running sync...
+2025-12-30T19:23:46.200754681Z [Instagram] Starting sync...
+2025-12-30T19:23:46.298246292Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2025-12-30T19:23:46.391774735Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2025-12-30T19:23:46.394978365Z [Event Scheduler] Lesson release initialized - will run daily at 00:00 (America/Sao_Paulo)
+2025-12-30T19:23:46.397893847Z [Event Scheduler] Card distribution initialized - will run daily at 23:59 (America/Sao_Paulo)
+2025-12-30T19:23:46.400574894Z [Event Deadline Scheduler] Initialized - will run every hour at :00 (America/Sao_Paulo)
+2025-12-30T19:23:46.400750988Z 7:23:46 PM [express] Database and schedulers initialized successfully
+2025-12-30T19:23:46.693565701Z [Instagram] API error: 400 {
+2025-12-30T19:23:46.693595192Z   error: {
+2025-12-30T19:23:46.693598362Z [Instagram] No new posts fetched - keeping existing data
+2025-12-30T19:23:46.693600222Z     message: 'Error validating access token: Session has expired on Tuesday, 30-Dec-25 07:00:00 PST. The current time is Tuesday, 30-Dec-25 11:23:46 PST.',
+2025-12-30T19:23:46.693605712Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2025-12-30T19:23:46.693609602Z     type: 'OAuthException',
+2025-12-30T19:23:46.693612662Z     code: 190,
+2025-12-30T19:23:46.693615972Z     error_subcode: 463,
+2025-12-30T19:23:46.693619892Z     fbtrace_id: 'A7PA2qFWEOt9JkpVAQ3nTVc'
+2025-12-30T19:23:46.693623023Z   }
+2025-12-30T19:23:46.693625743Z }
+2025-12-30T19:23:51.195535823Z [Daily Verse Scheduler] Running initial check at startup...
+2025-12-30T19:23:51.195657666Z [Daily Verse Scheduler] Sending daily verse notification...
+2025-12-30T19:23:51.866762345Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2025-12-30T19:23:51.866783626Z [Daily Verse Scheduler] Using AI-generated verse
+2025-12-30T19:23:52.136402162Z [Push] Sending "Versiculo do Dia" to 8 active members
+2025-12-30T19:23:53.114139142Z ==> Your service is live 🎉
+2025-12-30T19:23:53.199042048Z ==> 
+2025-12-30T19:23:53.225402237Z ==> ///////////////////////////////////////////////////////////
+2025-12-30T19:23:53.254292215Z ==> 
+2025-12-30T19:23:53.283898324Z ==> Available at your primary URL https://umpemaus.com.br + 2 more domains
+2025-12-30T19:23:53.311234853Z ==> 
+2025-12-30T19:23:53.339459821Z ==> ///////////////////////////////////////////////////////////
+2025-12-30T19:23:53.198129425Z [Recovery Verses Scheduler] Running initial check at startup...
+2025-12-30T19:23:53.19834215Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2025-12-30T19:23:53.885725334Z [Notifications] Daily verse notification: 0 members sent, 2 anonymous visitors sent
+2025-12-30T19:23:53.885757494Z [Daily Verse Scheduler] Sent: Gálatas 6:9 (ARA)
+2025-12-30T19:23:56.297831947Z [Daily Missions Scheduler] Running initial check at startup...
+2025-12-30T19:23:56.298086303Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2025-12-30T19:23:56.372284286Z [Daily Missions Scheduler] Content already generated for today (2025-12-30)
+2025-12-30T19:23:56.560835959Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2025-12-30T19:23:56.560963873Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:16 (ARA)
+2025-12-30T19:23:56.560974563Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2025-12-30T19:23:56.560977743Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2025-12-30T19:23:56.560991353Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2025-12-30T19:23:56.560997673Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2025-12-30T19:23:56.561054105Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2025-12-30T19:23:56.561059775Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2025-12-30T19:23:56.561063085Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2025-12-30T19:23:56.561065705Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2025-12-30T19:23:56.561124546Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2025-12-30T19:23:56.561130337Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2025-12-30T19:23:56.561132347Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2025-12-30T19:23:56.561134107Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2025-12-30T19:23:56.561136487Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2025-12-30T19:23:56.561219799Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2025-12-30T19:23:56.561232689Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2025-12-30T19:23:56.561235349Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2025-12-30T19:23:56.56128116Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2025-12-30T19:23:56.56128417Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2025-12-30T19:23:56.561288201Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2025-12-30T19:23:56.561324211Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2025-12-30T19:23:56.561327231Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2025-12-30T19:23:56.561410413Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2025-12-30T19:23:56.561417194Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2025-12-30T19:23:56.561420034Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2025-12-30T19:23:56.561422444Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2025-12-30T19:23:56.561425524Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2025-12-30T19:23:56.561433544Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2025-12-30T19:23:56.561436174Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2025-12-30T19:23:56.561438564Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2025-12-30T19:23:56.561482725Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2025-12-30
+2025-12-30T19:28:49.026398745Z ==> Detected service running on port 10000
+2025-12-30T19:28:49.116496006Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-12-30T19:45:38.880658591Z 7:45:38 PM [express] GET /api/study/profile 304 in 1234ms :: {"id":3,"userId":2,"totalXp":9655,"curr…
+2025-12-30T19:45:39.179326412Z 7:45:39 PM [express] GET /api/study/profile/stats 304 in 1534ms :: {"lessonsCompleted":28,"unitsComp…
+2025-12-30T19:45:39.189926576Z 7:45:39 PM [express] GET /api/study/cards 304 in 1553ms :: []
+2025-12-30T19:45:39.237671694Z 7:45:39 PM [express] GET /api/study/profile/activities 304 in 1597ms :: [{"type":"achievement_unlock…
+2025-12-30T19:45:39.296727113Z 7:45:39 PM [express] GET /api/study/achievements 304 in 1254ms :: [{"id":1,"code":"first_lesson","na…
+2025-12-30T19:45:40.151699995Z 7:45:40 PM [express] GET /api/study/leaderboard 304 in 2497ms :: {"periodType":"weekly","periodKey":…
+2025-12-30T19:45:41.365975226Z 7:45:41 PM [express] GET /api/study/weeks 304 in 98ms :: [{"id":5,"weekNumber":5,"year":2025,"title"…
+2025-12-30T19:45:41.858555731Z 7:45:41 PM [express] GET /api/missions/daily 304 in 566ms :: {"missions":[{"id":98,"userId":2,"missi…
+2025-12-30T19:45:42.218989989Z 7:45:42 PM [express] GET /api/study/weeks/3 304 in 521ms :: {"id":3,"weekNumber":3,"year":2025,"titl…
+2025-12-30T19:45:42.292140709Z 7:45:42 PM [express] GET /api/study/weeks/1 304 in 592ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-30T19:45:42.294758384Z 7:45:42 PM [express] GET /api/study/weeks/4 304 in 592ms :: {"id":4,"weekNumber":4,"year":2025,"titl…
+2025-12-30T19:45:42.296834066Z 7:45:42 PM [express] GET /api/study/weeks/2 304 in 593ms :: {"id":2,"weekNumber":2,"year":2025,"titl…
+2025-12-30T19:45:42.420421251Z 7:45:42 PM [express] GET /api/study/weeks/5 304 in 744ms :: {"id":5,"weekNumber":5,"year":2025,"titl…
+2025-12-30T19:45:42.558688571Z 7:45:42 PM [express] GET /api/study/practice/5/status 304 in 857ms :: {"weekId":5,"isUnlocked":false…
+2025-12-30T19:45:42.836524153Z 7:45:42 PM [express] GET /api/notifications/unread-count 304 in 73ms :: {"count":0}
+2025-12-30T19:45:42.964565259Z 7:45:42 PM [express] GET /api/notifications 304 in 194ms :: {"notifications":[{"id":131,"userId":2,"…
+2025-12-30T19:45:43.226603138Z 7:45:43 PM [express] GET /api/study/weekly-goal 304 in 469ms :: {"weekKey":"2025-W53","goals":{"less…
+2025-12-30T19:45:50.806662789Z 7:45:50 PM [express] GET /api/site-content/quem-somos 304 in 85ms :: {"timeline":{"title":"","conten…
+2025-12-30T19:45:51.063748325Z 7:45:51 PM [express] GET /api/site/highlights 304 in 375ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T19:46:05.991801173Z 7:46:05 PM [express] POST /api/auth/login-password 200 in 809ms :: {"user":{"id":1,"fullName":"Admin…
+2025-12-30T19:46:13.114373401Z 7:46:13 PM [express] GET /api/espiritualidade/stats 304 in 250ms :: {"devotionals":{"total":3,"publi…
+2025-12-30T19:46:26.223710937Z 7:46:26 PM [express] GET /api/espiritualidade/devotionals 304 in 250ms :: [{"id":3,"title":"Natal - …
+2025-12-30T19:46:41.692482703Z 7:46:41 PM [express] GET /api/notifications 200 in 201ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:46:42.093613153Z 7:46:42 PM [express] GET /api/site-content/quem-somos 304 in 583ms :: {"timeline":{"title":"","conte…
+2025-12-30T19:46:42.12805529Z 7:46:42 PM [express] GET /api/notifications/unread-count 304 in 619ms :: {"count":0}
+2025-12-30T19:46:42.325633266Z 7:46:42 PM [express] GET /api/site/highlights 304 in 820ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T19:46:49.771267979Z 7:46:49 PM [express] GET /api/study/devotional-status/1 200 in 69ms :: {"isRead":false}
+2025-12-30T19:46:49.904535205Z 7:46:49 PM [express] GET /api/site/devotionals/1 304 in 194ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T19:46:49.969599474Z 7:46:49 PM [express] GET /api/site/devotionals 304 in 260ms :: [{"id":3,"title":"Natal - Qual seu si…
+2025-12-30T19:46:50.337428575Z 7:46:50 PM [express] GET /api/site/devotionals/1/comments 304 in 70ms :: [{"id":2,"devotionalId":1,"…
+2025-12-30T19:46:55.73204355Z 7:46:55 PM [express] GET /api/site-content/quem-somos 304 in 66ms :: {"timeline":{"title":"","conten…
+2025-12-30T19:46:55.757579956Z 7:46:55 PM [express] GET /api/study/devotional-status/1 304 in 66ms :: {"isRead":false}
+2025-12-30T19:46:55.855215085Z 7:46:55 PM [express] GET /api/notifications 304 in 162ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:46:55.864617808Z 7:46:55 PM [express] GET /api/site/devotionals/1 304 in 194ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T19:46:55.942979068Z 7:46:55 PM [express] GET /api/site/devotionals 304 in 249ms :: [{"id":3,"title":"Natal - Qual seu si…
+2025-12-30T19:46:56.17336496Z 7:46:56 PM [express] GET /api/notifications/unread-count 304 in 64ms :: {"count":0}
+2025-12-30T19:46:56.252764665Z 7:46:56 PM [express] GET /api/site/devotionals/1/comments 304 in 64ms :: [{"id":2,"devotionalId":1,"…
+2025-12-30T19:47:26.293211251Z 7:47:26 PM [express] GET /api/notifications 304 in 128ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:47:26.597515932Z 7:47:26 PM [express] GET /api/notifications/unread-count 304 in 65ms :: {"count":0}
+2025-12-30T19:47:57.630566787Z 7:47:57 PM [express] GET /api/notifications 304 in 535ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:47:57.812655667Z 7:47:57 PM [express] GET /api/notifications/unread-count 304 in 459ms :: {"count":0}
+2025-12-30T19:48:28.567679959Z 7:48:28 PM [express] GET /api/notifications 304 in 535ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:48:28.599110551Z 7:48:28 PM [express] GET /api/notifications/unread-count 304 in 453ms :: {"count":0}
+2025-12-30T19:49:59.491664522Z 7:49:59 PM [express] GET /api/notifications 304 in 530ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:49:59.8919386Z 7:49:59 PM [express] GET /api/notifications/unread-count 304 in 478ms :: {"count":0}
+2025-12-30T19:46:05.991801173Z 7:46:05 PM [express] POST /api/auth/login-password 200 in 809ms :: {"user":{"id":1,"fullName":"Admin…
+2025-12-30T19:46:13.114373401Z 7:46:13 PM [express] GET /api/espiritualidade/stats 304 in 250ms :: {"devotionals":{"total":3,"publi…
+2025-12-30T19:46:26.223710937Z 7:46:26 PM [express] GET /api/espiritualidade/devotionals 304 in 250ms :: [{"id":3,"title":"Natal - …
+2025-12-30T19:46:41.692482703Z 7:46:41 PM [express] GET /api/notifications 200 in 201ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:46:42.093613153Z 7:46:42 PM [express] GET /api/site-content/quem-somos 304 in 583ms :: {"timeline":{"title":"","conte…
+2025-12-30T19:46:42.12805529Z 7:46:42 PM [express] GET /api/notifications/unread-count 304 in 619ms :: {"count":0}
+2025-12-30T19:46:42.325633266Z 7:46:42 PM [express] GET /api/site/highlights 304 in 820ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T19:46:49.771267979Z 7:46:49 PM [express] GET /api/study/devotional-status/1 200 in 69ms :: {"isRead":false}
+2025-12-30T19:46:49.904535205Z 7:46:49 PM [express] GET /api/site/devotionals/1 304 in 194ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T19:46:49.969599474Z 7:46:49 PM [express] GET /api/site/devotionals 304 in 260ms :: [{"id":3,"title":"Natal - Qual seu si…
+2025-12-30T19:46:50.337428575Z 7:46:50 PM [express] GET /api/site/devotionals/1/comments 304 in 70ms :: [{"id":2,"devotionalId":1,"…
+2025-12-30T19:46:55.73204355Z 7:46:55 PM [express] GET /api/site-content/quem-somos 304 in 66ms :: {"timeline":{"title":"","conten…
+2025-12-30T19:46:55.757579956Z 7:46:55 PM [express] GET /api/study/devotional-status/1 304 in 66ms :: {"isRead":false}
+2025-12-30T19:46:55.855215085Z 7:46:55 PM [express] GET /api/notifications 304 in 162ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:46:55.864617808Z 7:46:55 PM [express] GET /api/site/devotionals/1 304 in 194ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T19:46:55.942979068Z 7:46:55 PM [express] GET /api/site/devotionals 304 in 249ms :: [{"id":3,"title":"Natal - Qual seu si…
+2025-12-30T19:46:56.17336496Z 7:46:56 PM [express] GET /api/notifications/unread-count 304 in 64ms :: {"count":0}
+2025-12-30T19:46:56.252764665Z 7:46:56 PM [express] GET /api/site/devotionals/1/comments 304 in 64ms :: [{"id":2,"devotionalId":1,"…
+2025-12-30T19:47:26.293211251Z 7:47:26 PM [express] GET /api/notifications 304 in 128ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:47:26.597515932Z 7:47:26 PM [express] GET /api/notifications/unread-count 304 in 65ms :: {"count":0}
+2025-12-30T19:47:57.630566787Z 7:47:57 PM [express] GET /api/notifications 304 in 535ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:47:57.812655667Z 7:47:57 PM [express] GET /api/notifications/unread-count 304 in 459ms :: {"count":0}
+2025-12-30T19:48:28.567679959Z 7:48:28 PM [express] GET /api/notifications 304 in 535ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:48:28.599110551Z 7:48:28 PM [express] GET /api/notifications/unread-count 304 in 453ms :: {"count":0}
+2025-12-30T19:49:59.491664522Z 7:49:59 PM [express] GET /api/notifications 304 in 530ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:49:59.8919386Z 7:49:59 PM [express] GET /api/notifications/unread-count 304 in 478ms :: {"count":0}
+2025-12-30T19:57:25.310071775Z 7:57:25 PM [express] GET /api/notifications/unread-count 304 in 4346ms :: {"count":0}
+2025-12-30T19:57:26.036700529Z 7:57:26 PM [express] GET /api/notifications 304 in 5042ms :: {"notifications":[{"id":36,"userId":1,"…
+2025-12-30T19:57:35.649689077Z 7:57:35 PM [express] GET /api/site-content/quem-somos 304 in 83ms :: {"timeline":{"title":"","conten…
+2025-12-30T19:57:36.792010899Z 7:57:36 PM [express] GET /api/site/highlights 304 in 1125ms :: {"devotional":{"id":3,"title":"Natal …
+2025-12-30T19:57:43.248415564Z 7:57:43 PM [express] GET /api/espiritualidade/stats 304 in 259ms :: {"devotionals":{"total":3,"publi…
+2025-12-30T19:57:48.109830395Z 7:57:48 PM [express] GET /api/espiritualidade/devotionals 304 in 260ms :: [{"id":3,"title":"Natal - …
+2025-12-30T19:57:53.27726906Z 7:57:53 PM [express] GET /api/espiritualidade/devotionals/2 304 in 196ms :: {"id":2,"title":"Vivendo…
+2025-12-30T19:59:19.573152928Z [Upload Audio] Rejected file: HINO DA UCP, mimetype: application/octet-stream
+2025-12-30T19:59:19.574552833Z 7:59:19 PM [express] POST /api/upload/audio 500 in 15ms :: {"message":"Apenas arquivos de áudio são …
+2025-12-30T19:59:19.575341613Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T19:59:19.575354683Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T19:59:19.575359483Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T19:59:19.575363573Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T19:59:19.575367783Z     at Multipart.emit (node:events:518:28)
+2025-12-30T19:59:19.575370773Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T19:59:19.575390534Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T19:59:19.575392434Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T19:59:19.575394244Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T19:59:19.575395994Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T19:59:19.575397694Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T19:59:47.195236618Z [Upload Audio] Rejected file: lv_0_20230314113916, mimetype: application/octet-stream
+2025-12-30T19:59:47.19608318Z 7:59:47 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T19:59:47.196435498Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T19:59:47.196450759Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T19:59:47.196454979Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T19:59:47.196458319Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T19:59:47.196463279Z     at Multipart.emit (node:events:518:28)
+2025-12-30T19:59:47.196466189Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T19:59:47.196469019Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T19:59:47.196471799Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T19:59:47.196474639Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T19:59:47.196479039Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T19:59:47.19648373Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T20:00:00.013253686Z [Event Deadline Scheduler] Checking for events approaching deadline...
+2025-12-30T20:00:00.500805535Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2025-12-30T20:00:30.371066798Z [Upload Audio] Rejected file: Baby Sonic ganhou a corrida de carro contra o baby flash #shorts, mimetype: application/octet-stream
+2025-12-30T20:00:30.371974251Z 8:00:30 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T20:00:30.372242657Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T20:00:30.372250267Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T20:00:30.372254288Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T20:00:30.372257718Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T20:00:30.372261208Z     at Multipart.emit (node:events:518:28)
+2025-12-30T20:00:30.372264078Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T20:00:30.372266928Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T20:00:30.372269768Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T20:00:30.372272698Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T20:00:30.372277888Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T20:00:30.372291439Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T20:00:41.721741373Z [Upload Audio] Rejected file: PTT-20200423-WA0035, mimetype: application/octet-stream
+2025-12-30T20:00:41.722792529Z 8:00:41 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T20:00:41.7232023Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T20:00:41.72322031Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T20:00:41.72322459Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T20:00:41.723228271Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T20:00:41.72323192Z     at Multipart.emit (node:events:518:28)
+2025-12-30T20:00:41.723234861Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T20:00:41.723237651Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T20:00:41.723240401Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T20:00:41.723243251Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:219:14)
+2025-12-30T20:00:41.723246121Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T20:00:41.723248921Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T20:00:53.122684699Z [Upload Audio] Rejected file: Som De Carros -  Som De Carros Ligando - Sons De Carros Acelerando | Batendo - Sound Effects, mimetype: application/octet-stream
+2025-12-30T20:00:53.12351162Z 8:00:53 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T20:00:53.123765596Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T20:00:53.123773897Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T20:00:53.123780537Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T20:00:53.123786667Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T20:00:53.123793337Z     at Multipart.emit (node:events:518:28)
+2025-12-30T20:00:53.123799307Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T20:00:53.123803517Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T20:00:53.123807027Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T20:00:53.123810657Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T20:00:53.123814967Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T20:00:53.123818847Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)

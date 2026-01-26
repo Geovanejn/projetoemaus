@@ -1,0 +1,100 @@
+2026-01-15T15:39:29.210391965Z T Ef 4.31-32 – Perdoados que perdoam
+2026-01-15T15:39:29.210395265Z Q Gl 5.22-23 – O fruto do Espírito
+2026-01-15T15:39:29.210398375Z Q Jo 15.11 – Alegria completa
+2026-01-15T15:39:29.210401405Z S Sl 4.6-8 – Alegria abundante
+2026-01-15T15:39:29.210404505Z S 1Ts 1.6-7 – Alegria do Espírito Santo
+2026-01-15T15:39:29.210407445Z INTRODUÇÃO
+2026-01-15T15:39:29.210411755Z Em 2018, David Mathis publicou um texto muito interessante no site Desiring God, propondo o
+2026-01-15T15:39:29.210414655Z que chamou de Doutrinas da graciosidade.1 De acordo com ele, “é uma enorme vergon
+2026-01-15T15:39:29.212095355Z [PDF Lesson] Tentando gerar com Gemini chave 1...
+2026-01-15T15:39:29.212866233Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2026-01-15T15:40:26.221651335Z [AI] Sucesso com modelo gemini-3-flash-preview
+2026-01-15T15:40:26.222064325Z [PDF Lesson] Sucesso com Gemini chave 1
+2026-01-15T15:40:26.627575068Z 3:40:26 PM [express] POST /api/study/admin/seasons/13/import-pdf-exact 200 in 63088ms :: {"message":…
+2026-01-15T15:40:26.884148984Z 3:40:26 PM [express] GET /api/study/admin/seasons/13 200 in 4ms :: {"id":13,"title":"Teste","subtitl…
+2026-01-15T15:40:26.900541781Z 3:40:26 PM [express] GET /api/study/admin/seasons/13/lessons 200 in 6ms :: [{"id":113,"studyWeekId":…
+2026-01-15T15:40:27.382420937Z 3:40:27 PM [express] GET /api/study/admin/seasons/13/lessons 304 in 5ms :: [{"id":113,"studyWeekId":…
+2026-01-15T15:40:33.617963986Z [Notifications] notifySeasonPublished STARTED for season 13: "Teste"
+2026-01-15T15:40:33.618907848Z 3:40:33 PM [express] POST /api/study/admin/seasons/13/publish 200 in 5ms :: {"id":13,"title":"Teste"…
+2026-01-15T15:40:33.621583751Z [Push] Sending "📚 Nova Revista DeoGlory!" to 16 active members
+2026-01-15T15:40:33.823360604Z [Push] Successfully sent notification to member user 1
+2026-01-15T15:40:33.826803596Z [Push] Sent "📚 Nova Revista DeoGlory!" to user 1 (1/1 success)
+2026-01-15T15:40:33.928168029Z 3:40:33 PM [express] GET /api/study/admin/seasons/13/lessons 304 in 99ms :: [{"id":113,"studyWeekId"…
+2026-01-15T15:40:33.928620699Z [Push] Successfully sent notification to member user 2
+2026-01-15T15:40:34.010341738Z [Push] Sent "📚 Nova Revista DeoGlory!" to user 2 (1/1 success)
+2026-01-15T15:40:34.011820163Z 3:40:34 PM [express] GET /api/study/admin/seasons/13 200 in 187ms :: {"id":13,"title":"Teste","subti…
+2026-01-15T15:40:34.11927381Z [Push] Successfully sent notification to member user 6
+2026-01-15T15:40:34.122636839Z [Push] Sent "📚 Nova Revista DeoGlory!" to user 6 (1/1 success)
+2026-01-15T15:40:34.124819881Z [Push] User 17 has no push subscriptions registered
+2026-01-15T15:40:34.126866099Z [Push] User 7 has no push subscriptions registered
+2026-01-15T15:40:34.128929838Z [Push] User 3 has no push subscriptions registered
+2026-01-15T15:40:34.13071952Z [Push] User 16 has no push subscriptions registered
+2026-01-15T15:40:34.132549203Z [Push] User 4 has no push subscriptions registered
+2026-01-15T15:40:34.134688034Z [Push] User 14 has no push subscriptions registered
+2026-01-15T15:40:34.21289883Z 3:40:34 PM [express] GET /api/study/admin/seasons/13 304 in 4ms :: {"id":13,"title":"Teste","subtitl…
+2026-01-15T15:40:34.225491407Z [Push] Successfully sent notification to member user 13
+2026-01-15T15:40:34.228515999Z [Push] Sent "📚 Nova Revista DeoGlory!" to user 13 (1/1 success)
+2026-01-15T15:40:34.230420824Z [Push] User 15 has no push subscriptions registered
+2026-01-15T15:40:34.380467126Z 3:40:34 PM [express] GET /api/study/admin/seasons/13/lessons 304 in 6ms :: [{"id":113,"studyWeekId":…
+2026-01-15T15:40:34.430054116Z [Push] Successfully sent notification to member user 9
+2026-01-15T15:40:34.432665408Z [Push] Sent "📚 Nova Revista DeoGlory!" to user 9 (1/1 success)
+2026-01-15T15:40:34.434924581Z [Push] User 12 has no push subscriptions registered
+2026-01-15T15:40:34.600971431Z [Push] Successfully sent notification to member user 5
+2026-01-15T15:40:34.605686532Z [Push] Sent "📚 Nova Revista DeoGlory!" to user 5 (1/1 success)
+2026-01-15T15:40:34.70261682Z [Push] Successfully sent notification to member user 11
+2026-01-15T15:40:34.705921969Z [Push] Sent "📚 Nova Revista DeoGlory!" to user 11 (1/1 success)
+2026-01-15T15:40:34.707989347Z [Push] User 18 has no push subscriptions registered
+2026-01-15T15:40:34.708026378Z [Notifications] Season push: 7 sent, 9 failed
+2026-01-15T15:40:35.354132491Z 3:40:35 PM [express] PATCH /api/study/admin/lessons/113 200 in 7ms :: {"id":113,"studyWeekId":null,"…
+2026-01-15T15:40:35.580548905Z 3:40:35 PM [express] GET /api/study/admin/seasons/13/lessons 200 in 10ms :: [{"id":113,"studyWeekId"…
+2026-01-15T15:40:43.860286431Z [Notifications] Season email sent to 17/17 members
+2026-01-15T15:40:43.860336502Z [Notifications] Season published notification complete
+2026-01-15T15:40:50.099575959Z 3:40:50 PM [express] GET /api/study/admin/seasons 200 in 5ms :: [{"id":13,"title":"Teste","subtitle"…
+2026-01-15T15:41:05.108120941Z Delete season error: error: update or delete on table "seasons" violates foreign key constraint "season_rankings_season_id_seasons_id_fk" on table "season_rankings"
+2026-01-15T15:41:05.108160192Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2026-01-15T15:41:05.108167742Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T15:41:05.108173402Z     at async DatabaseStorage.deleteSeason (file:///opt/render/project/src/dist/index.js:10564:9)
+2026-01-15T15:41:05.108177062Z     at async file:///opt/render/project/src/dist/index.js:21660:7 {
+2026-01-15T15:41:05.108180643Z   length: 336,
+2026-01-15T15:41:05.108184872Z   severity: 'ERROR',
+2026-01-15T15:41:05.108188373Z   code: '23503',
+2026-01-15T15:41:05.108191953Z   detail: 'Key (id)=(10) is still referenced from table "season_rankings".',
+2026-01-15T15:41:05.108195573Z   hint: undefined,
+2026-01-15T15:41:05.108199503Z   position: undefined,
+2026-01-15T15:41:05.108203823Z   internalPosition: undefined,
+2026-01-15T15:41:05.108207313Z   internalQuery: undefined,
+2026-01-15T15:41:05.108210813Z   where: undefined,
+2026-01-15T15:41:05.108214313Z   schema: 'public',
+2026-01-15T15:41:05.108217823Z   table: 'season_rankings',
+2026-01-15T15:41:05.108221933Z   column: undefined,
+2026-01-15T15:41:05.108227593Z   dataType: undefined,
+2026-01-15T15:41:05.108233954Z   constraint: 'season_rankings_season_id_seasons_id_fk',
+2026-01-15T15:41:05.108239494Z   file: 'ri_triggers.c',
+2026-01-15T15:41:05.108244924Z   line: '2612',
+2026-01-15T15:41:05.108250274Z   routine: 'ri_ReportViolation'
+2026-01-15T15:41:05.108255194Z }
+2026-01-15T15:41:05.109144405Z 3:41:05 PM [express] DELETE /api/study/admin/seasons/10 500 in 15ms :: {"message":"Erro ao remover t…
+2026-01-15T15:41:08.29192613Z Delete season error: error: update or delete on table "seasons" violates foreign key constraint "season_rankings_season_id_seasons_id_fk" on table "season_rankings"
+2026-01-15T15:41:08.291965841Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2026-01-15T15:41:08.291973601Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-15T15:41:08.291983291Z     at async DatabaseStorage.deleteSeason (file:///opt/render/project/src/dist/index.js:10564:9)
+2026-01-15T15:41:08.292002772Z     at async file:///opt/render/project/src/dist/index.js:21660:7 {
+2026-01-15T15:41:08.292005172Z   length: 335,
+2026-01-15T15:41:08.292008102Z   severity: 'ERROR',
+2026-01-15T15:41:08.292010292Z   code: '23503',
+2026-01-15T15:41:08.292012522Z   detail: 'Key (id)=(9) is still referenced from table "season_rankings".',
+2026-01-15T15:41:08.292014702Z   hint: undefined,
+2026-01-15T15:41:08.292016912Z   position: undefined,
+2026-01-15T15:41:08.292020183Z   internalPosition: undefined,
+2026-01-15T15:41:08.292022352Z   internalQuery: undefined,
+2026-01-15T15:41:08.292024503Z   where: undefined,
+2026-01-15T15:41:08.292026583Z   schema: 'public',
+2026-01-15T15:41:08.292028653Z   table: 'season_rankings',
+2026-01-15T15:41:08.292030763Z   column: undefined,
+2026-01-15T15:41:08.292032873Z   dataType: undefined,
+2026-01-15T15:41:08.292035663Z   constraint: 'season_rankings_season_id_seasons_id_fk',
+2026-01-15T15:41:08.292037803Z   file: 'ri_triggers.c',
+2026-01-15T15:41:08.292039973Z   line: '2612',
+2026-01-15T15:41:08.292042113Z   routine: 'ri_ReportViolation'
+2026-01-15T15:41:08.292044233Z }
+2026-01-15T15:41:08.292855642Z 3:41:08 PM [express] DELETE /api/study/admin/seasons/9 500 in 43ms :: {"message":"Erro ao remover te…

@@ -1,0 +1,100 @@
+2025-12-22T16:12:12.198352968Z [FATAL] Shutting down server
+2025-12-22T16:12:13.143437167Z ==> Exited with status 1
+2025-12-22T16:12:13.159808065Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-12-22T16:12:18.864728743Z ==> Running 'node ./dist/index.js'
+2025-12-22T16:12:39.07271488Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-22T16:12:39.073226904Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-22T16:12:39.074060566Z [Push] Web Push configured successfully
+2025-12-22T16:12:39.268483658Z [WebSocket] Server initialized
+2025-12-22T16:12:39.4655314Z 4:12:39 PM [express] serving on port 10000
+2025-12-22T16:12:39.465712935Z Initializing PostgreSQL database connection...
+2025-12-22T16:12:39.465957881Z ================================================================================
+2025-12-22T16:12:39.466128006Z [FATAL] DATABASE_URL has invalid format!
+2025-12-22T16:12:39.466313041Z [FATAL] Current value starts with: psql 'postgresql://n
+2025-12-22T16:12:39.466550257Z [FATAL] Expected format: postgresql://user:password@host:port/database
+2025-12-22T16:12:39.466589878Z ================================================================================
+2025-12-22T16:12:39.467027359Z [FATAL] Failed to initialize: DATABASE_URL has invalid format - must start with postgres:// or postgresql://
+2025-12-22T16:12:39.467105882Z [FATAL] Shutting down server
+2025-12-22T16:12:55.260077189Z ==> Running 'npm run start'
+2025-12-22T16:12:56.351619114Z 
+2025-12-22T16:12:56.370539629Z > rest-express@1.0.0 start
+2025-12-22T16:12:56.37057081Z > NODE_ENV=production node dist/index.js
+2025-12-22T16:12:56.37057379Z 
+2025-12-22T16:13:06.835706925Z ==> Running 'node ./dist/index.js'
+2025-12-22T16:13:14.956498554Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-22T16:13:14.956977003Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-22T16:13:14.95782229Z [Push] Web Push configured successfully
+2025-12-22T16:13:14.965727561Z Initializing PostgreSQL database connection...
+2025-12-22T16:13:15.351246598Z PostgreSQL connection successful: 2025-12-22T16:13:15.277Z
+2025-12-22T16:13:15.351580115Z Creating database tables...
+2025-12-22T16:13:15.358426864Z All tables created successfully!
+2025-12-22T16:13:16.052685534Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2025-12-22T16:13:16.052711595Z Database initialized successfully!
+2025-12-22T16:13:16.251119773Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2025-12-22T16:13:16.25394602Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2025-12-22T16:13:16.257315809Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-22T16:13:16.26127319Z [Daily Verse Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-22T16:13:16.350354312Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2025-12-22T16:13:16.350496095Z [Instagram Scheduler] Not configured - INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_USER_ID required
+2025-12-22T16:13:16.353567738Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2025-12-22T16:13:16.455689706Z [WebSocket] Server initialized
+2025-12-22T16:13:16.45781753Z 4:13:16 PM [express] serving on port 10000
+2025-12-22T16:13:21.266406921Z [Daily Verse Scheduler] Running initial check at startup...
+2025-12-22T16:13:21.266498152Z [Daily Verse Scheduler] Sending daily verse notification...
+2025-12-22T16:13:21.93710088Z [BibleAPI] Error fetching verse: 500
+2025-12-22T16:13:22.182030559Z [BibleAPI] Error fetching random verse: 500
+2025-12-22T16:13:22.182034919Z [BibleAPI] Using local fallback verse
+2025-12-22T16:13:22.182261133Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2025-12-22T16:13:22.182266903Z [Daily Verse Scheduler] Using AI-generated verse
+2025-12-22T16:13:22.189531313Z [Notifications] Daily verse notification: 0 members sent, 0 anonymous visitors sent
+2025-12-22T16:13:22.189565413Z [Daily Verse Scheduler] Sent: Filipenses 4:6 (ARA)
+2025-12-22T16:13:23.351283853Z [Recovery Verses Scheduler] Running initial check at startup...
+2025-12-22T16:13:23.351479167Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2025-12-22T16:13:23.354296175Z [Recovery Verses Scheduler] Verses already generated for today (recovery-2025-12-22)
+2025-12-22T16:13:25.83893594Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-22T16:13:25.839393041Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-22T16:13:25.931060621Z [Push] Web Push configured successfully
+2025-12-22T16:13:26.031695488Z [WebSocket] Server initialized
+2025-12-22T16:13:26.136260578Z 4:13:26 PM [express] serving on port 10000
+2025-12-22T16:13:26.136417902Z Initializing PostgreSQL database connection...
+2025-12-22T16:13:26.136588897Z ================================================================================
+2025-12-22T16:13:26.136734641Z [FATAL] DATABASE_URL has invalid format!
+2025-12-22T16:13:26.136885535Z [FATAL] Current value starts with: psql 'postgresql://n
+2025-12-22T16:13:26.137134461Z [FATAL] Expected format: postgresql://user:password@host:port/database
+2025-12-22T16:13:26.137167682Z ================================================================================
+2025-12-22T16:13:26.137539272Z [FATAL] Failed to initialize: DATABASE_URL has invalid format - must start with postgres:// or postgresql://
+2025-12-22T16:13:26.137561993Z [FATAL] Shutting down server
+2025-12-22T16:13:26.353656872Z [Daily Missions Scheduler] Running initial check at startup...
+2025-12-22T16:13:26.353887617Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2025-12-22T16:13:32.169518401Z [Daily Missions] Successfully generated with AI
+2025-12-22T16:13:32.171772137Z [Daily Missions Scheduler] Missions already generated for today (2025-12-22)
+2025-12-22T16:15:35.927134947Z ==> Deploying...
+2025-12-22T16:16:48.811661405Z ==> No open ports detected, continuing to scan...
+2025-12-22T16:16:48.919526405Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-12-22T16:17:04.978848454Z [Push] Web Push configured successfully
+2025-12-22T16:17:05.170409366Z [WebSocket] Server initialized
+2025-12-22T16:17:05.276501611Z 4:17:05 PM [express] serving on port 10000
+2025-12-22T16:17:05.276666264Z Initializing PostgreSQL database connection...
+2025-12-22T16:17:05.276910548Z ================================================================================
+2025-12-22T16:17:05.277131141Z [FATAL] DATABASE_URL has invalid format!
+2025-12-22T16:17:05.277284314Z [FATAL] Current value starts with: psql 'postgresql://n
+2025-12-22T16:17:05.277553468Z [FATAL] Expected format: postgresql://user:password@host:port/database
+2025-12-22T16:17:05.27766549Z ================================================================================
+2025-12-22T16:17:05.278102017Z [FATAL] Failed to initialize: DATABASE_URL has invalid format - must start with postgres:// or postgresql://
+2025-12-22T16:17:05.278122148Z [FATAL] Shutting down server
+2025-12-22T16:17:06.362273374Z ==> Exited with status 1
+2025-12-22T16:17:06.379826063Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-12-22T16:17:11.477699919Z ==> Running 'node ./dist/index.js'
+2025-12-22T16:17:29.879129456Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-22T16:17:29.879552683Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-22T16:17:29.881073398Z [Push] Web Push configured successfully
+2025-12-22T16:17:29.987986887Z [WebSocket] Server initialized
+2025-12-22T16:17:30.555530809Z 4:17:30 PM [express] serving on port 10000
+2025-12-22T16:17:30.555695292Z Initializing PostgreSQL database connection...
+2025-12-22T16:17:30.55619566Z ================================================================================
+2025-12-22T16:17:30.55620509Z [FATAL] DATABASE_URL has invalid format!
+2025-12-22T16:17:30.556574086Z [FATAL] Current value starts with: psql 'postgresql://n
+2025-12-22T16:17:30.556715068Z [FATAL] Expected format: postgresql://user:password@host:port/database
+2025-12-22T16:17:30.556898871Z ================================================================================
+2025-12-22T16:17:30.557312648Z [FATAL] Failed to initialize: DATABASE_URL has invalid format - must start with postgres:// or postgresql://
+2025-12-22T16:17:30.557414289Z [FATAL] Shutting down server

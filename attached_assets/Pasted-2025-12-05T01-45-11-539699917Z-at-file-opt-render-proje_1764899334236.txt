@@ -1,0 +1,50 @@
+2025-12-05T01:45:11.539699917Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T01:45:11.539705057Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T01:45:11.539710247Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T01:45:11.539714778Z     at async Promise.all (index 2)
+2025-12-05T01:45:11.539719348Z     at async DatabaseStorage.getSiteHighlights (file:///opt/render/project/src/dist/index.js:1507:55)
+2025-12-05T01:45:11.539734968Z     at async file:///opt/render/project/src/dist/index.js:6216:26 {
+2025-12-05T01:45:11.539738038Z   length: 114,
+2025-12-05T01:45:11.539741108Z   severity: 'ERROR',
+2025-12-05T01:45:11.539743688Z   code: '42P01',
+2025-12-05T01:45:11.539746328Z   detail: undefined,
+2025-12-05T01:45:11.539748808Z   hint: undefined,
+2025-12-05T01:45:11.539751468Z   position: '95',
+2025-12-05T01:45:11.539754759Z   internalPosition: undefined,
+2025-12-05T01:45:11.539757739Z   internalQuery: undefined,
+2025-12-05T01:45:11.539760629Z   where: undefined,
+2025-12-05T01:45:11.539763649Z   schema: undefined,
+2025-12-05T01:45:11.539766359Z   table: undefined,
+2025-12-05T01:45:11.539768909Z   column: undefined,
+2025-12-05T01:45:11.539771539Z   dataType: undefined,
+2025-12-05T01:45:11.539774149Z   constraint: undefined,
+2025-12-05T01:45:11.539776769Z   file: 'parse_relation.c',
+2025-12-05T01:45:11.539779309Z   line: '1449',
+2025-12-05T01:45:11.539781949Z   routine: 'parserOpenTable'
+2025-12-05T01:45:11.539784399Z }
+2025-12-05T01:45:11.540434054Z 1:45:11 AM [express] GET /api/site/highlights 500 in 265ms :: {"message":"Erro ao buscar destaques d…
+2025-12-05T01:45:23.017895219Z Login password error: error: column "photo_url" does not exist
+2025-12-05T01:45:23.01793059Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T01:45:23.0179362Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T01:45:23.01794118Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T01:45:23.01794649Z     at async DatabaseStorage.getUserByEmail (file:///opt/render/project/src/dist/index.js:810:24)
+2025-12-05T01:45:23.017952Z     at async file:///opt/render/project/src/dist/index.js:3851:20 {
+2025-12-05T01:45:23.017957151Z   length: 109,
+2025-12-05T01:45:23.017962391Z   severity: 'ERROR',
+2025-12-05T01:45:23.017966331Z   code: '42703',
+2025-12-05T01:45:23.017970691Z   detail: undefined,
+2025-12-05T01:45:23.017975651Z   hint: undefined,
+2025-12-05T01:45:23.017980251Z   position: '64',
+2025-12-05T01:45:23.017984941Z   internalPosition: undefined,
+2025-12-05T01:45:23.017989201Z   internalQuery: undefined,
+2025-12-05T01:45:23.017993391Z   where: undefined,
+2025-12-05T01:45:23.017997591Z   schema: undefined,
+2025-12-05T01:45:23.018002101Z   table: undefined,
+2025-12-05T01:45:23.018006452Z   column: undefined,
+2025-12-05T01:45:23.018011022Z   dataType: undefined,
+2025-12-05T01:45:23.018015702Z   constraint: undefined,
+2025-12-05T01:45:23.018019642Z   file: 'parse_relation.c',
+2025-12-05T01:45:23.018024002Z   line: '3716',
+2025-12-05T01:45:23.018028782Z   routine: 'errorMissingColumn'
+2025-12-05T01:45:23.018033262Z }
+2025-12-05T01:45:23.018512053Z 1:45:23 AM [express] POST /api/auth/login-password 400 in 271ms :: {"message":"column \"photo_url\" …

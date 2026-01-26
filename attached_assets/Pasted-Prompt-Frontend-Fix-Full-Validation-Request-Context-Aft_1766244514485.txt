@@ -1,0 +1,88 @@
+Prompt – Frontend Fix & Full Validation Request
+
+Context
+After the XP system refactor to enforce a single source of truth (user_lesson_progress.xpEarned), a frontend runtime error appeared when accessing a lesson page.
+
+❌ Current Error
+Cannot access 'showRespondaContent' before initialization
+
+
+File: client/src/pages/study/lesson.tsx
+Line: ~255
+Cause: A useEffect references showRespondaContent before its useState initialization.
+
+This is a JavaScript temporal dead zone issue caused by variable usage before declaration.
+
+✅ Required Fix (Immediate)
+
+Please ensure that all useState declarations are defined before any useEffect or function that depends on them.
+
+Specifically:
+
+// MUST be declared before any useEffect that uses it
+const [showRespondaContent, setShowRespondaContent] = useState(false);
+
+useEffect(() => {
+  if (showRespondaContent) {
+    setDisplayXpBeforeResponding(displayXp);
+  }
+}, [showRespondaContent, displayXp]);
+
+
+No useEffect, callback, or memoized function should reference a state variable that is declared later in the file.
+
+🔍 Additional Request – Full Frontend Validation
+
+After applying the fix above, please perform a full frontend audit to ensure no similar issues exist, especially after the XP refactor.
+
+Please verify:
+
+All useState hooks are declared before usage
+
+No useEffect references undeclared or later-declared variables
+
+No stale or duplicated XP state remains in the UI
+
+XP values displayed in the UI match backend values for:
+
+Lesson XP
+
+Global XP
+
+Annual ranking
+
+Season/Magazine ranking
+
+Lesson flow works end-to-end:
+
+Study → Quiz → Respond → Completion
+
+XP updates visually and logically after completion
+
+No console errors or warnings on:
+
+Lesson load
+
+Lesson completion
+
+Ranking pages
+
+🎯 Goal
+
+Ensure the frontend is:
+
+Stable after XP system refactor
+
+Free of initialization-order bugs
+
+Fully consistent with the new single-source-of-truth XP architecture
+
+✅ Expected Outcome
+
+Lesson page loads without runtime errors
+
+XP UI updates correctly
+
+Rankings display consistent values across all scopes
+
+No frontend regressions introduced by the XP changes

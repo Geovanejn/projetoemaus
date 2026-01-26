@@ -1,0 +1,100 @@
+2025-12-30T19:46:05.991801173Z 7:46:05 PM [express] POST /api/auth/login-password 200 in 809ms :: {"user":{"id":1,"fullName":"Admin…
+2025-12-30T19:46:13.114373401Z 7:46:13 PM [express] GET /api/espiritualidade/stats 304 in 250ms :: {"devotionals":{"total":3,"publi…
+2025-12-30T19:46:26.223710937Z 7:46:26 PM [express] GET /api/espiritualidade/devotionals 304 in 250ms :: [{"id":3,"title":"Natal - …
+2025-12-30T19:46:41.692482703Z 7:46:41 PM [express] GET /api/notifications 200 in 201ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:46:42.093613153Z 7:46:42 PM [express] GET /api/site-content/quem-somos 304 in 583ms :: {"timeline":{"title":"","conte…
+2025-12-30T19:46:42.12805529Z 7:46:42 PM [express] GET /api/notifications/unread-count 304 in 619ms :: {"count":0}
+2025-12-30T19:46:42.325633266Z 7:46:42 PM [express] GET /api/site/highlights 304 in 820ms :: {"devotional":{"id":3,"title":"Natal -…
+2025-12-30T19:46:49.771267979Z 7:46:49 PM [express] GET /api/study/devotional-status/1 200 in 69ms :: {"isRead":false}
+2025-12-30T19:46:49.904535205Z 7:46:49 PM [express] GET /api/site/devotionals/1 304 in 194ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T19:46:49.969599474Z 7:46:49 PM [express] GET /api/site/devotionals 304 in 260ms :: [{"id":3,"title":"Natal - Qual seu si…
+2025-12-30T19:46:50.337428575Z 7:46:50 PM [express] GET /api/site/devotionals/1/comments 304 in 70ms :: [{"id":2,"devotionalId":1,"…
+2025-12-30T19:46:55.73204355Z 7:46:55 PM [express] GET /api/site-content/quem-somos 304 in 66ms :: {"timeline":{"title":"","conten…
+2025-12-30T19:46:55.757579956Z 7:46:55 PM [express] GET /api/study/devotional-status/1 304 in 66ms :: {"isRead":false}
+2025-12-30T19:46:55.855215085Z 7:46:55 PM [express] GET /api/notifications 304 in 162ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:46:55.864617808Z 7:46:55 PM [express] GET /api/site/devotionals/1 304 in 194ms :: {"id":1,"title":"A Incomparável Pro…
+2025-12-30T19:46:55.942979068Z 7:46:55 PM [express] GET /api/site/devotionals 304 in 249ms :: [{"id":3,"title":"Natal - Qual seu si…
+2025-12-30T19:46:56.17336496Z 7:46:56 PM [express] GET /api/notifications/unread-count 304 in 64ms :: {"count":0}
+2025-12-30T19:46:56.252764665Z 7:46:56 PM [express] GET /api/site/devotionals/1/comments 304 in 64ms :: [{"id":2,"devotionalId":1,"…
+2025-12-30T19:47:26.293211251Z 7:47:26 PM [express] GET /api/notifications 304 in 128ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:47:26.597515932Z 7:47:26 PM [express] GET /api/notifications/unread-count 304 in 65ms :: {"count":0}
+2025-12-30T19:47:57.630566787Z 7:47:57 PM [express] GET /api/notifications 304 in 535ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:47:57.812655667Z 7:47:57 PM [express] GET /api/notifications/unread-count 304 in 459ms :: {"count":0}
+2025-12-30T19:48:28.567679959Z 7:48:28 PM [express] GET /api/notifications 304 in 535ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:48:28.599110551Z 7:48:28 PM [express] GET /api/notifications/unread-count 304 in 453ms :: {"count":0}
+2025-12-30T19:49:59.491664522Z 7:49:59 PM [express] GET /api/notifications 304 in 530ms :: {"notifications":[{"id":36,"userId":1,"t…
+2025-12-30T19:49:59.8919386Z 7:49:59 PM [express] GET /api/notifications/unread-count 304 in 478ms :: {"count":0}
+2025-12-30T19:57:25.310071775Z 7:57:25 PM [express] GET /api/notifications/unread-count 304 in 4346ms :: {"count":0}
+2025-12-30T19:57:26.036700529Z 7:57:26 PM [express] GET /api/notifications 304 in 5042ms :: {"notifications":[{"id":36,"userId":1,"…
+2025-12-30T19:57:35.649689077Z 7:57:35 PM [express] GET /api/site-content/quem-somos 304 in 83ms :: {"timeline":{"title":"","conten…
+2025-12-30T19:57:36.792010899Z 7:57:36 PM [express] GET /api/site/highlights 304 in 1125ms :: {"devotional":{"id":3,"title":"Natal …
+2025-12-30T19:57:43.248415564Z 7:57:43 PM [express] GET /api/espiritualidade/stats 304 in 259ms :: {"devotionals":{"total":3,"publi…
+2025-12-30T19:57:48.109830395Z 7:57:48 PM [express] GET /api/espiritualidade/devotionals 304 in 260ms :: [{"id":3,"title":"Natal - …
+2025-12-30T19:57:53.27726906Z 7:57:53 PM [express] GET /api/espiritualidade/devotionals/2 304 in 196ms :: {"id":2,"title":"Vivendo…
+2025-12-30T19:59:19.573152928Z [Upload Audio] Rejected file: HINO DA UCP, mimetype: application/octet-stream
+2025-12-30T19:59:19.574552833Z 7:59:19 PM [express] POST /api/upload/audio 500 in 15ms :: {"message":"Apenas arquivos de áudio são …
+2025-12-30T19:59:19.575341613Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T19:59:19.575354683Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T19:59:19.575359483Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T19:59:19.575363573Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T19:59:19.575367783Z     at Multipart.emit (node:events:518:28)
+2025-12-30T19:59:19.575370773Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T19:59:19.575390534Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T19:59:19.575392434Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T19:59:19.575394244Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T19:59:19.575395994Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T19:59:19.575397694Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T19:59:47.195236618Z [Upload Audio] Rejected file: lv_0_20230314113916, mimetype: application/octet-stream
+2025-12-30T19:59:47.19608318Z 7:59:47 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T19:59:47.196435498Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T19:59:47.196450759Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T19:59:47.196454979Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T19:59:47.196458319Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T19:59:47.196463279Z     at Multipart.emit (node:events:518:28)
+2025-12-30T19:59:47.196466189Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T19:59:47.196469019Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T19:59:47.196471799Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T19:59:47.196474639Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T19:59:47.196479039Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T19:59:47.19648373Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T20:00:00.013253686Z [Event Deadline Scheduler] Checking for events approaching deadline...
+2025-12-30T20:00:00.500805535Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2025-12-30T20:00:30.371066798Z [Upload Audio] Rejected file: Baby Sonic ganhou a corrida de carro contra o baby flash #shorts, mimetype: application/octet-stream
+2025-12-30T20:00:30.371974251Z 8:00:30 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T20:00:30.372242657Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T20:00:30.372250267Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T20:00:30.372254288Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T20:00:30.372257718Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T20:00:30.372261208Z     at Multipart.emit (node:events:518:28)
+2025-12-30T20:00:30.372264078Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T20:00:30.372266928Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T20:00:30.372269768Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T20:00:30.372272698Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T20:00:30.372277888Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T20:00:30.372291439Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T20:00:41.721741373Z [Upload Audio] Rejected file: PTT-20200423-WA0035, mimetype: application/octet-stream
+2025-12-30T20:00:41.722792529Z 8:00:41 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T20:00:41.7232023Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T20:00:41.72322031Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T20:00:41.72322459Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T20:00:41.723228271Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T20:00:41.72323192Z     at Multipart.emit (node:events:518:28)
+2025-12-30T20:00:41.723234861Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T20:00:41.723237651Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T20:00:41.723240401Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T20:00:41.723243251Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:219:14)
+2025-12-30T20:00:41.723246121Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T20:00:41.723248921Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)
+2025-12-30T20:00:53.122684699Z [Upload Audio] Rejected file: Som De Carros -  Som De Carros Ligando - Sons De Carros Acelerando | Batendo - Sound Effects, mimetype: application/octet-stream
+2025-12-30T20:00:53.12351162Z 8:00:53 PM [express] POST /api/upload/audio 500 in 2ms :: {"message":"Apenas arquivos de áudio são p…
+2025-12-30T20:00:53.123765596Z Error: Apenas arquivos de áudio são permitidos (MP3, WAV, OGG, AAC, M4A)
+2025-12-30T20:00:53.123773897Z     at fileFilter (file:///opt/render/project/src/dist/index.js:11914:10)
+2025-12-30T20:00:53.123780537Z     at wrappedFileFilter (/opt/render/project/src/node_modules/multer/index.js:44:7)
+2025-12-30T20:00:53.123786667Z     at Multipart.<anonymous> (/opt/render/project/src/node_modules/multer/lib/make-middleware.js:132:7)
+2025-12-30T20:00:53.123793337Z     at Multipart.emit (node:events:518:28)
+2025-12-30T20:00:53.123799307Z     at HeaderParser.cb (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:358:14)
+2025-12-30T20:00:53.123803517Z     at HeaderParser.push (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:162:20)
+2025-12-30T20:00:53.123807027Z     at SBMH.ssCb [as _cb] (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:394:37)
+2025-12-30T20:00:53.123810657Z     at feed (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:248:10)
+2025-12-30T20:00:53.123814967Z     at SBMH.push (/opt/render/project/src/node_modules/streamsearch/lib/sbmh.js:104:16)
+2025-12-30T20:00:53.123818847Z     at Multipart._write (/opt/render/project/src/node_modules/busboy/lib/types/multipart.js:567:19)

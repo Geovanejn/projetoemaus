@@ -1,0 +1,35 @@
+Aqui está o prompt pronto para você enviar ao Replit.
+Eu estruturei ele para atacar o Erro Crítico (NaN) primeiro, depois a Lentidão na Rota current-lesson (que apareceu com 889ms no log) e por fim a integração do Frontend.
+Copie e cole isso no chat do Replit:
+Contexto:
+Estamos refinando o DeoGlory (Node/Express/Prisma + React). A infraestrutura já está otimizada (Virginia/Pooling), e a maioria das rotas responde em <50ms. Porém, os logs de produção mostram um erro de rota crítico e um endpoint específico que está lento.
+Análise dos Logs Recentes:
+1. ERRO CRÍTICO 500 (Conflito de Rotas):
+O endpoint /api/study/weeks/bulk está retornando erro 500 porque o Express está confundindo a palavra "bulk" com um ID numérico.
+Log:
+GET /api/study/weeks/bulk 500
+Error: invalid input syntax for type integer: "NaN"
+... at DatabaseStorage.getStudyWeekById
+
+Causa: No arquivo de rotas (weeks.routes.ts), a rota GET /:id foi definida antes da rota GET /bulk. O Express captura o "bulk" como um parametro id e tenta converter para int no controller getById.
+2. GARGALO DE PERFORMANCE (Current Lesson):
+O endpoint que calcula a lição atual está instável e lento, chegando a quase 1 segundo, enquanto o resto do sistema responde em 20ms.
+Log:
+20:24:46 [express] GET /api/study/current-lesson 200 in 889ms
+20:23:26 [express] GET /api/study/current-lesson 304 in 408ms
+
+Suspeita: O Prisma pode estar carregando dados demais (relações desnecessárias) ou fazendo cálculos pesados de progresso em tempo real sem índices adequados.
+Solicitação de Correções (Action Plan):
+ * Corrigir Ordem das Rotas (weeks.routes.ts):
+   Mova a definição de router.get("/bulk", ...) para antes de router.get("/:id", ...). Isso resolverá o erro "NaN" imediatamente.
+ * Otimizar getCurrentLesson (Controller/Service):
+   Refatore a consulta do Prisma neste endpoint.
+   * Use select para buscar apenas id, title, lessonNumber e completed. Evite include profundos se não forem usados no frontend.
+   * Se estiver calculando qual é a próxima lição iterando um array grande, mude para uma query .findFirst() com orderBy e where: { completed: false }.
+ * Frontend (Integrar Bulk):
+   Após corrigir a rota API, verifique o arquivo useStudyWeeks (ou similar) no Frontend. Garanta que ele chame /api/study/weeks/bulk apenas uma vez ao carregar a Home, em vez de fazer um loop de chamadas para cada semana individualmente.
+Por favor, aplique essas correções e gere o código atualizado.
+O que esperar após esse Prompt:
+ * Fim do Erro 500: A rota /bulk vai passar a funcionar e retornar todas as semanas de uma vez.
+ * Dashboard Instantâneo: Com o /bulk funcionando, o frontend vai parar de fazer aquelas chamadas sequenciais (/weeks/1, /weeks/2...) que travam o carregamento inicial.
+ * Botão "Continuar" Rápido: A otimização do current-lesson vai fazer o botão principal da Home aparecer instantaneamente, sem aquele atraso de quase 1 segundo.

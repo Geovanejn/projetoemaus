@@ -1,0 +1,50 @@
+2025-12-25T22:29:59.452561524Z 
+2025-12-25T22:29:59.452579835Z up to date, audited 864 packages in 2s
+2025-12-25T22:29:59.452590015Z 
+2025-12-25T22:29:59.452621236Z 187 packages are looking for funding
+2025-12-25T22:29:59.452627596Z   run `npm fund` for details
+2025-12-25T22:29:59.475561495Z 
+2025-12-25T22:29:59.475573365Z 10 vulnerabilities (3 low, 5 moderate, 2 high)
+2025-12-25T22:29:59.475576865Z 
+2025-12-25T22:29:59.475581305Z To address issues that do not require attention, run:
+2025-12-25T22:29:59.475584635Z   npm audit fix
+2025-12-25T22:29:59.475587775Z 
+2025-12-25T22:29:59.475591095Z To address all issues (including breaking changes), run:
+2025-12-25T22:29:59.475594615Z   npm audit fix --force
+2025-12-25T22:29:59.475597336Z 
+2025-12-25T22:29:59.475601346Z Run `npm audit` for details.
+2025-12-25T22:29:59.623496905Z 
+2025-12-25T22:29:59.623521286Z > rest-express@1.0.0 build
+2025-12-25T22:29:59.623529006Z > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2025-12-25T22:29:59.623536086Z 
+2025-12-25T22:29:59.800723518Z vite v5.4.20 building for production...
+2025-12-25T22:29:59.848394589Z transforming...
+2025-12-25T22:30:01.378285054Z 
+2025-12-25T22:30:01.378306095Z A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+2025-12-25T22:30:02.087658665Z ✓ 70 modules transformed.
+2025-12-25T22:30:02.088367068Z x Build failed in 2.27s
+2025-12-25T22:30:02.088431869Z error during build:
+2025-12-25T22:30:02.088435569Z [vite:esbuild] Transform failed with 1 error:
+2025-12-25T22:30:02.088438519Z /opt/render/project/src/client/src/pages/study/event-lesson.tsx:209:0: ERROR: Unexpected "<<"
+2025-12-25T22:30:02.088441459Z file: /opt/render/project/src/client/src/pages/study/event-lesson.tsx:209:0
+2025-12-25T22:30:02.088443499Z 
+2025-12-25T22:30:02.088445999Z Unexpected "<<"
+2025-12-25T22:30:02.088448239Z 207|    const { toast } = useToast();
+2025-12-25T22:30:02.088450429Z 208|  
+2025-12-25T22:30:02.088452589Z 209|  <<<<<<< HEAD
+2025-12-25T22:30:02.088454709Z    |  ^
+2025-12-25T22:30:02.088456839Z 210|  <<<<<<< HEAD
+2025-12-25T22:30:02.088459229Z 211|    const audioCorrect = useRef<HTMLAudioElement | null>(null);
+2025-12-25T22:30:02.088461189Z 
+2025-12-25T22:30:02.08846396Z     at failureErrorWithLog (/opt/render/project/src/node_modules/vite/node_modules/esbuild/lib/main.js:1472:15)
+2025-12-25T22:30:02.08846616Z     at /opt/render/project/src/node_modules/vite/node_modules/esbuild/lib/main.js:755:50
+2025-12-25T22:30:02.088468889Z     at responseCallbacks.<computed> (/opt/render/project/src/node_modules/vite/node_modules/esbuild/lib/main.js:622:9)
+2025-12-25T22:30:02.08848313Z     at handleIncomingPacket (/opt/render/project/src/node_modules/vite/node_modules/esbuild/lib/main.js:677:12)
+2025-12-25T22:30:02.08848546Z     at Socket.readFromStdout (/opt/render/project/src/node_modules/vite/node_modules/esbuild/lib/main.js:600:7)
+2025-12-25T22:30:02.08849019Z     at Socket.emit (node:events:518:28)
+2025-12-25T22:30:02.08849302Z     at addChunk (node:internal/streams/readable:561:12)
+2025-12-25T22:30:02.08849517Z     at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+2025-12-25T22:30:02.08849731Z     at Readable.push (node:internal/streams/readable:392:5)
+2025-12-25T22:30:02.08849969Z     at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+2025-12-25T22:30:02.156578955Z ==> Build failed 😞
+2025-12-25T22:30:02.156597805Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

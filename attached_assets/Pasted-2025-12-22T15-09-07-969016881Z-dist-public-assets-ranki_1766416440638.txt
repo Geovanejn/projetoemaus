@@ -1,0 +1,100 @@
+2025-12-22T15:09:07.969016881Z ../dist/public/assets/ranking-Blmvw6EX.js                                           11.73 kB │ gzip:   3.40 kB
+2025-12-22T15:09:07.969020021Z ../dist/public/assets/MarketingQuemSomos-DqGvRpn4.js                                12.68 kB │ gzip:   3.57 kB
+2025-12-22T15:09:07.969023281Z ../dist/public/assets/format-CwBWPe7n.js                                            13.01 kB │ gzip:   3.45 kB
+2025-12-22T15:09:07.969026211Z ../dist/public/assets/DeoGloryConfiguracoes-Bqyxnve9.js                             13.17 kB │ gzip:   2.80 kB
+2025-12-22T15:09:07.969029341Z ../dist/public/assets/final-challenge-BXlOIqxc.js                                   13.53 kB │ gzip:   4.36 kB
+2025-12-22T15:09:07.969032921Z ../dist/public/assets/profile-Cc20Zs84.js                                           13.81 kB │ gzip:   3.84 kB
+2025-12-22T15:09:07.969036501Z ../dist/public/assets/achievements-KIC8pQ92.js                                      13.98 kB │ gzip:   4.92 kB
+2025-12-22T15:09:07.969039962Z ../dist/public/assets/DeoGloryEstudos-C5jnnEBE.js                                   15.41 kB │ gzip:   4.60 kB
+2025-12-22T15:09:07.969042072Z ../dist/public/assets/DeoGloryLicoes-CTfQOJNs.js                                    16.38 kB │ gzip:   4.42 kB
+2025-12-22T15:09:07.969044172Z ../dist/public/assets/DeoGloryRevistaDetail-zz-Yr-GJ.js                             17.29 kB │ gzip:   4.68 kB
+2025-12-22T15:09:07.969046232Z ../dist/public/assets/practice-B3cb6StG.js                                          18.20 kB │ gzip:   4.87 kB
+2025-12-22T15:09:07.969048302Z ../dist/public/assets/index-CMczMNgT.js                                             19.12 kB │ gzip:   6.04 kB
+2025-12-22T15:09:07.969050472Z ../dist/public/assets/purify.es-sOfw8HaZ.js                                         22.67 kB │ gzip:   8.79 kB
+2025-12-22T15:09:07.969052672Z ../dist/public/assets/preview-v0C-LtyS.js                                           23.80 kB │ gzip:   7.09 kB
+2025-12-22T15:09:07.969055762Z ../dist/public/assets/admin-site-thO1Xu44.js                                        24.31 kB │ gzip:   5.63 kB
+2025-12-22T15:09:07.969058132Z ../dist/public/assets/ImageCropDialog-4s4Jh4dw.js                                   26.08 kB │ gzip:   8.15 kB
+2025-12-22T15:09:07.969060242Z ../dist/public/assets/mission-activity-BZ_nikeR.js                                  30.19 kB │ gzip:   8.45 kB
+2025-12-22T15:09:07.969062322Z ../dist/public/assets/index-g8B9XyEP.js                                             49.36 kB │ gzip:  10.06 kB
+2025-12-22T15:09:07.969064382Z ../dist/public/assets/lesson-D-HbyNtw.js                                            81.59 kB │ gzip:  21.88 kB
+2025-12-22T15:09:07.969066412Z ../dist/public/assets/ExerciseCard-WlmvtOXW.js                                     130.22 kB │ gzip:  39.83 kB
+2025-12-22T15:09:07.969078873Z ../dist/public/assets/index.es-DkfUzcZV.js                                         150.82 kB │ gzip:  51.65 kB
+2025-12-22T15:09:07.969081393Z ../dist/public/assets/EspiritualidadeDevocionalEditor-CMaH5qdh.js                  375.98 kB │ gzip: 118.92 kB
+2025-12-22T15:09:07.969087383Z ../dist/public/assets/DeoGloryRelatorios-CVyoHRiO.js                               404.09 kB │ gzip: 108.41 kB
+2025-12-22T15:09:07.969089573Z ../dist/public/assets/admin-CNntT5Ko.js                                            529.29 kB │ gzip: 167.61 kB
+2025-12-22T15:09:07.969091673Z ../dist/public/assets/index-BV1pS6I9.js                                          1,054.10 kB │ gzip: 299.67 kB
+2025-12-22T15:09:07.969095403Z ✓ built in 19.45s
+2025-12-22T15:09:08.158065471Z 
+2025-12-22T15:09:08.158088562Z   dist/index.js  645.6kb
+2025-12-22T15:09:08.158091132Z 
+2025-12-22T15:09:08.158093202Z ⚡ Done in 26ms
+2025-12-22T15:09:25.883793707Z ==> Uploading build...
+2025-12-22T15:09:57.793964088Z ==> Uploaded in 21.7s. Compression took 10.1s
+2025-12-22T15:09:57.795031787Z ==> Build successful 🎉
+2025-12-22T15:10:13.673874392Z ==> Deploying...
+2025-12-22T15:11:19.21786526Z ==> Running 'node ./dist/index.js'
+2025-12-22T15:11:39.529333608Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-22T15:11:39.529799565Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-22T15:11:39.53063259Z [Push] Web Push configured successfully
+2025-12-22T15:11:39.622837678Z Initializing PostgreSQL database connection...
+2025-12-22T15:11:39.731419944Z Database initialization error: Error: getaddrinfo ENOTFOUND base
+2025-12-22T15:11:39.731443204Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2025-12-22T15:11:39.731447334Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-22T15:11:39.731450234Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+2025-12-22T15:11:39.731453084Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+2025-12-22T15:11:39.731455954Z   errno: -3008,
+2025-12-22T15:11:39.731459424Z   code: 'ENOTFOUND',
+2025-12-22T15:11:39.731463284Z   syscall: 'getaddrinfo',
+2025-12-22T15:11:39.731466074Z   hostname: 'base'
+2025-12-22T15:11:39.731468864Z }
+2025-12-22T15:11:39.732070355Z node:internal/process/promises:394
+2025-12-22T15:11:39.732090445Z     triggerUncaughtException(err, true /* fromPromise */);
+2025-12-22T15:11:39.732111895Z     ^
+2025-12-22T15:11:39.732117415Z 
+2025-12-22T15:11:39.732122605Z Error: getaddrinfo ENOTFOUND base
+2025-12-22T15:11:39.732128416Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2025-12-22T15:11:39.732134456Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-22T15:11:39.732139306Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+2025-12-22T15:11:39.732144516Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+2025-12-22T15:11:39.732150536Z   errno: -3008,
+2025-12-22T15:11:39.732156666Z   code: 'ENOTFOUND',
+2025-12-22T15:11:39.732162596Z   syscall: 'getaddrinfo',
+2025-12-22T15:11:39.732167946Z   hostname: 'base'
+2025-12-22T15:11:39.732172956Z }
+2025-12-22T15:11:39.732177906Z 
+2025-12-22T15:11:39.732182946Z Node.js v22.16.0
+2025-12-22T15:11:40.325457914Z ==> No open ports detected, continuing to scan...
+2025-12-22T15:11:40.426113278Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-12-22T15:11:41.726814914Z ==> Exited with status 1
+2025-12-22T15:11:41.743903313Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-12-22T15:11:47.020980873Z ==> Running 'node ./dist/index.js'
+2025-12-22T15:12:06.322074121Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-22T15:12:06.322689392Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-22T15:12:06.323723349Z [Push] Web Push configured successfully
+2025-12-22T15:12:06.417728238Z Initializing PostgreSQL database connection...
+2025-12-22T15:12:06.431715844Z Database initialization error: Error: getaddrinfo ENOTFOUND base
+2025-12-22T15:12:06.431748144Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2025-12-22T15:12:06.431751864Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-22T15:12:06.431754524Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+2025-12-22T15:12:06.431756944Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+2025-12-22T15:12:06.431759564Z   errno: -3008,
+2025-12-22T15:12:06.431762264Z   code: 'ENOTFOUND',
+2025-12-22T15:12:06.431765315Z   syscall: 'getaddrinfo',
+2025-12-22T15:12:06.431767805Z   hostname: 'base'
+2025-12-22T15:12:06.431770235Z }
+2025-12-22T15:12:06.5178909Z node:internal/process/promises:394
+2025-12-22T15:12:06.517921621Z     triggerUncaughtException(err, true /* fromPromise */);
+2025-12-22T15:12:06.517926331Z     ^
+2025-12-22T15:12:06.517929241Z 
+2025-12-22T15:12:06.517932521Z Error: getaddrinfo ENOTFOUND base
+2025-12-22T15:12:06.517936421Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2025-12-22T15:12:06.517940011Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-22T15:12:06.517948211Z     at async initializeDatabase (file:///opt/render/project/src/dist/index.js:1260:20)
+2025-12-22T15:12:06.517951471Z     at async file:///opt/render/project/src/dist/index.js:14337:3 {
+2025-12-22T15:12:06.517954521Z   errno: -3008,
+2025-12-22T15:12:06.517958621Z   code: 'ENOTFOUND',
+2025-12-22T15:12:06.517962632Z   syscall: 'getaddrinfo',
+2025-12-22T15:12:06.517965962Z   hostname: 'base'
+2025-12-22T15:12:06.517969642Z }
+2025-12-22T15:12:06.517972382Z 
+2025-12-22T15:12:06.517974442Z Node.js v22.16.0

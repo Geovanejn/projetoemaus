@@ -1,0 +1,400 @@
+2026-01-10T20:57:47.77212562Z 8:57:47 PM [express] GET /api/site-content/quem-somos 200 in 6ms :: {"email":{"title":"","content":"…
+2026-01-10T20:57:48.671816819Z 8:57:48 PM [express] GET /api/site/highlights 200 in 490ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-10T20:58:12.472424343Z 8:58:12 PM [express] POST /api/auth/login-password 200 in 861ms :: {"user":{"id":11,"fullName":"Evel…
+2026-01-10T20:58:18.380066649Z 8:58:18 PM [express] GET /api/study/profile 200 in 205ms :: {"id":3,"userId":11,"totalXp":0,"current…
+2026-01-10T20:58:18.479092017Z 8:58:18 PM [express] GET /api/study/leaderboard 200 in 295ms :: {"periodType":"weekly","periodKey":"…
+2026-01-10T20:58:18.495008379Z 8:58:18 PM [express] GET /api/missions/daily 200 in 308ms :: {"missions":[{"id":26,"userId":11,"miss…
+2026-01-10T20:58:18.656487104Z 8:58:18 PM [express] GET /api/study/weeks 200 in 12ms :: [{"id":11,"weekNumber":5,"year":2026,"title…
+2026-01-10T20:58:18.843902904Z 8:58:18 PM [express] GET /api/study/practice/11/status 200 in 25ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-10T20:58:19.074418471Z 8:58:19 PM [express] GET /api/study/weeks/bulk 200 in 258ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-10T20:58:19.537639491Z 8:58:19 PM [express] GET /api/study/weekly-goal 200 in 34ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-10T20:58:19.581771115Z 8:58:19 PM [express] GET /api/notifications/unread-count 200 in 5ms :: {"count":8}
+2026-01-10T20:58:19.58314291Z 8:58:19 PM [express] GET /api/notifications 200 in 40ms :: {"notifications":[{"id":104,"userId":11,"…
+2026-01-10T20:58:19.588014833Z 8:58:19 PM [express] GET /api/study/streak/status 200 in 49ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-10T20:58:31.390553991Z 8:58:31 PM [express] GET /api/study/lessons/47 200 in 16ms :: {"id":47,"studyWeekId":7,"seasonId":nu…
+2026-01-10T20:58:31.615697303Z 8:58:31 PM [express] POST /api/study/lessons/47/start 200 in 53ms :: {"id":13,"userId":11,"lessonId"…
+2026-01-10T20:58:31.807190346Z 8:58:31 PM [express] GET /api/study/profile 304 in 30ms :: {"id":3,"userId":11,"totalXp":0,"currentL…
+2026-01-10T21:00:00.081159829Z [Instagram Scheduler] Running sync...
+2026-01-10T21:00:00.081183589Z [Instagram] Starting sync...
+2026-01-10T21:00:00.180108316Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-10T21:00:00.180127637Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-10T21:00:00.384487576Z [Instagram] No new posts fetched - keeping existing data
+2026-01-10T21:00:00.384493286Z [Instagram] API error: 400 {
+2026-01-10T21:00:00.384513316Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-10T21:00:00.384524317Z   error: {
+2026-01-10T21:00:00.384528987Z     message: 'Error validating access token: Session has expired on Monday, 29-Dec-25 10:00:00 PST. The current time is Saturday, 10-Jan-26 13:00:00 PST.',
+2026-01-10T21:00:00.384533717Z     type: 'OAuthException',
+2026-01-10T21:00:00.384537457Z     code: 190,
+2026-01-10T21:00:00.384541897Z     error_subcode: 463,
+2026-01-10T21:00:00.384545987Z     fbtrace_id: 'Ae3Pi6bg__E4lrh5bYXWUL3'
+2026-01-10T21:00:00.384549687Z   }
+2026-01-10T21:00:00.384553377Z }
+2026-01-10T21:00:00.491115927Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-10T21:00:00.587406318Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-10T21:07:08.703041007Z 9:07:08 PM [express] POST /api/study/units/678/complete 200 in 702ms :: {"unitProgress":{"id":137,"u…
+2026-01-10T21:07:08.703786396Z 9:07:08 PM [express] POST /api/study/units/675/complete 200 in 687ms :: {"unitProgress":{"id":136,"u…
+2026-01-10T21:07:08.815402087Z 9:07:08 PM [express] POST /api/study/units/674/complete 200 in 793ms :: {"unitProgress":{"id":138,"u…
+2026-01-10T21:07:08.816187247Z 9:07:08 PM [express] POST /api/study/units/676/complete 200 in 742ms :: {"unitProgress":{"id":139,"u…
+2026-01-10T21:07:09.371550912Z 9:07:09 PM [express] POST /api/study/units/677/complete 200 in 1369ms :: {"unitProgress":{"id":141,"…
+2026-01-10T21:07:09.376542199Z 9:07:09 PM [express] POST /api/study/units/673/complete 200 in 198ms :: {"unitProgress":{"id":140,"u…
+2026-01-10T21:07:09.471682253Z 9:07:09 PM [express] POST /api/study/units/673/complete 200 in 1448ms :: {"unitProgress":{"id":140,"…
+2026-01-10T21:07:09.578744799Z 9:07:09 PM [express] POST /api/study/units/677/complete 200 in 307ms :: {"unitProgress":{"id":141,"u…
+2026-01-10T21:07:09.580940615Z 9:07:09 PM [express] POST /api/study/units/678/complete 200 in 385ms :: {"unitProgress":{"id":137,"u…
+2026-01-10T21:07:09.583066858Z 9:07:09 PM [express] POST /api/study/units/675/complete 200 in 384ms :: {"unitProgress":{"id":136,"u…
+2026-01-10T21:07:09.776956308Z 9:07:09 PM [express] POST /api/study/units/676/complete 200 in 499ms :: {"unitProgress":{"id":139,"u…
+2026-01-10T21:07:09.789146497Z 9:07:09 PM [express] POST /api/study/units/674/complete 200 in 509ms :: {"unitProgress":{"id":138,"u…
+2026-01-10T21:07:09.893715129Z 9:07:09 PM [express] POST /api/study/lessons/47/complete-stage 200 in 221ms :: {"xpAwarded":50,"prof…
+2026-01-10T21:07:09.978279906Z Stage XP already awarded for user 11, stage estude, lesson 47
+2026-01-10T21:07:09.999744479Z 9:07:09 PM [express] POST /api/study/lessons/47/complete-stage 200 in 43ms :: {"xpAwarded":50,"profi…
+2026-01-10T21:07:33.183759372Z 9:07:33 PM [express] POST /api/study/units/680/complete 200 in 51ms :: {"unitProgress":{"id":142,"us…
+2026-01-10T21:07:33.1848453Z 9:07:33 PM [express] POST /api/study/units/679/complete 200 in 41ms :: {"unitProgress":{"id":144,"us…
+2026-01-10T21:07:33.186791959Z 9:07:33 PM [express] POST /api/study/units/681/complete 200 in 47ms :: {"unitProgress":{"id":143,"us…
+2026-01-10T21:07:33.493359978Z 9:07:33 PM [express] POST /api/study/lessons/47/complete-stage 200 in 54ms :: {"xpAwarded":50,"profi…
+2026-01-10T21:07:33.594005571Z 9:07:33 PM [express] GET /api/pix/status 304 in 2ms :: {"configured":true}
+2026-01-10T21:07:33.673606253Z 9:07:33 PM [express] GET /api/treasury/member/shop-orders 304 in 69ms :: []
+2026-01-10T21:07:33.679211375Z 9:07:33 PM [express] GET /api/treasury/member/events 304 in 62ms :: []
+2026-01-10T21:07:33.693823904Z 9:07:33 PM [express] GET /api/treasury/member/status 304 in 91ms :: {"memberId":2,"memberName":"Geov…
+2026-01-10T21:07:48.184392227Z 9:07:48 PM [express] POST /api/study/units/686/answer 200 in 85ms :: {"unitProgress":{"id":145,"user…
+2026-01-10T21:08:07.153599389Z 9:08:07 PM [express] POST /api/study/units/684/answer 200 in 50ms :: {"unitProgress":{"id":146,"user…
+2026-01-10T21:08:15.880916672Z 9:08:15 PM [express] POST /api/study/units/683/answer 200 in 49ms :: {"unitProgress":{"id":147,"user…
+2026-01-10T21:08:37.461692585Z 9:08:37 PM [express] POST /api/study/units/682/answer 200 in 49ms :: {"unitProgress":{"id":148,"user…
+2026-01-10T21:09:04.970698287Z 9:09:04 PM [express] POST /api/study/units/685/answer 200 in 49ms :: {"unitProgress":{"id":149,"user…
+2026-01-10T21:09:06.071792903Z 9:09:06 PM [express] POST /api/study/units/682/complete 200 in 179ms :: {"unitProgress":{"id":148,"u…
+2026-01-10T21:09:06.332389451Z 9:09:06 PM [express] POST /api/study/units/683/complete 200 in 26ms :: {"unitProgress":{"id":147,"us…
+2026-01-10T21:09:06.540511483Z 9:09:06 PM [express] POST /api/study/units/684/complete 200 in 28ms :: {"unitProgress":{"id":146,"us…
+2026-01-10T21:09:06.728436654Z 9:09:06 PM [express] POST /api/study/units/685/complete 200 in 28ms :: {"unitProgress":{"id":149,"us…
+2026-01-10T21:09:06.996153562Z 9:09:06 PM [express] POST /api/study/units/686/complete 200 in 30ms :: {"unitProgress":{"id":145,"us…
+2026-01-10T21:09:10.685915172Z [Achievement] Checking for user 11: event=lesson_complete, lessonsCompleted=1, streak=0, totalXp=180, alreadyUnlocked=0
+2026-01-10T21:09:10.686019135Z [Achievement] Unlocking first_lesson for user 11
+2026-01-10T21:09:10.78391908Z [Notifications] notifyAchievement STARTED for user 11: "Primeiro Passo"
+2026-01-10T21:09:10.980827618Z [Push] Successfully sent notification to member user 11
+2026-01-10T21:09:10.986580464Z [Push] Sent "🏆 Nova Conquista Desbloqueada!" to user 11 (1/1 success)
+2026-01-10T21:09:10.986601654Z [Notifications] Achievement push to user 11: success
+2026-01-10T21:09:10.994772271Z [Achievement] Unlocking xp_100 for user 11
+2026-01-10T21:09:11.052555572Z [Notifications] notifyAchievement STARTED for user 11: "Iniciante"
+2026-01-10T21:09:11.162956163Z [Push] Successfully sent notification to member user 11
+2026-01-10T21:09:11.16364618Z [Push] Sent "🏆 Nova Conquista Desbloqueada!" to user 11 (1/1 success)
+2026-01-10T21:09:11.16366319Z [Notifications] Achievement push to user 11: success
+2026-01-10T21:09:11.287209844Z [Notifications] notifyAchievement STARTED for user 11: "Perfeito!"
+2026-01-10T21:09:11.386276298Z [Push] Successfully sent notification to member user 11
+2026-01-10T21:09:11.390219058Z [Push] Sent "🏆 Nova Conquista Desbloqueada!" to user 11 (1/1 success)
+2026-01-10T21:09:11.390237778Z [Notifications] Achievement push to user 11: success
+2026-01-10T21:09:11.510753305Z 9:09:11 PM [express] POST /api/study/lessons/47/complete 200 in 1245ms :: {"progress":{"id":13,"user…
+2026-01-10T21:09:11.74035452Z 9:09:11 PM [express] GET /api/study/weeks/7 200 in 32ms :: {"id":7,"weekNumber":1,"year":2026,"title…
+2026-01-10T21:09:40.932004013Z 9:09:40 PM [express] GET /api/study/weeks 200 in 5ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-10T21:09:40.936818315Z 9:09:40 PM [express] GET /api/study/practice/11/status 200 in 19ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-10T21:09:41.073199383Z 9:09:41 PM [express] GET /api/notifications/unread-count 200 in 101ms :: {"count":11}
+2026-01-10T21:09:41.176257459Z 9:09:41 PM [express] GET /api/study/weeks/bulk 200 in 251ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-10T21:09:41.180018564Z 9:09:41 PM [express] GET /api/notifications 200 in 106ms :: {"notifications":[{"id":121,"userId":11,…
+2026-01-10T21:09:41.971984757Z 9:09:41 PM [express] GET /api/study/streak/status 200 in 991ms :: {"needsRecovery":false,"streakAtRi…
+2026-01-10T21:09:41.978176323Z 9:09:41 PM [express] GET /api/study/leaderboard 200 in 1038ms :: {"periodType":"weekly","periodKey":…
+2026-01-10T21:09:42.078415078Z 9:09:42 PM [express] GET /api/study/weekly-goal 200 in 507ms :: {"weekKey":"2026-W03","goals":{"less…
+2026-01-10T21:09:42.081328571Z 9:09:42 PM [express] GET /api/missions/daily 200 in 905ms :: {"missions":[{"id":27,"userId":11,"miss…
+2026-01-10T21:10:02.614477784Z 9:10:02 PM [express] GET /api/study/achievements 200 in 11ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-10T21:10:03.479093985Z 9:10:03 PM [express] GET /api/study/seasons 200 in 848ms :: [{"id":4,"title":"Não Jogue Sua Vida For…
+2026-01-10T21:10:03.574816816Z [WebSocket] Authenticated connection: es0Gg0plX09WDLY-AAAB, userId: 11
+2026-01-10T21:10:03.575458852Z [WebSocket] Client connected: es0Gg0plX09WDLY-AAAB, authenticated: true
+2026-01-10T21:10:03.762542982Z [WebSocket] Updated DB: User 11 is now online
+2026-01-10T21:10:03.764102942Z [WebSocket] User 11 (Evelyn Moura) joined presence room. Online: 1
+2026-01-10T21:10:07.628137582Z 9:10:07 PM [express] GET /api/study/leaderboard 200 in 22ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:10:12.881761948Z 9:10:12 PM [express] GET /api/study/leaderboard 304 in 16ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:10:16.456048094Z [WebSocket] Client disconnected: es0Gg0plX09WDLY-AAAB, reason: client namespace disconnect
+2026-01-10T21:10:16.460155508Z [WebSocket] Updated DB: User 11 is now offline (disconnect)
+2026-01-10T21:10:16.460345523Z [WebSocket] User 11 disconnected from presence. Online: 0
+2026-01-10T21:10:16.678972601Z 9:10:16 PM [express] GET /api/study/weeks/bulk 200 in 189ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-10T21:10:16.803579892Z 9:10:16 PM [express] GET /api/study/weekly-goal 200 in 129ms :: {"weekKey":"2026-W03","goals":{"less…
+2026-01-10T21:10:26.547720267Z 9:10:26 PM [express] GET /api/study/current-lesson 200 in 14ms :: {"lesson":{"id":46,"lessonNumber":…
+2026-01-10T21:10:34.183381952Z 9:10:34 PM [express] GET /api/study/events 200 in 83ms :: [{"id":4,"title":"Ano Novo: O que muda?","…
+2026-01-10T21:10:44.584584543Z 9:10:44 PM [express] GET /api/study/events/4 200 in 38ms :: {"event":{"id":4,"title":"Ano Novo: O qu…
+2026-01-10T21:11:06.757718924Z 9:11:06 PM [express] GET /api/study/events/4/lessons/1 200 in 12ms :: {"lesson":{"id":16,"eventId":4…
+2026-01-10T21:11:06.762044395Z [Event Participate] User 11 registered as participant in event 4
+2026-01-10T21:11:06.76264516Z 9:11:06 PM [express] POST /api/study/events/4/participate 200 in 8ms :: {"success":true}
+2026-01-10T21:11:13.367443994Z [Event Participate] User 11 registered as participant in event 4
+2026-01-10T21:11:13.368144592Z 9:11:13 PM [express] POST /api/study/events/4/participate 200 in 5ms :: {"success":true}
+2026-01-10T21:11:38.399591429Z 9:11:38 PM [express] POST /api 200 in 1ms
+2026-01-10T21:14:10.289872127Z [Level Up] User 11: Level 1 -> 2, Hearts already at max (5)
+2026-01-10T21:14:10.371766061Z 9:14:10 PM [express] POST /api/study/events/4/lessons/16/complete 200 in 155ms :: {"id":1,"userId":1…
+2026-01-10T21:14:11.073630312Z 9:14:11 PM [express] GET /api/study/events/4/lessons/1 200 in 300ms :: {"lesson":{"id":16,"eventId":…
+2026-01-10T21:14:11.872680989Z 9:14:11 PM [express] GET /api/study/events/4/lessons/1 200 in 301ms :: {"lesson":{"id":16,"eventId":…
+2026-01-10T21:14:12.383833451Z 9:14:12 PM [express] GET /api/study/events/4 200 in 1397ms :: {"event":{"id":4,"title":"Ano Novo: O …
+2026-01-10T21:14:29.886687327Z 9:14:29 PM [express] GET /api/study/daily-verse/status 200 in 57ms :: {"isRead":false,"dateKey":"202…
+2026-01-10T21:14:29.886723628Z 9:14:29 PM [express] GET /api/study/profile 200 in 56ms :: {"id":3,"userId":11,"totalXp":400,"curren…
+2026-01-10T21:14:30.233953368Z 9:14:30 PM [express] GET /api/study/daily-verse 200 in 411ms :: {"verse":"Perto está o Senhor de tod…
+2026-01-10T21:14:49.476460933Z 9:14:49 PM [express] POST /api/study/daily-verse/confirm 200 in 112ms :: {"success":true,"message":"…
+2026-01-10T21:14:49.684305032Z 9:14:49 PM [express] GET /api/study/profile 200 in 12ms :: {"id":3,"userId":11,"totalXp":400,"curren…
+2026-01-10T21:14:56.829279958Z [WebSocket] Authenticated connection: R_mfs-ZrLum7uWKWAAAD, userId: 11
+2026-01-10T21:14:56.829305758Z [WebSocket] Client connected: R_mfs-ZrLum7uWKWAAAD, authenticated: true
+2026-01-10T21:14:56.993148107Z [WebSocket] Updated DB: User 11 is now online
+2026-01-10T21:14:56.993980379Z [WebSocket] User 11 (Evelyn Moura) joined presence room. Online: 1
+2026-01-10T21:15:01.450553371Z 9:15:01 PM [express] GET /api/study/leaderboard 200 in 19ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:15:07.209942791Z 9:15:07 PM [express] GET /api/study/leaderboard 304 in 12ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:15:12.487755036Z 9:15:12 PM [express] GET /api/study/leaderboard 304 in 14ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:15:17.709677857Z [WebSocket] Client disconnected: R_mfs-ZrLum7uWKWAAAD, reason: client namespace disconnect
+2026-01-10T21:15:17.713041114Z [WebSocket] Updated DB: User 11 is now offline (disconnect)
+2026-01-10T21:15:17.713425443Z [WebSocket] User 11 disconnected from presence. Online: 0
+2026-01-10T21:15:17.777636093Z 9:15:17 PM [express] GET /api/study/profile/stats 200 in 33ms :: {"lessonsCompleted":1,"unitsComplet…
+2026-01-10T21:15:17.794618579Z 9:15:17 PM [express] GET /api/study/profile/activities 200 in 36ms :: [{"type":"achievement_unlocked…
+2026-01-10T21:15:17.79661915Z 9:15:17 PM [express] GET /api/study/cards 200 in 34ms :: []
+2026-01-10T21:15:17.879715955Z 9:15:17 PM [express] GET /api/study/achievements 200 in 25ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-10T21:15:40.023717044Z 9:15:40 PM [express] GET /api/notifications 200 in 22ms :: {"notifications":[{"id":121,"userId":11,"…
+2026-01-10T21:15:40.272532667Z 9:15:40 PM [express] GET /api/study/practice/11/status 200 in 263ms :: {"weekId":11,"isUnlocked":fal…
+2026-01-10T21:15:40.488243256Z 9:15:40 PM [express] GET /api/study/streak/status 200 in 467ms :: {"needsRecovery":false,"streakAtRi…
+2026-01-10T21:15:40.588633151Z 9:15:40 PM [express] GET /api/study/weekly-goal 200 in 209ms :: {"weekKey":"2026-W03","goals":{"less…
+2026-01-10T21:15:40.672721941Z 9:15:40 PM [express] GET /api/notifications/unread-count 200 in 660ms :: {"count":11}
+2026-01-10T21:15:40.673661115Z 9:15:40 PM [express] GET /api/study/weeks 200 in 597ms :: [{"id":11,"weekNumber":5,"year":2026,"titl…
+2026-01-10T21:15:40.695834569Z 9:15:40 PM [express] GET /api/missions/daily 200 in 689ms :: {"missions":[{"id":27,"userId":11,"miss…
+2026-01-10T21:15:40.872736811Z 9:15:40 PM [express] GET /api/study/weeks/bulk 200 in 400ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-10T21:16:00.395651263Z 9:16:00 PM [express] GET /api/site-content/quem-somos 200 in 12ms :: {"email":{"title":"","content":…
+2026-01-10T21:16:00.675679289Z 9:16:00 PM [express] GET /api/site/highlights 200 in 211ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-10T21:16:35.772813653Z 9:16:35 PM [express] GET /api/shop/cart 200 in 202ms :: []
+2026-01-10T21:16:35.783939367Z 9:16:35 PM [express] GET /api/shop/categories 200 in 199ms :: [{"id":10,"name":"Acessórios","isDefau…
+2026-01-10T21:16:35.87365519Z 9:16:35 PM [express] GET /api/shop/featured 200 in 278ms :: [{"id":11,"name":"Kit UMP Emaús 2025","d…
+2026-01-10T21:16:35.874181423Z 9:16:35 PM [express] GET /api/shop/items 200 in 275ms :: [{"id":11,"name":"Kit UMP Emaús 2025","desc…
+2026-01-10T21:16:37.473921337Z 9:16:37 PM [express] GET /api/shop/images/category/10 200 in 1487ms
+2026-01-10T21:16:40.773168614Z 9:16:40 PM [express] GET /api/shop/images/category/11 200 in 4768ms
+2026-01-10T21:16:40.773710027Z 9:16:40 PM [express] GET /api/shop/images/category/12 200 in 4778ms
+2026-01-10T21:16:40.774767534Z 9:16:40 PM [express] GET /api/shop/images/category/9 200 in 3901ms
+2026-01-10T21:16:41.170974428Z 9:16:40 PM [express] GET /api/shop/images/item/47 200 in 3998ms
+2026-01-10T21:16:47.476978768Z Get banner image error: Error: Connection terminated due to connection timeout
+2026-01-10T21:16:47.477003068Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2026-01-10T21:16:47.477008269Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-10T21:16:47.477015679Z     at async file:///opt/render/project/src/node_modules/drizzle-orm/node-postgres/session.js:83:22
+2026-01-10T21:16:47.477020269Z     at async DatabaseStorage.getShopItemBannerImage (file:///opt/render/project/src/dist/index.js:11173:24)
+2026-01-10T21:16:47.477024349Z     at async file:///opt/render/project/src/dist/index.js:20883:25 {
+2026-01-10T21:16:47.477028569Z   [cause]: Error: Connection terminated unexpectedly
+2026-01-10T21:16:47.477032679Z       at Connection.<anonymous> (/opt/render/project/src/node_modules/pg/lib/client.js:136:73)
+2026-01-10T21:16:47.477038069Z       at Object.onceWrapper (node:events:632:28)
+2026-01-10T21:16:47.47704194Z       at Connection.emit (node:events:518:28)
+2026-01-10T21:16:47.47704584Z       at Socket.<anonymous> (/opt/render/project/src/node_modules/pg/lib/connection.js:62:12)
+2026-01-10T21:16:47.47704986Z       at Socket.emit (node:events:530:35)
+2026-01-10T21:16:47.47705368Z       at TCP.<anonymous> (node:net:351:12)
+2026-01-10T21:16:47.47705742Z }
+2026-01-10T21:16:47.571663008Z 9:16:47 PM [express] GET /api/shop/images/banner/7 500 in 10596ms :: {"message":"Erro ao buscar imag…
+2026-01-10T21:16:47.671025877Z Get item image error: Error: Connection terminated due to connection timeout
+2026-01-10T21:16:47.671045967Z     at /opt/render/project/src/node_modules/pg-pool/index.js:45:11
+2026-01-10T21:16:47.671051977Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-10T21:16:47.671057797Z     at async file:///opt/render/project/src/node_modules/drizzle-orm/node-postgres/session.js:83:22
+2026-01-10T21:16:47.671062227Z     at async DatabaseStorage.getShopItemImageData (file:///opt/render/project/src/dist/index.js:11185:25)
+2026-01-10T21:16:47.671078068Z     at async file:///opt/render/project/src/dist/index.js:20911:25 {
+2026-01-10T21:16:47.671082428Z   [cause]: Error: Connection terminated unexpectedly
+2026-01-10T21:16:47.671085058Z       at Connection.<anonymous> (/opt/render/project/src/node_modules/pg/lib/client.js:136:73)
+2026-01-10T21:16:47.671089038Z       at Object.onceWrapper (node:events:632:28)
+2026-01-10T21:16:47.671091848Z       at Connection.emit (node:events:518:28)
+2026-01-10T21:16:47.671094688Z       at Socket.<anonymous> (/opt/render/project/src/node_modules/pg/lib/connection.js:62:12)
+2026-01-10T21:16:47.671097168Z       at Socket.emit (node:events:530:35)
+2026-01-10T21:16:47.671099828Z       at TCP.<anonymous> (node:net:351:12)
+2026-01-10T21:16:47.671102579Z }
+2026-01-10T21:16:47.67196118Z 9:16:47 PM [express] GET /api/shop/images/item/62 500 in 10697ms :: {"message":"Erro ao buscar image…
+2026-01-10T21:16:53.171930447Z 9:16:53 PM [express] GET /api/shop/images/item/60 200 in 16197ms
+2026-01-10T21:16:53.671321377Z 9:16:53 PM [express] GET /api/shop/images/item/52 200 in 16796ms
+2026-01-10T21:16:54.473416061Z 9:16:54 PM [express] GET /api/shop/images/banner/8 200 in 16897ms
+2026-01-10T21:16:55.878314586Z 9:16:55 PM [express] GET /api/shop/images/banner/11 200 in 18407ms
+2026-01-10T21:16:57.183957596Z 9:16:57 PM [express] GET /api/shop/images/banner/6 200 in 15306ms
+2026-01-10T21:17:11.97111834Z 9:17:11 PM [express] GET /api/shop/images/item/62 200 in 2422ms
+2026-01-10T21:17:13.698624017Z 9:17:13 PM [express] GET /api/pix/status 200 in 2ms :: {"configured":true}
+2026-01-10T21:17:13.70499793Z 9:17:13 PM [express] GET /api/shop/my-orders 200 in 6ms :: []
+2026-01-10T21:17:20.276982504Z 9:17:20 PM [express] GET /api/shop/images/item/47 200 in 2097ms
+2026-01-10T21:17:23.673101839Z 9:17:23 PM [express] GET /api/shop/images/category/11 200 in 5101ms
+2026-01-10T21:17:23.673988552Z 9:17:23 PM [express] GET /api/shop/images/category/9 200 in 5097ms
+2026-01-10T21:17:25.073222264Z 9:17:25 PM [express] GET /api/shop/images/category/10 200 in 6697ms
+2026-01-10T21:17:26.171734482Z 9:17:26 PM [express] GET /api/shop/images/category/12 200 in 7697ms
+2026-01-10T21:17:26.670979709Z 9:17:26 PM [express] GET /api/shop/images/item/60 200 in 9208ms
+2026-01-10T21:17:34.673227857Z 9:17:34 PM [express] GET /api/shop/images/banner/6 200 in 13098ms
+2026-01-10T21:17:35.671689149Z 9:17:35 PM [express] GET /api/treasury/member/shop-orders 200 in 500ms :: []
+2026-01-10T21:17:35.674783228Z 9:17:35 PM [express] GET /api/shop/images/banner/11 200 in 17403ms
+2026-01-10T21:17:35.772771452Z 9:17:35 PM [express] GET /api/treasury/member/events 200 in 4ms :: []
+2026-01-10T21:17:35.971438218Z 9:17:35 PM [express] GET /api/treasury/member/status 200 in 599ms :: {"memberId":11,"memberName":"Ev…
+2026-01-10T21:17:36.87166319Z 9:17:36 PM [express] GET /api/shop/images/banner/7 200 in 18595ms
+2026-01-10T21:17:36.875842097Z 9:17:36 PM [express] GET /api/shop/images/banner/8 200 in 18501ms
+2026-01-10T21:19:25.777113199Z 9:19:25 PM [express] GET /api/notifications/unread-count 200 in 610ms :: {"count":11}
+2026-01-10T21:19:25.876496959Z 9:19:25 PM [express] GET /api/notifications 200 in 703ms :: {"notifications":[{"id":121,"userId":11,…
+2026-01-10T21:19:25.976971046Z 9:19:25 PM [express] GET /api/site-content/quem-somos 200 in 699ms :: {"email":{"title":"","content"…
+2026-01-10T21:19:26.282915844Z 9:19:26 PM [express] GET /api/site/highlights 200 in 1095ms :: {"devotional":{"id":4,"title":"Vivend…
+2026-01-10T21:19:31.04549464Z 9:19:31 PM [express] GET /api/site-content/quem-somos 200 in 6ms :: {"email":{"title":"","content":"…
+2026-01-10T21:19:32.285079122Z 9:19:32 PM [express] GET /api/site/highlights 200 in 1200ms :: {"devotional":{"id":4,"title":"Vivend…
+2026-01-10T21:19:32.709823964Z 9:19:32 PM [express] PATCH /api/notifications/119/read 200 in 7ms :: {"message":"Notificacao marcada…
+2026-01-10T21:19:32.899505552Z 9:19:32 PM [express] GET /api/notifications/unread-count 200 in 6ms :: {"count":10}
+2026-01-10T21:19:32.900485707Z 9:19:32 PM [express] GET /api/notifications 200 in 11ms :: {"notifications":[{"id":121,"userId":11,"…
+2026-01-10T21:19:33.082448149Z 9:19:33 PM [express] GET /api/notifications 304 in 10ms :: {"notifications":[{"id":121,"userId":11,"…
+2026-01-10T21:19:41.930016286Z 9:19:41 PM [express] PATCH /api/notifications/120/read 200 in 6ms :: {"message":"Notificacao marcada…
+2026-01-10T21:19:42.137736993Z 9:19:42 PM [express] GET /api/notifications/unread-count 200 in 6ms :: {"count":9}
+2026-01-10T21:19:42.161530939Z 9:19:42 PM [express] GET /api/notifications 200 in 10ms :: {"notifications":[{"id":121,"userId":11,"…
+2026-01-10T21:19:42.360213146Z 9:19:42 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":121,"userId":11,"t…
+2026-01-10T21:19:46.624134961Z 9:19:46 PM [express] PATCH /api/notifications/121/read 200 in 6ms :: {"message":"Notificacao marcada…
+2026-01-10T21:19:46.801439154Z 9:19:46 PM [express] GET /api/notifications/unread-count 200 in 5ms :: {"count":8}
+2026-01-10T21:19:46.846961653Z 9:19:46 PM [express] GET /api/notifications 200 in 11ms :: {"notifications":[{"id":121,"userId":11,"…
+2026-01-10T21:19:47.012408484Z 9:19:47 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":121,"userId":11,"t…
+2026-01-10T21:19:49.384964976Z 9:19:49 PM [express] POST /api/notifications/mark-all-read 200 in 6ms :: {"message":"Todas as notifi…
+2026-01-10T21:19:49.627645034Z 9:19:49 PM [express] GET /api/notifications 200 in 11ms :: {"notifications":[{"id":121,"userId":11,"…
+2026-01-10T21:19:49.682568101Z 9:19:49 PM [express] GET /api/notifications/unread-count 200 in 5ms :: {"count":0}
+2026-01-10T21:19:49.809291807Z 9:19:49 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":121,"userId":11,"t…
+2026-01-10T21:20:19.973673313Z 9:20:19 PM [express] GET /api/notifications/unread-count 304 in 41ms :: {"count":0}
+2026-01-10T21:20:20.02190517Z 9:20:20 PM [express] GET /api/notifications 304 in 10ms :: {"notifications":[{"id":121,"userId":11,"…
+2026-01-10T21:20:32.091511544Z 9:20:32 PM [express] GET /api/site/prayer-requests/approved 200 in 6ms :: []
+2026-01-10T21:21:00.771399968Z 9:21:00 PM [express] GET /api/notifications/unread-count 200 in 111ms :: {"count":0}
+2026-01-10T21:21:00.882435284Z 9:21:00 PM [express] GET /api/notifications 200 in 110ms :: {"notifications":[{"id":121,"userId":11,…
+2026-01-10T21:21:01.277492131Z 9:21:01 PM [express] GET /api/site-content/quem-somos 200 in 411ms :: {"email":{"title":"","content"…
+2026-01-10T21:21:01.571652739Z 9:21:01 PM [express] GET /api/site/highlights 200 in 807ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-10T21:21:21.171624048Z 9:21:21 PM [express] GET /api/site/devotionals 200 in 276ms :: [{"id":4,"title":"Vivendo para a Glór…
+2026-01-10T21:21:23.755018352Z 9:21:23 PM [express] GET /api/site/events 200 in 5ms :: []
+2026-01-10T21:21:36.376534111Z 9:21:36 PM [express] GET /api/site-content/quem-somos 200 in 6ms :: {"email":{"title":"","content":"…
+2026-01-10T21:21:36.583531061Z 9:21:36 PM [express] GET /api/site/devotionals/3 404 in 213ms :: {"message":"Devocional nao encontra…
+2026-01-10T21:21:37.674093813Z 9:21:37 PM [express] GET /api/site/devotionals 200 in 1206ms :: [{"id":4,"title":"Vivendo para a Gló…
+2026-01-10T21:21:37.778789388Z 9:21:37 PM [express] GET /api/site/devotionals/3 404 in 5ms :: {"message":"Devocional nao encontrado…
+2026-01-10T21:21:57.995900472Z 9:21:57 PM [express] GET /api/notifications 200 in 9ms :: {"notifications":[{"id":121,"userId":11,"t…
+2026-01-10T21:21:58.01428747Z 9:21:58 PM [express] GET /api/notifications/unread-count 200 in 4ms :: {"count":0}
+2026-01-10T21:22:05.672151748Z 9:22:05 PM [express] GET /api/site/board-members 200 in 18ms :: [{"id":1,"userId":12,"name":"Allan R…
+2026-01-10T21:22:22.786205707Z 9:22:22 PM [express] GET /api/site/prayer-requests/approved 200 in 4ms :: []
+2026-01-10T21:22:25.985968835Z 9:22:25 PM [express] GET /api/site-content/quem-somos 304 in 395ms :: {"email":{"title":"","content"…
+2026-01-10T21:22:26.272696735Z 9:22:26 PM [express] GET /api/site/highlights 200 in 595ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-10T21:22:38.076252407Z 9:22:38 PM [express] POST /api/auth/login-password 200 in 664ms :: {"user":{"id":7,"fullName":"Joshu…
+2026-01-10T21:22:41.825489515Z 9:22:41 PM [express] GET /api/notifications 200 in 10ms :: {"notifications":[{"id":108,"userId":7,"t…
+2026-01-10T21:22:41.83434207Z 9:22:41 PM [express] GET /api/notifications/unread-count 200 in 4ms :: {"count":0}
+2026-01-10T21:22:53.178798478Z 9:22:53 PM [express] GET /api/site/devotionals 304 in 80ms :: [{"id":4,"title":"Vivendo para a Glóri…
+2026-01-10T21:22:57.231113853Z 9:22:57 PM [express] GET /api/site/events 200 in 4ms :: []
+2026-01-10T21:23:01.447416383Z 9:23:01 PM [express] GET /api/site/board-members 200 in 11ms :: [{"id":1,"userId":12,"name":"Allan R…
+2026-01-10T21:23:05.411111092Z 9:23:05 PM [express] GET /api/site/prayer-requests/approved 200 in 4ms :: []
+2026-01-10T21:23:48.375041166Z 9:23:48 PM [express] GET /api/study/profile 200 in 255ms :: {"id":5,"userId":7,"totalXp":0,"currentL…
+2026-01-10T21:23:49.178681486Z 9:23:49 PM [express] GET /api/study/weeks 200 in 406ms :: [{"id":11,"weekNumber":5,"year":2026,"titl…
+2026-01-10T21:23:49.283116216Z 9:23:49 PM [express] GET /api/study/leaderboard 200 in 1066ms :: {"periodType":"weekly","periodKey":…
+2026-01-10T21:23:49.292958566Z 9:23:49 PM [express] GET /api/missions/daily 200 in 1176ms :: {"missions":[{"id":36,"userId":7,"miss…
+2026-01-10T21:23:49.47655718Z 9:23:49 PM [express] GET /api/study/weeks/bulk 200 in 107ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-10T21:23:49.577676315Z 9:23:49 PM [express] GET /api/study/practice/11/status 200 in 104ms :: {"weekId":11,"isUnlocked":fal…
+2026-01-10T21:23:49.786104761Z 9:23:49 PM [express] GET /api/study/streak/status 200 in 61ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-10T21:23:49.789109798Z 9:23:49 PM [express] GET /api/study/weekly-goal 200 in 16ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-10T21:24:08.572950635Z 9:24:08 PM [express] GET /api/study/lessons/47 200 in 301ms :: {"id":47,"studyWeekId":7,"seasonId":n…
+2026-01-10T21:24:08.823240328Z 9:24:08 PM [express] POST /api/study/lessons/47/start 200 in 29ms :: {"id":14,"userId":7,"lessonId":…
+2026-01-10T21:24:09.113315703Z 9:24:09 PM [express] GET /api/study/profile 304 in 23ms :: {"id":5,"userId":7,"totalXp":0,"currentLe…
+2026-01-10T21:24:20.278494717Z 9:24:20 PM [express] POST /api/study/units/674/complete 200 in 270ms :: {"unitProgress":{"id":152,"u…
+2026-01-10T21:24:20.28019912Z 9:24:20 PM [express] POST /api/study/units/673/complete 200 in 279ms :: {"unitProgress":{"id":151,"u…
+2026-01-10T21:24:20.282322714Z 9:24:20 PM [express] POST /api/study/units/675/complete 200 in 286ms :: {"unitProgress":{"id":150,"u…
+2026-01-10T21:24:20.475493742Z 9:24:20 PM [express] POST /api/study/units/677/complete 200 in 405ms :: {"unitProgress":{"id":153,"u…
+2026-01-10T21:24:20.478810096Z 9:24:20 PM [express] POST /api/study/units/678/complete 200 in 404ms :: {"unitProgress":{"id":154,"u…
+2026-01-10T21:24:20.480331745Z 9:24:20 PM [express] POST /api/study/units/676/complete 200 in 469ms :: {"unitProgress":{"id":155,"u…
+2026-01-10T21:24:20.7358164Z 9:24:20 PM [express] POST /api/study/lessons/47/complete-stage 200 in 69ms :: {"xpAwarded":50,"profi…
+2026-01-10T21:24:20.97933344Z 9:24:20 PM [express] POST /api/study/units/674/complete 200 in 35ms :: {"unitProgress":{"id":152,"us…
+2026-01-10T21:24:21.075845047Z 9:24:21 PM [express] POST /api/study/units/675/complete 200 in 121ms :: {"unitProgress":{"id":150,"u…
+2026-01-10T21:24:21.076538775Z 9:24:21 PM [express] POST /api/study/units/673/complete 200 in 124ms :: {"unitProgress":{"id":151,"u…
+2026-01-10T21:24:21.177123796Z 9:24:21 PM [express] POST /api/study/units/676/complete 200 in 219ms :: {"unitProgress":{"id":155,"u…
+2026-01-10T21:24:21.184953865Z 9:24:21 PM [express] POST /api/study/units/677/complete 200 in 210ms :: {"unitProgress":{"id":153,"u…
+2026-01-10T21:24:21.185856498Z 9:24:21 PM [express] POST /api/study/units/678/complete 200 in 213ms :: {"unitProgress":{"id":154,"u…
+2026-01-10T21:24:21.383133941Z Stage XP already awarded for user 7, stage estude, lesson 47
+2026-01-10T21:24:21.398673246Z 9:24:21 PM [express] POST /api/study/lessons/47/complete-stage 200 in 22ms :: {"xpAwarded":50,"profi…
+2026-01-10T21:24:24.973272746Z 9:24:24 PM [express] POST /api/study/units/679/complete 200 in 42ms :: {"unitProgress":{"id":157,"us…
+2026-01-10T21:24:24.976518828Z 9:24:24 PM [express] POST /api/study/units/681/complete 200 in 48ms :: {"unitProgress":{"id":156,"us…
+2026-01-10T21:24:24.982541412Z 9:24:24 PM [express] POST /api/study/units/680/complete 200 in 48ms :: {"unitProgress":{"id":158,"us…
+2026-01-10T21:24:25.374987103Z 9:24:25 PM [express] POST /api/study/lessons/47/complete-stage 200 in 203ms :: {"xpAwarded":50,"prof…
+2026-01-10T21:24:32.662628628Z 9:24:32 PM [express] POST /api/study/units/686/answer 200 in 50ms :: {"unitProgress":{"id":159,"user…
+2026-01-10T21:24:41.905388501Z 9:24:41 PM [express] POST /api/study/units/684/answer 200 in 47ms :: {"unitProgress":{"id":160,"user…
+2026-01-10T21:24:54.422464412Z 9:24:54 PM [express] POST /api/study/units/683/answer 200 in 49ms :: {"unitProgress":{"id":161,"user…
+2026-01-10T21:25:12.450552311Z 9:25:12 PM [express] POST /api/study/units/682/answer 200 in 50ms :: {"unitProgress":{"id":162,"user…
+2026-01-10T21:30:00.009955071Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-10T21:30:00.081423511Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-10T21:32:38.776947178Z 9:32:38 PM [express] GET /api/missions/daily 200 in 147ms :: {"missions":[{"id":21,"userId":2,"missi…
+2026-01-10T21:32:38.793186712Z 9:32:38 PM [express] GET /api/study/leaderboard 200 in 146ms :: {"periodType":"weekly","periodKey":"…
+2026-01-10T21:32:38.793200492Z 9:32:38 PM [express] GET /api/study/profile 200 in 150ms :: {"id":1,"userId":2,"totalXp":10,"current…
+2026-01-10T21:32:39.261651633Z 9:32:39 PM [express] GET /api/study/weeks 304 in 5ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-10T21:32:39.675938225Z 9:32:39 PM [express] GET /api/study/practice/11/status 304 in 54ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-10T21:32:39.67734595Z 9:32:39 PM [express] GET /api/study/weeks/bulk 200 in 63ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-10T21:32:39.959752983Z 9:32:39 PM [express] GET /api/notifications/unread-count 304 in 4ms :: {"count":0}
+2026-01-10T21:32:39.9926031Z 9:32:39 PM [express] GET /api/notifications 200 in 6ms :: {"notifications":[{"id":105,"userId":2,"ty…
+2026-01-10T21:32:39.992635071Z 9:32:39 PM [express] GET /api/study/streak/status 200 in 18ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-10T21:32:39.992639811Z 9:32:39 PM [express] GET /api/study/weekly-goal 304 in 24ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-10T21:32:43.050193015Z 9:32:43 PM [express] GET /api/study/achievements 200 in 11ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-10T21:32:43.281512497Z 9:32:43 PM [express] GET /api/study/seasons 200 in 84ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-10T21:32:43.969319255Z [WebSocket] Authenticated connection: HUZsMwXnYSjpenBwAAAF, userId: 2
+2026-01-10T21:32:43.97030948Z [WebSocket] Client connected: HUZsMwXnYSjpenBwAAAF, authenticated: true
+2026-01-10T21:32:44.20941599Z [WebSocket] Updated DB: User 2 is now online
+2026-01-10T21:32:44.211023061Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-10T21:32:48.077480288Z 9:32:48 PM [express] GET /api/study/leaderboard 304 in 19ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:32:49.960146908Z [WebSocket] Client disconnected: HUZsMwXnYSjpenBwAAAF, reason: client namespace disconnect
+2026-01-10T21:32:49.964475258Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-10T21:32:49.964661243Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-10T21:32:50.02579013Z 9:32:50 PM [express] GET /api/study/member/11/cards 304 in 5ms :: []
+2026-01-10T21:32:50.108490106Z 9:32:50 PM [express] GET /api/study/member/11 200 in 96ms :: {"userId":11,"username":"Evelyn Moura",…
+2026-01-10T21:32:52.007530274Z 9:32:52 PM [express] GET /api/study/encouragement-messages 304 in 3ms :: {"messages":[{"key":"lesson…
+2026-01-10T21:32:55.969993783Z 9:32:55 PM [express] GET /api/study/member/11/cards 304 in 5ms :: []
+2026-01-10T21:32:56.044255613Z 9:32:56 PM [express] GET /api/study/member/11 304 in 90ms :: {"userId":11,"username":"Evelyn Moura",…
+2026-01-10T21:32:57.013683693Z 9:32:57 PM [express] GET /api/study/encouragement-messages 304 in 2ms :: {"messages":[{"key":"lesson…
+2026-01-10T21:33:05.590235922Z 9:33:05 PM [express] GET /api/study/leaderboard 304 in 17ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:33:06.379715783Z 9:33:06 PM [express] GET /api/study/seasons 304 in 804ms :: [{"id":4,"title":"Não Jogue Sua Vida For…
+2026-01-10T21:33:06.390794745Z 9:33:06 PM [express] GET /api/study/achievements 304 in 9ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-10T21:33:06.582931694Z [WebSocket] Authenticated connection: eYEXBEAVBg2o65xXAAAH, userId: 2
+2026-01-10T21:33:06.590655591Z [WebSocket] Client connected: eYEXBEAVBg2o65xXAAAH, authenticated: true
+2026-01-10T21:33:06.828296349Z [WebSocket] Updated DB: User 2 is now online
+2026-01-10T21:33:06.828428322Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-10T21:33:10.839645481Z 9:33:10 PM [express] GET /api/study/leaderboard 304 in 24ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-10T21:33:13.970508648Z [WebSocket] Client disconnected: eYEXBEAVBg2o65xXAAAH, reason: client namespace disconnect
+2026-01-10T21:33:13.975197217Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-10T21:33:13.975347321Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-10T21:33:18.254176001Z [WebSocket] Authenticated connection: YTv16BysDlTrvvN7AAAJ, userId: 2
+2026-01-10T21:33:18.254450948Z [WebSocket] Client connected: YTv16BysDlTrvvN7AAAJ, authenticated: true
+2026-01-10T21:33:18.427240646Z [WebSocket] Updated DB: User 2 is now online
+2026-01-10T21:33:18.427750648Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-10T21:33:18.838923203Z [WebSocket] Client disconnected: YTv16BysDlTrvvN7AAAJ, reason: client namespace disconnect
+2026-01-10T21:33:18.843113649Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-10T21:33:18.843391166Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-10T21:33:18.895529563Z 9:33:18 PM [express] GET /api/study/profile 304 in 30ms :: {"id":1,"userId":2,"totalXp":10,"currentL…
+2026-01-10T21:33:18.971398184Z 9:33:18 PM [express] GET /api/missions/daily 304 in 101ms :: {"missions":[{"id":21,"userId":2,"missi…
+2026-01-10T21:33:19.090372221Z 9:33:19 PM [express] GET /api/study/weeks 304 in 7ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-10T21:33:19.309131898Z 9:33:19 PM [express] GET /api/study/weeks/bulk 304 in 28ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-10T21:33:19.384733473Z 9:33:19 PM [express] GET /api/study/practice/11/status 304 in 67ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-10T21:33:19.607587654Z 9:33:19 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":105,"userId":2,"ty…
+2026-01-10T21:33:19.613595167Z 9:33:19 PM [express] GET /api/notifications/unread-count 304 in 4ms :: {"count":0}
+2026-01-10T21:33:19.615849174Z 9:33:19 PM [express] GET /api/study/streak/status 304 in 22ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-10T21:33:19.68407347Z 9:33:19 PM [express] GET /api/study/weekly-goal 304 in 76ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-10T21:33:31.138236416Z [WebSocket] Authenticated connection: e5MCim-yjRWR74HrAAAL, userId: 2
+2026-01-10T21:33:31.138657777Z [WebSocket] Client connected: e5MCim-yjRWR74HrAAAL, authenticated: true
+2026-01-10T21:33:31.327980835Z [WebSocket] Updated DB: User 2 is now online
+2026-01-10T21:33:31.32855923Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-10T21:33:34.939492634Z [WebSocket] Client disconnected: e5MCim-yjRWR74HrAAAL, reason: client namespace disconnect
+2026-01-10T21:33:34.943551818Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-10T21:33:34.943713592Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-10T21:33:39.906271495Z [WebSocket] Authenticated connection: X7KHOLoGZ5rWu-nPAAAN, userId: 2
+2026-01-10T21:33:39.906528492Z [WebSocket] Client connected: X7KHOLoGZ5rWu-nPAAAN, authenticated: true
+2026-01-10T21:33:40.221535278Z [WebSocket] Updated DB: User 2 is now online
+2026-01-10T21:33:40.222161794Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-10T21:33:40.836866508Z [WebSocket] Client disconnected: X7KHOLoGZ5rWu-nPAAAN, reason: client namespace disconnect
+2026-01-10T21:33:40.840960362Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-10T21:33:40.841172297Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-10T21:33:40.872959126Z 9:33:40 PM [express] GET /api/study/profile/activities 200 in 19ms :: []
+2026-01-10T21:33:40.873973382Z 9:33:40 PM [express] GET /api/study/achievements 200 in 22ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-10T21:33:40.986267Z 9:33:40 PM [express] GET /api/study/profile/stats 200 in 127ms :: {"lessonsCompleted":0,"unitsComple…
+2026-01-10T21:33:41.071299734Z 9:33:41 PM [express] GET /api/study/cards 304 in 210ms :: []
+2026-01-10T21:33:42.248024501Z 9:33:42 PM [express] GET /api/study/weekly-goal 304 in 23ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-10T21:33:48.962325805Z 9:33:48 PM [express] GET /api/treasury/member/status 304 in 19ms :: {"memberId":2,"memberName":"Geov…
+2026-01-10T21:33:48.962998002Z 9:33:48 PM [express] GET /api/treasury/member/shop-orders 304 in 4ms :: []
+2026-01-10T21:33:48.973054608Z 9:33:48 PM [express] GET /api/pix/status 304 in 1ms :: {"configured":true}
+2026-01-10T21:33:48.973804697Z 9:33:48 PM [express] GET /api/treasury/member/events 304 in 10ms :: []
+2026-01-10T21:33:54.350214344Z 9:33:54 PM [express] GET /api/treasury/dashboard/category-expenses 304 in 6ms :: []
+2026-01-10T21:33:54.39915643Z 9:33:54 PM [express] GET /api/treasury/dashboard/monthly 304 in 48ms :: [{"month":1,"monthName":"jan…
+2026-01-10T21:33:54.400545625Z 9:33:54 PM [express] GET /api/treasury/dashboard/category-income 304 in 48ms :: []
+2026-01-10T21:33:54.429704967Z 9:33:54 PM [express] GET /api/treasury/dashboard/summary 200 in 82ms :: {"totalIncome":0,"totalExpen…
+2026-01-10T21:33:57.997869385Z 9:33:57 PM [express] GET /api/treasury/entries 200 in 9ms :: [{"id":3,"type":"income","category":"ta…
+2026-01-10T21:34:02.274029832Z 9:34:02 PM [express] GET /api/treasury/shop/orders 304 in 201ms :: [{"id":1,"orderCode":"#2026-0001"…
+2026-01-10T21:34:09.97970958Z 9:34:09 PM [express] GET /api/site-content/quem-somos 304 in 276ms :: {"email":{"title":"","content"…
+2026-01-10T21:34:10.083590764Z 9:34:10 PM [express] GET /api/site/highlights 304 in 376ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-10T21:34:14.271375733Z 9:34:14 PM [express] POST /api/auth/login-password 200 in 580ms :: {"user":{"id":1,"fullName":"Admin…
+2026-01-10T21:34:20.942545604Z 9:34:20 PM [express] GET /api/study/admin/monthly-progress 200 in 12ms :: [{"month":"Jan","lessonsCo…
+2026-01-10T21:34:20.947708365Z 9:34:20 PM [express] GET /api/study/admin/stats 200 in 10ms :: {"totalUsers":14,"activeUsers":2,"tot…
+2026-01-10T21:34:20.950988139Z 9:34:20 PM [express] GET /api/study/admin/weekly-activity 200 in 10ms :: [{"day":"Dom","date":"2026-…
+2026-01-10T21:34:20.952521158Z 9:34:20 PM [express] GET /api/study/admin/weekly-top-members 200 in 10ms :: [{"id":11,"fullName":"Ev…
+2026-01-10T21:34:21.072204464Z 9:34:21 PM [express] GET /api/study/admin/events-stats 200 in 39ms :: {"totalEvents":1,"activeEvents…
+2026-01-10T21:34:25.589847159Z 9:34:25 PM [express] GET /api/study/admin/users 200 in 18ms :: [{"id":11,"name":"Evelyn Moura","emai…
+2026-01-10T21:34:49.672260388Z 9:34:49 PM [express] GET /api/study/streak/status 200 in 52ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-10T21:34:49.77055679Z 9:34:49 PM [express] GET /api/study/weekly-goal 304 in 58ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-10T21:34:49.77449916Z 9:34:49 PM [express] GET /api/study/weeks/bulk 200 in 147ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-10T21:34:52.803549531Z [WebSocket] Authenticated connection: gaHVe5uqYewmYJdwAAAP, userId: 1
+2026-01-10T21:34:52.803772957Z [WebSocket] Client connected: gaHVe5uqYewmYJdwAAAP, authenticated: true
+2026-01-10T21:34:52.975245711Z [WebSocket] Updated DB: User 1 is now online
+2026-01-10T21:34:52.97559159Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-10T21:34:53.326914571Z [WebSocket] Client disconnected: gaHVe5uqYewmYJdwAAAP, reason: client namespace disconnect
+2026-01-10T21:34:53.330685247Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-10T21:34:53.330703118Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-10T21:34:57.793403458Z [WebSocket] Authenticated connection: 0lR2RvexOMaOxTxgAAAR, userId: 1
+2026-01-10T21:34:57.793711615Z [WebSocket] Client connected: 0lR2RvexOMaOxTxgAAAR, authenticated: true
+2026-01-10T21:34:57.953953644Z [WebSocket] Updated DB: User 1 is now online
+2026-01-10T21:34:57.953982454Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-10T21:35:24.724495467Z [WebSocket] Client disconnected: 0lR2RvexOMaOxTxgAAAR, reason: transport close
+2026-01-10T21:35:24.727696188Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-10T21:35:24.72778826Z [WebSocket] User 1 disconnected from presence. Online: 0

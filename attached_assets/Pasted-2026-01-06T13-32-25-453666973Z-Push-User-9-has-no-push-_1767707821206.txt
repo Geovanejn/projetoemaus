@@ -1,0 +1,100 @@
+2026-01-06T13:32:25.453666973Z [Push] User 9 has no push subscriptions registered
+2026-01-06T13:32:25.45556162Z [Push] User 4 has no push subscriptions registered
+2026-01-06T13:32:25.473458636Z [Push] User 7 has no push subscriptions registered
+2026-01-06T13:32:25.475819872Z [Push] User 3 has no push subscriptions registered
+2026-01-06T13:32:25.477972095Z [Push] User 11 has no push subscriptions registered
+2026-01-06T13:32:25.479787937Z [Push] User 2 has no push subscriptions registered
+2026-01-06T13:32:25.481853385Z [Notifications] Daily verse notification: 0 members sent, 0 anonymous visitors sent
+2026-01-06T13:32:25.481865606Z [Daily Verse Scheduler] Sent: Salmos 103:1 (ARA)
+2026-01-06T13:32:26.367524083Z ==> Your service is live 🎉
+2026-01-06T13:32:26.500274886Z ==> 
+2026-01-06T13:32:26.586848669Z ==> ///////////////////////////////////////////////////////////
+2026-01-06T13:32:26.673854781Z ==> 
+2026-01-06T13:32:26.764272322Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-06T13:32:26.849531465Z ==> 
+2026-01-06T13:32:26.936855988Z ==> ///////////////////////////////////////////////////////////
+2026-01-06T13:32:26.9807344Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-06T13:32:26.980919621Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-06T13:32:29.825013796Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-06T13:32:29.825151975Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2026-01-06T13:32:29.825163256Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-06T13:32:29.825168156Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2026-01-06T13:32:29.825176626Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2026-01-06T13:32:29.825181277Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-06T13:32:29.825193858Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-06T13:32:29.825201718Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-06T13:32:29.825206348Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-06T13:32:29.825238541Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-06T13:32:29.825243261Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-06T13:32:29.825261822Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-06T13:32:29.825274323Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-06T13:32:29.825279173Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-06T13:32:29.825322246Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-06T13:32:29.825331256Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2026-01-06T13:32:29.825335816Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-06T13:32:29.825350957Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-06T13:32:29.825353017Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-06T13:32:29.825363978Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-06T13:32:29.825367058Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-06T13:32:29.825369778Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2026-01-06T13:32:29.825405161Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-06T13:32:29.825407781Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-06T13:32:29.825415661Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-06T13:32:29.825446203Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-06T13:32:29.825451023Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-06T13:32:29.825457794Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-06T13:32:29.825460994Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-06T13:32:29.825481685Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-06T13:32:29.825483725Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-06T13:32:29.825502027Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-06
+2026-01-06T13:32:30.078299917Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-06T13:32:30.079382704Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-06T13:32:30.09097358Z [Daily Missions Scheduler] Content already generated for today (2026-01-06)
+2026-01-06T13:33:14.902500043Z 1:33:14 PM [express] GET /api/site-content/quem-somos 304 in 522ms :: {"timeline":{"title":"","conte…
+2026-01-06T13:33:14.977594703Z 1:33:14 PM [express] GET /api/notifications/unread-count 200 in 643ms :: {"count":7}
+2026-01-06T13:33:14.979078965Z 1:33:14 PM [express] GET /api/notifications 200 in 649ms :: {"notifications":[{"id":347,"userId":1,"…
+2026-01-06T13:33:15.074120747Z 1:33:15 PM [express] GET /api/site/highlights 304 in 664ms :: {"devotional":{"id":3,"title":"Natal -…
+2026-01-06T13:33:18.354564533Z 1:33:18 PM [express] POST /api/notifications/mark-all-read 200 in 7ms :: {"message":"Todas as notifi…
+2026-01-06T13:33:18.552549826Z 1:33:18 PM [express] GET /api/notifications/unread-count 200 in 4ms :: {"count":0}
+2026-01-06T13:33:18.569710097Z 1:33:18 PM [express] GET /api/notifications 200 in 8ms :: {"notifications":[{"id":347,"userId":1,"ty…
+2026-01-06T13:33:18.768096515Z 1:33:18 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":347,"userId":1,"ty…
+2026-01-06T13:34:52.574283908Z 1:34:52 PM [express] GET /api/espiritualidade/stats 304 in 143ms :: {"devotionals":{"total":3,"publi…
+2026-01-06T13:35:01.484709678Z 1:35:01 PM [express] POST /api/admin/devotionals/test-push 401 in 1ms :: {"message":"Token não forne…
+2026-01-06T13:35:04.690424674Z 1:35:04 PM [express] POST /api/admin/devotionals/test-push 401 in 1ms :: {"message":"Token não forne…
+2026-01-06T13:37:26.647930179Z ==> Detected service running on port 10000
+2026-01-06T13:37:26.845703777Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-06T13:38:19.079606123Z 1:38:19 PM [express] GET /api/site/highlights 304 in 541ms :: {"devotional":{"id":3,"title":"Natal -…
+2026-01-06T13:38:19.080256543Z 1:38:19 PM [express] GET /api/site-content/quem-somos 304 in 200ms :: {"timeline":{"title":"","conte…
+2026-01-06T13:39:58.188875645Z 1:39:58 PM [express] GET /api/site/highlights 304 in 596ms :: {"devotional":{"id":3,"title":"Natal -…
+2026-01-06T13:39:58.189979223Z 1:39:58 PM [express] GET /api/site-content/quem-somos 304 in 596ms :: {"timeline":{"title":"","conte…
+2026-01-06T13:40:05.497906941Z 1:40:05 PM [express] POST /api/notifications/subscribe-anonymous 200 in 25ms :: {"message":"Inscrito…
+2026-01-06T13:40:18.281855159Z 1:40:18 PM [express] POST /api/auth/login-password 200 in 677ms :: {"user":{"id":2,"fullName":"Geova…
+2026-01-06T13:40:32.977190822Z 1:40:32 PM [express] GET /api/treasury/dashboard/monthly 200 in 300ms :: [{"month":1,"monthName":"ja…
+2026-01-06T13:40:33.0862377Z 1:40:33 PM [express] GET /api/treasury/dashboard/category-expenses 200 in 407ms :: []
+2026-01-06T13:40:33.142629124Z 1:40:33 PM [express] GET /api/treasury/dashboard/summary 200 in 165ms :: {"totalIncome":0,"totalExpe…
+2026-01-06T13:40:36.97517457Z 1:40:36 PM [express] GET /api/treasury/members/tax-status/2026 200 in 325ms :: [{"userId":5,"fullNam…
+2026-01-06T13:40:48.969149746Z 1:40:48 PM [express] GET /api/treasury/settings/2026 200 in 10ms :: {"id":2,"year":2026,"percaptaAmo…
+2026-01-06T13:43:50.226264646Z 1:43:50 PM [express] POST /api/treasury/settings 200 in 33ms :: {"id":2,"year":2026,"percaptaAmount"…
+2026-01-06T13:43:50.433207592Z 1:43:50 PM [express] GET /api/treasury/settings/2026 200 in 4ms :: {"id":2,"year":2026,"percaptaAmou…
+2026-01-06T13:43:57.164663861Z 1:43:57 PM [express] GET /api/treasury/dashboard/category-expenses 304 in 6ms :: []
+2026-01-06T13:43:57.176001981Z 1:43:57 PM [express] GET /api/treasury/dashboard/monthly 304 in 5ms :: [{"month":1,"monthName":"jan.…
+2026-01-06T13:43:57.296972375Z 1:43:57 PM [express] GET /api/treasury/dashboard/summary 304 in 135ms :: {"totalIncome":0,"totalExpe…
+2026-01-06T13:45:25.891145479Z 1:45:25 PM [express] GET /api/treasury/members/tax-status/2026 200 in 535ms :: [{"userId":5,"fullNam…
+2026-01-06T13:45:32.610655365Z [Push] User 1 has no push subscriptions registered
+2026-01-06T13:45:32.612912064Z [Push] User 5 has no push subscriptions registered
+2026-01-06T13:45:32.615188015Z [Push] User 11 has no push subscriptions registered
+2026-01-06T13:45:32.617398872Z [Push] User 2 has no push subscriptions registered
+2026-01-06T13:45:32.619674922Z [Push] User 9 has no push subscriptions registered
+2026-01-06T13:45:32.621823505Z [Push] User 6 has no push subscriptions registered
+2026-01-06T13:45:32.623943786Z [Push] User 7 has no push subscriptions registered
+2026-01-06T13:45:32.626040606Z [Push] User 3 has no push subscriptions registered
+2026-01-06T13:45:32.628303325Z [Push] User 4 has no push subscriptions registered
+2026-01-06T13:45:32.629057062Z 1:45:32 PM [express] POST /api/treasury/notifications/bulk-reminder 200 in 70ms :: {"success":true,"…
+2026-01-06T13:45:46.123366689Z 1:45:46 PM [express] GET /api/notifications/unread-count 200 in 7ms :: {"count":1}
+2026-01-06T13:45:46.275671039Z 1:45:46 PM [express] GET /api/site/highlights 304 in 66ms :: {"devotional":{"id":3,"title":"Natal - …
+2026-01-06T13:45:46.276609356Z 1:45:46 PM [express] GET /api/site-content/quem-somos 304 in 100ms :: {"timeline":{"title":"","conte…
+2026-01-06T13:45:46.28038807Z 1:45:46 PM [express] GET /api/notifications 200 in 102ms :: {"notifications":[{"id":355,"userId":2,"…
+2026-01-06T13:45:49.829977266Z 1:45:49 PM [express] POST /api/notifications/mark-all-read 200 in 5ms :: {"message":"Todas as notifi…
+2026-01-06T13:45:50.077592725Z 1:45:50 PM [express] GET /api/notifications 200 in 8ms :: {"notifications":[{"id":355,"userId":2,"ty…
+2026-01-06T13:45:50.0818891Z 1:45:50 PM [express] GET /api/notifications/unread-count 200 in 4ms :: {"count":0}
+2026-01-06T13:45:50.286615849Z 1:45:50 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":355,"userId":2,"ty…

@@ -1,0 +1,100 @@
+2026-01-05T16:02:16.410976945Z [Treasury Scheduler] Monthly summary initialized - will run on day 1 of each month at 08:00 (America/Sao_Paulo)
+2026-01-05T16:02:16.411139028Z 4:02:16 PM [express] Database and schedulers initialized successfully
+2026-01-05T16:02:16.61022745Z [Instagram] API error: 400 {
+2026-01-05T16:02:16.610227461Z [Instagram] No new posts fetched - keeping existing data
+2026-01-05T16:02:16.610258061Z   error: {
+2026-01-05T16:02:16.610263851Z     message: 'Error validating access token: Session has expired on Monday, 29-Dec-25 10:00:00 PST. The current time is Monday, 05-Jan-26 08:02:16 PST.',
+2026-01-05T16:02:16.610269691Z     type: 'OAuthException',
+2026-01-05T16:02:16.610274851Z     code: 190,
+2026-01-05T16:02:16.610297802Z     error_subcode: 463,
+2026-01-05T16:02:16.610301452Z     fbtrace_id: 'A29dbkdIv6ZAe1JP_91DdCA'
+2026-01-05T16:02:16.610303952Z   }
+2026-01-05T16:02:16.610306342Z }
+2026-01-05T16:02:16.610313502Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-05T16:02:18.683465929Z ==> Your service is live 🎉
+2026-01-05T16:02:18.805666748Z ==> 
+2026-01-05T16:02:18.890957157Z ==> ///////////////////////////////////////////////////////////
+2026-01-05T16:02:18.973850827Z ==> 
+2026-01-05T16:02:19.057845656Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-05T16:02:19.139546046Z ==> 
+2026-01-05T16:02:19.221167035Z ==> ///////////////////////////////////////////////////////////
+2026-01-05T16:02:21.110894788Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-05T16:02:21.11099213Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-05T16:02:21.523568541Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2026-01-05T16:02:21.523594712Z [Daily Verse Scheduler] Using AI-generated verse
+2026-01-05T16:02:21.529998335Z [Push] Sending "Versiculo do Dia" to 9 active members
+2026-01-05T16:02:21.532381045Z [Push] User 1 has no push subscriptions registered
+2026-01-05T16:02:21.534106731Z [Push] User 6 has no push subscriptions registered
+2026-01-05T16:02:21.535758646Z [Push] User 5 has no push subscriptions registered
+2026-01-05T16:02:21.537267438Z [Push] User 9 has no push subscriptions registered
+2026-01-05T16:02:21.538719018Z [Push] User 4 has no push subscriptions registered
+2026-01-05T16:02:21.540302941Z [Push] User 7 has no push subscriptions registered
+2026-01-05T16:02:21.541906824Z [Push] User 3 has no push subscriptions registered
+2026-01-05T16:02:21.543338924Z [Push] User 11 has no push subscriptions registered
+2026-01-05T16:02:21.544869316Z [Push] User 2 has no push subscriptions registered
+2026-01-05T16:02:21.897056045Z [Notifications] Daily verse notification: 0 members sent, 2 anonymous visitors sent
+2026-01-05T16:02:21.897106846Z [Daily Verse Scheduler] Sent: Salmos 100:4 (ARA)
+2026-01-05T16:02:23.113523842Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-05T16:02:23.114117505Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-05T16:02:25.684879119Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-05T16:02:25.684901119Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-05T16:02:25.68490905Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-05T16:02:25.68491341Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2026-01-05T16:02:25.68491766Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-05T16:02:25.68492158Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-05T16:02:25.68492571Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-05T16:02:25.68492964Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-05T16:02:25.68493358Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2026-01-05T16:02:25.68493746Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:16 (ARA)
+2026-01-05T16:02:25.68494139Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-05T16:02:25.68494525Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-05T16:02:25.68494925Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-05T16:02:25.684953171Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-05T16:02:25.684957331Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-05T16:02:25.684961271Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-05T16:02:25.684965221Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-05T16:02:25.684969181Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-05T16:02:25.684985161Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-05T16:02:25.684987651Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-05T16:02:25.684989781Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2026-01-05T16:02:25.684993161Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-05T16:02:25.684995571Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-05T16:02:25.684997781Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-05T16:02:25.685002352Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2026-01-05T16:02:25.685004621Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2026-01-05T16:02:25.685006892Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-05T16:02:25.685009152Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-05T16:02:25.685011332Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2026-01-05T16:02:25.685013632Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-05T16:02:25.685015852Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:39 (ARA)
+2026-01-05T16:02:25.685018042Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-05
+2026-01-05T16:02:26.211639892Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-05T16:02:26.211913418Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-05T16:02:26.21922244Z [Daily Missions Scheduler] Content already generated for today (2026-01-05)
+2026-01-05T16:06:06.015792152Z 4:06:06 PM [express] GET /api/study/leaderboard 304 in 117ms :: {"periodType":"weekly","periodKey":"…
+2026-01-05T16:06:06.108560875Z 4:06:06 PM [express] GET /api/missions/daily 304 in 219ms :: {"missions":[{"id":132,"userId":1,"miss…
+2026-01-05T16:06:06.109297221Z 4:06:06 PM [express] GET /api/study/profile 304 in 227ms :: {"id":8,"userId":1,"totalXp":10,"current…
+2026-01-05T16:06:06.320240969Z 4:06:06 PM [express] GET /api/study/weeks 304 in 7ms :: [{"id":6,"weekNumber":6,"year":2026,"title":…
+2026-01-05T16:06:06.558476598Z 4:06:06 PM [express] GET /api/study/practice/6/status 304 in 23ms :: {"weekId":6,"isUnlocked":false,…
+2026-01-05T16:06:06.716833497Z 4:06:06 PM [express] GET /api/study/weeks/bulk 304 in 175ms :: [{"week":{"id":1,"weekNumber":1,"year…
+2026-01-05T16:06:07.002322986Z 4:06:07 PM [express] GET /api/notifications/unread-count 200 in 23ms :: {"count":1}
+2026-01-05T16:06:07.005548772Z 4:06:07 PM [express] GET /api/notifications 200 in 28ms :: {"notifications":[{"id":208,"userId":1,"t…
+2026-01-05T16:06:07.014387173Z 4:06:07 PM [express] GET /api/study/weekly-goal 304 in 43ms :: {"weekKey":"2026-W02","goals":{"lesso…
+2026-01-05T16:06:15.668406381Z 4:06:15 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":208,"userId":1,"ty…
+2026-01-05T16:06:15.676856964Z 4:06:15 PM [express] GET /api/notifications/unread-count 304 in 5ms :: {"count":1}
+2026-01-05T16:06:16.104442372Z 4:06:16 PM [express] GET /api/site/highlights 304 in 334ms :: {"devotional":{"id":3,"title":"Natal -…
+2026-01-05T16:06:16.112879855Z 4:06:16 PM [express] GET /api/site-content/quem-somos 304 in 405ms :: {"timeline":{"title":"","conte…
+2026-01-05T16:06:20.0793825Z 4:06:20 PM [express] POST /api/notifications/mark-all-read 200 in 6ms :: {"message":"Todas as notifi…
+2026-01-05T16:06:20.300984913Z 4:06:20 PM [express] GET /api/notifications 200 in 11ms :: {"notifications":[{"id":208,"userId":1,"t…
+2026-01-05T16:06:20.302927193Z 4:06:20 PM [express] GET /api/notifications/unread-count 200 in 4ms :: {"count":0}
+2026-01-05T16:06:20.521686907Z 4:06:20 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":208,"userId":1,"ty…
+2026-01-05T16:06:50.716993863Z 4:06:50 PM [express] GET /api/notifications/unread-count 304 in 49ms :: {"count":0}
+2026-01-05T16:06:51.026477843Z 4:06:51 PM [express] GET /api/notifications 304 in 10ms :: {"notifications":[{"id":208,"userId":1,"t…
+2026-01-05T16:07:19.643560076Z ==> Detected service running on port 10000
+2026-01-05T16:07:19.868766889Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-05T16:07:21.070780112Z 4:07:21 PM [express] GET /api/notifications/unread-count 304 in 35ms :: {"count":0}
+2026-01-05T16:07:21.273174063Z 4:07:21 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":208,"userId":1,"ty…
+2026-01-05T16:07:23.018777423Z 4:07:23 PM [express] GET /api/site/events 304 in 9ms :: [{"id":1,"title":"Noite da Pizza","descripti…
+2026-01-05T16:07:25.20401225Z 4:07:25 PM [express] GET /api/events/1/my-confirmation 401 in 1ms :: {"message":"Token não fornecido…
+2026-01-05T16:07:25.233277938Z 4:07:25 PM [express] GET /api/events/1/confirmation-count 304 in 12ms :: {"members":0,"visitors":0,"…
+2026-01-05T16:07:26.103431795Z 4:07:26 PM [express] POST /api/events/1/confirm 400 in 13ms :: {"message":"Este evento não requer co…

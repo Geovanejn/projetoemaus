@@ -1,0 +1,49 @@
+Com certeza dá para melhorar! 646ms para uma imagem ainda é "lento" para os padrões modernos (o ideal é < 200ms).
+O Diagnóstico:
+Atualmente, o backend está pegando o arquivo gigante (1.7MB) do banco e enviando "bruto" para o navegador. O tempo de 600ms é gasto apenas baixando esses dados.
+A Solução: "Compressão em Tempo Real" (On-the-fly)
+Vamos instruir o servidor a não mandar o arquivo bruto. Vamos usar uma biblioteca chamada Sharp.
+O fluxo será:
+ * Servidor pega a imagem gigante do banco.
+ * Sharp redimensiona para tamanho de tela (ex: 1000px) e converte para WebP (super leve).
+ * Servidor manda um arquivo de 50kb (em vez de 1.7MB).
+ * O navegador baixa instantaneamente.
+Aqui está o prompt completo e técnico para implementar isso.
+Prompt de Otimização Extrema de Imagens (Sharp Integration)
+Problema:
+Os logs mostram que a rota de proxy de imagem (GET /api/shop/images/banner/:id) está levando ~650ms a 1.5s para responder.
+Isso ocorre porque estamos servindo o Buffer original do banco de dados (que pode ter 2MB+) sem nenhuma compressão.
+Objetivo: Implementar processamento de imagem em tempo real para reduzir o payload e o tempo de transferência.
+Instruções Técnicas:
+1. Instalação:
+Instale a dependência sharp (npm install sharp). Se necessário, configure as tipagens (@types/sharp).
+2. Refatoração da Rota de Imagem (/api/shop/images/:itemId/:type):
+Modifique a lógica do endpoint para processar a imagem antes de enviar:
+ * Importe: import sharp from 'sharp';
+ * Logica de Processamento:
+   * Converta o Base64 do banco para Buffer (como já fazemos).
+   * Passe esse Buffer para o sharp.
+   * Redimensionamento Inteligente:
+     * Se type === 'banner': .resize({ width: 1024, withoutEnlargement: true }) (HD, mas não 4K).
+     * Se type === 'gallery' ou lista: .resize({ width: 500, withoutEnlargement: true }).
+   * Compressão: Converta para WebP com qualidade 80: .toFormat('webp', { quality: 80 }).
+   * Cache: Mantenha o header Cache-Control: public, max-age=31536000, immutable.
+   * Content-Type: Altere a resposta para image/webp.
+3. Exemplo de Código Esperado (Backend):
+// Exemplo conceitual
+const imageBuffer = Buffer.from(base64Data, 'base64');
+const optimizedBuffer = await sharp(imageBuffer)
+  .resize(isBanner ? 1024 : 500)
+  .webp({ quality: 80 })
+  .toBuffer();
+
+res.set('Content-Type', 'image/webp');
+res.set('Cache-Control', 'public, max-age=31536000');
+res.send(optimizedBuffer);
+
+Resultado Esperado:
+As imagens que antes tinham 1.5MB devem ser servidas com ~40KB a ~100KB. O tempo de resposta deve cair de 600ms para menos de 200ms devido à redução drástica do tráfego de rede.
+Por que isso é "Mágico"? 🪄
+Ao transformar em WebP e limitar a largura a 1024px, você reduz o tamanho do arquivo em cerca de 90% sem perder qualidade visível no celular.
+ * Antes: O servidor empurrava um "elefante" pelo canudo da internet.
+ * Depois: O servidor transforma o elefante em um "ratinho" antes de empurrar. Muito mais rápido.

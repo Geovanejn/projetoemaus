@@ -1,0 +1,72 @@
+Great. The XP refactor is complete. Now I need a FINAL VERIFICATION focused on edge cases, data integrity, and frontend alignment.
+
+Please review the system with the following POINTS OF ATTENTION:
+
+BACKEND – DATA INTEGRITY CHECKS
+
+1) Verify NO leaderboard query references:
+   - studyProfiles.totalXp
+   - xpTransactions
+   - userSeasonProgress.xpEarned
+   These must NEVER be used for rankings.
+
+2) Validate weeklyPracticeBonus immutability:
+   - Ensure there is NO update or upsert path
+   - Bonus XP must be INSERT-ONLY
+   - Confirm unique constraint (userId, weekKey) is enforced everywhere
+
+3) Year filtering correctness:
+   - Confirm year-based leaderboard uses the SAME date source consistently
+   - Validate study_lessons.createdAt vs study_weeks.year logic
+   - Ensure bonuses earned in the year are not excluded or duplicated
+
+4) Season leaderboard boundaries:
+   - Confirm season XP includes:
+     - Lessons with study_lessons.seasonId = season.id
+     - Bonuses earned BETWEEN season.startsAt and season.endsAt
+   - Ensure no XP leaks from previous or future seasons
+
+5) Double-count protection:
+   - Confirm weeklyPracticeBonus XP is not ALSO counted anywhere else
+   - Confirm lesson XP is counted ONCE per lesson (status = 'completed')
+
+6) Data consistency for legacy users:
+   - Validate users who earned XP BEFORE this refactor
+   - Ensure missing bonus rows do not cause undercount or overcount
+   - Recommend a one-time backfill if required
+
+FRONTEND – DISPLAY & CONSUMPTION CHECKS
+
+7) Confirm frontend NEVER reads:
+   - studyProfiles.totalXp
+   - xpTransactions
+   - userSeasonProgress.xpEarned
+
+8) Confirm frontend leaderboard components:
+   - Display EXACT XP values returned by backend
+   - Perform ZERO XP calculations
+   - No client-side sums, merges, or filters
+
+9) Verify all leaderboard screens:
+   - Global leaderboard
+   - Year leaderboard
+   - Season (magazine) leaderboard
+   - Profile XP summary (if any)
+
+10) Loading & caching behavior:
+    - Ensure no stale cached XP is displayed
+    - Confirm refetch after lesson completion or practice completion
+
+EXPECTED FINAL VALUES (REFERENCE TEST CASE):
+
+- Global XP: 355
+- Year XP: 355
+- Season XP: 235 (185 lesson + 50 weekly bonus)
+
+DELIVERABLES REQUIRED:
+
+- Confirmation checklist (pass/fail per item)
+- Any remaining risky code paths identified
+- Final recommendation: Is XP system now LOCKED and SAFE for production?
+
+This review should assume the XP system is FINAL and must not be recalculated in the future.

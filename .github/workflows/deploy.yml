@@ -1,0 +1,48 @@
+name: Deploy to Hugging Face
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Install LFS
+        run: git lfs install
+
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          
+          # 1. Primeiro, configuramos o LFS para extensões genéricas (sem apontar pastas vazias)
+          git lfs track "*.png"
+          git lfs track "*.jpg"
+          git lfs track "*.webp"
+          git lfs track "*.mp3"
+          git lfs track "*.mp4"
+          git lfs track "*.pdf"
+          git add .gitattributes
+          
+          # 2. Agora fazemos a limpeza dos arquivos que o Hugging Face REJEITA
+          # Isso evita o erro de "no such file" porque não estamos dando track neles individualmente
+          rm -f attached_assets/*.apk
+          rm -f attached_assets/*.aab
+          rm -f attached_assets/*.zip
+          
+          # 3. Cria um histórico novo e limpo
+          git checkout --orphan latest_branch
+          git add -A
+          git commit -m "Deploy: Ajuste de assets e limpeza de binários"
+          git branch -D main
+          git branch -m main
+          
+          # 4. Envia para o Hugging Face
+          git push -f https://Umpemaus:$HF_TOKEN@huggingface.co/spaces/Umpemaus/umpemaus main

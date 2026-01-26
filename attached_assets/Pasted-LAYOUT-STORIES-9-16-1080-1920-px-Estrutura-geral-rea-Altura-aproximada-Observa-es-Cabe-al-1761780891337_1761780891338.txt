@@ -1,0 +1,235 @@
+LAYOUT STORIES (9:16) — 1080 × 1920 px
+🎯 Estrutura geral
+Área	Altura aproximada	Observações
+Cabeçalho (título)	350 px	Título centralizado “ELEIÇÃO 2025”
+Área dos cartões (5 cargos)	1150 px	Grades 2x2 + 1 central inferior
+Versículo	160 px	Texto bíblico centralizado
+Rodapé (logo Emaús)	140 px	Logo centralizado, margem inferior
+📐 Coordenadas e dimensões aproximadas (px)
+🧱 Título
+
+Texto: “ELEIÇÃO 2025”
+
+Fonte: Montserrat ExtraBold / Outline Bold (2025)
+
+Tamanho: 150 px
+
+Cor: #000000
+
+Posição:
+
+x: 540 (centralizado)
+
+y: 260
+
+Espaçamento entre as palavras: 40 px
+
+Sombra: nenhuma
+
+Fundo com watermark repetida da palavra ELEIÇÃO em cinza-claro (#F0F0F0, opacidade 15%)
+
+🟨 Cards (cargos)
+Elemento	Largura	Altura	Raio	Cor de fundo
+Container card	440 px	160 px	20 px	#FFFFFF
+Cabeçalho do card	440 px	50 px	top-rounded	#FFD84B (amarelo Emaús)
+
+Margens entre os cards:
+
+Entre os blocos superiores (Presidente/Vice): 50 px
+
+Entre linhas verticais: 60 px
+
+Entre 2ª linha (Secretários) e Tesoureiro: 90 px
+
+Posições gerais:
+
+Card	X	Y
+Presidente	150	530
+Vice-presidente	590	530
+1º Secretário	150	760
+2º Secretário	590	760
+Tesoureiro	370	1010
+👤 Foto do eleito
+
+Diâmetro: 110 px
+
+Posição: parcialmente sobreposta à borda inferior direita do card (offset de ~30 px)
+
+Estilo: círculo com borda sutil (#FFFFFF, 4 px)
+
+Sombra: 0 3 6 rgba(0,0,0,0.25)
+
+Posição média (no card Presidente):
+
+Centro da imagem: x: 510, y: 660
+
+🏷️ Texto interno do card
+Linha	Conteúdo	Fonte	Tamanho	Peso	Cor	Y (relativo ao topo do card)
+Cargo	“PRESIDENTE”	Poppins SemiBold	26 px	600	#1C1C1C (sobre fundo amarelo)	20 px
+Nome	“GEOVANE NASCIMENTO”	Poppins Bold	22 px	700	#1C1C1C	70 px
+Linha de votos	“10 votos • Eleito no 1º Escrutínio”	Poppins Regular	18 px	400	#4A4A4A	100 px
+📜 Versículo bíblico
+
+Texto:
+“Porque de Deus somos cooperadores; lavoura de Deus, edifício de Deus sois vós. - 1 Coríntios 3:9”
+
+Fonte: Lato Italic
+
+Tamanho: 22 px
+
+Cor: #3A3A3A
+
+Posição:
+
+Centralizado horizontalmente (x: 540)
+
+y: 1650
+
+Margem inferior até o logo: 80 px
+
+🔖 Logotipo “Emaús”
+
+Tamanho: 270 × 90 px
+
+Posição:
+
+x: 540
+
+y: 1760
+
+Alinhado ao centro
+
+Cor principal: #333333
+
+Ícone “chama” em #F7B731
+
+⚙️ Paleta de cores (Stories)
+Elemento	Cor	HEX
+Fundo principal	Cinza-claro	#F9F9F9
+Fundo do card	Branco	#FFFFFF
+Cabeçalho do card	Amarelo Emaús	#FFD84B
+Texto título	Preto	#000000
+Texto nome	Preto-acinzentado	#1C1C1C
+Texto votos	Cinza médio	#4A4A4A
+Texto versículo	Cinza escuro	#3A3A3A
+Logo chama	Laranja/Amarelo	#F7B731
+🟨 LAYOUT FEED (4:5) — 1080 × 1350 px
+🎯 Estrutura geral
+Área	Altura	Observação
+Cabeçalho (título)	280 px	Menor que stories
+Cards	830 px	Disposição idêntica, mas centralizada verticalmente
+Versículo + logo	240 px	Compacto, margens menores
+📐 Coordenadas e dimensões aproximadas (px)
+🧱 Título
+
+Texto: “ELEIÇÃO 2025”
+
+Fonte: Montserrat ExtraBold / Outline Bold
+
+Tamanho: 130 px
+
+Cor: #000000
+
+Centralizado (x: 540, y: 180)
+
+Espaço entre “ELEIÇÃO” e “2025”: 35 px
+
+Fundo com watermark ELEIÇÃO (opacidade 15%, #EFEFEF)
+
+🟨 Cards
+
+Largura: 420 px
+
+Altura: 150 px
+
+Raio: 20 px
+
+Cabeçalho amarelo: altura 45 px
+
+Posição dos blocos:
+
+Card	X	Y
+Presidente	160	440
+Vice-presidente	600	440
+1º Secretário	160	660
+2º Secretário	600	660
+Tesoureiro	380	870
+
+Espaçamento vertical entre blocos: 55 px
+Espaçamento horizontal entre colunas: 40 px
+
+👤 Foto
+
+Diâmetro: 100 px
+
+Posição: canto inferior direito, sobreposta ao card (offset 25 px)
+
+Borda: branca (3 px)
+
+Sombra: 0 3 6 rgba(0,0,0,0.25)
+
+🏷️ Texto interno
+Linha	Fonte	Peso	Tamanho	Cor	Y relativo
+Cargo	Poppins SemiBold	600	24 px	#1C1C1C (sobre amarelo)	18 px
+Nome	Poppins Bold	700	20 px	#1C1C1C	60 px
+Votos	Poppins Regular	400	16 px	#4A4A4A	90 px
+📜 Versículo
+
+Texto: “Porque de Deus somos cooperadores; lavoura de Deus, edifício de Deus sois vós. - 1 Coríntios 3:9”
+
+Fonte: Lato Italic
+
+Tamanho: 20 px
+
+Cor: #3A3A3A
+
+Posição: x: 540, y: 1170
+
+Margem inferior: 50 px
+
+🔖 Logotipo
+
+Tamanho: 240 × 80 px
+
+Posição: x: 540, y: 1240
+
+Centralizado
+
+Mesma paleta do stories.
+
+⚙️ Paleta de cores (Feed)
+Elemento	Cor	HEX
+Fundo principal	Cinza-claro	#F9F9F9
+Fundo do card	Branco	#FFFFFF
+Cabeçalho do card	Amarelo Emaús	#FFD84B
+Texto título	Preto	#000000
+Texto nome	Preto-acinzentado	#1C1C1C
+Texto votos	Cinza médio	#4A4A4A
+Texto versículo	Cinza escuro	#3A3A3A
+Logo chama	Laranja/Amarelo	#F7B731
+🧾 Observações gerais
+
+Consistência: O alinhamento entre cards mantém eixo vertical central (x ≈ 540 px de simetria).
+
+Proporção das fotos: 10% da altura total do layout.
+
+Tipografia: Poppins usada para todo texto interno e Montserrat apenas no título.
+
+Espaçamento vertical entre zonas: média de 80 px entre título, cards e versículo.
+
+Identidade visual: segue a paleta institucional Emaús (amarelo, cinza e branco).
+
+📦 Modelo JSON de referência (para Replit)
+{
+  "canvas": {"w":1080,"h":1920,"bg":"#F9F9F9"},
+  "title":{"text":"ELEIÇÃO 2025","x":540,"y":260,"font":"Montserrat-ExtraBold","size":150,"color":"#000000","align":"center"},
+  "cards":[
+    {"cargo":"PRESIDENTE","nome":"GEOVANE NASCIMENTO","votos":"10 votos • Eleito no 1º Escrutínio","x":150,"y":530},
+    {"cargo":"VICE-PRESIDENTE","nome":"GEOVANE NASCIMENTO","votos":"10 votos • Eleito no 1º Escrutínio","x":590,"y":530},
+    {"cargo":"1º SECRETÁRIO","nome":"GEOVANE NASCIMENTO","votos":"10 votos • Eleito no 1º Escrutínio","x":150,"y":760},
+    {"cargo":"2º SECRETÁRIO","nome":"GEOVANE NASCIMENTO","votos":"10 votos • Eleito no 1º Escrutínio","x":590,"y":760},
+    {"cargo":"TESOUREIRO","nome":"GEOVANE NASCIMENTO","votos":"10 votos • Eleito no 1º Escrutínio","x":370,"y":1010}
+  ],
+  "verse":{"text":"Porque de Deus somos cooperadores; lavoura de Deus, edifício de Deus sois vós. - 1 Coríntios 3:9","x":540,"y":1650,"font":"Lato-Italic","size":22,"color":"#3A3A3A","align":"center"},
+  "logo":{"x":540,"y":1760,"w":270,"h":90,"align":"center"}
+}

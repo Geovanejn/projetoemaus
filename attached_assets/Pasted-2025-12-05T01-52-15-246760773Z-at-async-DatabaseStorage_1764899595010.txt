@@ -1,0 +1,150 @@
+2025-12-05T01:52:15.246760773Z     at async DatabaseStorage.getSiteHighlights (file:///opt/render/project/src/dist/index.js:1507:55)
+2025-12-05T01:52:15.246764694Z     at async file:///opt/render/project/src/dist/index.js:6216:26 {
+2025-12-05T01:52:15.246768694Z   length: 114,
+2025-12-05T01:52:15.246773324Z   severity: 'ERROR',
+2025-12-05T01:52:15.246776964Z   code: '42P01',
+2025-12-05T01:52:15.246780564Z   detail: undefined,
+2025-12-05T01:52:15.246784344Z   hint: undefined,
+2025-12-05T01:52:15.246788044Z   position: '95',
+2025-12-05T01:52:15.246791844Z   internalPosition: undefined,
+2025-12-05T01:52:15.246795424Z   internalQuery: undefined,
+2025-12-05T01:52:15.246799024Z   where: undefined,
+2025-12-05T01:52:15.246802524Z   schema: undefined,
+2025-12-05T01:52:15.246806154Z   table: undefined,
+2025-12-05T01:52:15.246809785Z   column: undefined,
+2025-12-05T01:52:15.246813545Z   dataType: undefined,
+2025-12-05T01:52:15.246817145Z   constraint: undefined,
+2025-12-05T01:52:15.246821005Z   file: 'parse_relation.c',
+2025-12-05T01:52:15.246824765Z   line: '1449',
+2025-12-05T01:52:15.246828725Z   routine: 'parserOpenTable'
+2025-12-05T01:52:15.246832625Z }
+2025-12-05T01:52:15.247136691Z 1:52:15 AM [express] GET /api/site/highlights 500 in 282ms :: {"message":"Erro ao buscar destaques d…
+2025-12-05T01:52:16.747688076Z Get site highlights error: error: relation "devotionals" does not exist
+2025-12-05T01:52:16.747716287Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T01:52:16.747721757Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T01:52:16.747726557Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T01:52:16.747732507Z     at async DatabaseStorage.getLatestDevotional (file:///opt/render/project/src/dist/index.js:1439:30)
+2025-12-05T01:52:16.747750067Z     at async Promise.all (index 0)
+2025-12-05T01:52:16.747753378Z     at async DatabaseStorage.getSiteHighlights (file:///opt/render/project/src/dist/index.js:1507:55)
+2025-12-05T01:52:16.747756388Z     at async file:///opt/render/project/src/dist/index.js:6216:26 {
+2025-12-05T01:52:16.747759198Z   length: 111,
+2025-12-05T01:52:16.747762428Z   severity: 'ERROR',
+2025-12-05T01:52:16.747765948Z   code: '42P01',
+2025-12-05T01:52:16.747768928Z   detail: undefined,
+2025-12-05T01:52:16.747771668Z   hint: undefined,
+2025-12-05T01:52:16.747774658Z   position: '199',
+2025-12-05T01:52:16.747777268Z   internalPosition: undefined,
+2025-12-05T01:52:16.747779418Z   internalQuery: undefined,
+2025-12-05T01:52:16.747781848Z   where: undefined,
+2025-12-05T01:52:16.747784208Z   schema: undefined,
+2025-12-05T01:52:16.747786988Z   table: undefined,
+2025-12-05T01:52:16.747789638Z   column: undefined,
+2025-12-05T01:52:16.747792538Z   dataType: undefined,
+2025-12-05T01:52:16.747795298Z   constraint: undefined,
+2025-12-05T01:52:16.747797858Z   file: 'parse_relation.c',
+2025-12-05T01:52:16.747800768Z   line: '1449',
+2025-12-05T01:52:16.747803459Z   routine: 'parserOpenTable'
+2025-12-05T01:52:16.747806068Z }
+2025-12-05T01:52:16.748567903Z 1:52:16 AM [express] GET /api/site/highlights 500 in 255ms :: {"message":"Erro ao buscar destaques d…
+2025-12-05T01:52:19.247450203Z Get site highlights error: error: relation "instagram_posts" does not exist
+2025-12-05T01:52:19.248229958Z 1:52:19 AM [express] GET /api/site/highlights 500 in 253ms :: {"message":"Erro ao buscar destaques d…
+2025-12-05T01:52:19.278724276Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T01:52:19.278732836Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T01:52:19.278735896Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T01:52:19.278738176Z     at async Promise.all (index 2)
+2025-12-05T01:52:19.278740516Z     at async DatabaseStorage.getSiteHighlights (file:///opt/render/project/src/dist/index.js:1507:55)
+2025-12-05T01:52:19.278742876Z     at async file:///opt/render/project/src/dist/index.js:6216:26 {
+2025-12-05T01:52:19.278744766Z   length: 114,
+2025-12-05T01:52:19.278747196Z   severity: 'ERROR',
+2025-12-05T01:52:19.278748956Z   code: '42P01',
+2025-12-05T01:52:19.278751247Z   detail: undefined,
+2025-12-05T01:52:19.278753947Z   hint: undefined,
+2025-12-05T01:52:19.278756967Z   position: '95',
+2025-12-05T01:52:19.278760127Z   internalPosition: undefined,
+2025-12-05T01:52:19.278762817Z   internalQuery: undefined,
+2025-12-05T01:52:19.278765347Z   where: undefined,
+2025-12-05T01:52:19.278767777Z   schema: undefined,
+2025-12-05T01:52:19.278779557Z   table: undefined,
+2025-12-05T01:52:19.278782557Z   column: undefined,
+2025-12-05T01:52:19.278784857Z   dataType: undefined,
+2025-12-05T01:52:19.278787057Z   constraint: undefined,
+2025-12-05T01:52:19.278790057Z   file: 'parse_relation.c',
+2025-12-05T01:52:19.278792547Z   line: '1449',
+2025-12-05T01:52:19.278794977Z   routine: 'parserOpenTable'
+2025-12-05T01:52:19.278797717Z }
+2025-12-05T01:52:30.078914218Z Login password error: error: relation "users" does not exist
+2025-12-05T01:52:30.078935588Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T01:52:30.078940908Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T01:52:30.078946698Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T01:52:30.078961799Z     at async DatabaseStorage.getUserByEmail (file:///opt/render/project/src/dist/index.js:810:24)
+2025-12-05T01:52:30.078964379Z     at async file:///opt/render/project/src/dist/index.js:3851:20 {
+2025-12-05T01:52:30.078966669Z   length: 105,
+2025-12-05T01:52:30.078970769Z   severity: 'ERROR',
+2025-12-05T01:52:30.078973129Z   code: '42P01',
+2025-12-05T01:52:30.078975359Z   detail: undefined,
+2025-12-05T01:52:30.078977369Z   hint: undefined,
+2025-12-05T01:52:30.078979679Z   position: '150',
+2025-12-05T01:52:30.078981959Z   internalPosition: undefined,
+2025-12-05T01:52:30.078984029Z   internalQuery: undefined,
+2025-12-05T01:52:30.078986349Z   where: undefined,
+2025-12-05T01:52:30.078988349Z   schema: undefined,
+2025-12-05T01:52:30.078990469Z   table: undefined,
+2025-12-05T01:52:30.078992639Z   column: undefined,
+2025-12-05T01:52:30.078994689Z   dataType: undefined,
+2025-12-05T01:52:30.078996699Z   constraint: undefined,
+2025-12-05T01:52:30.078998939Z   file: 'parse_relation.c',
+2025-12-05T01:52:30.079001039Z   line: '1449',
+2025-12-05T01:52:30.07900312Z   routine: 'parserOpenTable'
+2025-12-05T01:52:30.0790054Z }
+2025-12-05T01:52:30.08005434Z 1:52:30 AM [express] POST /api/auth/login-password 400 in 258ms :: {"message":"relation \"users\" do…
+2025-12-05T01:52:39.665597459Z Login password error: error: relation "users" does not exist
+2025-12-05T01:52:39.6656334Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T01:52:39.66563795Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T01:52:39.66564221Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T01:52:39.6656467Z     at async DatabaseStorage.getUserByEmail (file:///opt/render/project/src/dist/index.js:810:24)
+2025-12-05T01:52:39.66565115Z     at async file:///opt/render/project/src/dist/index.js:3851:20 {
+2025-12-05T01:52:39.66565513Z   length: 105,
+2025-12-05T01:52:39.665659101Z   severity: 'ERROR',
+2025-12-05T01:52:39.665665571Z   code: '42P01',
+2025-12-05T01:52:39.665669431Z   detail: undefined,
+2025-12-05T01:52:39.665673151Z   hint: undefined,
+2025-12-05T01:52:39.665676951Z   position: '150',
+2025-12-05T01:52:39.665681091Z   internalPosition: undefined,
+2025-12-05T01:52:39.665685321Z   internalQuery: undefined,
+2025-12-05T01:52:39.665689261Z   where: undefined,
+2025-12-05T01:52:39.665693151Z   schema: undefined,
+2025-12-05T01:52:39.665696841Z   table: undefined,
+2025-12-05T01:52:39.665700521Z   column: undefined,
+2025-12-05T01:52:39.665704341Z   dataType: undefined,
+2025-12-05T01:52:39.665708122Z   constraint: undefined,
+2025-12-05T01:52:39.665712031Z   file: 'parse_relation.c',
+2025-12-05T01:52:39.665715851Z   line: '1449',
+2025-12-05T01:52:39.665719782Z   routine: 'parserOpenTable'
+2025-12-05T01:52:39.665723612Z }
+2025-12-05T01:52:39.666346254Z 1:52:39 AM [express] POST /api/auth/login-password 400 in 265ms :: {"message":"relation \"users\" do…
+2025-12-05T01:52:42.779916514Z Get site highlights error: error: relation "instagram_posts" does not exist
+2025-12-05T01:52:42.779940475Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T01:52:42.779946025Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T01:52:42.779950975Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T01:52:42.779969025Z     at async Promise.all (index 2)
+2025-12-05T01:52:42.779975005Z     at async DatabaseStorage.getSiteHighlights (file:///opt/render/project/src/dist/index.js:1507:55)
+2025-12-05T01:52:42.779978065Z     at async file:///opt/render/project/src/dist/index.js:6216:26 {
+2025-12-05T01:52:42.779980645Z   length: 114,
+2025-12-05T01:52:42.779984165Z   severity: 'ERROR',
+2025-12-05T01:52:42.779986585Z   code: '42P01',
+2025-12-05T01:52:42.779989485Z   detail: undefined,
+2025-12-05T01:52:42.779992316Z   hint: undefined,
+2025-12-05T01:52:42.779994765Z   position: '95',
+2025-12-05T01:52:42.779997596Z   internalPosition: undefined,
+2025-12-05T01:52:42.779999996Z   internalQuery: undefined,
+2025-12-05T01:52:42.780002516Z   where: undefined,
+2025-12-05T01:52:42.780004866Z   schema: undefined,
+2025-12-05T01:52:42.780007616Z   table: undefined,
+2025-12-05T01:52:42.780010646Z   column: undefined,
+2025-12-05T01:52:42.780012986Z   dataType: undefined,
+2025-12-05T01:52:42.780015356Z   constraint: undefined,
+2025-12-05T01:52:42.780017736Z   file: 'parse_relation.c',
+2025-12-05T01:52:42.780020346Z   line: '1449',
+2025-12-05T01:52:42.780023156Z   routine: 'parserOpenTable'
+2025-12-05T01:52:42.780025556Z }
+2025-12-05T01:52:42.78071793Z 1:52:42 AM [express] GET /api/site/highlights 500 in 251ms :: {"message":"Erro ao buscar destaques d…

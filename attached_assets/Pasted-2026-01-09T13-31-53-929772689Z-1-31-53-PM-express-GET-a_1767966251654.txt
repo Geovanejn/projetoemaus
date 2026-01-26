@@ -1,0 +1,100 @@
+2026-01-09T13:31:53.929772689Z 1:31:53 PM [express] GET /api/notifications/unread-count 200 in 137ms :: {"count":6}
+2026-01-09T13:31:53.94746893Z 1:31:53 PM [express] GET /api/notifications 200 in 119ms :: {"notifications":[{"id":27,"userId":1,"t…
+2026-01-09T13:31:54.530263774Z 1:31:54 PM [express] GET /api/site/highlights 200 in 382ms :: {"devotional":{"id":1,"title":"Vivendo…
+2026-01-09T13:31:59.599665944Z 1:31:59 PM [express] GET /api/notifications/unread-count 304 in 5ms :: {"count":6}
+2026-01-09T13:31:59.628587116Z 1:31:59 PM [express] GET /api/site-content/quem-somos 304 in 5ms :: {"email":{"title":"","content":"…
+2026-01-09T13:32:00.039754935Z 1:32:00 PM [express] GET /api/site/highlights 304 in 177ms :: {"devotional":{"id":1,"title":"Vivendo…
+2026-01-09T13:32:00.728272026Z 1:32:00 PM [express] GET /api/notifications 304 in 863ms :: {"notifications":[{"id":27,"userId":1,"t…
+2026-01-09T13:34:14.906752108Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-01-09T13:34:14.971083395Z ==> Deploying...
+2026-01-09T13:34:49.855311268Z 1:34:49 PM [express] GET /api/notifications/unread-count 304 in 28ms :: {"count":6}
+2026-01-09T13:34:49.928767871Z 1:34:49 PM [express] GET /api/notifications 304 in 108ms :: {"notifications":[{"id":27,"userId":1,"t…
+2026-01-09T13:34:55.251068169Z 1:34:55 PM [express] GET /api/espiritualidade/stats 200 in 34ms :: {"devotionals":{"total":1,"publis…
+2026-01-09T13:35:03.957068895Z ==> Running 'node ./dist/index.js'
+2026-01-09T13:35:20.081410135Z ==> No open ports detected, continuing to scan...
+2026-01-09T13:35:20.271923161Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-09T13:35:25.157397688Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2026-01-09T13:35:25.157954412Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2026-01-09T13:35:25.158908646Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-09T13:35:25.159058719Z [MercadoPago] Client initialized successfully
+2026-01-09T13:35:25.15949417Z [Push] Web Push configured successfully
+2026-01-09T13:35:25.35744959Z [WebSocket] Server initialized
+2026-01-09T13:35:25.502844633Z 1:35:25 PM [express] serving on port 10000
+2026-01-09T13:35:25.503006247Z Initializing PostgreSQL database connection...
+2026-01-09T13:35:26.671183172Z PostgreSQL connection successful: 2026-01-09T13:35:26.666Z
+2026-01-09T13:35:26.705470908Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2026-01-09T13:35:26.705493849Z Database initialized successfully!
+2026-01-09T13:35:27.059671024Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2026-01-09T13:35:27.061721076Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.063745767Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-09T13:35:27.066600349Z [Daily Verse Scheduler] Initialized - will run daily at 07:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.068375934Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-09T13:35:27.156038598Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2026-01-09T13:35:27.15612638Z [Instagram Scheduler] Running sync...
+2026-01-09T13:35:27.156332866Z [Instagram] Starting sync...
+2026-01-09T13:35:27.166061742Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.255596983Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2026-01-09T13:35:27.25866337Z [Event Scheduler] Lesson release initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.261404699Z [Event Scheduler] Card distribution initialized - will run daily at 23:59 (America/Sao_Paulo)
+2026-01-09T13:35:27.26418755Z [Event Deadline Scheduler] Initialized - will run every hour at :00 (America/Sao_Paulo) with database persistence
+2026-01-09T13:35:27.266309323Z [Marketing Reminder Scheduler] Initialized - will run every hour at :30 (America/Sao_Paulo) with database persistence
+2026-01-09T13:35:27.354379608Z [Treasury Scheduler] Day 5 reminder initialized - will run on day 5 of each month at 08:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.358539003Z [Treasury Scheduler] 5th business day reminder initialized - will run on weekdays at 08:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.360660446Z [Shop Scheduler] Abandoned cart reminder initialized - will run every hour (America/Sao_Paulo) with auto-cancel after 48h
+2026-01-09T13:35:27.363064407Z [Treasury Scheduler] Loan installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.365491588Z [Shop Scheduler] Shop installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.36791675Z [Event Fee Scheduler] Event fee reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.45580874Z [Treasury Scheduler] Year rollover initialized - will run on Jan 1st at 00:05 (America/Sao_Paulo)
+2026-01-09T13:35:27.460023946Z [Treasury Scheduler] Monthly summary initialized - will run on day 1 of each month at 08:00 (America/Sao_Paulo)
+2026-01-09T13:35:27.46016864Z 1:35:27 PM [express] Database and schedulers initialized successfully
+2026-01-09T13:35:27.657489804Z [Instagram] API error: 400 {
+2026-01-09T13:35:27.657504394Z [Instagram] No new posts fetched - keeping existing data
+2026-01-09T13:35:27.657513084Z   error: {
+2026-01-09T13:35:27.657517054Z     message: 'Error validating access token: Session has expired on Monday, 29-Dec-25 10:00:00 PST. The current time is Friday, 09-Jan-26 05:35:27 PST.',
+2026-01-09T13:35:27.657520864Z     type: 'OAuthException',
+2026-01-09T13:35:27.657523155Z     code: 190,
+2026-01-09T13:35:27.657526275Z     error_subcode: 463,
+2026-01-09T13:35:27.657529115Z     fbtrace_id: 'AwPBHP4Wh6_MYIoMxn1hh4e'
+2026-01-09T13:35:27.657531475Z   }
+2026-01-09T13:35:27.657539415Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-09T13:35:27.657546555Z }
+2026-01-09T13:35:32.066969536Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-09T13:35:32.06709331Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-09T13:35:32.081589926Z [Daily Verse Scheduler] Already sent today (2026-01-09), skipping
+2026-01-09T13:35:34.068420168Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-09T13:35:34.068599233Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-09T13:35:34.07483263Z [Recovery Verses Scheduler] Verses already generated for today (recovery-2026-01-09)
+2026-01-09T13:35:35.43605465Z [Upload] Image converted to Base64: 33.0KB -> 215.3KB (-552% reduction)
+2026-01-09T13:35:35.748493114Z ==> Your service is live 🎉
+2026-01-09T13:35:35.937968499Z ==> 
+2026-01-09T13:35:36.025727214Z ==> ///////////////////////////////////////////////////////////
+2026-01-09T13:35:36.11177897Z ==> 
+2026-01-09T13:35:36.198770416Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-09T13:35:36.285550631Z ==> 
+2026-01-09T13:35:36.372275596Z ==> ///////////////////////////////////////////////////////////
+2026-01-09T13:35:37.166803356Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-09T13:35:37.167069563Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-09T13:35:37.17922982Z [Daily Missions Scheduler] Content already generated for today (2026-01-09)
+2026-01-09T13:36:24.161053488Z [Upload] Image converted to Base64: 33.0KB -> 215.3KB (-552% reduction)
+2026-01-09T13:36:24.963606959Z 1:36:24 PM [express] POST /api/upload 200 in 6513ms :: {"url":"data:image/webp;base64,UklGRhBdAwBXRU…
+2026-01-09T13:40:32.610636218Z ==> Detected service running on port 10000
+2026-01-09T13:40:32.781434563Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-09T13:41:19.78796437Z [Notifications] notifyNewDevotional STARTED for devotional 2: "A Incomparável Profundidade do Amor de Deus"
+2026-01-09T13:41:19.855443332Z [Push] Sending "📖 Novo Devocional" to 9 active members
+2026-01-09T13:41:19.861779402Z 1:41:19 PM [express] POST /api/espiritualidade/devotionals 201 in 538ms :: {"id":2,"title":"A Incomp…
+2026-01-09T13:41:19.86567185Z [Push] User 1 has no push subscriptions registered
+2026-01-09T13:41:19.868564613Z [Push] User 6 has no push subscriptions registered
+2026-01-09T13:41:19.871578009Z [Push] User 5 has no push subscriptions registered
+2026-01-09T13:41:19.874416791Z [Push] User 9 has no push subscriptions registered
+2026-01-09T13:41:19.877435257Z [Push] User 4 has no push subscriptions registered
+2026-01-09T13:41:19.880073384Z [Push] User 7 has no push subscriptions registered
+2026-01-09T13:41:19.882810183Z [Push] User 3 has no push subscriptions registered
+2026-01-09T13:41:19.953961567Z [Push] User 11 has no push subscriptions registered
+2026-01-09T13:41:20.094552183Z [Push] Successfully sent notification to member user 2
+2026-01-09T13:41:20.101741135Z [Push] Sent "📖 Novo Devocional" to user 2 (1/1 success)
+2026-01-09T13:41:20.101763196Z [Notifications] Devotional push: 1 sent, 8 failed
+2026-01-09T13:41:23.459384439Z 1:41:23 PM [express] GET /api/espiritualidade/devotionals 200 in 1602ms :: [{"id":2,"title":"A Incom…
+2026-01-09T13:41:23.556118659Z [Notifications] Devotional email sent to 10/10 members
+2026-01-09T13:41:23.562721655Z [Notifications] Devotional anonymous push: 0 sent
+2026-01-09T13:41:51.73588137Z 1:41:51 PM [express] GET /api/notifications 200 in 22ms :: {"notifications":[{"id":36,"userId":1,"ty…
+2026-01-09T13:41:51.75847955Z 1:41:51 PM [express] GET /api/notifications/unread-count 200 in 5ms :: {"count":7}

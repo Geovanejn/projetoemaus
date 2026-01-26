@@ -1,0 +1,100 @@
+2026-01-09T20:43:49.928713933Z 8:43:49 PM [express] GET /api/admin/shop/items 200 in 369ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:43:52.02767926Z 8:43:52 PM [express] GET /api/shop/images/item/43 200 in 255ms
+2026-01-09T20:44:10.336944662Z 8:44:10 PM [express] POST /api/admin/shop/items/11/images 200 in 4425ms :: {"id":44,"itemId":11,"gen…
+2026-01-09T20:44:11.631909777Z 8:44:11 PM [express] GET /api/admin/shop/items 200 in 239ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:44:11.63629903Z 8:44:11 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 4ms :: []
+2026-01-09T20:44:13.332687969Z 8:44:13 PM [express] GET /api/shop/images/item/44 200 in 356ms
+2026-01-09T20:44:26.727633226Z 8:44:26 PM [express] POST /api/admin/shop/items/11/images 200 in 2898ms :: {"id":45,"itemId":11,"gen…
+2026-01-09T20:44:27.109066783Z 8:44:27 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 6ms :: []
+2026-01-09T20:44:27.428804906Z 8:44:27 PM [express] GET /api/admin/shop/items 200 in 225ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:44:28.940492508Z 8:44:28 PM [express] GET /api/shop/images/item/45 200 in 184ms
+2026-01-09T20:44:35.362110376Z 8:44:35 PM [express] POST /api/admin/shop/items/11/sizes 200 in 12ms :: {"id":12,"itemId":11,"gender…
+2026-01-09T20:44:35.928184975Z 8:44:35 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 306ms :: []
+2026-01-09T20:44:36.634986096Z 8:44:36 PM [express] GET /api/admin/shop/items 200 in 922ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:44:41.718933979Z 8:44:41 PM [express] POST /api/admin/shop/items/11/sizes 200 in 9ms :: {"id":13,"itemId":11,"gender"…
+2026-01-09T20:44:42.030250984Z 8:44:42 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 81ms :: []
+2026-01-09T20:44:42.929678838Z 8:44:42 PM [express] GET /api/admin/shop/items 200 in 392ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:44:52.745740149Z 8:44:52 PM [express] POST /api/admin/shop/items/11/sizes 200 in 10ms :: {"id":14,"itemId":11,"gender…
+2026-01-09T20:44:52.952485195Z 8:44:52 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 4ms :: []
+2026-01-09T20:44:53.333154911Z 8:44:53 PM [express] GET /api/admin/shop/items 200 in 381ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:44:59.983462201Z 8:44:59 PM [express] POST /api/admin/shop/items/11/sizes 200 in 9ms :: {"id":15,"itemId":11,"gender"…
+2026-01-09T20:45:00.332614136Z 8:45:00 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 83ms :: []
+2026-01-09T20:45:00.634225402Z 8:45:00 PM [express] GET /api/admin/shop/items 200 in 399ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:45:06.288602806Z 8:45:06 PM [express] POST /api/admin/shop/items/11/sizes 200 in 9ms :: {"id":16,"itemId":11,"gender"…
+2026-01-09T20:45:06.506975256Z 8:45:06 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 6ms :: []
+2026-01-09T20:45:07.631135169Z 8:45:07 PM [express] GET /api/admin/shop/items 200 in 1034ms :: [{"id":11,"name":"Kit UMP Emaús 2025…
+2026-01-09T20:45:12.945562708Z 8:45:12 PM [express] POST /api/admin/shop/items/11/sizes 200 in 8ms :: {"id":17,"itemId":11,"gender"…
+2026-01-09T20:45:13.159918925Z 8:45:13 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 14ms :: []
+2026-01-09T20:45:13.626832618Z 8:45:13 PM [express] GET /api/admin/shop/items 200 in 381ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:45:21.481562213Z 8:45:21 PM [express] POST /api/admin/shop/items/11/sizes 200 in 8ms :: {"id":18,"itemId":11,"gender"…
+2026-01-09T20:45:21.724984325Z 8:45:21 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 5ms :: []
+2026-01-09T20:45:23.637139499Z 8:45:23 PM [express] GET /api/admin/shop/items 200 in 1904ms :: [{"id":11,"name":"Kit UMP Emaús 2025…
+2026-01-09T20:45:27.585551986Z 8:45:27 PM [express] POST /api/admin/shop/items/11/sizes 200 in 11ms :: {"id":19,"itemId":11,"gender…
+2026-01-09T20:45:27.835887593Z 8:45:27 PM [express] GET /api/admin/shop/items/11/size-charts 304 in 4ms :: []
+2026-01-09T20:45:28.228578854Z 8:45:28 PM [express] GET /api/admin/shop/items 200 in 307ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:45:44.984483681Z 8:45:44 PM [express] GET /api/shop/categories 304 in 5ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-09T20:45:44.9893292Z 8:45:44 PM [express] GET /api/shop/cart 304 in 4ms :: []
+2026-01-09T20:45:45.22762188Z 8:45:45 PM [express] GET /api/shop/items 200 in 8ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descri…
+2026-01-09T20:45:45.326091709Z 8:45:45 PM [express] GET /api/shop/featured 304 in 76ms :: [{"id":8,"name":"Camisa UMP 2025","descri…
+2026-01-09T20:45:51.397100517Z 8:45:51 PM [express] GET /api/admin/shop/categories 304 in 8ms :: [{"id":10,"name":"Acessórios","isD…
+2026-01-09T20:45:51.527062516Z 8:45:51 PM [express] GET /api/admin/shop/promo-codes 304 in 132ms :: []
+2026-01-09T20:45:51.738883379Z 8:45:51 PM [express] GET /api/admin/shop/items 304 in 101ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:46:01.741319683Z 8:46:01 PM [express] PATCH /api/admin/shop/items/11 200 in 1119ms :: {"id":11,"name":"Kit UMP Emaús …
+2026-01-09T20:46:02.13758091Z 8:46:02 PM [express] GET /api/admin/shop/items 200 in 383ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T20:46:08.338901321Z 8:46:08 PM [express] GET /api/shop/categories 304 in 7ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-09T20:46:08.351788406Z 8:46:08 PM [express] GET /api/shop/cart 304 in 5ms :: []
+2026-01-09T20:46:08.360208382Z 8:46:08 PM [express] GET /api/shop/featured 200 in 7ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-09T20:46:08.451965842Z 8:46:08 PM [express] GET /api/shop/items 200 in 101ms :: [{"id":11,"name":"Kit UMP Emaús 2025","desc…
+2026-01-09T21:00:00.029859023Z [Instagram Scheduler] Running sync...
+2026-01-09T21:00:00.030587632Z [Instagram] Starting sync...
+2026-01-09T21:00:00.124909485Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-09T21:00:00.126762464Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-09T21:00:00.430772442Z [Instagram] API error: 400 {
+2026-01-09T21:00:00.430806925Z   error: {
+2026-01-09T21:00:00.430813796Z     message: 'Error validating access token: Session has expired on Monday, 29-Dec-25 10:00:00 PST. The current time is Friday, 09-Jan-26 13:00:00 PST.',
+2026-01-09T21:00:00.430818546Z     type: 'OAuthException',
+2026-01-09T21:00:00.430822826Z     code: 190,
+2026-01-09T21:00:00.430827877Z     error_subcode: 463,
+2026-01-09T21:00:00.430832877Z     fbtrace_id: 'AVjFOI5tUBbKJQk5r4NljEv'
+2026-01-09T21:00:00.430837038Z   }
+2026-01-09T21:00:00.430841548Z }
+2026-01-09T21:00:00.430900372Z [Instagram] No new posts fetched - keeping existing data
+2026-01-09T21:00:00.430912453Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-09T21:00:00.828479384Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-09T21:00:01.427322774Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-09T21:13:33.97313772Z 9:13:33 PM [express] GET /api/notifications 200 in 786ms :: {"notifications":[{"id":62,"userId":2,"t…
+2026-01-09T21:13:34.15383311Z 9:13:34 PM [express] GET /api/notifications/unread-count 304 in 823ms :: {"count":0}
+2026-01-09T21:13:34.159667147Z 9:13:34 PM [express] GET /api/site-content/quem-somos 304 in 731ms :: {"email":{"title":"","content"…
+2026-01-09T21:13:34.340847865Z 9:13:34 PM [express] GET /api/site/highlights 304 in 1138ms :: {"devotional":{"id":4,"title":"Vivend…
+2026-01-09T21:13:43.617001267Z 9:13:43 PM [express] GET /api/treasury/dashboard/category-income 304 in 16ms :: []
+2026-01-09T21:13:43.629297671Z 9:13:43 PM [express] GET /api/treasury/dashboard/monthly 304 in 37ms :: [{"month":1,"monthName":"jan…
+2026-01-09T21:13:43.629762088Z 9:13:43 PM [express] GET /api/treasury/dashboard/category-expenses 304 in 30ms :: []
+2026-01-09T21:13:44.329609502Z 9:13:44 PM [express] GET /api/treasury/dashboard/summary 200 in 741ms :: {"totalIncome":0,"totalExpe…
+2026-01-09T21:13:53.467408684Z 9:13:53 PM [express] GET /api/treasury/settings/2026 304 in 8ms :: {"id":1,"year":2026,"percaptaAmou…
+2026-01-09T21:13:57.702818068Z 9:13:57 PM [express] GET /api/treasury/entries 304 in 11ms :: []
+2026-01-09T21:14:06.554030639Z 9:14:06 PM [express] GET /api/treasury/members/tax-status/2026 200 in 34ms :: [{"userId":12,"fullNam…
+2026-01-09T21:14:12.103537423Z [Push] User 1 has no push subscriptions registered
+2026-01-09T21:14:12.107562036Z [Push] User 12 has no push subscriptions registered
+2026-01-09T21:14:12.109175485Z [Push] User 5 has no push subscriptions registered
+2026-01-09T21:14:12.112599459Z [Push] User 13 has no push subscriptions registered
+2026-01-09T21:14:12.127972509Z [Push] User 11 has no push subscriptions registered
+2026-01-09T21:14:12.34354625Z [Push] Successfully sent notification to member user 2
+2026-01-09T21:14:12.351769828Z [Push] Sent "💰 Lembrete de Pagamentos Pendentes" to user 2 (1/1 success)
+2026-01-09T21:14:12.35504072Z [Push] User 9 has no push subscriptions registered
+2026-01-09T21:14:12.358085824Z [Push] User 6 has no push subscriptions registered
+2026-01-09T21:14:12.361357055Z [Push] User 7 has no push subscriptions registered
+2026-01-09T21:14:12.364378617Z [Push] User 3 has no push subscriptions registered
+2026-01-09T21:14:12.367522129Z [Push] User 4 has no push subscriptions registered
+2026-01-09T21:14:12.36903504Z 9:14:12 PM [express] POST /api/treasury/notifications/bulk-reminder 200 in 427ms :: {"success":true,…
+2026-01-09T21:14:25.554653952Z 9:14:25 PM [express] GET /api/admin/shop/categories 304 in 12ms :: [{"id":10,"name":"Acessórios","is…
+2026-01-09T21:14:25.840325572Z 9:14:25 PM [express] GET /api/admin/shop/items 304 in 307ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-09T21:14:26.032178995Z 9:14:26 PM [express] GET /api/admin/shop/promo-codes 304 in 485ms :: []
+2026-01-09T21:14:50.317885913Z 9:14:50 PM [express] POST /api/admin/shop/items 200 in 16ms :: {"id":12,"name":"Camiseta UMP Emaús 2…
+2026-01-09T21:14:51.830066525Z 9:14:51 PM [express] GET /api/admin/shop/items 200 in 1209ms :: [{"id":12,"name":"Camiseta UMP Emaús…
+2026-01-09T21:15:09.744146553Z 9:15:09 PM [express] GET /api/admin/shop/items/12/size-charts 200 in 7ms :: []
+2026-01-09T21:16:07.927567481Z 9:16:07 PM [express] POST /api/admin/shop/items/12/images 200 in 2323ms :: {"id":46,"itemId":12,"gen…
+2026-01-09T21:16:08.470405083Z 9:16:08 PM [express] GET /api/admin/shop/items/12/size-charts 304 in 5ms :: []
+2026-01-09T21:16:09.325981512Z 9:16:09 PM [express] GET /api/admin/shop/items 200 in 474ms :: [{"id":12,"name":"Camiseta UMP Emaús …
+2026-01-09T21:16:10.036415015Z 9:16:10 PM [express] GET /api/shop/images/item/46 200 in 707ms
+2026-01-09T21:16:34.968069007Z 9:16:34 PM [express] DELETE /api/admin/shop/items/12 200 in 13ms :: {"success":true}
+2026-01-09T21:16:35.529565592Z 9:16:35 PM [express] GET /api/admin/shop/items 200 in 242ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…

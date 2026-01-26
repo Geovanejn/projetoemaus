@@ -1,0 +1,158 @@
+🧠 ESTADO ATUAL (CONFIRMADO)
+✅ Ranking por revista (SEASON)
+
+✔️ ESTÁ CORRETO
+✔️ Valor correto: 235 XP
+✔️ Fonte correta:
+
+SUM(user_lesson_progress.xpEarned)
++ SUM(weekly_practice_bonus.bonusXp)
+FILTRADO pela temporada
+
+
+📌 REGRA ABSOLUTA
+
+❌ NÃO MEXER no ranking por revista
+Ele é hoje o padrão ouro do sistema.
+
+🔴 PROBLEMA REAL AGORA
+❌ Ranking geral e ranking anual
+
+Eles estão mostrando EXATAMENTE o mesmo valor do ranking por revista (235)
+
+👉 Isso significa uma coisa só:
+
+XP de conquistas e XP de missões diárias NÃO estão entrando no cálculo
+
+⚠️ Isso NÃO é bug de cálculo
+⚠️ É bug de FONTE DE DADOS
+
+📌 EXPECTATIVA CORRETA (REGRA DE NEGÓCIO)
+
+Você deixou a regra muito clara — e ela está correta:
+
+🔢 Fórmulas corretas
+🟦 Ranking por Revista (Season)
+XP = XP das lições da revista
+   + bônus semanal
+
+
+✔️ Já funciona
+✔️ Não mexer
+
+🟩 Ranking Geral
+XP = XP de TODAS as revistas
+   + bônus semanais
+   + XP de conquistas
+   + XP de missões diárias
+
+🟨 Ranking Anual
+XP = XP do ano (lições)
+   + bônus semanais do ano
+   + XP de conquistas do ano
+   + XP de missões diárias do ano
+
+🎯 DIAGNÓSTICO EXATO (SEM ACHISMO)
+
+Hoje, ranking geral e anual estão somando APENAS:
+
+user_lesson_progress.xpEarned
+
+weekly_practice_bonus.bonusXp
+
+📉 Eles NÃO estão somando:
+
+❌ XP de conquistas
+
+❌ XP de missões diárias
+
+E isso explica perfeitamente o sintoma:
+
+Geral = Ano = Revista = 235
+
+🔍 A PERGUNTA-CHAVE (IMPORTANTE)
+
+Agora vem o ponto arquitetural que decide tudo:
+
+❓ Onde HOJE são persistidos:
+
+XP de conquistas?
+
+XP de missões diárias?
+
+Provavelmente:
+
+Eles estão indo apenas para xpTransactions
+
+OU
+
+Estão sendo somados em algum campo derivado (ex: profile, cache)
+
+👉 E você mesmo já definiu:
+
+xpTransactions NÃO pode ser fonte de ranking
+
+Então temos 2 caminhos corretos — e só eles.
+
+✅ CAMINHOS CORRETOS (ESCOLHA CONSCIENTE)
+🟢 CAMINHO 1 — Criar tabelas imutáveis (RECOMENDADO, consistente com bônus semanal)
+
+Exatamente como vocês fizeram com weeklyPracticeBonus:
+
+achievementXp
+
+dailyMissionXp
+
+Cada uma:
+
+INSERT-ONLY
+
+Unique constraint (ex: userId + achievementId / date)
+
+Nunca recalcula
+
+Nunca edita
+
+👉 Ranking geral e anual passam a somar:
+
+lessons
++ weeklyPracticeBonus
++ achievementXp
++ dailyMissionXp
+
+
+✔️ Arquitetura limpa
+✔️ Escalável
+✔️ Auditável
+✔️ Zero risco futuro
+
+🟡 CAMINHO 2 — Usar xpTransactions (NÃO recomendo, mas possível)
+
+Somar:
+
+xpTransactions filtrando por tipo
+
+⚠️ PROBLEMAS:
+
+Mistura auditoria com fonte de verdade
+
+Mais lento
+
+Mais propenso a erro humano
+
+👉 Contraria o padrão que vocês mesmos consolidaram.
+
+🧱 REGRA DE OURO (IMPORTANTE)
+
+🔒 Ranking por revista NÃO deve conhecer conquistas nem missões
+
+🔓 Ranking geral e anual DEVEM conhecer tudo
+
+Você acertou exatamente nisso.
+
+🏁 RESUMO EXECUTIVO (SEM TECNIQUÊS)
+
+✔️ Season ranking correto → não mexer
+✔️ Geral e anual incompletos → faltam fontes de XP
+✔️ O sistema NÃO está errado — está incompleto
+✔️ Próximo passo NÃO é bugfix → é decisão arquitetural

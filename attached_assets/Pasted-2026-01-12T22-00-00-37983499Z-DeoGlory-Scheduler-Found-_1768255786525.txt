@@ -1,0 +1,100 @@
+2026-01-12T22:00:00.37983499Z [DeoGlory Scheduler] Found 2 user(s) needing streak check
+2026-01-12T22:00:00.381722735Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-12T22:00:00.383540309Z [Notifications] notifyStreakReminder for user 7, streak 0, type: lost
+2026-01-12T22:00:00.38860863Z [Push] User 7 has no push subscriptions registered
+2026-01-12T22:00:00.388619771Z [Notifications] Streak reminder push to user 7: no subscriptions
+2026-01-12T22:00:00.429643573Z [DeoGlory Scheduler] Streak lost for user 7 (was: 1)
+2026-01-12T22:00:00.432625484Z [Notifications] notifyStreakReminder for user 11, streak 2, type: warning
+2026-01-12T22:00:00.628737768Z [Push] Successfully sent notification to member user 11
+2026-01-12T22:00:00.633485302Z [Push] Sent "🔥 Ofensiva em Risco!" to user 11 (1/1 success)
+2026-01-12T22:00:00.633500113Z [Notifications] Streak reminder push to user 11: success
+2026-01-12T22:00:00.638040941Z [DeoGlory Scheduler] Day 1 warning sent to user 11 (streak: 2)
+2026-01-12T22:00:00.638109243Z [DeoGlory Scheduler] Streak check completed. Reminders: 1, Freezes used: 0, Streaks lost: 1
+2026-01-12T22:00:44.200688088Z ==> Detected service running on port 10000
+2026-01-12T22:00:44.407727671Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-12T22:03:44.844457942Z 10:03:44 PM [express] GET /api/site-content/quem-somos 304 in 614ms :: {"email":{"title":"","content"…
+2026-01-12T22:03:44.959831874Z 10:03:44 PM [express] GET /api/site/highlights 304 in 723ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T22:03:44.976755929Z 10:03:44 PM [express] GET /api/notifications/unread-count 304 in 1144ms :: {"count":0}
+2026-01-12T22:03:44.981292498Z 10:03:44 PM [express] GET /api/notifications 304 in 550ms :: {"notifications":[{"id":176,"userId":1,"…
+2026-01-12T22:03:49.836241062Z 10:03:49 PM [express] GET /api/study/leaderboard 200 in 103ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T22:03:50.040178353Z 10:03:50 PM [express] GET /api/study/profile 304 in 203ms :: {"id":2,"userId":1,"totalXp":2040,"curre…
+2026-01-12T22:03:50.052537069Z 10:03:50 PM [express] GET /api/missions/daily 304 in 123ms :: {"missions":[{"id":61,"userId":1,"missi…
+2026-01-12T22:03:50.295122946Z 10:03:50 PM [express] GET /api/study/weeks 304 in 8ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T22:03:50.631554039Z 10:03:50 PM [express] GET /api/study/practice/11/status 304 in 98ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T22:03:50.744864012Z 10:03:50 PM [express] GET /api/study/weeks/bulk 304 in 203ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T22:03:51.031147895Z 10:03:51 PM [express] GET /api/study/streak/status 304 in 19ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T22:03:51.033928251Z 10:03:51 PM [express] GET /api/study/weekly-goal 304 in 26ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T22:03:52.474853013Z 10:03:52 PM [express] GET /api/study/seasons 304 in 12ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-12T22:03:52.479398182Z 10:03:52 PM [express] GET /api/study/achievements 304 in 13ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T22:03:53.021214821Z [WebSocket] Authenticated connection: 3LIKgYM2kdFLhP9eAAAB, userId: 1
+2026-01-12T22:03:53.022044481Z [WebSocket] Client connected: 3LIKgYM2kdFLhP9eAAAB, authenticated: true
+2026-01-12T22:03:53.235322276Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T22:03:53.236546566Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T22:03:53.809318886Z [WebSocket] Client disconnected: 3LIKgYM2kdFLhP9eAAAB, reason: transport close
+2026-01-12T22:03:53.814118361Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T22:03:53.814149462Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T22:03:54.078052809Z 10:03:54 PM [express] GET /api/study/leaderboard 304 in 8ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T22:03:54.13033Z 10:03:54 PM [express] GET /api/study/seasons 304 in 58ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-12T22:03:54.372896117Z 10:03:54 PM [express] GET /api/study/achievements 304 in 9ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T22:03:54.563413267Z [WebSocket] Authenticated connection: gy9s54SN0fskkQ6bAAAD, userId: 1
+2026-01-12T22:03:54.563607671Z [WebSocket] Client connected: gy9s54SN0fskkQ6bAAAD, authenticated: true
+2026-01-12T22:03:54.738462277Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T22:03:54.738785645Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T22:03:56.162587937Z [WebSocket] Client disconnected: gy9s54SN0fskkQ6bAAAD, reason: client namespace disconnect
+2026-01-12T22:03:56.166696795Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T22:03:56.166844819Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T22:03:56.237597742Z 10:03:56 PM [express] GET /api/study/member/11/cards 304 in 7ms :: []
+2026-01-12T22:03:56.442697012Z 10:03:56 PM [express] GET /api/study/member/11 200 in 253ms :: {"userId":11,"username":"Evelyn Moura"…
+2026-01-12T22:03:58.829228369Z [WebSocket] Authenticated connection: d2x1HDsdnsZPrfZMAAAF, userId: 1
+2026-01-12T22:03:58.829484825Z [WebSocket] Client connected: d2x1HDsdnsZPrfZMAAAF, authenticated: true
+2026-01-12T22:03:59.027592087Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T22:03:59.027872554Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T22:04:01.840786987Z [WebSocket] Client disconnected: d2x1HDsdnsZPrfZMAAAF, reason: transport close
+2026-01-12T22:04:01.844926906Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T22:04:01.845206403Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T22:04:02.11620295Z 10:04:02 PM [express] GET /api/study/leaderboard 304 in 5ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T22:04:02.116797274Z 10:04:02 PM [express] GET /api/study/seasons 304 in 8ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T22:04:02.344416282Z 10:04:02 PM [express] GET /api/study/achievements 304 in 8ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T22:04:02.613112944Z [WebSocket] Authenticated connection: dWOajZgnmkPSVPyeAAAH, userId: 1
+2026-01-12T22:04:02.613488783Z [WebSocket] Client connected: dWOajZgnmkPSVPyeAAAH, authenticated: true
+2026-01-12T22:04:02.788065552Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T22:04:02.788320898Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T22:04:07.342978784Z 10:04:07 PM [express] GET /api/study/leaderboard 304 in 7ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T22:04:09.165049869Z [WebSocket] Client disconnected: dWOajZgnmkPSVPyeAAAH, reason: client namespace disconnect
+2026-01-12T22:04:09.168695036Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T22:04:09.16885336Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T22:04:09.23778876Z 10:04:09 PM [express] GET /api/study/profile 304 in 28ms :: {"id":2,"userId":1,"totalXp":2040,"curren…
+2026-01-12T22:04:09.2444454Z 10:04:09 PM [express] GET /api/missions/daily 304 in 32ms :: {"missions":[{"id":61,"userId":1,"missio…
+2026-01-12T22:04:09.457289635Z 10:04:09 PM [express] GET /api/study/weeks 304 in 4ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T22:04:09.758975366Z 10:04:09 PM [express] GET /api/study/practice/11/status 304 in 15ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T22:04:09.84020005Z 10:04:09 PM [express] GET /api/study/weeks/bulk 304 in 92ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T22:04:10.120751446Z 10:04:10 PM [express] GET /api/notifications/unread-count 304 in 5ms :: {"count":0}
+2026-01-12T22:04:10.122694492Z 10:04:10 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":176,"userId":1,"ty…
+2026-01-12T22:04:10.125975251Z 10:04:10 PM [express] GET /api/study/streak/status 304 in 21ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T22:04:10.137791974Z 10:04:10 PM [express] GET /api/study/weekly-goal 304 in 20ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T22:04:12.734521262Z 10:04:12 PM [express] GET /api/positions 304 in 32ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":…
+2026-01-12T22:04:12.734934112Z 10:04:12 PM [express] GET /api/elections/active 304 in 32ms
+2026-01-12T22:04:13.030137859Z 10:04:12 PM [express] GET /api/elections/history 304 in 197ms :: []
+2026-01-12T22:04:13.129403965Z 10:04:13 PM [express] GET /api/members 200 in 326ms :: [{"id":1,"fullName":"Administrador","email":"m…
+2026-01-12T22:04:26.439122932Z 10:04:26 PM [express] PATCH /api/admin/members/12 200 in 11ms :: {"id":12,"fullName":"Allan Rayvson A…
+2026-01-12T22:04:26.659720572Z 10:04:26 PM [express] GET /api/members 304 in 7ms :: [{"id":1,"fullName":"Administrador","email":"mar…
+2026-01-12T22:04:34.45922081Z 10:04:34 PM [express] GET /api/study/weekly-goal 304 in 24ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T22:04:36.311045599Z [WebSocket] Authenticated connection: ZSXd5W4e0lo3I-VOAAAJ, userId: 1
+2026-01-12T22:04:36.311340366Z [WebSocket] Client connected: ZSXd5W4e0lo3I-VOAAAJ, authenticated: true
+2026-01-12T22:04:36.594865923Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T22:04:36.595372575Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T22:04:38.651832871Z [WebSocket] Client disconnected: ZSXd5W4e0lo3I-VOAAAJ, reason: transport close
+2026-01-12T22:04:38.655610831Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T22:04:38.655729644Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T22:04:38.961447292Z 10:04:38 PM [express] GET /api/study/leaderboard 200 in 6ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T22:04:38.979227997Z 10:04:38 PM [express] GET /api/study/seasons 304 in 7ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T22:04:39.233250138Z 10:04:39 PM [express] GET /api/study/achievements 304 in 9ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T22:04:39.447169369Z [WebSocket] Authenticated connection: taIPLYtUVmEc5U72AAAL, userId: 1
+2026-01-12T22:04:39.447373214Z [WebSocket] Client connected: taIPLYtUVmEc5U72AAAL, authenticated: true
+2026-01-12T22:04:39.63228834Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T22:04:39.632792662Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T22:04:44.199426044Z 10:04:44 PM [express] GET /api/study/leaderboard 304 in 7ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T22:04:49.438225776Z 10:04:49 PM [express] GET /api/study/leaderboard 304 in 7ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T22:06:14.585404136Z [WebSocket] Client disconnected: taIPLYtUVmEc5U72AAAL, reason: ping timeout
+2026-01-12T22:06:14.612910043Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T22:06:14.613171479Z [WebSocket] User 1 disconnected from presence. Online: 0

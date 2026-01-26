@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Emaús - Portal da UMP Emaús (Offline)</title>
+  <meta name="description" content="Portal da UMP Emaús - Versão Offline" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    
+    /* Navbar */
+    .navbar {
+      background-color: #1f2937;
+      padding: 0.75rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .navbar-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo img {
+      height: 40px;
+    }
+    
+    .logo-text {
+      color: #f97316;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .nav-link {
+      color: #d1d5db;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      background-color: rgba(249, 115, 22, 0.2);
+      color: #f97316;
+    }
+    
+    .btn-member {
+      background: linear-gradient(to right, #f97316, #eab308);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop');
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.8), transparent);
+    }
+    
+    .hero-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .hero-text {
+      max-width: 600px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #f97316, #eab308);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #fdba74;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-description {
+      font-size: 1.125rem;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+    }
+    
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(to right, #f97316, #eab308);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.125rem;
+      box-shadow: 0 10px 40px rgba(249, 115, 22, 0.4);
+      transition: transform 0.2s;
+    }
+    
+    .btn-cta:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Slide Indicators */
+    .slide-indicators {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.75rem;
+    }
+    
+    .indicator {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 9999px;
+      background-color: #9ca3af;
+    }
+    
+    .indicator.active {
+      width: 3rem;
+      background: linear-gradient(to right, #f97316, #eab308);
+    }
+    
+    /* Navigation Arrows */
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(31, 41, 55, 0.5);
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      backdrop-filter: blur(4px);
+    }
+    
+    .nav-arrow.left { left: 1rem; }
+    .nav-arrow.right { right: 1rem; }
+    
+    /* Main Content */
+    .main-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+    
+    /* Quick Actions */
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-subtitle {
+        font-size: 1.25rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+    
+    .action-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    
+    .action-card:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      border-color: #f97316;
+    }
+    
+    .action-icon {
+      width: 4rem;
+      height: 4rem;
+      background: linear-gradient(135deg, #f97316, #eab308);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    }
+    
+    .action-icon svg {
+      width: 2rem;
+      height: 2rem;
+      color: white;
+    }
+    
+    .action-title {
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: #1f2937;
+      margin-bottom: 0.25rem;
+    }
+    
+    .action-subtitle {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    
+    /* Section Title */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    
+    .section-link {
+      color: #f97316;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+    
+    /* Devotional Cards */
+    .devotional-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .devotional-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .devotional-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    
+    .devotional-card:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .devotional-header {
+      background: linear-gradient(135deg, #1f2937, #374151);
+      padding: 1rem;
+    }
+    
+    .devotional-verse {
+      color: #f97316;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .devotional-title {
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+    
+    .devotional-body {
+      padding: 1rem;
+    }
+    
+    .devotional-preview {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .devotional-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+    
+    /* Events Section */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .event-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .event-date {
+      background: linear-gradient(135deg, #f97316, #eab308);
+      color: white;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      min-width: 80px;
+    }
+    
+    .event-day {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .event-month {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+    
+    .event-info h3 {
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 0.25rem;
+    }
+    
+    .event-location {
+      color: #f97316;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .event-description {
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    
+    /* Instagram Section */
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .instagram-item {
+      aspect-ratio: 1;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    
+    .instagram-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    
+    .instagram-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    /* Footer */
+    .footer {
+      background: #1f2937;
+      color: #9ca3af;
+      padding: 3rem 1rem;
+    }
+    
+    .footer-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+    
+    .footer-section h4 {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-section p, .footer-section a {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-section a:hover {
+      color: #f97316;
+    }
+    
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #374151;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    
+    /* Offline Notice */
+    .offline-notice {
+      background: linear-gradient(to right, #f97316, #eab308);
+      color: white;
+      text-align: center;
+      padding: 0.75rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Offline Notice -->
+  <div class="offline-notice">
+    Versao Offline - Alguns recursos podem nao estar disponiveis
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="logo.png" alt="Emaus Logo" onerror="this.style.display='none'">
+        <span class="logo-text">emaus</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#devocionais" class="nav-link">Devocionais</a>
+        <a href="#oracao" class="nav-link">Oracao</a>
+        <a href="#programacoes" class="nav-link">Programacoes</a>
+        <a href="#diretoria" class="nav-link">Diretoria</a>
+        <a href="#votacao" class="nav-link">Votacao</a>
+      </div>
+      <a href="#" class="btn-member">Area do Membro</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">A Fe que Move Montanhas</h1>
+        <p class="hero-subtitle">Devocional Recente</p>
+        <p class="hero-description">Se tiverdes fe como um grao de mostarda, direis a este monte: Passa daqui para acola, e ha de passar</p>
+        <a href="#" class="btn-cta">Ler Devocional &rarr;</a>
+      </div>
+    </div>
+    <div class="slide-indicators">
+      <div class="indicator active"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+    </div>
+    <button class="nav-arrow left">&lsaquo;</button>
+    <button class="nav-arrow right">&rsaquo;</button>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+      <div class="action-card">
+        <div class="action-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h3 class="action-title">Devocionais</h3>
+        <p class="action-subtitle">Reflexoes diarias</p>
+      </div>
+      
+      <div class="action-card">
+        <div class="action-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </div>
+        <h3 class="action-title">Pedidos de Oracao</h3>
+        <p class="action-subtitle">Compartilhe seu pedido</p>
+      </div>
+      
+      <div class="action-card">
+        <div class="action-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="action-title">Programacoes</h3>
+        <p class="action-subtitle">Eventos e encontros</p>
+      </div>
+      
+      <div class="action-card">
+        <div class="action-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <h3 class="action-title">Diretoria</h3>
+        <p class="action-subtitle">Conheca nossa equipe</p>
+      </div>
+    </section>
+
+    <!-- Devocionais Section -->
+    <section id="devocionais">
+      <div class="section-header">
+        <h2 class="section-title">Ultimos Devocionais</h2>
+        <a href="#" class="section-link">Ver todos &rarr;</a>
+      </div>
+      
+      <div class="devotional-grid">
+        <div class="devotional-card">
+          <div class="devotional-header">
+            <span class="devotional-verse">Mateus 17:20</span>
+            <h3 class="devotional-title">A Fe que Move Montanhas</h3>
+          </div>
+          <div class="devotional-body">
+            <p class="devotional-preview">Se tiverdes fe como um grao de mostarda, direis a este monte...</p>
+            <div class="devotional-meta">
+              <span>Ana Silva</span>
+              <span>05 Nov 2025</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="devotional-card">
+          <div class="devotional-header">
+            <span class="devotional-verse">1 Corintios 13:8</span>
+            <h3 class="devotional-title">O Amor Nunca Falha</h3>
+          </div>
+          <div class="devotional-body">
+            <p class="devotional-preview">O amor e paciente, o amor e bondoso. Nao inveja, nao se vangloria...</p>
+            <div class="devotional-meta">
+              <span>Joao Santos</span>
+              <span>04 Nov 2025</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="devotional-card">
+          <div class="devotional-header">
+            <span class="devotional-verse">Proverbios 3:5-6</span>
+            <h3 class="devotional-title">Confianca em Deus</h3>
+          </div>
+          <div class="devotional-body">
+            <p class="devotional-preview">Confia no Senhor de todo o teu coracao e nao te estribes...</p>
+            <div class="devotional-meta">
+              <span>Maria Oliveira</span>
+              <span>03 Nov 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="programacoes">
+      <div class="section-header">
+        <h2 class="section-title">Proximas Programacoes</h2>
+        <a href="#" class="section-link">Ver todas &rarr;</a>
+      </div>
+      
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-date">
+            <div class="event-day">15</div>
+            <div class="event-month">Nov</div>
+          </div>
+          <div class="event-info">
+            <h3>Retiro Espiritual 2025</h3>
+            <p class="event-location">Chacara Recanto da Paz</p>
+            <p class="event-description">Tres dias de renovacao espiritual e comunhao</p>
+          </div>
+        </div>
+        
+        <div class="event-card">
+          <div class="event-date">
+            <div class="event-day">SAB</div>
+            <div class="event-month">19h</div>
+          </div>
+          <div class="event-info">
+            <h3>Culto de Jovens</h3>
+            <p class="event-location">Igreja Presbiteriana</p>
+            <p class="event-description">Louvor, pregacao e comunhao</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Siga-nos no Instagram</h2>
+        <a href="https://instagram.com" class="section-link" target="_blank">@umpemaus &rarr;</a>
+      </div>
+      
+      <div class="instagram-grid">
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400" alt="Instagram 1">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1509909756405-be0199881695?w=400" alt="Instagram 2">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Instagram 3">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400" alt="Instagram 4">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Instagram 5">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Instagram 6">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>UMP Emaus</h4>
+        <p>Uniao de Mocidade Presbiteriana</p>
+        <p>Formando jovens para Cristo</p>
+      </div>
+      <div class="footer-section">
+        <h4>Links Rapidos</h4>
+        <a href="#">Devocionais</a>
+        <a href="#">Programacoes</a>
+        <a href="#">Diretoria</a>
+        <a href="#">Votacao</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <p>contato@umpemaus.com.br</p>
+        <p>Igreja Presbiteriana</p>
+      </div>
+      <div class="footer-section">
+        <h4>Redes Sociais</h4>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 UMP Emaus. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple slide functionality for offline version
+    let currentSlide = 0;
+    const slides = [
+      {
+        title: "A Fe que Move Montanhas",
+        subtitle: "Devocional Recente",
+        description: "Se tiverdes fe como um grao de mostarda, direis a este monte: Passa daqui para acola, e ha de passar",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop"
+      },
+      {
+        title: "Retiro Espiritual 2025",
+        subtitle: "Proxima Programacao",
+        description: "15-17 de Novembro - Tres dias de renovacao espiritual no Recanto da Paz",
+        image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&h=600&fit=crop"
+      },
+      {
+        title: "Inscricoes Abertas",
+        subtitle: "Retiro Espiritual",
+        description: "Vagas limitadas! Garanta sua inscricao para o Retiro Espiritual 2025",
+        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&h=600&fit=crop"
+      },
+      {
+        title: "Siga-nos no Instagram",
+        subtitle: "Ultima Postagem",
+        description: "Confira nossos momentos de comunhao, eventos e mensagens inspiradoras",
+        image: "https://images.unsplash.com/photo-1509909756405-be0199881695?w=1200&h=600&fit=crop"
+      }
+    ];
+
+    function updateSlide() {
+      const heroBg = document.querySelector('.hero-bg');
+      const heroTitle = document.querySelector('.hero-title');
+      const heroSubtitle = document.querySelector('.hero-subtitle');
+      const heroDescription = document.querySelector('.hero-description');
+      const indicators = document.querySelectorAll('.indicator');
+
+      heroBg.style.backgroundImage = `url(${slides[currentSlide].image})`;
+      heroTitle.textContent = slides[currentSlide].title;
+      heroSubtitle.textContent = slides[currentSlide].subtitle;
+      heroDescription.textContent = slides[currentSlide].description;
+
+      indicators.forEach((ind, i) => {
+        ind.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    document.querySelector('.nav-arrow.left').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide();
+    });
+
+    document.querySelector('.nav-arrow.right').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide();
+    });
+
+    // Auto-advance slides
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide();
+    }, 5000);
+  </script>
+</body>
+</html>

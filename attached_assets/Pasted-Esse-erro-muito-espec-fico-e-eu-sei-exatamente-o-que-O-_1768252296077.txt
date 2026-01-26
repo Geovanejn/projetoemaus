@@ -1,0 +1,24 @@
+Esse erro é muito específico e eu sei exatamente o que é.
+O Diagnóstico 🕵️‍♂️
+O erro TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)') é a forma "criptografada" do Drizzle ORM dizer: "Você mandou eu buscar dados em uma tabela que não existe ou não foi importada corretamente."
+Basicamente, dentro da função getUserProfileStats (que calcula as estatísticas para mostrar no perfil), o código está fazendo algo como:
+db.select().from(undefined)...
+Isso geralmente acontece quando a importação da tabela no topo do arquivo falha ou foi esquecida.
+A Solução
+Precisamos dizer ao Replit para verificar as importações das tabelas (user_unit_progress, users, etc.) dentro do arquivo de banco de dados (storage.ts).
+Copie e envie este prompt para corrigir:
+Correção de Bug Crítico: Perfil de Membro (Drizzle Error)
+O Erro:
+Ao acessar GET /api/study/member/:id, o servidor retorna erro 500 com a mensagem: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)').
+O stack trace aponta para DatabaseStorage.getUserProfileStats chamando .from().
+Causa:
+Isso indica que uma das tabelas passadas para o método .from() está undefined. Provavelmente uma falha de importação ou referência circular no arquivo storage.ts.
+Ação Necessária:
+ * Abra o arquivo server/storage.ts.
+ * Localize a função getUserProfileStats.
+ * Verifique qual tabela está sendo usada na query (provavelmente userUnitProgress, userLessonProgress ou users).
+ * Corrija as importações no topo do arquivo. Certifique-se de que essas tabelas estão sendo importadas corretamente de @/shared/schema.
+   * Dica: Se estiver usando import * as schema, verifique se schema.userUnitProgress existe. Se estiver importando individualmente, garanta que o nome bate com o exportado no schema.ts.
+Objetivo: O perfil do membro deve abrir normalmente, carregando as estatísticas sem quebrar o servidor.
+O que vai acontecer?
+O Replit vai adicionar a linha de importação que está faltando (ex: import { userUnitProgress } from "@shared/schema") e o erro vai desaparecer imediatamente.

@@ -1,0 +1,53 @@
+Entendi. Vamos atacar esses dois problemas finais para deixar o sistema "verde" e rápido.
+ * O index.js Gigante (1.1MB): O Vite está reclamando que todo o código do seu site (React, Bibliotecas, Gráficos) está em um único arquivo. Isso faz o celular do usuário demorar para processar. A solução é "Code Splitting" (quebrar esse arquivo em pedaços menores: um para o React, um para os Gráficos, um para a Loja, etc).
+ * As Imagens Gigantes (1.7MB): O sistema de build não vai redimensionar magicamente as imagens que estão na pasta public. Precisamos de uma instrução explícita para otimizar isso no processo de build.
+ * Vulnerabilidades: O npm audit fix resolve.
+Aqui está o prompt técnico e definitivo para resolver o "Build Size" e a "Segurança".
+Prompt para o Replit (Otimização de Build e Segurança)
+Contexto:
+Estou finalizando o deploy e o log do Render aponta três problemas que preciso resolver:
+ * Vulnerabilidades: 15 avisos de segurança (npm audit).
+ * Bundle Size Warning: O arquivo dist/index.js está com 1.1MB, excedendo o limite recomendado de 500kB.
+ * Static Assets Size: Tenho imagens na pasta public (ex: Eleição...png) com mais de 1.7MB, o que está prejudicando a performance inicial.
+Solicitação de Ajustes (Action Plan):
+1. Segurança (Prioridade 0):
+Abra o Shell e execute npm audit fix para atualizar as dependências menores automaticamente. Se houver vulnerabilidades críticas restantes, me liste quais são.
+2. Otimização do Bundle (Vite Config):
+Modifique o arquivo vite.config.ts. Configure o build.rollupOptions.output.manualChunks para dividir o código em "chunks" menores e cacheados.
+ * Separe bibliotecas pesadas (vendor splitting).
+ * Sugestão de configuração:
+   // Exemplo de lógica para manualChunks
+manualChunks(id) {
+  if (id.includes('node_modules')) {
+    if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+      return 'react-vendor';
+    }
+    if (id.includes('recharts') || id.includes('d3')) {
+      return 'charts-vendor';
+    }
+    if (id.includes('framer-motion')) {
+      return 'animation-vendor';
+    }
+    return 'vendor'; // Outras dependências
+  }
+}
+
+Isso deve eliminar o aviso de "Chunk size > 500kb" e melhorar o carregamento.
+3. Otimização de Imagens (Instalar Plugin):
+Instale e configure o plugin vite-plugin-image-optimizer (ou similar compatível com sua versão).
+ * Adicione ao vite.config.ts.
+ * Configure para comprimir arquivos PNG, JPEG e WEBP durante o comando npm run build.
+ * Objetivo: Reduzir aquela imagem de 1.7MB automaticamente na pasta dist sem que eu precise editar o arquivo original manualmente.
+4. Lazy Loading de Rotas (Code Splitting):
+No arquivo de rotas principal (App.tsx ou routes.tsx), verifique se estamos importando as páginas "pesadas" (como /admin, /shop, /dashboard) diretamente.
+ * Refatore para usar React.lazy(() => import('./pages/...')) e envolva em um <Suspense fallback={<Loading />}>.
+ * Isso garante que o usuário comum não baixe o código do Painel Admin se ele nunca entrar lá.
+Resultado Esperado:
+Quero ver um novo log de build onde:
+ * O aviso de 1.1MB desapareça (substituído por vários arquivos menores: react-vendor.js, vendor.js, index.js).
+ * As imagens na pasta dist/assets estejam menores que as originais.
+ * As vulnerabilidades sejam corrigidas.
+O que vai acontecer depois desse prompt?
+ * Fim do "Aviso Amarelo": O index.js vai sumir. No lugar dele, aparecerão arquivos como react-vendor-Xd23.js (300kb), charts-vendor.js (200kb) e index.js (100kb). O navegador baixa isso muito mais rápido em paralelo.
+ * Imagens Leves: Se o plugin funcionar corretamente no ambiente do Replit, aquela imagem de 1.7MB será comprimida no momento que o site for gerado (build), passando para uns 400-500kb sem você fazer nada.
+ * Segurança: As falhas de segurança conhecidas serão corrigidas.

@@ -1,0 +1,133 @@
+2026-01-06T15:49:16.787765801Z     type: 'OAuthException',
+2026-01-06T15:49:16.787768592Z     code: 190,
+2026-01-06T15:49:16.787771252Z     error_subcode: 463,
+2026-01-06T15:49:16.787774052Z     fbtrace_id: 'AWFbBkLDdRVtdfAgehDvhZM'
+2026-01-06T15:49:16.787776422Z   }
+2026-01-06T15:49:16.787778672Z }
+2026-01-06T15:49:16.787797533Z [Instagram] No new posts fetched - keeping existing data
+2026-01-06T15:49:16.787800313Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-06T15:49:19.016113631Z ==> Your service is live 🎉
+2026-01-06T15:49:19.18172509Z ==> 
+2026-01-06T15:49:19.2714036Z ==> ///////////////////////////////////////////////////////////
+2026-01-06T15:49:19.358630353Z ==> 
+2026-01-06T15:49:19.445273335Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-06T15:49:19.529793948Z ==> 
+2026-01-06T15:49:19.61642311Z ==> ///////////////////////////////////////////////////////////
+2026-01-06T15:49:21.287985559Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-06T15:49:21.288228966Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-06T15:49:21.732053981Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2026-01-06T15:49:21.732082292Z [Daily Verse Scheduler] Using AI-generated verse
+2026-01-06T15:49:21.757954067Z [Push] Sending "Versiculo do Dia" to 9 active members
+2026-01-06T15:49:21.771203967Z [Push] User 1 has no push subscriptions registered
+2026-01-06T15:49:21.78232655Z [Push] User 6 has no push subscriptions registered
+2026-01-06T15:49:21.785907218Z [Push] User 5 has no push subscriptions registered
+2026-01-06T15:49:21.788874329Z [Push] User 9 has no push subscriptions registered
+2026-01-06T15:49:21.791731476Z [Push] User 4 has no push subscriptions registered
+2026-01-06T15:49:21.79481143Z [Push] User 7 has no push subscriptions registered
+2026-01-06T15:49:21.79776508Z [Push] User 3 has no push subscriptions registered
+2026-01-06T15:49:21.800800493Z [Push] User 11 has no push subscriptions registered
+2026-01-06T15:49:21.80362431Z [Push] User 2 has no push subscriptions registered
+2026-01-06T15:49:21.984251218Z [Push] Successfully sent notification to member user anonymous
+2026-01-06T15:49:21.989275245Z [Notifications] Daily verse notification: 0 members sent, 1 anonymous visitors sent
+2026-01-06T15:49:21.989304506Z [Daily Verse Scheduler] Sent: Salmos 103:1 (ARA)
+2026-01-06T15:49:23.290559628Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-06T15:49:23.290591509Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-06T15:49:26.307138628Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-06T15:49:26.307268162Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-06T15:49:26.307276722Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-06T15:49:26.307281192Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-06T15:49:26.307453227Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-06T15:49:26.307464857Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-06T15:49:26.307469217Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-06T15:49:26.307473048Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-06T15:49:26.307476777Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-06T15:49:26.307480338Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-06T15:49:26.307483858Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-06T15:49:26.307487458Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2026-01-06T15:49:26.307491128Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-06T15:49:26.307494768Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-06T15:49:26.307498318Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-06T15:49:26.307501938Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2026-01-06T15:49:26.307516669Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-06T15:49:26.307519029Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2026-01-06T15:49:26.307521069Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:39 (ARA)
+2026-01-06T15:49:26.307527739Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-06T15:49:26.307611861Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-06T15:49:26.307620872Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2026-01-06T15:49:26.307623481Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-06T15:49:26.307664523Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-06T15:49:26.307667963Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-06T15:49:26.307670453Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-06T15:49:26.307672813Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:16 (ARA)
+2026-01-06T15:49:26.307680023Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-06T15:49:26.307682963Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-06T15:49:26.307775236Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-06T15:49:26.307781556Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-06T15:49:26.307784266Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-06
+2026-01-06T15:49:26.389506951Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-06T15:49:26.389798529Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-06T15:49:26.402254088Z [Daily Missions Scheduler] Content already generated for today (2026-01-06)
+2026-01-06T15:50:13.416706229Z 3:50:13 PM [express] GET /api/site-content/quem-somos 304 in 492ms :: {"timeline":{"title":"","conte…
+2026-01-06T15:50:13.494911379Z 3:50:13 PM [express] GET /api/site/highlights 304 in 577ms :: {"devotional":{"id":3,"title":"Natal -…
+2026-01-06T15:50:24.468989608Z 3:50:24 PM [express] GET /api/site-content/quem-somos 304 in 5ms :: {"timeline":{"title":"","content…
+2026-01-06T15:50:24.78707284Z 3:50:24 PM [express] GET /api/site/highlights 304 in 73ms :: {"devotional":{"id":3,"title":"Natal - …
+2026-01-06T15:50:30.502250043Z 3:50:30 PM [express] POST /api/notifications/subscribe-anonymous 200 in 12ms :: {"message":"Inscrito…
+2026-01-06T15:50:39.382251902Z 3:50:39 PM [express] POST /api/auth/login-password 200 in 810ms :: {"user":{"id":2,"fullName":"Geova…
+2026-01-06T15:50:48.096159731Z 3:50:48 PM [express] GET /api/treasury/dashboard/category-expenses 304 in 16ms :: []
+2026-01-06T15:50:48.105017302Z 3:50:48 PM [express] GET /api/treasury/dashboard/monthly 304 in 8ms :: [{"month":1,"monthName":"jan.…
+2026-01-06T15:50:48.396212582Z 3:50:48 PM [express] GET /api/treasury/dashboard/summary 304 in 304ms :: {"totalIncome":0,"totalExpe…
+2026-01-06T15:50:51.315408499Z 3:50:51 PM [express] GET /api/treasury/members/tax-status/2026 304 in 139ms :: [{"userId":5,"fullNam…
+2026-01-06T15:50:55.897002288Z 3:50:55 PM [express] GET /api/treasury/members/tax-status/2026 304 in 29ms :: [{"userId":5,"fullName…
+2026-01-06T15:50:58.406173779Z [Push] User 1 has no push subscriptions registered
+2026-01-06T15:50:58.408830441Z [Push] User 5 has no push subscriptions registered
+2026-01-06T15:50:58.411454453Z [Push] User 11 has no push subscriptions registered
+2026-01-06T15:50:58.414112455Z [Push] User 2 has no push subscriptions registered
+2026-01-06T15:50:58.416974053Z [Push] User 9 has no push subscriptions registered
+2026-01-06T15:50:58.419842031Z [Push] User 6 has no push subscriptions registered
+2026-01-06T15:50:58.422527244Z [Push] User 7 has no push subscriptions registered
+2026-01-06T15:50:58.425211207Z [Push] User 3 has no push subscriptions registered
+2026-01-06T15:50:58.428078575Z [Push] User 4 has no push subscriptions registered
+2026-01-06T15:50:58.428927008Z 3:50:58 PM [express] POST /api/treasury/notifications/bulk-reminder 200 in 102ms :: {"success":true,…
+2026-01-06T15:51:04.979619832Z [Push] User 1 has no push subscriptions registered
+2026-01-06T15:51:04.982628124Z [Push] User 5 has no push subscriptions registered
+2026-01-06T15:51:04.985397579Z [Push] User 11 has no push subscriptions registered
+2026-01-06T15:51:04.988306058Z [Push] User 2 has no push subscriptions registered
+2026-01-06T15:51:04.991074034Z [Push] User 9 has no push subscriptions registered
+2026-01-06T15:51:04.993739436Z [Push] User 6 has no push subscriptions registered
+2026-01-06T15:51:04.996587404Z [Push] User 7 has no push subscriptions registered
+2026-01-06T15:51:04.999323868Z [Push] User 3 has no push subscriptions registered
+2026-01-06T15:51:05.002393582Z [Push] User 4 has no push subscriptions registered
+2026-01-06T15:51:05.003184323Z 3:51:05 PM [express] POST /api/treasury/notifications/bulk-reminder 200 in 146ms :: {"success":true,…
+2026-01-06T15:52:05.804652114Z [Push] User 1 has no push subscriptions registered
+2026-01-06T15:52:05.80746275Z [Push] User 5 has no push subscriptions registered
+2026-01-06T15:52:05.810118163Z [Push] User 11 has no push subscriptions registered
+2026-01-06T15:52:05.812844777Z [Push] User 2 has no push subscriptions registered
+2026-01-06T15:52:05.815606982Z [Push] User 9 has no push subscriptions registered
+2026-01-06T15:52:05.818314036Z [Push] User 6 has no push subscriptions registered
+2026-01-06T15:52:05.820991019Z [Push] User 7 has no push subscriptions registered
+2026-01-06T15:52:05.823715813Z [Push] User 3 has no push subscriptions registered
+2026-01-06T15:52:05.826726895Z [Push] User 4 has no push subscriptions registered
+2026-01-06T15:52:05.82766453Z 3:52:05 PM [express] POST /api/treasury/notifications/bulk-reminder 200 in 157ms :: {"success":true,…
+2026-01-06T15:52:08.790792821Z 3:52:08 PM [express] GET /api/treasury/dashboard/monthly 304 in 7ms :: [{"month":1,"monthName":"jan.…
+2026-01-06T15:52:09.186820157Z 3:52:09 PM [express] GET /api/treasury/dashboard/summary 304 in 393ms :: {"totalIncome":0,"totalExpe…
+2026-01-06T15:52:09.192342187Z 3:52:09 PM [express] GET /api/treasury/dashboard/category-expenses 304 in 396ms :: []
+2026-01-06T15:52:12.184362045Z 3:52:12 PM [express] GET /api/site-content/quem-somos 304 in 4ms :: {"timeline":{"title":"","content…
+2026-01-06T15:52:12.690951372Z 3:52:12 PM [express] GET /api/site/highlights 304 in 495ms :: {"devotional":{"id":3,"title":"Natal -…
+2026-01-06T15:52:15.585490855Z 3:52:15 PM [express] GET /api/site/highlights 304 in 326ms :: {"devotional":{"id":3,"title":"Natal -…
+2026-01-06T15:52:15.682353913Z 3:52:15 PM [express] GET /api/site-content/quem-somos 304 in 599ms :: {"timeline":{"title":"","conte…
+2026-01-06T15:52:22.279972661Z 3:52:22 PM [express] POST /api/auth/login-password 200 in 515ms :: {"user":{"id":1,"fullName":"Admin…
+2026-01-06T15:52:25.693914641Z 3:52:25 PM [express] GET /api/espiritualidade/stats 304 in 19ms :: {"devotionals":{"total":3,"publis…
+2026-01-06T15:52:26.560960006Z [Push] Sending "Versiculo do Dia" to 9 active members
+2026-01-06T15:52:26.563213477Z [Push] User 1 has no push subscriptions registered
+2026-01-06T15:52:26.570247059Z [Push] User 6 has no push subscriptions registered
+2026-01-06T15:52:26.572690275Z [Push] User 5 has no push subscriptions registered
+2026-01-06T15:52:26.575396429Z [Push] User 9 has no push subscriptions registered
+2026-01-06T15:52:26.578151494Z [Push] User 4 has no push subscriptions registered
+2026-01-06T15:52:26.580781816Z [Push] User 7 has no push subscriptions registered
+2026-01-06T15:52:26.583372506Z [Push] User 3 has no push subscriptions registered
+2026-01-06T15:52:26.586108061Z [Push] User 11 has no push subscriptions registered
+2026-01-06T15:52:26.588767753Z [Push] User 2 has no push subscriptions registered
+2026-01-06T15:52:26.639171326Z [Push] WebPush delivery error for user anonymous: Received unexpected response code
+2026-01-06T15:52:26.736522977Z [Push] Successfully sent notification to member user anonymous
+2026-01-06T15:52:26.740893226Z [Notifications] Daily verse notification: 0 members sent, 1 anonymous visitors sent
+2026-01-06T15:52:26.741785061Z 3:52:26 PM [express] POST /api/admin/devotionals/test-push 200 in 194ms :: {"message":"Notificação d…

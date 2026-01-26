@@ -1,0 +1,51 @@
+Esta é uma análise técnica profunda. Vamos sair do nível "básico" de otimização (infraestrutura) e entrar no nível avançado (Código, SQL Query Tuning e Estratégia de Dados).
+Os tempos de 464ms (bulk) e 394ms (current-lesson) não são ruins para uma aplicação web comum, mas para um PWA que queremos que pareça "nativo", eles são os últimos gargalos a eliminar.
+O Diagnóstico Técnico (Por que ainda demora?)
+ * current-lesson (394ms): O Problema da Lógica no Código vs. Banco
+   * Provável Causa: O código atual deve estar buscando todas as lições do usuário e depois usando um for/filter (Javascript) para descobrir qual é a última parada.
+   * O Erro: Isso transfere dados inúteis do banco para o servidor.
+   * A Solução: O banco (Postgres) deve decidir isso. Precisamos de uma query precisa: SELECT * FROM lessons WHERE user_id = X AND completed = false ORDER BY updated_at DESC LIMIT 1. Isso roda em 10ms.
+ * weeks/bulk (464ms): O Problema do Payload (Tamanho do JSON)
+   * Provável Causa: Essa rota está trazendo "tudo e a pia da cozinha". Provavelmente está trazendo o texto das lições, descrições longas, URLs de vídeo, etc.
+   * O Erro: O navegador só precisa saber: ID, Título, Status (bloqueado/desbloqueado) e Progresso.
+   * A Solução (Projection): Usar o select do Prisma para cortar a gordura. Se o JSON diminuir de 500KB para 50KB, o tempo cai drasticamente. E ativar Gzip/Compression.
+ * Falta de Índices (Database Indexing)
+   * Agora que temos muitos dados relacionais, o Postgres precisa de índices nas colunas userId, weekId, isCompleted. Sem isso, ele faz "Sequential Scan" (lê a tabela toda).
+O Prompt Robusto para o Replit
+Copie e cole este prompt. Ele é altamente técnico e instrui o Replit a reescrever as queries do Prisma e aplicar compressão.
+Contexto Avançado de Performance:
+Otimizamos a infraestrutura (Virginia/Pooling) e alcançamos 20ms em rotas de escrita. Porém, as rotas de leitura pesada (GET) ainda estão sub-otimizadas.
+ * GET /api/study/weeks/bulk: 464ms (Provável Over-fetching de dados).
+ * GET /api/study/current-lesson: 394ms (Provável processamento em memória/Node em vez de SQL).
+Objetivo: Reduzir ambos para < 100ms.
+Solicitação de Refatoração Técnica:
+1. Otimização Crítica de getCurrentLesson (Prisma Query Tuning):
+Atualmente, essa rota parece lenta. Por favor, substitua a lógica atual por uma consulta otimizada usando findFirst.
+ * Regra: Não carregue o histórico todo do usuário.
+ * Query Sugerida: Busque diretamente a última lição interagida ou a primeira não completada.
+   // Exemplo do que eu quero:
+const lastActive = await prisma.lessonProgress.findFirst({
+  where: { userId, completed: false },
+  orderBy: { updatedAt: 'desc' },
+  include: { lesson: { select: { id: true, title: true, lessonNumber: true, weekId: true } } }
+});
+
+ * Verifique se estamos calculando progresso iterando arrays. Se sim, mova essa contagem para o Prisma (_count).
+2. Otimização de Payload em getWeeksBulk (Data Projection):
+A rota /bulk está lenta (464ms) provavelmente devido ao tamanho do JSON.
+ * Ação: Refatore a query do Prisma para usar select.
+ * Remova: Campos pesados como content, videoUrl, description ou markdown desta listagem. O frontend na Home só precisa de: id, title, weekNumber, isLocked e a % de progresso.
+ * Os detalhes pesados devem ser carregados apenas na rota de detalhe (/weeks/:id).
+3. Database Indexing (Performance SQL):
+Analise o schema.prisma e adicione índices (@@index) nas colunas que usamos para filtro frequente, especificamente:
+ * LessonProgress: [userId, completed] e [updatedAt].
+ * UnitProgress: [userId, unitId].
+ * Missions: [userId, date].
+4. Compressão HTTP:
+Verifique se o servidor Express está usando o middleware compression (gzip/brotli). Se não estiver, instale e configure para reduzir o tamanho da resposta JSON da rota /bulk.
+Por favor, aplique essas 4 camadas de otimização e gere o código atualizado.
+O que esperar depois disso:
+ * Redução de Dados: A rota /bulk deve cair pela metade do tempo se o JSON ficar menor.
+ * Lógica Instantânea: A rota current-lesson deve cair para a casa dos 50ms, pois vai parar de processar arrays e usar o poder do banco.
+ * Segurança de Escala: Os índices (item 3) garantem que, mesmo quando você tiver 10 mil usuários, o sistema não fique lento.
+Pode enviar! Estou aqui para analisar o próximo log.

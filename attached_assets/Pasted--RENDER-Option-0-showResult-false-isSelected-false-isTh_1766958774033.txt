@@ -1,0 +1,125 @@
+[RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=true, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=true, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=true, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:102 [DEBUG checkAnswer] Question: {type: 'true_false', correctIndex: undefined, correctAnswer: false, selectedAnswer: 0, options: Array(2)}
+RespondaScreen.tsx:138 [DEBUG checkAnswer] Final isCorrect: true
+RespondaScreen.tsx:139 [DEBUG] BEFORE update - correctCount state: 0 ref: 0
+RespondaScreen.tsx:152 [DEBUG] Incremented correctCountRef to: 1
+RespondaScreen.tsx:156 [DEBUG] Calling flushSync to update showResult=true
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=true, isSelected=true, isThisOptionCorrect=true, showCorrect=true, showIncorrect=false
+RespondaScreen.tsx:164 [DEBUG] AFTER flushSync - showResult should be true, correctCount: 1
+RespondaScreen.tsx:175 [DEBUG] Scheduling auto-advance. finalCorrectCount: 1 isLastQuestion: false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:178 [DEBUG] Auto-advance executing! correctCountRef.current: 1
+RespondaScreen.tsx:183 [DEBUG] Moving to question 1
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=true, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:102 [DEBUG checkAnswer] Question: {type: 'multiple_choice', correctIndex: 2, correctAnswer: undefined, selectedAnswer: 2, options: Array(4)}
+RespondaScreen.tsx:114 [DEBUG] multiple_choice using correctIndex: 2 selected: 2 isCorrect: true
+RespondaScreen.tsx:138 [DEBUG checkAnswer] Final isCorrect: true
+RespondaScreen.tsx:139 [DEBUG] BEFORE update - correctCount state: 1 ref: 1
+RespondaScreen.tsx:152 [DEBUG] Incremented correctCountRef to: 2
+RespondaScreen.tsx:156 [DEBUG] Calling flushSync to update showResult=true
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=true, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=true, isSelected=true, isThisOptionCorrect=true, showCorrect=true, showIncorrect=false
+RespondaScreen.tsx:164 [DEBUG] AFTER flushSync - showResult should be true, correctCount: 2
+RespondaScreen.tsx:175 [DEBUG] Scheduling auto-advance. finalCorrectCount: 2 isLastQuestion: false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:178 [DEBUG] Auto-advance executing! correctCountRef.current: 2
+RespondaScreen.tsx:183 [DEBUG] Moving to question 2
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=true, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:102 [DEBUG checkAnswer] Question: {type: 'multiple_choice', correctIndex: 2, correctAnswer: undefined, selectedAnswer: 2, options: Array(4)}
+RespondaScreen.tsx:114 [DEBUG] multiple_choice using correctIndex: 2 selected: 2 isCorrect: true
+RespondaScreen.tsx:138 [DEBUG checkAnswer] Final isCorrect: true
+RespondaScreen.tsx:139 [DEBUG] BEFORE update - correctCount state: 2 ref: 2
+RespondaScreen.tsx:152 [DEBUG] Incremented correctCountRef to: 3
+RespondaScreen.tsx:156 [DEBUG] Calling flushSync to update showResult=true
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=true, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=true, isSelected=true, isThisOptionCorrect=true, showCorrect=true, showIncorrect=false
+RespondaScreen.tsx:164 [DEBUG] AFTER flushSync - showResult should be true, correctCount: 3
+RespondaScreen.tsx:175 [DEBUG] Scheduling auto-advance. finalCorrectCount: 3 isLastQuestion: false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 2: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:178 [DEBUG] Auto-advance executing! correctCountRef.current: 3
+RespondaScreen.tsx:183 [DEBUG] Moving to question 3
+3RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=true, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:102 [DEBUG checkAnswer] Question: {type: 'fill_blank', correctIndex: 0, correctAnswer: 'delícias', selectedAnswer: 0, options: Array(4)}
+RespondaScreen.tsx:138 [DEBUG checkAnswer] Final isCorrect: true
+RespondaScreen.tsx:139 [DEBUG] BEFORE update - correctCount state: 3 ref: 3
+RespondaScreen.tsx:152 [DEBUG] Incremented correctCountRef to: 4
+RespondaScreen.tsx:156 [DEBUG] Calling flushSync to update showResult=true
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=true, isSelected=true, isThisOptionCorrect=true, showCorrect=true, showIncorrect=false
+RespondaScreen.tsx:164 [DEBUG] AFTER flushSync - showResult should be true, correctCount: 4
+RespondaScreen.tsx:175 [DEBUG] Scheduling auto-advance. finalCorrectCount: 4 isLastQuestion: false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:178 [DEBUG] Auto-advance executing! correctCountRef.current: 4
+RespondaScreen.tsx:183 [DEBUG] Moving to question 4
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=true, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:102 [DEBUG checkAnswer] Question: {type: 'multiple_choice', correctIndex: 1, correctAnswer: undefined, selectedAnswer: 1, options: Array(4)}
+RespondaScreen.tsx:114 [DEBUG] multiple_choice using correctIndex: 1 selected: 1 isCorrect: true
+RespondaScreen.tsx:138 [DEBUG checkAnswer] Final isCorrect: true
+RespondaScreen.tsx:139 [DEBUG] BEFORE update - correctCount state: 4 ref: 4
+RespondaScreen.tsx:152 [DEBUG] Incremented correctCountRef to: 5
+RespondaScreen.tsx:156 [DEBUG] Calling flushSync to update showResult=true
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=true, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=true, isSelected=true, isThisOptionCorrect=true, showCorrect=true, showIncorrect=false
+RespondaScreen.tsx:164 [DEBUG] AFTER flushSync - showResult should be true, correctCount: 5
+RespondaScreen.tsx:175 [DEBUG] Scheduling auto-advance. finalCorrectCount: 5 isLastQuestion: true
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:178 [DEBUG] Auto-advance executing! correctCountRef.current: 5
+RespondaScreen.tsx:180 [DEBUG] Calling onComplete with: 5 of 5
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+chunk-QAXXHTCN.js?v=7a090f2f:339 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+(anonymous) @ chunk-QAXXHTCN.js?v=7a090f2f:339
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=7a090f2f:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=7a090f2f:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=7a090f2f:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=7a090f2f:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=7a090f2f:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=7a090f2f:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=7a090f2f:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=7a090f2f:19416
+commitRoot @ chunk-RPCDYKBN.js?v=7a090f2f:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=7a090f2f:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=7a090f2f:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=7a090f2f:19432
+commitRoot @ chunk-RPCDYKBN.js?v=7a090f2f:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=7a090f2f:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=7a090f2f:18718
+workLoop @ chunk-RPCDYKBN.js?v=7a090f2f:197
+flushWork @ chunk-RPCDYKBN.js?v=7a090f2f:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=7a090f2f:384Understand this warning
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false
+event-lesson.tsx:537 [Event Lesson Debug] True/False: "A alegria cristã é um sentimento que dep..." {qIsTrue: false, contentIsTrue: false, qCorrectAnswer: false, contentCorrectAnswer: false, finalCorrectAnswer: false}
+RespondaScreen.tsx:353 [RENDER] Option 0: showResult=false, isSelected=false, isThisOptionCorrect=false, showCorrect=false, showIncorrect=false
+RespondaScreen.tsx:353 [RENDER] Option 1: showResult=false, isSelected=false, isThisOptionCorrect=true, showCorrect=false, showIncorrect=false

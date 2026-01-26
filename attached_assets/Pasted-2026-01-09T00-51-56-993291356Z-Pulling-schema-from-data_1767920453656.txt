@@ -1,0 +1,100 @@
+2026-01-09T00:51:56.993291356Z [⣽] Pulling schema from database...
+2026-01-09T00:51:57.12194307Z [⣷] Pulling schema from database...
+2026-01-09T00:51:57.249395644Z [⣯] Pulling schema from database...
+2026-01-09T00:51:57.378119309Z [⣟] Pulling schema from database...
+2026-01-09T00:51:57.507085451Z [⡿] Pulling schema from database...
+2026-01-09T00:51:57.6355315Z [⢿] Pulling schema from database...
+2026-01-09T00:51:57.763401384Z [⣻] Pulling schema from database...
+2026-01-09T00:51:57.891682059Z [⣽] Pulling schema from database...
+2026-01-09T00:51:58.019756788Z [⣷] Pulling schema from database...
+2026-01-09T00:51:58.148051123Z [⣯] Pulling schema from database...
+2026-01-09T00:51:58.276359378Z [⣟] Pulling schema from database...
+2026-01-09T00:51:58.404285974Z [⡿] Pulling schema from database...
+2026-01-09T00:51:58.532753803Z [⢿] Pulling schema from database...
+2026-01-09T00:51:58.660371851Z [⣻] Pulling schema from database...
+2026-01-09T00:51:58.788176334Z [⣽] Pulling schema from database...
+2026-01-09T00:51:58.916787057Z [⣷] Pulling schema from database...
+2026-01-09T00:51:59.04460907Z [⣯] Pulling schema from database...
+2026-01-09T00:51:59.172137466Z [⣟] Pulling schema from database...
+2026-01-09T00:51:59.274726159Z [✓] Pulling schema from database...
+2026-01-09T00:51:59.398444969Z [✓] Changes applied
+2026-01-09T00:52:32.264019066Z ==> Uploading build...
+2026-01-09T00:53:15.154032801Z ==> Uploaded in 35.0s. Compression took 7.9s
+2026-01-09T00:53:15.451332187Z ==> Build successful 🎉
+2026-01-09T00:53:35.123591588Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-01-09T00:53:35.189592685Z ==> Deploying...
+2026-01-09T00:54:16.280189437Z ==> Running 'node ./dist/index.js'
+2026-01-09T00:54:35.962314974Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2026-01-09T00:54:35.962728298Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2026-01-09T00:54:35.963602019Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-09T00:54:35.963682112Z [MercadoPago] Client initialized successfully
+2026-01-09T00:54:35.964120558Z [Push] Web Push configured successfully
+2026-01-09T00:54:36.257305433Z [WebSocket] Server initialized
+2026-01-09T00:54:36.360875901Z 12:54:36 AM [express] serving on port 10000
+2026-01-09T00:54:36.361168831Z Initializing PostgreSQL database connection...
+2026-01-09T00:54:37.573398841Z PostgreSQL connection successful: 2026-01-09T00:54:37.570Z
+2026-01-09T00:54:37.603691848Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2026-01-09T00:54:37.603713059Z Database initialized successfully!
+2026-01-09T00:54:37.86868934Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2026-01-09T00:54:37.871309193Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2026-01-09T00:54:37.873701637Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-09T00:54:37.958006076Z [Daily Verse Scheduler] Initialized - will run daily at 07:00 (America/Sao_Paulo)
+2026-01-09T00:54:37.960362449Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-09T00:54:37.962630759Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2026-01-09T00:54:37.962694681Z [Instagram Scheduler] Running sync...
+2026-01-09T00:54:37.962895518Z [Instagram] Starting sync...
+2026-01-09T00:54:38.057429657Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.062129923Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2026-01-09T00:54:38.065009574Z [Event Scheduler] Lesson release initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.068268279Z [Event Scheduler] Card distribution initialized - will run daily at 23:59 (America/Sao_Paulo)
+2026-01-09T00:54:38.158377212Z [Event Deadline Scheduler] Initialized - will run every hour at :00 (America/Sao_Paulo) with database persistence
+2026-01-09T00:54:38.161798323Z [Marketing Reminder Scheduler] Initialized - will run every hour at :30 (America/Sao_Paulo) with database persistence
+2026-01-09T00:54:38.165922808Z [Treasury Scheduler] Day 5 reminder initialized - will run on day 5 of each month at 08:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.169648989Z [Treasury Scheduler] 5th business day reminder initialized - will run on weekdays at 08:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.258390424Z [Shop Scheduler] Abandoned cart reminder initialized - will run every hour (America/Sao_Paulo) with auto-cancel after 48h
+2026-01-09T00:54:38.261846016Z [Treasury Scheduler] Loan installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.26452136Z [Shop Scheduler] Shop installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.267116752Z [Event Fee Scheduler] Event fee reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.356775409Z [Treasury Scheduler] Year rollover initialized - will run on Jan 1st at 00:05 (America/Sao_Paulo)
+2026-01-09T00:54:38.360652386Z [Treasury Scheduler] Monthly summary initialized - will run on day 1 of each month at 08:00 (America/Sao_Paulo)
+2026-01-09T00:54:38.360850803Z 12:54:38 AM [express] Database and schedulers initialized successfully
+2026-01-09T00:54:38.507038301Z [Instagram] API error: 400 {
+2026-01-09T00:54:38.507058512Z   error: {
+2026-01-09T00:54:38.507061612Z     message: 'Error validating access token: Session has expired on Monday, 29-Dec-25 10:00:00 PST. The current time is Thursday, 08-Jan-26 16:54:38 PST.',
+2026-01-09T00:54:38.507064832Z     type: 'OAuthException',
+2026-01-09T00:54:38.507066742Z     code: 190,
+2026-01-09T00:54:38.507069012Z     error_subcode: 463,
+2026-01-09T00:54:38.507071392Z     fbtrace_id: 'AGNgI_lqZDMGDBzKnbpHEyA'
+2026-01-09T00:54:38.507073772Z   }
+2026-01-09T00:54:38.507076332Z }
+2026-01-09T00:54:38.55641738Z [Instagram] No new posts fetched - keeping existing data
+2026-01-09T00:54:38.556510963Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-09T00:54:42.958987282Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-09T00:54:42.959017203Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-09T00:54:43.39992519Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2026-01-09T00:54:43.399981503Z [Daily Verse Scheduler] Using AI-generated verse
+2026-01-09T00:54:43.426921231Z [Push] Sending "Versículo do Dia" to 9 active members
+2026-01-09T00:54:43.43313698Z [Push] User 1 has no push subscriptions registered
+2026-01-09T00:54:43.435777923Z [Push] User 6 has no push subscriptions registered
+2026-01-09T00:54:43.458937439Z [Push] User 5 has no push subscriptions registered
+2026-01-09T00:54:43.462228295Z [Push] User 9 has no push subscriptions registered
+2026-01-09T00:54:43.465168898Z [Push] User 4 has no push subscriptions registered
+2026-01-09T00:54:43.467621154Z [Push] User 7 has no push subscriptions registered
+2026-01-09T00:54:43.470501856Z [Push] User 3 has no push subscriptions registered
+2026-01-09T00:54:43.472926172Z [Push] User 11 has no push subscriptions registered
+2026-01-09T00:54:43.475286504Z [Push] User 2 has no push subscriptions registered
+2026-01-09T00:54:43.482373744Z [Notifications] Daily verse notification: 0 members sent, 0 anonymous visitors sent
+2026-01-09T00:54:43.482384445Z [Daily Verse Scheduler] Sent: Salmos 139:14 (ARA)
+2026-01-09T00:54:44.960935864Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-09T00:54:44.961189303Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-09T00:54:44.967241496Z [Recovery Verses Scheduler] Verses already generated for today (recovery-2026-01-08)
+2026-01-09T00:54:46.039388147Z ==> Your service is live 🎉
+2026-01-09T00:54:46.168868399Z ==> 
+2026-01-09T00:54:46.253971498Z ==> ///////////////////////////////////////////////////////////
+2026-01-09T00:54:46.342117456Z ==> 
+2026-01-09T00:54:46.427710394Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-09T00:54:46.514767893Z ==> 
+2026-01-09T00:54:46.60161349Z ==> ///////////////////////////////////////////////////////////
+2026-01-09T00:54:48.058243159Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-09T00:54:48.058437356Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-09T00:54:48.06875652Z [Daily Missions Scheduler] Content already generated for today (2026-01-09)

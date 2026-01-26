@@ -1,0 +1,100 @@
+2025-12-22T23:25:58.769056868Z ==> Deploying...
+2025-12-22T23:26:59.564250939Z ==> Your service is live 🎉
+2025-12-22T23:26:59.597142988Z ==> 
+2025-12-22T23:26:59.629283616Z ==> ///////////////////////////////////////////////////////////
+2025-12-22T23:26:59.661244235Z ==> 
+2025-12-22T23:26:59.694991773Z ==> Available at your primary URL https://umpemaus.onrender.com
+2025-12-22T23:26:59.725612411Z ==> 
+2025-12-22T23:26:59.75660536Z ==> ///////////////////////////////////////////////////////////
+2025-12-22T23:27:15.71792055Z [Daily Missions Scheduler] Missions already generated for today (2025-12-22)
+2025-12-22T23:29:42.499617556Z 11:29:42 PM [express] GET /api/site-content/quem-somos 304 in 567ms :: {}
+2025-12-22T23:29:42.505057691Z 11:29:42 PM [express] GET /api/notifications/unread-count 304 in 580ms :: {"count":3}
+2025-12-22T23:29:42.505083162Z 11:29:42 PM [express] GET /api/site/highlights 304 in 577ms :: {"devotional":null,"events":[],"instag…
+2025-12-22T23:29:42.903963983Z 11:29:42 PM [express] GET /api/notifications 304 in 566ms :: {"notifications":[{"id":4,"userId":1,"ty…
+2025-12-22T23:30:21.743613319Z 11:30:21 PM [express] POST /api/auth/login-password 200 in 1113ms :: {"user":{"id":1,"fullName":"Admi…
+2025-12-22T23:30:53.34395295Z 11:30:53 PM [express] GET /api/study/ranking 200 in 2ms
+2025-12-22T23:30:54.000258958Z 11:30:53 PM [express] GET /api/study/admin/stats 304 in 662ms :: {"totalWeeks":0,"totalLessons":2,"to…
+2025-12-22T23:30:54.621539595Z 11:30:54 PM [express] GET /api/study/ranking 304 in 1ms
+2025-12-22T23:30:59.506754406Z Get study users error: TypeError: Cannot convert undefined or null to object
+2025-12-22T23:30:59.506801359Z     at Function.entries (<anonymous>)
+2025-12-22T23:30:59.506807409Z     at orderSelectedFields (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:53:17)
+2025-12-22T23:30:59.506813429Z     at file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:63:22
+2025-12-22T23:30:59.50681728Z     at Array.reduce (<anonymous>)
+2025-12-22T23:30:59.50682006Z     at orderSelectedFields (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:53:33)
+2025-12-22T23:30:59.50682307Z     at file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:684:26
+2025-12-22T23:30:59.50682593Z     at Object.startActiveSpan (file:///opt/render/project/src/node_modules/drizzle-orm/tracing.js:8:14)
+2025-12-22T23:30:59.506829141Z     at PgSelectBase._prepare (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:683:19)
+2025-12-22T23:30:59.506831851Z     at file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:708:19
+2025-12-22T23:30:59.506834561Z     at Object.startActiveSpan (file:///opt/render/project/src/node_modules/drizzle-orm/tracing.js:8:14)
+2025-12-22T23:30:59.507595219Z 11:30:59 PM [express] GET /api/study/admin/users 500 in 4ms :: {"message":"Erro ao buscar usuários"}
+2025-12-22T23:31:01.007570904Z Get study users error: TypeError: Cannot convert undefined or null to object
+2025-12-22T23:31:01.007600015Z     at Function.entries (<anonymous>)
+2025-12-22T23:31:01.007606276Z     at orderSelectedFields (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:53:17)
+2025-12-22T23:31:01.007609986Z     at file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:63:22
+2025-12-22T23:31:01.007613476Z     at Array.reduce (<anonymous>)
+2025-12-22T23:31:01.007617047Z     at orderSelectedFields (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:53:33)
+2025-12-22T23:31:01.007620417Z     at file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:684:26
+2025-12-22T23:31:01.007623777Z     at Object.startActiveSpan (file:///opt/render/project/src/node_modules/drizzle-orm/tracing.js:8:14)
+2025-12-22T23:31:01.007627887Z     at PgSelectBase._prepare (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:683:19)
+2025-12-22T23:31:01.007631277Z     at file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:708:19
+2025-12-22T23:31:01.007634838Z     at Object.startActiveSpan (file:///opt/render/project/src/node_modules/drizzle-orm/tracing.js:8:14)
+2025-12-22T23:31:01.008218534Z 11:31:01 PM [express] GET /api/study/admin/users 500 in 1ms :: {"message":"Erro ao buscar usuários"}
+2025-12-22T23:31:05.309778141Z 11:31:05 PM [express] GET /api/study/admin/weeks 304 in 67ms :: []
+2025-12-22T23:31:12.726366988Z 11:31:12 PM [express] GET /api/study/admin/seasons 304 in 69ms :: [{"id":3,"title":"Não Jogue Sua Vid…
+2025-12-22T23:31:16.152220695Z 11:31:16 PM [express] DELETE /api/study/admin/seasons/1 200 in 278ms :: {"message":"Temporada removid…
+2025-12-22T23:31:16.538873448Z 11:31:16 PM [express] GET /api/study/admin/seasons 200 in 67ms :: [{"id":3,"title":"Não Jogue Sua Vid…
+2025-12-22T23:32:07.817660547Z ==> Detected service running on port 10000
+2025-12-22T23:32:07.898580963Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-12-22T23:32:13.18599256Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2025-12-22T23:32:56.429434634Z [AI] Sucesso com modelo gemini-3-flash-preview
+2025-12-22T23:32:58.930805246Z [Week Creation] Generating practice questions for week 1...
+2025-12-22T23:32:59.329944898Z [AI] Tentativa 1/3 com modelo gemini-3-flash-preview
+2025-12-22T23:33:22.131223581Z [AI] Sucesso com modelo gemini-3-flash-preview
+2025-12-22T23:33:22.801426474Z [Week Creation] Practice questions generated successfully for week 1
+2025-12-22T23:33:22.802170241Z 11:33:22 PM [express] POST /api/ai/create-week-with-content 200 in 70093ms :: {"message":"Semana cria…
+2025-12-22T23:33:23.164479718Z 11:33:23 PM [express] GET /api/study/admin/weeks 200 in 68ms :: [{"id":1,"weekNumber":1,"year":2025,"…
+2025-12-22T23:33:49.146895422Z 11:33:49 PM [express] POST /api/study/admin/weeks/1/publish 200 in 69ms :: {"id":1,"weekNumber":1,"ye…
+2025-12-22T23:33:49.513165019Z 11:33:49 PM [express] GET /api/study/admin/weeks 200 in 68ms :: [{"id":1,"weekNumber":1,"year":2025,"…
+2025-12-22T23:33:54.268417411Z Get study users error: TypeError: Cannot convert undefined or null to object
+2025-12-22T23:33:54.268443572Z     at Function.entries (<anonymous>)
+2025-12-22T23:33:54.268448573Z     at orderSelectedFields (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:53:17)
+2025-12-22T23:33:54.268452453Z     at file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:63:22
+2025-12-22T23:33:54.268456263Z     at Array.reduce (<anonymous>)
+2025-12-22T23:33:54.268460273Z     at orderSelectedFields (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:53:33)
+2025-12-22T23:33:54.268464424Z     at file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:684:26
+2025-12-22T23:33:54.268468454Z     at Object.startActiveSpan (file:///opt/render/project/src/node_modules/drizzle-orm/tracing.js:8:14)
+2025-12-22T23:33:54.268474014Z     at PgSelectBase._prepare (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:683:19)
+2025-12-22T23:33:54.268478555Z     at file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:708:19
+2025-12-22T23:33:54.268482755Z     at Object.startActiveSpan (file:///opt/render/project/src/node_modules/drizzle-orm/tracing.js:8:14)
+2025-12-22T23:33:54.268530778Z 11:33:54 PM [express] GET /api/study/admin/users 500 in 3ms :: {"message":"Erro ao buscar usuários"}
+2025-12-22T23:33:54.457362577Z 11:33:54 PM [express] GET /api/study/ranking 304 in 0ms
+2025-12-22T23:34:04.327415977Z 11:34:04 PM [express] GET /api/study/profile 304 in 454ms :: {"id":1,"userId":1,"totalXp":1245,"curre…
+2025-12-22T23:34:04.461528058Z 11:34:04 PM [express] GET /api/missions/daily 304 in 590ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:34:04.772214572Z 11:34:04 PM [express] GET /api/study/leaderboard 304 in 903ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:34:04.799761527Z 11:34:04 PM [express] GET /api/study/weeks 200 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:34:05.379626283Z 11:34:05 PM [express] GET /api/study/weeks/1 200 in 326ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:34:05.380353349Z 11:34:05 PM [express] GET /api/study/practice/1/status 200 in 325ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:34:18.921549951Z 11:34:18 PM [express] GET /api/study/profile 304 in 68ms :: {"id":1,"userId":1,"totalXp":1245,"curren…
+2025-12-22T23:34:19.006235759Z 11:34:19 PM [express] GET /api/missions/daily 304 in 195ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:34:19.28564582Z 11:34:19 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:34:19.344704103Z 11:34:19 PM [express] GET /api/study/leaderboard 304 in 513ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:34:19.966302374Z 11:34:19 PM [express] GET /api/study/weeks/1 304 in 327ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:34:19.986219106Z 11:34:19 PM [express] GET /api/study/practice/1/status 304 in 323ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:34:31.414145277Z 11:34:31 PM [express] GET /api/study/profile 304 in 68ms :: {"id":1,"userId":1,"totalXp":1245,"curren…
+2025-12-22T23:34:31.562254055Z 11:34:31 PM [express] GET /api/missions/daily 304 in 208ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:34:31.731480762Z 11:34:31 PM [express] GET /api/study/weeks 304 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:34:31.872536743Z 11:34:31 PM [express] GET /api/study/leaderboard 304 in 523ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:34:32.266862257Z 11:34:32 PM [express] GET /api/study/weeks/1 304 in 266ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:34:32.328576648Z 11:34:32 PM [express] GET /api/study/practice/1/status 304 in 321ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:35:21.164908507Z 11:35:21 PM [express] GET /api/study/profile 304 in 468ms :: {"id":1,"userId":1,"totalXp":1245,"curre…
+2025-12-22T23:35:21.644693534Z 11:35:21 PM [express] GET /api/study/leaderboard 304 in 923ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:35:21.705648826Z 11:35:21 PM [express] GET /api/missions/daily 304 in 587ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:35:21.899963932Z 11:35:21 PM [express] GET /api/study/weeks 304 in 464ms :: [{"id":1,"weekNumber":1,"year":2025,"title…
+2025-12-22T23:35:22.451982821Z 11:35:22 PM [express] GET /api/study/weeks/1 304 in 261ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:35:22.505738039Z 11:35:22 PM [express] GET /api/study/practice/1/status 304 in 329ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:35:24.624808878Z 11:35:24 PM [express] GET /api/study/profile 304 in 67ms :: {"id":1,"userId":1,"totalXp":1245,"curren…
+2025-12-22T23:35:24.759037578Z 11:35:24 PM [express] GET /api/missions/daily 304 in 198ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:35:24.928898052Z 11:35:24 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:35:25.097465716Z 11:35:25 PM [express] GET /api/study/leaderboard 304 in 516ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:35:25.42106237Z 11:35:25 PM [express] GET /api/study/weeks/1 304 in 264ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:35:25.505987212Z 11:35:25 PM [express] GET /api/study/practice/1/status 304 in 322ms :: {"weekId":1,"isUnlocked":false…

@@ -1,0 +1,44 @@
+2026-01-08T18:56:52.666219873Z ==> Downloading cache...
+2026-01-08T18:56:52.705482746Z ==> Cloning from https://github.com/Geovanejn/votaemaus
+2026-01-08T18:57:08.763505847Z ==> Checking out commit a7a92192235ffb2124deddb4b09a46ad5323dc9a in branch main
+2026-01-08T18:57:21.509172042Z ==> Downloaded 569MB in 7s. Extraction took 12s.
+2026-01-08T18:57:48.787293512Z ==> Using Node.js version 22.16.0 (default)
+2026-01-08T18:57:48.814410334Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-01-08T18:57:48.962110183Z ==> Running build command 'npm install --include=dev && npm run build && npm run db:push'...
+2026-01-08T18:57:52.340977196Z 
+2026-01-08T18:57:52.341007947Z up to date, audited 957 packages in 3s
+2026-01-08T18:57:52.341013427Z 
+2026-01-08T18:57:52.341025827Z 188 packages are looking for funding
+2026-01-08T18:57:52.34113077Z   run `npm fund` for details
+2026-01-08T18:57:52.401008179Z 
+2026-01-08T18:57:52.401029049Z 15 vulnerabilities (3 low, 5 moderate, 5 high, 2 critical)
+2026-01-08T18:57:52.401034079Z 
+2026-01-08T18:57:52.401038219Z To address issues that do not require attention, run:
+2026-01-08T18:57:52.40104258Z   npm audit fix
+2026-01-08T18:57:52.40104637Z 
+2026-01-08T18:57:52.40105023Z To address all issues (including breaking changes), run:
+2026-01-08T18:57:52.40105463Z   npm audit fix --force
+2026-01-08T18:57:52.40105839Z 
+2026-01-08T18:57:52.40106418Z Run `npm audit` for details.
+2026-01-08T18:57:53.002156546Z 
+2026-01-08T18:57:53.002179957Z > rest-express@1.0.0 build
+2026-01-08T18:57:53.002186367Z > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2026-01-08T18:57:53.002196267Z 
+2026-01-08T18:57:53.57694519Z vite v5.4.20 building for production...
+2026-01-08T18:57:53.639895793Z transforming...
+2026-01-08T18:57:56.004851429Z 
+2026-01-08T18:57:56.006685833Z A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+2026-01-08T18:57:59.013532936Z [plugin:vite:resolve] [plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/opt/render/project/src/shared/schema.ts". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+2026-01-08T18:57:59.118016657Z ✓ 1812 modules transformed.
+2026-01-08T18:57:59.122555306Z x Build failed in 5.52s
+2026-01-08T18:57:59.122585677Z error during build:
+2026-01-08T18:57:59.122597787Z [vite:asset] Could not load /opt/render/project/src/attached_assets/Logo eMauStore_1767549645915.png (imported by client/src/pages/admin/AdminDashboard.tsx): ENOENT: no such file or directory, open '/opt/render/project/src/attached_assets/Logo eMauStore_1767549645915.png'
+2026-01-08T18:57:59.122602717Z     at async open (node:internal/fs/promises:633:25)
+2026-01-08T18:57:59.122606397Z     at async Object.readFile (node:internal/fs/promises:1237:14)
+2026-01-08T18:57:59.122613167Z     at async fileToBuiltUrl (file:///opt/render/project/src/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:20428:19)
+2026-01-08T18:57:59.122617007Z     at async Object.load (file:///opt/render/project/src/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:20328:17)
+2026-01-08T18:57:59.122622688Z     at async PluginDriver.hookFirstAndGetPlugin (file:///opt/render/project/src/node_modules/rollup/dist/es/shared/node-entry.js:20689:28)
+2026-01-08T18:57:59.122644428Z     at async file:///opt/render/project/src/node_modules/rollup/dist/es/shared/node-entry.js:19809:33
+2026-01-08T18:57:59.122648588Z     at async Queue.work (file:///opt/render/project/src/node_modules/rollup/dist/es/shared/node-entry.js:20899:32)
+2026-01-08T18:57:59.211053323Z ==> Build failed 😞
+2026-01-08T18:57:59.211070073Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

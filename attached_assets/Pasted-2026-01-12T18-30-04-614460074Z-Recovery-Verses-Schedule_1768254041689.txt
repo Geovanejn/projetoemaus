@@ -1,0 +1,1650 @@
+2026-01-12T18:30:04.614460074Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-12T18:30:04.614464044Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2026-01-12T18:30:04.614468395Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-12T18:30:04.614472585Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-12T18:30:04.614491936Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-12T18:30:04.614496986Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:16 (ARA)
+2026-01-12T18:30:04.614501687Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-12T18:30:04.614513317Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-12T18:30:04.614518928Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-12T18:30:04.614542629Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2026-01-12T18:30:04.614545959Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-12T18:30:04.614548279Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-12T18:30:04.614550449Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-12T18:30:04.61455243Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-12T18:30:04.614567601Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-12T18:30:04.614571051Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-12T18:30:04.614576881Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-12T18:30:04.614579631Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-12T18:30:04.614582201Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-12T18:30:04.614584802Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2026-01-12T18:30:04.614590482Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-12T18:30:04.614593572Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-12T18:30:04.614607843Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-12T18:30:04.614610713Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-12T18:30:04.614616343Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-12
+2026-01-12T18:32:31.710029519Z 6:32:31 PM [express] POST /api 200 in 2ms
+2026-01-12T18:44:15.730936934Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-01-12T18:44:15.802076251Z ==> Deploying...
+2026-01-12T18:44:47.511982183Z 6:44:47 PM [express] GET /api/shop/cart 304 in 46ms :: []
+2026-01-12T18:44:47.694909084Z 6:44:47 PM [express] GET /api/shop/categories 304 in 8ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T18:44:47.704931224Z 6:44:47 PM [express] GET /api/shop/featured 304 in 9ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T18:44:47.798842731Z 6:44:47 PM [express] GET /api/shop/items 304 in 54ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descr…
+2026-01-12T18:44:52.768775907Z 6:44:52 PM [express] GET /api/shop/items 304 in 8ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descri…
+2026-01-12T18:44:52.774031601Z 6:44:52 PM [express] GET /api/shop/cart 304 in 3ms :: []
+2026-01-12T18:44:52.776358205Z 6:44:52 PM [express] GET /api/shop/categories 304 in 4ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T18:44:53.020188946Z 6:44:53 PM [express] GET /api/shop/featured 304 in 5ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T18:44:59.191071233Z 6:44:59 PM [express] GET /api/admin/shop/items 304 in 101ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-12T18:44:59.283634512Z 6:44:59 PM [express] GET /api/admin/shop/categories 304 in 98ms :: [{"id":10,"name":"Acessórios","is…
+2026-01-12T18:44:59.309113145Z 6:44:59 PM [express] GET /api/admin/shop/promo-codes 304 in 124ms :: []
+2026-01-12T18:45:07.559939288Z 6:45:07 PM [express] PATCH /api/admin/shop/items/6 200 in 9ms :: {"id":6,"name":"Moleskine edição 20…
+2026-01-12T18:45:07.77402757Z 6:45:07 PM [express] GET /api/admin/shop/items 200 in 10ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T18:45:13.467898519Z 6:45:13 PM [express] GET /api/admin/shop/items 304 in 9ms :: [{"id":11,"name":"Kit UMP Emaús 2025","…
+2026-01-12T18:45:13.486337575Z 6:45:13 PM [express] GET /api/admin/shop/categories 304 in 12ms :: [{"id":10,"name":"Acessórios","is…
+2026-01-12T18:45:13.487194185Z 6:45:13 PM [express] GET /api/admin/shop/promo-codes 304 in 10ms :: []
+2026-01-12T18:45:15.090996583Z ==> Running 'node ./dist/index.js'
+2026-01-12T18:45:21.88146565Z ==> No open ports detected, continuing to scan...
+2026-01-12T18:45:22.095607644Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-12T18:45:35.483118324Z ✓ Logo configured with public URL: https://umpemaus.com.br/logo-email.png
+2026-01-12T18:45:35.484843413Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T18:45:35.484965417Z [MercadoPago] Client initialized successfully
+2026-01-12T18:45:35.485461182Z [Push] Web Push configured successfully
+2026-01-12T18:45:35.684067898Z [R2] Configured - Bucket: umpemaus, Public URL: https://pub-73bb54c6aac24e7a926425a7c58e7c2d.r2.dev
+2026-01-12T18:45:35.694686276Z [WebSocket] Server initialized
+2026-01-12T18:45:35.88456716Z 6:45:35 PM [express] serving on port 10000
+2026-01-12T18:45:35.884790476Z Initializing PostgreSQL database connection...
+2026-01-12T18:45:36.295402018Z PostgreSQL connection successful: 2026-01-12T18:45:36.292Z
+2026-01-12T18:45:36.401174204Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2026-01-12T18:45:36.401192744Z Database initialized successfully!
+2026-01-12T18:45:36.484500589Z [Migration] Starting image migration to R2...
+2026-01-12T18:45:36.490685718Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2026-01-12T18:45:36.578633057Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.581050598Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-12T18:45:36.583424926Z [Daily Verse Scheduler] Initialized - will run daily at 07:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.585931369Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-12T18:45:36.588338718Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2026-01-12T18:45:36.588456692Z [Instagram Scheduler] Running sync...
+2026-01-12T18:45:36.588677918Z [Instagram] Starting sync...
+2026-01-12T18:45:36.68498699Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.689858711Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2026-01-12T18:45:36.695425824Z ==> Your service is live 🎉
+2026-01-12T18:45:36.779605513Z [Event Scheduler] Lesson release initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.78331994Z [Event Scheduler] Card distribution initialized - will run daily at 23:59 (America/Sao_Paulo)
+2026-01-12T18:45:36.787053238Z [Event Deadline Scheduler] Initialized - will run every hour at :00 (America/Sao_Paulo) with database persistence
+2026-01-12T18:45:36.790313193Z [Marketing Reminder Scheduler] Initialized - will run every hour at :30 (America/Sao_Paulo) with database persistence
+2026-01-12T18:45:36.793128565Z [Treasury Scheduler] Day 5 reminder initialized - will run on day 5 of each month at 08:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.848315997Z ==> 
+2026-01-12T18:45:36.882428473Z [Treasury Scheduler] 5th business day reminder initialized - will run on weekdays at 08:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.884788211Z [Shop Scheduler] Abandoned cart reminder initialized - will run every hour (America/Sao_Paulo) with auto-cancel after 48h
+2026-01-12T18:45:36.888170489Z [Treasury Scheduler] Loan installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.89234551Z [Shop Scheduler] Shop installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.937357314Z ==> ///////////////////////////////////////////////////////////
+2026-01-12T18:45:36.979650731Z [Event Fee Scheduler] Event fee reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.982613717Z [Treasury Scheduler] Year rollover initialized - will run on Jan 1st at 00:05 (America/Sao_Paulo)
+2026-01-12T18:45:36.985409318Z [Treasury Scheduler] Monthly summary initialized - will run on day 1 of each month at 08:00 (America/Sao_Paulo)
+2026-01-12T18:45:36.985614494Z 6:45:36 PM [express] Database and schedulers initialized successfully
+2026-01-12T18:45:37.028297651Z ==> 
+2026-01-12T18:45:37.116530608Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-12T18:45:37.204816326Z ==> 
+2026-01-12T18:45:37.294970862Z ==> ///////////////////////////////////////////////////////////
+2026-01-12T18:45:37.485892924Z [Instagram] API error: 400 {
+2026-01-12T18:45:37.485896445Z [Instagram] No new posts fetched - keeping existing data
+2026-01-12T18:45:37.485911015Z   error: {
+2026-01-12T18:45:37.485915155Z     message: 'Error validating access token: The session is invalid because the user logged out.',
+2026-01-12T18:45:37.485921905Z     type: 'OAuthException',
+2026-01-12T18:45:37.485924595Z     code: 190,
+2026-01-12T18:45:37.485928545Z     error_subcode: 467,
+2026-01-12T18:45:37.485933806Z     fbtrace_id: 'A9HA02nBjYxf5AbJme3B-RA'
+2026-01-12T18:45:37.485936296Z   }
+2026-01-12T18:45:37.485937366Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-12T18:45:37.485938786Z }
+2026-01-12T18:45:37.784329064Z [R2] Uploaded members/1768243537189-t3xhrj.jpeg (26.2KB)
+2026-01-12T18:45:37.882816639Z [Migration] ✓ users.photoUrl (id: 12)
+2026-01-12T18:45:38.178789568Z [R2] Uploaded members/1768243537880-pthpn6.jpeg (19.7KB)
+2026-01-12T18:45:38.182525586Z [Migration] ✓ users.photoUrl (id: 5)
+2026-01-12T18:45:38.351336279Z [R2] Uploaded members/1768243538182-8gkvo0.jpeg (27.9KB)
+2026-01-12T18:45:38.354746668Z [Migration] ✓ users.photoUrl (id: 13)
+2026-01-12T18:45:38.518506315Z [R2] Uploaded members/1768243538354-k1n5g7.jpeg (18.6KB)
+2026-01-12T18:45:38.521539663Z [Migration] ✓ users.photoUrl (id: 11)
+2026-01-12T18:45:38.680601503Z [R2] Uploaded members/1768243538521-wfo0h7.jpeg (17.9KB)
+2026-01-12T18:45:38.68359138Z [Migration] ✓ users.photoUrl (id: 15)
+2026-01-12T18:45:38.863827494Z [R2] Uploaded members/1768243538683-wcgqfx.jpeg (19.5KB)
+2026-01-12T18:45:38.866970235Z [Migration] ✓ users.photoUrl (id: 2)
+2026-01-12T18:45:39.037794347Z [R2] Uploaded members/1768243538866-olopda.jpeg (14.6KB)
+2026-01-12T18:45:39.041058861Z [Migration] ✓ users.photoUrl (id: 9)
+2026-01-12T18:45:39.196864787Z [R2] Uploaded members/1768243539041-exnwqu.jpeg (13.8KB)
+2026-01-12T18:45:39.200163353Z [Migration] ✓ users.photoUrl (id: 6)
+2026-01-12T18:45:39.394370862Z [R2] Uploaded members/1768243539200-u0pdpl.jpeg (34.9KB)
+2026-01-12T18:45:39.397809242Z [Migration] ✓ users.photoUrl (id: 17)
+2026-01-12T18:45:39.5713129Z [R2] Uploaded members/1768243539397-q8c766.jpeg (17.9KB)
+2026-01-12T18:45:39.574679188Z [Migration] ✓ users.photoUrl (id: 7)
+2026-01-12T18:45:39.74137592Z [R2] Uploaded members/1768243539574-utf0lv.jpeg (28.7KB)
+2026-01-12T18:45:39.745989034Z [Migration] ✓ users.photoUrl (id: 3)
+2026-01-12T18:45:39.898802493Z [R2] Uploaded members/1768243539746-05jqzh.jpeg (18.4KB)
+2026-01-12T18:45:39.902253703Z [Migration] ✓ users.photoUrl (id: 16)
+2026-01-12T18:45:40.080088047Z [R2] Uploaded members/1768243539902-ymp1yr.jpeg (13.9KB)
+2026-01-12T18:45:40.083519777Z [Migration] ✓ users.photoUrl (id: 4)
+2026-01-12T18:45:40.267430737Z [R2] Uploaded members/1768243540083-9ahjvd.jpeg (23.7KB)
+2026-01-12T18:45:40.270484576Z [Migration] ✓ users.photoUrl (id: 8)
+2026-01-12T18:45:40.317528869Z [Migration] Completed in 3.8s
+2026-01-12T18:45:40.31754539Z [Migration] Migrated: 14, Failed: 0, Skipped: 0
+2026-01-12T18:45:41.5851066Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-12T18:45:41.585253574Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-12T18:45:41.592190816Z [Daily Verse Scheduler] Already sent today (2026-01-12), skipping
+2026-01-12T18:45:43.586500251Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-12T18:45:43.586709897Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-12T18:45:46.270114885Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-12T18:45:46.270506266Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-12T18:45:46.270517196Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-12T18:45:46.270520576Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-12T18:45:46.270523647Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2026-01-12T18:45:46.270526327Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-12T18:45:46.270528957Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-12T18:45:46.270531457Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-12T18:45:46.270533927Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:39 (ARA)
+2026-01-12T18:45:46.270536627Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:6 (ARA)
+2026-01-12T18:45:46.270539117Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-12T18:45:46.270541527Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-12T18:45:46.270544087Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-12T18:45:46.270546747Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-12T18:45:46.270549217Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-12T18:45:46.270551697Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-12T18:45:46.270554568Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2026-01-12T18:45:46.270557188Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-12T18:45:46.270559668Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-12T18:45:46.270562668Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-12T18:45:46.270565248Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-12T18:45:46.270568268Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2026-01-12T18:45:46.270570688Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-12T18:45:46.270573298Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-12T18:45:46.270576208Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-12T18:45:46.270578878Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2026-01-12T18:45:46.270581388Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-12T18:45:46.270583738Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2026-01-12T18:45:46.270587328Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-12T18:45:46.270590098Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-12T18:45:46.270593309Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-12T18:45:46.270596379Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-12
+2026-01-12T18:45:46.685531616Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-12T18:45:46.685806913Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-12T18:45:46.69431181Z [Daily Missions Scheduler] Content already generated for today (2026-01-12)
+2026-01-12T18:50:47.415482742Z ==> Detected service running on port 10000
+2026-01-12T18:50:47.727618732Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-12T19:00:00.013985622Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-12T19:00:00.015647611Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-12T19:00:00.557969675Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-12T19:00:00.700756653Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-12T19:10:18.564921082Z 7:10:18 PM [express] GET /api/admin/shop/promo-codes 304 in 685ms :: []
+2026-01-12T19:10:18.581185905Z 7:10:18 PM [express] GET /api/admin/shop/items 200 in 956ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-12T19:10:19.017998154Z 7:10:19 PM [express] GET /api/admin/shop/categories 304 in 1123ms :: [{"id":10,"name":"Acessórios","…
+2026-01-12T19:10:28.624247981Z 7:10:28 PM [express] PATCH /api/admin/shop/items/6 200 in 14ms :: {"id":6,"name":"Moleskine edição 2…
+2026-01-12T19:10:28.865197031Z 7:10:28 PM [express] GET /api/admin/shop/items 200 in 19ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:10:36.285371376Z 7:10:36 PM [express] GET /api/admin/shop/promo-codes 304 in 104ms :: []
+2026-01-12T19:10:36.286057656Z 7:10:36 PM [express] GET /api/admin/shop/categories 304 in 103ms :: [{"id":10,"name":"Acessórios","i…
+2026-01-12T19:10:36.286822418Z 7:10:36 PM [express] GET /api/admin/shop/items 304 in 201ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-12T19:10:50.593921626Z 7:10:50 PM [express] GET /api/shop/categories 304 in 9ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:10:50.601036123Z 7:10:50 PM [express] GET /api/shop/cart 304 in 10ms :: []
+2026-01-12T19:10:50.679528927Z 7:10:50 PM [express] GET /api/shop/featured 200 in 85ms :: [{"id":11,"name":"Kit UMP Emaús 2025","de…
+2026-01-12T19:10:50.712474205Z 7:10:50 PM [express] GET /api/shop/items 200 in 117ms :: [{"id":11,"name":"Kit UMP Emaús 2025","desc…
+2026-01-12T19:10:55.15096295Z 7:10:55 PM [express] POST /api/shop/cart 200 in 26ms :: {"id":5,"userId":2,"itemId":6,"quantity":1,"…
+2026-01-12T19:10:55.377259003Z 7:10:55 PM [express] GET /api/shop/cart 200 in 10ms :: [{"id":5,"userId":2,"itemId":6,"quantity":1,"…
+2026-01-12T19:11:00.907756065Z 7:11:00 PM [express] GET /api/pix/status 304 in 3ms :: {"configured":true}
+2026-01-12T19:11:03.867910571Z 7:11:03 PM [express] POST /api/shop/checkout 200 in 43ms :: {"id":5,"orderCode":"#2026-0005","userId…
+2026-01-12T19:11:04.178210388Z 7:11:04 PM [express] GET /api/shop/cart 200 in 32ms :: []
+2026-01-12T19:11:04.35805717Z 7:11:04 PM [express] GET /api/shop/my-orders 200 in 17ms :: [{"id":5,"orderCode":"#2026-0005","userI…
+2026-01-12T19:11:07.162923847Z [MercadoPago] Using notification_url: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T19:11:07.461837613Z 7:11:07 PM [express] POST /api/pix/shop-order/5 200 in 325ms :: {"entryId":8,"paymentId":14011983878…
+2026-01-12T19:11:07.727225624Z 7:11:07 PM [express] POST /api/pix/generate/8 200 in 7ms :: {"paymentId":"140119838789","qrCode":"00…
+2026-01-12T19:11:13.048907218Z [Payment] Stock deducted for 1 items in order 5
+2026-01-12T19:11:13.27996724Z [Push] Successfully sent notification to member user 2
+2026-01-12T19:11:13.284076739Z [Push] Sent "✅ Pagamento Confirmado" to user 2 (1/1 success)
+2026-01-12T19:11:13.284887363Z 7:11:13 PM [express] GET /api/pix/check/8 200 in 306ms :: {"status":"completed","approved":true}
+2026-01-12T19:11:13.538964354Z 7:11:13 PM [express] GET /api/shop/my-orders 200 in 11ms :: [{"id":5,"orderCode":"#2026-0005","userI…
+2026-01-12T19:11:31.743145786Z 7:11:31 PM [express] GET /api/shop/categories 304 in 7ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:11:31.74603688Z 7:11:31 PM [express] GET /api/shop/cart 304 in 6ms :: []
+2026-01-12T19:11:31.779485963Z 7:11:31 PM [express] GET /api/shop/featured 200 in 36ms :: [{"id":11,"name":"Kit UMP Emaús 2025","de…
+2026-01-12T19:11:31.891137841Z 7:11:31 PM [express] GET /api/shop/items 200 in 144ms :: [{"id":11,"name":"Kit UMP Emaús 2025","desc…
+2026-01-12T19:11:39.180013835Z 7:11:39 PM [express] GET /api/admin/shop/categories 304 in 38ms :: [{"id":10,"name":"Acessórios","is…
+2026-01-12T19:11:39.186483444Z 7:11:39 PM [express] GET /api/admin/shop/promo-codes 304 in 6ms :: []
+2026-01-12T19:11:39.190947114Z 7:11:39 PM [express] GET /api/admin/shop/items 200 in 42ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:11:48.186682367Z 7:11:48 PM [express] PATCH /api/admin/shop/items/6 200 in 6ms :: {"id":6,"name":"Moleskine edição 20…
+2026-01-12T19:11:48.369254408Z 7:11:48 PM [express] GET /api/admin/shop/items 200 in 11ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:11:54.408448625Z 7:11:54 PM [express] GET /api/shop/featured 200 in 8ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T19:11:54.416469198Z 7:11:54 PM [express] GET /api/shop/cart 304 in 4ms :: []
+2026-01-12T19:11:54.416858789Z 7:11:54 PM [express] GET /api/shop/items 200 in 8ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descri…
+2026-01-12T19:11:54.444167684Z 7:11:54 PM [express] GET /api/shop/categories 304 in 6ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:11:57.968492544Z 7:11:57 PM [express] GET /api/shop/categories 304 in 7ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:11:57.979631808Z 7:11:57 PM [express] GET /api/shop/items 304 in 11ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descr…
+2026-01-12T19:11:57.980933855Z 7:11:57 PM [express] GET /api/shop/cart 304 in 8ms :: []
+2026-01-12T19:11:57.986451436Z 7:11:57 PM [express] GET /api/shop/featured 304 in 7ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T19:12:01.918329481Z 7:12:01 PM [express] GET /api/admin/shop/items 304 in 12ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:12:01.919453863Z 7:12:01 PM [express] GET /api/admin/shop/categories 304 in 7ms :: [{"id":10,"name":"Acessórios","isD…
+2026-01-12T19:12:01.978860781Z 7:12:01 PM [express] GET /api/admin/shop/promo-codes 304 in 61ms :: []
+2026-01-12T19:12:13.127774779Z 7:12:13 PM [express] PATCH /api/admin/shop/items/6 200 in 6ms :: {"id":6,"name":"Moleskine edição 20…
+2026-01-12T19:12:13.338853099Z 7:12:13 PM [express] GET /api/admin/shop/items 200 in 11ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:12:21.7907499Z 7:12:21 PM [express] GET /api/shop/cart 304 in 5ms :: []
+2026-01-12T19:12:21.796368714Z 7:12:21 PM [express] GET /api/shop/categories 304 in 6ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:12:21.797815006Z 7:12:21 PM [express] GET /api/shop/items 200 in 8ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descri…
+2026-01-12T19:12:22.957366615Z 7:12:22 PM [express] POST /api/shop/cart 200 in 12ms :: {"id":6,"userId":2,"itemId":6,"quantity":1,"…
+2026-01-12T19:12:23.203405482Z 7:12:23 PM [express] GET /api/shop/cart 200 in 7ms :: [{"id":6,"userId":2,"itemId":6,"quantity":1,"g…
+2026-01-12T19:12:25.921015531Z 7:12:25 PM [express] GET /api/pix/status 304 in 1ms :: {"configured":true}
+2026-01-12T19:12:27.582398578Z 7:12:27 PM [express] POST /api/shop/checkout 200 in 48ms :: {"id":6,"orderCode":"#2026-0006","userId…
+2026-01-12T19:12:27.832522313Z 7:12:27 PM [express] GET /api/shop/cart 200 in 5ms :: []
+2026-01-12T19:12:27.878725487Z 7:12:27 PM [express] GET /api/shop/my-orders 200 in 12ms :: [{"id":6,"orderCode":"#2026-0006","userI…
+2026-01-12T19:12:32.598212026Z [MercadoPago] Using notification_url: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T19:12:33.433029769Z 7:12:33 PM [express] POST /api/pix/shop-order/6 200 in 865ms :: {"entryId":9,"paymentId":14174449712…
+2026-01-12T19:12:33.716445883Z 7:12:33 PM [express] POST /api/pix/generate/9 200 in 7ms :: {"paymentId":"141744497122","qrCode":"00…
+2026-01-12T19:12:33.829627105Z [Webhook] POST received: {"action":"payment.created","api_version":"v1","data":{"id":"141744497122"},"date_created":"2026-01-12T19:12:32Z","id":128030376169,"live_mode":true,"type":"payment","user_id":"190143310"}
+2026-01-12T19:12:33.829658126Z [Webhook] Action-based notification: payment.created, ID: 141744497122
+2026-01-12T19:12:33.86829494Z 7:12:33 PM [express] POST /api/pix/webhook 200 in 39ms
+2026-01-12T19:12:33.933726763Z [Webhook] POST received: {"resource":"141744497122","topic":"payment"}
+2026-01-12T19:12:33.933774665Z [Webhook] Invalid payload format
+2026-01-12T19:12:33.934537867Z 7:12:33 PM [express] POST /api/pix/webhook 200 in 1ms
+2026-01-12T19:12:39.049155688Z 7:12:39 PM [express] GET /api/pix/check/9 200 in 47ms :: {"status":"pending","approved":false}
+2026-01-12T19:12:44.041858582Z 7:12:44 PM [express] GET /api/pix/check/9 304 in 45ms :: {"status":"pending","approved":false}
+2026-01-12T19:12:47.521040341Z 7:12:47 PM [express] GET /api/shop/featured 200 in 10ms :: [{"id":11,"name":"Kit UMP Emaús 2025","de…
+2026-01-12T19:12:57.88241164Z 7:12:57 PM [express] GET /api/admin/shop/categories 304 in 12ms :: [{"id":10,"name":"Acessórios","is…
+2026-01-12T19:12:57.99172787Z 7:12:57 PM [express] GET /api/admin/shop/promo-codes 304 in 112ms :: []
+2026-01-12T19:12:57.995795568Z 7:12:57 PM [express] GET /api/admin/shop/items 304 in 124ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-12T19:13:08.475490104Z 7:13:08 PM [express] PATCH /api/admin/shop/items/6 200 in 6ms :: {"id":6,"name":"Moleskine edição 20…
+2026-01-12T19:13:08.686962585Z 7:13:08 PM [express] GET /api/admin/shop/items 200 in 12ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:13:13.196329064Z 7:13:13 PM [express] GET /api/shop/items 200 in 9ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descri…
+2026-01-12T19:13:13.196924252Z 7:13:13 PM [express] GET /api/shop/categories 304 in 6ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:13:13.27870812Z 7:13:13 PM [express] GET /api/shop/featured 200 in 77ms :: [{"id":11,"name":"Kit UMP Emaús 2025","de…
+2026-01-12T19:13:13.279487413Z 7:13:13 PM [express] GET /api/shop/cart 304 in 71ms :: []
+2026-01-12T19:13:15.955666952Z 7:13:15 PM [express] POST /api/shop/cart 200 in 9ms :: {"id":7,"userId":2,"itemId":6,"quantity":1,"g…
+2026-01-12T19:13:16.160832Z 7:13:16 PM [express] GET /api/shop/cart 200 in 8ms :: [{"id":7,"userId":2,"itemId":6,"quantity":1,"g…
+2026-01-12T19:13:18.324423059Z 7:13:18 PM [express] GET /api/pix/status 304 in 1ms :: {"configured":true}
+2026-01-12T19:13:19.483381528Z 7:13:19 PM [express] POST /api/shop/checkout 200 in 24ms :: {"id":7,"orderCode":"#2026-0007","userId…
+2026-01-12T19:13:19.764374761Z 7:13:19 PM [express] GET /api/shop/cart 200 in 5ms :: []
+2026-01-12T19:13:19.833852862Z 7:13:19 PM [express] GET /api/shop/my-orders 200 in 12ms :: [{"id":7,"orderCode":"#2026-0007","userI…
+2026-01-12T19:13:25.711554108Z [MercadoPago] Using notification_url: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T19:13:25.979642415Z 7:13:25 PM [express] POST /api/pix/shop-order/7 200 in 291ms :: {"entryId":10,"paymentId":1410468628…
+2026-01-12T19:13:26.250579435Z 7:13:26 PM [express] POST /api/pix/generate/10 200 in 5ms :: {"paymentId":"141046862874","qrCode":"0…
+2026-01-12T19:13:31.546624642Z 7:13:31 PM [express] GET /api/pix/check/10 200 in 56ms :: {"status":"cancelled","approved":false}
+2026-01-12T19:13:36.543226859Z 7:13:36 PM [express] GET /api/pix/check/10 304 in 45ms :: {"status":"cancelled","approved":false}
+2026-01-12T19:13:42.639199459Z 7:13:42 PM [express] POST /api/pix/shop-order/7 200 in 10ms :: {"entryId":10,"paymentId":"1410468628…
+2026-01-12T19:13:42.897176972Z 7:13:42 PM [express] POST /api/pix/generate/10 200 in 5ms :: {"paymentId":"141046862874","qrCode":"0…
+2026-01-12T19:13:46.682238579Z 7:13:46 PM [express] POST /api/pix/shop-order/6 200 in 11ms :: {"entryId":9,"paymentId":"14174449712…
+2026-01-12T19:13:46.976066705Z 7:13:46 PM [express] POST /api/pix/generate/9 200 in 58ms :: {"paymentId":"141744497122","qrCode":"0…
+2026-01-12T19:13:53.711432968Z 7:13:53 PM [express] POST /api/pix/shop-order/7 200 in 10ms :: {"entryId":10,"paymentId":"1410468628…
+2026-01-12T19:13:53.965513138Z 7:13:53 PM [express] POST /api/pix/generate/10 200 in 6ms :: {"paymentId":"141046862874","qrCode":"0…
+2026-01-12T19:13:59.259163139Z 7:13:59 PM [express] GET /api/pix/check/10 304 in 50ms :: {"status":"cancelled","approved":false}
+2026-01-12T19:15:58.852489315Z 7:15:58 PM [express] POST /api 200 in 2ms
+2026-01-12T19:16:53.027198969Z 7:16:53 PM [express] POST /api/pix/shop-order/7 200 in 40ms :: {"entryId":10,"paymentId":"1410468628…
+2026-01-12T19:16:53.264727656Z 7:16:53 PM [express] POST /api/pix/generate/10 200 in 5ms :: {"paymentId":"141046862874","qrCode":"0…
+2026-01-12T19:16:59.321665911Z 7:16:59 PM [express] GET /api/pix/check/10 304 in 70ms :: {"status":"cancelled","approved":false}
+2026-01-12T19:17:04.249805144Z 7:17:04 PM [express] GET /api/pix/check/10 304 in 42ms :: {"status":"cancelled","approved":false}
+2026-01-12T19:17:08.526387491Z 7:17:08 PM [express] GET /api/pix/check/10 304 in 37ms :: {"status":"cancelled","approved":false}
+2026-01-12T19:17:18.245140603Z 7:17:18 PM [express] POST /api/pix/shop-order/6 200 in 10ms :: {"entryId":9,"paymentId":"14174449712…
+2026-01-12T19:17:18.50437344Z 7:17:18 PM [express] POST /api/pix/generate/9 200 in 6ms :: {"paymentId":"141744497122","qrCode":"00…
+2026-01-12T19:17:24.248759062Z 7:17:24 PM [express] GET /api/pix/check/9 304 in 51ms :: {"status":"pending","approved":false}
+2026-01-12T19:17:28.796635683Z 7:17:28 PM [express] GET /api/pix/check/9 304 in 49ms :: {"status":"pending","approved":false}
+2026-01-12T19:17:41.792331924Z 7:17:41 PM [express] GET /api/marketing/stats 304 in 818ms :: {"events":{"total":0,"upcoming":0,"pas…
+2026-01-12T19:17:41.878937122Z 7:17:41 PM [express] GET /api/admin/instagram 304 in 901ms :: {"configured":true,"posts":[],"message…
+2026-01-12T19:17:42.188601975Z 7:17:42 PM [express] GET /api/site-content/quem-somos 304 in 304ms :: {"email":{"title":"","content"…
+2026-01-12T19:17:42.191675804Z 7:17:42 PM [express] GET /api/site/highlights 304 in 312ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T19:17:47.09271412Z 7:17:47 PM [express] POST /api/auth/login-password 200 in 688ms :: {"user":{"id":1,"fullName":"Admin…
+2026-01-12T19:17:47.87102052Z [Push] Subscribe sync: userId=1, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T19:17:47.881796513Z [Push] Migrated subscription from anonymous to user 1
+2026-01-12T19:17:47.881816953Z [Push] Subscription saved for user 1. Keys present: p256dh=true, auth=true
+2026-01-12T19:17:47.882439241Z 7:17:47 PM [express] POST /api/notifications/subscribe 200 in 13ms :: {"message":"Inscrito para noti…
+2026-01-12T19:17:53.356249269Z 7:17:53 PM [express] POST /api/shop/cart 200 in 9ms :: {"id":8,"userId":1,"itemId":6,"quantity":1,"g…
+2026-01-12T19:17:53.626717623Z 7:17:53 PM [express] GET /api/shop/cart 200 in 6ms :: [{"id":8,"userId":1,"itemId":6,"quantity":1,"g…
+2026-01-12T19:17:57.3432872Z 7:17:57 PM [express] POST /api/shop/checkout 200 in 14ms :: {"id":8,"orderCode":"#2026-0008","userId…
+2026-01-12T19:17:57.581810014Z 7:17:57 PM [express] GET /api/shop/cart 200 in 4ms :: []
+2026-01-12T19:17:57.622208179Z 7:17:57 PM [express] GET /api/shop/my-orders 200 in 8ms :: [{"id":8,"orderCode":"#2026-0008","userId…
+2026-01-12T19:18:00.97847517Z [MercadoPago] Using notification_url: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T19:18:01.778673024Z 7:18:01 PM [express] POST /api/pix/shop-order/8 200 in 814ms :: {"entryId":11,"paymentId":1417442800…
+2026-01-12T19:18:02.042396402Z 7:18:02 PM [express] POST /api/pix/generate/11 200 in 5ms :: {"paymentId":"141744280002","qrCode":"0…
+2026-01-12T19:18:02.178693045Z [Webhook] POST received: {"action":"payment.created","api_version":"v1","data":{"id":"141744280002"},"date_created":"2026-01-12T19:18:01Z","id":128030417369,"live_mode":true,"type":"payment","user_id":"190143310"}
+2026-01-12T19:18:02.178718415Z [Webhook] Action-based notification: payment.created, ID: 141744280002
+2026-01-12T19:18:02.186696567Z [Webhook] POST received: {"resource":"141744280002","topic":"payment"}
+2026-01-12T19:18:02.186712078Z [Webhook] Invalid payload format
+2026-01-12T19:18:02.187432309Z 7:18:02 PM [express] POST /api/pix/webhook 200 in 1ms
+2026-01-12T19:18:02.216197005Z 7:18:02 PM [express] POST /api/pix/webhook 200 in 37ms
+2026-01-12T19:18:07.35947404Z 7:18:07 PM [express] GET /api/pix/check/11 200 in 54ms :: {"status":"pending","approved":false}
+2026-01-12T19:18:13.348927015Z 7:18:13 PM [express] GET /api/pix/check/11 304 in 46ms :: {"status":"pending","approved":false}
+2026-01-12T19:18:18.243149197Z 7:18:18 PM [express] GET /api/pix/check/11 304 in 42ms :: {"status":"pending","approved":false}
+2026-01-12T19:18:19.091871532Z [Webhook] POST received: {"resource":"141744280002","topic":"payment"}
+2026-01-12T19:18:19.091892183Z [Webhook] Invalid payload format
+2026-01-12T19:18:19.091897163Z 7:18:19 PM [express] POST /api/pix/webhook 200 in 1ms
+2026-01-12T19:18:19.098420663Z [Webhook] POST received: {"action":"payment.updated","api_version":"v1","data":{"id":"141744280002"},"date_created":"2026-01-12T19:18:01Z","id":128139868330,"live_mode":true,"type":"payment","user_id":"190143310"}
+2026-01-12T19:18:19.098435283Z [Webhook] Action-based notification: payment.updated, ID: 141744280002
+2026-01-12T19:18:19.148723625Z [Payment] Stock deducted for 1 items in order 8
+2026-01-12T19:18:19.280551898Z [Push] Successfully sent notification to member user 1
+2026-01-12T19:18:19.283843583Z [Push] Sent "✅ Pagamento Confirmado" to user 1 (1/1 success)
+2026-01-12T19:18:19.283854234Z [Webhook] Payment 141744280002 approved for entry 11
+2026-01-12T19:18:19.287077848Z 7:18:19 PM [express] POST /api/pix/webhook 200 in 189ms
+2026-01-12T19:18:22.817947911Z [Webhook] POST received: {"resource":"141744280002","topic":"payment"}
+2026-01-12T19:18:22.817965582Z [Webhook] Invalid payload format
+2026-01-12T19:18:22.818722314Z 7:18:22 PM [express] POST /api/pix/webhook 200 in 1ms
+2026-01-12T19:18:22.836776569Z [Webhook] POST received: {"action":"payment.updated","api_version":"v1","data":{"id":"141744280002"},"date_created":"2026-01-12T19:18:01Z","id":128139827646,"live_mode":true,"type":"payment","user_id":"190143310"}
+2026-01-12T19:18:22.836790379Z [Webhook] Action-based notification: payment.updated, ID: 141744280002
+2026-01-12T19:18:22.87501343Z 7:18:22 PM [express] POST /api/pix/webhook 200 in 38ms
+2026-01-12T19:18:23.204402127Z 7:18:23 PM [express] GET /api/pix/check/11 200 in 5ms :: {"status":"completed","approved":true}
+2026-01-12T19:18:23.788876479Z 7:18:23 PM [express] GET /api/shop/my-orders 200 in 10ms :: [{"id":8,"orderCode":"#2026-0008","userI…
+2026-01-12T19:18:41.947253044Z 7:18:41 PM [express] GET /api/pix/status 304 in 1ms :: {"configured":true}
+2026-01-12T19:18:41.952154046Z 7:18:41 PM [express] GET /api/shop/categories 304 in 4ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:18:42.891180866Z 7:18:42 PM [express] GET /api/shop/items 200 in 34ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descr…
+2026-01-12T19:18:44.776858437Z 7:18:44 PM [express] GET /api/shop/featured 200 in 6ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T19:18:52.36190981Z 7:18:52 PM [express] GET /api/admin/shop/promo-codes 304 in 5ms :: []
+2026-01-12T19:18:52.384522558Z 7:18:52 PM [express] GET /api/admin/shop/categories 304 in 4ms :: [{"id":10,"name":"Acessórios","isD…
+2026-01-12T19:18:52.430892276Z 7:18:52 PM [express] GET /api/admin/shop/items 200 in 10ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:19:00.489435763Z 7:19:00 PM [express] PATCH /api/admin/shop/items/6 200 in 5ms :: {"id":6,"name":"Moleskine edição 20…
+2026-01-12T19:19:00.790792824Z 7:19:00 PM [express] GET /api/admin/shop/items 200 in 9ms :: [{"id":11,"name":"Kit UMP Emaús 2025","…
+2026-01-12T19:19:24.781649267Z 7:19:24 PM [express] GET /api/shop/cart 304 in 4ms :: []
+2026-01-12T19:19:24.79312655Z 7:19:24 PM [express] GET /api/shop/categories 304 in 4ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:19:24.884373893Z 7:19:24 PM [express] GET /api/shop/featured 200 in 93ms :: [{"id":11,"name":"Kit UMP Emaús 2025","de…
+2026-01-12T19:19:25.079737102Z 7:19:25 PM [express] GET /api/shop/items 200 in 300ms :: [{"id":11,"name":"Kit UMP Emaús 2025","desc…
+2026-01-12T19:19:27.940092785Z 7:19:27 PM [express] GET /api/shop/categories 304 in 6ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:19:27.941692721Z 7:19:27 PM [express] GET /api/shop/cart 304 in 4ms :: []
+2026-01-12T19:19:27.945343018Z 7:19:27 PM [express] GET /api/shop/featured 304 in 5ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T19:19:27.963481905Z 7:19:27 PM [express] GET /api/shop/items 304 in 7ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descri…
+2026-01-12T19:19:31.484011968Z 7:19:31 PM [express] GET /api/admin/shop/categories 304 in 6ms :: [{"id":10,"name":"Acessórios","isD…
+2026-01-12T19:19:31.486225693Z 7:19:31 PM [express] GET /api/admin/shop/promo-codes 304 in 6ms :: []
+2026-01-12T19:19:31.507963634Z 7:19:31 PM [express] GET /api/admin/shop/items 304 in 26ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:19:38.732596097Z 7:19:38 PM [express] PATCH /api/admin/shop/items/6 200 in 5ms :: {"id":6,"name":"Moleskine edição 20…
+2026-01-12T19:19:38.998844427Z 7:19:38 PM [express] GET /api/admin/shop/items 200 in 9ms :: [{"id":11,"name":"Kit UMP Emaús 2025","…
+2026-01-12T19:19:42.968131034Z 7:19:42 PM [express] GET /api/shop/cart 304 in 4ms :: []
+2026-01-12T19:19:42.973656775Z 7:19:42 PM [express] GET /api/shop/items 200 in 8ms :: [{"id":11,"name":"Kit UMP Emaús 2025","descri…
+2026-01-12T19:19:42.977139036Z 7:19:42 PM [express] GET /api/shop/featured 200 in 4ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T19:19:42.977847377Z 7:19:42 PM [express] GET /api/shop/categories 304 in 4ms :: [{"id":10,"name":"Acessórios","isDefault…
+2026-01-12T19:19:52.123459478Z 7:19:52 PM [express] GET /api/pix/status 304 in 2ms :: {"configured":true}
+2026-01-12T19:19:57.373013201Z 7:19:57 PM [express] GET /api/shop/my-orders 304 in 8ms :: [{"id":8,"orderCode":"#2026-0008","userId…
+2026-01-12T19:20:06.855961593Z [MercadoPago] Using notification_url: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T19:20:07.133038258Z 7:20:07 PM [express] POST /api/pix/shop-order/1 200 in 289ms :: {"entryId":1,"paymentId":14141886179…
+2026-01-12T19:20:07.36188762Z 7:20:07 PM [express] POST /api/pix/generate/1 200 in 5ms :: {"paymentId":"141418861790","qrCode":"00…
+2026-01-12T19:20:12.677735906Z 7:20:12 PM [express] POST /api 200 in 2ms
+2026-01-12T19:21:58.192204759Z 7:21:58 PM [express] GET /api/shop/cart 304 in 92ms :: []
+2026-01-12T19:21:58.19396677Z 7:21:58 PM [express] GET /api/shop/categories 304 in 92ms :: [{"id":10,"name":"Acessórios","isDefaul…
+2026-01-12T19:21:58.292514154Z 7:21:58 PM [express] GET /api/shop/items 304 in 191ms :: [{"id":11,"name":"Kit UMP Emaús 2025","desc…
+2026-01-12T19:21:58.360330305Z 7:21:58 PM [express] GET /api/shop/featured 304 in 7ms :: [{"id":11,"name":"Kit UMP Emaús 2025","des…
+2026-01-12T19:22:19.630532072Z 7:22:19 PM [express] GET /api/admin/shop/items 304 in 12ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:22:19.637069362Z 7:22:19 PM [express] GET /api/admin/shop/categories 304 in 6ms :: [{"id":10,"name":"Acessórios","isD…
+2026-01-12T19:22:19.868835428Z 7:22:19 PM [express] GET /api/admin/shop/promo-codes 304 in 6ms :: []
+2026-01-12T19:22:21.212519331Z 7:22:21 PM [express] GET /api/admin/shop/orders 200 in 12ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:26.858528006Z 7:22:26 PM [express] PATCH /api/admin/shop/orders/7/status 200 in 10ms :: {"id":7,"orderCode":"#2026…
+2026-01-12T19:22:27.096955916Z 7:22:27 PM [express] GET /api/admin/shop/orders 200 in 12ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:29.579388665Z 7:22:29 PM [express] PATCH /api/admin/shop/orders/6/status 200 in 8ms :: {"id":6,"orderCode":"#2026-…
+2026-01-12T19:22:29.78913256Z 7:22:29 PM [express] GET /api/admin/shop/orders 200 in 12ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:34.348566944Z 7:22:34 PM [express] PATCH /api/admin/shop/orders/2/status 200 in 8ms :: {"id":2,"orderCode":"#2026-…
+2026-01-12T19:22:34.56931877Z 7:22:34 PM [express] GET /api/admin/shop/orders 200 in 11ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:36.678478709Z 7:22:36 PM [express] PATCH /api/admin/shop/orders/3/status 200 in 8ms :: {"id":3,"orderCode":"#2026-…
+2026-01-12T19:22:36.941867364Z 7:22:36 PM [express] GET /api/admin/shop/orders 200 in 11ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:39.42250255Z 7:22:39 PM [express] PATCH /api/admin/shop/orders/4/status 200 in 8ms :: {"id":4,"orderCode":"#2026-…
+2026-01-12T19:22:39.654544574Z 7:22:39 PM [express] GET /api/admin/shop/orders 200 in 11ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:43.254396507Z 7:22:43 PM [express] PATCH /api/admin/shop/orders/5/status 200 in 8ms :: {"id":5,"orderCode":"#2026-…
+2026-01-12T19:22:43.540462481Z 7:22:43 PM [express] GET /api/admin/shop/orders 200 in 50ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:45.971573037Z 7:22:45 PM [express] PATCH /api/admin/shop/orders/8/status 200 in 8ms :: {"id":8,"orderCode":"#2026-…
+2026-01-12T19:22:46.206232637Z 7:22:46 PM [express] GET /api/admin/shop/orders 200 in 11ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:22:48.831706271Z 7:22:48 PM [express] GET /api/admin/shop/orders 304 in 11ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:23:42.207860668Z 7:23:42 PM [express] GET /api/admin/shop/items 304 in 35ms :: [{"id":11,"name":"Kit UMP Emaús 2025",…
+2026-01-12T19:23:42.278798879Z 7:23:42 PM [express] GET /api/admin/shop/members 200 in 22ms :: [{"id":12,"fullName":"Allan Rayvson …
+2026-01-12T19:23:53.019312717Z 7:23:53 PM [express] GET /api/admin/shop/orders 304 in 8ms :: [{"id":8,"orderCode":"#2026-0008","use…
+2026-01-12T19:23:54.389037482Z 7:23:54 PM [express] GET /api/admin/shop/members 304 in 5ms :: [{"id":12,"fullName":"Allan Rayvson A…
+2026-01-12T19:23:54.400160025Z 7:23:54 PM [express] GET /api/admin/shop/items 304 in 7ms :: [{"id":11,"name":"Kit UMP Emaús 2025","…
+2026-01-12T19:24:01.482505321Z 7:24:01 PM [express] GET /api/admin/shop/orders 304 in 28ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:25:40.474794998Z 7:25:40 PM [express] POST /api 200 in 1ms
+2026-01-12T19:26:17.228981261Z 7:26:17 PM [express] POST /api 200 in 1ms
+2026-01-12T19:30:00.007769753Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-12T19:30:00.586700119Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-12T19:30:30.400018425Z [Webhook] POST received: {"resource":"141744497122","topic":"payment"}
+2026-01-12T19:30:30.400049446Z [Webhook] Invalid payload format
+2026-01-12T19:30:30.400807428Z 7:30:30 PM [express] POST /api/pix/webhook 200 in 1ms
+2026-01-12T19:30:30.573387161Z [Webhook] POST received: {"action":"payment.updated","api_version":"v1","data":{"id":"141744497122"},"date_created":"2026-01-12T19:12:32Z","id":128140176896,"live_mode":true,"type":"payment","user_id":"190143310"}
+2026-01-12T19:30:30.573474073Z [Webhook] Action-based notification: payment.updated, ID: 141744497122
+2026-01-12T19:30:30.631344214Z 7:30:30 PM [express] POST /api/pix/webhook 200 in 58ms
+2026-01-12T19:30:34.638079716Z [Webhook] POST received: {"action":"payment.updated","api_version":"v1","data":{"id":"141744497122"},"date_created":"2026-01-12T19:12:32Z","id":128140174780,"live_mode":true,"type":"payment","user_id":"190143310"}
+2026-01-12T19:30:34.638102347Z [Webhook] Action-based notification: payment.updated, ID: 141744497122
+2026-01-12T19:30:34.671671202Z 7:30:34 PM [express] POST /api/pix/webhook 200 in 34ms
+2026-01-12T19:30:34.922707314Z [Webhook] POST received: {"resource":"141744497122","topic":"payment"}
+2026-01-12T19:30:34.922757555Z [Webhook] Invalid payload format
+2026-01-12T19:30:34.923370663Z 7:30:34 PM [express] POST /api/pix/webhook 200 in 0ms
+2026-01-12T19:30:57.544016998Z 7:30:57 PM [express] GET /api/admin/shop/promo-codes 304 in 64ms :: []
+2026-01-12T19:30:57.73621017Z 7:30:57 PM [express] GET /api/admin/shop/categories 304 in 9ms :: [{"id":10,"name":"Acessórios","isD…
+2026-01-12T19:30:57.878531054Z 7:30:57 PM [express] GET /api/admin/shop/items 304 in 149ms :: [{"id":11,"name":"Kit UMP Emaús 2025"…
+2026-01-12T19:31:09.251677425Z 7:31:09 PM [express] GET /api/admin/shop/orders 304 in 34ms :: [{"id":8,"orderCode":"#2026-0008","us…
+2026-01-12T19:31:15.276525508Z 7:31:15 PM [express] GET /api/treasury/dashboard/monthly 200 in 24ms :: [{"month":1,"monthName":"jan…
+2026-01-12T19:31:15.283168741Z 7:31:15 PM [express] GET /api/treasury/dashboard/category-expenses 304 in 5ms :: []
+2026-01-12T19:31:15.286684293Z 7:31:15 PM [express] GET /api/treasury/dashboard/category-income 200 in 6ms :: [{"category":"loja","…
+2026-01-12T19:31:15.290513695Z 7:31:15 PM [express] GET /api/treasury/dashboard/summary 200 in 41ms :: {"totalIncome":12500,"totalE…
+2026-01-12T19:31:21.352808285Z 7:31:21 PM [express] GET /api/treasury/entries 200 in 8ms :: [{"id":11,"type":"income","category":"l…
+2026-01-12T19:31:22.291671404Z 7:31:22 PM [express] GET /api/treasury/shop/orders 200 in 20ms :: [{"id":8,"orderCode":"#2026-0008",…
+2026-01-12T19:31:50.838558957Z 7:31:50 PM [express] GET /api/treasury/members/tax-status/2026 200 in 14ms :: [{"userId":12,"fullNam…
+2026-01-12T19:32:07.879356557Z 7:32:07 PM [express] POST /api/treasury/shop/notify-overdue 200 in 6ms :: {"message":"Notificacoes e…
+2026-01-12T19:32:36.345923025Z 7:32:36 PM [express] GET /api/treasury/settings/2026 304 in 4ms :: {"id":1,"year":2026,"percaptaAmou…
+2026-01-12T19:33:29.046728252Z 7:33:29 PM [express] GET /api/study/profile 200 in 268ms :: {"id":2,"userId":1,"totalXp":2040,"curre…
+2026-01-12T19:33:29.08074371Z 7:33:29 PM [express] GET /api/missions/daily 200 in 293ms :: {"missions":[{"id":61,"userId":1,"missi…
+2026-01-12T19:33:29.081225674Z 7:33:29 PM [express] GET /api/study/leaderboard 200 in 202ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T19:33:29.300743389Z 7:33:29 PM [express] GET /api/study/weeks 304 in 11ms :: [{"id":11,"weekNumber":5,"year":2026,"title…
+2026-01-12T19:33:29.547996719Z 7:33:29 PM [express] GET /api/study/practice/11/status 304 in 43ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T19:33:29.682635489Z 7:33:29 PM [express] GET /api/study/weeks/bulk 200 in 155ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T19:33:29.979342916Z 7:33:29 PM [express] GET /api/notifications/unread-count 200 in 31ms :: {"count":2}
+2026-01-12T19:33:29.980117988Z 7:33:29 PM [express] GET /api/study/weekly-goal 200 in 44ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T19:33:30.080175964Z 7:33:30 PM [express] GET /api/notifications 200 in 126ms :: {"notifications":[{"id":176,"userId":1,"…
+2026-01-12T19:33:30.089383892Z 7:33:30 PM [express] GET /api/study/streak/status 200 in 109ms :: {"needsRecovery":false,"streakAtRi…
+2026-01-12T19:33:35.898423441Z 7:33:35 PM [express] POST /api/notifications/mark-all-read 200 in 14ms :: {"message":"Todas as notif…
+2026-01-12T19:33:36.144957411Z 7:33:36 PM [express] GET /api/notifications 200 in 12ms :: {"notifications":[{"id":176,"userId":1,"t…
+2026-01-12T19:33:36.153056516Z 7:33:36 PM [express] GET /api/notifications/unread-count 200 in 5ms :: {"count":0}
+2026-01-12T19:33:36.349567122Z 7:33:36 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":176,"userId":1,"ty…
+2026-01-12T19:33:38.940167155Z 7:33:38 PM [express] GET /api/study/achievements 200 in 28ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T19:33:38.976484569Z 7:33:38 PM [express] GET /api/study/seasons 200 in 24ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-12T19:33:39.445467589Z [WebSocket] Authenticated connection: _ste7YNJEHHo-qGXAAAB, userId: 1
+2026-01-12T19:33:39.445531651Z [WebSocket] Client connected: _ste7YNJEHHo-qGXAAAB, authenticated: true
+2026-01-12T19:33:39.658240888Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:33:39.659844365Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:33:41.785427023Z [WebSocket] Client disconnected: _ste7YNJEHHo-qGXAAAB, reason: transport close
+2026-01-12T19:33:41.789759679Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:33:41.789963614Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:33:43.108268479Z 7:33:43 PM [express] GET /api/study/seasons 304 in 7ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T19:33:43.333267553Z 7:33:43 PM [express] GET /api/study/leaderboard 304 in 6ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T19:33:43.594016755Z 7:33:43 PM [express] GET /api/study/achievements 304 in 9ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T19:33:43.635461369Z [WebSocket] Authenticated connection: 4phwYX84lP-Keh7PAAAD, userId: 1
+2026-01-12T19:33:43.635480229Z [WebSocket] Client connected: 4phwYX84lP-Keh7PAAAD, authenticated: true
+2026-01-12T19:33:43.836567619Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:33:43.836855297Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:33:47.65094493Z [WebSocket] Client disconnected: 4phwYX84lP-Keh7PAAAD, reason: transport close
+2026-01-12T19:33:47.654977337Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:33:47.655148762Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:33:47.951162009Z 7:33:47 PM [express] GET /api/study/leaderboard 304 in 5ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T19:33:48.168440079Z 7:33:48 PM [express] GET /api/study/seasons 304 in 8ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T19:33:48.171847187Z 7:33:48 PM [express] GET /api/study/achievements 304 in 5ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T19:33:48.443167827Z [WebSocket] Authenticated connection: b-zymAXDt6ooLPEvAAAF, userId: 1
+2026-01-12T19:33:48.443549228Z [WebSocket] Client connected: b-zymAXDt6ooLPEvAAAF, authenticated: true
+2026-01-12T19:33:48.624886824Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:33:48.658351606Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:33:51.261993646Z [WebSocket] Client disconnected: b-zymAXDt6ooLPEvAAAF, reason: client namespace disconnect
+2026-01-12T19:33:51.265391415Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:33:51.265636802Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:33:51.316045836Z [Push] Subscribe sync: userId=1, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T19:33:51.318197529Z 7:33:51 PM [express] GET /api/study/events 304 in 19ms :: [{"id":4,"title":"Ano Novo: O que muda?","…
+2026-01-12T19:33:51.337600282Z [Push] Migrated subscription from anonymous to user 1
+2026-01-12T19:33:51.337616122Z [Push] Subscription saved for user 1. Keys present: p256dh=true, auth=true
+2026-01-12T19:33:51.338201699Z 7:33:51 PM [express] POST /api/notifications/subscribe 200 in 22ms :: {"message":"Inscrito para noti…
+2026-01-12T19:33:56.456167606Z [Push] Subscribe sync: userId=1, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T19:33:56.463682824Z [Push] Migrated subscription from anonymous to user 1
+2026-01-12T19:33:56.463699215Z [Push] Subscription saved for user 1. Keys present: p256dh=true, auth=true
+2026-01-12T19:33:56.46422383Z 7:33:56 PM [express] POST /api/notifications/subscribe 200 in 8ms :: {"message":"Inscrito para notif…
+2026-01-12T19:33:56.468909066Z 7:33:56 PM [express] GET /api/study/events 304 in 6ms :: [{"id":4,"title":"Ano Novo: O que muda?","d…
+2026-01-12T19:33:59.355678138Z 7:33:59 PM [express] GET /api/study/seasons 304 in 7ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T19:33:59.383734733Z 7:33:59 PM [express] GET /api/study/current-lesson 200 in 15ms :: {"lesson":{"id":53,"lessonNumber":…
+2026-01-12T19:34:00.832298649Z 7:34:00 PM [express] GET /api/study/leaderboard 304 in 8ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T19:34:00.83747825Z 7:34:00 PM [express] GET /api/study/profile 304 in 12ms :: {"id":2,"userId":1,"totalXp":2040,"curren…
+2026-01-12T19:34:00.856189333Z 7:34:00 PM [express] GET /api/missions/daily 304 in 15ms :: {"missions":[{"id":61,"userId":1,"missio…
+2026-01-12T19:34:01.05408856Z 7:34:01 PM [express] GET /api/study/weeks 304 in 4ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T19:34:01.28551265Z 7:34:01 PM [express] GET /api/study/weeks/bulk 304 in 19ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T19:34:01.290378242Z 7:34:01 PM [express] GET /api/study/practice/11/status 304 in 17ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T19:34:01.552993988Z 7:34:01 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":176,"userId":1,"ty…
+2026-01-12T19:34:01.558056225Z 7:34:01 PM [express] GET /api/study/streak/status 304 in 11ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T19:34:01.563016539Z 7:34:01 PM [express] GET /api/study/weekly-goal 304 in 15ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T19:34:01.591717422Z 7:34:01 PM [express] GET /api/notifications/unread-count 304 in 40ms :: {"count":0}
+2026-01-12T19:34:02.709706709Z 7:34:02 PM [express] GET /api/study/achievements 304 in 8ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T19:34:03.269391772Z [WebSocket] Authenticated connection: Mp-K3o1zQ2Bdk2hoAAAH, userId: 1
+2026-01-12T19:34:03.269777003Z [WebSocket] Client connected: Mp-K3o1zQ2Bdk2hoAAAH, authenticated: true
+2026-01-12T19:34:03.471514612Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:34:03.471772629Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:34:07.560232518Z [WebSocket] Client disconnected: Mp-K3o1zQ2Bdk2hoAAAH, reason: client namespace disconnect
+2026-01-12T19:34:07.564611134Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:34:07.564781859Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:34:07.585970635Z 7:34:07 PM [express] GET /api/study/weekly-goal 304 in 15ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T19:34:11.099578629Z [WebSocket] Authenticated connection: 7gknXK5kK-X4nWEjAAAJ, userId: 1
+2026-01-12T19:34:11.099829506Z [WebSocket] Client connected: 7gknXK5kK-X4nWEjAAAJ, authenticated: true
+2026-01-12T19:34:11.266050563Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:34:11.266424814Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:34:11.316973832Z [WebSocket] Client disconnected: 7gknXK5kK-X4nWEjAAAJ, reason: transport close
+2026-01-12T19:34:11.320954908Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:34:11.320967418Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:34:11.62958501Z 7:34:11 PM [express] GET /api/study/seasons 304 in 6ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T19:34:11.634009068Z 7:34:11 PM [express] GET /api/study/leaderboard 304 in 4ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T19:34:11.904160353Z 7:34:11 PM [express] GET /api/study/achievements 304 in 7ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T19:34:12.128034914Z [WebSocket] Authenticated connection: lt_xq_qNP5hhrcIVAAAL, userId: 1
+2026-01-12T19:34:12.12825002Z [WebSocket] Client connected: lt_xq_qNP5hhrcIVAAAL, authenticated: true
+2026-01-12T19:34:12.322253204Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:34:12.322583954Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:34:16.869992129Z 7:34:16 PM [express] GET /api/study/leaderboard 304 in 5ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T19:34:19.860744028Z [WebSocket] Client disconnected: lt_xq_qNP5hhrcIVAAAL, reason: client namespace disconnect
+2026-01-12T19:34:19.864727654Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:34:19.865238689Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:34:19.979686792Z 7:34:19 PM [express] GET /api/study/profile 304 in 76ms :: {"id":2,"userId":1,"totalXp":2040,"curren…
+2026-01-12T19:34:19.988538769Z 7:34:19 PM [express] GET /api/missions/daily 304 in 82ms :: {"missions":[{"id":61,"userId":1,"missio…
+2026-01-12T19:34:20.174893191Z 7:34:20 PM [express] GET /api/study/weeks 304 in 5ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T19:34:20.429653559Z 7:34:20 PM [express] GET /api/study/practice/11/status 304 in 11ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T19:34:20.457715024Z 7:34:20 PM [express] GET /api/study/weeks/bulk 304 in 18ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T19:34:20.716260232Z 7:34:20 PM [express] GET /api/notifications/unread-count 304 in 3ms :: {"count":0}
+2026-01-12T19:34:20.782978089Z 7:34:20 PM [express] GET /api/study/streak/status 304 in 82ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T19:34:20.792150356Z 7:34:20 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":176,"userId":1,"ty…
+2026-01-12T19:34:20.79264877Z 7:34:20 PM [express] GET /api/study/weekly-goal 304 in 84ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T19:34:34.667545118Z 7:34:34 PM [express] GET /api/elections/active 304 in 5ms
+2026-01-12T19:34:34.668465505Z 7:34:34 PM [express] GET /api/elections/history 304 in 9ms :: []
+2026-01-12T19:34:34.672552634Z 7:34:34 PM [express] GET /api/positions 304 in 8ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":"…
+2026-01-12T19:34:34.674678936Z 7:34:34 PM [express] GET /api/members 200 in 6ms :: [{"id":1,"fullName":"Administrador","email":"mar…
+2026-01-12T19:39:59.189329576Z 7:39:59 PM [express] GET /api/site-content/quem-somos 304 in 2200ms :: {"email":{"title":"","content…
+2026-01-12T19:39:59.204618902Z 7:39:59 PM [express] GET /api/site/highlights 200 in 2213ms :: {"devotional":{"id":4,"title":"Vivend…
+2026-01-12T19:40:11.554597808Z 7:40:11 PM [express] GET /api/site-content/quem-somos 304 in 4ms :: {"email":{"title":"","content":"…
+2026-01-12T19:40:11.556617237Z 7:40:11 PM [express] GET /api/site/highlights 304 in 15ms :: {"devotional":{"id":4,"title":"Vivendo …
+2026-01-12T19:40:18.172659445Z 7:40:18 PM [express] GET /api/site/devotionals 200 in 5ms :: [{"id":4,"title":"Vivendo para a Glória…
+2026-01-12T19:40:23.682803853Z 7:40:23 PM [express] GET /api/site/devotionals/2 200 in 10ms :: {"id":2,"title":"A Incomparável Prof…
+2026-01-12T19:40:24.950900157Z 7:40:24 PM [express] GET /api/site/devotionals/2/comments 200 in 9ms :: []
+2026-01-12T19:40:30.251202596Z 7:40:30 PM [express] GET /api/site/devotionals/4 200 in 4ms :: {"id":4,"title":"Vivendo para a Glóri…
+2026-01-12T19:40:30.711894466Z 7:40:30 PM [express] GET /api/site/devotionals/4/comments 200 in 5ms :: [{"id":3,"devotionalId":4,"u…
+2026-01-12T19:40:39.569818713Z 7:40:39 PM [express] GET /api/site/prayer-requests/approved 304 in 10ms :: []
+2026-01-12T19:40:50.479079984Z 7:40:50 PM [express] POST /api/auth/login-password 200 in 543ms :: {"user":{"id":7,"fullName":"Joshu…
+2026-01-12T19:40:54.681555027Z 7:40:54 PM [express] GET /api/study/leaderboard 200 in 187ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T19:40:54.684498982Z 7:40:54 PM [express] GET /api/study/profile 200 in 195ms :: {"id":5,"userId":7,"totalXp":305,"curren…
+2026-01-12T19:40:54.717934009Z 7:40:54 PM [express] GET /api/missions/daily 200 in 226ms :: {"missions":[{"id":81,"userId":7,"missi…
+2026-01-12T19:40:54.956902335Z 7:40:54 PM [express] GET /api/study/weeks 304 in 9ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T19:40:55.380174413Z 7:40:55 PM [express] GET /api/study/practice/11/status 304 in 182ms :: {"weekId":11,"isUnlocked":fal…
+2026-01-12T19:40:55.480144082Z 7:40:55 PM [express] GET /api/study/weeks/bulk 304 in 304ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T19:40:55.766946965Z 7:40:55 PM [express] GET /api/notifications/unread-count 200 in 10ms :: {"count":7}
+2026-01-12T19:40:55.769759757Z 7:40:55 PM [express] GET /api/study/streak/status 200 in 15ms :: {"needsRecovery":true,"streakAtRisk…
+2026-01-12T19:40:55.771017394Z 7:40:55 PM [express] GET /api/notifications 200 in 22ms :: {"notifications":[{"id":174,"userId":7,"t…
+2026-01-12T19:40:55.802359969Z 7:40:55 PM [express] GET /api/study/weekly-goal 200 in 44ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T19:41:03.355119681Z 7:41:03 PM [express] GET /api/study/events 200 in 34ms :: [{"id":4,"title":"Ano Novo: O que muda?","…
+2026-01-12T19:41:05.924860574Z 7:41:05 PM [express] GET /api/study/events/4 200 in 16ms :: {"event":{"id":4,"title":"Ano Novo: O qu…
+2026-01-12T19:41:08.859731716Z [Event Participate] User 7 registered as participant in event 4
+2026-01-12T19:41:08.860431197Z 7:41:08 PM [express] POST /api/study/events/4/participate 200 in 10ms :: {"success":true}
+2026-01-12T19:41:08.873185769Z 7:41:08 PM [express] GET /api/study/events/4/lessons/1 200 in 8ms :: {"lesson":{"id":16,"eventId":4,…
+2026-01-12T19:43:13.454694573Z [Level Up] User 7: Level 1 -> 2, Hearts 4 -> 5
+2026-01-12T19:43:13.482474274Z 7:43:13 PM [express] POST /api/study/events/4/lessons/16/complete 200 in 121ms :: {"id":14,"userId":…
+2026-01-12T19:43:13.780989737Z 7:43:13 PM [express] GET /api/study/events/4 200 in 65ms :: {"event":{"id":4,"title":"Ano Novo: O qu…
+2026-01-12T19:43:13.78417048Z 7:43:13 PM [express] GET /api/study/events/4/lessons/1 200 in 62ms :: {"lesson":{"id":16,"eventId":4…
+2026-01-12T19:43:14.006061267Z 7:43:14 PM [express] GET /api/study/events/4/lessons/1 200 in 9ms :: {"lesson":{"id":16,"eventId":4,…
+2026-01-12T19:44:41.855098153Z 7:44:41 PM [express] PATCH /api/admin/members/12 200 in 49ms :: {"id":12,"fullName":"Allan Rayvson A…
+2026-01-12T19:44:42.140583675Z 7:44:42 PM [express] GET /api/members 200 in 6ms :: [{"id":1,"fullName":"Administrador","email":"mar…
+2026-01-12T19:45:03.227869825Z 7:45:03 PM [express] PATCH /api/admin/members/5 200 in 10ms :: {"id":5,"fullName":"David Moura","ema…
+2026-01-12T19:45:03.453819029Z 7:45:03 PM [express] GET /api/members 200 in 7ms :: [{"id":1,"fullName":"Administrador","email":"mar…
+2026-01-12T19:45:13.006639851Z 7:45:13 PM [express] PATCH /api/admin/members/13 200 in 13ms :: {"id":13,"fullName":"Erick Mesquita …
+2026-01-12T19:45:13.266548366Z 7:45:13 PM [express] GET /api/members 200 in 8ms :: [{"id":1,"fullName":"Administrador","email":"mar…
+2026-01-12T19:45:27.482809909Z 7:45:27 PM [express] PATCH /api/admin/members/11 200 in 11ms :: {"id":11,"fullName":"Evelyn Moura","…
+2026-01-12T19:45:27.739319715Z 7:45:27 PM [express] GET /api/members 200 in 8ms :: [{"id":1,"fullName":"Administrador","email":"mar…
+2026-01-12T19:45:49.722746507Z 7:45:49 PM [express] PATCH /api/admin/members/15 200 in 11ms :: {"id":15,"fullName":"Gabriela Ramos"…
+2026-01-12T19:45:50.005955632Z 7:45:50 PM [express] GET /api/members 200 in 11ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:46:18.847848214Z 7:46:18 PM [express] PATCH /api/admin/members/2 200 in 11ms :: {"id":2,"fullName":"Geovane Nasciment…
+2026-01-12T19:46:19.089666441Z 7:46:19 PM [express] GET /api/members 200 in 10ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:46:54.648317064Z 7:46:54 PM [express] PATCH /api/admin/members/9 200 in 33ms :: {"id":9,"fullName":"Gustavo Ramos","e…
+2026-01-12T19:46:54.896781654Z 7:46:54 PM [express] GET /api/members 200 in 11ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:47:09.773096018Z 7:47:09 PM [express] PATCH /api/admin/members/6 200 in 10ms :: {"id":6,"fullName":"Henrique Ramos","…
+2026-01-12T19:47:10.061851164Z 7:47:10 PM [express] GET /api/members 200 in 16ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:47:33.471099137Z 7:47:33 PM [express] PATCH /api/admin/members/17 200 in 12ms :: {"id":17,"fullName":"Ivanise Nascime…
+2026-01-12T19:47:33.701967964Z 7:47:33 PM [express] GET /api/members 200 in 12ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:47:43.056915193Z 7:47:43 PM [express] PATCH /api/admin/members/7 200 in 11ms :: {"id":7,"fullName":"Joshua Yoshio","e…
+2026-01-12T19:47:43.307743202Z 7:47:43 PM [express] GET /api/members 200 in 12ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:47:59.661997899Z 7:47:59 PM [express] PATCH /api/admin/members/3 200 in 12ms :: {"id":3,"fullName":"João Pedro Gomes"…
+2026-01-12T19:48:00.381665507Z 7:48:00 PM [express] GET /api/members 200 in 211ms :: [{"id":1,"fullName":"Administrador","email":"m…
+2026-01-12T19:48:11.89936853Z 7:48:11 PM [express] PATCH /api/admin/members/16 200 in 10ms :: {"id":16,"fullName":"Larissa Mendonç…
+2026-01-12T19:48:12.182616964Z 7:48:12 PM [express] GET /api/members 200 in 75ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:48:34.523655172Z 7:48:34 PM [express] PATCH /api/admin/members/4 200 in 10ms :: {"id":4,"fullName":"Pedro Gonzaga","e…
+2026-01-12T19:48:34.779388263Z 7:48:34 PM [express] GET /api/members 200 in 13ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:49:00.780749852Z 7:49:00 PM [express] PATCH /api/admin/members/8 200 in 12ms :: {"id":8,"fullName":"Raul Gonzaga","em…
+2026-01-12T19:49:01.083159585Z 7:49:01 PM [express] GET /api/members 200 in 14ms :: [{"id":1,"fullName":"Administrador","email":"ma…
+2026-01-12T19:49:05.188864938Z 7:49:05 PM [express] GET /api/study/profile 304 in 253ms :: {"id":2,"userId":1,"totalXp":2040,"curre…
+2026-01-12T19:49:05.583036728Z 7:49:05 PM [express] GET /api/study/leaderboard 200 in 556ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T19:49:05.678842573Z 7:49:05 PM [express] GET /api/study/weeks 304 in 95ms :: [{"id":11,"weekNumber":5,"year":2026,"title…
+2026-01-12T19:49:05.808944839Z 7:49:05 PM [express] GET /api/missions/daily 304 in 877ms :: {"missions":[{"id":61,"userId":1,"missi…
+2026-01-12T19:49:05.888109758Z 7:49:05 PM [express] GET /api/study/practice/11/status 304 in 9ms :: {"weekId":11,"isUnlocked":false…
+2026-01-12T19:49:06.023022664Z 7:49:06 PM [express] GET /api/study/weeks/bulk 304 in 213ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T19:49:06.342132074Z 7:49:06 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":176,"userId":1,"ty…
+2026-01-12T19:49:06.353554528Z 7:49:06 PM [express] GET /api/study/streak/status 304 in 15ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T19:49:06.378690751Z 7:49:06 PM [express] GET /api/study/weekly-goal 304 in 35ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T19:49:06.38722116Z 7:49:06 PM [express] GET /api/notifications/unread-count 304 in 47ms :: {"count":0}
+2026-01-12T19:49:07.258459138Z 7:49:07 PM [express] GET /api/study/achievements 304 in 19ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T19:49:07.259667863Z 7:49:07 PM [express] GET /api/study/seasons 304 in 18ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-12T19:49:07.776717828Z [WebSocket] Authenticated connection: vDQ4D-wsBfKxYk4mAAAN, userId: 1
+2026-01-12T19:49:07.777386457Z [WebSocket] Client connected: vDQ4D-wsBfKxYk4mAAAN, authenticated: true
+2026-01-12T19:49:07.965780604Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:49:07.966386071Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:49:12.329879464Z 7:49:12 PM [express] GET /api/study/leaderboard 304 in 19ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:49:17.662994154Z 7:49:17 PM [express] GET /api/study/leaderboard 304 in 18ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:49:22.974758389Z 7:49:22 PM [express] GET /api/study/leaderboard 304 in 16ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:50:13.680636371Z 7:50:13 PM [express] GET /api/study/leaderboard 304 in 46ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:50:19.021098673Z 7:50:19 PM [express] GET /api/study/leaderboard 304 in 11ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:50:24.331009842Z 7:50:24 PM [express] GET /api/study/leaderboard 304 in 13ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:51:47.784532322Z 7:51:47 PM [express] GET /api/study/leaderboard 304 in 57ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:51:53.041238281Z 7:51:53 PM [express] GET /api/study/leaderboard 304 in 11ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:51:58.583648563Z 7:51:58 PM [express] GET /api/study/leaderboard 304 in 12ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:53:22.516772154Z [WebSocket] Client disconnected: vDQ4D-wsBfKxYk4mAAAN, reason: ping timeout
+2026-01-12T19:53:22.555326818Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:53:22.555478082Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:59:31.463522204Z 7:59:31 PM [express] GET /api/study/leaderboard 304 in 536ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T19:59:33.069432959Z [WebSocket] Authenticated connection: BIUYcYBwMfOGeKnQAAAP, userId: 1
+2026-01-12T19:59:33.069608234Z [WebSocket] Client connected: BIUYcYBwMfOGeKnQAAAP, authenticated: true
+2026-01-12T19:59:33.253632878Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:59:33.253878466Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:59:35.611397922Z [WebSocket] Client disconnected: BIUYcYBwMfOGeKnQAAAP, reason: transport close
+2026-01-12T19:59:35.612138963Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:59:35.612246176Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:59:36.186788495Z 7:59:36 PM [express] GET /api/study/seasons 304 in 16ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-12T19:59:36.418739717Z 7:59:36 PM [express] GET /api/study/leaderboard 304 in 11ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:59:36.761094217Z 7:59:36 PM [express] GET /api/study/achievements 304 in 15ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T19:59:36.761124098Z [WebSocket] Authenticated connection: oDJf7m6U0Umw07C-AAAR, userId: 1
+2026-01-12T19:59:36.761128768Z [WebSocket] Client connected: oDJf7m6U0Umw07C-AAAR, authenticated: true
+2026-01-12T19:59:36.970760619Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:59:36.970925384Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:59:40.128091821Z [WebSocket] Client disconnected: oDJf7m6U0Umw07C-AAAR, reason: client namespace disconnect
+2026-01-12T19:59:40.133632792Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:59:40.133725995Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:59:40.294874293Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:40.294893713Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:40.294898903Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:40.294903924Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:40.294908114Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:40.294911854Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:40.294916104Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:40.294919684Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:40.294939285Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:40.296243193Z 7:59:40 PM [express] GET /api/study/member/7 500 in 135ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T19:59:40.301419434Z 7:59:40 PM [express] GET /api/study/member/7/cards 304 in 122ms :: []
+2026-01-12T19:59:41.546550321Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:41.546576452Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:41.546582902Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:41.546589512Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:41.546594592Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:41.546614433Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:41.546618733Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:41.546621923Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:41.546626313Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:41.547167749Z 7:59:41 PM [express] GET /api/study/member/7 500 in 24ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T19:59:43.638455373Z [WebSocket] Authenticated connection: tMLX4zTIj90NCmb3AAAT, userId: 1
+2026-01-12T19:59:43.638623268Z [WebSocket] Client connected: tMLX4zTIj90NCmb3AAAT, authenticated: true
+2026-01-12T19:59:43.832645234Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:59:43.832825719Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:59:45.437409065Z [WebSocket] Client disconnected: tMLX4zTIj90NCmb3AAAT, reason: client namespace disconnect
+2026-01-12T19:59:45.440006801Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:59:45.440065972Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:59:45.482317354Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:45.482334214Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:45.482341195Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:45.482347845Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:45.482353285Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:45.482358795Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:45.482365765Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:45.482370945Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:45.482375156Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:45.482958513Z 7:59:45 PM [express] GET /api/study/member/7 500 in 23ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T19:59:46.700436754Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:46.700466405Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:46.700473725Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:46.700478405Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:46.700482155Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:46.700485695Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:46.700489695Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:46.700493275Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:46.700497366Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:46.701020011Z 7:59:46 PM [express] GET /api/study/member/7 500 in 23ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T19:59:48.176670418Z [WebSocket] Authenticated connection: nFPB1e3YhlDQtmYyAAAV, userId: 1
+2026-01-12T19:59:48.176830443Z [WebSocket] Client connected: nFPB1e3YhlDQtmYyAAAV, authenticated: true
+2026-01-12T19:59:48.357678924Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:59:48.357826109Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:59:48.498672875Z [WebSocket] Client disconnected: nFPB1e3YhlDQtmYyAAAV, reason: client namespace disconnect
+2026-01-12T19:59:48.501389584Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:59:48.501489497Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:59:48.554519753Z 7:59:48 PM [express] GET /api/study/member/5/cards 304 in 3ms :: []
+2026-01-12T19:59:48.589293046Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:48.589309547Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:48.589312807Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:48.589316327Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:48.589319377Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:48.589321987Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:48.589325267Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:48.589328247Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:48.589331437Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:48.590003537Z 7:59:48 PM [express] GET /api/study/member/5 500 in 46ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T19:59:49.808717114Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:49.808737345Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:49.808742505Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:49.808746705Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:49.808749605Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:49.808752555Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:49.808755685Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:49.808758345Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:49.808761865Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:49.809343693Z 7:59:49 PM [express] GET /api/study/member/5 500 in 26ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T19:59:51.466759928Z [WebSocket] Authenticated connection: KKzx0BssNvqLaqJAAAAX, userId: 1
+2026-01-12T19:59:51.466953784Z [WebSocket] Client connected: KKzx0BssNvqLaqJAAAAX, authenticated: true
+2026-01-12T19:59:51.650961858Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T19:59:51.651169564Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T19:59:55.960684931Z 7:59:55 PM [express] GET /api/study/leaderboard 304 in 16ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T19:59:57.448874103Z [WebSocket] Client disconnected: KKzx0BssNvqLaqJAAAAX, reason: client namespace disconnect
+2026-01-12T19:59:57.451813549Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T19:59:57.451901262Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T19:59:57.484407439Z 7:59:57 PM [express] GET /api/study/member/2/cards 200 in 3ms :: []
+2026-01-12T19:59:57.585143116Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:57.585165666Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:57.585171116Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:57.585179247Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:57.585183607Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:57.585187697Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:57.585192977Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:57.585197307Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:57.585202817Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:57.585942769Z 7:59:57 PM [express] GET /api/study/member/2 500 in 54ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T19:59:58.901711235Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T19:59:58.901748176Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T19:59:58.901754506Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T19:59:58.901759706Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T19:59:58.901764087Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T19:59:58.901768276Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T19:59:58.901772677Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T19:59:58.901776407Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T19:59:58.901780727Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T19:59:58.902365844Z 7:59:58 PM [express] GET /api/study/member/2 500 in 25ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:00:00.009912819Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-12T20:00:00.010910059Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-12T20:00:00.080227409Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-12T20:00:00.108751231Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-12T20:00:00.532476843Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:00:00.532514484Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:00:00.532519984Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:00:00.532525404Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:00:00.532529714Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:00:00.532533814Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:00:00.532538014Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:00:00.532541725Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:00:00.532545885Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:00:00.533321207Z 8:00:00 PM [express] GET /api/study/member/2 500 in 33ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:00:01.769706289Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:00:01.76973358Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:00:01.7697406Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:00:01.76974713Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:00:01.76975257Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:00:01.769758591Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:00:01.769763891Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:00:01.769767441Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:00:01.769771571Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:00:01.770370718Z 8:00:01 PM [express] GET /api/study/member/2 500 in 33ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:00:06.248632133Z [WebSocket] Authenticated connection: QFLDLWtUIRn-GsvBAAAa, userId: 1
+2026-01-12T20:00:06.248811679Z [WebSocket] Client connected: QFLDLWtUIRn-GsvBAAAa, authenticated: true
+2026-01-12T20:00:06.423208252Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:00:06.423433089Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:00:07.099237169Z [WebSocket] Client disconnected: QFLDLWtUIRn-GsvBAAAa, reason: client namespace disconnect
+2026-01-12T20:00:07.102859795Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:00:07.102956677Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:00:07.134141216Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:00:07.134160627Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:00:07.134166297Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:00:07.134187238Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:00:07.134193718Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:00:07.134197238Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:00:07.134201168Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:00:07.134207508Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:00:07.134778615Z 8:00:07 PM [express] GET /api/study/profile/stats 500 in 5ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:00:07.14181583Z 8:00:07 PM [express] GET /api/study/profile 304 in 13ms :: {"id":2,"userId":1,"totalXp":2040,"curren…
+2026-01-12T20:00:07.144069866Z 8:00:07 PM [express] GET /api/study/profile/activities 200 in 17ms :: [{"type":"lesson_completed","t…
+2026-01-12T20:00:07.145999352Z 8:00:07 PM [express] GET /api/study/cards 304 in 3ms :: []
+2026-01-12T20:00:07.204144927Z 8:00:07 PM [express] GET /api/study/achievements 200 in 71ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T20:00:08.320355685Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:00:08.320385886Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:00:08.320389666Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:00:08.320392376Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:00:08.320395176Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:00:08.320397787Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:00:08.320400727Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:00:08.320403587Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:00:08.320420347Z 8:00:08 PM [express] GET /api/study/profile/stats 500 in 5ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:00:29.438120605Z 8:00:29 PM [express] GET /api/study/weeks 304 in 7ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T20:00:29.469809528Z 8:00:29 PM [express] GET /api/missions/daily 304 in 34ms :: {"missions":[{"id":61,"userId":1,"missio…
+2026-01-12T20:00:29.689223934Z 8:00:29 PM [express] GET /api/study/practice/11/status 304 in 17ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T20:00:29.719928919Z 8:00:29 PM [express] GET /api/study/weeks/bulk 304 in 40ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T20:00:29.986213192Z 8:00:29 PM [express] GET /api/notifications/unread-count 304 in 5ms :: {"count":0}
+2026-01-12T20:00:29.986949613Z 8:00:29 PM [express] GET /api/notifications 304 in 13ms :: {"notifications":[{"id":176,"userId":1,"t…
+2026-01-12T20:00:29.987670254Z 8:00:29 PM [express] GET /api/study/streak/status 304 in 21ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T20:00:29.997576613Z 8:00:29 PM [express] GET /api/study/weekly-goal 304 in 26ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:00:33.788176718Z 8:00:33 PM [express] GET /api/site-content/quem-somos 304 in 7ms :: {"email":{"title":"","content":"…
+2026-01-12T20:00:33.884935069Z 8:00:33 PM [express] GET /api/site/highlights 304 in 204ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T20:00:39.087614706Z 8:00:39 PM [express] POST /api/auth/login-password 200 in 464ms :: {"user":{"id":2,"fullName":"Geova…
+2026-01-12T20:00:39.857719864Z [Push] Subscribe sync: userId=2, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T20:00:39.874997858Z [Push] Migrated subscription from anonymous to user 2
+2026-01-12T20:00:39.875014318Z [Push] Subscription saved for user 2. Keys present: p256dh=true, auth=true
+2026-01-12T20:00:39.875595155Z 8:00:39 PM [express] POST /api/notifications/subscribe 200 in 19ms :: {"message":"Inscrito para noti…
+2026-01-12T20:00:44.296500043Z 8:00:44 PM [express] GET /api/study/weekly-goal 200 in 22ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:00:47.168285683Z [WebSocket] Authenticated connection: GHfZtYZwhKbqEsfVAAAc, userId: 2
+2026-01-12T20:00:47.168460498Z [WebSocket] Client connected: GHfZtYZwhKbqEsfVAAAc, authenticated: true
+2026-01-12T20:00:47.423180623Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:00:47.423764531Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:00:48.387628506Z [WebSocket] Client disconnected: GHfZtYZwhKbqEsfVAAAc, reason: client namespace disconnect
+2026-01-12T20:00:48.391364075Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:00:48.391458458Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:00:48.420474914Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:00:48.420489754Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:00:48.420493764Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:00:48.420496965Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:00:48.420499925Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:00:48.420502725Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:00:48.420505705Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:00:48.420508705Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:00:48.420998229Z 8:00:48 PM [express] GET /api/study/profile/stats 500 in 4ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:00:49.634690557Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:00:49.634714248Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:00:49.634721238Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:00:49.634727419Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:00:49.634733359Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:00:49.634738149Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:00:49.634742579Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:00:49.634746699Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:00:49.635328836Z 8:00:49 PM [express] GET /api/study/profile/stats 500 in 4ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:01:04.263343798Z [WebSocket] Authenticated connection: kZlxxkIf3sDyn996AAAe, userId: 2
+2026-01-12T20:01:04.263368029Z [WebSocket] Client connected: kZlxxkIf3sDyn996AAAe, authenticated: true
+2026-01-12T20:01:04.52345055Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:01:04.523878252Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:01:06.965623606Z [WebSocket] Client disconnected: kZlxxkIf3sDyn996AAAe, reason: transport close
+2026-01-12T20:01:06.971385564Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:01:06.971402755Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:01:07.291738612Z 8:01:07 PM [express] GET /api/study/leaderboard 304 in 37ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:01:07.434001739Z 8:01:07 PM [express] GET /api/study/seasons 200 in 8ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T20:01:07.586608257Z 8:01:07 PM [express] GET /api/study/achievements 200 in 10ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T20:01:07.7626869Z [WebSocket] Authenticated connection: fd1h6Ko8LCLv4CGkAAAg, userId: 2
+2026-01-12T20:01:07.76305122Z [WebSocket] Client connected: fd1h6Ko8LCLv4CGkAAAg, authenticated: true
+2026-01-12T20:01:08.02720518Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:01:08.027674694Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:01:12.1296409Z [WebSocket] Client disconnected: fd1h6Ko8LCLv4CGkAAAg, reason: client namespace disconnect
+2026-01-12T20:01:12.133385249Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:01:12.133461532Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:01:12.15640951Z 8:01:12 PM [express] GET /api/study/achievements 200 in 9ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T20:01:12.179237856Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:01:12.179266637Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:01:12.179309548Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:01:12.179316758Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:01:12.179320758Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:01:12.179324869Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:01:12.179329669Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:01:12.179334149Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:01:12.179988188Z 8:01:12 PM [express] GET /api/study/profile/stats 500 in 21ms :: {"message":"Erro ao buscar estatíst…
+2026-01-12T20:01:12.192542934Z 8:01:12 PM [express] GET /api/study/profile/activities 200 in 12ms :: [{"type":"achievement_unlocked…
+2026-01-12T20:01:12.291954591Z 8:01:12 PM [express] GET /api/study/cards 304 in 132ms :: []
+2026-01-12T20:01:12.295820794Z 8:01:12 PM [express] GET /api/study/profile 200 in 134ms :: {"id":1,"userId":2,"totalXp":1495,"curre…
+2026-01-12T20:01:13.401173264Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:01:13.401195744Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:01:13.401209945Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:01:13.401213395Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:01:13.401216025Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:01:13.401218705Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:01:13.401222075Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:01:13.401226545Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:01:13.401824872Z 8:01:13 PM [express] GET /api/study/profile/stats 500 in 4ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:01:25.339960899Z [WebSocket] Authenticated connection: ico3EEPODWv61VoOAAAi, userId: 2
+2026-01-12T20:01:25.340108133Z [WebSocket] Client connected: ico3EEPODWv61VoOAAAi, authenticated: true
+2026-01-12T20:01:25.594518468Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:01:25.594879579Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:01:29.880701912Z 8:01:29 PM [express] GET /api/study/leaderboard 304 in 12ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:01:35.150945779Z 8:01:35 PM [express] GET /api/study/leaderboard 304 in 10ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:01:35.909318583Z [WebSocket] Client disconnected: ico3EEPODWv61VoOAAAi, reason: client namespace disconnect
+2026-01-12T20:01:35.912419314Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:01:35.912477615Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:01:35.951455582Z 8:01:35 PM [express] GET /api/study/member/16/cards 304 in 4ms :: []
+2026-01-12T20:01:35.993171648Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:01:35.993194898Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:01:35.993206619Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:01:35.993217369Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:01:35.993223509Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:01:35.993235089Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:01:35.9932411Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:01:35.99324648Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:01:35.99325298Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:01:35.99392968Z 8:01:35 PM [express] GET /api/study/member/16 500 in 44ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:01:37.232963835Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:01:37.232991945Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:01:37.232999106Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:01:37.233005556Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:01:37.233021566Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:01:37.233023886Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:01:37.233026957Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:01:37.233029047Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:01:37.233032047Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:01:37.233543092Z 8:01:37 PM [express] GET /api/study/member/16 500 in 19ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:01:38.736724106Z [WebSocket] Authenticated connection: 7hvfZHs0hLJ82olvAAAk, userId: 2
+2026-01-12T20:01:38.736915892Z [WebSocket] Client connected: 7hvfZHs0hLJ82olvAAAk, authenticated: true
+2026-01-12T20:01:39.012420462Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:01:39.012781502Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:01:40.237616433Z [WebSocket] Client disconnected: 7hvfZHs0hLJ82olvAAAk, reason: client namespace disconnect
+2026-01-12T20:01:40.239764166Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:01:40.239826338Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:01:40.277683071Z [Push] Subscribe sync: userId=2, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T20:01:40.282513952Z [Push] Migrated subscription from anonymous to user 2
+2026-01-12T20:01:40.282541333Z [Push] Subscription saved for user 2. Keys present: p256dh=true, auth=true
+2026-01-12T20:01:40.283056758Z 8:01:40 PM [express] POST /api/notifications/subscribe 200 in 6ms :: {"message":"Inscrito para notif…
+2026-01-12T20:01:40.2975529Z 8:01:40 PM [express] GET /api/study/events 304 in 9ms :: [{"id":4,"title":"Ano Novo: O que muda?","d…
+2026-01-12T20:01:40.78575605Z 8:01:40 PM [express] GET /api/study/current-lesson 200 in 10ms :: {"lesson":{"id":53,"lessonNumber":…
+2026-01-12T20:01:41.073057934Z 8:01:41 PM [express] GET /api/site-content/quem-somos 304 in 4ms :: {"email":{"title":"","content":"…
+2026-01-12T20:01:41.098528307Z 8:01:41 PM [express] GET /api/notifications 304 in 5ms :: {"notifications":[{"id":174,"userId":7,"ty…
+2026-01-12T20:01:41.112854014Z 8:01:41 PM [express] GET /api/notifications/unread-count 304 in 2ms :: {"count":7}
+2026-01-12T20:01:41.493119698Z 8:01:41 PM [express] GET /api/site/highlights 304 in 176ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T20:01:42.471813725Z 8:01:42 PM [express] GET /api/study/seasons/4 304 in 12ms :: {"id":4,"title":"Não Jogue Sua Vida For…
+2026-01-12T20:01:46.024708973Z 8:01:46 PM [express] GET /api/study/lessons/53 304 in 9ms :: {"id":53,"studyWeekId":null,"seasonId":…
+2026-01-12T20:01:46.317660061Z 8:01:46 PM [express] POST /api/study/lessons/53/start 200 in 22ms :: {"id":28,"userId":2,"lessonId":…
+2026-01-12T20:01:46.552386673Z 8:01:46 PM [express] GET /api/study/profile 304 in 11ms :: {"id":1,"userId":2,"totalXp":1495,"curren…
+2026-01-12T20:01:52.084596722Z 8:01:52 PM [express] POST /api/study/units/761/complete 200 in 220ms :: {"unitProgress":{"id":353,"u…
+2026-01-12T20:01:52.085291232Z 8:01:52 PM [express] POST /api/study/units/762/complete 200 in 225ms :: {"unitProgress":{"id":355,"u…
+2026-01-12T20:01:52.087136826Z 8:01:52 PM [express] POST /api/study/units/764/complete 200 in 215ms :: {"unitProgress":{"id":357,"u…
+2026-01-12T20:01:52.088072193Z 8:01:52 PM [express] POST /api/study/units/759/complete 200 in 226ms :: {"unitProgress":{"id":354,"u…
+2026-01-12T20:01:52.088739553Z 8:01:52 PM [express] POST /api/study/units/760/complete 200 in 222ms :: {"unitProgress":{"id":356,"u…
+2026-01-12T20:01:52.179091646Z 8:01:52 PM [express] POST /api/study/units/763/complete 200 in 300ms :: {"unitProgress":{"id":359,"u…
+2026-01-12T20:01:52.182812475Z 8:01:52 PM [express] POST /api/study/units/758/complete 200 in 315ms :: {"unitProgress":{"id":358,"u…
+2026-01-12T20:01:52.435426098Z [Level Up] User 2: Level 3 -> 4, Hearts 3 -> 4
+2026-01-12T20:01:52.464072503Z 8:01:52 PM [express] POST /api/study/lessons/53/complete-stage 200 in 66ms :: {"xpAwarded":50,"profi…
+2026-01-12T20:01:55.997075Z 8:01:55 PM [express] POST /api/study/units/767/complete 200 in 105ms :: {"unitProgress":{"id":361,"u…
+2026-01-12T20:01:55.997098741Z 8:01:55 PM [express] POST /api/study/units/766/complete 200 in 112ms :: {"unitProgress":{"id":360,"u…
+2026-01-12T20:01:56.004791765Z 8:01:56 PM [express] POST /api/study/units/765/complete 200 in 27ms :: {"unitProgress":{"id":362,"us…
+2026-01-12T20:01:56.263047312Z [Level Up] User 2: Level 3 -> 4, Hearts 4 -> 5
+2026-01-12T20:01:56.281359406Z 8:01:56 PM [express] POST /api/study/lessons/53/complete-stage 200 in 31ms :: {"xpAwarded":50,"profi…
+2026-01-12T20:02:03.580978388Z [Level Up] User 2: Level 3 -> 4, Hearts already at max (5)
+2026-01-12T20:02:03.592836113Z 8:02:03 PM [express] POST /api/study/units/770/answer 200 in 32ms :: {"unitProgress":{"id":363,"user…
+2026-01-12T20:02:23.37416791Z [Level Up] User 2: Level 3 -> 4, Hearts already at max (5)
+2026-01-12T20:02:23.385608573Z 8:02:23 PM [express] POST /api/study/units/769/answer 200 in 29ms :: {"unitProgress":{"id":364,"user…
+2026-01-12T20:02:35.56246034Z 8:02:35 PM [express] POST /api/study/units/772/answer 200 in 28ms :: {"unitProgress":{"id":365,"user…
+2026-01-12T20:02:42.160907876Z [Level Up] User 2: Level 3 -> 4, Hearts 4 -> 5
+2026-01-12T20:02:42.171921137Z 8:02:42 PM [express] POST /api/study/units/771/answer 200 in 28ms :: {"unitProgress":{"id":366,"user…
+2026-01-12T20:02:49.968602695Z 8:02:49 PM [express] PATCH /api/notifications/174/read 200 in 5ms :: {"message":"Notificacao marcada…
+2026-01-12T20:02:50.234092973Z 8:02:50 PM [express] GET /api/notifications/unread-count 200 in 5ms :: {"count":6}
+2026-01-12T20:02:50.283445871Z 8:02:50 PM [express] GET /api/notifications 200 in 52ms :: {"notifications":[{"id":174,"userId":7,"t…
+2026-01-12T20:02:50.525032863Z 8:02:50 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":174,"userId":7,"ty…
+2026-01-12T20:02:53.636024363Z [Level Up] User 2: Level 3 -> 4, Hearts already at max (5)
+2026-01-12T20:02:53.653856023Z 8:02:53 PM [express] POST /api/study/units/768/answer 200 in 45ms :: {"unitProgress":{"id":367,"user…
+2026-01-12T20:02:54.614163431Z 8:02:54 PM [express] POST /api/study/units/768/complete 200 in 27ms :: {"unitProgress":{"id":367,"us…
+2026-01-12T20:02:54.834845793Z 8:02:54 PM [express] POST /api/study/units/769/complete 200 in 27ms :: {"unitProgress":{"id":364,"us…
+2026-01-12T20:02:55.084346945Z 8:02:55 PM [express] POST /api/study/units/770/complete 200 in 26ms :: {"unitProgress":{"id":363,"us…
+2026-01-12T20:02:55.329111379Z 8:02:55 PM [express] POST /api/study/units/771/complete 200 in 26ms :: {"unitProgress":{"id":366,"us…
+2026-01-12T20:02:55.561644946Z 8:02:55 PM [express] POST /api/study/units/772/complete 200 in 26ms :: {"unitProgress":{"id":365,"us…
+2026-01-12T20:02:55.980609768Z 8:02:55 PM [express] GET /api/site/devotionals 304 in 5ms :: [{"id":4,"title":"Vivendo para a Glória…
+2026-01-12T20:02:57.009024701Z [Achievement] Checking for user 2: event=lesson_complete, lessonsCompleted=4, streak=1, totalXp=1685, alreadyUnlocked=7
+2026-01-12T20:02:57.082312957Z 8:02:57 PM [express] POST /api/study/lessons/53/complete 200 in 355ms :: {"progress":{"id":28,"userI…
+2026-01-12T20:02:58.626988346Z 8:02:58 PM [express] GET /api/study/seasons 200 in 6ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T20:02:58.628291244Z 8:02:58 PM [express] GET /api/study/current-lesson 200 in 13ms :: {"lesson":{"id":59,"lessonNumber":…
+2026-01-12T20:02:58.651641445Z 8:02:58 PM [express] GET /api/study/seasons/4 200 in 13ms :: {"id":4,"title":"Não Jogue Sua Vida For…
+2026-01-12T20:03:01.585366579Z [WebSocket] Authenticated connection: 337VqzitGnzOzr2iAAAm, userId: 2
+2026-01-12T20:03:01.585594795Z [WebSocket] Client connected: 337VqzitGnzOzr2iAAAm, authenticated: true
+2026-01-12T20:03:01.863211116Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:03:01.86367408Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:03:02.377226737Z [WebSocket] Client disconnected: 337VqzitGnzOzr2iAAAm, reason: transport close
+2026-01-12T20:03:02.380808322Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:03:02.380873253Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:03:02.779496462Z 8:03:02 PM [express] GET /api/study/leaderboard 200 in 28ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:03:02.935592581Z 8:03:02 PM [express] GET /api/study/seasons 304 in 7ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T20:03:03.128074731Z 8:03:03 PM [express] GET /api/study/achievements 304 in 8ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T20:03:03.179778428Z [WebSocket] Authenticated connection: UY0CkkbPZYpqkmL8AAAo, userId: 2
+2026-01-12T20:03:03.179882831Z [WebSocket] Client connected: UY0CkkbPZYpqkmL8AAAo, authenticated: true
+2026-01-12T20:03:03.18982482Z 8:03:03 PM [express] GET /api/study/profile 200 in 35ms :: {"id":5,"userId":7,"totalXp":415,"current…
+2026-01-12T20:03:03.580182897Z 8:03:03 PM [express] GET /api/missions/daily 304 in 423ms :: {"missions":[{"id":81,"userId":7,"missi…
+2026-01-12T20:03:03.979375952Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:03:03.979937188Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:03:03.982554174Z 8:03:03 PM [express] GET /api/study/weeks 304 in 100ms :: [{"id":11,"weekNumber":5,"year":2026,"titl…
+2026-01-12T20:03:04.077868382Z 8:03:03 PM [express] GET /api/study/leaderboard 200 in 833ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T20:03:04.242217162Z 8:03:04 PM [express] GET /api/study/practice/11/status 304 in 13ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T20:03:04.261169145Z 8:03:04 PM [express] GET /api/study/weeks/bulk 304 in 21ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T20:03:04.575244628Z 8:03:04 PM [express] GET /api/study/streak/status 304 in 17ms :: {"needsRecovery":true,"streakAtRisk…
+2026-01-12T20:03:04.575814225Z 8:03:04 PM [express] GET /api/study/weekly-goal 304 in 22ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:03:08.1330605Z 8:03:08 PM [express] GET /api/study/leaderboard 304 in 19ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:03:13.333793254Z 8:03:13 PM [express] GET /api/study/events 200 in 9ms :: [{"id":4,"title":"Ano Novo: O que muda?","d…
+2026-01-12T20:03:13.461082874Z 8:03:13 PM [express] GET /api/study/leaderboard 304 in 16ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:03:18.819930205Z 8:03:18 PM [express] GET /api/study/leaderboard 304 in 14ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:03:53.59588475Z [WebSocket] Client disconnected: UY0CkkbPZYpqkmL8AAAo, reason: client namespace disconnect
+2026-01-12T20:03:53.654969212Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:03:53.655043914Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:03:53.683684949Z 8:03:53 PM [express] GET /api/study/profile/activities 200 in 14ms :: [{"type":"lesson_completed","t…
+2026-01-12T20:03:53.790569294Z 8:03:53 PM [express] GET /api/study/cards 304 in 120ms :: []
+2026-01-12T20:03:53.794101067Z 8:03:53 PM [express] GET /api/study/achievements 304 in 115ms :: [{"id":1,"code":"first_lesson","nam…
+2026-01-12T20:03:53.879461094Z 8:03:53 PM [express] GET /api/study/profile 200 in 124ms :: {"id":1,"userId":2,"totalXp":1685,"curre…
+2026-01-12T20:03:53.957992933Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:03:53.958011844Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:03:53.958015714Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:03:53.958019124Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:03:53.958022464Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:03:53.958025414Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:03:53.958028814Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:03:53.958032244Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:03:53.958608451Z 8:03:53 PM [express] GET /api/study/profile/stats 500 in 5ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:03:55.185091675Z 8:03:55 PM [express] GET /api/study/profile/stats 500 in 4ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:03:55.185095765Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:03:55.185115985Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:03:55.185120006Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:03:55.185123426Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:03:55.185126376Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:03:55.185129236Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:03:55.185132206Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:03:55.185135746Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:04:06.598997671Z 8:04:06 PM [express] GET /api/study/events/4 304 in 11ms :: {"event":{"id":4,"title":"Ano Novo: O qu…
+2026-01-12T20:04:08.44298541Z 8:04:08 PM [express] GET /api/study/events/4/lessons/2 200 in 10ms :: {"lesson":{"id":17,"eventId":4…
+2026-01-12T20:04:08.671654554Z [Event Participate] User 7 registered as participant in event 4
+2026-01-12T20:04:08.672253892Z 8:04:08 PM [express] POST /api/study/events/4/participate 200 in 6ms :: {"success":true}
+2026-01-12T20:04:23.826614459Z 8:04:23 PM [express] GET /api/study/weeks 304 in 4ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T20:04:23.851064491Z 8:04:23 PM [express] GET /api/missions/daily 200 in 21ms :: {"missions":[{"id":68,"userId":2,"missio…
+2026-01-12T20:04:24.119504714Z 8:04:24 PM [express] GET /api/study/weeks/bulk 200 in 20ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T20:04:24.145213514Z 8:04:24 PM [express] GET /api/study/practice/11/status 304 in 12ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T20:04:24.421365411Z 8:04:24 PM [express] GET /api/notifications 200 in 7ms :: {"notifications":[{"id":175,"userId":2,"ty…
+2026-01-12T20:04:24.432827985Z 8:04:24 PM [express] GET /api/study/weekly-goal 200 in 17ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:04:24.441149758Z 8:04:24 PM [express] GET /api/notifications/unread-count 200 in 3ms :: {"count":5}
+2026-01-12T20:04:24.444038152Z 8:04:24 PM [express] GET /api/study/streak/status 200 in 15ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T20:04:27.477263177Z 8:04:27 PM [express] POST /api/notifications/mark-all-read 200 in 5ms :: {"message":"Todas as notifi…
+2026-01-12T20:04:27.710111793Z 8:04:27 PM [express] GET /api/notifications 200 in 10ms :: {"notifications":[{"id":175,"userId":2,"t…
+2026-01-12T20:04:27.719516677Z 8:04:27 PM [express] GET /api/notifications/unread-count 200 in 4ms :: {"count":0}
+2026-01-12T20:04:27.902436028Z 8:04:27 PM [express] GET /api/notifications 304 in 7ms :: {"notifications":[{"id":175,"userId":2,"ty…
+2026-01-12T20:04:33.715661638Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:04:33.715691609Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:04:33.715696989Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:04:33.715704879Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:04:33.715709179Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:04:33.715713439Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:04:33.715718029Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:04:33.715723469Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:04:33.717179932Z 8:04:33 PM [express] GET /api/study/profile/stats 500 in 34ms :: {"message":"Erro ao buscar estatíst…
+2026-01-12T20:04:34.992707654Z Get user stats error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:04:34.992730804Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:04:34.992736134Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:04:34.992740664Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:04:34.992744775Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:04:34.992748695Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:04:34.992753335Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:04:34.992758055Z     at async file:///opt/render/project/src/dist/index.js:14793:21
+2026-01-12T20:04:34.993382973Z 8:04:34 PM [express] GET /api/study/profile/stats 500 in 5ms :: {"message":"Erro ao buscar estatísti…
+2026-01-12T20:05:09.083723577Z 8:05:09 PM [express] GET /api/study/weeks/bulk 304 in 79ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T20:05:09.281930963Z 8:05:09 PM [express] GET /api/study/weekly-goal 304 in 12ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:05:22.386071886Z 8:05:22 PM [express] GET /api/study/lessons/48 200 in 162ms :: {"id":48,"studyWeekId":7,"seasonId":n…
+2026-01-12T20:05:22.614631457Z 8:05:22 PM [express] POST /api/study/lessons/48/start 200 in 24ms :: {"id":29,"userId":2,"lessonId":…
+2026-01-12T20:05:22.856536976Z 8:05:22 PM [express] GET /api/study/profile 304 in 11ms :: {"id":1,"userId":2,"totalXp":1685,"curren…
+2026-01-12T20:06:40.783166768Z 8:06:40 PM [express] POST /api/study/units/692/complete 200 in 51ms :: {"unitProgress":{"id":368,"us…
+2026-01-12T20:06:41.087180797Z 8:06:41 PM [express] POST /api/study/units/690/complete 200 in 104ms :: {"unitProgress":{"id":369,"u…
+2026-01-12T20:06:41.288104551Z 8:06:41 PM [express] POST /api/study/units/688/complete 200 in 299ms :: {"unitProgress":{"id":370,"u…
+2026-01-12T20:06:41.296794864Z 8:06:41 PM [express] POST /api/study/units/689/complete 200 in 305ms :: {"unitProgress":{"id":371,"u…
+2026-01-12T20:06:41.305665323Z 8:06:41 PM [express] POST /api/study/units/691/complete 200 in 305ms :: {"unitProgress":{"id":372,"u…
+2026-01-12T20:06:41.313220023Z 8:06:41 PM [express] POST /api/study/units/687/complete 200 in 234ms :: {"unitProgress":{"id":373,"u…
+2026-01-12T20:06:41.585364763Z 8:06:41 PM [express] POST /api/study/lessons/48/complete-stage 200 in 46ms :: {"xpAwarded":50,"profi…
+2026-01-12T20:07:16.586196683Z 8:07:16 PM [express] POST /api/study/units/694/complete 200 in 94ms :: {"unitProgress":{"id":374,"us…
+2026-01-12T20:07:16.588868681Z 8:07:16 PM [express] POST /api/study/units/695/complete 200 in 93ms :: {"unitProgress":{"id":375,"us…
+2026-01-12T20:07:16.752626862Z 8:07:16 PM [express] POST /api/study/units/693/complete 200 in 15ms :: {"unitProgress":{"id":376,"us…
+2026-01-12T20:07:17.040970744Z 8:07:17 PM [express] POST /api/study/lessons/48/complete-stage 200 in 23ms :: {"xpAwarded":50,"profi…
+2026-01-12T20:07:24.491986924Z 8:07:24 PM [express] POST /api/study/units/697/answer 200 in 25ms :: {"unitProgress":{"id":377,"user…
+2026-01-12T20:07:45.833703357Z 8:07:45 PM [express] POST /api/study/units/699/answer 200 in 25ms :: {"unitProgress":{"id":378,"user…
+2026-01-12T20:08:23.850251642Z 8:08:23 PM [express] POST /api/study/units/696/answer 200 in 80ms :: {"unitProgress":{"id":379,"user…
+2026-01-12T20:08:31.582330596Z 8:08:31 PM [express] POST /api/study/units/698/answer 200 in 31ms :: {"unitProgress":{"id":380,"user…
+2026-01-12T20:08:41.562077743Z 8:08:41 PM [express] POST /api 200 in 2ms
+2026-01-12T20:08:43.386844026Z 8:08:43 PM [express] POST /api/study/units/700/answer 200 in 35ms :: {"unitProgress":{"id":381,"user…
+2026-01-12T20:08:44.335504115Z 8:08:44 PM [express] POST /api/study/units/696/complete 200 in 17ms :: {"unitProgress":{"id":379,"us…
+2026-01-12T20:08:44.581988146Z 8:08:44 PM [express] POST /api/study/units/697/complete 200 in 15ms :: {"unitProgress":{"id":377,"us…
+2026-01-12T20:08:44.818557969Z 8:08:44 PM [express] POST /api/study/units/698/complete 200 in 16ms :: {"unitProgress":{"id":380,"us…
+2026-01-12T20:08:45.036024524Z 8:08:45 PM [express] POST /api/study/units/699/complete 200 in 17ms :: {"unitProgress":{"id":378,"us…
+2026-01-12T20:08:45.322620384Z 8:08:45 PM [express] POST /api/study/units/700/complete 200 in 17ms :: {"unitProgress":{"id":381,"us…
+2026-01-12T20:08:46.659913195Z [Level Up] User 2: Level 4 -> 5, Hearts already at max (5)
+2026-01-12T20:08:46.896961502Z [Achievement] Checking for user 2: event=lesson_complete, lessonsCompleted=5, streak=1, totalXp=1865, alreadyUnlocked=7
+2026-01-12T20:08:46.896982362Z [Achievement] Unlocking lessons_5 for user 2
+2026-01-12T20:08:47.04587639Z [Level Up] User 2: Level 4 -> 5, Hearts already at max (5)
+2026-01-12T20:08:47.048418234Z [Notifications] notifyAchievement STARTED for user 2: "Estudante Dedicado"
+2026-01-12T20:08:47.194642034Z [Push] Successfully sent notification to member user 2
+2026-01-12T20:08:47.197315582Z [Push] Sent "🏆 Nova Conquista Desbloqueada!" to user 2 (1/1 success)
+2026-01-12T20:08:47.197330943Z [Notifications] Achievement push to user 2: success
+2026-01-12T20:08:47.234914077Z [Notifications] notifyAchievement STARTED for user 2: "Perfeito!"
+2026-01-12T20:08:47.319760349Z [Push] Successfully sent notification to member user 2
+2026-01-12T20:08:47.322029876Z [Push] Sent "🏆 Nova Conquista Desbloqueada!" to user 2 (1/1 success)
+2026-01-12T20:08:47.322044936Z [Notifications] Achievement push to user 2: success
+2026-01-12T20:08:47.338322181Z 8:08:47 PM [express] POST /api/study/lessons/48/complete 200 in 700ms :: {"progress":{"id":29,"userI…
+2026-01-12T20:08:47.639965129Z 8:08:47 PM [express] GET /api/study/weeks/7 200 in 12ms :: {"id":7,"weekNumber":1,"year":2026,"title…
+2026-01-12T20:08:59.239223554Z 8:08:59 PM [express] GET /api/study/weeks 304 in 4ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T20:08:59.285369548Z 8:08:59 PM [express] GET /api/study/streak/status 200 in 54ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T20:09:00.080893465Z 8:09:00 PM [express] GET /api/study/weeks/bulk 200 in 841ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T20:09:00.082163242Z 8:09:00 PM [express] GET /api/study/weekly-goal 200 in 846ms :: {"weekKey":"2026-W03","goals":{"less…
+2026-01-12T20:09:00.178418906Z 8:09:00 PM [express] GET /api/study/leaderboard 200 in 850ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T20:09:07.278477869Z 8:09:07 PM [express] GET /api/study/profile 200 in 11ms :: {"id":1,"userId":2,"totalXp":1965,"curren…
+2026-01-12T20:09:07.477531238Z 8:09:07 PM [express] GET /api/study/weeks 304 in 5ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T20:09:07.541574484Z 8:09:07 PM [express] GET /api/study/leaderboard 304 in 17ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:09:07.578829529Z 8:09:07 PM [express] GET /api/missions/daily 304 in 37ms :: {"missions":[{"id":68,"userId":2,"missio…
+2026-01-12T20:09:07.726333416Z 8:09:07 PM [express] GET /api/study/weeks/bulk 304 in 30ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T20:09:07.782805041Z 8:09:07 PM [express] GET /api/study/practice/11/status 304 in 65ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T20:09:08.012146233Z 8:09:08 PM [express] GET /api/notifications/unread-count 200 in 4ms :: {"count":2}
+2026-01-12T20:09:08.078776504Z 8:09:08 PM [express] GET /api/study/streak/status 304 in 68ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T20:09:08.080710001Z 8:09:08 PM [express] GET /api/notifications 200 in 64ms :: {"notifications":[{"id":178,"userId":2,"t…
+2026-01-12T20:09:08.081301778Z 8:09:08 PM [express] GET /api/study/weekly-goal 304 in 69ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:09:09.958148367Z 8:09:09 PM [express] GET /api/study/achievements 200 in 11ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T20:09:09.961092153Z 8:09:09 PM [express] GET /api/study/seasons 304 in 6ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T20:09:10.481040891Z [WebSocket] Authenticated connection: Lt7oz5-Rr-snoheRAAAq, userId: 2
+2026-01-12T20:09:10.481266408Z [WebSocket] Client connected: Lt7oz5-Rr-snoheRAAAq, authenticated: true
+2026-01-12T20:09:10.776739606Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:09:10.777171538Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:09:11.305078058Z [WebSocket] Client disconnected: Lt7oz5-Rr-snoheRAAAq, reason: transport close
+2026-01-12T20:09:11.307976343Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:09:11.308070416Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:09:11.585870689Z 8:09:11 PM [express] GET /api/study/leaderboard 304 in 14ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:09:11.586367033Z 8:09:11 PM [express] GET /api/study/seasons 304 in 7ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T20:09:11.839740395Z 8:09:11 PM [express] GET /api/study/achievements 304 in 7ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T20:09:12.097743302Z [WebSocket] Authenticated connection: 7FpPkpyHaaFiRA2mAAAs, userId: 2
+2026-01-12T20:09:12.097899296Z [WebSocket] Client connected: 7FpPkpyHaaFiRA2mAAAs, authenticated: true
+2026-01-12T20:09:12.372193277Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:09:12.372514607Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:09:16.937377707Z 8:09:16 PM [express] GET /api/study/leaderboard 304 in 9ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T20:09:19.057400471Z [WebSocket] Client disconnected: 7FpPkpyHaaFiRA2mAAAs, reason: client namespace disconnect
+2026-01-12T20:09:19.060030887Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:09:19.06010429Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:09:19.086957922Z 8:09:19 PM [express] GET /api/study/member/11/cards 304 in 3ms :: []
+2026-01-12T20:09:19.102087683Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:09:19.102124094Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:09:19.102130084Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:09:19.102135354Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:09:19.102139884Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:09:19.102144094Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:09:19.102148754Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:09:19.102153345Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:09:19.102157895Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:09:19.102167315Z 8:09:19 PM [express] GET /api/study/member/11 500 in 20ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:09:20.517300863Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:09:20.517331494Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:09:20.517337044Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:09:20.517341834Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:09:20.517346174Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:09:20.517353244Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:09:20.517357895Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:09:20.517376685Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:09:20.517380315Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:09:20.517929771Z 8:09:20 PM [express] GET /api/study/member/11 500 in 18ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:09:22.225074896Z [WebSocket] Authenticated connection: 4FIwRYfWcAR2v09YAAAu, userId: 2
+2026-01-12T20:09:22.22521602Z [WebSocket] Client connected: 4FIwRYfWcAR2v09YAAAu, authenticated: true
+2026-01-12T20:09:22.484038591Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:09:22.484427212Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:09:23.484374814Z [WebSocket] Client disconnected: 4FIwRYfWcAR2v09YAAAu, reason: client namespace disconnect
+2026-01-12T20:09:23.48699052Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:09:23.487056712Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:09:23.523860174Z 8:09:23 PM [express] GET /api/study/member/6/cards 200 in 3ms :: []
+2026-01-12T20:09:23.529438787Z 8:09:23 PM [express] GET /api/study/member/6 404 in 5ms :: {"message":"Membro não encontrado"}
+2026-01-12T20:09:24.754921439Z 8:09:24 PM [express] GET /api/study/member/6 404 in 5ms :: {"message":"Membro não encontrado"}
+2026-01-12T20:09:26.274684234Z [WebSocket] Authenticated connection: fghl006SfXGMRuGzAAAw, userId: 2
+2026-01-12T20:09:26.274798578Z [WebSocket] Client connected: fghl006SfXGMRuGzAAAw, authenticated: true
+2026-01-12T20:09:26.541710454Z [WebSocket] Updated DB: User 2 is now online
+2026-01-12T20:09:26.542080545Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-12T20:09:30.778132229Z 8:09:30 PM [express] GET /api/study/leaderboard 304 in 9ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-12T20:09:36.052564005Z 8:09:36 PM [express] GET /api/study/leaderboard 304 in 11ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:09:41.363540915Z 8:09:41 PM [express] GET /api/study/leaderboard 304 in 10ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:09:46.677464749Z 8:09:46 PM [express] GET /api/study/leaderboard 304 in 10ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:09:50.101376251Z 8:09:50 PM [express] POST /api/study/events/4/lessons/17/complete 200 in 31ms :: {"id":15,"userId":7…
+2026-01-12T20:09:50.336596461Z 8:09:50 PM [express] GET /api/study/events/4/lessons/2 200 in 8ms :: {"lesson":{"id":17,"eventId":4,…
+2026-01-12T20:09:50.366993552Z 8:09:50 PM [express] GET /api/study/events/4 200 in 35ms :: {"event":{"id":4,"title":"Ano Novo: O qu…
+2026-01-12T20:09:50.575205421Z 8:09:50 PM [express] GET /api/study/events/4/lessons/2 200 in 7ms :: {"lesson":{"id":17,"eventId":4,…
+2026-01-12T20:10:12.078570218Z 8:10:12 PM [express] GET /api/study/leaderboard 200 in 31ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:10:13.384106548Z [WebSocket] Client disconnected: fghl006SfXGMRuGzAAAw, reason: client namespace disconnect
+2026-01-12T20:10:13.388811686Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-12T20:10:13.38893544Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-12T20:10:13.488334911Z 8:10:13 PM [express] GET /api/study/profile 304 in 9ms :: {"id":1,"userId":2,"totalXp":1965,"current…
+2026-01-12T20:10:13.501997021Z 8:10:13 PM [express] GET /api/missions/daily 304 in 84ms :: {"missions":[{"id":68,"userId":2,"missio…
+2026-01-12T20:10:13.727119925Z 8:10:13 PM [express] GET /api/study/weeks 304 in 4ms :: [{"id":11,"weekNumber":5,"year":2026,"title"…
+2026-01-12T20:10:13.934954543Z 8:10:13 PM [express] GET /api/study/practice/11/status 304 in 13ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T20:10:13.982790294Z 8:10:13 PM [express] GET /api/study/weeks/bulk 304 in 53ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T20:10:14.247175128Z 8:10:14 PM [express] GET /api/notifications 304 in 5ms :: {"notifications":[{"id":178,"userId":2,"ty…
+2026-01-12T20:10:14.259777657Z 8:10:14 PM [express] GET /api/study/streak/status 304 in 16ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T20:10:14.263329531Z 8:10:14 PM [express] GET /api/study/weekly-goal 304 in 11ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:10:14.291075644Z 8:10:14 PM [express] GET /api/notifications/unread-count 304 in 33ms :: {"count":2}
+2026-01-12T20:10:17.087339457Z 8:10:17 PM [express] POST /api/notifications/mark-all-read 200 in 5ms :: {"message":"Todas as notifi…
+2026-01-12T20:10:17.354036219Z 8:10:17 PM [express] GET /api/notifications/unread-count 200 in 2ms :: {"count":0}
+2026-01-12T20:10:17.356710498Z 8:10:17 PM [express] GET /api/notifications 200 in 10ms :: {"notifications":[{"id":178,"userId":2,"t…
+2026-01-12T20:10:17.565577395Z 8:10:17 PM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":178,"userId":2,"ty…
+2026-01-12T20:10:25.070172436Z 8:10:25 PM [express] GET /api/treasury/member/events 304 in 4ms :: []
+2026-01-12T20:10:25.17921975Z 8:10:25 PM [express] GET /api/treasury/member/status 200 in 104ms :: {"memberId":2,"memberName":"Geo…
+2026-01-12T20:10:25.179727815Z 8:10:25 PM [express] GET /api/treasury/member/shop-orders 200 in 99ms :: [{"id":7,"orderCode":"#2026…
+2026-01-12T20:10:25.181478957Z 8:10:25 PM [express] GET /api/pix/status 304 in 1ms :: {"configured":true}
+2026-01-12T20:10:58.037840867Z [Event Participate] User 7 registered as participant in event 4
+2026-01-12T20:10:58.038475626Z 8:10:58 PM [express] POST /api/study/events/4/participate 200 in 33ms :: {"success":true}
+2026-01-12T20:10:58.079529268Z 8:10:58 PM [express] GET /api/study/events/4/lessons/3 200 in 71ms :: {"lesson":{"id":18,"eventId":4…
+2026-01-12T20:11:02.863683729Z 8:11:02 PM [express] POST /api 200 in 2ms
+2026-01-12T20:11:14.521613228Z 8:11:14 PM [express] GET /api/treasury/dashboard/monthly 304 in 9ms :: [{"month":1,"monthName":"jan.…
+2026-01-12T20:11:14.522537555Z 8:11:14 PM [express] GET /api/treasury/dashboard/category-expenses 304 in 4ms :: []
+2026-01-12T20:11:14.589597859Z 8:11:14 PM [express] GET /api/treasury/dashboard/summary 304 in 66ms :: {"totalIncome":12500,"totalE…
+2026-01-12T20:11:14.807866191Z 8:11:14 PM [express] GET /api/treasury/dashboard/category-income 304 in 5ms :: [{"category":"loja","…
+2026-01-12T20:11:19.779414147Z 8:11:19 PM [express] GET /api/site-content/quem-somos 304 in 4ms :: {"email":{"title":"","content":"…
+2026-01-12T20:11:19.993744894Z 8:11:19 PM [express] GET /api/site/highlights 304 in 226ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T20:11:24.691916262Z 8:11:24 PM [express] POST /api/auth/login-password 200 in 487ms :: {"user":{"id":1,"fullName":"Admin…
+2026-01-12T20:11:25.416097371Z [Push] Subscribe sync: userId=1, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T20:11:25.42766864Z [Push] Migrated subscription from anonymous to user 1
+2026-01-12T20:11:25.427690591Z [Push] Subscription saved for user 1. Keys present: p256dh=true, auth=true
+2026-01-12T20:11:25.428220726Z 8:11:25 PM [express] POST /api/notifications/subscribe 200 in 13ms :: {"message":"Inscrito para noti…
+2026-01-12T20:11:57.188786619Z 8:11:57 PM [express] GET /api/notifications 200 in 469ms :: {"notifications":[{"id":176,"userId":1,"…
+2026-01-12T20:11:57.191544559Z 8:11:57 PM [express] GET /api/notifications/unread-count 304 in 406ms :: {"count":0}
+2026-01-12T20:11:57.192164558Z 8:11:57 PM [express] GET /api/site-content/quem-somos 304 in 457ms :: {"email":{"title":"","content"…
+2026-01-12T20:11:57.279806644Z 8:11:57 PM [express] GET /api/site/highlights 304 in 554ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T20:12:03.087475707Z 8:12:03 PM [express] GET /api/study/admin/monthly-progress 200 in 11ms :: [{"month":"Jan","lessonsCo…
+2026-01-12T20:12:03.094211994Z 8:12:03 PM [express] GET /api/study/admin/weekly-activity 200 in 9ms :: [{"day":"Ter","date":"2026-0…
+2026-01-12T20:12:03.097198542Z 8:12:03 PM [express] GET /api/study/admin/stats 200 in 6ms :: {"totalUsers":16,"activeUsers":5,"tota…
+2026-01-12T20:12:03.09917545Z 8:12:03 PM [express] GET /api/study/admin/events-stats 200 in 10ms :: {"totalEvents":1,"activeEvents…
+2026-01-12T20:12:03.18318496Z 8:12:03 PM [express] GET /api/study/admin/weekly-top-members 200 in 85ms :: [{"id":11,"fullName":"Ev…
+2026-01-12T20:12:35.248292188Z 8:12:35 PM [express] GET /api/study/encouragement-messages 304 in 1ms :: {"messages":[{"key":"lesson…
+2026-01-12T20:12:35.380865341Z 8:12:35 PM [express] GET /api/study/admin/users 200 in 48ms :: [{"id":11,"name":"Evelyn Moura","emai…
+2026-01-12T20:12:40.318814675Z 8:12:40 PM [express] GET /api/study/encouragement-messages 304 in 1ms :: {"messages":[{"key":"lesson…
+2026-01-12T20:12:40.346214537Z 8:12:40 PM [express] GET /api/study/admin/users 304 in 14ms :: [{"id":11,"name":"Evelyn Moura","emai…
+2026-01-12T20:12:40.395878762Z 8:12:40 PM [express] GET /api/study/admin/events-stats 304 in 58ms :: {"totalEvents":1,"activeEvents…
+2026-01-12T20:12:44.211392536Z [Push] Sending "📣 Mensagem da UMP Emaus" to 17 members (including inactive)
+2026-01-12T20:12:44.349798089Z [Push] Successfully sent notification to member user 1
+2026-01-12T20:12:44.353554899Z [Push] Sent "📣 Mensagem da UMP Emaus" to user 1 (1/1 success)
+2026-01-12T20:12:44.356075062Z [Push] User 12 has no push subscriptions registered
+2026-01-12T20:12:44.35870589Z [Push] User 18 has no push subscriptions registered
+2026-01-12T20:12:44.443285436Z [Push] Successfully sent notification to member user 5
+2026-01-12T20:12:44.447104008Z [Push] Sent "📣 Mensagem da UMP Emaus" to user 5 (1/1 success)
+2026-01-12T20:12:44.449724475Z [Push] User 13 has no push subscriptions registered
+2026-01-12T20:12:44.534550379Z [Push] Successfully sent notification to member user 11
+2026-01-12T20:12:44.538311849Z [Push] Sent "📣 Mensagem da UMP Emaus" to user 11 (1/1 success)
+2026-01-12T20:12:44.541150682Z [Push] User 15 has no push subscriptions registered
+2026-01-12T20:12:44.632683013Z [Push] Successfully sent notification to member user 2
+2026-01-12T20:12:44.636363241Z [Push] Sent "📣 Mensagem da UMP Emaus" to user 2 (1/1 success)
+2026-01-12T20:12:44.638936976Z [Push] User 9 has no push subscriptions registered
+2026-01-12T20:12:44.731087244Z [Push] Successfully sent notification to member user 6
+2026-01-12T20:12:44.734822114Z [Push] Sent "📣 Mensagem da UMP Emaus" to user 6 (1/1 success)
+2026-01-12T20:12:44.737523573Z [Push] User 17 has no push subscriptions registered
+2026-01-12T20:12:44.740029196Z [Push] User 7 has no push subscriptions registered
+2026-01-12T20:12:44.742470338Z [Push] User 3 has no push subscriptions registered
+2026-01-12T20:12:44.8572887Z [Push] Successfully sent notification to member user 16
+2026-01-12T20:12:44.861852134Z [Push] Sent "📣 Mensagem da UMP Emaus" to user 16 (1/1 success)
+2026-01-12T20:12:44.864505611Z [Push] User 14 has no push subscriptions registered
+2026-01-12T20:12:44.866980914Z [Push] User 4 has no push subscriptions registered
+2026-01-12T20:12:44.86957015Z [Push] User 8 has no push subscriptions registered
+2026-01-12T20:12:44.869600541Z [Admin] Encouragement push: 6 sent, 11 failed
+2026-01-12T20:12:44.870340832Z 8:12:44 PM [express] POST /api/admin/study/encourage-all 200 in 782ms :: {"success":true,"sentCount"…
+2026-01-12T20:16:32.178049235Z 8:16:32 PM [express] GET /api/study/encouragement-messages 304 in 1ms :: {"messages":[{"key":"lesson…
+2026-01-12T20:16:32.191975973Z 8:16:32 PM [express] GET /api/study/admin/events-stats 304 in 110ms :: {"totalEvents":1,"activeEvent…
+2026-01-12T20:16:32.28034348Z 8:16:32 PM [express] GET /api/study/admin/users 304 in 121ms :: [{"id":11,"name":"Evelyn Moura","ema…
+2026-01-12T20:17:17.319588722Z 8:17:17 PM [express] POST /api 200 in 2ms
+2026-01-12T20:17:18.540575504Z 8:17:18 PM [express] GET /api/study/admin/stats 304 in 31ms :: {"totalUsers":16,"activeUsers":5,"tot…
+2026-01-12T20:19:24.981299916Z 8:19:24 PM [express] POST /api/study/events/4/lessons/18/complete 200 in 98ms :: {"id":16,"userId":7…
+2026-01-12T20:19:25.227811181Z 8:19:25 PM [express] GET /api/study/events/4 200 in 23ms :: {"event":{"id":4,"title":"Ano Novo: O qu…
+2026-01-12T20:19:25.247210859Z 8:19:25 PM [express] GET /api/study/events/4/lessons/3 200 in 5ms :: {"lesson":{"id":18,"eventId":4,…
+2026-01-12T20:19:25.466499147Z 8:19:25 PM [express] GET /api/study/events/4/lessons/3 200 in 7ms :: {"lesson":{"id":18,"eventId":4,…
+2026-01-12T20:19:45.224609893Z 8:19:45 PM [express] POST /api 200 in 3ms
+2026-01-12T20:22:39.954089399Z 8:22:39 PM [express] GET /api/study/admin/seasons 200 in 43ms :: [{"id":4,"title":"Não Jogue Sua Vid…
+2026-01-12T20:22:45.270064756Z 8:22:45 PM [express] GET /api/notifications/unread-count 304 in 6ms :: {"count":0}
+2026-01-12T20:22:45.273513826Z 8:22:45 PM [express] GET /api/site-content/quem-somos 304 in 3ms :: {"email":{"title":"","content":"…
+2026-01-12T20:22:45.48007073Z 8:22:45 PM [express] GET /api/notifications 304 in 194ms :: {"notifications":[{"id":176,"userId":1,"…
+2026-01-12T20:22:45.497735457Z 8:22:45 PM [express] GET /api/site/highlights 304 in 232ms :: {"devotional":{"id":4,"title":"Vivendo…
+2026-01-12T20:22:52.132402948Z 8:22:52 PM [express] GET /api/site/devotionals 304 in 4ms :: [{"id":4,"title":"Vivendo para a Glória…
+2026-01-12T20:22:52.133425598Z 8:22:52 PM [express] GET /api/site/devotionals/4 304 in 5ms :: {"id":4,"title":"Vivendo para a Glóri…
+2026-01-12T20:22:52.135526989Z 8:22:52 PM [express] GET /api/study/devotional-status/4 304 in 5ms :: {"isRead":false}
+2026-01-12T20:22:52.404830909Z 8:22:52 PM [express] GET /api/site/devotionals/4/comments 304 in 6ms :: [{"id":3,"devotionalId":4,"u…
+2026-01-12T20:23:10.259170429Z 8:23:10 PM [express] GET /api/site/board-members 200 in 6ms :: [{"id":1,"userId":12,"name":"Allan Ra…
+2026-01-12T20:24:58.13734912Z 8:24:58 PM [express] GET /api/notifications/unread-count 304 in 37ms :: {"count":0}
+2026-01-12T20:24:58.374322203Z 8:24:58 PM [express] GET /api/notifications 304 in 7ms :: {"notifications":[{"id":176,"userId":1,"ty…
+2026-01-12T20:25:12.366747502Z 8:25:12 PM [express] GET /api/site/events 304 in 4ms :: []
+2026-01-12T20:25:54.778215041Z 8:25:54 PM [express] GET /api/notifications/unread-count 304 in 32ms :: {"count":0}
+2026-01-12T20:25:54.782501187Z 8:25:54 PM [express] GET /api/notifications 304 in 118ms :: {"notifications":[{"id":176,"userId":1,"…
+2026-01-12T20:26:03.336351474Z 8:26:03 PM [express] GET /api/study/events/4/lessons/4 200 in 5ms :: {"lesson":{"id":19,"eventId":4,…
+2026-01-12T20:26:03.342312958Z [Event Participate] User 7 registered as participant in event 4
+2026-01-12T20:26:03.342881585Z 8:26:03 PM [express] POST /api/study/events/4/participate 200 in 3ms :: {"success":true}
+2026-01-12T20:26:03.543445162Z 8:26:03 PM [express] GET /api/study/events/4 304 in 6ms :: {"event":{"id":4,"title":"Ano Novo: O que…
+2026-01-12T20:26:04.117044962Z 8:26:04 PM [express] GET /api/positions 304 in 9ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":"…
+2026-01-12T20:26:04.365666625Z 8:26:04 PM [express] GET /api/elections/history 304 in 5ms :: []
+2026-01-12T20:26:04.378900202Z 8:26:04 PM [express] GET /api/elections/active 304 in 17ms
+2026-01-12T20:26:04.582371084Z 8:26:04 PM [express] GET /api/members 304 in 215ms :: [{"id":1,"fullName":"Administrador","email":"m…
+2026-01-12T20:26:38.296857243Z 8:26:38 PM [express] GET /api/study/profile 200 in 133ms :: {"id":2,"userId":1,"totalXp":2040,"curre…
+2026-01-12T20:26:38.388864674Z 8:26:38 PM [express] GET /api/missions/daily 200 in 213ms :: {"missions":[{"id":61,"userId":1,"missi…
+2026-01-12T20:26:38.485379348Z 8:26:38 PM [express] GET /api/study/leaderboard 200 in 57ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:26:38.5873341Z 8:26:38 PM [express] GET /api/study/weeks 304 in 35ms :: [{"id":11,"weekNumber":5,"year":2026,"title…
+2026-01-12T20:26:38.982056157Z 8:26:38 PM [express] GET /api/study/weeks/bulk 200 in 194ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-12T20:26:38.988079253Z 8:26:38 PM [express] GET /api/study/practice/11/status 304 in 189ms :: {"weekId":11,"isUnlocked":fal…
+2026-01-12T20:26:39.29566468Z 8:26:39 PM [express] GET /api/study/streak/status 200 in 19ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T20:26:39.30934718Z 8:26:39 PM [express] GET /api/study/weekly-goal 200 in 21ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:26:41.115123282Z 8:26:41 PM [express] GET /api/study/achievements 200 in 11ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T20:26:41.155465682Z 8:26:41 PM [express] GET /api/study/seasons 200 in 11ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora…
+2026-01-12T20:26:41.698400844Z [WebSocket] Authenticated connection: _ezp-gazYYSrotX1AAAy, userId: 1
+2026-01-12T20:26:41.698659872Z [WebSocket] Client connected: _ezp-gazYYSrotX1AAAy, authenticated: true
+2026-01-12T20:26:41.890403421Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:26:41.890598356Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:26:46.177857986Z 8:26:46 PM [express] GET /api/study/leaderboard 304 in 14ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:26:51.451459686Z 8:26:51 PM [express] GET /api/study/leaderboard 304 in 13ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:26:55.869493639Z [WebSocket] Client disconnected: _ezp-gazYYSrotX1AAAy, reason: client namespace disconnect
+2026-01-12T20:26:55.873615429Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:26:55.873716103Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:26:55.927883287Z 8:26:55 PM [express] GET /api/study/member/11/cards 304 in 4ms :: []
+2026-01-12T20:26:55.943919096Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:26:55.943935446Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:26:55.943940547Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:26:55.943945167Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:26:55.943949347Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:26:55.943953137Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:26:55.943957147Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:26:55.943961097Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:26:55.943974738Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:26:55.94475371Z 8:26:55 PM [express] GET /api/study/member/11 500 in 40ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:26:57.191269132Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:26:57.191325954Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:26:57.191330864Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:26:57.191335374Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:26:57.191339005Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:26:57.191342545Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:26:57.191346625Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:26:57.191350085Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:26:57.191354055Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:26:57.191954683Z 8:26:57 PM [express] GET /api/study/member/11 500 in 37ms :: {"message":"Erro ao buscar perfil do me…
+2026-01-12T20:26:59.085493271Z [WebSocket] Authenticated connection: h1MSGguc274HWTJrAAA0, userId: 1
+2026-01-12T20:26:59.086328395Z [WebSocket] Client connected: h1MSGguc274HWTJrAAA0, authenticated: true
+2026-01-12T20:26:59.281514424Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:26:59.281666559Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:26:59.576628557Z [WebSocket] Client disconnected: h1MSGguc274HWTJrAAA0, reason: client namespace disconnect
+2026-01-12T20:26:59.580456439Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:26:59.580469349Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:26:59.62220723Z 8:26:59 PM [express] GET /api/study/member/2/cards 304 in 4ms :: []
+2026-01-12T20:26:59.69535648Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:26:59.69537439Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:26:59.69537847Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:26:59.695381911Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:26:59.695384871Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:26:59.695387651Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:26:59.695390801Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:26:59.695393851Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:26:59.695397351Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:26:59.696030049Z 8:26:59 PM [express] GET /api/study/member/2 500 in 85ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:00.937871215Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:00.937917506Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:00.937921346Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:00.937924336Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:00.937926786Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:00.937929296Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:00.937932516Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:00.937934906Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:00.937937766Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:00.93873917Z 8:27:00 PM [express] GET /api/study/member/2 500 in 38ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:02.585486679Z [WebSocket] Authenticated connection: 214uyngBRJcTpQNGAAA2, userId: 1
+2026-01-12T20:27:02.585675574Z [WebSocket] Client connected: 214uyngBRJcTpQNGAAA2, authenticated: true
+2026-01-12T20:27:02.799023505Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:27:02.799157839Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:27:02.876406139Z [WebSocket] Client disconnected: 214uyngBRJcTpQNGAAA2, reason: client namespace disconnect
+2026-01-12T20:27:02.879915801Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:27:02.880020214Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:27:02.939332229Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:02.93935189Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:02.93935524Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:02.93935853Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:02.93936068Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:02.93936301Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:02.93936582Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:02.93936798Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:02.93937077Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:02.94005715Z 8:27:02 PM [express] GET /api/study/member/2 500 in 36ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:04.194681819Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:04.19470413Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:04.19470759Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:04.19471012Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:04.19472323Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:04.194725101Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:04.194727551Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:04.194729281Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:04.194731951Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:04.195468382Z 8:27:04 PM [express] GET /api/study/member/2 500 in 39ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:12.38808454Z [WebSocket] Authenticated connection: S2pZhC4dlpsQnzN1AAA4, userId: 1
+2026-01-12T20:27:12.388325087Z [WebSocket] Client connected: S2pZhC4dlpsQnzN1AAA4, authenticated: true
+2026-01-12T20:27:12.574163936Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:27:12.574589168Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:27:16.877329506Z 8:27:16 PM [express] GET /api/study/leaderboard 304 in 19ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:27:17.240592828Z [WebSocket] Client disconnected: S2pZhC4dlpsQnzN1AAA4, reason: client namespace disconnect
+2026-01-12T20:27:17.244446901Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:27:17.244535393Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:27:17.31103952Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:17.31106027Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:17.311065471Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:17.311070911Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:17.311075151Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:17.311079241Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:17.311084281Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:17.311088961Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:17.311093861Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:17.3117187Z 8:27:17 PM [express] GET /api/study/member/2 500 in 36ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:18.577009171Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:27:18.577029541Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:27:18.577034811Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:27:18.577040142Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:27:18.577044332Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:27:18.577049112Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:27:18.577060902Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:27:18.577063602Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:27:18.577067263Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:27:18.577640309Z 8:27:18 PM [express] GET /api/study/member/2 500 in 38ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:27:22.67584013Z [WebSocket] Authenticated connection: DVJaSyIHkHI4GborAAA6, userId: 1
+2026-01-12T20:27:22.676194271Z [WebSocket] Client connected: DVJaSyIHkHI4GborAAA6, authenticated: true
+2026-01-12T20:27:22.880519321Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:27:22.880685686Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:27:27.246357564Z 8:27:27 PM [express] GET /api/study/leaderboard 304 in 14ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:28:57.809936704Z [WebSocket] Client disconnected: DVJaSyIHkHI4GborAAA6, reason: ping timeout
+2026-01-12T20:28:57.835871993Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:28:57.835957735Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:30:00.01094092Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-12T20:30:00.042178144Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-12T20:30:27.778151459Z 8:30:27 PM [express] POST /api/study/events/4/lessons/19/complete 200 in 41ms :: {"id":17,"userId":7…
+2026-01-12T20:30:28.082145484Z 8:30:28 PM [express] GET /api/study/events/4 200 in 101ms :: {"event":{"id":4,"title":"Ano Novo: O q…
+2026-01-12T20:30:28.183567611Z 8:30:28 PM [express] GET /api/study/events/4/lessons/4 200 in 8ms :: {"lesson":{"id":19,"eventId":4,…
+2026-01-12T20:30:28.397742458Z 8:30:28 PM [express] GET /api/study/events/4/lessons/4 200 in 7ms :: {"lesson":{"id":19,"eventId":4,…
+2026-01-12T20:30:43.322698336Z 8:30:43 PM [express] GET /api/study/events/4/lessons/5 200 in 8ms :: {"lesson":{"id":20,"eventId":4,…
+2026-01-12T20:30:43.327787385Z [Event Participate] User 7 registered as participant in event 4
+2026-01-12T20:30:43.328248228Z 8:30:43 PM [express] POST /api/study/events/4/participate 200 in 4ms :: {"success":true}
+2026-01-12T20:34:18.293232377Z 8:34:18 PM [express] POST /api/study/events/4/lessons/20/complete 200 in 61ms :: {"id":18,"userId":7…
+2026-01-12T20:34:18.569122087Z 8:34:18 PM [express] GET /api/study/events/4/lessons/5 200 in 5ms :: {"lesson":{"id":20,"eventId":4,…
+2026-01-12T20:34:18.573646579Z 8:34:18 PM [express] GET /api/study/events/4 200 in 28ms :: {"event":{"id":4,"title":"Ano Novo: O qu…
+2026-01-12T20:34:18.794259652Z 8:34:18 PM [express] GET /api/study/events/4/lessons/5 200 in 6ms :: {"lesson":{"id":20,"eventId":4,…
+2026-01-12T20:35:58.67337061Z 8:35:58 PM [express] POST /api 200 in 1ms
+2026-01-12T20:51:39.979501133Z 8:51:39 PM [express] GET /api/study/leaderboard 200 in 517ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T20:51:40.078244166Z [WebSocket] Authenticated connection: z-37-1YhwdhQ9nxPAAA8, userId: 1
+2026-01-12T20:51:40.078353909Z [WebSocket] Client connected: z-37-1YhwdhQ9nxPAAA8, authenticated: true
+2026-01-12T20:51:40.58221649Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:51:40.679062128Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:51:40.680039576Z 8:51:40 PM [express] GET /api/study/seasons 304 in 976ms :: [{"id":4,"title":"Não Jogue Sua Vida For…
+2026-01-12T20:51:40.79846578Z 8:51:40 PM [express] GET /api/study/achievements 304 in 17ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-12T20:51:45.708635249Z 8:51:45 PM [express] GET /api/study/leaderboard 304 in 20ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:51:48.303675257Z [WebSocket] Client disconnected: z-37-1YhwdhQ9nxPAAA8, reason: transport close
+2026-01-12T20:51:48.30685688Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:51:48.306947722Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:51:48.670551235Z 8:51:48 PM [express] GET /api/study/seasons 304 in 9ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T20:51:48.681022879Z 8:51:48 PM [express] GET /api/study/leaderboard 304 in 18ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:51:48.937238989Z 8:51:48 PM [express] GET /api/study/achievements 304 in 7ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T20:51:49.176939539Z [WebSocket] Authenticated connection: 063ZPHta9ko5sTQFAAA-, userId: 1
+2026-01-12T20:51:49.177106634Z [WebSocket] Client connected: 063ZPHta9ko5sTQFAAA-, authenticated: true
+2026-01-12T20:51:49.369501143Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:51:49.369698569Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:51:53.94502073Z 8:51:53 PM [express] GET /api/study/leaderboard 304 in 24ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:51:59.229203386Z 8:51:59 PM [express] GET /api/study/leaderboard 304 in 15ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:52:04.525423162Z 8:52:04 PM [express] GET /api/study/leaderboard 304 in 14ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:52:09.835048088Z 8:52:09 PM [express] GET /api/study/leaderboard 304 in 15ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:52:15.13278554Z 8:52:15 PM [express] GET /api/study/leaderboard 304 in 15ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:52:18.717091756Z [WebSocket] Client disconnected: 063ZPHta9ko5sTQFAAA-, reason: client namespace disconnect
+2026-01-12T20:52:18.720147865Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:52:18.720223347Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:52:18.801255407Z 8:52:18 PM [express] GET /api/study/daily-verse/status 200 in 27ms :: {"isRead":false,"dateKey":"202…
+2026-01-12T20:52:18.880615688Z 8:52:18 PM [express] GET /api/study/profile 304 in 85ms :: {"id":2,"userId":1,"totalXp":2040,"curren…
+2026-01-12T20:52:19.189641689Z 8:52:19 PM [express] GET /api/study/daily-verse 304 in 409ms :: {"verse":"Confia no Senhor de todo o…
+2026-01-12T20:52:20.818365638Z 8:52:20 PM [express] GET /api/study/events 304 in 21ms :: [{"id":4,"title":"Ano Novo: O que muda?","…
+2026-01-12T20:52:20.820087079Z [Push] Subscribe sync: userId=1, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T20:52:20.831826629Z [Push] Migrated subscription from anonymous to user 1
+2026-01-12T20:52:20.831840179Z [Push] Subscription saved for user 1. Keys present: p256dh=true, auth=true
+2026-01-12T20:52:20.832424976Z 8:52:20 PM [express] POST /api/notifications/subscribe 200 in 13ms :: {"message":"Inscrito para noti…
+2026-01-12T20:52:24.995829246Z [Push] Subscribe sync: userId=1, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-12T20:52:25.002198851Z [Push] Migrated subscription from anonymous to user 1
+2026-01-12T20:52:25.002234672Z [Push] Subscription saved for user 1. Keys present: p256dh=true, auth=true
+2026-01-12T20:52:25.00286691Z 8:52:25 PM [express] POST /api/notifications/subscribe 200 in 8ms :: {"message":"Inscrito para notif…
+2026-01-12T20:52:25.027109643Z 8:52:25 PM [express] GET /api/study/events 304 in 34ms :: [{"id":4,"title":"Ano Novo: O que muda?","…
+2026-01-12T20:52:57.98605773Z 8:52:57 PM [express] GET /api/study/profile 304 in 176ms :: {"id":2,"userId":1,"totalXp":2040,"curre…
+2026-01-12T20:52:57.996232465Z 8:52:57 PM [express] GET /api/study/leaderboard 304 in 167ms :: {"periodType":"weekly","periodKey":"…
+2026-01-12T20:52:58.68434813Z 8:52:58 PM [express] GET /api/study/weeks 304 in 403ms :: [{"id":11,"weekNumber":5,"year":2026,"titl…
+2026-01-12T20:52:58.794969758Z 8:52:58 PM [express] GET /api/missions/daily 304 in 966ms :: {"missions":[{"id":61,"userId":1,"missi…
+2026-01-12T20:52:58.91539448Z 8:52:58 PM [express] GET /api/study/practice/11/status 304 in 12ms :: {"weekId":11,"isUnlocked":fals…
+2026-01-12T20:52:58.989847299Z 8:52:58 PM [express] GET /api/study/weeks/bulk 304 in 91ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-12T20:52:59.304187695Z 8:52:59 PM [express] GET /api/notifications 304 in 9ms :: {"notifications":[{"id":176,"userId":1,"ty…
+2026-01-12T20:52:59.316854542Z 8:52:59 PM [express] GET /api/notifications/unread-count 304 in 3ms :: {"count":0}
+2026-01-12T20:52:59.378385356Z 8:52:59 PM [express] GET /api/study/streak/status 304 in 71ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-12T20:52:59.379175899Z 8:52:59 PM [express] GET /api/study/weekly-goal 304 in 76ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-12T20:53:01.54894381Z 8:53:01 PM [express] GET /api/study/achievements 304 in 6ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-12T20:53:01.554399948Z 8:53:01 PM [express] GET /api/study/seasons 304 in 5ms :: [{"id":4,"title":"Não Jogue Sua Vida Fora"…
+2026-01-12T20:53:02.12346221Z [WebSocket] Authenticated connection: _bLa2r8fji1zokm1AABA, userId: 1
+2026-01-12T20:53:02.123683877Z [WebSocket] Client connected: _bLa2r8fji1zokm1AABA, authenticated: true
+2026-01-12T20:53:02.344419818Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:53:02.344449069Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:53:03.410599306Z [WebSocket] Client disconnected: _bLa2r8fji1zokm1AABA, reason: client namespace disconnect
+2026-01-12T20:53:03.410626437Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:53:03.410630937Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T20:53:03.479346359Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:53:03.47937189Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:53:03.479377211Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:53:03.479382081Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:53:03.479386931Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:53:03.479391681Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:53:03.479396261Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:53:03.479400731Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:53:03.479405221Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:53:03.480156663Z 8:53:03 PM [express] GET /api/study/member/7 500 in 43ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:53:03.483706656Z 8:53:03 PM [express] GET /api/study/member/7/cards 304 in 20ms :: []
+2026-01-12T20:53:04.782472699Z Get member profile error: TypeError: Cannot read properties of undefined (reading 'Symbol(drizzle:IsAlias)')
+2026-01-12T20:53:04.78252108Z     at getTableLikeName (file:///opt/render/project/src/node_modules/drizzle-orm/utils.js:114:126)
+2026-01-12T20:53:04.782526121Z     at new PgSelectQueryBuilderBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:98:22)
+2026-01-12T20:53:04.78253003Z     at new PgSelectBase (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:675:1)
+2026-01-12T20:53:04.782533611Z     at PgSelectBuilder.from (file:///opt/render/project/src/node_modules/drizzle-orm/pg-core/query-builders/select.js:63:12)
+2026-01-12T20:53:04.782537351Z     at DatabaseStorage.getUserProfileStats (file:///opt/render/project/src/dist/index.js:8523:80)
+2026-01-12T20:53:04.782541861Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-12T20:53:04.782545221Z     at async DatabaseStorage.getPublicMemberProfile (file:///opt/render/project/src/dist/index.js:10865:23)
+2026-01-12T20:53:04.782549411Z     at async file:///opt/render/project/src/dist/index.js:15375:23
+2026-01-12T20:53:04.783098027Z 8:53:04 PM [express] GET /api/study/member/7 500 in 21ms :: {"message":"Erro ao buscar perfil do mem…
+2026-01-12T20:53:06.406100763Z [WebSocket] Authenticated connection: BS0iB4PjydsyXlZlAABC, userId: 1
+2026-01-12T20:53:06.406219216Z [WebSocket] Client connected: BS0iB4PjydsyXlZlAABC, authenticated: true
+2026-01-12T20:53:06.587868474Z [WebSocket] Updated DB: User 1 is now online
+2026-01-12T20:53:06.587994747Z [WebSocket] User 1 (Administrador) joined presence room. Online: 1
+2026-01-12T20:53:10.94959766Z 8:53:10 PM [express] GET /api/study/leaderboard 304 in 11ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:53:16.208098393Z 8:53:16 PM [express] GET /api/study/leaderboard 304 in 11ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:53:22.037968615Z 8:53:22 PM [express] GET /api/study/leaderboard 304 in 12ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-12T20:55:09.183788231Z [WebSocket] Client disconnected: BS0iB4PjydsyXlZlAABC, reason: ping timeout
+2026-01-12T20:55:09.209340782Z [WebSocket] Updated DB: User 1 is now offline (disconnect)
+2026-01-12T20:55:09.209373363Z [WebSocket] User 1 disconnected from presence. Online: 0
+2026-01-12T21:00:00.079409016Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-12T21:00:00.080868528Z [Instagram Scheduler] Running sync...
+2026-01-12T21:00:00.080884448Z [Instagram] Starting sync...
+2026-01-12T21:00:00.082462914Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-12T21:00:00.280674404Z [Instagram] API error: 400 {
+2026-01-12T21:00:00.280694695Z   error: {
+2026-01-12T21:00:00.280700125Z     message: 'Error validating access token: The session is invalid because the user logged out.',
+2026-01-12T21:00:00.280704705Z     type: 'OAuthException',
+2026-01-12T21:00:00.280709115Z     code: 190,
+2026-01-12T21:00:00.280713805Z     error_subcode: 467,
+2026-01-12T21:00:00.280714755Z [Instagram] No new posts fetched - keeping existing data
+2026-01-12T21:00:00.280719365Z     fbtrace_id: 'AvMB0dcUXsRlyML7jq7oAy0'
+2026-01-12T21:00:00.280723786Z   }
+2026-01-12T21:00:00.280728306Z }
+2026-01-12T21:00:00.280739446Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-12T21:00:00.305918887Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-12T21:00:00.343347072Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-12T21:25:25.1550503Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-01-12T21:25:25.231904497Z ==> Deploying...
+2026-01-12T21:26:16.870288395Z ==> Running 'node ./dist/index.js'
+2026-01-12T21:26:27.898334233Z ==> No open ports detected, continuing to scan...
+2026-01-12T21:26:28.11037617Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-12T21:26:41.781814764Z ✓ Logo configured with public URL: https://umpemaus.com.br/logo-email.png
+2026-01-12T21:26:41.870408499Z [MercadoPago] Webhook URL configured: https://umpemaus.com.br/api/pix/webhook
+2026-01-12T21:26:41.875932575Z [MercadoPago] Client initialized successfully
+2026-01-12T21:26:41.875952075Z [Push] Web Push configured successfully
+2026-01-12T21:26:42.04221754Z [R2] Configured - Bucket: umpemaus, Public URL: https://pub-73bb54c6aac24e7a926425a7c58e7c2d.r2.dev
+2026-01-12T21:26:42.07623924Z [WebSocket] Server initialized
+2026-01-12T21:26:42.556442492Z 9:26:42 PM [express] serving on port 10000
+2026-01-12T21:26:42.556635087Z Initializing PostgreSQL database connection...
+2026-01-12T21:26:42.985104038Z PostgreSQL connection successful: 2026-01-12T21:26:42.980Z
+2026-01-12T21:26:43.271108113Z Admin marketingumpemaus@gmail.com ja existe e esta configurado.
+2026-01-12T21:26:43.271133784Z Database initialized successfully!
+2026-01-12T21:26:43.886834195Z [Migration] Starting image migration to R2...
+2026-01-12T21:26:43.969701001Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2026-01-12T21:26:43.972680988Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2026-01-12T21:26:43.97670462Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-12T21:26:43.979857461Z [Daily Verse Scheduler] Initialized - will run daily at 07:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.069070531Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-12T21:26:44.073257856Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2026-01-12T21:26:44.073368478Z [Instagram Scheduler] Running sync...
+2026-01-12T21:26:44.073626704Z [Instagram] Starting sync...
+2026-01-12T21:26:44.16930724Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.174890487Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2026-01-12T21:26:44.178407426Z [Event Scheduler] Lesson release initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.271212128Z [Event Scheduler] Card distribution initialized - will run daily at 23:59 (America/Sao_Paulo)
+2026-01-12T21:26:44.274475991Z [Event Deadline Scheduler] Initialized - will run every hour at :00 (America/Sao_Paulo) with database persistence
+2026-01-12T21:26:44.276855175Z [Marketing Reminder Scheduler] Initialized - will run every hour at :30 (America/Sao_Paulo) with database persistence
+2026-01-12T21:26:44.279685449Z [Treasury Scheduler] Day 5 reminder initialized - will run on day 5 of each month at 08:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.282167916Z [Treasury Scheduler] 5th business day reminder initialized - will run on weekdays at 08:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.369874731Z [Shop Scheduler] Abandoned cart reminder initialized - will run every hour (America/Sao_Paulo) with auto-cancel after 48h
+2026-01-12T21:26:44.372388048Z [Treasury Scheduler] Loan installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.374861114Z [Shop Scheduler] Shop installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.377242028Z [Event Fee Scheduler] Event fee reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.381337471Z [Treasury Scheduler] Year rollover initialized - will run on Jan 1st at 00:05 (America/Sao_Paulo)
+2026-01-12T21:26:44.46872212Z [Treasury Scheduler] Monthly summary initialized - will run on day 1 of each month at 08:00 (America/Sao_Paulo)
+2026-01-12T21:26:44.468924164Z 9:26:44 PM [express] Database and schedulers initialized successfully
+2026-01-12T21:26:44.671330857Z [Instagram] API error: 400 {
+2026-01-12T21:26:44.671354277Z   error: {
+2026-01-12T21:26:44.671358338Z     message: 'Error validating access token: The session is invalid because the user logged out.',
+2026-01-12T21:26:44.671361898Z     type: 'OAuthException',
+2026-01-12T21:26:44.671363658Z     code: 190,
+2026-01-12T21:26:44.671366148Z     error_subcode: 467,
+2026-01-12T21:26:44.671369988Z     fbtrace_id: 'AU9ZBkB0jsZSn5ZahPtXrV-'
+2026-01-12T21:26:44.671372908Z   }
+2026-01-12T21:26:44.671375608Z }
+2026-01-12T21:26:44.671378328Z [Instagram] No new posts fetched - keeping existing data
+2026-01-12T21:26:44.671426949Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-12T21:26:45.540916146Z [R2] Uploaded members/1768253204871-2lyrxf.jpeg (27.6KB)
+2026-01-12T21:26:45.547317141Z [Migration] ✓ users.photoUrl (id: 12)
+2026-01-12T21:26:45.738340616Z [R2] Uploaded members/1768253205547-o8qxgz.jpeg (19.7KB)
+2026-01-12T21:26:45.741949237Z [Migration] ✓ users.photoUrl (id: 5)
+2026-01-12T21:26:45.928536532Z [R2] Uploaded members/1768253205741-lwl2iy.jpeg (27.9KB)
+2026-01-12T21:26:45.934234241Z [Migration] ✓ users.photoUrl (id: 13)
+2026-01-12T21:26:46.054262205Z ==> Your service is live 🎉
+2026-01-12T21:26:46.12676182Z [R2] Uploaded members/1768253205932-y7r18m.jpeg (18.8KB)
+2026-01-12T21:26:46.130160687Z [Migration] ✓ users.photoUrl (id: 11)
+2026-01-12T21:26:46.192341024Z ==> 
+2026-01-12T21:26:46.288623778Z ==> ///////////////////////////////////////////////////////////
+2026-01-12T21:26:46.288632005Z [R2] Uploaded members/1768253206130-gfrpff.jpeg (17.8KB)
+2026-01-12T21:26:46.292217696Z [Migration] ✓ users.photoUrl (id: 15)
+2026-01-12T21:26:46.384497612Z ==> 
+2026-01-12T21:26:46.460134809Z [R2] Uploaded members/1768253206292-cmjmlf.jpeg (21.1KB)
+2026-01-12T21:26:46.464386425Z [Migration] ✓ users.photoUrl (id: 2)
+2026-01-12T21:26:46.481198806Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-12T21:26:46.57897919Z ==> 
+2026-01-12T21:26:46.648320489Z [R2] Uploaded members/1768253206464-9th05u.jpeg (14.8KB)
+2026-01-12T21:26:46.649884165Z [Migration] ✓ users.photoUrl (id: 9)
+2026-01-12T21:26:46.674547934Z ==> ///////////////////////////////////////////////////////////
+2026-01-12T21:26:46.805372775Z [R2] Uploaded members/1768253206649-8b0s4a.jpeg (14.1KB)
+2026-01-12T21:26:46.808879435Z [Migration] ✓ users.photoUrl (id: 6)
+2026-01-12T21:26:46.982050306Z [R2] Uploaded members/1768253206808-ls51kt.jpeg (34.9KB)
+2026-01-12T21:26:46.98622196Z [Migration] ✓ users.photoUrl (id: 17)
+2026-01-12T21:26:47.182445393Z [R2] Uploaded members/1768253206986-r9gtpp.jpeg (17.9KB)
+2026-01-12T21:26:47.187114009Z [Migration] ✓ users.photoUrl (id: 7)
+2026-01-12T21:26:47.379216428Z [R2] Uploaded members/1768253207186-kzeqkb.jpeg (28.8KB)
+2026-01-12T21:26:47.382907732Z [Migration] ✓ users.photoUrl (id: 3)
+2026-01-12T21:26:47.552500902Z [R2] Uploaded members/1768253207382-9lpf53.jpeg (17.6KB)
+2026-01-12T21:26:47.556070092Z [Migration] ✓ users.photoUrl (id: 16)
+2026-01-12T21:26:47.716158577Z [R2] Uploaded members/1768253207556-2nbeoh.jpeg (13.8KB)
+2026-01-12T21:26:47.718156102Z [Migration] ✓ users.photoUrl (id: 4)
+2026-01-12T21:26:47.904737197Z [R2] Uploaded members/1768253207718-lb776s.jpeg (23.7KB)
+2026-01-12T21:26:47.908197625Z [Migration] ✓ users.photoUrl (id: 8)
+2026-01-12T21:26:47.971434957Z [Migration] Completed in 4.1s
+2026-01-12T21:26:47.971458377Z [Migration] Migrated: 14, Failed: 0, Skipped: 0
+2026-01-12T21:26:48.982476019Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-12T21:26:48.982508779Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-12T21:26:48.99224282Z [Daily Verse Scheduler] Already sent today (2026-01-12), skipping
+2026-01-12T21:26:51.069569804Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-12T21:26:51.069794869Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-12T21:26:54.169931602Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-12T21:26:54.17027446Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-12T21:26:54.181796641Z [Daily Missions Scheduler] Content already generated for today (2026-01-12)
+2026-01-12T21:26:54.491277638Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-12T21:26:54.491404611Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-12T21:26:54.491418191Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2026-01-12T21:26:54.491430181Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:3 (ARA)
+2026-01-12T21:26:54.491438762Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-12T21:26:54.491443532Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-12T21:26:54.491545564Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:6 (ARA)
+2026-01-12T21:26:54.491553244Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-12T21:26:54.491558404Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-12T21:26:54.492016225Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-12T21:26:54.492025605Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-12T21:26:54.492029835Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-12T21:26:54.492036435Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-12T21:26:54.492040695Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-12T21:26:54.492044666Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2026-01-12T21:26:54.492048586Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-12T21:26:54.492052496Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-12T21:26:54.492056556Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-12T21:26:54.492060386Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-12T21:26:54.492064386Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-12T21:26:54.492068516Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-12T21:26:54.492072726Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-12T21:26:54.492076416Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-12T21:26:54.492080086Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-12T21:26:54.492083936Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-12T21:26:54.492087736Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:39 (ARA)
+2026-01-12T21:26:54.492091717Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2026-01-12T21:26:54.492095737Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-12T21:26:54.492099827Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-12T21:26:54.492103527Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-12T21:26:54.492107337Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-12T21:26:54.492111227Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-12
+2026-01-12T21:30:00.014081183Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-12T21:30:00.086013261Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-12T21:30:27.56815336Z 9:30:27 PM [express] POST /api 200 in 2ms
+2026-01-12T21:31:50.884453468Z ==> Detected service running on port 10000
+2026-01-12T21:31:51.076989102Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding

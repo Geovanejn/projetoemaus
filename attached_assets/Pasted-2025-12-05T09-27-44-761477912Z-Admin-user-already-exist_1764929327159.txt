@@ -1,0 +1,450 @@
+2025-12-05T09:27:44.761477912Z Admin user already exists: marketingumpemaus@gmail.com
+2025-12-05T09:27:45.17346992Z Database initialized successfully!
+2025-12-05T09:27:45.278620615Z [Birthday Scheduler] ✓ Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2025-12-05T09:27:45.369615876Z [WebSocket] Server initialized
+2025-12-05T09:27:45.37146503Z 9:27:45 AM [express] serving on port 10000
+2025-12-05T09:27:46.824144031Z 9:27:46 AM [express] GET /api/site/highlights 200 in 279ms :: {"devotional":null,"events":[],"instag…
+2025-12-05T09:27:47.495775588Z 9:27:47 AM [express] GET /api/site/highlights 304 in 71ms :: {"devotional":null,"events":[],"instagr…
+2025-12-05T09:27:47.702471819Z 9:27:47 AM [express] GET /api/site/devotionals 304 in 265ms :: []
+2025-12-05T09:30:48.302182621Z 9:30:48 AM [express] GET /api/site/devotionals 304 in 283ms :: []
+2025-12-05T09:30:49.205269838Z 9:30:49 AM [express] GET /api/site/highlights 304 in 266ms :: {"devotional":null,"events":[],"instag…
+2025-12-05T09:31:41.371619136Z 9:31:41 AM [express] POST /api/auth/login-password 401 in 889ms :: {"message":"Email ou senha incorr…
+2025-12-05T09:31:52.872643564Z 9:31:52 AM [express] POST /api/auth/login-password 200 in 759ms :: {"user":{"id":1,"fullName":"UMP E…
+2025-12-05T09:31:59.711671042Z 9:31:59 AM [express] GET /api/members 304 in 72ms :: [{"id":2,"fullName":"Geovane Nascimento","email…
+2025-12-05T09:31:59.958275092Z 9:31:59 AM [express] GET /api/positions 304 in 315ms :: [{"id":1,"name":"Presidente"},{"id":2,"name"…
+2025-12-05T09:31:59.959248486Z 9:31:59 AM [express] GET /api/elections/history 304 in 315ms :: [{"id":1,"name":"Eleição 2025/2026",…
+2025-12-05T09:31:59.962065574Z 9:31:59 AM [express] GET /api/elections/active 304 in 68ms
+2025-12-05T09:32:01.812806168Z 9:32:01 AM [express] GET /api/ai/status 304 in 2ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T09:32:01.886118889Z 9:32:01 AM [express] GET /api/study/admin/stats 200 in 296ms :: {"totalWeeks":2,"totalLessons":9,"to…
+2025-12-05T09:32:01.887087032Z 9:32:01 AM [express] GET /api/study/admin/weeks 304 in 68ms :: [{"id":6,"weekNumber":2,"year":2025,"…
+2025-12-05T09:32:06.923794322Z 9:32:06 AM [express] GET /api/study/profile 200 in 71ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T09:32:07.299474127Z 9:32:07 AM [express] GET /api/study/weeks 304 in 70ms :: [{"id":5,"weekNumber":1,"year":2025,"title"…
+2025-12-05T09:32:08.085612932Z 9:32:08 AM [express] GET /api/study/weeks/5 304 in 490ms :: {"id":5,"weekNumber":1,"year":2025,"titl…
+2025-12-05T09:32:08.525471756Z Get notifications error: error: column "data" does not exist
+2025-12-05T09:32:08.525488786Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:32:08.525497127Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:32:08.525502427Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T09:32:08.525516897Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T09:32:08.525519967Z   length: 104,
+2025-12-05T09:32:08.525522917Z   severity: 'ERROR',
+2025-12-05T09:32:08.525525337Z   code: '42703',
+2025-12-05T09:32:08.525527787Z   detail: undefined,
+2025-12-05T09:32:08.525530547Z   hint: undefined,
+2025-12-05T09:32:08.525532788Z   position: '50',
+2025-12-05T09:32:08.525535888Z   internalPosition: undefined,
+2025-12-05T09:32:08.525538177Z   internalQuery: undefined,
+2025-12-05T09:32:08.525540638Z   where: undefined,
+2025-12-05T09:32:08.525543478Z   schema: undefined,
+2025-12-05T09:32:08.525546308Z   table: undefined,
+2025-12-05T09:32:08.525548898Z   column: undefined,
+2025-12-05T09:32:08.525551558Z   dataType: undefined,
+2025-12-05T09:32:08.525554038Z   constraint: undefined,
+2025-12-05T09:32:08.525556578Z   file: 'parse_relation.c',
+2025-12-05T09:32:08.525559088Z   line: '3716',
+2025-12-05T09:32:08.525561658Z   routine: 'errorMissingColumn'
+2025-12-05T09:32:08.525564408Z }
+2025-12-05T09:32:08.526306906Z 9:32:08 AM [express] GET /api/notifications 500 in 76ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T09:32:08.527742361Z 9:32:08 AM [express] GET /api/notifications/unread-count 304 in 69ms :: {"count":0}
+2025-12-05T09:32:09.702845764Z 9:32:09 AM [express] GET /api/study/lessons/18 200 in 210ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T09:32:10.233529774Z 9:32:10 AM [express] POST /api/study/lessons/18/start 200 in 217ms :: {"id":15,"userId":1,"lessonId"…
+2025-12-05T09:32:10.623293701Z 9:32:10 AM [express] GET /api/study/profile 304 in 69ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T09:32:15.563185728Z 9:32:15 AM [express] POST /api/study/units/57/complete 200 in 286ms :: {"unitProgress":{"id":1,"user…
+2025-12-05T09:32:16.123508548Z 9:32:16 AM [express] GET /api/study/lessons/18 200 in 205ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T09:32:16.185443753Z 9:32:16 AM [express] POST /api/study/units/58/complete 200 in 274ms :: {"unitProgress":{"id":2,"user…
+2025-12-05T09:32:16.715102318Z 9:32:16 AM [express] GET /api/study/lessons/18 304 in 205ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T09:32:16.785256052Z 9:32:16 AM [express] POST /api/study/units/59/complete 200 in 273ms :: {"unitProgress":{"id":3,"user…
+2025-12-05T09:32:17.283145855Z 9:32:17 AM [express] GET /api/study/lessons/18 304 in 203ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T09:32:17.352386437Z 9:32:17 AM [express] POST /api/study/units/60/complete 200 in 274ms :: {"unitProgress":{"id":4,"user…
+2025-12-05T09:32:17.826997005Z 9:32:17 AM [express] GET /api/study/lessons/18 304 in 207ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T09:32:17.895054958Z 9:32:17 AM [express] POST /api/study/units/61/complete 200 in 273ms :: {"unitProgress":{"id":5,"user…
+2025-12-05T09:32:18.394092799Z 9:32:18 AM [express] GET /api/study/lessons/18 304 in 206ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T09:32:19.356688231Z 9:32:19 AM [express] GET /api/study/profile 304 in 69ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T09:32:19.636111007Z Get notifications error: error: column "data" does not exist
+2025-12-05T09:32:19.636133698Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:32:19.636138658Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:32:19.636143758Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T09:32:19.636160289Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T09:32:19.636163319Z   length: 104,
+2025-12-05T09:32:19.636166659Z   severity: 'ERROR',
+2025-12-05T09:32:19.636169529Z   code: '42703',
+2025-12-05T09:32:19.636172349Z   detail: undefined,
+2025-12-05T09:32:19.636175059Z   hint: undefined,
+2025-12-05T09:32:19.636177719Z   position: '50',
+2025-12-05T09:32:19.636181369Z   internalPosition: undefined,
+2025-12-05T09:32:19.636184029Z   internalQuery: undefined,
+2025-12-05T09:32:19.636186649Z   where: undefined,
+2025-12-05T09:32:19.636189169Z   schema: undefined,
+2025-12-05T09:32:19.636191739Z   table: undefined,
+2025-12-05T09:32:19.636194489Z   column: undefined,
+2025-12-05T09:32:19.63619732Z   dataType: undefined,
+2025-12-05T09:32:19.636200089Z   constraint: undefined,
+2025-12-05T09:32:19.63620254Z   file: 'parse_relation.c',
+2025-12-05T09:32:19.636205Z   line: '3716',
+2025-12-05T09:32:19.63620753Z   routine: 'errorMissingColumn'
+2025-12-05T09:32:19.63621022Z }
+2025-12-05T09:32:19.636700692Z 9:32:19 AM [express] GET /api/notifications 500 in 284ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T09:32:19.711374255Z 9:32:19 AM [express] GET /api/study/weeks 304 in 362ms :: [{"id":5,"weekNumber":1,"year":2025,"title…
+2025-12-05T09:32:19.840089272Z 9:32:19 AM [express] GET /api/study/weeks/5 200 in 493ms :: {"id":5,"weekNumber":1,"year":2025,"titl…
+2025-12-05T09:32:50.14368935Z 9:32:50 AM [express] GET /api/notifications/unread-count 304 in 270ms :: {"count":0}
+2025-12-05T09:32:50.386456857Z Get notifications error: error: column "data" does not exist
+2025-12-05T09:32:50.386474687Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:32:50.386477997Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:32:50.386481387Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T09:32:50.386484667Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T09:32:50.386487518Z   length: 104,
+2025-12-05T09:32:50.386490938Z   severity: 'ERROR',
+2025-12-05T09:32:50.386493958Z   code: '42703',
+2025-12-05T09:32:50.386496848Z   detail: undefined,
+2025-12-05T09:32:50.386499628Z   hint: undefined,
+2025-12-05T09:32:50.386502418Z   position: '50',
+2025-12-05T09:32:50.386505728Z   internalPosition: undefined,
+2025-12-05T09:32:50.386508478Z   internalQuery: undefined,
+2025-12-05T09:32:50.386512088Z   where: undefined,
+2025-12-05T09:32:50.386517138Z   schema: undefined,
+2025-12-05T09:32:50.386521778Z   table: undefined,
+2025-12-05T09:32:50.386526358Z   column: undefined,
+2025-12-05T09:32:50.386530588Z   dataType: undefined,
+2025-12-05T09:32:50.386535379Z   constraint: undefined,
+2025-12-05T09:32:50.386538599Z   file: 'parse_relation.c',
+2025-12-05T09:32:50.386541399Z   line: '3716',
+2025-12-05T09:32:50.386544229Z   routine: 'errorMissingColumn'
+2025-12-05T09:32:50.386547009Z }
+2025-12-05T09:32:50.387248976Z 9:32:50 AM [express] GET /api/notifications 500 in 66ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T09:35:28.600910266Z Get notifications error: error: column "data" does not exist
+2025-12-05T09:35:28.600931747Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:35:28.600936347Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:35:28.600941267Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T09:35:28.600955827Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T09:35:28.600958538Z   length: 104,
+2025-12-05T09:35:28.600961418Z   severity: 'ERROR',
+2025-12-05T09:35:28.600963848Z   code: '42703',
+2025-12-05T09:35:28.600966068Z   detail: undefined,
+2025-12-05T09:35:28.600968298Z   hint: undefined,
+2025-12-05T09:35:28.600970398Z   position: '50',
+2025-12-05T09:35:28.600973678Z   internalPosition: undefined,
+2025-12-05T09:35:28.600975838Z   internalQuery: undefined,
+2025-12-05T09:35:28.600978128Z   where: undefined,
+2025-12-05T09:35:28.600980148Z   schema: undefined,
+2025-12-05T09:35:28.600982648Z   table: undefined,
+2025-12-05T09:35:28.600984818Z   column: undefined,
+2025-12-05T09:35:28.600986908Z   dataType: undefined,
+2025-12-05T09:35:28.600988968Z   constraint: undefined,
+2025-12-05T09:35:28.600991159Z   file: 'parse_relation.c',
+2025-12-05T09:35:28.600993368Z   line: '3716',
+2025-12-05T09:35:28.600995548Z   routine: 'errorMissingColumn'
+2025-12-05T09:35:28.600997688Z }
+2025-12-05T09:35:28.601555272Z 9:35:28 AM [express] GET /api/notifications 500 in 263ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T09:35:28.605415566Z 9:35:28 AM [express] GET /api/notifications/unread-count 304 in 272ms :: {"count":0}
+2025-12-05T09:35:30.422659641Z 9:35:30 AM [express] POST /api/study/lessons/18/start 200 in 203ms :: {"id":15,"userId":1,"lessonId"…
+2025-12-05T09:35:30.798830787Z 9:35:30 AM [express] GET /api/study/profile 304 in 70ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T09:35:31.6393605Z Get notifications error: error: column "data" does not exist
+2025-12-05T09:35:31.639378001Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:35:31.639380861Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:35:31.639383891Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T09:35:31.639387161Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T09:35:31.639389411Z   length: 104,
+2025-12-05T09:35:31.639392191Z   severity: 'ERROR',
+2025-12-05T09:35:31.639394301Z   code: '42703',
+2025-12-05T09:35:31.639396521Z   detail: undefined,
+2025-12-05T09:35:31.639398621Z   hint: undefined,
+2025-12-05T09:35:31.639400672Z   position: '50',
+2025-12-05T09:35:31.639403232Z   internalPosition: undefined,
+2025-12-05T09:35:31.639405312Z   internalQuery: undefined,
+2025-12-05T09:35:31.639407392Z   where: undefined,
+2025-12-05T09:35:31.639409452Z   schema: undefined,
+2025-12-05T09:35:31.639411562Z   table: undefined,
+2025-12-05T09:35:31.639413652Z   column: undefined,
+2025-12-05T09:35:31.639415692Z   dataType: undefined,
+2025-12-05T09:35:31.639417722Z   constraint: undefined,
+2025-12-05T09:35:31.639419802Z   file: 'parse_relation.c',
+2025-12-05T09:35:31.639421902Z   line: '3716',
+2025-12-05T09:35:31.639423992Z   routine: 'errorMissingColumn'
+2025-12-05T09:35:31.639426102Z }
+2025-12-05T09:35:31.640182391Z 9:35:31 AM [express] GET /api/notifications 500 in 69ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T09:35:33.303562078Z 9:35:33 AM [express] GET /api/ai/status 304 in 2ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T09:35:33.574943479Z 9:35:33 AM [express] GET /api/study/admin/weeks 304 in 283ms :: [{"id":6,"weekNumber":2,"year":2025,…
+2025-12-05T09:35:33.772659211Z 9:35:33 AM [express] GET /api/study/admin/stats 304 in 483ms :: {"totalWeeks":2,"totalLessons":9,"to…
+2025-12-05T09:35:36.345712212Z 9:35:36 AM [express] GET /api/study/admin/lessons/6 304 in 1ms
+2025-12-05T09:35:37.617417257Z 9:35:37 AM [express] GET /api/members 304 in 70ms :: [{"id":2,"fullName":"Geovane Nascimento","email…
+2025-12-05T09:35:37.618223657Z 9:35:37 AM [express] GET /api/positions 304 in 68ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":…
+2025-12-05T09:35:37.830861931Z 9:35:37 AM [express] GET /api/elections/history 304 in 269ms :: [{"id":1,"name":"Eleição 2025/2026",…
+2025-12-05T09:35:37.85468035Z 9:35:37 AM [express] GET /api/elections/active 304 in 261ms
+2025-12-05T09:36:00.31129392Z 9:36:00 AM [express] DELETE /api/study/admin/weeks/6 200 in 358ms :: {"message":"Semana excluida com…
+2025-12-05T09:36:00.693951604Z 9:36:00 AM [express] GET /api/study/admin/weeks 200 in 62ms :: [{"id":5,"weekNumber":1,"year":2025,"…
+2025-12-05T09:36:03.815838173Z Delete week error: error: update or delete on table "study_units" violates foreign key constraint "user_unit_progress_unit_id_fkey" on table "user_unit_progress"
+2025-12-05T09:36:03.815856793Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:36:03.815862113Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:36:03.815867413Z     at async DatabaseStorage.deleteStudyLesson (file:///opt/render/project/src/dist/index.js:1771:9)
+2025-12-05T09:36:03.815871884Z     at async DatabaseStorage.deleteStudyWeek (file:///opt/render/project/src/dist/index.js:1794:11)
+2025-12-05T09:36:03.815890544Z     at async file:///opt/render/project/src/dist/index.js:6572:23 {
+2025-12-05T09:36:03.815895684Z   length: 333,
+2025-12-05T09:36:03.815900344Z   severity: 'ERROR',
+2025-12-05T09:36:03.815904754Z   code: '23503',
+2025-12-05T09:36:03.815909345Z   detail: 'Key (id)=(57) is still referenced from table "user_unit_progress".',
+2025-12-05T09:36:03.815913485Z   hint: undefined,
+2025-12-05T09:36:03.815917415Z   position: undefined,
+2025-12-05T09:36:03.815921665Z   internalPosition: undefined,
+2025-12-05T09:36:03.815925615Z   internalQuery: undefined,
+2025-12-05T09:36:03.815930205Z   where: undefined,
+2025-12-05T09:36:03.815934195Z   schema: 'public',
+2025-12-05T09:36:03.815938335Z   table: 'user_unit_progress',
+2025-12-05T09:36:03.815942385Z   column: undefined,
+2025-12-05T09:36:03.815946395Z   dataType: undefined,
+2025-12-05T09:36:03.815950855Z   constraint: 'user_unit_progress_unit_id_fkey',
+2025-12-05T09:36:03.815955306Z   file: 'ri_triggers.c',
+2025-12-05T09:36:03.815959516Z   line: '2612',
+2025-12-05T09:36:03.815963946Z   routine: 'ri_ReportViolation'
+2025-12-05T09:36:03.815967886Z }
+2025-12-05T09:36:03.816772646Z 9:36:03 AM [express] DELETE /api/study/admin/weeks/5 500 in 249ms :: {"message":"Erro ao excluir sem…
+2025-12-05T09:36:06.476183473Z 9:36:06 AM [express] GET /api/study/admin/lessons/5 304 in 0ms
+2025-12-05T09:36:09.374545663Z 9:36:09 AM [express] POST /api/study/admin/weeks/5/lock-all 200 in 264ms :: {"message":"1 licoes blo…
+2025-12-05T09:36:09.672400216Z 9:36:09 AM [express] GET /api/study/admin/lessons/5 304 in 1ms
+2025-12-05T09:36:13.193059329Z Delete week error: error: update or delete on table "study_units" violates foreign key constraint "user_unit_progress_unit_id_fkey" on table "user_unit_progress"
+2025-12-05T09:36:13.19309388Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:36:13.19310033Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:36:13.19310609Z     at async DatabaseStorage.deleteStudyLesson (file:///opt/render/project/src/dist/index.js:1771:9)
+2025-12-05T09:36:13.193126311Z     at async DatabaseStorage.deleteStudyWeek (file:///opt/render/project/src/dist/index.js:1794:11)
+2025-12-05T09:36:13.193129591Z     at async file:///opt/render/project/src/dist/index.js:6572:23 {
+2025-12-05T09:36:13.193131821Z   length: 333,
+2025-12-05T09:36:13.193135061Z   severity: 'ERROR',
+2025-12-05T09:36:13.193137211Z   code: '23503',
+2025-12-05T09:36:13.193139471Z   detail: 'Key (id)=(57) is still referenced from table "user_unit_progress".',
+2025-12-05T09:36:13.193141611Z   hint: undefined,
+2025-12-05T09:36:13.193143711Z   position: undefined,
+2025-12-05T09:36:13.193146562Z   internalPosition: undefined,
+2025-12-05T09:36:13.193148712Z   internalQuery: undefined,
+2025-12-05T09:36:13.193150812Z   where: undefined,
+2025-12-05T09:36:13.193152932Z   schema: 'public',
+2025-12-05T09:36:13.193155092Z   table: 'user_unit_progress',
+2025-12-05T09:36:13.193157162Z   column: undefined,
+2025-12-05T09:36:13.193159212Z   dataType: undefined,
+2025-12-05T09:36:13.193162482Z   constraint: 'user_unit_progress_unit_id_fkey',
+2025-12-05T09:36:13.193164632Z   file: 'ri_triggers.c',
+2025-12-05T09:36:13.193166732Z   line: '2612',
+2025-12-05T09:36:13.193169182Z   routine: 'ri_ReportViolation'
+2025-12-05T09:36:13.193171382Z }
+2025-12-05T09:36:13.194024673Z 9:36:13 AM [express] DELETE /api/study/admin/weeks/5 500 in 194ms :: {"message":"Erro ao excluir sem…
+2025-12-05T09:36:15.312950533Z 9:36:15 AM [express] GET /api/study/admin/lessons/5 304 in 1ms
+2025-12-05T09:36:17.251988105Z 9:36:17 AM [express] GET /api/elections/history 304 in 273ms :: [{"id":1,"name":"Eleição 2025/2026",…
+2025-12-05T09:36:17.252677502Z 9:36:17 AM [express] GET /api/members 304 in 266ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T09:36:17.484998654Z 9:36:17 AM [express] GET /api/elections/active 304 in 66ms
+2025-12-05T09:36:24.75980425Z 9:36:24 AM [express] GET /api/study/admin/lessons/5 304 in 1ms
+2025-12-05T09:36:37.457132905Z 9:36:37 AM [express] GET /api/study/admin/lessons/5 304 in 1ms
+2025-12-05T09:36:46.146492952Z 9:36:46 AM [express] DELETE /api/study/admin/weeks/5 500 in 460ms :: {"message":"Erro ao excluir sem…
+2025-12-05T09:36:46.146564964Z Delete week error: error: update or delete on table "study_units" violates foreign key constraint "user_unit_progress_unit_id_fkey" on table "user_unit_progress"
+2025-12-05T09:36:46.146627626Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T09:36:46.146635136Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T09:36:46.146640136Z     at async DatabaseStorage.deleteStudyLesson (file:///opt/render/project/src/dist/index.js:1771:9)
+2025-12-05T09:36:46.146644356Z     at async DatabaseStorage.deleteStudyWeek (file:///opt/render/project/src/dist/index.js:1794:11)
+2025-12-05T09:36:46.146648966Z     at async file:///opt/render/project/src/dist/index.js:6572:23 {
+2025-12-05T09:36:46.146653296Z   length: 333,
+2025-12-05T09:36:46.146658056Z   severity: 'ERROR',
+2025-12-05T09:36:46.146662327Z   code: '23503',
+2025-12-05T09:36:46.146666296Z   detail: 'Key (id)=(57) is still referenced from table "user_unit_progress".',
+2025-12-05T09:36:46.146670257Z   hint: undefined,
+2025-12-05T09:36:46.146674247Z   position: undefined,
+2025-12-05T09:36:46.146678447Z   internalPosition: undefined,
+2025-12-05T09:36:46.146682687Z   internalQuery: undefined,
+2025-12-05T09:36:46.146687117Z   where: undefined,
+2025-12-05T09:36:46.146691747Z   schema: 'public',
+2025-12-05T09:36:46.146696147Z   table: 'user_unit_progress',
+2025-12-05T09:36:46.146700267Z   column: undefined,
+2025-12-05T09:36:46.146714498Z   dataType: undefined,
+2025-12-05T09:36:46.146717898Z   constraint: 'user_unit_progress_unit_id_fkey',
+2025-12-05T09:36:46.146720218Z   file: 'ri_triggers.c',
+2025-12-05T09:36:46.146722678Z   line: '2612',
+2025-12-05T09:36:46.146725368Z   routine: 'ri_ReportViolation'
+2025-12-05T09:36:46.146728038Z }
+2025-12-05T09:36:56.629718313Z 9:36:56 AM [express] GET /api/members 304 in 255ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T09:36:56.640284089Z 9:36:56 AM [express] GET /api/positions 304 in 263ms :: [{"id":1,"name":"Presidente"},{"id":2,"name"…
+2025-12-05T09:36:56.640997036Z 9:36:56 AM [express] GET /api/elections/active 304 in 260ms
+2025-12-05T09:36:56.881477557Z 9:36:56 AM [express] GET /api/elections/history 304 in 66ms :: [{"id":1,"name":"Eleição 2025/2026","…
+2025-12-05T09:37:12.241316807Z 9:37:12 AM [express] GET /api/elections/active 304 in 269ms
+2025-12-05T09:37:27.81679968Z 9:37:27 AM [express] GET /api/elections/active 304 in 275ms
+2025-12-05T09:37:43.45609844Z 9:37:43 AM [express] GET /api/elections/active 304 in 274ms
+2025-12-05T09:37:59.096298838Z 9:37:59 AM [express] GET /api/elections/active 304 in 258ms
+2025-12-05T09:38:02.375148674Z 9:38:02 AM [express] PATCH /api/admin/members/2 200 in 498ms :: {"id":2,"fullName":"Geovane Nascimen…
+2025-12-05T09:38:02.811446189Z 9:38:02 AM [express] GET /api/members 200 in 124ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T09:38:14.79236429Z 9:38:14 AM [express] GET /api/elections/active 304 in 263ms
+2025-12-05T09:38:16.461081143Z 9:38:16 AM [express] POST /api/elections 200 in 914ms :: {"id":2,"name":"Eleição 2025/2026","isActiv…
+2025-12-05T09:38:16.825171195Z 9:38:16 AM [express] GET /api/elections/active 200 in 65ms :: {"id":2,"name":"Eleição 2025/2026","is…
+2025-12-05T09:38:17.235455818Z 9:38:17 AM [express] GET /api/elections/2/positions/active 200 in 138ms :: {"id":7,"electionId":2,"p…
+2025-12-05T09:38:17.439149455Z 9:38:17 AM [express] GET /api/elections/2/attendance/count 200 in 268ms :: {"presentCount":0}
+2025-12-05T09:38:17.469175514Z 9:38:17 AM [express] GET /api/candidates 304 in 347ms :: []
+2025-12-05T09:38:17.500161996Z 9:38:17 AM [express] GET /api/elections/2/positions 200 in 373ms :: [{"id":7,"electionId":2,"positio…
+2025-12-05T09:38:17.837484388Z 9:38:17 AM [express] GET /api/elections/2/attendance 200 in 707ms :: [{"id":2,"electionId":2,"electi…
+2025-12-05T09:38:18.112160189Z 9:38:18 AM [express] GET /api/results/latest 200 in 986ms :: {"electionId":2,"electionName":"Eleição…
+2025-12-05T09:38:22.778236681Z 9:38:22 AM [express] PATCH /api/elections/2/attendance/2 200 in 137ms :: {"message":"Presença atuali…
+2025-12-05T09:38:23.145683274Z 9:38:23 AM [express] GET /api/elections/2/attendance/count 200 in 69ms :: {"presentCount":1}
+2025-12-05T09:38:23.856858345Z 9:38:23 AM [express] GET /api/elections/2/attendance 200 in 393ms :: [{"id":3,"electionId":2,"electi…
+2025-12-05T09:38:23.885853409Z 9:38:23 AM [express] GET /api/elections/2/attendance/count 304 in 68ms :: {"presentCount":1}
+2025-12-05T09:38:30.791404836Z 9:38:30 AM [express] POST /api/candidates/batch 200 in 599ms :: {"message":"1 candidato(s) adicionad…
+2025-12-05T09:38:31.181494688Z 9:38:31 AM [express] GET /api/candidates 200 in 137ms :: [{"id":1,"name":"Geovane Nascimento","email…
+2025-12-05T09:38:32.136700955Z 9:38:32 AM [express] GET /api/results/latest 200 in 1089ms :: {"electionId":2,"electionName":"Eleiçã…
+2025-12-05T09:38:32.162785518Z 9:38:32 AM [express] GET /api/elections/active 304 in 67ms :: {"id":2,"name":"Eleição 2025/2026","is…
+2025-12-05T09:38:40.682644136Z 9:38:40 AM [express] GET /api/positions 304 in 67ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":…
+2025-12-05T09:38:40.711383244Z 9:38:40 AM [express] GET /api/elections/2/attendance/count 304 in 67ms :: {"presentCount":1}
+2025-12-05T09:38:40.757595256Z 9:38:40 AM [express] GET /api/elections/2/positions/active 304 in 129ms :: {"id":7,"electionId":2,"p…
+2025-12-05T09:38:40.761127022Z 9:38:40 AM [express] GET /api/elections/2/positions 304 in 135ms :: [{"id":7,"electionId":2,"positio…
+2025-12-05T09:38:40.884227741Z 9:38:40 AM [express] GET /api/members 304 in 265ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T09:38:40.893734192Z 9:38:40 AM [express] GET /api/elections/history 304 in 247ms :: [{"id":1,"name":"Eleição 2025/2026",…
+2025-12-05T09:38:41.033620979Z 9:38:41 AM [express] GET /api/elections/2/attendance 304 in 396ms :: [{"id":3,"electionId":2,"electi…
+2025-12-05T09:38:48.857533605Z 9:38:48 AM [express] PATCH /api/elections/2/close 200 in 78ms :: {"message":"Eleição encerrada com s…
+2025-12-05T09:38:49.208233292Z 9:38:49 AM [express] GET /api/elections/active 200 in 67ms
+2025-12-05T09:38:53.130697355Z 9:38:53 AM [express] GET /api/positions 304 in 67ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":…
+2025-12-05T09:38:53.341652328Z 9:38:53 AM [express] GET /api/elections/history 200 in 263ms :: [{"id":2,"name":"Eleição 2025/2026",…
+2025-12-05T09:38:53.352531942Z 9:38:53 AM [express] GET /api/elections/active 304 in 276ms
+2025-12-05T09:38:53.557327935Z 9:38:53 AM [express] GET /api/members 304 in 476ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T09:39:11.173483373Z 9:39:11 AM [express] GET /api/elections/active 304 in 257ms
+2025-12-05T09:39:26.93630396Z 9:39:26 AM [express] GET /api/elections/active 304 in 267ms
+2025-12-05T09:39:27.496818671Z 9:39:27 AM [express] GET /api/elections/2/audit 200 in 1724ms :: {"results":{"electionId":2,"electio…
+2025-12-05T09:39:27.944279567Z 9:39:27 AM [express] POST /api/elections/2/audit/save-hash 200 in 77ms :: {"id":1,"electionId":2,"ve…
+2025-12-05T09:39:32.812215088Z ✓ Audit PDF email sent to Geovane Nascimento (geovanefrotta@gmail.com) for Eleição 2025/2026
+2025-12-05T09:39:32.813307424Z 9:39:32 AM [express] POST /api/elections/2/audit/send-email 200 in 1322ms :: {"message":"PDF de audi…
+2025-12-05T09:40:07.983154021Z 9:40:07 AM [express] GET /api/verify/9359a8e4c2945b70bbeb38f8bd0eecbfae3efd1b5590719a2f95453a5dce1f2…
+2025-12-05T09:40:13.13280334Z 9:40:13 AM [express] GET /api/site/highlights 304 in 354ms :: {"devotional":null,"events":[],"instag…
+2025-12-05T09:40:45.337641429Z 9:40:45 AM [express] GET /api/site/devotionals 304 in 273ms :: []
+2025-12-05T09:41:19.225981326Z 9:41:19 AM [express] GET /api/positions 304 in 262ms :: [{"id":1,"name":"Presidente"},{"id":2,"name"…
+2025-12-05T09:41:19.235374294Z 9:41:19 AM [express] GET /api/elections/history 304 in 269ms :: [{"id":2,"name":"Eleição 2025/2026",…
+2025-12-05T09:41:19.435733459Z 9:41:19 AM [express] GET /api/elections/active 304 in 64ms
+2025-12-05T09:41:19.62894439Z 9:41:19 AM [express] GET /api/members 304 in 263ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T09:41:50.469810674Z 9:41:50 AM [express] GET /api/elections/active 304 in 270ms
+2025-12-05T09:45:18.093108208Z 9:45:18 AM [express] GET /api/elections/active 304 in 275ms
+2025-12-05T09:45:21.529312812Z 9:45:21 AM [express] GET /api/results/latest 200 in 1020ms :: {"electionId":2,"electionName":"Eleiçã…
+2025-12-05T09:45:23.247489975Z 9:45:23 AM [express] GET /api/elections/2/winners 200 in 680ms :: []
+2025-12-05T09:45:24.730831707Z 9:45:24 AM [express] GET /api/positions 304 in 68ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":…
+2025-12-05T09:45:24.743500465Z 9:45:24 AM [express] GET /api/elections/history 304 in 68ms :: [{"id":2,"name":"Eleição 2025/2026","…
+2025-12-05T09:45:24.922563311Z 9:45:24 AM [express] GET /api/members 304 in 264ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T09:45:30.00345902Z 9:45:30 AM [express] GET /api/ai/status 304 in 2ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T09:45:30.216919712Z 9:45:30 AM [express] GET /api/study/admin/weeks 304 in 68ms :: [{"id":5,"weekNumber":1,"year":2025,"…
+2025-12-05T09:45:30.273142309Z 9:45:30 AM [express] GET /api/study/admin/stats 200 in 272ms :: {"totalWeeks":1,"totalLessons":9,"to…
+2025-12-05T09:45:42.806820009Z 9:45:42 AM [express] GET /api/study/admin/lessons/5 304 in 1ms
+2025-12-05T10:00:00.014034844Z [Birthday Scheduler] Running daily birthday check...
+2025-12-05T10:00:00.014877215Z [Birthday Scheduler] Error during birthday check: TypeError: allMembers.filter is not a function
+2025-12-05T10:00:00.014891095Z     at sendBirthdayEmails (file:///opt/render/project/src/dist/index.js:7187:40)
+2025-12-05T10:00:00.014896135Z     at Runner.onMatch (/opt/render/project/src/node_modules/node-cron/dist/esm/tasks/inline-scheduled-task.js:69:20)
+2025-12-05T10:00:00.014900895Z     at Timeout._onTimeout (/opt/render/project/src/node_modules/node-cron/dist/esm/scheduler/runner.js:70:55)
+2025-12-05T10:00:00.014905755Z     at listOnTimeout (node:internal/timers:588:17)
+2025-12-05T10:00:00.014910326Z     at process.processTimers (node:internal/timers:523:7)
+2025-12-05T10:03:50.221632309Z ==> Running 'npm run start'
+2025-12-05T10:03:51.319484485Z 
+2025-12-05T10:03:51.319507566Z > rest-express@1.0.0 start
+2025-12-05T10:03:51.319512706Z > NODE_ENV=production node dist/index.js
+2025-12-05T10:03:51.319515246Z 
+2025-12-05T10:04:02.012827232Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-05T10:04:02.012855673Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-05T10:04:02.210502176Z Initializing PostgreSQL database connection...
+2025-12-05T10:04:02.875920322Z PostgreSQL connection successful: 2025-12-05T10:04:02.838Z
+2025-12-05T10:04:02.8762156Z Creating database tables...
+2025-12-05T10:04:03.064142017Z All tables created successfully!
+2025-12-05T10:04:03.133119343Z Admin user already exists: marketingumpemaus@gmail.com
+2025-12-05T10:04:03.515072757Z Database initialized successfully!
+2025-12-05T10:04:03.610568811Z [Birthday Scheduler] ✓ Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2025-12-05T10:04:03.617168555Z [WebSocket] Server initialized
+2025-12-05T10:04:03.618832189Z 10:04:03 AM [express] serving on port 10000
+2025-12-05T10:04:09.013098276Z 10:04:09 AM [express] GET /api/ai/status 304 in 1ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T10:04:09.017898452Z 10:04:09 AM [express] GET /api/study/profile 304 in 73ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T10:04:09.10823042Z 10:04:09 AM [express] GET /api/ai/status 304 in 81ms :: {"configured":true,"message":"IA configurada …
+2025-12-05T10:04:09.111131607Z 10:04:09 AM [express] GET /api/study/admin/weeks 304 in 90ms :: [{"id":5,"weekNumber":1,"year":2025,"…
+2025-12-05T10:04:09.279210881Z 10:04:09 AM [express] GET /api/study/profile 304 in 63ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T10:04:09.342395334Z 10:04:09 AM [express] GET /api/study/admin/weeks 304 in 368ms :: [{"id":5,"weekNumber":1,"year":2025,…
+2025-12-05T10:04:09.563579207Z 10:04:09 AM [express] GET /api/study/admin/stats 304 in 574ms :: {"totalWeeks":1,"totalLessons":9,"to…
+2025-12-05T10:04:09.663306762Z 10:04:09 AM [express] GET /api/study/admin/stats 304 in 601ms :: {"totalWeeks":1,"totalLessons":9,"to…
+2025-12-05T10:04:09.670761468Z 10:04:09 AM [express] GET /api/study/profile 304 in 68ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T10:04:09.838530494Z 10:04:09 AM [express] GET /api/elections/active 304 in 67ms
+2025-12-05T10:04:09.851571028Z 10:04:09 AM [express] GET /api/elections/history 304 in 66ms :: [{"id":2,"name":"Eleição 2025/2026","…
+2025-12-05T10:04:09.854189667Z 10:04:09 AM [express] GET /api/positions 304 in 69ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":…
+2025-12-05T10:04:10.038056987Z 10:04:10 AM [express] GET /api/members 304 in 259ms :: [{"id":2,"fullName":"Geovane Nascimento","emai…
+2025-12-05T10:04:12.663439466Z 10:04:12 AM [express] GET /api/study/weeks 304 in 71ms :: [{"id":5,"weekNumber":1,"year":2025,"title"…
+2025-12-05T10:04:13.389849228Z 10:04:13 AM [express] GET /api/study/weeks/5 200 in 423ms :: {"id":5,"weekNumber":1,"year":2025,"titl…
+2025-12-05T10:04:13.837397299Z Get notifications error: error: column "data" does not exist
+2025-12-05T10:04:13.837413509Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T10:04:13.8374225Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T10:04:13.83742749Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T10:04:13.83743228Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T10:04:13.83744733Z   length: 104,
+2025-12-05T10:04:13.83744997Z   severity: 'ERROR',
+2025-12-05T10:04:13.837451661Z   code: '42703',
+2025-12-05T10:04:13.837453401Z   detail: undefined,
+2025-12-05T10:04:13.837455021Z   hint: undefined,
+2025-12-05T10:04:13.837456641Z   position: '50',
+2025-12-05T10:04:13.837459171Z   internalPosition: undefined,
+2025-12-05T10:04:13.837460831Z   internalQuery: undefined,
+2025-12-05T10:04:13.837462681Z   where: undefined,
+2025-12-05T10:04:13.837464391Z   schema: undefined,
+2025-12-05T10:04:13.837466891Z   table: undefined,
+2025-12-05T10:04:13.837469671Z   column: undefined,
+2025-12-05T10:04:13.837472631Z   dataType: undefined,
+2025-12-05T10:04:13.837475261Z   constraint: undefined,
+2025-12-05T10:04:13.837478071Z   file: 'parse_relation.c',
+2025-12-05T10:04:13.837480991Z   line: '3716',
+2025-12-05T10:04:13.837483981Z   routine: 'errorMissingColumn'
+2025-12-05T10:04:13.837486771Z }
+2025-12-05T10:04:13.838155769Z 10:04:13 AM [express] GET /api/notifications 500 in 78ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T10:04:13.839099514Z 10:04:13 AM [express] GET /api/notifications/unread-count 304 in 81ms :: {"count":0}
+2025-12-05T10:04:19.110837465Z 10:04:19 AM [express] GET /api/study/lessons/18 200 in 215ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T10:04:19.609491061Z 10:04:19 AM [express] POST /api/study/lessons/18/start 200 in 223ms :: {"id":16,"userId":1,"lessonId"…
+2025-12-05T10:04:19.997211657Z 10:04:19 AM [express] GET /api/study/profile 304 in 71ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T10:04:31.066921159Z Get notifications error: error: column "data" does not exist
+2025-12-05T10:04:31.06694158Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T10:04:31.06694663Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T10:04:31.06695196Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T10:04:31.06695702Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T10:04:31.06696116Z   length: 104,
+2025-12-05T10:04:31.06696592Z   severity: 'ERROR',
+2025-12-05T10:04:31.06697009Z   code: '42703',
+2025-12-05T10:04:31.06697409Z   detail: undefined,
+2025-12-05T10:04:31.066978601Z   hint: undefined,
+2025-12-05T10:04:31.066982981Z   position: '50',
+2025-12-05T10:04:31.066987991Z   internalPosition: undefined,
+2025-12-05T10:04:31.066992211Z   internalQuery: undefined,
+2025-12-05T10:04:31.066996731Z   where: undefined,
+2025-12-05T10:04:31.067000711Z   schema: undefined,
+2025-12-05T10:04:31.067005411Z   table: undefined,
+2025-12-05T10:04:31.067010142Z   column: undefined,
+2025-12-05T10:04:31.067014331Z   dataType: undefined,
+2025-12-05T10:04:31.067019192Z   constraint: undefined,
+2025-12-05T10:04:31.067023282Z   file: 'parse_relation.c',
+2025-12-05T10:04:31.067027472Z   line: '3716',
+2025-12-05T10:04:31.067032032Z   routine: 'errorMissingColumn'
+2025-12-05T10:04:31.067036362Z }
+2025-12-05T10:04:31.067063513Z 10:04:31 AM [express] GET /api/notifications 500 in 283ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T10:04:39.708335938Z 10:04:39 AM [express] POST /api/study/lessons/18/start 200 in 419ms :: {"id":16,"userId":1,"lessonId"…
+2025-12-05T10:04:40.158624321Z 10:04:40 AM [express] GET /api/study/profile 304 in 71ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T10:04:51.038344537Z 10:04:51 AM [express] POST /api/study/units/57/complete 200 in 474ms :: {"unitProgress":{"id":1,"user…
+2025-12-05T10:04:51.598846911Z 10:04:51 AM [express] GET /api/study/lessons/18 200 in 267ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T10:04:51.810173984Z 10:04:51 AM [express] POST /api/study/units/58/complete 200 in 471ms :: {"unitProgress":{"id":2,"user…
+2025-12-05T10:04:52.320827755Z 10:04:52 AM [express] GET /api/study/lessons/18 304 in 200ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T10:04:52.387412888Z 10:04:52 AM [express] POST /api/study/units/59/complete 200 in 269ms :: {"unitProgress":{"id":3,"user…
+2025-12-05T10:04:52.855362356Z 10:04:52 AM [express] GET /api/study/lessons/18 304 in 200ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T10:04:52.923213452Z 10:04:52 AM [express] POST /api/study/units/60/complete 200 in 267ms :: {"unitProgress":{"id":4,"user…
+2025-12-05T10:04:53.378992509Z 10:04:53 AM [express] GET /api/study/lessons/18 304 in 202ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T10:04:53.466128933Z 10:04:53 AM [express] POST /api/study/units/61/complete 200 in 271ms :: {"unitProgress":{"id":5,"user…
+2025-12-05T10:04:53.978710485Z 10:04:53 AM [express] GET /api/study/lessons/18 304 in 203ms :: {"id":18,"studyWeekId":5,"orderIndex"…
+2025-12-05T10:04:55.74163935Z 10:04:55 AM [express] GET /api/study/profile 304 in 69ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T10:04:55.761081602Z Get notifications error: error: column "data" does not exist
+2025-12-05T10:04:55.761116763Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T10:04:55.761124413Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T10:04:55.761139804Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T10:04:55.761146544Z     at async file:///opt/render/project/src/dist/index.js:6726:30 {
+2025-12-05T10:04:55.761151304Z   length: 104,
+2025-12-05T10:04:55.761155474Z   severity: 'ERROR',
+2025-12-05T10:04:55.761158964Z   code: '42703',
+2025-12-05T10:04:55.761162414Z   detail: undefined,
+2025-12-05T10:04:55.761165864Z   hint: undefined,
+2025-12-05T10:04:55.761169634Z   position: '50',
+2025-12-05T10:04:55.761173474Z   internalPosition: undefined,
+2025-12-05T10:04:55.761177005Z   internalQuery: undefined,
+2025-12-05T10:04:55.761180465Z   where: undefined,
+2025-12-05T10:04:55.761183895Z   schema: undefined,
+2025-12-05T10:04:55.761187385Z   table: undefined,
+2025-12-05T10:04:55.761190825Z   column: undefined,
+2025-12-05T10:04:55.761194245Z   dataType: undefined,
+2025-12-05T10:04:55.761197665Z   constraint: undefined,
+2025-12-05T10:04:55.761201095Z   file: 'parse_relation.c',
+2025-12-05T10:04:55.761204595Z   line: '3716',
+2025-12-05T10:04:55.761208055Z   routine: 'errorMissingColumn'
+2025-12-05T10:04:55.761211555Z }
+2025-12-05T10:04:55.761727559Z 10:04:55 AM [express] GET /api/notifications 500 in 70ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T10:04:55.952152701Z 10:04:55 AM [express] GET /api/study/weeks 304 in 258ms :: [{"id":5,"weekNumber":1,"year":2025,"title…
+2025-12-05T10:04:56.336394326Z 10:04:56 AM [express] GET /api/study/weeks/5 200 in 616ms :: {"id":5,"weekNumber":1,"year":2025,"titl…

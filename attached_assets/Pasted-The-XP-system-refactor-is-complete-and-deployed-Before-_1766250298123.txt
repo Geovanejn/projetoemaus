@@ -1,0 +1,124 @@
+The XP system refactor is complete and deployed. Before final sign-off, perform a LAST-PASS REVIEW focusing ONLY on risk points, edge cases, and long-term stability.
+
+DO NOT refactor logic. DO NOT change architecture.
+This is a verification-only audit.
+
+────────────────────────
+BACKEND – CRITICAL ATTENTION POINTS
+────────────────────────
+
+1) Single Source Enforcement
+Confirm there is NO remaining read path (direct or indirect) to:
+- studyProfiles.totalXp
+- xpTransactions (except audit/logs)
+- userSeasonProgress.xpEarned
+
+Any reference to these for ranking is a CRITICAL BUG.
+
+2) Weekly Practice Bonus Integrity
+Verify weeklyPracticeBonus table:
+- INSERT-ONLY (no UPDATE, no DELETE)
+- Deduplication enforced via unique(userId, weekKey)
+- onConflictDoNothing() used everywhere
+- Bonus XP never recalculated or inferred
+
+Confirm no code path can:
+- Award bonus twice
+- Re-award on retry
+- Miss awarding due to race conditions
+
+3) Aggregation Consistency (MOST IMPORTANT)
+Confirm ALL XP totals are calculated ONLY as:
+
+TOTAL XP =
+SUM(user_lesson_progress.xpEarned)
++ SUM(weekly_practice_bonus.bonusXp)
+
+No exception. No shortcut. No cached value.
+
+4) Time Filtering Accuracy
+Verify filters are consistent and correct:
+
+- Annual leaderboard:
+  - Lessons filtered by study_lessons.createdAt YEAR
+  - Bonuses filtered by weekly_practice_bonus.earnedAt YEAR
+
+- Season leaderboard & updateSeasonRanking:
+  - Lessons filtered by study_lessons.seasonId
+  - Bonuses filtered by season.startsAt ≤ earnedAt ≤ season.endsAt
+
+Ensure:
+- No XP leaks across years
+- No XP leaks across seasons
+
+5) Double Count Protection
+Confirm:
+- Lesson XP counted once per lesson (status = 'completed')
+- Weekly bonus XP counted once per week
+- No overlap between lesson XP and bonus XP
+
+6) Legacy Data Safety
+Evaluate users who:
+- Completed lessons before weeklyPracticeBonus existed
+- Have xpTransactions without bonus rows
+
+Confirm:
+- No overcount
+- No phantom XP
+- No missing XP
+
+Recommend ONE-TIME backfill only if mathematically required.
+
+────────────────────────
+FRONTEND – CONSUMPTION & DISPLAY
+────────────────────────
+
+7) Display-Only Rule
+Confirm frontend:
+- Performs ZERO XP calculations
+- Does NOT sum, subtract, or merge XP values
+- Displays backend totals verbatim
+
+8) Endpoint Alignment
+Confirm:
+- Global leaderboard
+- Year leaderboard
+- Season (magazine) leaderboard
+- Profile XP summary (if present)
+
+All read from the same backend-calculated XP fields.
+
+9) Cache & Revalidation
+Verify:
+- No stale XP due to caching
+- XP refetch after:
+  - Lesson completion
+  - Weekly practice completion
+- No optimistic XP updates on frontend
+
+────────────────────────
+REFERENCE TEST CASE (MUST MATCH)
+────────────────────────
+
+Expected values:
+- Global XP: 355
+- Year XP: 355
+- Season XP: 235
+
+If ANY leaderboard diverges, identify:
+- Exact query
+- Exact filter
+- Exact data source
+
+────────────────────────
+DELIVERABLES REQUIRED
+────────────────────────
+
+- Pass/Fail checklist per item
+- Any remaining risky or ambiguous code paths
+- Explicit statement:
+  “XP SYSTEM IS LOCKED AND SAFE FOR PRODUCTION”
+  or
+  “DO NOT DEPLOY – issues remain”
+
+This system must be treated as FINAL and IMMUTABLE going forward.

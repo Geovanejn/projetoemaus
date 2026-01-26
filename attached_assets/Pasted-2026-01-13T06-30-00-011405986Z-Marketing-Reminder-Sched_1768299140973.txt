@@ -1,0 +1,89 @@
+2026-01-13T06:30:00.011405986Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-13T06:30:00.504075333Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-13T06:36:49.551869153Z 6:36:49 AM [express] POST /api 200 in 2ms
+2026-01-13T06:38:01.099503745Z 6:38:01 AM [express] POST /api 200 in 4ms
+2026-01-13T07:00:00.020915944Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-13T07:00:00.022712176Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-13T07:00:01.232427828Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-13T07:00:01.234932554Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-13T07:15:00.531136712Z 7:15:00 AM [express] POST /api 200 in 1ms
+2026-01-13T07:30:00.013095641Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-13T07:30:00.551994393Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-13T07:47:36.0597033Z 7:47:36 AM [express] POST /api 200 in 2ms
+2026-01-13T07:49:22.997076266Z 7:49:22 AM [express] POST /api 200 in 1ms
+2026-01-13T07:50:18.984131747Z 7:50:18 AM [express] POST /api 200 in 3ms
+2026-01-13T08:00:00.017945137Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-13T08:00:00.021909049Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-13T08:00:00.643990266Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-13T08:00:00.645765188Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-13T08:15:14.252657517Z 8:15:14 AM [express] POST /api 200 in 5ms
+2026-01-13T08:30:00.010955189Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-13T08:30:00.563827349Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-13T09:00:00.040148253Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-13T09:00:00.041489808Z [Instagram Scheduler] Running sync...
+2026-01-13T09:00:00.041505468Z [Instagram] Starting sync...
+2026-01-13T09:00:00.051637133Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-13T09:00:00.426509049Z [Instagram] API error: 400 {
+2026-01-13T09:00:00.42652824Z   error: {
+2026-01-13T09:00:00.426637662Z [Instagram] No new posts fetched - keeping existing data
+2026-01-13T09:00:00.426688263Z     message: 'Error validating access token: The session is invalid because the user logged out.',
+2026-01-13T09:00:00.426694543Z     type: 'OAuthException',
+2026-01-13T09:00:00.426699013Z     code: 190,
+2026-01-13T09:00:00.426704033Z     error_subcode: 467,
+2026-01-13T09:00:00.426708843Z     fbtrace_id: 'A73IgF9wrMY_AfQwhcNneEM'
+2026-01-13T09:00:00.426713213Z   }
+2026-01-13T09:00:00.426717683Z }
+2026-01-13T09:00:00.426727683Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-13T09:00:00.744903614Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-13T09:00:01.285633699Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-13T09:27:48.128202Z 9:27:48 AM [express] POST /api 200 in 3ms
+2026-01-13T09:30:00.009433737Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-13T09:30:00.514897704Z [Marketing Reminder Scheduler] No upcoming marketing events found
+2026-01-13T10:00:00.045980113Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-13T10:00:00.047426529Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-13T10:00:00.227173117Z [Birthday Scheduler] Running daily birthday check...
+2026-01-13T10:00:00.243329631Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-13T10:00:00.757167539Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-13T10:00:00.869769742Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-13T10:00:00.955077668Z [Birthday Scheduler] No birthdays today
+2026-01-13T10:00:01.157191023Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2026-01-13T10:00:01.157221693Z [Daily Verse Scheduler] Using AI-generated verse
+2026-01-13T10:00:01.16857968Z [Daily Verse] Trying key 1 with model gemini-3-flash-preview...
+2026-01-13T10:00:07.226993337Z [Daily Verse] Reflection generated successfully with key 1, model gemini-3-flash-preview
+2026-01-13T10:00:07.253328347Z [Daily Verse Scheduler] Created post 7 with stock image 1
+2026-01-13T10:00:07.257008534Z [Push] Sending "Versiculo do Dia" to 17 members (including inactive)
+2026-01-13T10:00:07.36972688Z [Push] WebPush delivery error for member user 1: Received unexpected response code
+2026-01-13T10:00:07.36975908Z [Push] Subscription expired/invalid (410), removing: https://fcm.googleapis.com/fcm/send/dmDaD6HBWXM:AP...
+2026-01-13T10:00:07.369772621Z [Push] Error sending notification (status 410): Received unexpected response code
+2026-01-13T10:00:07.40647524Z [Push] WebPush delivery error for member user 1: Received unexpected response code
+2026-01-13T10:00:07.40650163Z [Push] Error sending notification (status 410): Received unexpected response code
+2026-01-13T10:00:07.40650928Z [Push] Subscription expired/invalid (410), removing: https://fcm.googleapis.com/fcm/send/eHRUtBv0pFg:AP...
+2026-01-13T10:00:07.40978685Z [Push] All 2 subscriptions failed for user 1
+2026-01-13T10:00:07.413220923Z [Push] User 12 has no push subscriptions registered
+2026-01-13T10:00:07.438702437Z [Push] User 18 has no push subscriptions registered
+2026-01-13T10:00:07.534331941Z [Push] Successfully sent notification to member user 5
+2026-01-13T10:00:07.539126798Z [Push] Sent "Versiculo do Dia" to user 5 (1/1 success)
+2026-01-13T10:00:07.650499259Z [Push] Successfully sent notification to member user 13
+2026-01-13T10:00:07.650875306Z [Push] Sent "Versiculo do Dia" to user 13 (1/1 success)
+2026-01-13T10:00:07.798503717Z [Push] Successfully sent notification to member user 11
+2026-01-13T10:00:07.801988131Z [Push] Sent "Versiculo do Dia" to user 11 (1/1 success)
+2026-01-13T10:00:07.804198611Z [Push] User 15 has no push subscriptions registered
+2026-01-13T10:00:07.826908205Z [Push] WebPush delivery error for member user 2: Received unexpected response code
+2026-01-13T10:00:07.826924245Z [Push] Error sending notification (status 410): Received unexpected response code
+2026-01-13T10:00:07.826945486Z [Push] Subscription expired/invalid (410), removing: https://fcm.googleapis.com/fcm/send/eHRUtBv0pFg:AP...
+2026-01-13T10:00:07.82990702Z [Push] All 1 subscriptions failed for user 2
+2026-01-13T10:00:07.831791774Z [Push] User 9 has no push subscriptions registered
+2026-01-13T10:00:07.93304704Z [Push] Successfully sent notification to member user 6
+2026-01-13T10:00:07.936413641Z [Push] Sent "Versiculo do Dia" to user 6 (1/1 success)
+2026-01-13T10:00:07.938583461Z [Push] User 17 has no push subscriptions registered
+2026-01-13T10:00:07.940592148Z [Push] User 7 has no push subscriptions registered
+2026-01-13T10:00:07.943049173Z [Push] User 3 has no push subscriptions registered
+2026-01-13T10:00:08.121454195Z [Push] Successfully sent notification to member user 16
+2026-01-13T10:00:08.121825232Z [Push] Sent "Versiculo do Dia" to user 16 (1/1 success)
+2026-01-13T10:00:08.124349268Z [Push] User 14 has no push subscriptions registered
+2026-01-13T10:00:08.126516427Z [Push] User 4 has no push subscriptions registered
+2026-01-13T10:00:08.128702417Z [Push] User 8 has no push subscriptions registered
+2026-01-13T10:00:08.143329714Z [Notifications] Daily verse with link: 5 members, 0 anonymous visitors
+2026-01-13T10:00:08.152884288Z [Daily Verse Scheduler] Sent: Provérbios 3:6 (ARA)
+2026-01-13T10:01:45.067809701Z 10:01:45 AM [express] POST /api 200 in 2ms
+2026-01-13T10:03:54.596455405Z 10:03:54 AM [express] POST /api 200 in 2ms

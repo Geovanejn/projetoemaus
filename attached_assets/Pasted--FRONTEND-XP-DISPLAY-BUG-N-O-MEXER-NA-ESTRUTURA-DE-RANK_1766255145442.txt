@@ -1,0 +1,144 @@
+🚨 FRONTEND XP DISPLAY BUG — NÃO MEXER NA ESTRUTURA DE RANKINGS
+
+Os rankings ESTÃO CORRETOS e NÃO DEVEM SER ALTERADOS.
+A arquitetura de backend está final, validada e bloqueada.
+
+❌ PROIBIDO:
+
+Alterar queries de ranking
+
+Alterar somas no backend
+
+Alterar estrutura de tabelas
+
+Alterar lógica de cálculo de XP no servidor
+
+✅ ESTADO ATUAL (CORRETO)
+
+Ranking por revista (season): 235 XP ✅
+
+Ranking geral (global): 355 XP ✅
+
+Ranking anual: 355 XP ✅
+
+Fontes corretas (já validadas):
+
+userLessonProgress.xpEarned
+
+weeklyPracticeBonus
+
+achievementXp
+
+dailyMissionXp
+
+⚠️ NÃO TOCAR NISSO.
+
+🐞 PROBLEMAS REAIS (APENAS FRONTEND)
+1️⃣ Modal após concluir lição — XP incorreto
+
+📍 Local: Modal exibido ao finalizar a lição
+📉 Valor exibido: 45 XP
+✅ Valor correto: 235 XP
+
+Composição correta:
+
+185 XP (sessões: estude + medite + responda)
+
+50 XP (bônus de conclusão)
+
+➡️ Bug: O modal está usando XP parcial (provavelmente apenas stage ou delta visual), não o XP total persistido.
+
+🎯 Correção esperada:
+
+O modal deve exibir o XP TOTAL DA LIÇÃO CONCLUÍDA
+
+Preferencialmente usar o valor retornado pelo backend após completeLesson
+
+Nunca recalcular XP no frontend
+
+2️⃣ Tela inicial (header) — XP inflado
+
+📍 Local: Header da tela inicial
+📉 Valor exibido: 555 XP
+✅ Valor correto: 355 XP (igual ao ranking geral)
+
+➡️ Bug claro de double count no frontend:
+
+Está somando XP local + XP global
+
+Ou usando campo legado (ex: studyProfile.totalXp)
+
+Ou somando ranking + cache local
+
+🎯 Correção esperada:
+
+Header deve consumir EXATAMENTE o mesmo endpoint do ranking geral
+
+Exibir somente totalXp retornado pela API
+
+Nenhuma soma adicional no frontend
+
+3️⃣ Perfil → Estatísticas → XP Total — valor errado
+
+📍 Local: Página de perfil → Estatísticas
+📉 Valor exibido: 555 XP
+✅ Valor correto: 355 XP
+
+➡️ Mesmo problema do header:
+
+Fonte errada
+
+Campo legado
+
+Soma duplicada no frontend
+
+🎯 Correção esperada:
+
+XP Total do perfil deve ser o mesmo valor do ranking global
+
+Fonte única: backend
+
+Zero cálculos no frontend
+
+🧱 REGRA DE OURO (NÃO QUEBRAR)
+
+❗ Frontend é DISPLAY-ONLY
+
+❌ Não soma
+❌ Não recalcula
+❌ Não deriva
+❌ Não combina fontes
+
+✅ Apenas exibe valores retornados pelo backend
+
+🎯 RESUMO DO QUE FAZER
+
+🔒 Não mexer nos rankings
+
+🔒 Não mexer no backend
+
+🔧 Ajustar apenas:
+
+Fonte de dados do modal de conclusão
+
+Fonte de dados do header
+
+Fonte de dados do XP total no perfil
+
+✅ Garantir que todos usem o mesmo totalXp do ranking global
+
+🏁 OBJETIVO FINAL
+
+Após o ajuste:
+
+Modal de conclusão → 235 XP
+
+Header → 355 XP
+
+Perfil (XP Total) → 355 XP
+
+Rankings → inalterados e corretos
+
+Esse é um bug de exibição, não de regra de negócio.
+
+Arquitetura está certa. Só alinhar o frontend.

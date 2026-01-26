@@ -1,0 +1,50 @@
+2026-01-13T01:42:32.243100561Z ==> Your service is live 🎉
+2026-01-13T01:42:32.368211975Z ==> 
+2026-01-13T01:42:32.455241572Z ==> ///////////////////////////////////////////////////////////
+2026-01-13T01:42:32.5414982Z ==> 
+2026-01-13T01:42:32.627288537Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-13T01:42:32.715248005Z ==> 
+2026-01-13T01:42:32.801345372Z ==> ///////////////////////////////////////////////////////////
+2026-01-13T01:47:29.971608223Z ==> Detected service running on port 10000
+2026-01-13T01:47:30.148543433Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-13T01:49:47.708746462Z 1:49:47 AM [express] GET /api/admin/daily-verses 200 in 6ms :: [{"id":2,"verse":"Reconhece-o em todo…
+2026-01-13T01:49:47.730166992Z 1:49:47 AM [express] GET /api/espiritualidade/stats 304 in 12ms :: {"devotionals":{"total":2,"publis…
+2026-01-13T01:49:51.536720258Z 1:49:51 AM [express] DELETE /api/admin/daily-verse/2 200 in 16ms :: {"success":true,"message":"Versí…
+2026-01-13T01:49:51.738674392Z 1:49:51 AM [express] GET /api/admin/daily-verses 200 in 5ms :: [{"id":2,"verse":"Reconhece-o em todo…
+2026-01-13T01:49:57.04099393Z [Daily Verse] FORCE generating daily verse (admin triggered)...
+2026-01-13T01:49:57.097611059Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2026-01-13T01:49:57.097628759Z [Daily Verse] Using AI-generated verse
+2026-01-13T01:49:57.103963931Z [Daily Verse] Trying key 1 with model gemini-3-flash-preview...
+2026-01-13T01:50:02.416425195Z [Daily Verse] Reflection generated successfully with key 1, model gemini-3-flash-preview
+2026-01-13T01:50:02.450252063Z [Daily Verse] Force generated post 3
+2026-01-13T01:50:02.451246205Z 1:50:02 AM [express] POST /api/admin/daily-verse/force-generate 200 in 5412ms :: {"success":true,"me…
+2026-01-13T01:50:09.859412402Z 1:50:09 AM [express] GET /api/site/daily-verse 200 in 7ms :: {"id":3,"verse":"Reconhece-o em todos o…
+2026-01-13T01:50:28.068206938Z 1:50:28 AM [express] GET /api/notifications 304 in 10ms :: {"notifications":[{"id":176,"userId":1,"t…
+2026-01-13T01:50:28.199310596Z 1:50:28 AM [express] GET /api/notifications/unread-count 304 in 136ms :: {"count":0}
+2026-01-13T01:50:28.200195975Z 1:50:28 AM [express] GET /api/site/daily-verse 304 in 139ms :: {"id":3,"verse":"Reconhece-o em todos…
+2026-01-13T01:50:28.201087375Z 1:50:28 AM [express] GET /api/site-content/quem-somos 304 in 136ms :: {"email":{"title":"","content"…
+2026-01-13T01:50:28.286150961Z 1:50:28 AM [express] GET /api/site/daily-verses 200 in 226ms :: [{"id":3,"verse":"Reconhece-o em tod…
+2026-01-13T01:50:39.413706973Z 1:50:39 AM [express] GET /api/site/highlights 304 in 39ms :: {"devotional":{"id":4,"title":"Vivendo …
+2026-01-13T01:50:51.385192269Z 1:50:51 AM [express] GET /api/espiritualidade/stats 304 in 12ms :: {"devotionals":{"total":2,"publis…
+2026-01-13T01:50:51.391084171Z 1:50:51 AM [express] GET /api/admin/daily-verses 200 in 5ms :: [{"id":3,"verse":"Reconhece-o em todo…
+2026-01-13T01:50:55.450297292Z 1:50:55 AM [express] DELETE /api/admin/daily-verse/3 200 in 5ms :: {"success":true,"message":"Versíc…
+2026-01-13T01:50:55.695816353Z 1:50:55 AM [express] GET /api/admin/daily-verses 200 in 5ms :: [{"id":3,"verse":"Reconhece-o em todo…
+2026-01-13T01:50:57.203277395Z [Stock Images] Starting upload of 4 images to R2...
+2026-01-13T01:50:57.692032865Z [R2] Uploaded verses/1768269057286-mb0vmj.jpg (420.9KB)
+2026-01-13T01:50:57.699826219Z [Stock Images] Uploaded 1/4 (contemplative)
+2026-01-13T01:50:58.307239207Z [R2] Uploaded verses/1768269057714-jphapu.jpg (215.9KB)
+2026-01-13T01:50:58.311995024Z [Stock Images] Uploaded 2/4 (contemplative)
+2026-01-13T01:50:58.512415244Z [R2] Uploaded verses/1768269058340-j28tmc.jpg (189.8KB)
+2026-01-13T01:50:58.516838313Z [Stock Images] Uploaded 3/4 (contemplative)
+2026-01-13T01:50:58.686597037Z [R2] Uploaded verses/1768269058530-isoyup.jpg (150.1KB)
+2026-01-13T01:50:58.691448215Z [Stock Images] Uploaded 4/4 (contemplative)
+2026-01-13T01:50:58.692159091Z 1:50:58 AM [express] POST /api/admin/daily-verse/populate-stock 200 in 1495ms :: {"success":true,"me…
+2026-01-13T01:51:20.478180518Z 1:51:20 AM [express] POST /api/admin/daily-verse/populate-stock 200 in 7ms :: {"success":true,"messa…
+2026-01-13T01:51:23.812017816Z [Daily Verse] FORCE generating daily verse (admin triggered)...
+2026-01-13T01:51:23.869831071Z [BibleAPI] Daily verse fetched successfully from ABíbliaDigital
+2026-01-13T01:51:23.869857512Z [Daily Verse] Using AI-generated verse
+2026-01-13T01:51:23.875816756Z [Daily Verse] Trying key 1 with model gemini-3-flash-preview...
+2026-01-13T01:51:29.494026378Z [Daily Verse] Reflection generated successfully with key 1, model gemini-3-flash-preview
+2026-01-13T01:51:29.506712643Z [Daily Verse] Force generated post 4
+2026-01-13T01:51:29.507437919Z 1:51:29 AM [express] POST /api/admin/daily-verse/force-generate 200 in 5697ms :: {"success":true,"me…
+2026-01-13T01:51:35.617345486Z 1:51:35 AM [express] GET /api/site/daily-verse 200 in 8ms :: {"id":4,"verse":"Reconhece-o em todos o…

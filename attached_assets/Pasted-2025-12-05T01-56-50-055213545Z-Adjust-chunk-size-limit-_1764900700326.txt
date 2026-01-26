@@ -1,0 +1,519 @@
+2025-12-05T01:56:50.055213545Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-12-05T01:56:50.055520441Z ✓ built in 8.79s
+2025-12-05T01:56:50.167274052Z ▲ [WARNING] Import "userVerseReadings" will always be undefined because there is no matching export in "shared/schema.ts" [import-is-undefined]
+2025-12-05T01:56:50.167294513Z 
+2025-12-05T01:56:50.167298253Z     server/storage.ts:1631:53:
+2025-12-05T01:56:50.167302143Z       1631 │ ...st [existing] = await db.select().from(schema.userVerseReadings)
+2025-12-05T01:56:50.167305783Z            ╵                                                  ~~~~~~~~~~~~~~~~~
+2025-12-05T01:56:50.167308883Z 
+2025-12-05T01:56:50.171586728Z 1 warning
+2025-12-05T01:56:50.171615699Z 
+2025-12-05T01:56:50.171624239Z   dist/index.js  310.0kb
+2025-12-05T01:56:50.171627389Z 
+2025-12-05T01:56:50.171630489Z ⚡ Done in 15ms
+2025-12-05T01:56:51.213697151Z ==> Uploading build...
+2025-12-05T01:57:05.909794152Z ==> Uploaded in 10.2s. Compression took 4.5s
+2025-12-05T01:57:05.981998845Z ==> Build successful 🎉
+2025-12-05T01:57:08.624249884Z ==> Deploying...
+2025-12-05T01:57:38.109020124Z ==> Running 'npm run start'
+2025-12-05T01:57:39.201806801Z 
+2025-12-05T01:57:39.201839901Z > rest-express@1.0.0 start
+2025-12-05T01:57:39.201845141Z > NODE_ENV=production node dist/index.js
+2025-12-05T01:57:39.201847661Z 
+2025-12-05T01:57:49.211162793Z ✓ Logo loaded successfully for CID email embedding from: /opt/render/project/src/client/public/logo.png
+2025-12-05T01:57:49.211485156Z   Logo size: 32KB (will be attached via CID for Gmail compatibility)
+2025-12-05T01:57:49.301259715Z Initializing PostgreSQL database connection...
+2025-12-05T01:57:49.770064941Z PostgreSQL connection successful: 2025-12-05T01:57:49.737Z
+2025-12-05T01:57:49.770379234Z Creating database tables...
+2025-12-05T01:57:49.952799038Z All tables created successfully!
+2025-12-05T01:57:50.763643614Z Admin user created: marketingumpemaus@gmail.com
+2025-12-05T01:57:50.892124985Z Position created: Presidente
+2025-12-05T01:57:51.017851822Z Position created: Vice-Presidente
+2025-12-05T01:57:51.142720041Z Position created: 1º Secretário
+2025-12-05T01:57:51.267918333Z Position created: 2º Secretário
+2025-12-05T01:57:51.392218167Z Position created: 1º Tesoureiro
+2025-12-05T01:57:51.517206307Z Position created: 2º Tesoureiro
+2025-12-05T01:57:51.517222507Z Database initialized successfully!
+2025-12-05T01:57:51.602712927Z [Birthday Scheduler] ✓ Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2025-12-05T01:57:51.609348117Z [WebSocket] Server initialized
+2025-12-05T01:57:51.610916711Z 1:57:51 AM [express] serving on port 10000
+2025-12-05T01:57:59.524995706Z ==> Your service is live 🎉
+2025-12-05T01:57:59.558011854Z ==> 
+2025-12-05T01:57:59.586853292Z ==> ///////////////////////////////////////////////////////////
+2025-12-05T01:57:59.61617589Z ==> 
+2025-12-05T01:57:59.649056438Z ==> Available at your primary URL https://umpemaus.onrender.com
+2025-12-05T01:57:59.679449766Z ==> 
+2025-12-05T01:57:59.707380164Z ==> ///////////////////////////////////////////////////////////
+2025-12-05T01:58:56.480208689Z 1:58:56 AM [express] GET /api/site/highlights 200 in 290ms :: {"devotional":null,"events":[],"instag…
+2025-12-05T01:59:08.104221799Z 1:59:08 AM [express] GET /api/site/highlights 200 in 281ms :: {"devotional":null,"events":[],"instag…
+2025-12-05T01:59:11.601214821Z 1:59:11 AM [express] GET /api/site/devotionals/1 404 in 184ms :: {"message":"Devocional nao encontra…
+2025-12-05T01:59:11.700813479Z 1:59:11 AM [express] GET /api/site/devotionals 200 in 201ms :: []
+2025-12-05T01:59:51.906475662Z 1:59:51 AM [express] POST /api/auth/login-password 200 in 773ms :: {"user":{"id":1,"fullName":"UMP E…
+2025-12-05T02:00:01.744378788Z 2:00:01 AM [express] GET /api/positions 200 in 256ms :: [{"id":1,"name":"Presidente"},{"id":2,"name"…
+2025-12-05T02:00:01.759591767Z 2:00:01 AM [express] GET /api/members 200 in 269ms :: [{"id":1,"fullName":"UMP Emaús","email":"marke…
+2025-12-05T02:00:01.775603393Z 2:00:01 AM [express] GET /api/elections/history 200 in 268ms :: []
+2025-12-05T02:00:01.793443536Z 2:00:01 AM [express] GET /api/elections/active 200 in 277ms
+2025-12-05T02:00:09.09034313Z 2:00:09 AM [express] POST /api/elections 200 in 700ms :: {"id":1,"name":"Eleição 2025/2026","isActiv…
+2025-12-05T02:00:09.406015991Z 2:00:09 AM [express] GET /api/elections/active 200 in 69ms :: {"id":1,"name":"Eleição 2025/2026","is…
+2025-12-05T02:00:09.767220566Z 2:00:09 AM [express] GET /api/elections/1/attendance/count 200 in 73ms :: {"presentCount":0}
+2025-12-05T02:00:09.828587086Z 2:00:09 AM [express] GET /api/elections/1/positions/active 200 in 138ms :: {"id":1,"electionId":1,"p…
+2025-12-05T02:00:09.88931137Z 2:00:09 AM [express] GET /api/elections/1/attendance 200 in 194ms :: [{"id":1,"electionId":1,"electi…
+2025-12-05T02:00:10.024907477Z 2:00:10 AM [express] GET /api/candidates 200 in 326ms :: []
+2025-12-05T02:00:10.033562816Z 2:00:10 AM [express] GET /api/elections/1/positions 200 in 337ms :: [{"id":1,"electionId":1,"positio…
+2025-12-05T02:00:10.411191141Z 2:00:10 AM [express] GET /api/results/latest 200 in 739ms :: {"electionId":1,"electionName":"Eleição…
+2025-12-05T02:00:16.569765182Z 2:00:16 AM [express] PATCH /api/elections/1/close 200 in 67ms :: {"message":"Eleição encerrada com s…
+2025-12-05T02:00:16.855470458Z 2:00:16 AM [express] GET /api/elections/active 200 in 65ms
+2025-12-05T02:00:23.860070498Z 2:00:23 AM [express] GET /api/ai/status 200 in 1ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T02:00:24.037965951Z Get admin stats error: error: relation "study_units" does not exist
+2025-12-05T02:00:24.037995711Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:00:24.038002362Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:00:24.038009502Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:00:24.038015912Z     at async DatabaseStorage.getStudyStats (file:///opt/render/project/src/dist/index.js:2007:29)
+2025-12-05T02:00:24.038024802Z     at async file:///opt/render/project/src/dist/index.js:5818:21 {
+2025-12-05T02:00:24.038030582Z   length: 110,
+2025-12-05T02:00:24.038036952Z   severity: 'ERROR',
+2025-12-05T02:00:24.038041172Z   code: '42P01',
+2025-12-05T02:00:24.038044622Z   detail: undefined,
+2025-12-05T02:00:24.038048072Z   hint: undefined,
+2025-12-05T02:00:24.038051632Z   position: '22',
+2025-12-05T02:00:24.038055712Z   internalPosition: undefined,
+2025-12-05T02:00:24.038059182Z   internalQuery: undefined,
+2025-12-05T02:00:24.038062662Z   where: undefined,
+2025-12-05T02:00:24.038066152Z   schema: undefined,
+2025-12-05T02:00:24.038070242Z   table: undefined,
+2025-12-05T02:00:24.038073692Z   column: undefined,
+2025-12-05T02:00:24.038077122Z   dataType: undefined,
+2025-12-05T02:00:24.038080602Z   constraint: undefined,
+2025-12-05T02:00:24.038084062Z   file: 'parse_relation.c',
+2025-12-05T02:00:24.038087522Z   line: '1449',
+2025-12-05T02:00:24.038091132Z   routine: 'parserOpenTable'
+2025-12-05T02:00:24.038094622Z }
+2025-12-05T02:00:24.038668497Z 2:00:24 AM [express] GET /api/study/admin/stats 500 in 195ms :: {"message":"Erro ao buscar estatisti…
+2025-12-05T02:00:24.105894891Z 2:00:24 AM [express] GET /api/study/admin/weeks 200 in 258ms :: []
+2025-12-05T02:02:03.213679698Z 2:02:03 AM [express] GET /api/ai/status 304 in 1ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T02:02:03.709708094Z Get admin stats error: error: relation "study_units" does not exist
+2025-12-05T02:02:03.709739735Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:02:03.709744465Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:02:03.709749955Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:02:03.709755175Z     at async DatabaseStorage.getStudyStats (file:///opt/render/project/src/dist/index.js:2007:29)
+2025-12-05T02:02:03.709758965Z     at async file:///opt/render/project/src/dist/index.js:5818:21 {
+2025-12-05T02:02:03.709762995Z   length: 110,
+2025-12-05T02:02:03.709768435Z   severity: 'ERROR',
+2025-12-05T02:02:03.709772195Z   code: '42P01',
+2025-12-05T02:02:03.709775795Z   detail: undefined,
+2025-12-05T02:02:03.709779605Z   hint: undefined,
+2025-12-05T02:02:03.709783335Z   position: '22',
+2025-12-05T02:02:03.709788515Z   internalPosition: undefined,
+2025-12-05T02:02:03.709792265Z   internalQuery: undefined,
+2025-12-05T02:02:03.709796025Z   where: undefined,
+2025-12-05T02:02:03.709799935Z   schema: undefined,
+2025-12-05T02:02:03.709803635Z   table: undefined,
+2025-12-05T02:02:03.709807355Z   column: undefined,
+2025-12-05T02:02:03.709829806Z   dataType: undefined,
+2025-12-05T02:02:03.709832376Z   constraint: undefined,
+2025-12-05T02:02:03.709834666Z   file: 'parse_relation.c',
+2025-12-05T02:02:03.709836946Z   line: '1449',
+2025-12-05T02:02:03.709839096Z   routine: 'parserOpenTable'
+2025-12-05T02:02:03.709841226Z }
+2025-12-05T02:02:03.711211418Z 2:02:03 AM [express] GET /api/study/admin/stats 500 in 489ms :: {"message":"Erro ao buscar estatisti…
+2025-12-05T02:02:03.873796602Z 2:02:03 AM [express] GET /api/study/admin/weeks 304 in 267ms :: []
+2025-12-05T02:02:10.577045686Z 2:02:10 AM [express] GET /api/study/profile 200 in 135ms :: {"id":1,"userId":1,"totalXp":0,"currentL…
+2025-12-05T02:02:10.945981063Z 2:02:10 AM [express] GET /api/study/weeks 200 in 67ms :: []
+2025-12-05T02:02:11.370008913Z 2:02:11 AM [express] GET /api/notifications/unread-count 500 in 68ms :: {"message":"Erro ao buscar c…
+2025-12-05T02:02:11.370083633Z Get unread count error: error: column notifications.read does not exist
+2025-12-05T02:02:11.370091933Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:02:11.370096473Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:02:11.370125783Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:02:11.370133803Z     at async DatabaseStorage.getUnreadNotificationCount (file:///opt/render/project/src/dist/index.js:2070:26)
+2025-12-05T02:02:11.370138224Z     at async file:///opt/render/project/src/dist/index.js:6544:21 {
+2025-12-05T02:02:11.370142264Z   length: 116,
+2025-12-05T02:02:11.370146924Z   severity: 'ERROR',
+2025-12-05T02:02:11.370150684Z   code: '42703',
+2025-12-05T02:02:11.370154854Z   detail: undefined,
+2025-12-05T02:02:11.370158964Z   hint: undefined,
+2025-12-05T02:02:11.370162724Z   position: '80',
+2025-12-05T02:02:11.370167104Z   internalPosition: undefined,
+2025-12-05T02:02:11.370487357Z   internalQuery: undefined,
+2025-12-05T02:02:11.370498727Z   where: undefined,
+2025-12-05T02:02:11.370502967Z   schema: undefined,
+2025-12-05T02:02:11.370506827Z   table: undefined,
+2025-12-05T02:02:11.370510807Z   column: undefined,
+2025-12-05T02:02:11.370514777Z   dataType: undefined,
+2025-12-05T02:02:11.370518607Z   constraint: undefined,
+2025-12-05T02:02:11.370522727Z   file: 'parse_relation.c',
+2025-12-05T02:02:11.370526657Z   line: '3716',
+2025-12-05T02:02:11.370530497Z   routine: 'errorMissingColumn'
+2025-12-05T02:02:11.370534607Z }
+2025-12-05T02:02:11.576404426Z Get notifications error: error: column "body" does not exist
+2025-12-05T02:02:11.576450266Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:02:11.576455217Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:02:11.576460137Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:02:11.576464447Z     at async file:///opt/render/project/src/dist/index.js:6497:30 {
+2025-12-05T02:02:11.576468347Z   length: 104,
+2025-12-05T02:02:11.576472767Z   severity: 'ERROR',
+2025-12-05T02:02:11.576476477Z   code: '42703',
+2025-12-05T02:02:11.576480197Z   detail: undefined,
+2025-12-05T02:02:11.576483907Z   hint: undefined,
+2025-12-05T02:02:11.576487417Z   position: '42',
+2025-12-05T02:02:11.576491707Z   internalPosition: undefined,
+2025-12-05T02:02:11.576495307Z   internalQuery: undefined,
+2025-12-05T02:02:11.576498897Z   where: undefined,
+2025-12-05T02:02:11.576518587Z   schema: undefined,
+2025-12-05T02:02:11.576521067Z   table: undefined,
+2025-12-05T02:02:11.576523167Z   column: undefined,
+2025-12-05T02:02:11.576525267Z   dataType: undefined,
+2025-12-05T02:02:11.576527247Z   constraint: undefined,
+2025-12-05T02:02:11.576529367Z   file: 'parse_relation.c',
+2025-12-05T02:02:11.576531427Z   line: '3716',
+2025-12-05T02:02:11.576533577Z   routine: 'errorMissingColumn'
+2025-12-05T02:02:11.576535667Z }
+2025-12-05T02:02:11.577042712Z 2:02:11 AM [express] GET /api/notifications 500 in 261ms :: {"message":"Erro ao buscar notificacoes"}
+2025-12-05T02:02:15.662666978Z Get admin stats error: error: relation "study_units" does not exist
+2025-12-05T02:02:15.662675748Z 2:02:15 AM [express] GET /api/study/admin/stats 500 in 396ms :: {"message":"Erro ao buscar estatisti…
+2025-12-05T02:02:15.662713918Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:02:15.662717028Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:02:15.662721458Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:02:15.662724978Z     at async DatabaseStorage.getStudyStats (file:///opt/render/project/src/dist/index.js:2007:29)
+2025-12-05T02:02:15.662727318Z     at async file:///opt/render/project/src/dist/index.js:5818:21 {
+2025-12-05T02:02:15.662729658Z   length: 110,
+2025-12-05T02:02:15.662733728Z   severity: 'ERROR',
+2025-12-05T02:02:15.662736148Z   code: '42P01',
+2025-12-05T02:02:15.662738329Z   detail: undefined,
+2025-12-05T02:02:15.662740598Z   hint: undefined,
+2025-12-05T02:02:15.662742878Z   position: '22',
+2025-12-05T02:02:15.662746318Z   internalPosition: undefined,
+2025-12-05T02:02:15.662748549Z   internalQuery: undefined,
+2025-12-05T02:02:15.662750698Z   where: undefined,
+2025-12-05T02:02:15.662752878Z   schema: undefined,
+2025-12-05T02:02:15.662755098Z   table: undefined,
+2025-12-05T02:02:15.662757238Z   column: undefined,
+2025-12-05T02:02:15.662759449Z   dataType: undefined,
+2025-12-05T02:02:15.662761989Z   constraint: undefined,
+2025-12-05T02:02:15.662764309Z   file: 'parse_relation.c',
+2025-12-05T02:02:15.662766549Z   line: '1449',
+2025-12-05T02:02:15.662768749Z   routine: 'parserOpenTable'
+2025-12-05T02:02:15.662770899Z }
+2025-12-05T02:02:58.462629228Z ==> Detected service running on port 10000
+2025-12-05T02:02:58.542753545Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-12-05T02:04:16.463719359Z 2:04:16 AM [express] GET /api/ai/status 304 in 1ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T02:04:16.852937992Z Get admin stats error: error: relation "study_units" does not exist
+2025-12-05T02:04:16.852966393Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:04:16.852971453Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:04:16.852976183Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:04:16.852983973Z     at async DatabaseStorage.getStudyStats (file:///opt/render/project/src/dist/index.js:2007:29)
+2025-12-05T02:04:16.852988273Z     at async file:///opt/render/project/src/dist/index.js:5818:21 {
+2025-12-05T02:04:16.852992183Z   length: 110,
+2025-12-05T02:04:16.852996943Z   severity: 'ERROR',
+2025-12-05T02:04:16.853000963Z   code: '42P01',
+2025-12-05T02:04:16.853004823Z   detail: undefined,
+2025-12-05T02:04:16.853008853Z   hint: undefined,
+2025-12-05T02:04:16.853012603Z   position: '22',
+2025-12-05T02:04:16.853017023Z   internalPosition: undefined,
+2025-12-05T02:04:16.853020943Z   internalQuery: undefined,
+2025-12-05T02:04:16.853040253Z   where: undefined,
+2025-12-05T02:04:16.853042883Z   schema: undefined,
+2025-12-05T02:04:16.853044953Z   table: undefined,
+2025-12-05T02:04:16.853046983Z   column: undefined,
+2025-12-05T02:04:16.853049313Z   dataType: undefined,
+2025-12-05T02:04:16.853051363Z   constraint: undefined,
+2025-12-05T02:04:16.853053513Z   file: 'parse_relation.c',
+2025-12-05T02:04:16.853055624Z   line: '1449',
+2025-12-05T02:04:16.853057733Z   routine: 'parserOpenTable'
+2025-12-05T02:04:16.853059853Z }
+2025-12-05T02:04:16.853581668Z 2:04:16 AM [express] GET /api/study/admin/stats 500 in 393ms :: {"message":"Erro ao buscar estatisti…
+2025-12-05T02:04:17.016054321Z 2:04:17 AM [express] GET /api/study/admin/weeks 304 in 251ms :: []
+2025-12-05T02:05:13.362094559Z AI generate week from PDF error: error: relation "study_units" does not exist
+2025-12-05T02:05:13.362151349Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:05:13.362156519Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:05:13.362161479Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:05:13.36216629Z     at async DatabaseStorage.createStudyUnit (file:///opt/render/project/src/dist/index.js:1572:24)
+2025-12-05T02:05:13.362170319Z     at async file:///opt/render/project/src/dist/index.js:5946:11 {
+2025-12-05T02:05:13.362174299Z   length: 110,
+2025-12-05T02:05:13.362178439Z   severity: 'ERROR',
+2025-12-05T02:05:13.36218201Z   code: '42P01',
+2025-12-05T02:05:13.36218554Z   detail: undefined,
+2025-12-05T02:05:13.3621891Z   hint: undefined,
+2025-12-05T02:05:13.36219274Z   position: '13',
+2025-12-05T02:05:13.36219732Z   internalPosition: undefined,
+2025-12-05T02:05:13.36222478Z   internalQuery: undefined,
+2025-12-05T02:05:13.36222908Z   where: undefined,
+2025-12-05T02:05:13.36223271Z   schema: undefined,
+2025-12-05T02:05:13.36223623Z   table: undefined,
+2025-12-05T02:05:13.36223978Z   column: undefined,
+2025-12-05T02:05:13.36224339Z   dataType: undefined,
+2025-12-05T02:05:13.36224697Z   constraint: undefined,
+2025-12-05T02:05:13.36225057Z   file: 'parse_relation.c',
+2025-12-05T02:05:13.36225418Z   line: '1449',
+2025-12-05T02:05:13.36225781Z   routine: 'parserOpenTable'
+2025-12-05T02:05:13.36226135Z }
+2025-12-05T02:05:13.362925676Z 2:05:13 AM [express] POST /api/ai/generate-week-from-pdf 500 in 38465ms :: {"message":"relation \"st…
+2025-12-05T02:05:45.704325903Z 2:05:45 AM [express] POST /api/auth/login-password 200 in 892ms :: {"user":{"id":1,"fullName":"UMP E…
+2025-12-05T02:05:46.300816858Z 2:05:46 AM [express] GET /api/site/highlights 304 in 302ms :: {"devotional":null,"events":[],"instag…
+2025-12-05T02:05:51.628177417Z 2:05:51 AM [express] GET /api/positions 200 in 67ms :: [{"id":1,"name":"Presidente"},{"id":2,"name":…
+2025-12-05T02:05:51.636486053Z 2:05:51 AM [express] GET /api/members 200 in 68ms :: [{"id":1,"fullName":"UMP Emaús","email":"market…
+2025-12-05T02:05:51.639663252Z 2:05:51 AM [express] GET /api/elections/active 200 in 67ms
+2025-12-05T02:05:51.849344197Z 2:05:51 AM [express] GET /api/elections/history 200 in 274ms :: [{"id":1,"name":"Eleição 2025/2026",…
+2025-12-05T02:05:54.527868152Z 2:05:54 AM [express] GET /api/ai/status 200 in 1ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T02:05:54.592970966Z 2:05:54 AM [express] GET /api/study/admin/weeks 200 in 69ms :: [{"id":1,"weekNumber":1,"year":2025,"…
+2025-12-05T02:05:54.729015528Z Get admin stats error: error: relation "study_units" does not exist
+2025-12-05T02:05:54.729051499Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:05:54.729054549Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:05:54.729057639Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:05:54.729060479Z     at async DatabaseStorage.getStudyStats (file:///opt/render/project/src/dist/index.js:2007:29)
+2025-12-05T02:05:54.729062879Z     at async file:///opt/render/project/src/dist/index.js:5818:21 {
+2025-12-05T02:05:54.729065199Z   length: 110,
+2025-12-05T02:05:54.729068339Z   severity: 'ERROR',
+2025-12-05T02:05:54.729070619Z   code: '42P01',
+2025-12-05T02:05:54.729072809Z   detail: undefined,
+2025-12-05T02:05:54.729075019Z   hint: undefined,
+2025-12-05T02:05:54.729077229Z   position: '22',
+2025-12-05T02:05:54.729080319Z   internalPosition: undefined,
+2025-12-05T02:05:54.729082609Z   internalQuery: undefined,
+2025-12-05T02:05:54.729084879Z   where: undefined,
+2025-12-05T02:05:54.729087079Z   schema: undefined,
+2025-12-05T02:05:54.729089289Z   table: undefined,
+2025-12-05T02:05:54.729091469Z   column: undefined,
+2025-12-05T02:05:54.729094029Z   dataType: undefined,
+2025-12-05T02:05:54.729096289Z   constraint: undefined,
+2025-12-05T02:05:54.729098499Z   file: 'parse_relation.c',
+2025-12-05T02:05:54.729100809Z   line: '1449',
+2025-12-05T02:05:54.729103629Z   routine: 'parserOpenTable'
+2025-12-05T02:05:54.729105889Z }
+2025-12-05T02:05:54.729838506Z 2:05:54 AM [express] GET /api/study/admin/stats 500 in 201ms :: {"message":"Erro ao buscar estatisti…
+2025-12-05T02:06:14.371457301Z 2:06:14 AM [express] POST /api/ai/generate-week-from-pdf 409 in 805ms :: {"message":"Ja existe conte…
+2025-12-05T02:06:25.683303934Z 2:06:25 AM [express] GET /api/study/admin/lessons/1 200 in 1ms
+2025-12-05T02:06:32.133328518Z 2:06:32 AM [express] POST /api/study/admin/weeks/1/publish 200 in 471ms :: {"id":1,"weekNumber":1,"y…
+2025-12-05T02:06:32.438117631Z 2:06:32 AM [express] GET /api/study/admin/weeks 200 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"…
+2025-12-05T02:06:34.860767482Z 2:06:34 AM [express] GET /api/study/profile 200 in 67ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T02:06:35.191794104Z 2:06:35 AM [express] GET /api/study/weeks 200 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-05T02:06:35.609943942Z Get study week error: error: relation "user_lesson_progress" does not exist
+2025-12-05T02:06:35.609972623Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:06:35.609977143Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:06:35.609982133Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:06:35.609986443Z     at async file:///opt/render/project/src/dist/index.js:1870:30
+2025-12-05T02:06:35.609990753Z     at async Promise.all (index 0)
+2025-12-05T02:06:35.609995223Z     at async DatabaseStorage.getLessonsWithProgress (file:///opt/render/project/src/dist/index.js:1869:24)
+2025-12-05T02:06:35.609999193Z     at async file:///opt/render/project/src/dist/index.js:5129:23 {
+2025-12-05T02:06:35.610003393Z   length: 120,
+2025-12-05T02:06:35.610007863Z   severity: 'ERROR',
+2025-12-05T02:06:35.610011713Z   code: '42P01',
+2025-12-05T02:06:35.610015443Z   detail: undefined,
+2025-12-05T02:06:35.610019303Z   hint: undefined,
+2025-12-05T02:06:35.610023103Z   position: '152',
+2025-12-05T02:06:35.610045133Z   internalPosition: undefined,
+2025-12-05T02:06:35.610047753Z   internalQuery: undefined,
+2025-12-05T02:06:35.610049933Z   where: undefined,
+2025-12-05T02:06:35.610052143Z   schema: undefined,
+2025-12-05T02:06:35.610054533Z   table: undefined,
+2025-12-05T02:06:35.610056693Z   column: undefined,
+2025-12-05T02:06:35.610058813Z   dataType: undefined,
+2025-12-05T02:06:35.610060873Z   constraint: undefined,
+2025-12-05T02:06:35.610062983Z   file: 'parse_relation.c',
+2025-12-05T02:06:35.610065243Z   line: '1449',
+2025-12-05T02:06:35.610067443Z   routine: 'parserOpenTable'
+2025-12-05T02:06:35.610069643Z }
+2025-12-05T02:06:35.610657199Z 2:06:35 AM [express] GET /api/study/weeks/1 500 in 197ms :: {"message":"Erro ao buscar semana de est…
+2025-12-05T02:06:37.261536923Z 2:06:37 AM [express] GET /api/study/profile 304 in 261ms :: {"id":1,"userId":1,"totalXp":0,"currentL…
+2025-12-05T02:06:37.269108622Z 2:06:37 AM [express] GET /api/study/weeks 304 in 262ms :: [{"id":1,"weekNumber":1,"year":2025,"title…
+2025-12-05T02:06:37.394639868Z Get study week error: error: relation "user_lesson_progress" does not exist
+2025-12-05T02:06:37.394668948Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:06:37.394672058Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:06:37.394679119Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:06:37.394681648Z     at async file:///opt/render/project/src/dist/index.js:1870:30
+2025-12-05T02:06:37.394684519Z     at async Promise.all (index 0)
+2025-12-05T02:06:37.394687248Z     at async DatabaseStorage.getLessonsWithProgress (file:///opt/render/project/src/dist/index.js:1869:24)
+2025-12-05T02:06:37.394689388Z     at async file:///opt/render/project/src/dist/index.js:5129:23 {
+2025-12-05T02:06:37.394691608Z   length: 120,
+2025-12-05T02:06:37.394694529Z   severity: 'ERROR',
+2025-12-05T02:06:37.394696579Z   code: '42P01',
+2025-12-05T02:06:37.394698649Z   detail: undefined,
+2025-12-05T02:06:37.394700639Z   hint: undefined,
+2025-12-05T02:06:37.394702839Z   position: '152',
+2025-12-05T02:06:37.394705969Z   internalPosition: undefined,
+2025-12-05T02:06:37.394707939Z   internalQuery: undefined,
+2025-12-05T02:06:37.394709889Z   where: undefined,
+2025-12-05T02:06:37.394711979Z   schema: undefined,
+2025-12-05T02:06:37.394714009Z   table: undefined,
+2025-12-05T02:06:37.394715979Z   column: undefined,
+2025-12-05T02:06:37.394718019Z   dataType: undefined,
+2025-12-05T02:06:37.394723029Z   constraint: undefined,
+2025-12-05T02:06:37.394725339Z   file: 'parse_relation.c',
+2025-12-05T02:06:37.394727499Z   line: '1449',
+2025-12-05T02:06:37.394729939Z   routine: 'parserOpenTable'
+2025-12-05T02:06:37.394732159Z }
+2025-12-05T02:06:37.395298204Z 2:06:37 AM [express] GET /api/study/weeks/1 500 in 390ms :: {"message":"Erro ao buscar semana de est…
+2025-12-05T02:06:39.307474784Z 2:06:39 AM [express] GET /api/study/weeks 304 in 65ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-05T02:06:39.437829624Z Get study week error: error: relation "user_lesson_progress" does not exist
+2025-12-05T02:06:39.437864184Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:06:39.437868545Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:06:39.437872455Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:06:39.437897965Z     at async file:///opt/render/project/src/dist/index.js:1870:30
+2025-12-05T02:06:39.437902145Z     at async Promise.all (index 0)
+2025-12-05T02:06:39.437905145Z     at async DatabaseStorage.getLessonsWithProgress (file:///opt/render/project/src/dist/index.js:1869:24)
+2025-12-05T02:06:39.437907375Z     at async file:///opt/render/project/src/dist/index.js:5129:23 {
+2025-12-05T02:06:39.437909665Z   length: 120,
+2025-12-05T02:06:39.437912785Z   severity: 'ERROR',
+2025-12-05T02:06:39.437914905Z   code: '42P01',
+2025-12-05T02:06:39.437916955Z   detail: undefined,
+2025-12-05T02:06:39.437919325Z   hint: undefined,
+2025-12-05T02:06:39.437921405Z   position: '152',
+2025-12-05T02:06:39.437924365Z   internalPosition: undefined,
+2025-12-05T02:06:39.437926425Z   internalQuery: undefined,
+2025-12-05T02:06:39.437928535Z   where: undefined,
+2025-12-05T02:06:39.437930585Z   schema: undefined,
+2025-12-05T02:06:39.437932655Z   table: undefined,
+2025-12-05T02:06:39.437950065Z   column: undefined,
+2025-12-05T02:06:39.437952215Z   dataType: undefined,
+2025-12-05T02:06:39.437954285Z   constraint: undefined,
+2025-12-05T02:06:39.437960996Z   file: 'parse_relation.c',
+2025-12-05T02:06:39.437963205Z   line: '1449',
+2025-12-05T02:06:39.437965325Z   routine: 'parserOpenTable'
+2025-12-05T02:06:39.437967445Z }
+2025-12-05T02:06:39.438506881Z 2:06:39 AM [express] GET /api/study/weeks/1 500 in 197ms :: {"message":"Erro ao buscar semana de est…
+2025-12-05T02:06:39.527743575Z 2:06:39 AM [express] GET /api/study/profile 304 in 270ms :: {"id":1,"userId":1,"totalXp":0,"currentL…
+2025-12-05T02:06:41.535529688Z Get admin stats error: error: relation "study_units" does not exist
+2025-12-05T02:06:41.535581609Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:06:41.535587039Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:06:41.535592239Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:06:41.535597379Z     at async DatabaseStorage.getStudyStats (file:///opt/render/project/src/dist/index.js:2007:29)
+2025-12-05T02:06:41.535602199Z     at async file:///opt/render/project/src/dist/index.js:5818:21 {
+2025-12-05T02:06:41.535606609Z   length: 110,
+2025-12-05T02:06:41.535611549Z   severity: 'ERROR',
+2025-12-05T02:06:41.535615869Z   code: '42P01',
+2025-12-05T02:06:41.535619669Z   detail: undefined,
+2025-12-05T02:06:41.535623979Z   hint: undefined,
+2025-12-05T02:06:41.535628589Z   position: '22',
+2025-12-05T02:06:41.535633329Z   internalPosition: undefined,
+2025-12-05T02:06:41.535637299Z   internalQuery: undefined,
+2025-12-05T02:06:41.535641439Z   where: undefined,
+2025-12-05T02:06:41.535645609Z   schema: undefined,
+2025-12-05T02:06:41.535649509Z   table: undefined,
+2025-12-05T02:06:41.535653939Z   column: undefined,
+2025-12-05T02:06:41.535658799Z   dataType: undefined,
+2025-12-05T02:06:41.53566315Z   constraint: undefined,
+2025-12-05T02:06:41.535667859Z   file: 'parse_relation.c',
+2025-12-05T02:06:41.53567183Z   line: '1449',
+2025-12-05T02:06:41.535675859Z   routine: 'parserOpenTable'
+2025-12-05T02:06:41.53568002Z }
+2025-12-05T02:06:41.536370956Z 2:06:41 AM [express] GET /api/study/admin/stats 500 in 202ms :: {"message":"Erro ao buscar estatisti…
+2025-12-05T02:06:46.085513704Z Delete week error: error: relation "user_lesson_progress" does not exist
+2025-12-05T02:06:46.085533435Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:06:46.085538575Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:06:46.085552775Z     at async DatabaseStorage.deleteStudyLesson (file:///opt/render/project/src/dist/index.js:1593:9)
+2025-12-05T02:06:46.085555535Z     at async DatabaseStorage.deleteStudyWeek (file:///opt/render/project/src/dist/index.js:1617:11)
+2025-12-05T02:06:46.085557785Z     at async file:///opt/render/project/src/dist/index.js:6343:23 {
+2025-12-05T02:06:46.085560045Z   length: 119,
+2025-12-05T02:06:46.085562705Z   severity: 'ERROR',
+2025-12-05T02:06:46.085564875Z   code: '42P01',
+2025-12-05T02:06:46.085567065Z   detail: undefined,
+2025-12-05T02:06:46.085569325Z   hint: undefined,
+2025-12-05T02:06:46.085571355Z   position: '13',
+2025-12-05T02:06:46.085573685Z   internalPosition: undefined,
+2025-12-05T02:06:46.085575915Z   internalQuery: undefined,
+2025-12-05T02:06:46.085577955Z   where: undefined,
+2025-12-05T02:06:46.085580225Z   schema: undefined,
+2025-12-05T02:06:46.085582475Z   table: undefined,
+2025-12-05T02:06:46.085584695Z   column: undefined,
+2025-12-05T02:06:46.085586735Z   dataType: undefined,
+2025-12-05T02:06:46.085588795Z   constraint: undefined,
+2025-12-05T02:06:46.085590855Z   file: 'parse_relation.c',
+2025-12-05T02:06:46.085592945Z   line: '1449',
+2025-12-05T02:06:46.085595075Z   routine: 'parserOpenTable'
+2025-12-05T02:06:46.085597165Z }
+2025-12-05T02:06:46.086355352Z 2:06:46 AM [express] DELETE /api/study/admin/weeks/1 500 in 134ms :: {"message":"Erro ao excluir sem…
+2025-12-05T02:08:28.901018818Z AI generate week from PDF error: error: relation "study_units" does not exist
+2025-12-05T02:08:28.901042828Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:08:28.901047418Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:08:28.901052288Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:08:28.901057638Z     at async DatabaseStorage.createStudyUnit (file:///opt/render/project/src/dist/index.js:1572:24)
+2025-12-05T02:08:28.901062518Z     at async file:///opt/render/project/src/dist/index.js:5946:11 {
+2025-12-05T02:08:28.901066698Z   length: 110,
+2025-12-05T02:08:28.901071819Z   severity: 'ERROR',
+2025-12-05T02:08:28.901075808Z   code: '42P01',
+2025-12-05T02:08:28.901079839Z   detail: undefined,
+2025-12-05T02:08:28.901083808Z   hint: undefined,
+2025-12-05T02:08:28.901087909Z   position: '13',
+2025-12-05T02:08:28.901092759Z   internalPosition: undefined,
+2025-12-05T02:08:28.901096859Z   internalQuery: undefined,
+2025-12-05T02:08:28.901100999Z   where: undefined,
+2025-12-05T02:08:28.901104919Z   schema: undefined,
+2025-12-05T02:08:28.901108849Z   table: undefined,
+2025-12-05T02:08:28.901112729Z   column: undefined,
+2025-12-05T02:08:28.901116939Z   dataType: undefined,
+2025-12-05T02:08:28.901120899Z   constraint: undefined,
+2025-12-05T02:08:28.901125159Z   file: 'parse_relation.c',
+2025-12-05T02:08:28.901129159Z   line: '1449',
+2025-12-05T02:08:28.901133199Z   routine: 'parserOpenTable'
+2025-12-05T02:08:28.901137329Z }
+2025-12-05T02:08:28.902107228Z 2:08:28 AM [express] POST /api/ai/generate-week-from-pdf 500 in 48968ms :: {"message":"relation \"st…
+2025-12-05T02:09:05.976517294Z 2:09:05 AM [express] POST /api/ai/generate-week-from-pdf 409 in 1533ms :: {"message":"Ja existe cont…
+2025-12-05T02:10:07.810367751Z Erro ao gerar conteudo com IA: SyntaxError: Unexpected token '`', "```json
+2025-12-05T02:10:07.810397391Z {
+2025-12-05T02:10:07.810403001Z "... is not valid JSON
+2025-12-05T02:10:07.810441502Z     at JSON.parse (<anonymous>)
+2025-12-05T02:10:07.810447911Z     at generateStudyContentFromText (file:///opt/render/project/src/dist/index.js:3644:25)
+2025-12-05T02:10:07.810450402Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:10:07.810453731Z     at async file:///opt/render/project/src/dist/index.js:5908:32
+2025-12-05T02:10:07.899269383Z AI generate week from PDF error: Error: Falha ao gerar conteudo: Unexpected token '`', "```json
+2025-12-05T02:10:07.899299243Z {
+2025-12-05T02:10:07.899303143Z "... is not valid JSON
+2025-12-05T02:10:07.899305843Z     at generateStudyContentFromText (file:///opt/render/project/src/dist/index.js:3648:11)
+2025-12-05T02:10:07.899308363Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:10:07.899311433Z     at async file:///opt/render/project/src/dist/index.js:5908:32
+2025-12-05T02:10:07.900634705Z 2:10:07 AM [express] POST /api/ai/generate-week-from-pdf 500 in 57130ms :: {"message":"Falha ao gera…
+2025-12-05T02:10:35.507144773Z 2:10:35 AM [express] GET /api/ai/status 304 in 1ms :: {"configured":true,"message":"IA configurada e…
+2025-12-05T02:10:35.919302938Z 2:10:35 AM [express] GET /api/study/admin/weeks 200 in 263ms :: [{"id":2,"weekNumber":2,"year":2025,…
+2025-12-05T02:10:36.111881897Z Get admin stats error: error: relation "study_units" does not exist
+2025-12-05T02:10:36.111910757Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:10:36.111915488Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:10:36.111919997Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:10:36.111924458Z     at async DatabaseStorage.getStudyStats (file:///opt/render/project/src/dist/index.js:2007:29)
+2025-12-05T02:10:36.111928058Z     at async file:///opt/render/project/src/dist/index.js:5818:21 {
+2025-12-05T02:10:36.111931628Z   length: 110,
+2025-12-05T02:10:36.111936228Z   severity: 'ERROR',
+2025-12-05T02:10:36.111940498Z   code: '42P01',
+2025-12-05T02:10:36.111944778Z   detail: undefined,
+2025-12-05T02:10:36.111948758Z   hint: undefined,
+2025-12-05T02:10:36.111952818Z   position: '22',
+2025-12-05T02:10:36.111957378Z   internalPosition: undefined,
+2025-12-05T02:10:36.111961198Z   internalQuery: undefined,
+2025-12-05T02:10:36.111965088Z   where: undefined,
+2025-12-05T02:10:36.111969478Z   schema: undefined,
+2025-12-05T02:10:36.111973928Z   table: undefined,
+2025-12-05T02:10:36.111978158Z   column: undefined,
+2025-12-05T02:10:36.111982198Z   dataType: undefined,
+2025-12-05T02:10:36.111986578Z   constraint: undefined,
+2025-12-05T02:10:36.111990658Z   file: 'parse_relation.c',
+2025-12-05T02:10:36.111995098Z   line: '1449',
+2025-12-05T02:10:36.111998838Z   routine: 'parserOpenTable'
+2025-12-05T02:10:36.112003078Z }
+2025-12-05T02:10:36.112547823Z 2:10:36 AM [express] GET /api/study/admin/stats 500 in 391ms :: {"message":"Erro ao buscar estatisti…
+2025-12-05T02:10:43.624075781Z 2:10:43 AM [express] GET /api/study/profile 304 in 66ms :: {"id":1,"userId":1,"totalXp":0,"currentLe…
+2025-12-05T02:10:43.962551763Z 2:10:43 AM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-05T02:10:44.392513191Z Get study week error: error: relation "user_lesson_progress" does not exist
+2025-12-05T02:10:44.392533771Z     at file:///opt/render/project/src/node_modules/@neondatabase/serverless/index.mjs:1345:74
+2025-12-05T02:10:44.392539201Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-12-05T02:10:44.392552181Z     at async NeonPreparedQuery.execute (file:///opt/render/project/src/node_modules/drizzle-orm/neon-serverless/session.js:76:20)
+2025-12-05T02:10:44.392554081Z     at async file:///opt/render/project/src/dist/index.js:1870:30
+2025-12-05T02:10:44.392557392Z     at async Promise.all (index 0)
+2025-12-05T02:10:44.392560872Z     at async DatabaseStorage.getLessonsWithProgress (file:///opt/render/project/src/dist/index.js:1869:24)
+2025-12-05T02:10:44.392563712Z     at async file:///opt/render/project/src/dist/index.js:5129:23 {
+2025-12-05T02:10:44.392566672Z   length: 120,
+2025-12-05T02:10:44.392569862Z   severity: 'ERROR',
+2025-12-05T02:10:44.392573552Z   code: '42P01',
+2025-12-05T02:10:44.392576492Z   detail: undefined,
+2025-12-05T02:10:44.392579012Z   hint: undefined,
+2025-12-05T02:10:44.392581472Z   position: '152',
+2025-12-05T02:10:44.392584692Z   internalPosition: undefined,
+2025-12-05T02:10:44.392587552Z   internalQuery: undefined,
+2025-12-05T02:10:44.392590272Z   where: undefined,
+2025-12-05T02:10:44.392592912Z   schema: undefined,
+2025-12-05T02:10:44.392595422Z   table: undefined,
+2025-12-05T02:10:44.392598122Z   column: undefined,
+2025-12-05T02:10:44.392600602Z   dataType: undefined,
+2025-12-05T02:10:44.392603022Z   constraint: undefined,
+2025-12-05T02:10:44.392605552Z   file: 'parse_relation.c',
+2025-12-05T02:10:44.392608172Z   line: '1449',
+2025-12-05T02:10:44.392610792Z   routine: 'parserOpenTable'
+2025-12-05T02:10:44.392613502Z }
+2025-12-05T02:10:44.393299798Z 2:10:44 AM [express] GET /api/study/weeks/1 500 in 194ms :: {"message":"Erro ao buscar semana de est…

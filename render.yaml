@@ -1,0 +1,52 @@
+services:
+  - type: web
+    name: deo-glory-app
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node dist/index.cjs
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        scope: build
+        sync: false
+      - key: ADMIN_EMAIL
+        scope: build
+        sync: false
+      - key: ADMIN_PASSWORD
+        scope: build
+        sync: false
+      - key: JWT_SECRET
+        scope: build
+        sync: false
+      - key: SESSION_SECRET
+        scope: build
+        sync: false
+      - key: RESEND_API_KEY
+        scope: build
+        sync: false
+      - key: OPENAI_API_KEY
+        scope: build
+        sync: false
+      - key: GOOGLE_GEMINI_API_KEY
+        scope: build
+        sync: false
+      - key: GOOGLE_CALENDAR_CLIENT_ID
+        scope: build
+        sync: false
+      - key: GOOGLE_CALENDAR_CLIENT_SECRET
+        scope: build
+        sync: false
+      - key: INSTAGRAM_ACCESS_TOKEN
+        scope: build
+        sync: false
+      - key: INSTAGRAM_USER_ID
+        scope: build
+        sync: false
+      - key: VAPID_PUBLIC_KEY
+        scope: build
+        sync: false
+      - key: VAPID_PRIVATE_KEY
+        scope: build
+        sync: false

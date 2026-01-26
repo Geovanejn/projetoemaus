@@ -1,0 +1,108 @@
+RE-ORIENTATION — XP SYSTEM (FINAL VALIDATION REQUIRED)
+
+Thanks for the fix — it solved part of the problem, but the XP system is not fully consistent yet.
+We need to complete the refactor to truly enforce a single source of truth across ALL rankings.
+
+⚠️ IMPORTANT CLARIFICATION
+
+You mentioned:
+
+“the season leaderboard already does this”
+
+This is not accurate based on real test results.
+
+Before the change:
+
+Season / magazine ranking was 370 XP
+
+Correct value should have been 235 XP
+(185 lesson XP + 50 completion bonus)
+
+This proves the season ranking was NOT using the real consolidated lesson XP.
+
+So we must explicitly fix and verify it.
+
+🥇 FINAL RULE (NO EXCEPTIONS)
+
+ALL rankings must use ONLY user_lesson_progress.xpEarned
+as the source of XP.
+
+❌ No ranking should ever use:
+
+xp_transactions
+
+user_season_progress.xpEarned
+
+fixed XP values
+
+recalculated XP logic
+
+🎯 REQUIRED CHANGES (MANDATORY)
+1️⃣ Global / Annual ranking ✅ (already fixed)
+
+✔ Uses:
+
+SUM(user_lesson_progress.xpEarned)
+
+
+No further changes needed here.
+
+2️⃣ Season / Magazine ranking ❗ MUST BE VERIFIED AND FIXED
+
+Please confirm and, if necessary, refactor the season ranking so that XP is calculated as:
+
+SUM(user_lesson_progress.xpEarned)
+JOIN study_lessons ON lesson_id
+WHERE user_id = ?
+AND study_lessons.season_id = ?
+
+
+🚨 Do NOT use:
+
+user_season_progress.xpEarned
+
+
+That table is derived / mutable and has already proven unreliable.
+
+3️⃣ Ranking updates logic
+
+Rankings must:
+
+overwrite XP values
+
+never increment or recalculate XP manually
+
+Correct pattern:
+
+const totalXp = calculateFromUserLessonProgress(...)
+updateRanking({ xpEarned: totalXp })
+
+🧪 FINAL ACCEPTANCE TEST (REQUIRED)
+
+Run this exact scenario:
+
+Lesson XP earned (after deductions): 185
+
+Completion bonus: +50
+
+Final lesson XP: 235
+
+Expected results:
+
+Context	XP
+User profile	385
+Global ranking	385
+Annual ranking	385
+Season / magazine ranking	235
+
+If any ranking differs, the refactor is incomplete.
+
+🚨 SUMMARY
+
+Good progress ✔
+
+Single source of truth partially applied ❌
+
+Season ranking still needs explicit refactor and validation ❗
+
+Please finish the refactor so ALL rankings derive XP exclusively from user_lesson_progress.xpEarned, with proper joins for scope (global / year / season).

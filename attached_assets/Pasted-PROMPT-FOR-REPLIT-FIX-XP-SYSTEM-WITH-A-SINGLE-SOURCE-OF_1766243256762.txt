@@ -1,0 +1,154 @@
+PROMPT FOR REPLIT — FIX XP SYSTEM WITH A SINGLE SOURCE OF TRUTH
+
+I am facing a structural issue in the XP system of my gamified Bible study app (TypeScript backend).
+The problem is not in the frontend, but in the XP calculation and persistence architecture, especially in the rankings.
+
+📌 OBSERVED PROBLEM (REPRODUCIBLE)
+
+Real test scenario:
+
+User total XP after completing a lesson: 385
+
+Global ranking XP: 400 (+15)
+
+Year ranking XP: 400 (+15)
+
+Magazine/Season ranking XP: 370
+
+Correct expected XP for magazine/season ranking: 235 (185 from the lesson + 50 completion bonus)
+
+The extra 15 XP corresponds exactly to:
+
+1 hint used (−5 XP)
+
+1 wrong answer (−10 XP)
+
+👉 This proves that XP deductions are being ignored by some ranking calculations.
+
+🧠 ROOT CAUSE (CONFIRMED)
+
+There are currently multiple competing sources of truth for XP, which is conceptually wrong:
+
+study_profiles.totalXp
+
+xp_transactions
+
+user_lesson_progress.xpEarned
+
+XP being recalculated inside ranking logic (global / year / magazine)
+
+Each ranking uses a different XP calculation strategy, ignoring:
+
+XP deductions (xp_deduction_hint, xp_deduction_wrong_answer)
+
+The already-consolidated lesson XP
+
+This causes:
+
+Inconsistent rankings
+
+Phantom XP (+15, +135, etc.)
+
+✅ GOLDEN RULE (NEW ARCHITECTURE)
+
+Valid XP must come from ONE single source of truth:
+user_lesson_progress.xpEarned
+
+This field already includes:
+
+Correct answers
+
+Wrong answers
+
+Hints
+
+Lesson completion bonus
+
+No ranking should ever recalculate XP.
+
+🎯 GOAL OF THE FIX
+
+Unify the XP system so that:
+
+Global ranking
+
+Year ranking
+
+Magazine/Season ranking
+
+always reflect the exact real XP earned from completed lessons, respecting each ranking’s scope, without recalculating XP.
+
+🛠️ IMPLEMENTATION GUIDELINES
+1️⃣ DO NOT recalculate XP in rankings
+
+Remove any logic such as:
+
+xpEarned += lesson.xpReward
+xpEarned += correctAnswers * 20
+xpEarned += fixedValue
+
+2️⃣ Global ranking
+
+XP must be calculated as:
+
+SUM(user_lesson_progress.xpEarned)
+WHERE user_id = ?
+
+3️⃣ Year ranking
+
+XP must be calculated as:
+
+SUM(user_lesson_progress.xpEarned)
+JOIN study_lessons ON lesson_id
+WHERE user_id = ?
+AND lesson.year = ?
+
+4️⃣ Magazine / Season ranking
+
+XP must be calculated as:
+
+SUM(user_lesson_progress.xpEarned)
+JOIN study_lessons ON lesson_id
+WHERE user_id = ?
+AND lesson.season_id = ?
+
+5️⃣ Ranking updates
+
+Rankings must overwrite XP values, not increment them
+
+Always recalculate XP from real lesson progress
+
+Conceptual example:
+
+const totalXp = calculateRealLessonXp(...)
+updateRanking({ xpEarned: totalXp })
+
+🧪 EXPECTED RESULT (MANDATORY)
+
+After the fix:
+
+Context	XP
+User profile	385
+Global ranking	385
+Year ranking	385
+Magazine / Season ranking	235
+
+If any ranking differs, the fix is incomplete.
+
+🚨 IMPORTANT NOTES
+
+xp_transactions must be treated as a log/audit table only
+
+user_lesson_progress.xpEarned is the consolidated XP
+
+Never maintain multiple parallel XP calculation paths
+
+✅ FINAL TASK
+
+Refactor the XP system to:
+
+eliminate duplicated state
+
+guarantee full consistency
+
+prevent any XP recalculation in rankings

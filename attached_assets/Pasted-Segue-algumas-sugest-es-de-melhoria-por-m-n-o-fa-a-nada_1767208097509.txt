@@ -1,0 +1,51 @@
+Segue algumas sugestões de melhoria, porém não faça nada ainda, vamos debater a possibilidade de fazer isso e qual melhor abordagem, só depois faremos algo se você entender que essas alterações não vai quebrar em nada o funcionamento do sistema.
+
+ * Infra: Render + Neon (ambos em US East - Virginia) com Connection Pooling ativado.
+ * Status: A latência de rede foi resolvida (respostas em ~30ms), mas a lógica da aplicação precisa de otimizações baseadas nos logs de produção abaixo.
+Evidências e Logs (Problemas Identificados):
+1. Gargalo Sequencial nas Missões (Backend):
+Ao completar uma lição, o servidor processa as missões uma por uma, somando o tempo de execução. Quero paralelizar isso.
+Log atual:
+2025-12-31T18:46:33.651Z [Achievement] Checking for user 1...
+2025-12-31T18:46:33.739Z [Notifications] notifyAchievement STARTED...
+2025-12-31T18:46:33.809Z [Missions] Checking 5 missions for user 1
+2025-12-31T18:46:33.809Z [Missions] Checking mission 2 type: read_daily_verse
+2025-12-31T18:46:33.809Z [Missions] Checking mission 3 type: quick_quiz
+2025-12-31T18:46:33.809Z [Missions] Checking mission 5 type: perfect_answers
+2025-12-31T18:46:33.809Z [Missions] Checking mission 8 type: simple_prayer
+2025-12-31T18:46:33.809Z [Missions] Checking mission 12 type: share_knowledge
+2025-12-31T18:46:33.821Z POST /api/study/lessons/6/complete 200 in 480ms
+
+2. Poluição de Logs em Produção (Performance I/O):
+Existem console.log de debug imprimindo objetos inteiros em produção, o que consome CPU desnecessária.
+Log atual:
+2025-12-31T18:46:05.247Z [DEBUG submitUnitAnswer] {
+  unitId: 89,
+  unitType: 'true_false',
+  userAnswer: 1,
+  isCorrect: true
+}
+
+3. Frontend "Spamando" Requisições (Redundância):
+O cliente pede a mesma informação repetidamente em curtos intervalos, gerando muitos 304.
+Log atual:
+POST .../units/80/complete 200
+GET /api/study/lessons/6 304 in 21ms
+POST .../units/81/complete 200
+GET /api/study/lessons/6 304 in 9ms
+POST .../units/82/complete 200
+GET /api/study/lessons/6 304 in 8ms
+
+Solicitação de Código:
+Com base nisso, por favor, gere as seguintes refatorações:
+ * Backend (Parallel Processing):
+   Reescreva a lógica do controller completeLesson (e o service de Missões) para utilizar Promise.all ou Promise.allSettled.
+   * Objetivo: As verificações de Check Missions, Check Achievements e Update XP devem ocorrer simultaneamente ao salvar o progresso, não sequencialmente.
+ * Backend (Logger Utility):
+   Crie uma função utilitária de Logger ou sugira uma alteração para que os logs [DEBUG] só apareçam se process.env.NODE_ENV === 'development'.
+   * Objetivo: Limpar o console do Render em produção.
+ * Frontend (Otimização de Cache):
+   Considerando que uso React (provavelmente com useEffect ou React Query), mostre como evitar que o GET /api/study/lessons/:id seja chamado a cada interação de "Complete Unit".
+   * Sugestão: Se for React Query, como configurar o staleTime para 10 segundos? Se for useEffect, como evitar o refetch desnecessário se eu já tenho os dados locais?
+ * Backend (Dashboard Aggregation):
+   Para evitar o "waterfall" de requisições na Home (/weeks/1, /weeks/2, /weekly-goal...), crie um endpoint /api/dashboard/summary que retorne tudo num único JSON.

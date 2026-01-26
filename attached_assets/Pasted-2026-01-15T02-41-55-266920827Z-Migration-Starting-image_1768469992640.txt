@@ -1,0 +1,300 @@
+2026-01-15T02:41:55.266920827Z [Migration] Starting image migration to R2...
+2026-01-15T02:41:55.347514697Z [Birthday Scheduler] Initialized - will run daily at 07:00 AM (America/Sao_Paulo)
+2026-01-15T02:41:55.350972773Z [DeoGlory Scheduler] Streak check initialized - will run daily at 19:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.354197622Z [DeoGlory Scheduler] Inactivity check initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-15T02:41:55.357313698Z [Daily Verse Scheduler] Initialized - will run daily at 07:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.359669656Z [Daily Verse Scheduler] Banner cleanup initialized - will remove from banner at 23:59 (America/Sao_Paulo)
+2026-01-15T02:41:55.448444158Z [Recovery Verses Scheduler] Initialized - will run daily at 15:30 (America/Sao_Paulo)
+2026-01-15T02:41:55.45177656Z [Instagram Scheduler] Initialized - will sync every 6 hours (America/Sao_Paulo)
+2026-01-15T02:41:55.451929363Z [Instagram Scheduler] Running sync...
+2026-01-15T02:41:55.45218752Z [Instagram] Starting sync...
+2026-01-15T02:41:55.549159763Z [Daily Missions Scheduler] Initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.554506054Z [Weekly Goal Scheduler] Initialized - will run every Sunday at 23:59 (America/Sao_Paulo)
+2026-01-15T02:41:55.645561142Z [Event Scheduler] Lesson release initialized - will run daily at 00:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.647643273Z [Event Scheduler] Card distribution initialized - will run daily at 23:59 (America/Sao_Paulo)
+2026-01-15T02:41:55.650896153Z [Event Deadline Scheduler] Initialized - will run every hour at :00 (America/Sao_Paulo) with database persistence
+2026-01-15T02:41:55.653378704Z [Marketing Reminder Scheduler] Initialized - will run every hour at :30 (America/Sao_Paulo) with database persistence
+2026-01-15T02:41:55.656216314Z [Treasury Scheduler] Day 5 reminder initialized - will run on day 5 of each month at 08:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.658624053Z [Treasury Scheduler] 5th business day reminder initialized - will run on weekdays at 08:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.745034536Z [Shop Scheduler] Abandoned cart reminder initialized - will run every hour (America/Sao_Paulo) with auto-cancel after 48h
+2026-01-15T02:41:55.747726302Z [Treasury Scheduler] Loan installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.750215583Z [Shop Scheduler] Shop installment reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.752711635Z [Event Fee Scheduler] Event fee reminder initialized - will run daily at 08:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.755400491Z [Treasury Scheduler] Year rollover initialized - will run on Jan 1st at 00:05 (America/Sao_Paulo)
+2026-01-15T02:41:55.757943503Z [Treasury Scheduler] Monthly summary initialized - will run on day 1 of each month at 08:00 (America/Sao_Paulo)
+2026-01-15T02:41:55.758095607Z 2:41:55 AM [express] Database and schedulers initialized successfully
+2026-01-15T02:41:56.045457368Z [Instagram] API error: 400 {
+2026-01-15T02:41:56.045474479Z   error: {
+2026-01-15T02:41:56.045478979Z     message: 'Error validating access token: The session is invalid because the user logged out.',
+2026-01-15T02:41:56.045484589Z     type: 'OAuthException',
+2026-01-15T02:41:56.045486819Z     code: 190,
+2026-01-15T02:41:56.045489589Z     error_subcode: 467,
+2026-01-15T02:41:56.045492609Z     fbtrace_id: 'AiLG-nPwcruSghsEYTKeBRN'
+2026-01-15T02:41:56.045494649Z   }
+2026-01-15T02:41:56.045496739Z }
+2026-01-15T02:41:56.04551689Z [Instagram] No new posts fetched - keeping existing data
+2026-01-15T02:41:56.045593642Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-15T02:41:56.656077403Z [Migration] Completed in 1.4s
+2026-01-15T02:41:56.656105644Z [Migration] Migrated: 0, Failed: 0, Skipped: 0
+2026-01-15T02:41:56.895462192Z ==> Your service is live 🎉
+2026-01-15T02:41:57.01514874Z ==> 
+2026-01-15T02:41:57.097899441Z ==> ///////////////////////////////////////////////////////////
+2026-01-15T02:41:57.179653182Z ==> 
+2026-01-15T02:41:57.262124863Z ==> Available at your primary URL https://umpemaus.com.br + 1 more domain
+2026-01-15T02:41:57.345618704Z ==> 
+2026-01-15T02:41:57.427997415Z ==> ///////////////////////////////////////////////////////////
+2026-01-15T02:41:58.259172536Z 2:41:58 AM [express] GET /api/study/cards 304 in 13ms :: [{"id":3,"userId":2,"cardId":3,"rarity":"le…
+2026-01-15T02:42:00.360526874Z [Daily Verse Scheduler] Running initial check at startup...
+2026-01-15T02:42:00.360748859Z [Daily Verse Scheduler] Sending daily verse notification...
+2026-01-15T02:42:00.370996991Z [Daily Verse Scheduler] Already sent today (2026-01-14), skipping
+2026-01-15T02:42:02.449315342Z [Recovery Verses Scheduler] Running initial check at startup...
+2026-01-15T02:42:02.449517287Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2026-01-15T02:42:05.152525419Z [BibleAPI] 30 recovery verses fetched successfully from ABíbliaDigital
+2026-01-15T02:42:05.152623462Z [Recovery Verses Scheduler] Skipping duplicate: João 16:33 (ARA)
+2026-01-15T02:42:05.152628112Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 41:10 (ARA)
+2026-01-15T02:42:05.152650353Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:1 (ARA)
+2026-01-15T02:42:05.152656853Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 6:34 (ARA)
+2026-01-15T02:42:05.152663523Z [Recovery Verses Scheduler] Skipping duplicate: 1 Pedro 5:7 (ARA)
+2026-01-15T02:42:05.152666413Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 55:22 (ARA)
+2026-01-15T02:42:05.152722904Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:38 (ARA)
+2026-01-15T02:42:05.152726904Z [Recovery Verses Scheduler] Skipping duplicate: Mateus 11:28 (ARA)
+2026-01-15T02:42:05.152730005Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:2 (ARA)
+2026-01-15T02:42:05.152742155Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 121:2 (ARA)
+2026-01-15T02:42:05.152744915Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 27:1 (ARA)
+2026-01-15T02:42:05.152783736Z [Recovery Verses Scheduler] Skipping duplicate: Apocalipse 21:4 (ARA)
+2026-01-15T02:42:05.152788156Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 91:1 (ARA)
+2026-01-15T02:42:05.152794176Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 34:18 (ARA)
+2026-01-15T02:42:05.152796926Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 40:31 (ARA)
+2026-01-15T02:42:05.152880788Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 46:1 (ARA)
+2026-01-15T02:42:05.152898609Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:13 (ARA)
+2026-01-15T02:42:05.153217687Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:1 (ARA)
+2026-01-15T02:42:05.153223857Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:4 (ARA)
+2026-01-15T02:42:05.153225737Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 4:17 (ARA)
+2026-01-15T02:42:05.153240737Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:4 (ARA)
+2026-01-15T02:42:05.153242577Z [Recovery Verses Scheduler] Skipping duplicate: Hebreus 13:5 (ARA)
+2026-01-15T02:42:05.153244357Z [Recovery Verses Scheduler] Skipping duplicate: Romanos 8:28 (ARA)
+2026-01-15T02:42:05.153246027Z [Recovery Verses Scheduler] Skipping duplicate: Filipenses 4:7 (ARA)
+2026-01-15T02:42:05.153248887Z [Recovery Verses Scheduler] Skipping duplicate: Tiago 1:2 (ARA)
+2026-01-15T02:42:05.153250667Z [Recovery Verses Scheduler] Skipping duplicate: João 14:27 (ARA)
+2026-01-15T02:42:05.153252357Z [Recovery Verses Scheduler] Skipping duplicate: Isaías 43:2 (ARA)
+2026-01-15T02:42:05.153254017Z [Recovery Verses Scheduler] Skipping duplicate: Jeremias 29:11 (ARA)
+2026-01-15T02:42:05.153255688Z [Recovery Verses Scheduler] Skipping duplicate: Salmos 23:1 (ARA)
+2026-01-15T02:42:05.153257448Z [Recovery Verses Scheduler] Skipping duplicate: 2 Coríntios 1:3 (ARA)
+2026-01-15T02:42:05.153259148Z [Recovery Verses Scheduler] Added 0 new recovery verses for recovery-2026-01-14
+2026-01-15T02:42:05.552106189Z [Daily Missions Scheduler] Running initial check at startup...
+2026-01-15T02:42:05.552130219Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-15T02:42:05.561876289Z [Daily Missions Scheduler] Content already generated for today (2026-01-15)
+2026-01-15T02:42:06.849708936Z 2:42:06 AM [express] GET /api/study/leaderboard 304 in 102ms :: {"periodType":"weekly","periodKey":"…
+2026-01-15T02:42:06.949646481Z 2:42:06 AM [express] GET /api/study/profile 304 in 199ms :: {"id":1,"userId":2,"totalXp":1855,"curre…
+2026-01-15T02:42:06.989733746Z 2:42:06 AM [express] GET /api/missions/daily 304 in 235ms :: {"missions":[{"id":162,"userId":2,"miss…
+2026-01-15T02:42:07.247437809Z 2:42:07 AM [express] GET /api/study/weeks 304 in 12ms :: [{"id":16,"weekNumber":10,"year":2026,"titl…
+2026-01-15T02:42:07.588449069Z 2:42:07 AM [express] GET /api/study/practice/16/status 304 in 24ms :: {"weekId":16,"isUnlocked":fals…
+2026-01-15T02:42:07.961866965Z 2:42:07 AM [express] GET /api/study/weeks/bulk 304 in 395ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-15T02:42:08.854992793Z 2:42:08 AM [express] GET /api/notifications/unread-count 304 in 17ms :: {"count":0}
+2026-01-15T02:42:08.859713438Z 2:42:08 AM [express] GET /api/notifications 304 in 17ms :: {"notifications":[{"id":399,"userId":2,"t…
+2026-01-15T02:42:08.864749032Z 2:42:08 AM [express] GET /api/study/streak/status 304 in 25ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-15T02:42:08.982998038Z 2:42:08 AM [express] GET /api/study/weekly-goal 304 in 135ms :: {"weekKey":"2026-W03","goals":{"less…
+2026-01-15T02:42:10.248958227Z 2:42:10 AM [express] GET /api/study/achievements 304 in 84ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-15T02:42:10.252841053Z 2:42:10 AM [express] GET /api/study/profile/activities 304 in 76ms :: [{"type":"achievement_unlocked…
+2026-01-15T02:42:10.3626109Z 2:42:10 AM [express] GET /api/study/profile/stats 304 in 195ms :: {"lessonsCompleted":7,"unitsComple…
+2026-01-15T02:42:35.99657123Z 2:42:35 AM [express] GET /api/study/cards 304 in 9ms :: [{"id":3,"userId":2,"cardId":3,"rarity":"leg…
+2026-01-15T02:46:58.007196733Z ==> Detected service running on port 10000
+2026-01-15T02:46:58.185917062Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-15T02:59:01.015703202Z [Push] Successfully sent notification to member user 6
+2026-01-15T02:59:01.019734571Z [Push] Sent "🏁 Evento Encerrado" to user 6 (1/1 success)
+2026-01-15T02:59:01.02251453Z [Push] User 17 has no push subscriptions registered
+2026-01-15T02:59:01.025415681Z [Push] User 7 has no push subscriptions registered
+2026-01-15T02:59:01.028169439Z [Push] User 3 has no push subscriptions registered
+2026-01-15T02:59:01.030746222Z [Push] User 16 has no push subscriptions registered
+2026-01-15T02:59:01.033289484Z [Push] User 4 has no push subscriptions registered
+2026-01-15T02:59:01.036228256Z [Push] User 14 has no push subscriptions registered
+2026-01-15T02:59:01.129302871Z [Push] Successfully sent notification to member user 13
+2026-01-15T02:59:01.133390662Z [Push] Sent "🏁 Evento Encerrado" to user 13 (1/1 success)
+2026-01-15T02:59:01.136385045Z [Push] User 15 has no push subscriptions registered
+2026-01-15T02:59:01.203030261Z [Daily Verse Scheduler] Daily verse removed from banner
+2026-01-15T02:59:01.226778424Z [Push] Successfully sent notification to member user 9
+2026-01-15T02:59:01.230989778Z [Push] Sent "🏁 Evento Encerrado" to user 9 (1/1 success)
+2026-01-15T02:59:01.234032913Z [Push] User 12 has no push subscriptions registered
+2026-01-15T02:59:01.314344434Z [Push] Successfully sent notification to member user 5
+2026-01-15T02:59:01.318859685Z [Push] Sent "🏁 Evento Encerrado" to user 5 (1/1 success)
+2026-01-15T02:59:01.403014051Z [Push] Successfully sent notification to member user 11
+2026-01-15T02:59:01.407511232Z [Push] Sent "🏁 Evento Encerrado" to user 11 (1/1 success)
+2026-01-15T02:59:01.412289979Z [Push] User 18 has no push subscriptions registered
+2026-01-15T02:59:01.412427822Z [Event Scheduler] Event completion push: 7 success, 9 failed
+2026-01-15T02:59:01.52557678Z [Event Scheduler] Sent completion notifications for event "Ano Novo: O que muda?"
+2026-01-15T02:59:01.52559264Z [Event Scheduler] Card distribution check completed
+2026-01-15T03:00:00.054752172Z [Instagram Scheduler] Running sync...
+2026-01-15T03:00:00.054781702Z [Instagram] Starting sync...
+2026-01-15T03:00:00.056473224Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2026-01-15T03:00:00.057882189Z [Event Scheduler] Checking for events and lessons to release at 00:00...
+2026-01-15T03:00:00.059138539Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-15T03:00:00.146447973Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-15T03:00:00.349065938Z [Instagram] API error: 400 {
+2026-01-15T03:00:00.349089038Z   error: {
+2026-01-15T03:00:00.349093718Z [Instagram] No new posts fetched - keeping existing data
+2026-01-15T03:00:00.349094148Z     message: 'Error validating access token: The session is invalid because the user logged out.',
+2026-01-15T03:00:00.349099178Z     type: 'OAuthException',
+2026-01-15T03:00:00.349103508Z     code: 190,
+2026-01-15T03:00:00.349108759Z     error_subcode: 467,
+2026-01-15T03:00:00.349113619Z     fbtrace_id: 'AV0t7kW13zYgoqW_RBRVW-I'
+2026-01-15T03:00:00.349117879Z   }
+2026-01-15T03:00:00.349122459Z }
+2026-01-15T03:00:00.349143619Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-15T03:00:00.461281893Z [Event Scheduler] Event and lesson release check completed
+2026-01-15T03:00:00.465380003Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-15T03:00:00.469576176Z [Daily Missions Scheduler] Content already generated for today (2026-01-15)
+2026-01-15T03:00:00.489195648Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-15T03:14:11.289929846Z 3:14:11 AM [express] POST /api 200 in 2ms
+2026-01-15T03:30:00.012894034Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-15T03:30:00.598686036Z [Marketing Reminder Scheduler] Check completed. Sent 0 reminder(s)
+2026-01-15T03:51:00.572072808Z 3:51:00 AM [express] POST /api 200 in 1ms
+2026-01-15T04:00:00.017043669Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-15T04:00:00.018537736Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-15T04:00:00.691303523Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-15T04:00:01.196771656Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-15T04:05:55.023976864Z 4:05:55 AM [express] POST /api 200 in 2ms
+2026-01-15T04:18:23.990394968Z 4:18:23 AM [express] POST /api 200 in 1ms
+2026-01-15T04:19:33.536343806Z 4:19:33 AM [express] POST /api 200 in 1ms
+2026-01-15T04:21:29.734746272Z 4:21:29 AM [express] POST /api 200 in 2ms
+2026-01-15T04:30:00.008868841Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-15T04:30:00.608768615Z [Marketing Reminder Scheduler] Check completed. Sent 0 reminder(s)
+2026-01-15T04:35:47.070656827Z 4:35:47 AM [express] POST /api 200 in 2ms
+2026-01-15T05:00:00.017862183Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-15T05:00:00.018522279Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-15T05:00:00.581729917Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-15T05:00:00.594413187Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-15T05:11:16.838305691Z 5:11:16 AM [express] POST /api 200 in 2ms
+2026-01-15T05:19:15.494521366Z 5:19:15 AM [express] POST /api 200 in 2ms
+2026-01-15T05:30:00.013929442Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-15T05:30:00.644311975Z [Marketing Reminder Scheduler] Check completed. Sent 0 reminder(s)
+2026-01-15T05:31:33.500301174Z 5:31:33 AM [express] POST /api 200 in 2ms
+2026-01-15T05:42:19.338078464Z 5:42:19 AM [express] POST /api 200 in 2ms
+2026-01-15T06:00:00.013183489Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-15T06:00:00.014173063Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-15T06:00:00.603592915Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-15T06:00:00.619192785Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-15T06:30:00.009675832Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-15T06:30:00.573210544Z [Marketing Reminder Scheduler] Check completed. Sent 0 reminder(s)
+2026-01-15T06:30:00.938160077Z 6:30:00 AM [express] POST /api 200 in 1ms
+2026-01-15T06:35:19.815681938Z 6:35:19 AM [express] POST /api 200 in 2ms
+2026-01-15T07:00:00.011546929Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-15T07:00:00.012488902Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-15T07:00:00.554565417Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-15T07:00:00.58089626Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-15T07:30:00.010362753Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-15T07:30:00.520650606Z [Marketing Reminder Scheduler] Check completed. Sent 0 reminder(s)
+2026-01-15T07:36:57.58298258Z 7:36:57 AM [express] POST /api 200 in 2ms
+2026-01-15T07:52:24.658043174Z 7:52:24 AM [express] POST /api 200 in 1ms
+2026-01-15T08:00:00.012355818Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-15T08:00:00.013528637Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-15T08:00:00.564205139Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-15T08:00:01.23131438Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-15T08:30:00.006812129Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-15T08:30:00.561781691Z [Marketing Reminder Scheduler] Check completed. Sent 0 reminder(s)
+2026-01-15T08:39:39.278064539Z 8:39:39 AM [express] POST /api 200 in 2ms
+2026-01-15T09:00:00.020095525Z [Instagram Scheduler] Running sync...
+2026-01-15T09:00:00.020123745Z [Instagram] Starting sync...
+2026-01-15T09:00:00.050114317Z [Event Deadline Scheduler] Checking for events approaching start/deadline...
+2026-01-15T09:00:00.051684156Z [Shop Scheduler] Processing abandoned cart reminders...
+2026-01-15T09:00:00.316231575Z [Instagram] API error: 400 {
+2026-01-15T09:00:00.316250445Z   error: {
+2026-01-15T09:00:00.316255265Z     message: 'Error validating access token: The session is invalid because the user logged out.',
+2026-01-15T09:00:00.316259285Z     type: 'OAuthException',
+2026-01-15T09:00:00.316261535Z [Instagram] No new posts fetched - keeping existing data
+2026-01-15T09:00:00.316262925Z     code: 190,
+2026-01-15T09:00:00.316268385Z     error_subcode: 467,
+2026-01-15T09:00:00.316272616Z     fbtrace_id: 'AFm9Uj-IL12kvJbXCrCBlWB'
+2026-01-15T09:00:00.316276336Z   }
+2026-01-15T09:00:00.316280156Z }
+2026-01-15T09:00:00.316293676Z [Instagram Scheduler] Sync completed: 0 posts synced, 0 errors
+2026-01-15T09:00:00.945806536Z [Event Deadline Scheduler] Check completed. Sent 0 notification(s)
+2026-01-15T09:00:01.055707069Z [Shop Scheduler] Abandoned cart check completed. Sent 0 notification(s)
+2026-01-15T09:05:47.665872868Z 9:05:47 AM [express] POST /api 200 in 3ms
+2026-01-15T09:30:00.012576959Z [Marketing Reminder Scheduler] Processing marketing event reminders...
+2026-01-15T09:30:00.577733007Z [Marketing Reminder Scheduler] Check completed. Sent 0 reminder(s)
+2026-01-15T09:35:35.880517774Z [Push] Subscribe sync: userId=2, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-15T09:35:36.574428437Z 9:35:36 AM [express] GET /api/study/events 200 in 722ms :: [{"id":4,"title":"Ano Novo: O que muda?",…
+2026-01-15T09:35:37.135194921Z [Push] Migrated subscription from anonymous to user 2
+2026-01-15T09:35:37.135217841Z [Push] Subscription saved for user 2. Keys present: p256dh=true, auth=true
+2026-01-15T09:35:37.13602051Z 9:35:37 AM [express] POST /api/notifications/subscribe 200 in 1256ms :: {"message":"Inscrito para no…
+2026-01-15T09:35:37.352372533Z [Push] Subscribe sync: userId=2, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-15T09:35:37.360697407Z [Push] Migrated subscription from anonymous to user 2
+2026-01-15T09:35:37.360714227Z [Push] Subscription saved for user 2. Keys present: p256dh=true, auth=true
+2026-01-15T09:35:37.361376453Z 9:35:37 AM [express] POST /api/notifications/subscribe 200 in 10ms :: {"message":"Inscrito para noti…
+2026-01-15T09:35:44.26226035Z 9:35:44 AM [express] GET /api/study/profile 304 in 56ms :: {"id":1,"userId":2,"totalXp":1855,"curren…
+2026-01-15T09:35:44.265212902Z 9:35:44 AM [express] GET /api/study/leaderboard 304 in 60ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-15T09:35:44.296191428Z 9:35:44 AM [express] GET /api/missions/daily 200 in 101ms :: {"missions":[{"id":186,"userId":2,"miss…
+2026-01-15T09:35:44.468319412Z 9:35:44 AM [express] GET /api/study/weeks 304 in 10ms :: [{"id":16,"weekNumber":10,"year":2026,"titl…
+2026-01-15T09:35:44.851619161Z 9:35:44 AM [express] GET /api/study/practice/16/status 304 in 172ms :: {"weekId":16,"isUnlocked":fal…
+2026-01-15T09:35:44.946329394Z 9:35:44 AM [express] GET /api/study/weeks/bulk 304 in 262ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-15T09:35:45.236712484Z 9:35:45 AM [express] GET /api/notifications/unread-count 200 in 12ms :: {"count":1}
+2026-01-15T09:35:45.245240443Z 9:35:45 AM [express] GET /api/study/streak/status 200 in 27ms :: {"needsRecovery":true,"streakAtRisk…
+2026-01-15T09:35:45.247233331Z 9:35:45 AM [express] GET /api/notifications 200 in 27ms :: {"notifications":[{"id":421,"userId":2,"t…
+2026-01-15T09:35:45.254506989Z 9:35:45 AM [express] GET /api/study/weekly-goal 304 in 33ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-15T09:35:50.189313338Z [Streak Recovery] User 2 recovered streak: 10 crystals spent
+2026-01-15T09:35:50.189995155Z 9:35:50 AM [express] POST /api/study/streak/recover 200 in 57ms :: {"success":true,"message":"Ofensi…
+2026-01-15T09:35:54.942713028Z 9:35:54 AM [express] GET /api/study/streak/status 200 in 14ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-15T09:35:54.947063144Z 9:35:54 AM [express] GET /api/study/profile 200 in 16ms :: {"id":1,"userId":2,"totalXp":1855,"curren…
+2026-01-15T09:35:56.94703089Z 9:35:56 AM [express] GET /api/study/cards 304 in 35ms :: [{"id":3,"userId":2,"cardId":3,"rarity":"le…
+2026-01-15T09:35:56.948205918Z 9:35:56 AM [express] GET /api/study/achievements 304 in 38ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-15T09:35:56.949563071Z 9:35:56 AM [express] GET /api/study/profile/activities 304 in 34ms :: [{"type":"achievement_unlocked…
+2026-01-15T09:35:57.058170173Z 9:35:57 AM [express] GET /api/study/profile/stats 304 in 150ms :: {"lessonsCompleted":7,"unitsComple…
+2026-01-15T09:36:04.394376531Z 9:36:04 AM [express] GET /api/study/cards 304 in 6ms :: [{"id":3,"userId":2,"cardId":3,"rarity":"leg…
+2026-01-15T09:36:09.846875402Z 9:36:09 AM [express] GET /api/study/leaderboard 304 in 34ms :: {"periodType":"weekly","periodKey":"2…
+2026-01-15T09:36:09.851535906Z 9:36:09 AM [express] GET /api/study/profile 304 in 43ms :: {"id":1,"userId":2,"totalXp":1855,"curren…
+2026-01-15T09:36:09.858372393Z 9:36:09 AM [express] GET /api/missions/daily 304 in 49ms :: {"missions":[{"id":186,"userId":2,"missi…
+2026-01-15T09:36:10.02863294Z 9:36:10 AM [express] GET /api/study/weeks 304 in 5ms :: [{"id":16,"weekNumber":10,"year":2026,"title…
+2026-01-15T09:36:10.214219462Z 9:36:10 AM [express] GET /api/study/practice/16/status 304 in 13ms :: {"weekId":16,"isUnlocked":fals…
+2026-01-15T09:36:10.346095322Z 9:36:10 AM [express] GET /api/study/weeks/bulk 304 in 141ms :: [{"week":{"id":7,"weekNumber":1,"year…
+2026-01-15T09:36:10.645457602Z 9:36:10 AM [express] GET /api/notifications/unread-count 304 in 7ms :: {"count":1}
+2026-01-15T09:36:10.647236856Z 9:36:10 AM [express] GET /api/notifications 304 in 37ms :: {"notifications":[{"id":421,"userId":2,"t…
+2026-01-15T09:36:10.651324726Z 9:36:10 AM [express] GET /api/study/streak/status 304 in 43ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-15T09:36:10.661899444Z 9:36:10 AM [express] GET /api/study/weekly-goal 304 in 43ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-15T09:36:13.858251883Z 9:36:13 AM [express] GET /api/study/achievements 304 in 10ms :: [{"id":1,"code":"first_lesson","name…
+2026-01-15T09:36:13.945882193Z 9:36:13 AM [express] GET /api/study/profile/activities 304 in 72ms :: [{"type":"achievement_unlocked…
+2026-01-15T09:36:13.949235485Z 9:36:13 AM [express] GET /api/study/profile/stats 304 in 102ms :: {"lessonsCompleted":7,"unitsComple…
+2026-01-15T09:36:24.019561237Z [Push] Subscribe sync: userId=2, anonSubId=undefined, syncOnly=undefined, bodyKeys=endpoint,p256dh,auth
+2026-01-15T09:36:24.025522343Z 9:36:24 AM [express] GET /api/study/events 304 in 9ms :: [{"id":4,"title":"Ano Novo: O que muda?","d…
+2026-01-15T09:36:24.029022508Z [Push] Migrated subscription from anonymous to user 2
+2026-01-15T09:36:24.029032969Z [Push] Subscription saved for user 2. Keys present: p256dh=true, auth=true
+2026-01-15T09:36:24.02950356Z 9:36:24 AM [express] POST /api/notifications/subscribe 200 in 11ms :: {"message":"Inscrito para noti…
+2026-01-15T09:36:25.522915227Z 9:36:25 AM [express] GET /api/study/weekly-goal 304 in 18ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-15T09:37:25.340947677Z 9:37:25 AM [express] GET /api/study/weekly-goal 304 in 45ms :: {"weekKey":"2026-W03","goals":{"lesso…
+2026-01-15T09:37:25.543659998Z 9:37:25 AM [express] GET /api/study/streak/status 304 in 14ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-15T09:37:25.652451364Z 9:37:25 AM [express] GET /api/study/weeks/bulk 304 in 75ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-15T09:37:28.038332445Z 9:37:28 AM [express] GET /api/study/achievements 304 in 9ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-15T09:37:28.056722044Z 9:37:28 AM [express] GET /api/study/seasons 200 in 18ms :: [{"id":10,"title":"Não Jogue Sua Vida For…
+2026-01-15T09:37:28.062127186Z 9:37:28 AM [express] POST /api/study/online-status 200 in 26ms :: {"success":true}
+2026-01-15T09:37:28.558478596Z [WebSocket] Authenticated connection: HH4k9IpQtjIKRw-6AAAB, userId: 2
+2026-01-15T09:37:28.559245205Z [WebSocket] Client connected: HH4k9IpQtjIKRw-6AAAB, authenticated: true
+2026-01-15T09:37:28.737254762Z [WebSocket] Updated DB: User 2 is now online
+2026-01-15T09:37:28.739335343Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-15T09:37:31.611268823Z [WebSocket] Client disconnected: HH4k9IpQtjIKRw-6AAAB, reason: transport close
+2026-01-15T09:37:31.614966883Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-15T09:37:31.615746832Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-15T09:37:35.399804795Z 9:37:35 AM [express] POST /api/study/online-status 200 in 5ms :: {"success":true}
+2026-01-15T09:37:35.537394045Z 9:37:35 AM [express] GET /api/study/leaderboard 304 in 9ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-15T09:37:35.657067747Z 9:37:35 AM [express] GET /api/study/seasons 304 in 6ms :: [{"id":10,"title":"Não Jogue Sua Vida Fora…
+2026-01-15T09:37:35.796861641Z 9:37:35 AM [express] GET /api/study/achievements 304 in 7ms :: [{"id":1,"code":"first_lesson","name"…
+2026-01-15T09:37:35.95163161Z [WebSocket] Authenticated connection: TYyC0-DHrcA6jJm0AAAD, userId: 2
+2026-01-15T09:37:35.951872526Z [WebSocket] Client connected: TYyC0-DHrcA6jJm0AAAD, authenticated: true
+2026-01-15T09:37:36.138621686Z [WebSocket] Updated DB: User 2 is now online
+2026-01-15T09:37:36.138927254Z [WebSocket] User 2 (Geovane Nascimento) joined presence room. Online: 1
+2026-01-15T09:37:40.758608343Z 9:37:40 AM [express] GET /api/study/leaderboard 304 in 5ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-15T09:37:45.973530477Z 9:37:45 AM [express] GET /api/study/leaderboard 304 in 5ms :: {"periodType":"weekly","periodKey":"20…
+2026-01-15T09:37:48.579860642Z [WebSocket] Client disconnected: TYyC0-DHrcA6jJm0AAAD, reason: client namespace disconnect
+2026-01-15T09:37:48.583284255Z [WebSocket] Updated DB: User 2 is now offline (disconnect)
+2026-01-15T09:37:48.583541732Z [WebSocket] User 2 disconnected from presence. Online: 0
+2026-01-15T09:37:48.614872257Z 9:37:48 AM [express] GET /api/study/profile 304 in 15ms :: {"id":1,"userId":2,"totalXp":1855,"curren…
+2026-01-15T09:37:48.62277187Z 9:37:48 AM [express] GET /api/missions/daily 304 in 21ms :: {"missions":[{"id":186,"userId":2,"missi…
+2026-01-15T09:37:48.791129241Z 9:37:48 AM [express] GET /api/study/weeks 304 in 5ms :: [{"id":16,"weekNumber":10,"year":2026,"title…
+2026-01-15T09:37:49.006422188Z 9:37:49 AM [express] GET /api/study/practice/16/status 304 in 10ms :: {"weekId":16,"isUnlocked":fals…
+2026-01-15T09:37:49.017767235Z 9:37:49 AM [express] GET /api/study/weeks/bulk 304 in 24ms :: [{"week":{"id":7,"weekNumber":1,"year"…
+2026-01-15T09:37:49.272060905Z 9:37:49 AM [express] GET /api/study/streak/status 304 in 15ms :: {"needsRecovery":false,"streakAtRis…
+2026-01-15T09:37:49.272948216Z 9:37:49 AM [express] GET /api/notifications 304 in 7ms :: {"notifications":[{"id":421,"userId":2,"ty…
+2026-01-15T09:37:49.345311214Z 9:37:49 AM [express] GET /api/notifications/unread-count 304 in 62ms :: {"count":1}
+2026-01-15T09:37:49.37957626Z 9:37:49 AM [express] GET /api/study/weekly-goal 304 in 112ms :: {"weekKey":"2026-W03","goals":{"less…
+2026-01-15T09:37:53.767448539Z 9:37:53 AM [express] PATCH /api/notifications/421/read 200 in 8ms :: {"message":"Notificacao marcada…
+2026-01-15T09:37:53.921669475Z 9:37:53 AM [express] GET /api/notifications/unread-count 200 in 6ms :: {"count":0}
+2026-01-15T09:37:53.924893973Z 9:37:53 AM [express] GET /api/notifications 200 in 7ms :: {"notifications":[{"id":421,"userId":2,"ty…
+2026-01-15T09:37:54.087020612Z 9:37:54 AM [express] GET /api/notifications 304 in 8ms :: {"notifications":[{"id":421,"userId":2,"ty…

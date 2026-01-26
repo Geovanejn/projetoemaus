@@ -1,0 +1,50 @@
+2025-12-21T04:46:35.843648067Z ../dist/public/assets/MarketingDiretoriaEditor-z2x6EIqP.js                           9.46 kB │ gzip:   2.96 kB
+2025-12-21T04:46:35.843669368Z ../dist/public/assets/LessonComplete-yRcwRwpv.js                                     9.58 kB │ gzip:   3.50 kB
+2025-12-21T04:46:35.843676859Z ../dist/public/assets/DeoGloryDashboard-DNmzvTIo.js                                 10.21 kB │ gzip:   2.34 kB
+2025-12-21T04:46:35.843679848Z ../dist/public/assets/DeoGloryLicaoDetail-CvXqz37Q.js                               10.33 kB │ gzip:   3.57 kB
+2025-12-21T04:46:35.843683749Z ../dist/public/assets/DeoGloryUsuarios-D4m8q_A4.js                                  10.34 kB │ gzip:   2.99 kB
+2025-12-21T04:46:35.84371283Z ../dist/public/assets/results-aA09sNBX.js                                           10.45 kB │ gzip:   3.43 kB
+2025-12-21T04:46:35.84371638Z ../dist/public/assets/confetti.module-ONDKWxYZ.js                                   10.66 kB │ gzip:   4.28 kB
+2025-12-21T04:46:35.84372259Z ../dist/public/assets/MarketingDashboard-DcO_XH2I.js                                10.75 kB │ gzip:   2.83 kB
+2025-12-21T04:46:35.843728891Z ../dist/public/assets/season-ranking-NtxkGSGM.js                                    11.23 kB │ gzip:   3.25 kB
+2025-12-21T04:46:35.843732801Z ../dist/public/assets/seasons-BZBgrgWE.js                                           11.25 kB │ gzip:   3.53 kB
+2025-12-21T04:46:35.843756452Z ../dist/public/assets/ranking-Xrp2g6Ir.js                                           11.73 kB │ gzip:   3.40 kB
+2025-12-21T04:46:35.843758522Z ../dist/public/assets/MarketingQuemSomos-Br8XwTyO.js                                12.68 kB │ gzip:   3.57 kB
+2025-12-21T04:46:35.843760282Z ../dist/public/assets/format-i-xyDYCS.js                                            13.01 kB │ gzip:   3.45 kB
+2025-12-21T04:46:35.843779333Z ../dist/public/assets/DeoGloryConfiguracoes-Bs8ouoAR.js                             13.17 kB │ gzip:   2.79 kB
+2025-12-21T04:46:35.843781663Z ../dist/public/assets/final-challenge-CqMsZetU.js                                   13.53 kB │ gzip:   4.36 kB
+2025-12-21T04:46:35.843810134Z ../dist/public/assets/profile-BKlR2t1R.js                                           13.81 kB │ gzip:   3.84 kB
+2025-12-21T04:46:35.843813584Z ../dist/public/assets/achievements-_YpQ4Mnd.js                                      13.98 kB │ gzip:   4.92 kB
+2025-12-21T04:46:35.843816494Z ../dist/public/assets/DeoGloryEstudos-D1G7v5sL.js                                   15.41 kB │ gzip:   4.60 kB
+2025-12-21T04:46:35.843830175Z ../dist/public/assets/DeoGloryLicoes-CLMsV0-z.js                                    16.38 kB │ gzip:   4.42 kB
+2025-12-21T04:46:35.843835735Z ../dist/public/assets/DeoGloryRevistaDetail-6nQGYbSX.js                             17.29 kB │ gzip:   4.68 kB
+2025-12-21T04:46:35.843840655Z ../dist/public/assets/practice-Cl5Yi3eI.js                                          18.20 kB │ gzip:   4.87 kB
+2025-12-21T04:46:35.843842565Z ../dist/public/assets/index-YYtwE25a.js                                             19.12 kB │ gzip:   6.04 kB
+2025-12-21T04:46:35.843863046Z ../dist/public/assets/purify.es-sOfw8HaZ.js                                         22.67 kB │ gzip:   8.79 kB
+2025-12-21T04:46:35.843865406Z ../dist/public/assets/preview-6PKj2WBR.js                                           23.80 kB │ gzip:   7.08 kB
+2025-12-21T04:46:35.843869176Z ../dist/public/assets/admin-site-5sb5cvo6.js                                        24.31 kB │ gzip:   5.63 kB
+2025-12-21T04:46:35.843897598Z ../dist/public/assets/ImageCropDialog-CIUwyJDZ.js                                   26.08 kB │ gzip:   8.15 kB
+2025-12-21T04:46:35.843902308Z ../dist/public/assets/mission-activity-DGmQVWVD.js                                  30.19 kB │ gzip:   8.45 kB
+2025-12-21T04:46:35.843905378Z ../dist/public/assets/index-DeRA2TNp.js                                             49.36 kB │ gzip:  10.06 kB
+2025-12-21T04:46:35.843925529Z ../dist/public/assets/lesson-BGvEgage.js                                            81.59 kB │ gzip:  21.88 kB
+2025-12-21T04:46:35.843934569Z ../dist/public/assets/ExerciseCard-DWotaBD5.js                                     130.22 kB │ gzip:  39.83 kB
+2025-12-21T04:46:35.843942799Z ../dist/public/assets/index.es-1UlVZPCc.js                                         150.82 kB │ gzip:  51.65 kB
+2025-12-21T04:46:35.84394656Z ../dist/public/assets/EspiritualidadeDevocionalEditor-Bd2AyUxT.js                  375.98 kB │ gzip: 118.92 kB
+2025-12-21T04:46:35.84395467Z ../dist/public/assets/DeoGloryRelatorios-BbE626zx.js                               404.09 kB │ gzip: 108.41 kB
+2025-12-21T04:46:35.843978811Z ../dist/public/assets/admin-oEpfJopL.js                                            529.29 kB │ gzip: 167.61 kB
+2025-12-21T04:46:35.843986831Z ../dist/public/assets/index-C5vh6eRZ.js                                          1,054.01 kB │ gzip: 299.57 kB
+2025-12-21T04:46:35.844032933Z 
+2025-12-21T04:46:35.844036583Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2025-12-21T04:46:35.844039003Z - Using dynamic import() to code-split the application
+2025-12-21T04:46:35.844041463Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2025-12-21T04:46:35.844043324Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2025-12-21T04:46:35.844467841Z ✓ built in 16.00s
+2025-12-21T04:46:36.009922786Z ✘ [ERROR] Could not resolve "./storage"
+2025-12-21T04:46:36.009948618Z 
+2025-12-21T04:46:36.009952058Z     scripts/seed-study-data.ts:1:24:
+2025-12-21T04:46:36.009954538Z       1 │ import { storage } from "./storage";
+2025-12-21T04:46:36.009956648Z         ╵                         ~~~~~~~~~~~
+2025-12-21T04:46:36.009958808Z 
+2025-12-21T04:46:36.009960938Z 1 error
+2025-12-21T04:46:36.054814805Z ==> Build failed 😞
+2025-12-21T04:46:36.054833625Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

@@ -1,0 +1,61 @@
+modules = ["nodejs-20", "web", "postgresql-16"]
+run = "npm run dev"
+hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["ffmpeg", "imagemagick", "unzip", "sqlite", "poppler", "cairo", "pango", "libjpeg", "giflib", "librsvg", "pixman", "util-linux", "ghostscript", "jdk"]
+
+[deployment]
+deploymentTarget = "autoscale"
+build = ["npm", "run", "build"]
+run = ["node", "./dist/index.cjs"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[env]
+PORT = "5000"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 5000
+
+[agent]
+expertMode = true
+integrations = ["javascript_openai:1.0.0", "javascript_gemini:1.0.0", "google-calendar:1.0.0"]
+
+[userenv]
+
+[userenv.shared]
+JWT_SECRET = "c85bbaefe62f332180abffb00922a6c857e3ad54ccde82b0c96f909a7e8176cc"
+VAPID_PUBLIC_KEY = "BJyzrSxzvZ1RVtMvUD8MtIfZakvF_-xQRYiC_fol-LRUf_Dq3pVYNIBPp5gH9Rty8damPdTHJqm76spzKAIiseQ"
+VAPID_PRIVATE_KEY = "QQTUaduFzdA0uLolnsh8AbHrQNV3N2ncJUHJ0maWnwc"
+VITE_VAPID_PUBLIC_KEY = "BJyzrSxzvZ1RVtMvUD8MtIfZakvF_-xQRYiC_fol-LRUf_Dq3pVYNIBPp5gH9Rty8damPdTHJqm76spzKAIiseQ"
+RESEND_API_KEY = "re_Yr1HaGUQ_KZVQzTHT5zfEoXAwUYYGAbpn"
+ADMIN_PASSWORD = "111111"
+ADMIN_EMAIL = "marketingumpemaus@gmail.com"
+
+[userenv.production]
+R2_PUBLIC_URL = "https://pub-73bb54c6aac24e7a926425a7c58e7c2d.r2.dev"

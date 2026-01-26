@@ -1,0 +1,22 @@
+Correção de Bug Crítico de UX - Tela Branca no Primeiro Acesso
+​Estou enfrentando um problema onde a aplicação carrega uma Tela Branca (White Screen) ao ser acessada pela primeira vez. Preciso dar refresh (F5) para o conteúdo aparecer.
+​Diagnóstico Técnico:
+Identifiquei que a Home Page (/) está sendo bloqueada indevidamente pela requisição secundária GET /api/site-content/quem-somos.
+O código atual provavalmente está aguardando essa resposta (que pode demorar ~800ms no cold start) antes de renderizar qualquer coisa na tela. Se a resposta demora ou falha, a UI trava ou quebra por tentar acessar propriedades de undefined.
+​Solicitação de Refatoração (Action Plan):
+​Por favor, realize as seguintes alterações no Frontend (React) para garantir que a Home Page carregue instantaneamente:
+​Desacoplar o Carregamento (Non-Blocking Render):
+​Remova qualquer verificação bloqueante (ex: if (!siteContent) return null) que impeça a Home Page ou o Layout principal de renderizar enquanto o conteúdo de "Quem Somos" (Footer/Seção Sobre) está carregando.
+​A Home deve ser exibida imediatamente. O conteúdo institucional deve carregar em segundo plano (asynchronously).
+​Implementar "Safe Navigation" (Optional Chaining):
+​Nos componentes que consomem data.timeline ou data.content, substitua os acessos diretos por optional chaining.
+​Mude de: <div>{data.timeline.title}</div>
+​Para: <div>{data?.timeline?.title || ""}</div>
+​Adicionar Estado de Loading Local (Skeleton):
+​No local específico onde o texto "Quem Somos" deve aparecer (ex: no componente Footer ou seção About), adicione uma verificação:
+​Se isLoading for true ou data for undefined, renderize um Skeleton Loader ou simplesmente nada (null), mas mantenha o resto da página visível.
+​Adicionar Error Boundary (Cinto de Segurança):
+​Envolva a aplicação (em main.tsx ou App.tsx) com um componente ErrorBoundary.
+​Se o componente do Footer falhar, ele deve "morrer" silenciosamente ou mostrar um erro discreto, sem derrubar a aplicação inteira (Tela Branca).
+​Resultado Esperado:
+Ao abrir o site, o usuário deve ver o Header, Banners e Botões da Home instantaneamente. O texto do rodapé/institucional pode aparecer frações de segundo depois, mas nunca deve bloquear a renderização inicial.

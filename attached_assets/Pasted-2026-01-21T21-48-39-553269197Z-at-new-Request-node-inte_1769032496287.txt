@@ -1,0 +1,100 @@
+2026-01-21T21:48:39.553269197Z       at new Request (node:internal/deps/undici/undici:9586:25)
+2026-01-21T21:48:39.553271547Z       at fetch (node:internal/deps/undici/undici:10315:25)
+2026-01-21T21:48:39.553274128Z       at fetch (node:internal/deps/undici/undici:13508:10)
+2026-01-21T21:48:39.553276937Z       at fetch (node:internal/bootstrap/web/exposed-window-or-worker:75:12)
+2026-01-21T21:48:39.553279648Z       at generateBirthdayStoryImage (file:///opt/render/project/src/dist/index.js:13700:30)
+2026-01-21T21:48:39.553313598Z       at file:///opt/render/project/src/dist/index.js:22182:43
+2026-01-21T21:48:39.553316818Z       at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+2026-01-21T21:48:39.553320329Z     code: 'ERR_INVALID_URL',
+2026-01-21T21:48:39.553322829Z     input: '/api/r2/members/1768253205741-lwl2iy.jpeg'
+2026-01-21T21:48:39.553342739Z   }
+2026-01-21T21:48:39.553345839Z }
+2026-01-21T21:48:39.553973745Z Instagram birthday story publish error: TypeError: Cannot read properties of undefined (reading 'charAt')
+2026-01-21T21:48:39.553980695Z     at generateBirthdayStoryImage (file:///opt/render/project/src/dist/index.js:13724:32)
+2026-01-21T21:48:39.553983725Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-21T21:48:39.553986695Z     at async file:///opt/render/project/src/dist/index.js:22182:37
+2026-01-21T21:48:39.554672692Z 9:48:39 PM [express] POST /api/admin/instagram/publish-birthday-story 500 in 14ms :: {"message":"Can…
+2026-01-21T21:48:43.827860658Z [Instagram Stories] No saved verse image, generating on-demand...
+2026-01-21T21:48:43.828018842Z [StoryGenerator] Generating verse story image...
+2026-01-21T21:48:43.833584949Z [StoryGenerator] Error loading background: TypeError: fetch failed
+2026-01-21T21:48:43.83359855Z     at node:internal/deps/undici/undici:13510:13
+2026-01-21T21:48:43.83360246Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-21T21:48:43.83360497Z     at async loadBackgroundImage (file:///opt/render/project/src/dist/index.js:13535:22)
+2026-01-21T21:48:43.83360729Z     at async generateVerseStoryImage (file:///opt/render/project/src/dist/index.js:13589:22)
+2026-01-21T21:48:43.83360968Z     at async file:///opt/render/project/src/dist/index.js:22076:34 {
+2026-01-21T21:48:43.83361257Z   [cause]: Error: unknown scheme
+2026-01-21T21:48:43.83361499Z       at makeNetworkError (node:internal/deps/undici/undici:9277:35)
+2026-01-21T21:48:43.83361793Z       at schemeFetch (node:internal/deps/undici/undici:10680:34)
+2026-01-21T21:48:43.83362014Z       at node:internal/deps/undici/undici:10522:26
+2026-01-21T21:48:43.833635951Z       at mainFetch (node:internal/deps/undici/undici:10541:11)
+2026-01-21T21:48:43.833638481Z       at fetching (node:internal/deps/undici/undici:10489:7)
+2026-01-21T21:48:43.833640991Z       at fetch (node:internal/deps/undici/undici:10358:20)
+2026-01-21T21:48:43.833643341Z       at fetch (node:internal/deps/undici/undici:13508:10)
+2026-01-21T21:48:43.833646081Z       at fetch (node:internal/bootstrap/web/exposed-window-or-worker:75:12)
+2026-01-21T21:48:43.833648521Z       at loadBackgroundImage (file:///opt/render/project/src/dist/index.js:13535:28)
+2026-01-21T21:48:43.833650951Z       at generateVerseStoryImage (file:///opt/render/project/src/dist/index.js:13589:28)
+2026-01-21T21:48:43.833653341Z }
+2026-01-21T21:48:43.833666451Z [StoryGenerator] Using fallback gradient background
+2026-01-21T21:48:46.337220984Z [R2] Uploaded instagram-stories/1769032125949-99qxzv.jpg (70.7KB)
+2026-01-21T21:48:46.337268765Z [StoryGenerator] Story image uploaded to R2: https://pub-73bb54c6aac24e7a926425a7c58e7c2d.r2.dev/instagram-stories/1769032125949-99qxzv.jpg
+2026-01-21T21:48:46.337310986Z [Instagram Stories] Publishing verse story...
+2026-01-21T21:48:46.33747438Z [Instagram Stories] Starting story publish for image: https://pub-73bb54c6aac24e7a926425a7c58e7c2d.r2.de...
+2026-01-21T21:48:50.617355431Z [Instagram Stories] Container created: 18347950708228380
+2026-01-21T21:48:56.262671592Z [Instagram Stories] Story published! Media ID: 18309999403251411
+2026-01-21T21:48:56.27269315Z 9:48:56 PM [express] POST /api/admin/instagram/publish-verse-story 200 in 12458ms :: {"success":true…
+2026-01-21T21:49:19.147934195Z 9:49:19 PM [express] GET /api/admin/instagram 304 in 9ms :: {"configured":true,"posts":[{"id":25,"in…
+2026-01-21T21:49:19.294570202Z 9:49:19 PM [express] GET /api/marketing/stats 304 in 165ms :: {"events":{"total":1,"upcoming":0,"pas…
+2026-01-21T21:49:28.048317227Z [Instagram Stories] No saved reflection image, generating on-demand...
+2026-01-21T21:49:28.048368159Z [StoryGenerator] Generating reflection story image...
+2026-01-21T21:49:28.052445599Z [StoryGenerator] Error loading background: TypeError: fetch failed
+2026-01-21T21:49:28.0524597Z     at node:internal/deps/undici/undici:13510:13
+2026-01-21T21:49:28.05246293Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-21T21:49:28.05246566Z     at async loadBackgroundImage (file:///opt/render/project/src/dist/index.js:13535:22)
+2026-01-21T21:49:28.05246927Z     at async generateReflectionStoryImage (file:///opt/render/project/src/dist/index.js:13634:22)
+2026-01-21T21:49:28.05247206Z     at async file:///opt/render/project/src/dist/index.js:22126:39 {
+2026-01-21T21:49:28.052493661Z   [cause]: Error: unknown scheme
+2026-01-21T21:49:28.052497601Z       at makeNetworkError (node:internal/deps/undici/undici:9277:35)
+2026-01-21T21:49:28.052501381Z       at schemeFetch (node:internal/deps/undici/undici:10680:34)
+2026-01-21T21:49:28.052504151Z       at node:internal/deps/undici/undici:10522:26
+2026-01-21T21:49:28.052506941Z       at mainFetch (node:internal/deps/undici/undici:10541:11)
+2026-01-21T21:49:28.052509541Z       at fetching (node:internal/deps/undici/undici:10489:7)
+2026-01-21T21:49:28.052512161Z       at fetch (node:internal/deps/undici/undici:10358:20)
+2026-01-21T21:49:28.052515011Z       at fetch (node:internal/deps/undici/undici:13508:10)
+2026-01-21T21:49:28.052517581Z       at fetch (node:internal/bootstrap/web/exposed-window-or-worker:75:12)
+2026-01-21T21:49:28.052520121Z       at loadBackgroundImage (file:///opt/render/project/src/dist/index.js:13535:28)
+2026-01-21T21:49:28.052523091Z       at generateReflectionStoryImage (file:///opt/render/project/src/dist/index.js:13634:28)
+2026-01-21T21:49:28.052525701Z }
+2026-01-21T21:49:28.052540842Z [StoryGenerator] Using fallback gradient background
+2026-01-21T21:49:28.847737442Z [R2] Uploaded instagram-stories/1769032168252-zc8soj.jpg (141.3KB)
+2026-01-21T21:49:28.847762983Z [StoryGenerator] Story image uploaded to R2: https://pub-73bb54c6aac24e7a926425a7c58e7c2d.r2.dev/instagram-stories/1769032168252-zc8soj.jpg
+2026-01-21T21:49:28.847769703Z [Instagram Stories] Publishing reflection story...
+2026-01-21T21:49:28.847854305Z [Instagram Stories] Starting story publish for image: https://pub-73bb54c6aac24e7a926425a7c58e7c2d.r2.de...
+2026-01-21T21:49:32.450163886Z [Instagram Stories] Container created: 18347950753228380
+2026-01-21T21:49:36.610823983Z [Instagram Stories] Story published! Media ID: 17858916696596023
+2026-01-21T21:49:36.615273863Z 9:49:36 PM [express] POST /api/admin/instagram/publish-reflection-story 200 in 8571ms :: {"success":…
+2026-01-21T21:50:17.225137263Z 9:50:17 PM [express] GET /api/admin/birthdays 304 in 28ms :: {"today":[{"id":13,"fullName":"Erick Me…
+2026-01-21T21:50:18.455677784Z [Instagram Stories] No saved birthday image for Erick, generating on-demand...
+2026-01-21T21:50:18.455709905Z [StoryGenerator] Generating birthday story image for: undefined
+2026-01-21T21:50:18.462546923Z [StoryGenerator] Error loading member photo: TypeError: Failed to parse URL from /api/r2/members/1768253205741-lwl2iy.jpeg
+2026-01-21T21:50:18.462571504Z     at node:internal/deps/undici/undici:13510:13
+2026-01-21T21:50:18.462577444Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-21T21:50:18.462582254Z     at async generateBirthdayStoryImage (file:///opt/render/project/src/dist/index.js:13700:24)
+2026-01-21T21:50:18.462587804Z     at async file:///opt/render/project/src/dist/index.js:22182:37 {
+2026-01-21T21:50:18.462592144Z   [cause]: TypeError: Invalid URL
+2026-01-21T21:50:18.462596684Z       at new URL (node:internal/url:818:25)
+2026-01-21T21:50:18.462634085Z       at new Request (node:internal/deps/undici/undici:9586:25)
+2026-01-21T21:50:18.462637116Z       at fetch (node:internal/deps/undici/undici:10315:25)
+2026-01-21T21:50:18.462639365Z       at fetch (node:internal/deps/undici/undici:13508:10)
+2026-01-21T21:50:18.462641465Z       at fetch (node:internal/bootstrap/web/exposed-window-or-worker:75:12)
+2026-01-21T21:50:18.462643736Z       at generateBirthdayStoryImage (file:///opt/render/project/src/dist/index.js:13700:30)
+2026-01-21T21:50:18.462646216Z       at file:///opt/render/project/src/dist/index.js:22182:43
+2026-01-21T21:50:18.462648816Z       at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+2026-01-21T21:50:18.462652626Z     code: 'ERR_INVALID_URL',
+2026-01-21T21:50:18.462655396Z     input: '/api/r2/members/1768253205741-lwl2iy.jpeg'
+2026-01-21T21:50:18.462657906Z   }
+2026-01-21T21:50:18.462660646Z }
+2026-01-21T21:50:18.463370443Z Instagram birthday story publish error: TypeError: Cannot read properties of undefined (reading 'charAt')
+2026-01-21T21:50:18.463384334Z     at generateBirthdayStoryImage (file:///opt/render/project/src/dist/index.js:13724:32)
+2026-01-21T21:50:18.463387404Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-01-21T21:50:18.463390754Z     at async file:///opt/render/project/src/dist/index.js:22182:37
+2026-01-21T21:50:18.548449993Z 9:50:18 PM [express] POST /api/admin/instagram/publish-birthday-story 500 in 98ms :: {"message":"Can…

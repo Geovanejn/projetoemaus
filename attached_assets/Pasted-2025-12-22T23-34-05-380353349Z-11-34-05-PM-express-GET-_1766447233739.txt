@@ -1,0 +1,123 @@
+2025-12-22T23:34:05.380353349Z 11:34:05 PM [express] GET /api/study/practice/1/status 200 in 325ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:34:18.921549951Z 11:34:18 PM [express] GET /api/study/profile 304 in 68ms :: {"id":1,"userId":1,"totalXp":1245,"curren…
+2025-12-22T23:34:19.006235759Z 11:34:19 PM [express] GET /api/missions/daily 304 in 195ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:34:19.28564582Z 11:34:19 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:34:19.344704103Z 11:34:19 PM [express] GET /api/study/leaderboard 304 in 513ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:34:19.966302374Z 11:34:19 PM [express] GET /api/study/weeks/1 304 in 327ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:34:19.986219106Z 11:34:19 PM [express] GET /api/study/practice/1/status 304 in 323ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:34:31.414145277Z 11:34:31 PM [express] GET /api/study/profile 304 in 68ms :: {"id":1,"userId":1,"totalXp":1245,"curren…
+2025-12-22T23:34:31.562254055Z 11:34:31 PM [express] GET /api/missions/daily 304 in 208ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:34:31.731480762Z 11:34:31 PM [express] GET /api/study/weeks 304 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:34:31.872536743Z 11:34:31 PM [express] GET /api/study/leaderboard 304 in 523ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:34:32.266862257Z 11:34:32 PM [express] GET /api/study/weeks/1 304 in 266ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:34:32.328576648Z 11:34:32 PM [express] GET /api/study/practice/1/status 304 in 321ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:35:21.164908507Z 11:35:21 PM [express] GET /api/study/profile 304 in 468ms :: {"id":1,"userId":1,"totalXp":1245,"curre…
+2025-12-22T23:35:21.644693534Z 11:35:21 PM [express] GET /api/study/leaderboard 304 in 923ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:35:21.705648826Z 11:35:21 PM [express] GET /api/missions/daily 304 in 587ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:35:21.899963932Z 11:35:21 PM [express] GET /api/study/weeks 304 in 464ms :: [{"id":1,"weekNumber":1,"year":2025,"title…
+2025-12-22T23:35:22.451982821Z 11:35:22 PM [express] GET /api/study/weeks/1 304 in 261ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:35:22.505738039Z 11:35:22 PM [express] GET /api/study/practice/1/status 304 in 329ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:35:24.624808878Z 11:35:24 PM [express] GET /api/study/profile 304 in 67ms :: {"id":1,"userId":1,"totalXp":1245,"curren…
+2025-12-22T23:35:24.759037578Z 11:35:24 PM [express] GET /api/missions/daily 304 in 198ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:35:24.928898052Z 11:35:24 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:35:25.097465716Z 11:35:25 PM [express] GET /api/study/leaderboard 304 in 516ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:35:25.42106237Z 11:35:25 PM [express] GET /api/study/weeks/1 304 in 264ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:35:25.505987212Z 11:35:25 PM [express] GET /api/study/practice/1/status 304 in 322ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:38:10.295684956Z 11:38:10 PM [express] GET /api/study/profile 304 in 461ms :: {"id":1,"userId":1,"totalXp":1245,"curre…
+2025-12-22T23:38:10.417810953Z 11:38:10 PM [express] GET /api/missions/daily 304 in 592ms :: {"missions":[{"id":1,"userId":1,"missio…
+2025-12-22T23:38:10.642332654Z 11:38:10 PM [express] GET /api/study/weeks 304 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:38:10.736919966Z 11:38:10 PM [express] GET /api/study/leaderboard 304 in 908ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:38:11.225291567Z 11:38:11 PM [express] GET /api/study/practice/1/status 304 in 328ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:38:11.228665109Z 11:38:11 PM [express] GET /api/study/weeks/1 304 in 322ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:38:12.876202529Z 11:38:12 PM [express] GET /api/study/seasons 200 in 167ms :: [{"id":3,"title":"Não Jogue Sua Vida For…
+2025-12-22T23:38:20.13588189Z 11:38:20 PM [express] GET /api/study/profile 304 in 75ms :: {"id":1,"userId":1,"totalXp":1245,"curren…
+2025-12-22T23:38:20.212613416Z 11:38:20 PM [express] GET /api/study/profile/activities 200 in 136ms :: [{"type":"achievement_unlocke…
+2025-12-22T23:38:20.532662218Z 11:38:20 PM [express] GET /api/study/profile/stats 304 in 401ms :: {"lessonsCompleted":1,"unitsComple…
+2025-12-22T23:38:21.199761983Z 11:38:21 PM [express] GET /api/study/achievements 304 in 1113ms :: [{"id":1,"code":"first_lesson","na…
+2025-12-22T23:38:21.328412782Z 11:38:21 PM [express] GET /api/study/leaderboard 304 in 1195ms :: {"periodType":"weekly","periodKey":…
+2025-12-22T23:38:34.796273294Z 11:38:34 PM [express] GET /api/site/highlights 304 in 66ms :: {"devotional":null,"events":[],"instagr…
+2025-12-22T23:38:34.868343936Z 11:38:34 PM [express] GET /api/notifications 304 in 131ms :: {"notifications":[{"id":4,"userId":1,"ty…
+2025-12-22T23:38:35.215945115Z 11:38:35 PM [express] GET /api/notifications/unread-count 304 in 458ms :: {"count":3}
+2025-12-22T23:38:35.217815663Z 11:38:35 PM [express] GET /api/site-content/quem-somos 304 in 480ms :: {}
+2025-12-22T23:38:37.926424231Z 11:38:37 PM [express] GET /api/site-content/quem-somos 304 in 65ms :: {}
+2025-12-22T23:38:37.938606369Z 11:38:37 PM [express] GET /api/site/highlights 304 in 67ms :: {"devotional":null,"events":[],"instagr…
+2025-12-22T23:38:37.939284002Z 11:38:37 PM [express] GET /api/notifications/unread-count 304 in 65ms :: {"count":3}
+2025-12-22T23:38:37.981331302Z 11:38:37 PM [express] GET /api/notifications 304 in 135ms :: {"notifications":[{"id":4,"userId":1,"ty…
+2025-12-22T23:38:50.267575014Z 11:38:50 PM [express] POST /api/auth/request-code 200 in 500ms :: {"message":"Código enviado para seu…
+2025-12-22T23:39:15.165836026Z 11:39:15 PM [express] POST /api/auth/verify-code 200 in 270ms :: {"user":{"id":2,"fullName":"Geovane …
+2025-12-22T23:39:23.476068795Z 11:39:23 PM [express] POST /api/auth/set-password 200 in 597ms :: {"user":{"id":2,"fullName":"Geovane…
+2025-12-22T23:39:28.51361562Z 11:39:28 PM [express] GET /api/study/profile 200 in 521ms :: {"id":2,"userId":2,"totalXp":0,"currentL…
+2025-12-22T23:39:28.916311262Z 11:39:28 PM [express] GET /api/study/leaderboard 200 in 926ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:39:28.927151585Z 11:39:28 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:39:29.30689557Z 11:39:29 PM [express] GET /api/missions/daily 200 in 1123ms :: {"missions":[{"id":10,"userId":2,"miss…
+2025-12-22T23:39:29.513525554Z 11:39:29 PM [express] GET /api/study/weeks/1 304 in 265ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:39:29.579430788Z 11:39:29 PM [express] GET /api/study/practice/1/status 304 in 335ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:39:34.835572812Z 11:39:34 PM [express] GET /api/study/profile 304 in 69ms :: {"id":2,"userId":2,"totalXp":0,"currentLe…
+2025-12-22T23:39:34.968000148Z 11:39:34 PM [express] GET /api/missions/daily 304 in 198ms :: {"missions":[{"id":10,"userId":2,"missi…
+2025-12-22T23:39:35.165936184Z 11:39:35 PM [express] GET /api/study/weeks 304 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:39:35.298128626Z 11:39:35 PM [express] GET /api/study/leaderboard 304 in 529ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:39:35.71244137Z 11:39:35 PM [express] GET /api/study/weeks/1 304 in 272ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:39:35.786960958Z 11:39:35 PM [express] GET /api/study/practice/1/status 304 in 331ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:43:36.303129519Z ==> Deploying...
+2025-12-22T23:44:45.971802055Z [Notifications] Daily verse notification: 0 members sent, 0 anonymous visitors sent
+2025-12-22T23:44:45.971832357Z [Daily Verse Scheduler] Sent: Romanos 12:2 (ARA)
+2025-12-22T23:44:46.934298376Z [Recovery Verses Scheduler] Running initial check at startup...
+2025-12-22T23:44:46.934693749Z [Recovery Verses Scheduler] Generating daily recovery verses...
+2025-12-22T23:44:47.065222844Z [Recovery Verses Scheduler] Verses already generated for today (recovery-2025-12-22)
+2025-12-22T23:44:47.252260883Z ==> Your service is live 🎉
+2025-12-22T23:44:47.30533443Z ==> 
+2025-12-22T23:44:47.337862489Z ==> ///////////////////////////////////////////////////////////
+2025-12-22T23:44:47.368881727Z ==> 
+2025-12-22T23:44:47.399598375Z ==> Available at your primary URL https://umpemaus.onrender.com
+2025-12-22T23:44:47.430078434Z ==> 
+2025-12-22T23:44:47.459835513Z ==> ///////////////////////////////////////////////////////////
+2025-12-22T23:44:50.026433032Z [Daily Missions Scheduler] Running initial check at startup...
+2025-12-22T23:44:50.02658339Z [Daily Missions Scheduler] Refreshing daily missions with AI...
+2025-12-22T23:44:50.501197408Z [Quota] Marked quota as exhausted, cooldown for 5 minutes
+2025-12-22T23:44:50.50122585Z [Daily Missions] AI quota exceeded, using local fallback
+2025-12-22T23:44:50.567033878Z [Daily Missions Scheduler] Missions already generated for today (2025-12-22)
+2025-12-22T23:45:22.617250998Z 11:45:22 PM [express] GET /api/notifications/unread-count 200 in 463ms :: {"count":2}
+2025-12-22T23:45:22.666076407Z 11:45:22 PM [express] GET /api/site-content/quem-somos 304 in 459ms :: {}
+2025-12-22T23:45:22.755021941Z 11:45:22 PM [express] GET /api/notifications 200 in 131ms :: {"notifications":[{"id":5,"userId":2,"ty…
+2025-12-22T23:45:23.123213525Z 11:45:23 PM [express] GET /api/site/highlights 304 in 486ms :: {"devotional":null,"events":[],"instag…
+2025-12-22T23:45:26.638307133Z 11:45:26 PM [express] GET /api/study/profile 304 in 67ms :: {"id":2,"userId":2,"totalXp":0,"currentLe…
+2025-12-22T23:45:26.774096282Z 11:45:26 PM [express] GET /api/missions/daily 304 in 200ms :: {"missions":[{"id":10,"userId":2,"missi…
+2025-12-22T23:45:26.991495871Z 11:45:26 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:45:27.09784606Z 11:45:27 PM [express] GET /api/study/leaderboard 304 in 521ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:45:27.554571775Z 11:45:27 PM [express] GET /api/study/weeks/1 304 in 266ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:45:27.620644629Z 11:45:27 PM [express] GET /api/study/practice/1/status 304 in 329ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:45:32.511600578Z 11:45:32 PM [express] GET /api/study/profile 304 in 66ms :: {"id":2,"userId":2,"totalXp":0,"currentLe…
+2025-12-22T23:45:32.634352934Z 11:45:32 PM [express] GET /api/missions/daily 304 in 199ms :: {"missions":[{"id":10,"userId":2,"missi…
+2025-12-22T23:45:32.830690747Z 11:45:32 PM [express] GET /api/study/weeks 304 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:45:32.95824159Z 11:45:32 PM [express] GET /api/study/leaderboard 304 in 519ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:45:33.363067959Z 11:45:33 PM [express] GET /api/study/weeks/1 304 in 265ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:45:33.42147532Z 11:45:33 PM [express] GET /api/study/practice/1/status 304 in 329ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:45:36.452377388Z 11:45:36 PM [express] GET /api/missions/daily 304 in 199ms :: {"missions":[{"id":10,"userId":2,"missi…
+2025-12-22T23:45:36.739366845Z 11:45:36 PM [express] GET /api/study/profile 304 in 67ms :: {"id":2,"userId":2,"totalXp":0,"currentLe…
+2025-12-22T23:45:36.781405851Z 11:45:36 PM [express] GET /api/study/leaderboard 304 in 523ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:45:37.108486892Z 11:45:37 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:45:37.775662354Z 11:45:37 PM [express] GET /api/study/practice/1/status 304 in 328ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:45:37.782899762Z 11:45:37 PM [express] GET /api/study/weeks/1 304 in 327ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:46:00.867465312Z 11:46:00 PM [express] GET /api/study/profile 304 in 68ms :: {"id":2,"userId":2,"totalXp":0,"currentLe…
+2025-12-22T23:46:01.001375262Z 11:46:01 PM [express] GET /api/missions/daily 304 in 200ms :: {"missions":[{"id":10,"userId":2,"missi…
+2025-12-22T23:46:01.224527803Z 11:46:01 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:46:01.324204357Z 11:46:01 PM [express] GET /api/study/leaderboard 304 in 518ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:46:01.872749251Z 11:46:01 PM [express] GET /api/study/weeks/1 304 in 327ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:46:01.874256528Z 11:46:01 PM [express] GET /api/study/practice/1/status 304 in 323ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:46:05.348454072Z 11:46:05 PM [express] GET /api/study/profile 304 in 66ms :: {"id":2,"userId":2,"totalXp":0,"currentLe…
+2025-12-22T23:46:05.485034496Z 11:46:05 PM [express] GET /api/missions/daily 304 in 199ms :: {"missions":[{"id":10,"userId":2,"missi…
+2025-12-22T23:46:05.681969304Z 11:46:05 PM [express] GET /api/study/weeks 304 in 67ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:46:05.795982685Z 11:46:05 PM [express] GET /api/study/leaderboard 304 in 519ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:46:06.250047136Z 11:46:06 PM [express] GET /api/study/weeks/1 304 in 268ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:46:06.310618592Z 11:46:06 PM [express] GET /api/study/practice/1/status 304 in 327ms :: {"weekId":1,"isUnlocked":false…
+2025-12-22T23:46:11.543347344Z 11:46:11 PM [express] GET /api/site-content/quem-somos 304 in 65ms :: {}
+2025-12-22T23:46:11.557910435Z 11:46:11 PM [express] GET /api/notifications/unread-count 304 in 66ms :: {"count":2}
+2025-12-22T23:46:11.624299737Z 11:46:11 PM [express] GET /api/notifications 304 in 131ms :: {"notifications":[{"id":5,"userId":2,"ty…
+2025-12-22T23:46:11.961721365Z 11:46:11 PM [express] GET /api/site/highlights 304 in 463ms :: {"devotional":null,"events":[],"instag…
+2025-12-22T23:46:25.12974251Z 11:46:25 PM [express] POST /api/auth/login-password 200 in 790ms :: {"user":{"id":2,"fullName":"Geova…
+2025-12-22T23:46:28.005442226Z 11:46:28 PM [express] GET /api/study/profile 304 in 65ms :: {"id":2,"userId":2,"totalXp":0,"currentLe…
+2025-12-22T23:46:28.123209753Z 11:46:28 PM [express] GET /api/missions/daily 304 in 200ms :: {"missions":[{"id":10,"userId":2,"missi…
+2025-12-22T23:46:28.334133949Z 11:46:28 PM [express] GET /api/study/weeks 304 in 66ms :: [{"id":1,"weekNumber":1,"year":2025,"title"…
+2025-12-22T23:46:28.446747799Z 11:46:28 PM [express] GET /api/study/leaderboard 304 in 521ms :: {"periodType":"weekly","periodKey":"…
+2025-12-22T23:46:28.887974088Z 11:46:28 PM [express] GET /api/study/weeks/1 304 in 272ms :: {"id":1,"weekNumber":1,"year":2025,"titl…
+2025-12-22T23:46:28.947175085Z 11:46:28 PM [express] GET /api/study/practice/1/status 304 in 325ms :: {"weekId":1,"isUnlocked":false…

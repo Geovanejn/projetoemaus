@@ -1,0 +1,102 @@
+Follow-up Review Request – XP System Attention Points
+
+Thanks for the fixes — the architecture is now much cleaner. Before we fully close this task, I’d like you to double-check a few critical attention points to guarantee long-term consistency and avoid regressions.
+
+1️⃣ studyProfiles.totalXp Integrity
+
+Please verify and confirm:
+
+studyProfiles.totalXp is updated only through:
+
+completeLesson()
+
+addXp()
+
+deductXp()
+
+There is no other code path that:
+
+Recalculates total XP
+
+Derives it again from xpTransactions
+
+Mutates it indirectly (background jobs, sync logic, triggers, etc.)
+
+Expectation
+studyProfiles.totalXp must remain a pure aggregate of finalized lesson XP, never recomputed from logs.
+
+2️⃣ Immutability of user_lesson_progress.xpEarned
+
+Please confirm:
+
+user_lesson_progress.xpEarned is:
+
+Calculated once when the lesson is completed
+
+Treated as final and immutable afterward
+
+No late deductions (hints, wrong answers) can modify:
+
+A lesson already marked as status = 'completed'
+
+All hint/wrong-answer penalties are applied before completion, not after
+
+Expectation
+Once a lesson is completed, its XP must be frozen forever.
+
+3️⃣ Frontend XP Calculation Audit
+
+Please scan the frontend and confirm:
+
+The client never recalculates XP
+
+No XP math exists in:
+
+React components
+
+Hooks
+
+Selectors
+
+UI state logic
+
+The frontend strictly:
+
+Displays XP values returned by backend APIs
+
+Treats XP as read-only data
+
+Expectation
+All XP math lives on the backend — the frontend is display-only.
+
+4️⃣ Regression Safety Check
+
+Please also verify:
+
+No remaining references in ranking logic to:
+
+xpTransactions
+
+userSeasonProgress.xpEarned
+
+All leaderboard queries:
+
+Use user_lesson_progress.xpEarned
+
+Apply scope filtering only (global / year / season)
+
+Never recompute XP
+
+✅ Final Goal
+
+After these confirmations, the XP system should guarantee:
+
+One immutable XP source per lesson
+
+One consistent aggregation strategy
+
+Zero phantom XP
+
+No future ranking drift
+
+Once verified, this XP architecture should be considered locked and production-safe.
