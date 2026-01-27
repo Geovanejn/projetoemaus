@@ -633,6 +633,14 @@ export interface IStorage {
   hasSentSchedulerReminder(reminderKey: string): Promise<boolean>;
   markSchedulerReminderSent(reminderKey: string, reminderType: string, relatedId?: number): Promise<void>;
   cleanOldSchedulerReminders(maxAgeHours: number): Promise<number>;
+
+    // ... outros métodos ...
+
+  // Automações do Instagram e Aniversariantes
+  getMembersByBirthday(day: number, month: number): Promise<User[]>;
+  getDailyStoryImage(date: string): Promise<string | null>;
+  saveDailyStoryImage(data: { date: string; imageUrl: string; verse: string; reference: string; theme?: string }): Promise<any>;
+
 }
 
 export class DatabaseStorage implements IStorage {
@@ -8826,6 +8834,54 @@ export class DatabaseStorage implements IStorage {
       .delete(schema.anonymousPushSubscriptions)
       .where(eq(schema.anonymousPushSubscriptions.id, anonymousSubscriptionId));
     console.log(`[Push Storage] Anonymous subscription ${anonymousSubscriptionId} deleted, link complete for user ${userId}`);
+
+  }
+  // ==================== AUTOMAÇÕES (INSTAGRAM & BIRTHDAY) ====================
+
+  async getMembersByBirthday(day: number, month: number): Promise<User[]> {
+    // Busca membros ativos que fazem aniversário no dia/mês especificado
+    // Usa extração SQL direta para garantir compatibilidade com datas
+    return db.select()
+      .from(schema.users)
+      .where(and(
+        eq(schema.users.isMember, true),
+        eq(schema.users.activeMember, true),
+        sql`EXTRACT(MONTH FROM ${schema.users.birthDate}) = ${month}`,
+        sql`EXTRACT(DAY FROM ${schema.users.birthDate}) = ${day}`
+      ));
+  }
+
+  async getDailyStoryImage(dateStr: string): Promise<string | null> {
+    // Busca se já existe uma imagem gerada para o versículo do dia nesta data
+    // Converte a data para comparar apenas o dia (ignorando hora)
+    const [post] = await db.select({ imageUrl: schema.dailyVersePosts.imageUrl })
+      .from(schema.dailyVersePosts)
+      .where(and(
+        eq(schema.dailyVersePosts.isActive, true),
+        sql`DATE(${schema.dailyVersePosts.publishedAt}) = DATE(${dateStr})`
+      ))
+      .limit(1);
+    
+    return post?.imageUrl || null;
+  }
+
+  async saveDailyStoryImage(data: { date: string; imageUrl: string; verse: string; reference: string; theme?: string }): Promise<any> {
+    // Salva a imagem gerada na tabela de posts diários
+    // Define expiração para 24h após a publicação
+    const publishedAt = new Date(data.date);
+    const expiresAt = new Date(publishedAt.getTime() + 24 * 60 * 60 * 1000);
+
+    return this.createDailyVersePost({
+      imageUrl: data.imageUrl,
+      verse: data.verse,
+      reference: data.reference,
+      publishedAt: publishedAt,
+      expiresAt: expiresAt,
+      isActive: true,
+      socialPlatform: 'instagram',
+      // Se houver campo de tema no schema, adicione aqui, senão ignore
+      // theme: data.theme 
+    });
   }
 }
 
