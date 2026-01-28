@@ -2335,7 +2335,7 @@ const uploadToR2 = async (buffer: Buffer, folder: string, contentType: string, f
 
 // 1. Gera e salva as imagens do Versículo e Reflexão (Roda às 07:01)
 // Agora: só invoca Puppeteer quando versículo+reflexão do dia estiverem prontos no BD.
-export async function generateAndSaveStoryImages() {
+async function generateAndSaveStoryImages() {
   console.log('[Instagram Stories] Starting daily image generation...');
   const todayKey = getTodayDateKey(); // Formato YYYY-MM-DD
 
@@ -2523,7 +2523,7 @@ async function publishReflectionStoryToInstagram() {
 }
 
 // 4. Gera e salva as imagens de Aniversariantes (Roda às 08:01)
-export async function generateAndSaveBirthdayImages() {
+async function generateAndSaveBirthdayImages() {
   console.log('[Instagram Stories] Checking for birthdays to generate images...');
   
   try {
