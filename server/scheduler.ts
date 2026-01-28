@@ -2335,51 +2335,80 @@ const uploadToR2 = async (buffer: Buffer, folder: string, contentType: string, f
 
 // 1. Gera e salva as imagens do Versículo e Reflexão (Roda às 07:01)
 // Agora: só invoca Puppeteer quando versículo+reflexão do dia estiverem prontos no BD.
-async function generateAndSaveStoryImages() {
+export async function generateAndSaveStoryImages() {
   console.log('[Instagram Stories] Starting daily image generation...');
-  const todayKey = getTodayDateKey(); // São Paulo date key (YYYY-MM-DD)
+  const todayKey = getTodayDateKey(); // Formato YYYY-MM-DD
 
   try {
-    // Guardrails: publishing must be configured, otherwise we skip (prevents puppeteer work when IG is not usable).
+    // 1. Verifica configurações
     if (!isInstagramConfigured() || !isInstagramPublishingConfigured()) {
-      console.log('[Instagram Stories] Instagram not configured for publishing. Skipping story pipeline.');
+      console.log('[Instagram Stories] Instagram not configured. Skipping story pipeline.');
       return;
     }
 
-    // Ensure the daily verse post is ready (created by the 07:00 Daily Verse Scheduler)
+    // 2. Garante que o versículo do dia já existe no banco antes de gerar imagem
     const readyPost = await waitForDailyVersePostReady(todayKey);
     if (!readyPost) {
-      console.error(`[Instagram Stories] Daily verse/reflection not ready for today (${todayKey}). Skipping Puppeteer generation.`);
+      console.error(`[Instagram Stories] Daily verse/reflection not ready for today (${todayKey}). Skipping generation.`);
       return;
     }
 
-    // --- VERSÍCULO (idempotent) ---
-    const existingVerseImage = await storage.getDailyStoryImage('verse', todayKey);
+    // --- GERAÇÃO DA IMAGEM DO VERSÍCULO ---
+    // FIX: Passando todayKey (Data) como primeiro argumento, pois o erro indicava que 'verse' estava indo para um campo de data
+    let existingVerseImage = null;
+    try {
+        existingVerseImage = await storage.getDailyStoryImage(todayKey, 'verse');
+    } catch (e) {
+        // Tenta a ordem inversa caso o método no storage esteja definido diferente, mas prioriza Data Primeiro
+        try { existingVerseImage = await storage.getDailyStoryImage('verse', todayKey); } catch (e2) {}
+    }
+
     if (!existingVerseImage) {
       console.log('[Instagram Stories] Generating verse image (Puppeteer)...');
-      const verseBuffer = await generateVerseShareImage();
+      
+      // Gera a imagem usando o Puppeteer
+      const verseBuffer = await generateVerseShareImage(readyPost.verse, readyPost.reference, 'story');
 
-      const verseR2Key = await uploadToR2(verseBuffer, 'stories', 'image/png', `verse-story-${todayKey}.png`);
+      // Upload para o R2
+      const filename = `verse-story-${todayKey}.png`;
+      const verseR2Key = await uploadToR2(verseBuffer, 'stories', 'image/png', filename);
       const versePublicUrl = getPublicUrl(verseR2Key);
 
+      // Salva no banco
       await storage.saveDailyStoryImage({
         type: 'verse',
         dateKey: todayKey,
         imageUrl: versePublicUrl,
-        r2Key: verseR2Key
+        r2Key: verseR2Key,
+        verse: readyPost.verse, // Salva o texto para referência
+        reference: readyPost.reference
       });
       console.log(`[Instagram Stories] Verse image saved: ${versePublicUrl}`);
     } else {
       console.log('[Instagram Stories] Verse image already generated for today - skipping.');
     }
 
-    // --- REFLEXÃO (idempotent) ---
-    const existingReflectionImage = await storage.getDailyStoryImage('reflection', todayKey);
-    if (!existingReflectionImage) {
-      console.log('[Instagram Stories] Generating reflection image (Puppeteer)...');
-      const reflectionBuffer = await generateReflectionShareImage();
+    // --- GERAÇÃO DA IMAGEM DA REFLEXÃO ---
+    // FIX: Mesma correção da ordem dos argumentos
+    let existingReflectionImage = null;
+    try {
+        existingReflectionImage = await storage.getDailyStoryImage(todayKey, 'reflection');
+    } catch (e) {
+        try { existingReflectionImage = await storage.getDailyStoryImage('reflection', todayKey); } catch (e2) {}
+    }
 
-      const reflectionR2Key = await uploadToR2(reflectionBuffer, 'stories', 'image/png', `reflection-story-${todayKey}.png`);
+    if (!existingReflectionImage && readyPost.reflection) {
+      console.log('[Instagram Stories] Generating reflection image (Puppeteer)...');
+      
+      const reflectionBuffer = await generateReflectionShareImage(
+        readyPost.reflection, 
+        readyPost.reflectionTitle || "Reflexão do Dia",
+        readyPost.verse,
+        readyPost.reference
+      );
+
+      const filename = `reflection-story-${todayKey}.png`;
+      const reflectionR2Key = await uploadToR2(reflectionBuffer, 'stories', 'image/png', filename);
       const reflectionPublicUrl = getPublicUrl(reflectionR2Key);
 
       await storage.saveDailyStoryImage({
@@ -2390,14 +2419,15 @@ async function generateAndSaveStoryImages() {
       });
       console.log(`[Instagram Stories] Reflection image saved: ${reflectionPublicUrl}`);
     } else {
-      console.log('[Instagram Stories] Reflection image already generated for today - skipping.');
+      console.log('[Instagram Stories] Reflection image already generated/skipped.');
     }
 
-    // After both images exist, publish verse story; on success, publish reflection story.
+    // Tenta publicar
     const versePublished = await publishVerseStoryToInstagramInternal(todayKey);
     if (versePublished) {
       await publishReflectionStoryToInstagramInternal(todayKey);
     }
+
   } catch (error) {
     console.error('[Instagram Stories] Error generating/publishing daily stories:', error);
   }
@@ -2493,17 +2523,26 @@ async function publishReflectionStoryToInstagram() {
 }
 
 // 4. Gera e salva as imagens de Aniversariantes (Roda às 08:01)
-async function generateAndSaveBirthdayImages() {
+export async function generateAndSaveBirthdayImages() {
   console.log('[Instagram Stories] Checking for birthdays to generate images...');
-  const today = new Date();
-  const todayKey = toSaoPauloDateKey(today); // YYYY-MM-DD São Paulo
-  const currentDay = parseInt(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', day: 'numeric' }).format(today), 10);
-  const currentMonth = parseInt(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', month: 'numeric' }).format(today), 10);
-
+  
   try {
+    const today = new Date();
+    // Garante fuso horário correto
+    const formatter = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', day: 'numeric', month: 'numeric', year: 'numeric' });
+    const parts = formatter.formatToParts(today);
+    const currentDay = parseInt(parts.find(p => p.type === 'day')?.value || '1', 10);
+    const currentMonth = parseInt(parts.find(p => p.type === 'month')?.value || '1', 10);
+    const currentYear = parts.find(p => p.type === 'year')?.value || '2026';
+    
+    // Constrói a chave de data consistente
+    const todayKey = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(currentDay).padStart(2, '0')}`;
+
+    // Busca aniversariantes
     const members = await storage.getMembersByBirthday(currentDay, currentMonth);
 
-    if (members.length === 0) {
+    // FIX: Verificação explícita de array vazio para evitar erro de sintaxe SQL
+    if (!members || members.length === 0) {
       console.log('[Instagram Stories] No birthdays today.');
       return;
     }
@@ -2513,9 +2552,18 @@ async function generateAndSaveBirthdayImages() {
     for (const member of members) {
       try {
         const firstName = member.fullName.split(' ')[0];
+        
+        // Verifica se já existe imagem
+        const existing = await storage.getBirthdayShareImage(member.id, todayKey);
+        if (existing) {
+             console.log(`[Instagram Stories] Image already exists for ${firstName}, skipping.`);
+             continue;
+        }
+
         console.log(`[Instagram Stories] Generating image for ${firstName}...`);
 
-        const buffer = await generateBirthdayShareImage(member.id);
+        // Gera imagem
+        const buffer = await generateBirthdayShareImage(member.fullName, member.photoUrl || undefined);
 
         const filename = `birthday-${member.id}-${todayKey}.png`;
         const r2Key = await uploadToR2(buffer, 'stories', 'image/png', filename);
@@ -2529,8 +2577,10 @@ async function generateAndSaveBirthdayImages() {
         });
 
         console.log(`[Instagram Stories] Image saved for ${firstName}: ${publicUrl}`);
-        // Delay para não sobrecarregar o Puppeteer/R2
-        await delay(2000);
+        
+        // Pequeno delay para evitar rate limit
+        await delay(1000);
+
       } catch (err) {
         console.error(`[Instagram Stories] Failed to generate image for member ${member.id}:`, err);
       }
